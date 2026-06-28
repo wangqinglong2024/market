@@ -1,0 +1,47 @@
+{
+  "model": "fal-ai/flux/schnell",
+  "prompts": [
+    {
+      "name": "scene-01-living-room.jpg",
+      "seed": 41001,
+      "prompt": "Warm 2D animated cartoon illustration for a Chinese language learning video, 16:9 wide frame. A cozy living room in a family home in the morning. Main characters: two cute chubby toddler siblings, one boy with short black hair wearing a sky blue sweater and yellow shorts, one girl with black bob hair wearing a coral pink dress, round cheeks, friendly expressive faces. Their mother and father stand nearby smiling. Soft sunlight, plants, sofa, toys, wholesome family warmth. Bright polished children cartoon style, clean shapes, gentle texture, cinematic composition with open lower area for subtitles. No written text, no logos, no watermark."
+    },
+    {
+      "name": "scene-02-kitchen.jpg",
+      "seed": 41002,
+      "prompt": "Warm 2D animated cartoon illustration for a Chinese language learning video, 16:9 wide frame. A bright family kitchen breakfast scene. The same two cute chubby toddler siblings: boy with short black hair in a sky blue sweater and yellow shorts, girl with black bob hair in a coral pink dress, round cheeks. Mother is serving small bowls of rice porridge, father is pouring milk. Steam from breakfast, fruit on table, cozy clean home. Bright polished children cartoon style, soft morning light, open lower area for subtitles. No written text, no logos, no watermark."
+    },
+    {
+      "name": "scene-03-yard.jpg",
+      "seed": 41003,
+      "prompt": "Warm 2D animated cartoon illustration for a Chinese language learning video, 16:9 wide frame. A sunny small family courtyard garden. The same two cute chubby toddler siblings: boy with short black hair in a sky blue sweater and yellow shorts, girl with black bob hair in a coral pink dress, round cheeks. They play with a red ball while mother waters flowers and father holds a small basket. Green plants, laundry line, soft breeze, happy family moment. Bright polished children cartoon style, clean shapes, open lower area for subtitles. No written text, no logos, no watermark."
+    },
+    {
+      "name": "scene-04-bedtime.jpg",
+      "seed": 41004,
+      "prompt": "Warm 2D animated cartoon illustration for a Chinese language learning video, 16:9 wide frame. Cozy bedtime reading scene in a children room. The same two cute chubby toddler siblings: boy with short black hair in blue pajamas, girl with black bob hair in pink pajamas, round cheeks. Mother and father sit beside them reading a picture book. Warm lamp light, moon outside window, plush toys, soft blankets, calm loving mood. Bright polished children cartoon style, open lower area for subtitles. No written text, no logos, no watermark."
+    }
+  ],
+  "results": [
+    {
+      "name": "scene-01-living-room.jpg",
+      "seed": 41001,
+      "url": "https://v3b.fal.media/files/b/0a9ffb80/IG7aqbj1XpWA9kTK0F-cW.jpg"
+    },
+    {
+      "name": "scene-02-kitchen.jpg",
+      "seed": 41002,
+      "url": "https://v3b.fal.media/files/b/0a9ffb86/8KY3UPEvQJ5_2GOsRFPes.jpg"
+    },
+    {
+      "name": "scene-03-yard.jpg",
+      "seed": 41003,
+      "url": "https://v3b.fal.media/files/b/0a9ffb97/R1A0yA4vBzg9G8_tXV4ug.jpg"
+    },
+    {
+      "name": "scene-04-bedtime.jpg",
+      "seed": 41004,
+      "url": "https://v3b.fal.media/files/b/0a9ffbaf/DA-E_qamcHizfF9jBzheK.jpg"
+    }
+  ]
+}
