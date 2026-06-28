@@ -1,5 +1,6 @@
 import "./index.css";
 import { Composition } from "remotion";
+import { Demo, DEMO_TOTAL_FRAMES } from "./Demo";
 import { HelloWorld, myCompSchema } from "./HelloWorld";
 import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
 
@@ -8,6 +9,15 @@ import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="Demo"
+        component={Demo}
+        durationInFrames={DEMO_TOTAL_FRAMES}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
+
       <Composition
         // You can take the "id" to render a video:
         // npx remotion render HelloWorld

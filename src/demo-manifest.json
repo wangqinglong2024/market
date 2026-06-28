@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920
+  },
+  "beats": [
+    {
+      "id": "p1",
+      "image": "videos/demo/images/p1.png",
+      "audio": "videos/demo/audio/p1.mp3",
+      "durationMs": 6496,
+      "captions": {
+        "pinyin": "zǎochén, yángguāng zhào jìn xiǎo wū, pànghūhū de gēge hé mèimei xǐng lái la.",
+        "zh": "早晨，阳光照进小屋，胖乎乎的哥哥和妹妹醒来啦。",
+        "vi": "Buổi sáng, nắng chiếu vào nhà, anh trai và em gái mũm mĩm thức dậy rồi."
+      }
+    },
+    {
+      "id": "p2",
+      "image": "videos/demo/images/p2.png",
+      "audio": "videos/demo/audio/p2.mp3",
+      "durationMs": 4528,
+      "captions": {
+        "pinyin": "gēge dǎkāi shǒujī, gēnzhe dàshēng shuō: nǐ hǎo!",
+        "zh": "哥哥打开手机，跟着大声说：你好！",
+        "vi": "Anh trai mở điện thoại, đọc to theo: Xin chào!"
+      }
+    },
+    {
+      "id": "p3",
+      "image": "videos/demo/images/p3.png",
+      "audio": "videos/demo/audio/p3.mp3",
+      "durationMs": 5080,
+      "captions": {
+        "pinyin": "mèimei yě bùgān shìruò, nǎishēng nǎiqì de niàn: xièxie!",
+        "zh": "妹妹也不甘示弱，奶声奶气地念：谢谢！",
+        "vi": "Em gái cũng không chịu kém, bi bô đọc theo: Cảm ơn!"
+      }
+    },
+    {
+      "id": "p4",
+      "image": "videos/demo/images/p4.png",
+      "audio": "videos/demo/audio/p4.mp3",
+      "durationMs": 4792,
+      "captions": {
+        "pinyin": "bàba shù qǐ dàmǔzhǐ, māma duān lái xiāngpēnpēn de zǎocān.",
+        "zh": "爸爸竖起大拇指，妈妈端来香喷喷的早餐。",
+        "vi": "Bố giơ ngón tay cái, mẹ bưng tới bữa sáng thơm phức."
+      }
+    },
+    {
+      "id": "p5",
+      "image": "videos/demo/images/p5.png",
+      "audio": "videos/demo/audio/p5.mp3",
+      "durationMs": 4936,
+      "captions": {
+        "pinyin": "lián xiǎo gǒu dōu wāizhe tóu, hǎoxiàng yě xiǎng xué shuō zhōngwén.",
+        "zh": "连小狗都歪着头，好像也想学说中文。",
+        "vi": "Đến chú cún cũng nghiêng đầu, như muốn học nói tiếng Trung."
+      }
+    },
+    {
+      "id": "p6",
+      "image": "videos/demo/images/p6.png",
+      "audio": "videos/demo/audio/p6.mp3",
+      "durationMs": 4768,
+      "captions": {
+        "pinyin": "yìjiā rén měitiān yìqǐ xué, zhōngwén yuèláiyuè bàng!",
+        "zh": "一家人每天一起学，中文越来越棒！",
+        "vi": "Cả nhà mỗi ngày cùng học, tiếng Trung ngày càng giỏi!"
+      }
+    },
+    {
+      "id": "p7",
+      "image": "videos/demo/images/p7.png",
+      "audio": "videos/demo/audio/p7.mp3",
+      "durationMs": 4096,
+      "captions": {
+        "pinyin": "kuài hé quánjiā yìqǐ, qīngsōng xué zhōngwén ba!",
+        "zh": "快和全家一起，轻松学中文吧！",
+        "vi": "Hãy cùng cả nhà học tiếng Trung thật dễ dàng nào!"
+      }
+    }
+  ]
+}
