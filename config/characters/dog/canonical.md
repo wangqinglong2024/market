@@ -1,0 +1,1 @@
+A small chubby English bulldog puppy (family pet). Grey-and-white short coat: grey back/sides with white muzzle, chest and belly, plus a small brown patch on top of the head. Floppy ears, big round black eyes, pink cheeks, wide cute smiley mouth with a little pink tongue. Short stocky pudgy body. Adorable and friendly.

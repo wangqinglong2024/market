@@ -1,0 +1,1 @@
+A chubby cartoon little boy (elder brother). Short tousled brown hair, round pudgy face, rosy cheeks, small round black dot eyes, tiny smile. Wears an all-yellow hooded sweatshirt and matching yellow shorts, bare pudgy hands, bare little legs and feet. Very round, plump, soft body. Cheerful, lively, adorable. Brown hair (never flat black).

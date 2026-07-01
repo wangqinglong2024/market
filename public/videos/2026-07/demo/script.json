@@ -1,0 +1,126 @@
+{
+  "_comment": "分镜/翻译中间产物（由会话生成）。build.mjs 读它 → 配音+出图+manifest。改这里即改内容。",
+  "videoId": "demo",
+  "lang": "vi",
+  "beats": [
+    {
+      "id": "p1",
+      "sceneId": "bedroom-morning",
+      "hasMainCharacter": true,
+      "characters": ["boy", "girl"],
+      "emotion": "sleepy and happy",
+      "action": "waking up, rubbing eyes, stretching",
+      "motion": "push-in",
+      "shots": [
+        { "content": "A cozy little bedroom in soft warm morning sunlight; the chubby boy in the yellow hoodie and the chubby girl in the coral-red dress are just waking up, rubbing their eyes and stretching, sleepy and happy and cute.", "weight": 1 }
+      ],
+      "captions": {
+        "zh": "早晨，阳光照进小屋，胖乎乎的哥哥和妹妹醒来啦。",
+        "pinyin": "zǎochén, yángguāng zhào jìn xiǎo wū, pànghūhū de gēge hé mèimei xǐng lái la.",
+        "local": "Buổi sáng, nắng chiếu vào nhà, anh trai và em gái mũm mĩm thức dậy rồi."
+      }
+    },
+    {
+      "id": "p2",
+      "sceneId": "bedroom-morning",
+      "hasMainCharacter": true,
+      "characters": ["boy"],
+      "emotion": "cheerful and proud",
+      "action": "holding a phone, speaking out loud",
+      "motion": "push-in",
+      "shots": [
+        { "content": "The chubby boy in the yellow hoodie holding a smartphone in both hands, mouth open speaking happily and confidently, cheerful and proud.", "weight": 1 }
+      ],
+      "captions": {
+        "zh": "哥哥打开手机，跟着大声说：你好！",
+        "pinyin": "gēge dǎkāi shǒujī, gēnzhe dàshēng shuō: nǐ hǎo!",
+        "local": "Anh trai mở điện thoại, đọc to theo: Xin chào!"
+      }
+    },
+    {
+      "id": "p3",
+      "sceneId": "bedroom-morning",
+      "hasMainCharacter": true,
+      "characters": ["girl"],
+      "emotion": "sweet and proud",
+      "action": "speaking sweetly, little hands together",
+      "motion": "push-in",
+      "shots": [
+        { "content": "The chubby little girl in the coral-red dress standing cutely, mouth open speaking sweetly, little hands together, adorable and proud.", "weight": 1 }
+      ],
+      "captions": {
+        "zh": "妹妹也不甘示弱，奶声奶气地念：谢谢！",
+        "pinyin": "mèimei yě bùgān shìruò, nǎishēng nǎiqì de niàn: xièxie!",
+        "local": "Em gái cũng không chịu kém, bi bô đọc theo: Cảm ơn!"
+      }
+    },
+    {
+      "id": "p4",
+      "sceneId": "kitchen-morning",
+      "hasMainCharacter": true,
+      "characters": ["dad", "mom"],
+      "emotion": "warm and proud",
+      "action": "dad thumbs up, mom carrying a breakfast tray",
+      "motion": "pan-right",
+      "shots": [
+        { "content": "The dad giving a big thumbs up with a warm proud smile, next to the chubby mom in the deep-green dress carrying a tray with steaming breakfast bowls; a simple cozy kitchen.", "weight": 1 }
+      ],
+      "captions": {
+        "zh": "爸爸竖起大拇指，妈妈端来香喷喷的早餐。",
+        "pinyin": "bàba shù qǐ dàmǔzhǐ, māma duān lái xiāngpēnpēn de zǎocān.",
+        "local": "Bố giơ ngón tay cái, mẹ bưng tới bữa sáng thơm phức."
+      }
+    },
+    {
+      "id": "p5",
+      "sceneId": "kitchen-morning",
+      "hasMainCharacter": true,
+      "characters": ["dog"],
+      "emotion": "curious and eager",
+      "action": "tilting head, listening",
+      "motion": "still",
+      "shots": [
+        { "content": "The cute grey-and-white bulldog puppy tilting its head curiously to one side, big sweet eyes, as if listening and eager to learn.", "weight": 1 }
+      ],
+      "captions": {
+        "zh": "连小狗都歪着头，好像也想学说中文。",
+        "pinyin": "lián xiǎo gǒu dōu wāizhe tóu, hǎoxiàng yě xiǎng xué shuō zhōngwén.",
+        "local": "Đến chú cún cũng nghiêng đầu, như muốn học nói tiếng Trung."
+      }
+    },
+    {
+      "id": "p6",
+      "sceneId": "family-together",
+      "hasMainCharacter": true,
+      "characters": ["boy", "girl", "dad", "mom", "dog"],
+      "emotion": "warm togetherness",
+      "action": "whole family smiling side by side",
+      "motion": "push-in",
+      "shots": [
+        { "content": "The whole happy family together — the dad, the chubby mom in the deep-green dress, the chubby boy in yellow, the chubby girl in coral-red, and the little grey-and-white bulldog — all smiling warmly side by side, cozy togetherness.", "weight": 1 }
+      ],
+      "captions": {
+        "zh": "一家人每天一起学，中文越来越棒！",
+        "pinyin": "yìjiā rén měitiān yìqǐ xué, zhōngwén yuèláiyuè bàng!",
+        "local": "Cả nhà mỗi ngày cùng học, tiếng Trung ngày càng giỏi!"
+      }
+    },
+    {
+      "id": "p7",
+      "sceneId": "family-together",
+      "hasMainCharacter": true,
+      "characters": ["boy", "girl"],
+      "emotion": "joyful and inviting",
+      "action": "waving at the viewer",
+      "motion": "push-in",
+      "shots": [
+        { "content": "The chubby boy in yellow and the chubby girl in coral-red waving happily at the viewer, joyful and inviting, cheerful celebratory mood with a few simple sparkle dots around them.", "weight": 1 }
+      ],
+      "captions": {
+        "zh": "快和全家一起，轻松学中文吧！",
+        "pinyin": "kuài hé quánjiā yìqǐ, qīngsōng xué zhōngwén ba!",
+        "local": "Hãy cùng cả nhà học tiếng Trung thật dễ dàng nào!"
+      }
+    }
+  ]
+}

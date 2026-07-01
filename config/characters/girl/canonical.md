@@ -1,0 +1,1 @@
+A chubby cartoon little girl (younger sister). Brown hair in two small high pigtails tied with red ties, short bangs, round pudgy face, rosy cheeks, big round black eyes, tiny sweet smile. Wears a coral-red short-sleeve dress with a small white collar. Very round, plump, soft body, short bare legs. Cute, lively, adorable. Brown hair (never flat black).

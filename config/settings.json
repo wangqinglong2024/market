@@ -1,0 +1,28 @@
+{
+  "_comment": "全局默认配置。单条视频可在 inputs 里覆盖个别项。",
+  "meta": { "fps": 30, "width": 1080, "height": 1920 },
+  "defaultLang": "vi",
+  "languages": {
+    "vi": { "name": "越南语", "displayName": "Tiếng Việt" },
+    "th": { "name": "泰语",   "displayName": "ภาษาไทย" }
+  },
+  "audio": {
+    "engine": "volcano",
+    "voice": "开朗姐姐",
+    "narrationLang": "zh",
+    "tailPaddingMs": 400
+  },
+  "image": {
+    "model": "fal-ai/nano-banana/edit",
+    "aspectRatio": "9:16",
+    "seedStrategy": "from-shot-id",
+    "maxRetries": 3
+  },
+  "captions": {
+    "bandTopRatio": 0.6927,
+    "pinyinColor": "#a58e5c",
+    "zhColor": "#20242b",
+    "localColor": "#d6336c",
+    "bgColor": "#fefefe"
+  }
+}

@@ -9,7 +9,9 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
     "noUnusedLocals": true
   },
+  "include": ["src", "catalog.json"],
   "exclude": ["remotion.config.ts"]
 }

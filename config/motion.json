@@ -1,0 +1,19 @@
+{
+  "_comment": "运镜/特效预设库。分镜按句意选 preset（见 rules），Remotion 按名播放。改这里即调运镜，无需动代码。scale/panX/panY 为 [起,止]（px 或倍数），单值表示恒定。",
+  "presets": {
+    "push-in":   { "scale": [1.03, 1.09], "panX": [0, 0],   "panY": [0, 0] },
+    "pan-left":  { "scale": [1.05, 1.07], "panX": [0, -36], "panY": [0, 0] },
+    "pan-right": { "scale": [1.05, 1.07], "panX": [0, 36],  "panY": [0, 0] },
+    "climb-up":  { "scale": [1.06, 1.10], "panX": [0, 0],   "panY": [0, -40] },
+    "still":     { "scale": [1.02, 1.02], "panX": [0, 0],   "panY": [0, 0] }
+  },
+  "rules": {
+    "default": "push-in",
+    "byKeyword": {
+      "爬|登|上山|升|越来越高|变高": "climb-up",
+      "走|来到|移动|从|到|然后|一边|出发|前进": "pan-right",
+      "回|退|返回": "pan-left"
+    }
+  },
+  "pageTurn": { "fadeFrames": 10, "captionRiseFrames": 14, "captionRisePx": 22 }
+}

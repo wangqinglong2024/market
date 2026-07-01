@@ -1,0 +1,1 @@
+A slim, gentle cartoon dad. Short tousled brown hair, round thin-rimmed glasses, soft warm smile, rosy cheeks. Wears an olive-green short-sleeve t-shirt, dark slate-blue trousers and black shoes. Tall and lean build. Kind, warm, easygoing. Brown hair (never flat black).

@@ -6,14 +6,22 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@neplex/vectorizer": "^0.1.0",
     "@remotion/captions": "4.0.484",
     "@remotion/cli": "4.0.484",
+    "@remotion/media-parser": "^4.0.484",
     "@remotion/tailwind-v4": "4.0.484",
+    "@remotion/three": "^4.0.484",
+    "@remotion/transitions": "^4.0.484",
     "@remotion/zod-types": "4.0.484",
+    "@types/three": "^0.185.0",
+    "pinyin-pro": "^3.28.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.484",
+    "sharp": "^0.35.2",
     "tailwindcss": "4.0.0",
+    "three": "^0.185.0",
     "zod": "4.3.6"
   },
   "devDependencies": {

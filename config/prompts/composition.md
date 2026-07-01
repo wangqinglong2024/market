@@ -1,0 +1,1 @@
+Tall vertical 9:16 portrait composition. Place the main subject in the UPPER TWO-THIRDS and keep the LOWER THIRD empty, plain and clear so subtitles can sit there. Keep important content away from the extreme top and bottom (platform safe zones). Background: mostly plain white / very light, with only a few minimal simple props to suggest the place.

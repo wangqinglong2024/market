@@ -1,57 +1,37 @@
 import "./index.css";
 import { Composition } from "remotion";
-import { Demo, DEMO_TOTAL_FRAMES } from "./Demo";
-import { HelloWorld, myCompSchema } from "./HelloWorld";
-import { Logo, myCompSchema2 } from "./HelloWorld/Logo";
+import { Video, calcVideoMetadata } from "./Video";
+import { FxSlice, FX_SLICE_FRAMES } from "./scenes/FxSlice";
+import catalog from "../catalog.json";
 
-// Each <Composition> is an entry in the sidebar!
-
+// 每条视频 = catalog 里一条记录 → 一个数据驱动的 Composition。
+// 加视频不用改这里：build 产出 manifest + 在 catalog.json 加一行即可。
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      {/* 视觉升级垂直切片：矢量角色 + 特效（先看新画风） */}
       <Composition
-        id="Demo"
-        component={Demo}
-        durationInFrames={DEMO_TOTAL_FRAMES}
+        id="fx-slice"
+        component={FxSlice}
+        durationInFrames={FX_SLICE_FRAMES}
         fps={30}
         width={1080}
         height={1920}
       />
 
-      <Composition
-        // You can take the "id" to render a video:
-        // npx remotion render HelloWorld
-        id="HelloWorld"
-        component={HelloWorld}
-        durationInFrames={150}
-        fps={30}
-        width={1920}
-        height={1080}
-        // You can override these props for each render:
-        // https://www.remotion.dev/docs/parametrized-rendering
-        schema={myCompSchema}
-        defaultProps={{
-          titleText: "Welcome to Remotion",
-          titleColor: "#000000",
-          logoColor1: "#91EAE4",
-          logoColor2: "#86A8E7",
-        }}
-      />
-
-      {/* Mount any React component to make it show up in the sidebar and work on it individually! */}
-      <Composition
-        id="OnlyLogo"
-        component={Logo}
-        durationInFrames={150}
-        fps={30}
-        width={1920}
-        height={1080}
-        schema={myCompSchema2}
-        defaultProps={{
-          logoColor1: "#91dAE2" as const,
-          logoColor2: "#86A8E7" as const,
-        }}
-      />
+      {catalog.videos.map((v) => (
+        <Composition
+          key={v.id}
+          id={v.id}
+          component={Video}
+          calculateMetadata={calcVideoMetadata}
+          defaultProps={{ videoId: v.id, shard: v.shard, manifest: null }}
+          durationInFrames={300}
+          fps={30}
+          width={1080}
+          height={1920}
+        />
+      ))}
     </>
   );
 };

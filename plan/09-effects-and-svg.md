@@ -1,0 +1,52 @@
+# 09 · 视觉升级：全 SVG 矢量 + 特效栈（新方向）
+
+从"图片幻灯片"升级为"矢量动画短片，有视觉冲击"。角色改**全 SVG 扁平矢量、可绑骨骼、零出图 API**；
+背景/特效用 SVG / three.js / 粒子 / 物理。特效与图片一样**按 beat 绑定、伴随语音**。
+
+## 铁律：逐帧确定性（最重要）
+Remotion 渲染是逐帧截图，不是实时播放。因此：
+- 一切动画必须是 `useCurrentFrame()` 的函数。**禁用** CSS animation / requestAnimationFrame / Web Animations API / 实时 Canvas 循环。
+- 随机与物理必须**种子化 + 按帧步进**：用 Remotion `random(seed)`；物理引擎每帧从初始态手动 step N 次到当前帧（或预烧轨迹）。否则画面闪、不可复现。
+
+## 技术栈映射
+| 用途 | 方案 |
+|---|---|
+| 3D 运镜/视差/景深 | `@remotion/three`（官方，首选） |
+| GPU 粒子瀑布/大批量精灵 | PixiJS（手动按帧 render）或 three Points；轻量用 SVG/Canvas2D 逐帧 |
+| 物理（掉落/弹跳/堆叠） | matter.js / rapier，种子化按帧 step |
+| 光效/漏光/发光/故障 | SVG 滤镜 + 逐帧 Canvas2D |
+| 角色 | 分层 SVG + 部件命名（头/眼/嘴/手/身），代码按帧绑骨骼 |
+| 转场 | `@remotion/transitions`（翻页/擦除/whip-pan） |
+| UI/HUD | React（本就是） |
+
+## 分层数据模型（manifest 每个 beat）
+```jsonc
+{
+  "id": "p01",
+  "layers": {
+    "bg":    { "type": "svg-scene" | "gradient" | "three", "ref": "..." },
+    "characters": [ { "id": "boy", "pose": "wave", "motion": "parallax-far" } ],
+    "fgFx":  [ { "type": "sparkle" } ]
+  },
+  "effects": [ { "type": "lightLeak", "intensity": 0.4 } ],  // 与该拍语音同窗
+  "motion": { "compose": ["push-in", "pan-right", "rotate-1"], "seed": 12 },
+  "transitionIn": "page-turn"
+}
+```
+
+## config 新增/扩展
+- `config/effects.json`：特效预设库（粒子/光效/转场参数），可调。
+- `config/motion.json`：扩成**可组合 + 种子微随机 + 避免连拍重复**的运镜库（自动编排）。
+- `config/characters/<id>/character.svg`：可编辑矢量 + 命名部件；`spec.json` 存配色/默认姿态。
+
+## 角色产出方法（待定，见本轮提问）
+- **A 矢量化现有 AI 参考图**（推荐）：描摹 → 分层 → 拆件绑骨骼。保住现有萌感，零 API。
+- **B 从零手绘扁平矢量**：全新画风，工作量大、萌度风险高。
+
+## 落地节奏（先做垂直切片再铺开）
+1. 一个角色（boy）矢量化 + 绑骨骼 + 一条"满配特效"的场景（背景+粒子+3D视差+转场+自动运镜）。
+2. 你在 :3000 看新画风，确认后再铺到 5 角色 + 全 beat。
+（沿用 [[06-open-questions]] 的"先 spike 验证最高风险"思路——新画风就是当前最高风险。）
+
+## 关联
+[[00-overview]] · [[03-remotion-animation]] · [[07-asset-layout]] · [[08-script-to-video-rules]]
