@@ -32,8 +32,8 @@
       "durationMs": 6496,
       "motion": "ken-burns",
       "effects": [
-        { "type": "three", "variant": "bokeh" },
-        { "type": "lightLeak", "intensity": 0.35 }
+        { "type": "floatingIcons", "shape": "star", "count": 14 },
+        { "type": "lightLeak", "intensity": 0.4 }
       ],
       "captions": {
         "pinyin": "zǎochén, yángguāng zhào jìn xiǎo wū, pànghūhū de gēge hé mèimei xǐng lái la.",
@@ -48,7 +48,10 @@
       "durationMs": 4528,
       "motion": "pop",
       "transitionIn": "fade",
-      "effects": [{ "type": "sparkle", "count": 28 }],
+      "effects": [
+        { "type": "focusLines", "count": 64, "intensity": 0.18 },
+        { "type": "sparkle", "count": 30 }
+      ],
       "captions": {
         "pinyin": "gēge dǎkāi shǒujī, gēnzhe dàshēng shuō: nǐ hǎo!",
         "zh": "哥哥打开手机，跟着大声说：你好！",
@@ -62,7 +65,10 @@
       "durationMs": 5080,
       "motion": "push-in",
       "transitionIn": "slide-left",
-      "effects": [{ "type": "sparkle", "count": 28, "color": "#ffd6e8" }],
+      "effects": [
+        { "type": "focusLines", "count": 56, "intensity": 0.14, "color": "214,90,140" },
+        { "type": "floatingIcons", "shape": "heart", "count": 12 }
+      ],
       "captions": {
         "pinyin": "mèimei yě bùgān shìruò, nǎishēng nǎiqì de niàn: xièxie!",
         "zh": "妹妹也不甘示弱，奶声奶气地念：谢谢！",
@@ -76,7 +82,10 @@
       "durationMs": 4792,
       "motion": "pan-right",
       "transitionIn": "slide-left",
-      "effects": [{ "type": "lightLeak", "intensity": 0.4 }],
+      "effects": [
+        { "type": "floatingIcons", "shape": "heart", "count": 12 },
+        { "type": "lightLeak", "intensity": 0.45 }
+      ],
       "captions": {
         "pinyin": "bàba shù qǐ dàmǔzhǐ, māma duān lái xiāngpēnpēn de zǎocān.",
         "zh": "爸爸竖起大拇指，妈妈端来香喷喷的早餐。",
@@ -90,7 +99,10 @@
       "durationMs": 4936,
       "motion": "sway",
       "transitionIn": "fade",
-      "effects": [{ "type": "sparkle", "count": 22, "color": "#cde7ff" }],
+      "effects": [
+        { "type": "floatingIcons", "shape": "star", "count": 10 },
+        { "type": "sparkle", "count": 20, "color": "#cde7ff" }
+      ],
       "captions": {
         "pinyin": "lián xiǎo gǒu dōu wāizhe tóu, hǎoxiàng yě xiǎng xué shuō zhōngwén.",
         "zh": "连小狗都歪着头，好像也想学说中文。",
@@ -105,8 +117,9 @@
       "motion": "push-in",
       "transitionIn": "wipe",
       "effects": [
-        { "type": "three", "variant": "bokeh" },
-        { "type": "lightLeak", "intensity": 0.35 }
+        { "type": "confetti", "count": 60 },
+        { "type": "floatingIcons", "shape": "mix", "count": 16 },
+        { "type": "lightLeak", "intensity": 0.4 }
       ],
       "captions": {
         "pinyin": "yìjiā rén měitiān yìqǐ xué, zhōngwén yuèláiyuè bàng!",
@@ -122,8 +135,9 @@
       "motion": "pop",
       "transitionIn": "slide-up",
       "effects": [
-        { "type": "confetti", "count": 70 },
-        { "type": "sparkle", "count": 30 }
+        { "type": "confetti", "count": 90 },
+        { "type": "focusLines", "count": 64, "intensity": 0.16 },
+        { "type": "sparkle", "count": 34 }
       ],
       "captions": {
         "pinyin": "kuài hé quánjiā yìqǐ, qīngsōng xué zhōngwén ba!",

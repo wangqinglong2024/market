@@ -22,6 +22,8 @@ import { Sparkles } from "./fx/Sparkles";
 import { LightLeak } from "./fx/LightLeak";
 import { Confetti } from "./fx/Confetti";
 import { ThreeParticles } from "./fx/ThreeParticles";
+import { FocusLines } from "./fx/FocusLines";
+import { FloatingIcons } from "./fx/FloatingIcons";
 
 // ---- 数据类型：完全由 manifest 驱动，渲染层不含业务内容 ----
 type Motion = {
@@ -35,11 +37,12 @@ type Motion = {
 };
 
 type Effect = {
-  type: "sparkle" | "lightLeak" | "confetti" | "three";
+  type: "sparkle" | "lightLeak" | "confetti" | "three" | "focusLines" | "floatingIcons";
   count?: number;
   intensity?: number;
   color?: string;
   variant?: "bokeh" | "stars";
+  shape?: "star" | "heart" | "mix";
   originX?: number;
   originY?: number;
 };
@@ -171,6 +174,10 @@ const EffectsLayer: React.FC<{ effects?: Effect[]; imgW: number; imgH: number }>
             return <Confetti key={i} count={fx.count ?? 60} originX={fx.originX ?? 0.5} originY={fx.originY ?? 0.4} seed={`cf-${i}`} />;
           case "three":
             return <ThreeParticles key={i} width={imgW} height={imgH} variant={fx.variant ?? "bokeh"} seed={`tp-${i}`} />;
+          case "focusLines":
+            return <FocusLines key={i} count={fx.count ?? 60} intensity={fx.intensity ?? 0.16} color={fx.color ?? "40,36,32"} centerX={fx.originX ?? 0.5} centerY={fx.originY ?? 0.42} seed={`fl-${i}`} />;
+          case "floatingIcons":
+            return <FloatingIcons key={i} count={fx.count ?? 16} shape={fx.shape ?? "star"} seed={`fi-${i}`} />;
           default:
             return null;
         }
