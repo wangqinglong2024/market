@@ -4,88 +4,24 @@
     "width": 1080,
     "height": 1920,
     "bandTopRatio": 0.6927,
+    "transitionFrames": 12,
     "motionPresets": {
-      "push-in": {
-        "scale": [
-          1.03,
-          1.09
-        ],
-        "panX": [
-          0,
-          0
-        ],
-        "panY": [
-          0,
-          0
-        ]
-      },
-      "pan-left": {
-        "scale": [
-          1.05,
-          1.07
-        ],
-        "panX": [
-          0,
-          -36
-        ],
-        "panY": [
-          0,
-          0
-        ]
-      },
-      "pan-right": {
-        "scale": [
-          1.05,
-          1.07
-        ],
-        "panX": [
-          0,
-          36
-        ],
-        "panY": [
-          0,
-          0
-        ]
-      },
-      "climb-up": {
-        "scale": [
-          1.06,
-          1.1
-        ],
-        "panX": [
-          0,
-          0
-        ],
-        "panY": [
-          0,
-          -40
-        ]
-      },
-      "still": {
-        "scale": [
-          1.02,
-          1.02
-        ],
-        "panX": [
-          0,
-          0
-        ],
-        "panY": [
-          0,
-          0
-        ]
-      }
+      "push-in":   { "scale": [1.02, 1.12], "panX": [0, 0],    "panY": [0, 0],    "driftX": 8,  "driftY": 6,  "ease": "inOut" },
+      "pull-back": { "scale": [1.14, 1.02], "panX": [0, 0],    "panY": [0, 0],    "driftX": 6,  "driftY": 5,  "ease": "inOut" },
+      "pan-left":  { "scale": [1.08, 1.10], "panX": [40, -40], "panY": [0, 0],    "driftY": 6,  "ease": "inOut" },
+      "pan-right": { "scale": [1.08, 1.10], "panX": [-40, 40], "panY": [0, 0],    "driftY": 6,  "ease": "inOut" },
+      "climb-up":  { "scale": [1.06, 1.14], "panX": [0, 0],    "panY": [40, -44], "driftX": 6,  "ease": "inOut" },
+      "ken-burns": { "scale": [1.05, 1.13], "panX": [24, -28], "panY": [14, -18], "driftX": 10, "driftY": 8, "ease": "inOut" },
+      "sway":      { "scale": [1.06, 1.06], "panX": [0, 0],    "panY": [0, 0],    "driftX": 16, "driftY": 10, "ease": "linear" },
+      "pop":       { "scale": [1.18, 1.04], "panX": [0, 0],    "panY": [0, 0],    "driftX": 6,  "driftY": 4,  "rotate": [-1.5, 0], "ease": "inOut" },
+      "still":     { "scale": [1.03, 1.03], "panX": [0, 0],    "panY": [0, 0],    "driftX": 5,  "driftY": 4,  "ease": "linear" }
     },
-    "pageTurn": {
-      "fadeFrames": 10,
-      "captionRiseFrames": 14,
-      "captionRisePx": 22
-    },
+    "pageTurn": { "fadeFrames": 10, "captionRiseFrames": 14, "captionRisePx": 22 },
     "captions": {
       "pinyinColor": "#a58e5c",
       "zhColor": "#20242b",
       "localColor": "#d6336c",
-      "bgColor": "#fefefe"
+      "bgColor": "#fdfcf7"
     }
   },
   "beats": [
@@ -94,7 +30,11 @@
       "image": "videos/2026-07/demo/images/p1.png",
       "audio": "videos/2026-07/demo/audio/p1.mp3",
       "durationMs": 6496,
-      "motion": "push-in",
+      "motion": "ken-burns",
+      "effects": [
+        { "type": "three", "variant": "bokeh" },
+        { "type": "lightLeak", "intensity": 0.35 }
+      ],
       "captions": {
         "pinyin": "zǎochén, yángguāng zhào jìn xiǎo wū, pànghūhū de gēge hé mèimei xǐng lái la.",
         "zh": "早晨，阳光照进小屋，胖乎乎的哥哥和妹妹醒来啦。",
@@ -106,7 +46,9 @@
       "image": "videos/2026-07/demo/images/p2.png",
       "audio": "videos/2026-07/demo/audio/p2.mp3",
       "durationMs": 4528,
-      "motion": "push-in",
+      "motion": "pop",
+      "transitionIn": "fade",
+      "effects": [{ "type": "sparkle", "count": 28 }],
       "captions": {
         "pinyin": "gēge dǎkāi shǒujī, gēnzhe dàshēng shuō: nǐ hǎo!",
         "zh": "哥哥打开手机，跟着大声说：你好！",
@@ -119,6 +61,8 @@
       "audio": "videos/2026-07/demo/audio/p3.mp3",
       "durationMs": 5080,
       "motion": "push-in",
+      "transitionIn": "slide-left",
+      "effects": [{ "type": "sparkle", "count": 28, "color": "#ffd6e8" }],
       "captions": {
         "pinyin": "mèimei yě bùgān shìruò, nǎishēng nǎiqì de niàn: xièxie!",
         "zh": "妹妹也不甘示弱，奶声奶气地念：谢谢！",
@@ -131,6 +75,8 @@
       "audio": "videos/2026-07/demo/audio/p4.mp3",
       "durationMs": 4792,
       "motion": "pan-right",
+      "transitionIn": "slide-left",
+      "effects": [{ "type": "lightLeak", "intensity": 0.4 }],
       "captions": {
         "pinyin": "bàba shù qǐ dàmǔzhǐ, māma duān lái xiāngpēnpēn de zǎocān.",
         "zh": "爸爸竖起大拇指，妈妈端来香喷喷的早餐。",
@@ -142,7 +88,9 @@
       "image": "videos/2026-07/demo/images/p5.png",
       "audio": "videos/2026-07/demo/audio/p5.mp3",
       "durationMs": 4936,
-      "motion": "still",
+      "motion": "sway",
+      "transitionIn": "fade",
+      "effects": [{ "type": "sparkle", "count": 22, "color": "#cde7ff" }],
       "captions": {
         "pinyin": "lián xiǎo gǒu dōu wāizhe tóu, hǎoxiàng yě xiǎng xué shuō zhōngwén.",
         "zh": "连小狗都歪着头，好像也想学说中文。",
@@ -155,6 +103,11 @@
       "audio": "videos/2026-07/demo/audio/p6.mp3",
       "durationMs": 4768,
       "motion": "push-in",
+      "transitionIn": "wipe",
+      "effects": [
+        { "type": "three", "variant": "bokeh" },
+        { "type": "lightLeak", "intensity": 0.35 }
+      ],
       "captions": {
         "pinyin": "yìjiā rén měitiān yìqǐ xué, zhōngwén yuèláiyuè bàng!",
         "zh": "一家人每天一起学，中文越来越棒！",
@@ -166,7 +119,12 @@
       "image": "videos/2026-07/demo/images/p7.png",
       "audio": "videos/2026-07/demo/audio/p7.mp3",
       "durationMs": 4096,
-      "motion": "push-in",
+      "motion": "pop",
+      "transitionIn": "slide-up",
+      "effects": [
+        { "type": "confetti", "count": 70 },
+        { "type": "sparkle", "count": 30 }
+      ],
       "captions": {
         "pinyin": "kuài hé quánjiā yìqǐ, qīngsōng xué zhōngwén ba!",
         "zh": "快和全家一起，轻松学中文吧！",

@@ -29,6 +29,17 @@ Chào mẹ.          ← 当地语言，中号
 - 停留时长 = 该页 TTS 真实音频长度（音频驱动）。
 - **逐字高亮（卡拉OK跟读）**：若火山 TTS 提供字级时间戳（见 04），中文逐字点亮，教学效果强；否则整句淡入淡出。
 
+### ★ 三行一律不换行(已锁定，2026-07-02)
+- 拼音 ruby / 中文 / 当地语言**每行都单行显示，绝不 flex-wrap 折行**。
+- 实现：每行 `white-space: nowrap`，用 layout 测量行宽 vs 字幕带可用宽，超宽则**整行等比缩小**贴合（`FitLine` 组件：`useLayoutEffect` 量 `scrollWidth`，算 `scale=min(1,avail/measured)`，配 `delayRender/continueRender` 保渲染确定性）。
+- 字幕带只在人物**正下方**，上下留白相等（安全区），见 [[10-art-style-locked]] 版式。
+
+## ★ 运镜升级：组合运镜（已锁定，2026-07-02）
+`config/motion.json` 预设支持组合字段：`scale`(推拉) + `panX/panY`(平移) + `driftX/driftY`(正弦漂移，让静图持续"呼吸") + `rotate`(轻微旋转) + `ease`(inOut 缓动)。
+- 预设：`push-in / pull-back / pan-left / pan-right / climb-up / ken-burns / sway / pop / still`。
+- 分镜按句意（`rules.byKeyword`）自动选 preset；渲染层 `Video.tsx` 按名播放，**改预设即调运镜，不动代码**。
+- beat 间用 `@remotion/transitions`（淡入/滑入/翻页）做转场，不再只是 opacity 淡入淡出。
+
 ## 片头 / 片尾
 - 片头：品牌露出 + 主题。
 - 片尾：软件 CTA「下载 XX，全家一起学中文」+ 二维码/应用商店标识。固定模板。

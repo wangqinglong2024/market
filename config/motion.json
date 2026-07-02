@@ -1,18 +1,24 @@
 {
-  "_comment": "运镜/特效预设库。分镜按句意选 preset（见 rules），Remotion 按名播放。改这里即调运镜，无需动代码。scale/panX/panY 为 [起,止]（px 或倍数），单值表示恒定。",
+  "_comment": "运镜预设库(图片+运镜方向)。每个 beat 按句意选 preset,Remotion 按名播放。字段: scale/panX/panY=[起,止];driftX/driftY=正弦漂移振幅(px);rotate=[起,止]度;ease=inOut|linear。改这里即调运镜,无需动代码。",
   "presets": {
-    "push-in":   { "scale": [1.03, 1.09], "panX": [0, 0],   "panY": [0, 0] },
-    "pan-left":  { "scale": [1.05, 1.07], "panX": [0, -36], "panY": [0, 0] },
-    "pan-right": { "scale": [1.05, 1.07], "panX": [0, 36],  "panY": [0, 0] },
-    "climb-up":  { "scale": [1.06, 1.10], "panX": [0, 0],   "panY": [0, -40] },
-    "still":     { "scale": [1.02, 1.02], "panX": [0, 0],   "panY": [0, 0] }
+    "push-in":   { "scale": [1.02, 1.12], "panX": [0, 0],    "panY": [0, 0],   "driftX": 8,  "driftY": 6,  "ease": "inOut" },
+    "pull-back": { "scale": [1.14, 1.02], "panX": [0, 0],    "panY": [0, 0],   "driftX": 6,  "driftY": 5,  "ease": "inOut" },
+    "pan-left":  { "scale": [1.08, 1.10], "panX": [40, -40], "panY": [0, 0],   "driftY": 6,  "ease": "inOut" },
+    "pan-right": { "scale": [1.08, 1.10], "panX": [-40, 40], "panY": [0, 0],   "driftY": 6,  "ease": "inOut" },
+    "climb-up":  { "scale": [1.06, 1.14], "panX": [0, 0],    "panY": [40, -44], "driftX": 6, "ease": "inOut" },
+    "ken-burns": { "scale": [1.05, 1.13], "panX": [24, -28], "panY": [14, -18], "driftX": 10, "driftY": 8, "ease": "inOut" },
+    "sway":      { "scale": [1.06, 1.06], "panX": [0, 0],    "panY": [0, 0],   "driftX": 16, "driftY": 10, "ease": "linear" },
+    "pop":       { "scale": [1.18, 1.04], "panX": [0, 0],    "panY": [0, 0],   "driftX": 6,  "driftY": 4,  "rotate": [-1.5, 0], "ease": "inOut" },
+    "still":     { "scale": [1.03, 1.03], "panX": [0, 0],    "panY": [0, 0],   "driftX": 5,  "driftY": 4,  "ease": "linear" }
   },
   "rules": {
-    "default": "push-in",
+    "default": "ken-burns",
     "byKeyword": {
-      "爬|登|上山|升|越来越高|变高": "climb-up",
-      "走|来到|移动|从|到|然后|一边|出发|前进": "pan-right",
-      "回|退|返回": "pan-left"
+      "爬|登|上山|升|越来越高|变高|越来越棒|进步": "climb-up",
+      "走|来到|移动|从|到|然后|一边|出发|前进|端来": "pan-right",
+      "回|退|返回|想起|从前": "pan-left",
+      "全家|一起|大家|拥抱|温暖": "push-in",
+      "快|来吧|下载|加入|一起学": "pop"
     }
   },
   "pageTurn": { "fadeFrames": 10, "captionRiseFrames": 14, "captionRisePx": 22 }

@@ -1,5 +1,23 @@
-# 09 · 视觉升级：全 SVG 矢量 + 特效栈（新方向）
+# 09 · 视觉升级：特效栈
 
+> ⚠️ 更新(2026-07-02)：**SVG 木偶/骨骼方向已废弃**（见 `temp/NEXT-SESSION.md`、[[10-art-style-locked]]）。
+> 现方向 = **锁定治愈手绘风的静态图 + 运镜 + 特效层**。本文下方"全 SVG"历史内容仅存档，不再执行。
+
+## ★ 已落地的特效栈(图片+运镜方向)
+特效**按 beat 绑定、伴随语音**，全部**逐帧确定性**（见下"铁律"）。渲染层按 `beat.effects[]` 叠加：
+
+| 特效 | 组件 | 说明 |
+|---|---|---|
+| 闪烁星点 | `src/fx/Sparkles.tsx` | 确定性粒子，定点闪烁 |
+| 漏光/暖光扫 | `src/fx/LightLeak.tsx` | screen 混合，电影感光晕 |
+| **彩带/星星爆发(游戏感)** | `src/fx/Confetti.tsx` | 种子化抛射+重力，高光/CTA 拍用，"游戏特效"感 |
+| **three.js 漂浮粒子/景深** | `src/fx/ThreeParticles.tsx` | `@remotion/three` 的 ThreeCanvas，3D 浮点/散景 |
+| 视差背景(可选) | `src/fx/BackdropParallax.tsx` | 渐变 + 漂浮柔色斑块 |
+
+- `beat.effects` 例：`[{"type":"sparkle","count":40},{"type":"confetti"},{"type":"three","variant":"bokeh"}]`。
+- 运镜见 [[03-remotion-animation]] 组合运镜；转场用 `@remotion/transitions`。
+
+## 历史存档（全 SVG 矢量方向，已废弃）
 从"图片幻灯片"升级为"矢量动画短片，有视觉冲击"。角色改**全 SVG 扁平矢量、可绑骨骼、零出图 API**；
 背景/特效用 SVG / three.js / 粒子 / 物理。特效与图片一样**按 beat 绑定、伴随语音**。
 
