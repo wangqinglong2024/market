@@ -1,1 +1,1 @@
-A slim, gentle cartoon dad. Short tousled brown hair, round thin-rimmed glasses, soft warm smile, rosy cheeks. Wears an olive-green short-sleeve t-shirt, dark slate-blue trousers and black shoes. Tall and lean build. Kind, warm, easygoing. Brown hair (never flat black).
+A slim, gentle cartoon dad. Short tousled brown hair, NO glasses, soft warm smile, rosy cheeks. Wears a BLUE long-sleeve button-up shirt, BROWN trousers and dark brown shoes. Tall and lean build. Kind, warm, easygoing. FAIR LIGHT skin. Brown hair (never flat black).

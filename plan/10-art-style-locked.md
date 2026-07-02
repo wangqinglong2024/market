@@ -34,15 +34,35 @@
 
 ## 四、出图模型 & 调用(关键,见 [[05-cost-and-models]])
 
-按**画面角色数**分流,便宜优先:
-- **单角色** → `fal-ai/flux-pro/kontext`(**~$0.04**),`image_url` 喂**该角色 1 张 model-sheet**。
-- **多角色** → `fal-ai/nano-banana-pro/edit`(**~$0.15**),`image_urls[]` 喂**多张 model-sheet**。
-- **新角色/纯风格**(如首次画 dog) → `nano-banana-pro/edit` 喂 `config/style/refs/*` 当风格锚。
-- 若 $0.04 出来长相/画风不对 → 升到 `nano-banana-pro/edit`。
-- **链路**:一律 **curl + 代理 `http://127.0.0.1:7897`**(Node fetch 直连会超时)。Key 取 `api-key.txt` 第 2 行。参数含 `aspect_ratio:"9:16"`(定妆用 `3:4`)、`num_images:1`、`output_format:"png"`。
+**先定"画面里有几个人":严格依据文案/分镜(`script.json` 的 `characters[]`)——文案说几个人就画几个人,不得自己臆造增删。** 角色数决定走哪个模型:
+
+| 画面角色数 | 模型 | fal id | $/张 | 参考 |
+|---|---|---|---|---|
+| **单角色(1 人/仅 1 个主体)** | FLUX.1 Kontext [pro] | `fal-ai/flux-pro/kontext` | **~$0.04** | `image_url` 喂**该角色 1 张 model-sheet** |
+| **多角色(≥2)** | Nano Banana Pro edit | `fal-ai/nano-banana-pro/edit` | **~$0.15** | `image_urls[]` 喂**多张 model-sheet** |
+
+- 🚫 **硬规矩(用户 2026-07-02 锁定)**:**画面里只有单个人物时,禁止使用 nano-banana(pro)——一律走 flux `fal-ai/flux-pro/kontext`。** nano-banana-pro **只**允许在**多角色同框**时用。理由:实测单角色下 flux kontext 更还原定妆图、背景更干净、便宜近 4 倍;单角色即使 $0.04 出得不理想,也**在 flux 内重抽/调提示词**,不许升 nano。
+- **新角色/纯风格**(如首次画 dog,画面就它一个)仍属单角色 → 走 flux;确需多张风格锚才走 pro。
+- **链路**:一律 **curl + 代理 `http://127.0.0.1:7897`**(Node fetch 直连会超时,见记忆 [[fal-use-curl-proxy]])。Key 取 `api-key.txt` 第 2 行。参数含 `aspect_ratio:"9:16"`(定妆用 `3:4`)、`num_images:1`、`output_format:"png"`。
 - ⚠️ **坑**:node 读中文文件名在 .sh 里会 ENOENT → 参考图用 ASCII 名(已放 `config/style/refs/`)。
 
-## 五、提示词模板(拼接:STYLE + CAST/POSE + LAYOUT + NOTEXT)
+## 4.5 场景规矩(★ 用户 2026-07-02 锁定,最重要)
+
+Demo 旧图三大毛病,已废:
+1. **背景过度具象/复杂**(如旧 p1 卧室全画满、全上色)→ ❌。
+2. **画面里多出方框/圆角框/画框/边框** → ❌ 一个都不许有。
+3. **只是把定妆图换个动作、没有场景**(如旧 p3 站着几乎等于定妆图)→ ❌。
+
+**正确做法**:把人物**放进一个具体场景**里(卧室/厨房/客厅…按文案),但**背景只做极简勾勒**——
+- 只用**几根松散、很淡的铅笔线**暗示环境(如一条床沿 + 一个窗),**稀疏**,**几乎不上色**,大片留白纸面。
+- 背景**必须比人物简单得多**,不得整块painted/铺满细节。
+- **人物**照常按治愈手绘风上色、当画面唯一主体焦点。
+- 场景要"像人物一样简洁":够点明地点即可,克制。
+- 依旧遵守版式:人物中上、下方一大块留白给字幕。
+
+> 已验证:该规矩下 `flux-pro/kontext`($0.04)出图最贴需求(见 `temp/compare/p3-flux.png`)。
+
+## 五、提示词模板(拼接:STYLE + CHAR/POSE + SCENE + LAYOUT + NOTEXT)
 
 **STYLE(画风,固定)**
 ```
@@ -57,7 +77,24 @@ Using the reference images as the EXACT characters (keep each one's face, hair, 
 FAIR LIGHT skin and body type): dad normal build; mom, girl and boy all clearly CHUBBY;
 + the grey-and-white puppy dog. Everyone fully clothed and decent.
 ```
-**单角色 kontext 用**：`Keep the EXACT same character (same face/hair/clothing/body type) and same STYLE. Scene: <动作/场景>.`
+**SCENE(场景,固定 —— 极简勾勒背景,见 4.5)**
+```
+Place the character INSIDE a real scene: <地点,如 a cozy little bedroom in soft morning light>.
+Render the background as an EXTREMELY SIMPLE, LOOSE, MINIMAL rough pencil sketch — only a few
+suggestive light outlines (e.g. a bed edge and a window), very sparse, mostly bare off-white
+paper, almost NO color in the background. The background must stay FAR simpler than the
+character and must NOT be fully painted or detailed. Absolutely NO panel, NO frame, NO border,
+NO box, NO rounded rectangle anywhere.
+```
+
+**★ 单角色 flux `fal-ai/flux-pro/kontext` 完整提示词(已验证,拼这一串)**
+```
+Keep the EXACT same character from the reference (same face, hair, clothing, chubby body type)
+and the same {STYLE} {CHAR/POSE} {SCENE} {LAYOUT} {NOTEXT}
+```
+- `{CHAR/POSE}` = 该角色一句话 + 动作,如:`The chubby little girl in a pink sleeveless dress with two small pigtails, standing and speaking sweetly with her little hands together, adorable and proud.`
+- 请求体:`image_url`=该角色 model-sheet 的 base64 data URI;`aspect_ratio:"9:16"`、`num_images:1`、`output_format:"png"`。
+- 可复现脚本模板:见根 `temp/gen-demo.sh`(单角色 `kontext()`)与本会话 `temp/compare/` 脚本。
 
 **LAYOUT(版式,固定)**
 ```
