@@ -3,11 +3,11 @@
   "videos": [
     {
       "id": "demo",
-      "title": "家庭早晨学中文 Demo",
+      "title": "妈妈生病了 · 家人的爱",
       "shard": "2026-07",
       "lang": "vi",
       "status": "built",
-      "createdAt": "2026-06-30",
+      "createdAt": "2026-07-02",
       "beats": 7,
       "manifest": "public/videos/2026-07/demo/manifest.json"
     }

@@ -13,7 +13,7 @@
     "tailPaddingMs": 400
   },
   "image": {
-    "model": "fal-ai/nano-banana/edit",
+    "model": "fal-ai/nano-banana-pro/edit",
     "aspectRatio": "9:16",
     "seedStrategy": "from-shot-id",
     "maxRetries": 3

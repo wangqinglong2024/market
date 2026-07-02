@@ -34,6 +34,7 @@ import { ComicPops } from "./fx/ComicPops";
 import { Butterflies } from "./fx/Butterflies";
 import { Sakura } from "./fx/Sakura";
 import { Emotes } from "./fx/Emotes";
+import { effectRegistry } from "./fx/generated/registry";
 
 // ---- 数据类型：完全由 manifest 驱动，渲染层不含业务内容 ----
 type Motion = {
@@ -63,7 +64,8 @@ type Effect = {
     | "comicPops"
     | "butterflies"
     | "sakura"
-    | "emotes";
+    | "emotes"
+    | (string & {});
   count?: number;
   intensity?: number;
   color?: string;
@@ -204,6 +206,12 @@ const EffectsLayer: React.FC<{ effects?: Effect[]; imgW: number; imgH: number; d
   return (
     <>
       {effects.map((fx, i) => {
+        // AI-generated effect: look up from registry
+        if (fx.type.startsWith("ai:")) {
+          const key = fx.type.slice(3);
+          const AiComp = effectRegistry[key];
+          return AiComp ? <AiComp key={i} durationInFrames={durationInFrames} /> : null;
+        }
         switch (fx.type) {
           case "sparkle":
             return <Sparkles key={i} count={fx.count ?? 40} color={fx.color ?? "#fff3b0"} seed={`spk-${i}`} />;

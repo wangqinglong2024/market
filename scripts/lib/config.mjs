@@ -36,7 +36,8 @@ export function loadCharacters() {
 
 export function loadPrompts() {
   return {
-    imageTpl: readText(C("prompts", "image.tpl.md")), // 保留占位符，含说明注释
+    imageTpl: readText(C("prompts", "image.tpl.md")),
+    imageFluxTpl: readText(C("prompts", "image-flux.tpl.md")),
     style: stripComments(readText(C("prompts", "style.md"))),
     composition: stripComments(readText(C("prompts", "composition.md"))),
     negative: stripComments(readText(C("prompts", "negative.md"))),
@@ -45,7 +46,7 @@ export function loadPrompts() {
   };
 }
 
-// 确定性组装出图 prompt：模板占位符替换，单一来源、每次相同
+// 多角色 nano-banana-pro 用完整模板
 export function buildImagePrompt({ shotContent, charIds, prompts, characters }) {
   const canon = (charIds || [])
     .map((id) => characters[id]?.canon)
@@ -57,6 +58,19 @@ export function buildImagePrompt({ shotContent, charIds, prompts, characters }) 
     .replace("{style}", prompts.style)
     .replace("{composition}", prompts.composition)
     .replace("{negative}", prompts.negative);
+}
+
+// 单角色 flux-pro/kontext 用精简模板（长 prompt 含 negative 会触发 fal nsfw 黑图）
+export function buildFluxPrompt({ shotContent, charIds, prompts, characters }) {
+  const canon = (charIds || [])
+    .map((id) => characters[id]?.canon)
+    .filter(Boolean)
+    .join(" ");
+  const styleShort = "rough hand-drawn crayon outlines, warm crayon coloring, minimal cute cartoon faces, children's picture-book feel, textured paper";
+  return stripComments(prompts.imageFluxTpl)
+    .replace("{shot}", shotContent)
+    .replace("{canon}", canon || "")
+    .replace("{style_short}", styleShort);
 }
 
 // 按句意选运镜预设：beat.motion 优先，否则按 motion.json 的关键词规则命中，默认 default

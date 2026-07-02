@@ -1,5 +1,5 @@
 {
-  "_comment": "分镜/翻译中间产物（由会话生成）。build.mjs 读它 → 配音+出图+manifest。改这里即改内容。",
+  "_comment": "分镜/翻译中间产物（会话内生成）。build.mjs 读它 → 配音+出图+manifest。改这里即改内容。",
   "videoId": "demo",
   "lang": "vi",
   "beats": [
@@ -7,119 +7,170 @@
       "id": "p1",
       "sceneId": "bedroom-morning",
       "hasMainCharacter": true,
-      "characters": ["boy", "girl"],
-      "emotion": "sleepy and happy",
-      "action": "waking up, rubbing eyes, stretching",
-      "motion": "push-in",
+      "characters": ["mom"],
+      "emotion": "pale and unwell, resting",
+      "action": "lying in bed, eyes half-closed, looks weak",
+      "motion": "pull-back",
+      "effects": [
+        { "type": "lightLeak", "intensity": 0.3 }
+      ],
       "shots": [
-        { "content": "A cozy little bedroom in soft warm morning sunlight; the chubby boy in the yellow hoodie and the chubby girl in the coral-red dress are just waking up, rubbing their eyes and stretching, sleepy and happy and cute.", "weight": 1 }
+        {
+          "content": "The chubby mom with bun hair and orange top lying in bed, looking pale and unwell, eyes drooping, tucked gently under a blanket; a cozy simple bedroom in soft quiet morning light, just a few loose pencil lines for a bed edge and small window.",
+          "weight": 1
+        }
       ],
       "captions": {
-        "zh": "早晨，阳光照进小屋，胖乎乎的哥哥和妹妹醒来啦。",
-        "pinyin": "zǎochén, yángguāng zhào jìn xiǎo wū, pànghūhū de gēge hé mèimei xǐng lái la.",
-        "local": "Buổi sáng, nắng chiếu vào nhà, anh trai và em gái mũm mĩm thức dậy rồi."
+        "zh": "那天早上，妈妈突然生病，躺在床上起不来。",
+        "pinyin": "nà tiān zǎoshang, māma tūrán shēngbìng, tǎng zài chuáng shang qǐ bù lái.",
+        "local": "Sáng hôm đó, mẹ bỗng ốm, nằm mãi trên giường không dậy được."
       }
     },
     {
       "id": "p2",
-      "sceneId": "bedroom-morning",
+      "sceneId": "kitchen-cooking",
       "hasMainCharacter": true,
       "characters": ["boy"],
-      "emotion": "cheerful and proud",
-      "action": "holding a phone, speaking out loud",
+      "emotion": "focused and caring, a little nervous",
+      "action": "stirring a pot carefully with both hands, tongue slightly out in concentration",
       "motion": "push-in",
+      "transitionIn": "fade",
+      "effects": [
+        { "type": "sparkle", "count": 30, "color": "#ffe8a0" },
+        { "type": "scorePop", "interval": 0.9, "tokens": ["❤️", "加油!", "Con ngoan!", "❤️"] }
+      ],
       "shots": [
-        { "content": "The chubby boy in the yellow hoodie holding a smartphone in both hands, mouth open speaking happily and confidently, cheerful and proud.", "weight": 1 }
+        {
+          "content": "The chubby boy with short golden-brown hair in green t-shirt and blue shorts, standing at a stove carefully stirring a small pot of congee with a wooden spoon, tongue slightly out in concentration, warm steam rising; a very minimal kitchen, only a faint pencil line for the stove edge.",
+          "weight": 1
+        }
       ],
       "captions": {
-        "zh": "哥哥打开手机，跟着大声说：你好！",
-        "pinyin": "gēge dǎkāi shǒujī, gēnzhe dàshēng shuō: nǐ hǎo!",
-        "local": "Anh trai mở điện thoại, đọc to theo: Xin chào!"
+        "zh": "哥哥偷偷学着，给妈妈熬了一碗粥。",
+        "pinyin": "gēge tōutōu xuézhe, gěi māma áo le yī wǎn zhōu.",
+        "local": "Anh trai lén học cách nấu một bát cháo dâng mẹ."
       }
     },
     {
       "id": "p3",
-      "sceneId": "bedroom-morning",
+      "sceneId": "garden-flowers",
       "hasMainCharacter": true,
       "characters": ["girl"],
-      "emotion": "sweet and proud",
-      "action": "speaking sweetly, little hands together",
-      "motion": "push-in",
+      "emotion": "tender and gentle, loving",
+      "action": "crouching to pick small wildflowers, holding a little bunch carefully",
+      "motion": "ken-burns",
+      "transitionIn": "slide-left",
+      "effects": [
+        { "type": "sakura", "count": 20, "originX": 0.5, "originY": 0.38 },
+        { "type": "butterflies", "count": 4 }
+      ],
       "shots": [
-        { "content": "The chubby little girl in the coral-red dress standing cutely, mouth open speaking sweetly, little hands together, adorable and proud.", "weight": 1 }
+        {
+          "content": "The chubby girl with two small pigtails in a pink dress crouching in a garden patch, gently holding a small bunch of tiny wildflowers she just picked, expression soft and loving; a very minimal garden, only a few loose pencil grass tufts around her feet.",
+          "weight": 1
+        }
       ],
       "captions": {
-        "zh": "妹妹也不甘示弱，奶声奶气地念：谢谢！",
-        "pinyin": "mèimei yě bùgān shìruò, nǎishēng nǎiqì de niàn: xièxie!",
-        "local": "Em gái cũng không chịu kém, bi bô đọc theo: Cảm ơn!"
+        "zh": "妹妹摘了院子里的小野花，放在妈妈枕边。",
+        "pinyin": "mèimei zhāi le yuànzi lǐ de xiǎo yěhuā, fàng zài māma zhěn biān.",
+        "local": "Em gái hái những bông hoa dại ngoài vườn, đặt nhẹ bên gối mẹ."
       }
     },
     {
       "id": "p4",
-      "sceneId": "kitchen-morning",
+      "sceneId": "bedroom-dad-guarding",
       "hasMainCharacter": true,
       "characters": ["dad", "mom"],
-      "emotion": "warm and proud",
-      "action": "dad thumbs up, mom carrying a breakfast tray",
+      "emotion": "dad devoted and gentle; mom resting quietly",
+      "action": "dad sitting beside the bed, hand gently on mom's hand, watching over her",
       "motion": "pan-right",
+      "transitionIn": "fade",
+      "effects": [
+        { "type": "floatingIcons", "count": 10, "shape": "heart" }
+      ],
       "shots": [
-        { "content": "The dad giving a big thumbs up with a warm proud smile, next to the chubby mom in the deep-green dress carrying a tray with steaming breakfast bowls; a simple cozy kitchen.", "weight": 1 }
+        {
+          "content": "The dad with short dark hair in a blue shirt sitting close beside the bed, one hand gently resting on the chubby mom's hand, his expression quiet and devoted; mom with bun hair and orange top is resting under a blanket; a very minimal bedroom, just faint pencil lines for bed and window.",
+          "weight": 1
+        }
       ],
       "captions": {
-        "zh": "爸爸竖起大拇指，妈妈端来香喷喷的早餐。",
-        "pinyin": "bàba shù qǐ dàmǔzhǐ, māma duān lái xiāngpēnpēn de zǎocān.",
-        "local": "Bố giơ ngón tay cái, mẹ bưng tới bữa sáng thơm phức."
+        "zh": "爸爸请了假，守在妈妈身旁，一刻也不离开。",
+        "pinyin": "bàba qǐng le jià, shǒu zài māma shēn páng, yī kè yě bù lí kāi.",
+        "local": "Bố xin nghỉ phép, ở bên mẹ cả ngày, không rời nửa bước."
       }
     },
     {
       "id": "p5",
-      "sceneId": "kitchen-morning",
+      "sceneId": "bedroom-dog",
       "hasMainCharacter": true,
-      "characters": ["dog"],
-      "emotion": "curious and eager",
-      "action": "tilting head, listening",
-      "motion": "still",
+      "characters": ["mom", "dog"],
+      "emotion": "mom resting warmly; dog quiet and loyal beside her",
+      "action": "mom resting in bed, dog lying quietly on the floor right beside the bed looking up at mom",
+      "motion": "sway",
+      "transitionIn": "slide-up",
+      "effects": [
+        { "type": "emotes", "count": 8 }
+      ],
       "shots": [
-        { "content": "The cute grey-and-white bulldog puppy tilting its head curiously to one side, big sweet eyes, as if listening and eager to learn.", "weight": 1 }
+        {
+          "content": "The chubby mom with bun hair and orange top resting in bed under a blanket, and the cute grey-and-white round puppy lying quietly on the floor right beside the bed, chin on its paws, looking up at mom with sweet loyal eyes; a very minimal cozy bedroom, just a few faint pencil lines for bed and wall.",
+          "weight": 1
+        }
       ],
       "captions": {
-        "zh": "连小狗都歪着头，好像也想学说中文。",
-        "pinyin": "lián xiǎo gǒu dōu wāizhe tóu, hǎoxiàng yě xiǎng xué shuō zhōngwén.",
-        "local": "Đến chú cún cũng nghiêng đầu, như muốn học nói tiếng Trung."
+        "zh": "连小狗也安静地趴在床边，陪着妈妈。",
+        "pinyin": "lián xiǎo gǒu yě ānjìng de pā zài chuáng biān, péizhe māma.",
+        "local": "Đến chú cún cũng nằm im bên giường, quấn quýt bên mẹ."
       }
     },
     {
       "id": "p6",
-      "sceneId": "family-together",
+      "sceneId": "bedroom-mom-touched",
       "hasMainCharacter": true,
-      "characters": ["boy", "girl", "dad", "mom", "dog"],
-      "emotion": "warm togetherness",
-      "action": "whole family smiling side by side",
-      "motion": "push-in",
+      "characters": ["mom", "dad", "boy", "girl"],
+      "emotion": "mom deeply touched with teary eyes; family warm and loving around her",
+      "action": "mom sitting up in bed, dad, boy and girl gathered closely around her bedside, all smiling warmly at her",
+      "motion": "still",
+      "transitionIn": "wipe",
+      "effects": [
+        { "type": "lightLeak", "intensity": 0.45 }
+      ],
       "shots": [
-        { "content": "The whole happy family together — the dad, the chubby mom in the deep-green dress, the chubby boy in yellow, the chubby girl in coral-red, and the little grey-and-white bulldog — all smiling warmly side by side, cozy togetherness.", "weight": 1 }
+        {
+          "content": "The chubby mom with bun hair and orange top sitting up in bed, eyes glistening with grateful tears, one hand on her chest; the dad in blue shirt, the chubby boy in green t-shirt, and the chubby girl in pink dress are all gathered warmly around the bedside, smiling at mom with love; a cozy minimal bedroom, just faint pencil lines for bed and wall.",
+          "weight": 1
+        }
       ],
       "captions": {
-        "zh": "一家人每天一起学，中文越来越棒！",
-        "pinyin": "yìjiā rén měitiān yìqǐ xué, zhōngwén yuèláiyuè bàng!",
-        "local": "Cả nhà mỗi ngày cùng học, tiếng Trung ngày càng giỏi!"
+        "zh": "妈妈看着这一家人，眼眶红了。",
+        "pinyin": "māma kànzhe zhè yījiārén, yǎnkuàng hóng le.",
+        "local": "Mẹ nhìn cả nhà, khóe mắt đỏ hoe."
       }
     },
     {
       "id": "p7",
       "sceneId": "family-together",
       "hasMainCharacter": true,
-      "characters": ["boy", "girl"],
-      "emotion": "joyful and inviting",
-      "action": "waving at the viewer",
-      "motion": "push-in",
+      "characters": ["dad", "mom", "boy", "girl", "dog"],
+      "emotion": "warm, loving, together",
+      "action": "whole family gathered around mom, smiling warmly",
+      "motion": "pop",
+      "transitionIn": "fade",
+      "effects": [
+        { "type": "starBurst", "count": 14, "originX": 0.5, "originY": 0.36, "period": 1.8, "radius": 400 },
+        { "type": "sakura", "count": 16, "originX": 0.5, "originY": 0.4 }
+      ],
       "shots": [
-        { "content": "The chubby boy in yellow and the chubby girl in coral-red waving happily at the viewer, joyful and inviting, cheerful celebratory mood with a few simple sparkle dots around them.", "weight": 1 }
+        {
+          "content": "The whole family warmly gathered together — the dad in blue shirt, the chubby mom in orange top, the chubby boy in green t-shirt, the chubby girl in pink dress, and the little grey-and-white puppy at their feet — all close together with gentle loving smiles; a very minimal cozy room, mostly bare off-white paper.",
+          "weight": 1
+        }
       ],
       "captions": {
-        "zh": "快和全家一起，轻松学中文吧！",
-        "pinyin": "kuài hé quánjiā yìqǐ, qīngsōng xué zhōngwén ba!",
-        "local": "Hãy cùng cả nhà học tiếng Trung thật dễ dàng nào!"
+        "zh": "原来，最好的药，是家人的爱。",
+        "pinyin": "yuánlái, zuì hǎo de yào, shì jiārén de ài.",
+        "local": "Hóa ra, liều thuốc hay nhất, chính là tình yêu gia đình."
       }
     }
   ]

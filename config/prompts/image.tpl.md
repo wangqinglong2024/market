@@ -8,6 +8,8 @@
   {negative}    ← config/prompts/negative.md
 无主角色的镜头 {canon} 留空，其余不变。改这个文件即改变全局出图规则。
 -->
+CHILDREN'S PICTURE BOOK ILLUSTRATION, fully clothed cartoon characters, family-friendly, SFW.
+
 {shot}
 
 Characters (keep them IDENTICAL to the reference images — same faces, hairstyles, clothes, colors and body shapes):

@@ -3,9 +3,10 @@
 // 读 public/videos/<shard>/<id>/script.json（分镜/翻译由会话生成），产出同目录 manifest.json。
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
-import { loadSettings, loadMotion, loadCharacters, loadPrompts, buildImagePrompt, pickMotion } from "./lib/config.mjs";
+import { loadSettings, loadMotion, loadCharacters, loadPrompts, buildImagePrompt, buildFluxPrompt, pickMotion } from "./lib/config.mjs";
 import { synth } from "./tts.mjs";
 import { genImage } from "./gen-image.mjs";
+import { genEffect, rebuildRegistry } from "./gen-effect.mjs";
 
 const videoId = process.argv[2];
 if (!videoId) throw new Error("用法: node scripts/build.mjs <videoId>");
@@ -55,10 +56,18 @@ for (const beat of script.beats) {
   const shot = beat.shots[0];
   const charIds = beat.hasMainCharacter ? beat.characters : [];
   const refPaths = charIds.map((id) => characters[id]?.refPath).filter(Boolean);
-  const prompt = buildImagePrompt({ shotContent: shot.content, charIds, prompts, characters });
+  // 单角色走 flux 精简模板（长 prompt 含 negative 会触发 fal nsfw 黑图）
+  const prompt = refPaths.length === 1
+    ? buildFluxPrompt({ shotContent: shot.content, charIds, prompts, characters })
+    : buildImagePrompt({ shotContent: shot.content, charIds, prompts, characters });
   const imgPath = ensure(join(dir, "images", `${beat.id}.png`));
   const img = await genImage({ outPath: imgPath, prompt, refPaths, settings });
   console.log(`  image: ${img.cached ? "cached" : "gen"} ${imgPath}`);
+
+  // AI 量身定制特效（每 beat 让 Claude 写独一无二的 TSX 组件）
+  const fx = await genEffect(beat, videoId, shard);
+  console.log(`  effect: ${fx.cached ? "cached" : "ai-gen"} ${fx.path}`);
+  const aiEffectEntry = [{ type: `ai:${shard}/${videoId}/${beat.id}` }];
 
   manifest.beats.push({
     id: beat.id,
@@ -66,9 +75,14 @@ for (const beat of script.beats) {
     audio: rel("audio", `${beat.id}.mp3`),
     durationMs: audio.ms + settings.audio.tailPaddingMs,
     motion: pickMotion(beat, motion),
+    ...(beat.transitionIn && { transitionIn: beat.transitionIn }),
+    effects: aiEffectEntry,
     captions: { pinyin: beat.captions.pinyin, zh: beat.captions.zh, local: beat.captions.local },
   });
 }
+
+// 重建 registry：扫 src/fx/generated/ 生成静态 import 映射
+rebuildRegistry();
 
 writeFileSync(join(dir, "manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
 

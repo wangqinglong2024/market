@@ -4,24 +4,172 @@
     "width": 1080,
     "height": 1920,
     "bandTopRatio": 0.6927,
-    "transitionFrames": 12,
     "motionPresets": {
-      "push-in":   { "scale": [1.02, 1.12], "panX": [0, 0],    "panY": [0, 0],    "driftX": 8,  "driftY": 6,  "ease": "inOut" },
-      "pull-back": { "scale": [1.14, 1.02], "panX": [0, 0],    "panY": [0, 0],    "driftX": 6,  "driftY": 5,  "ease": "inOut" },
-      "pan-left":  { "scale": [1.08, 1.10], "panX": [40, -40], "panY": [0, 0],    "driftY": 6,  "ease": "inOut" },
-      "pan-right": { "scale": [1.08, 1.10], "panX": [-40, 40], "panY": [0, 0],    "driftY": 6,  "ease": "inOut" },
-      "climb-up":  { "scale": [1.06, 1.14], "panX": [0, 0],    "panY": [40, -44], "driftX": 6,  "ease": "inOut" },
-      "ken-burns": { "scale": [1.05, 1.13], "panX": [24, -28], "panY": [14, -18], "driftX": 10, "driftY": 8, "ease": "inOut" },
-      "sway":      { "scale": [1.06, 1.06], "panX": [0, 0],    "panY": [0, 0],    "driftX": 16, "driftY": 10, "ease": "linear" },
-      "pop":       { "scale": [1.18, 1.04], "panX": [0, 0],    "panY": [0, 0],    "driftX": 6,  "driftY": 4,  "rotate": [-1.5, 0], "ease": "inOut" },
-      "still":     { "scale": [1.03, 1.03], "panX": [0, 0],    "panY": [0, 0],    "driftX": 5,  "driftY": 4,  "ease": "linear" }
+      "push-in": {
+        "scale": [
+          1.02,
+          1.12
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 8,
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pull-back": {
+        "scale": [
+          1.14,
+          1.02
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 5,
+        "ease": "inOut"
+      },
+      "pan-left": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          40,
+          -40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pan-right": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          -40,
+          40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "climb-up": {
+        "scale": [
+          1.06,
+          1.14
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          40,
+          -44
+        ],
+        "driftX": 6,
+        "ease": "inOut"
+      },
+      "ken-burns": {
+        "scale": [
+          1.05,
+          1.13
+        ],
+        "panX": [
+          24,
+          -28
+        ],
+        "panY": [
+          14,
+          -18
+        ],
+        "driftX": 10,
+        "driftY": 8,
+        "ease": "inOut"
+      },
+      "sway": {
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 16,
+        "driftY": 10,
+        "ease": "linear"
+      },
+      "pop": {
+        "scale": [
+          1.18,
+          1.04
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 4,
+        "rotate": [
+          -1.5,
+          0
+        ],
+        "ease": "inOut"
+      },
+      "still": {
+        "scale": [
+          1.03,
+          1.03
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 5,
+        "driftY": 4,
+        "ease": "linear"
+      }
     },
-    "pageTurn": { "fadeFrames": 10, "captionRiseFrames": 14, "captionRisePx": 22 },
+    "pageTurn": {
+      "fadeFrames": 10,
+      "captionRiseFrames": 14,
+      "captionRisePx": 22
+    },
     "captions": {
       "pinyinColor": "#a58e5c",
       "zhColor": "#20242b",
       "localColor": "#d6336c",
-      "bgColor": "#fdfcf7"
+      "bgColor": "#fefefe"
     }
   },
   "beats": [
@@ -29,111 +177,125 @@
       "id": "p1",
       "image": "videos/2026-07/demo/images/p1.png",
       "audio": "videos/2026-07/demo/audio/p1.mp3",
-      "durationMs": 6496,
-      "motion": "ken-burns",
+      "durationMs": 5368,
+      "motion": "pull-back",
       "effects": [
-        { "type": "butterflies", "count": 7 }
+        {
+          "type": "ai:2026-07/demo/p1"
+        }
       ],
       "captions": {
-        "pinyin": "zǎochén, yángguāng zhào jìn xiǎo wū, pànghūhū de gēge hé mèimei xǐng lái la.",
-        "zh": "早晨，阳光照进小屋，胖乎乎的哥哥和妹妹醒来啦。",
-        "local": "Buổi sáng, nắng chiếu vào nhà, anh trai và em gái mũm mĩm thức dậy rồi."
+        "pinyin": "nà tiān zǎoshang, māma tūrán shēngbìng, tǎng zài chuáng shang qǐ bù lái.",
+        "zh": "那天早上，妈妈突然生病，躺在床上起不来。",
+        "local": "Sáng hôm đó, mẹ bỗng ốm, nằm mãi trên giường không dậy được."
       }
     },
     {
       "id": "p2",
       "image": "videos/2026-07/demo/images/p2.png",
       "audio": "videos/2026-07/demo/audio/p2.mp3",
-      "durationMs": 4528,
-      "motion": "pop",
+      "durationMs": 4312,
+      "motion": "push-in",
       "transitionIn": "fade",
       "effects": [
-        { "type": "scorePop", "interval": 0.55, "tokens": ["+1", "很棒!", "Hay!", "+1", "GIỎI!"] }
+        {
+          "type": "ai:2026-07/demo/p2"
+        }
       ],
       "captions": {
-        "pinyin": "gēge dǎkāi shǒujī, gēnzhe dàshēng shuō: nǐ hǎo!",
-        "zh": "哥哥打开手机，跟着大声说：你好！",
-        "local": "Anh trai mở điện thoại, đọc to theo: Xin chào!"
+        "pinyin": "gēge tōutōu xuézhe, gěi māma áo le yī wǎn zhōu.",
+        "zh": "哥哥偷偷学着，给妈妈熬了一碗粥。",
+        "local": "Anh trai lén học cách nấu một bát cháo dâng mẹ."
       }
     },
     {
       "id": "p3",
       "image": "videos/2026-07/demo/images/p3.png",
       "audio": "videos/2026-07/demo/audio/p3.mp3",
-      "durationMs": 5080,
-      "motion": "push-in",
+      "durationMs": 4648,
+      "motion": "ken-burns",
       "transitionIn": "slide-left",
       "effects": [
-        { "type": "sakura", "count": 28, "originX": 0.52, "originY": 0.42 }
+        {
+          "type": "ai:2026-07/demo/p3"
+        }
       ],
       "captions": {
-        "pinyin": "mèimei yě bùgān shìruò, nǎishēng nǎiqì de niàn: xièxie!",
-        "zh": "妹妹也不甘示弱，奶声奶气地念：谢谢！",
-        "local": "Em gái cũng không chịu kém, bi bô đọc theo: Cảm ơn!"
+        "pinyin": "mèimei zhāi le yuànzi lǐ de xiǎo yěhuā, fàng zài māma zhěn biān.",
+        "zh": "妹妹摘了院子里的小野花，放在妈妈枕边。",
+        "local": "Em gái hái những bông hoa dại ngoài vườn, đặt nhẹ bên gối mẹ."
       }
     },
     {
       "id": "p4",
       "image": "videos/2026-07/demo/images/p4.png",
       "audio": "videos/2026-07/demo/audio/p4.mp3",
-      "durationMs": 4792,
+      "durationMs": 5320,
       "motion": "pan-right",
-      "transitionIn": "slide-left",
+      "transitionIn": "fade",
       "effects": [
-        { "type": "comicPops" }
+        {
+          "type": "ai:2026-07/demo/p4"
+        }
       ],
       "captions": {
-        "pinyin": "bàba shù qǐ dàmǔzhǐ, māma duān lái xiāngpēnpēn de zǎocān.",
-        "zh": "爸爸竖起大拇指，妈妈端来香喷喷的早餐。",
-        "local": "Bố giơ ngón tay cái, mẹ bưng tới bữa sáng thơm phức."
+        "pinyin": "bàba qǐng le jià, shǒu zài māma shēn páng, yī kè yě bù lí kāi.",
+        "zh": "爸爸请了假，守在妈妈身旁，一刻也不离开。",
+        "local": "Bố xin nghỉ phép, ở bên mẹ cả ngày, không rời nửa bước."
       }
     },
     {
       "id": "p5",
       "image": "videos/2026-07/demo/images/p5.png",
       "audio": "videos/2026-07/demo/audio/p5.mp3",
-      "durationMs": 4936,
+      "durationMs": 4648,
       "motion": "sway",
-      "transitionIn": "fade",
+      "transitionIn": "slide-up",
       "effects": [
-        { "type": "emotes", "count": 12 }
+        {
+          "type": "ai:2026-07/demo/p5"
+        }
       ],
       "captions": {
-        "pinyin": "lián xiǎo gǒu dōu wāizhe tóu, hǎoxiàng yě xiǎng xué shuō zhōngwén.",
-        "zh": "连小狗都歪着头，好像也想学说中文。",
-        "local": "Đến chú cún cũng nghiêng đầu, như muốn học nói tiếng Trung."
+        "pinyin": "lián xiǎo gǒu yě ānjìng de pā zài chuáng biān, péizhe māma.",
+        "zh": "连小狗也安静地趴在床边，陪着妈妈。",
+        "local": "Đến chú cún cũng nằm im bên giường, quấn quýt bên mẹ."
       }
     },
     {
       "id": "p6",
       "image": "videos/2026-07/demo/images/p6.png",
       "audio": "videos/2026-07/demo/audio/p6.mp3",
-      "durationMs": 4768,
-      "motion": "push-in",
+      "durationMs": 3760,
+      "motion": "still",
       "transitionIn": "wipe",
       "effects": [
-        { "type": "confetti", "mode": "rain", "count": 80 }
+        {
+          "type": "ai:2026-07/demo/p6"
+        }
       ],
       "captions": {
-        "pinyin": "yìjiā rén měitiān yìqǐ xué, zhōngwén yuèláiyuè bàng!",
-        "zh": "一家人每天一起学，中文越来越棒！",
-        "local": "Cả nhà mỗi ngày cùng học, tiếng Trung ngày càng giỏi!"
+        "pinyin": "māma kànzhe zhè yījiārén, yǎnkuàng hóng le.",
+        "zh": "妈妈看着这一家人，眼眶红了。",
+        "local": "Mẹ nhìn cả nhà, khóe mắt đỏ hoe."
       }
     },
     {
       "id": "p7",
       "image": "videos/2026-07/demo/images/p7.png",
       "audio": "videos/2026-07/demo/audio/p7.mp3",
-      "durationMs": 4096,
+      "durationMs": 3904,
       "motion": "pop",
-      "transitionIn": "slide-up",
+      "transitionIn": "fade",
       "effects": [
-        { "type": "levelBanner", "text": "GIỎI QUÁ!" }
+        {
+          "type": "ai:2026-07/demo/p7"
+        }
       ],
       "captions": {
-        "pinyin": "kuài hé quánjiā yìqǐ, qīngsōng xué zhōngwén ba!",
-        "zh": "快和全家一起，轻松学中文吧！",
-        "local": "Hãy cùng cả nhà học tiếng Trung thật dễ dàng nào!"
+        "pinyin": "yuánlái, zuì hǎo de yào, shì jiārén de ài.",
+        "zh": "原来，最好的药，是家人的爱。",
+        "local": "Hóa ra, liều thuốc hay nhất, chính là tình yêu gia đình."
       }
     }
   ]
