@@ -24,6 +24,16 @@ import { Confetti } from "./fx/Confetti";
 import { ThreeParticles } from "./fx/ThreeParticles";
 import { FocusLines } from "./fx/FocusLines";
 import { FloatingIcons } from "./fx/FloatingIcons";
+import { StarBurst } from "./fx/StarBurst";
+import { ScorePop } from "./fx/ScorePop";
+import { LevelBanner } from "./fx/LevelBanner";
+import { ShootingStars } from "./fx/ShootingStars";
+import { Bubbles } from "./fx/Bubbles";
+import { CoinFountain } from "./fx/CoinFountain";
+import { ComicPops } from "./fx/ComicPops";
+import { Butterflies } from "./fx/Butterflies";
+import { Sakura } from "./fx/Sakura";
+import { Emotes } from "./fx/Emotes";
 
 // ---- 数据类型：完全由 manifest 驱动，渲染层不含业务内容 ----
 type Motion = {
@@ -37,14 +47,38 @@ type Motion = {
 };
 
 type Effect = {
-  type: "sparkle" | "lightLeak" | "confetti" | "three" | "focusLines" | "floatingIcons";
+  type:
+    | "sparkle"
+    | "lightLeak"
+    | "confetti"
+    | "three"
+    | "focusLines"
+    | "floatingIcons"
+    | "starBurst"
+    | "scorePop"
+    | "levelBanner"
+    | "shootingStars"
+    | "bubbles"
+    | "coinFountain"
+    | "comicPops"
+    | "butterflies"
+    | "sakura"
+    | "emotes";
   count?: number;
   intensity?: number;
   color?: string;
   variant?: "bokeh" | "stars";
   shape?: "star" | "heart" | "mix";
+  mode?: "burst" | "rain"; // confetti 模式
   originX?: number;
   originY?: number;
+  period?: number; // starBurst：每几秒爆一次
+  interval?: number; // scorePop：每几秒冒一个奖励
+  every?: number; // shootingStars：每几秒来一颗流星
+  angleDeg?: number; // shootingStars：斜掠角度
+  radius?: number; // starBurst：扩散半径
+  tokens?: string[]; // scorePop：奖励文案池
+  text?: string; // levelBanner：横幅文案
 };
 
 type Beat = {
@@ -160,7 +194,12 @@ const RubyRow: React.FC<{ zh: string; pinyinColor: string; zhColor: string }> = 
   );
 };
 
-const EffectsLayer: React.FC<{ effects?: Effect[]; imgW: number; imgH: number }> = ({ effects, imgW, imgH }) => {
+const EffectsLayer: React.FC<{ effects?: Effect[]; imgW: number; imgH: number; durationInFrames: number }> = ({
+  effects,
+  imgW,
+  imgH,
+  durationInFrames,
+}) => {
   if (!effects?.length) return null;
   return (
     <>
@@ -171,13 +210,87 @@ const EffectsLayer: React.FC<{ effects?: Effect[]; imgW: number; imgH: number }>
           case "lightLeak":
             return <LightLeak key={i} intensity={fx.intensity ?? 0.4} />;
           case "confetti":
-            return <Confetti key={i} count={fx.count ?? 60} originX={fx.originX ?? 0.5} originY={fx.originY ?? 0.4} seed={`cf-${i}`} />;
+            return (
+              <Confetti
+                key={i}
+                count={fx.count ?? 60}
+                mode={fx.mode ?? "burst"}
+                originX={fx.originX ?? 0.5}
+                originY={fx.originY ?? 0.4}
+                seed={`cf-${i}`}
+              />
+            );
           case "three":
             return <ThreeParticles key={i} width={imgW} height={imgH} variant={fx.variant ?? "bokeh"} seed={`tp-${i}`} />;
           case "focusLines":
             return <FocusLines key={i} count={fx.count ?? 60} intensity={fx.intensity ?? 0.16} color={fx.color ?? "40,36,32"} centerX={fx.originX ?? 0.5} centerY={fx.originY ?? 0.42} seed={`fl-${i}`} />;
           case "floatingIcons":
             return <FloatingIcons key={i} count={fx.count ?? 16} shape={fx.shape ?? "star"} seed={`fi-${i}`} />;
+          case "starBurst":
+            return (
+              <StarBurst
+                key={i}
+                durationInFrames={durationInFrames}
+                count={fx.count ?? 18}
+                originX={fx.originX ?? 0.5}
+                originY={fx.originY ?? 0.36}
+                period={fx.period ?? 1.4}
+                radius={fx.radius ?? 440}
+                seed={`sb-${i}`}
+              />
+            );
+          case "scorePop":
+            return (
+              <ScorePop
+                key={i}
+                durationInFrames={durationInFrames}
+                count={fx.count}
+                interval={fx.interval ?? 0.62}
+                tokens={fx.tokens}
+                seed={`sp-${i}`}
+              />
+            );
+          case "levelBanner":
+            return <LevelBanner key={i} text={fx.text ?? "GIỎI QUÁ!"} seed={`lb-${i}`} />;
+          case "shootingStars":
+            return (
+              <ShootingStars
+                key={i}
+                durationInFrames={durationInFrames}
+                every={fx.every ?? 0.7}
+                angleDeg={fx.angleDeg ?? 28}
+                seed={`ss-${i}`}
+              />
+            );
+          case "bubbles":
+            return <Bubbles key={i} count={fx.count ?? 18} seed={`bb-${i}`} />;
+          case "coinFountain":
+            return (
+              <CoinFountain
+                key={i}
+                durationInFrames={durationInFrames}
+                originX={fx.originX ?? 0.5}
+                originY={fx.originY ?? 0.52}
+                every={fx.every ?? 0.11}
+                seed={`coin-${i}`}
+              />
+            );
+          case "comicPops":
+            return <ComicPops key={i} durationInFrames={durationInFrames} seed={`cp-${i}`} />;
+          case "butterflies":
+            return <Butterflies key={i} count={fx.count ?? 7} seed={`bf-${i}`} />;
+          case "sakura":
+            return (
+              <Sakura
+                key={i}
+                count={fx.count ?? 26}
+                originX={fx.originX ?? 0.5}
+                originY={fx.originY ?? 0.4}
+                seed={`sk-${i}`}
+              />
+            );
+          case "emotes":
+            return <Emotes key={i} count={fx.count ?? 12} seed={`em-${i}`} />;
           default:
             return null;
         }
@@ -226,7 +339,7 @@ const Scene: React.FC<{ beat: Beat; meta: Manifest["meta"] }> = ({ beat, meta })
             transform: `translate(${panX + driftX}px, ${panY + driftY}px) rotate(${rot}deg) scale(${scale})`,
           }}
         />
-        <EffectsLayer effects={beat.effects} imgW={meta.width} imgH={bandTop} />
+        <EffectsLayer effects={beat.effects} imgW={meta.width} imgH={bandTop} durationInFrames={dur} />
       </div>
 
       {/* 字幕带：纯色，文字处没有画面 */}

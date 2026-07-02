@@ -32,8 +32,7 @@
       "durationMs": 6496,
       "motion": "ken-burns",
       "effects": [
-        { "type": "floatingIcons", "shape": "star", "count": 14 },
-        { "type": "lightLeak", "intensity": 0.4 }
+        { "type": "butterflies", "count": 7 }
       ],
       "captions": {
         "pinyin": "zǎochén, yángguāng zhào jìn xiǎo wū, pànghūhū de gēge hé mèimei xǐng lái la.",
@@ -49,8 +48,7 @@
       "motion": "pop",
       "transitionIn": "fade",
       "effects": [
-        { "type": "focusLines", "count": 64, "intensity": 0.18 },
-        { "type": "sparkle", "count": 30 }
+        { "type": "scorePop", "interval": 0.55, "tokens": ["+1", "很棒!", "Hay!", "+1", "GIỎI!"] }
       ],
       "captions": {
         "pinyin": "gēge dǎkāi shǒujī, gēnzhe dàshēng shuō: nǐ hǎo!",
@@ -66,8 +64,7 @@
       "motion": "push-in",
       "transitionIn": "slide-left",
       "effects": [
-        { "type": "focusLines", "count": 56, "intensity": 0.14, "color": "214,90,140" },
-        { "type": "floatingIcons", "shape": "heart", "count": 12 }
+        { "type": "sakura", "count": 28, "originX": 0.52, "originY": 0.42 }
       ],
       "captions": {
         "pinyin": "mèimei yě bùgān shìruò, nǎishēng nǎiqì de niàn: xièxie!",
@@ -83,8 +80,7 @@
       "motion": "pan-right",
       "transitionIn": "slide-left",
       "effects": [
-        { "type": "floatingIcons", "shape": "heart", "count": 12 },
-        { "type": "lightLeak", "intensity": 0.45 }
+        { "type": "comicPops" }
       ],
       "captions": {
         "pinyin": "bàba shù qǐ dàmǔzhǐ, māma duān lái xiāngpēnpēn de zǎocān.",
@@ -100,8 +96,7 @@
       "motion": "sway",
       "transitionIn": "fade",
       "effects": [
-        { "type": "floatingIcons", "shape": "star", "count": 10 },
-        { "type": "sparkle", "count": 20, "color": "#cde7ff" }
+        { "type": "emotes", "count": 12 }
       ],
       "captions": {
         "pinyin": "lián xiǎo gǒu dōu wāizhe tóu, hǎoxiàng yě xiǎng xué shuō zhōngwén.",
@@ -117,9 +112,7 @@
       "motion": "push-in",
       "transitionIn": "wipe",
       "effects": [
-        { "type": "confetti", "count": 60 },
-        { "type": "floatingIcons", "shape": "mix", "count": 16 },
-        { "type": "lightLeak", "intensity": 0.4 }
+        { "type": "confetti", "mode": "rain", "count": 80 }
       ],
       "captions": {
         "pinyin": "yìjiā rén měitiān yìqǐ xué, zhōngwén yuèláiyuè bàng!",
@@ -135,9 +128,7 @@
       "motion": "pop",
       "transitionIn": "slide-up",
       "effects": [
-        { "type": "confetti", "count": 90 },
-        { "type": "focusLines", "count": 64, "intensity": 0.16 },
-        { "type": "sparkle", "count": 34 }
+        { "type": "levelBanner", "text": "GIỎI QUÁ!" }
       ],
       "captions": {
         "pinyin": "kuài hé quánjiā yìqǐ, qīngsōng xué zhōngwén ba!",

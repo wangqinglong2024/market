@@ -22,8 +22,8 @@ export const FloatingIcons: React.FC<{
         const rise = (random(`${seed}-y-${i}`) * height + t * spd) % (height + 80);
         const y = height + 40 - rise;
         const sway = Math.sin(t * (0.6 + random(`${seed}-w-${i}`)) * Math.PI * 2 + i) * 26;
-        const sz = 1.4 + random(`${seed}-z-${i}`) * 1.8;
-        const tw = 0.55 + 0.45 * Math.sin(t * Math.PI * 2 * (0.6 + random(`${seed}-t-${i}`)) + i);
+        const sz = 2.2 + random(`${seed}-z-${i}`) * 2.4;
+        const tw = 0.7 + 0.3 * Math.sin(t * Math.PI * 2 * (0.6 + random(`${seed}-t-${i}`)) + i);
         const col = colors[Math.floor(random(`${seed}-c-${i}`) * colors.length)];
         const isHeart = shape === "heart" || (shape === "mix" && random(`${seed}-h-${i}`) > 0.5);
         const spin = isHeart ? 0 : (t * 40 + i * 30) % 360;
@@ -32,7 +32,9 @@ export const FloatingIcons: React.FC<{
             key={i}
             d={isHeart ? HEART : STAR}
             fill={col}
-            opacity={0.55 * tw}
+            stroke="#fff"
+            strokeWidth={1.4}
+            opacity={0.9 * tw}
             transform={`translate(${x0 + sway} ${y}) scale(${sz}) rotate(${spin})`}
           />
         );
