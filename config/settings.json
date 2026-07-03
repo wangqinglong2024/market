@@ -8,9 +8,22 @@
   },
   "audio": {
     "engine": "volcano",
-    "voice": "开朗姐姐",
     "narrationLang": "zh",
-    "tailPaddingMs": 400
+    "tailPaddingMs": 400,
+    "_voicesComment": "每拍 script.json 的 voice 字段(角色名)映射到火山 voice_type。以下 4 个均已真机验证可用(2026-07-03)。备选见 _alternates(也都验证过);样本在 temp/voice-samples/。",
+    "defaultVoice": "narrator",
+    "voices": {
+      "narrator": "zh_female_kailangjiejie_moon_bigtts",
+      "boy": "zh_male_naiqimengwa_mars_bigtts",
+      "girl": "zh_female_tianmeixiaoyuan_moon_bigtts",
+      "dad": "zh_male_wennuanahu_moon_bigtts",
+      "mom": "zh_female_wenrouxiaoya_moon_bigtts"
+    },
+    "_alternates": {
+      "girl": ["zh_female_tianmeiyueyue_moon_bigtts"],
+      "dad": ["zh_male_shaonianzixin_moon_bigtts", "zh_male_yangguangqingnian_moon_bigtts"],
+      "mom": ["zh_female_qinqienvsheng_moon_bigtts", "zh_female_shuangkuaisisi_moon_bigtts"]
+    }
   },
   "image": {
     "model": "fal-ai/nano-banana-pro/edit",

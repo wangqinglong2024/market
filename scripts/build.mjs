@@ -6,7 +6,6 @@ import { join, dirname } from "node:path";
 import { loadSettings, loadMotion, loadCharacters, loadPrompts, buildImagePrompt, buildFluxPrompt, pickMotion } from "./lib/config.mjs";
 import { synth } from "./tts.mjs";
 import { genImage } from "./gen-image.mjs";
-import { genEffect, rebuildRegistry } from "./gen-effect.mjs";
 
 const videoId = process.argv[2];
 if (!videoId) throw new Error("用法: node scripts/build.mjs <videoId>");
@@ -47,10 +46,12 @@ const manifest = {
 for (const beat of script.beats) {
   console.log(`== ${beat.id}: ${beat.captions.zh}`);
 
-  // 配音（缓存）
+  // 配音（缓存）：按该拍 voice 角色映射到火山 voice_type（见 config/settings.json.voices）
   const audioPath = ensure(join(dir, "audio", `${beat.id}.mp3`));
-  const audio = await synth(beat.captions.zh, audioPath, { voice: undefined });
-  console.log(`  audio: ${audio.cached ? "cached" : "synth"} ${audio.ms}ms`);
+  const voices = settings.audio.voices || {};
+  const voiceType = voices[beat.voice] || voices[settings.audio.defaultVoice];
+  const audio = await synth(beat.captions.zh, audioPath, { voice: voiceType });
+  console.log(`  audio: ${audio.cached ? "cached" : "synth"} ${audio.ms}ms  [${beat.voice || settings.audio.defaultVoice}]`);
 
   // 出图：目前每 beat 取首个 shot 出一张（多 shot 交叉切换为后续增强）
   const shot = beat.shots[0];
@@ -64,10 +65,11 @@ for (const beat of script.beats) {
   const img = await genImage({ outPath: imgPath, prompt, refPaths, settings });
   console.log(`  image: ${img.cached ? "cached" : "gen"} ${imgPath}`);
 
-  // AI 量身定制特效（每 beat 让 Claude 写独一无二的 TSX 组件）
-  const fx = await genEffect(beat, videoId, shard);
-  console.log(`  effect: ${fx.cached ? "cached" : "ai-gen"} ${fx.path}`);
-  const aiEffectEntry = [{ type: `ai:${shard}/${videoId}/${beat.id}` }];
+  // 特效：直接透传 script.json 里 beat 自带的 effects（固定 4 特效、≤2/片、按需，见 plan/11）。
+  // 只保留渲染层认识的 4 个 type，其它忽略。
+  const ALLOWED_FX = new Set(["comicPops", "emojiRain", "scorePop", "zoomBlur"]);
+  const effects = (beat.effects || []).filter((e) => ALLOWED_FX.has(e.type));
+  if (effects.length) console.log(`  effects: ${effects.map((e) => e.type).join(", ")}`);
 
   manifest.beats.push({
     id: beat.id,
@@ -76,13 +78,10 @@ for (const beat of script.beats) {
     durationMs: audio.ms + settings.audio.tailPaddingMs,
     motion: pickMotion(beat, motion),
     ...(beat.transitionIn && { transitionIn: beat.transitionIn }),
-    effects: aiEffectEntry,
+    ...(effects.length && { effects }),
     captions: { pinyin: beat.captions.pinyin, zh: beat.captions.zh, local: beat.captions.local },
   });
 }
-
-// 重建 registry：扫 src/fx/generated/ 生成静态 import 映射
-rebuildRegistry();
 
 writeFileSync(join(dir, "manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
 

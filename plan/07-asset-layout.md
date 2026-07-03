@@ -34,7 +34,9 @@ market/
 ├── public/
 │   ├── library/fonts/          Remotion 运行期字体（public 里唯一的全局资产）
 │   └── videos/<shard>/<id>/    ★ 单条视频全部产物（按月份分片，产物入 git）
-│       └── 2026-07/demo/  ├─ manifest.json  ├─ images/  └─ audio/  （+ 成片.mp4）
+│       └── 2026-07/<id>/  ├─ input.md（原始需求）├─ script.json（转换脚本）
+│                          ├─ manifest.json  ├─ images/  ├─ audio/  （+ 成片.mp4）
+│                          详见 [[12-video-folder-spec]]
 │
 └── src/                        Remotion 渲染层（纯数据驱动，你不碰）
 ```
