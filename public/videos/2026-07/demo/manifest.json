@@ -179,11 +179,6 @@
       "audio": "videos/2026-07/demo/audio/p1.mp3",
       "durationMs": 5368,
       "motion": "pull-back",
-      "effects": [
-        {
-          "type": "ai:2026-07/demo/p1"
-        }
-      ],
       "captions": {
         "pinyin": "nà tiān zǎoshang, māma tūrán shēngbìng, tǎng zài chuáng shang qǐ bù lái.",
         "zh": "那天早上，妈妈突然生病，躺在床上起不来。",
@@ -197,11 +192,6 @@
       "durationMs": 4312,
       "motion": "push-in",
       "transitionIn": "fade",
-      "effects": [
-        {
-          "type": "ai:2026-07/demo/p2"
-        }
-      ],
       "captions": {
         "pinyin": "gēge tōutōu xuézhe, gěi māma áo le yī wǎn zhōu.",
         "zh": "哥哥偷偷学着，给妈妈熬了一碗粥。",
@@ -215,11 +205,6 @@
       "durationMs": 4648,
       "motion": "ken-burns",
       "transitionIn": "slide-left",
-      "effects": [
-        {
-          "type": "ai:2026-07/demo/p3"
-        }
-      ],
       "captions": {
         "pinyin": "mèimei zhāi le yuànzi lǐ de xiǎo yěhuā, fàng zài māma zhěn biān.",
         "zh": "妹妹摘了院子里的小野花，放在妈妈枕边。",
@@ -233,11 +218,6 @@
       "durationMs": 5320,
       "motion": "pan-right",
       "transitionIn": "fade",
-      "effects": [
-        {
-          "type": "ai:2026-07/demo/p4"
-        }
-      ],
       "captions": {
         "pinyin": "bàba qǐng le jià, shǒu zài māma shēn páng, yī kè yě bù lí kāi.",
         "zh": "爸爸请了假，守在妈妈身旁，一刻也不离开。",
@@ -251,11 +231,6 @@
       "durationMs": 4648,
       "motion": "sway",
       "transitionIn": "slide-up",
-      "effects": [
-        {
-          "type": "ai:2026-07/demo/p5"
-        }
-      ],
       "captions": {
         "pinyin": "lián xiǎo gǒu yě ānjìng de pā zài chuáng biān, péizhe māma.",
         "zh": "连小狗也安静地趴在床边，陪着妈妈。",
@@ -269,11 +244,6 @@
       "durationMs": 3760,
       "motion": "still",
       "transitionIn": "wipe",
-      "effects": [
-        {
-          "type": "ai:2026-07/demo/p6"
-        }
-      ],
       "captions": {
         "pinyin": "māma kànzhe zhè yījiārén, yǎnkuàng hóng le.",
         "zh": "妈妈看着这一家人，眼眶红了。",
@@ -287,11 +257,6 @@
       "durationMs": 3904,
       "motion": "pop",
       "transitionIn": "fade",
-      "effects": [
-        {
-          "type": "ai:2026-07/demo/p7"
-        }
-      ],
       "captions": {
         "pinyin": "yuánlái, zuì hǎo de yào, shì jiārén de ài.",
         "zh": "原来，最好的药，是家人的爱。",
