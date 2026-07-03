@@ -134,7 +134,16 @@ type Beat = {
   motion?: string;
   transitionIn?: "fade" | "slide-left" | "slide-up" | "wipe";
   effects?: Effect[];
-  captions: { pinyin: string; zh: string; local?: string; vi?: string };
+  // 单人物图缩小系数：flux 老把人画满整框，渲染层按此缩小，让单人和双人同框里的人一样大
+  imgScale?: number;
+  captions: {
+    pinyin: string;
+    zh: string;
+    local?: string;
+    vi?: string;
+    // 逐行中越对照：每个元素一行，越南文直接排在对应中文下方
+    lines?: { zh: string; vi?: string }[];
+  };
 };
 
 type Manifest = {
@@ -213,8 +222,8 @@ const RubyRow: React.FC<{ zh: string; pinyinColor: string; zhColor: string }> = 
     <>
       {pairs.map((p, idx) => (
         <span key={idx} style={{ display: "inline-flex", flexDirection: "column", alignItems: "center" }}>
-          <span style={{ fontFamily: FONT_LATIN, fontSize: 32, lineHeight: "36px", fontWeight: 800, color: pinyinColor, height: 36 }}>{p.py}</span>
-          <span style={{ fontFamily: FONT_ZH, fontSize: 60, lineHeight: "70px", color: zhColor, whiteSpace: "pre" }}>{p.c === " " ? " " : p.c}</span>
+          <span style={{ fontFamily: FONT_LATIN, fontSize: 34, lineHeight: "38px", fontWeight: 800, color: pinyinColor, height: 38 }}>{p.py}</span>
+          <span style={{ fontFamily: FONT_ZH, fontSize: 67, lineHeight: "77px", color: zhColor, whiteSpace: "pre" }}>{p.c === " " ? " " : p.c}</span>
         </span>
       ))}
     </>
@@ -254,11 +263,17 @@ const Scene: React.FC<{ beat: Beat; meta: Manifest["meta"] }> = ({ beat, meta })
   const pageTurn = { fadeFrames: 10, captionRiseFrames: 14, captionRisePx: 22, ...meta.pageTurn };
   // 1:1 方图合成到白底 9:16：上留白 2/16 + 方图 9/16 + 字幕带 3/16 + 下留白 2/16（用户 2026-07-03 锁定）
   const imgSize = meta.width;                       // 1:1，满宽正方（= 9/16 高）
-  const imgTop = Math.round((meta.height * 2) / 16); // 顶部留白 2/16
+  const imgTop = Math.round((meta.height * 2) / 16 / 3); // 顶部留白 = 原 2/16 减去 2/3（≈0.67/16），整体上移，空白挪到底部
   const capTop = imgTop + imgSize;                  // 字幕带顶 = 11/16
   const capH = Math.round((meta.height * 3) / 16);  // 字幕带 3/16
   const local = beat.captions.local ?? beat.captions.vi ?? "";
   const maxW = meta.width - SIDE_PAD * 2;
+  // 逐行中越对照：优先用 captions.lines（每行 zh + 对应 vi），
+  // 没有 lines 时退化为「整句中文 + 整句越南文」一对。越南文永远紧贴其对应中文下方。
+  const pairs: { zh: string; vi: string }[] =
+    beat.captions.lines?.length
+      ? beat.captions.lines.map((l) => ({ zh: l.zh, vi: l.vi ?? "" }))
+      : [{ zh: beat.captions.zh, vi: local }];
 
   const easing = preset.ease === "linear" ? Easing.linear : Easing.inOut(Easing.ease);
   const clamp = { extrapolateLeft: "clamp" as const, extrapolateRight: "clamp" as const, easing };
@@ -268,6 +283,8 @@ const Scene: React.FC<{ beat: Beat; meta: Manifest["meta"] }> = ({ beat, meta })
   const rot = preset.rotate ? interpolate(frame, [0, dur], preset.rotate, clamp) : 0;
   const driftX = Math.sin((frame / fps) * Math.PI * 2 * 0.16) * (preset.driftX ?? 0);
   const driftY = Math.cos((frame / fps) * Math.PI * 2 * 0.13) * (preset.driftY ?? 0);
+
+  const imgScale = beat.imgScale ?? 1; // 单人物缩小，让人物不再画满整框（见 build.mjs）
 
   const capRise = interpolate(frame, [0, pageTurn.captionRiseFrames], [pageTurn.captionRisePx, 0], {
     extrapolateLeft: "clamp",
@@ -285,7 +302,7 @@ const Scene: React.FC<{ beat: Beat; meta: Manifest["meta"] }> = ({ beat, meta })
             height: "100%",
             objectFit: "cover",
             objectPosition: "center center",
-            transform: `translate(${panX + driftX}px, ${panY + driftY}px) rotate(${rot}deg) scale(${scale})`,
+            transform: `translate(${panX + driftX}px, ${panY + driftY}px) rotate(${rot}deg) scale(${scale * imgScale})`,
           }}
         />
         <EffectsLayer effects={beat.effects} durationInFrames={dur} />
@@ -304,19 +321,26 @@ const Scene: React.FC<{ beat: Beat; meta: Manifest["meta"] }> = ({ beat, meta })
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 18,
+          gap: 14,
         }}
       >
-        <FitLine maxWidth={maxW} depKey={`py-${beat.id}`}>
-          <RubyRow zh={beat.captions.zh} pinyinColor={cap.pinyinColor} zhColor={cap.zhColor} />
-        </FitLine>
-        {local ? (
-          <FitLine maxWidth={maxW} depKey={`vi-${beat.id}`}>
-            <span style={{ fontFamily: FONT_LATIN, fontSize: 52, lineHeight: 1.1, color: cap.localColor, fontWeight: 800 }}>
-              {local}
-            </span>
-          </FitLine>
-        ) : null}
+        {pairs.map((p, i) => (
+          <div
+            key={`pair-${i}`}
+            style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}
+          >
+            <FitLine maxWidth={maxW} depKey={`py-${beat.id}-${i}`}>
+              <RubyRow zh={p.zh} pinyinColor={cap.pinyinColor} zhColor={cap.zhColor} />
+            </FitLine>
+            {p.vi ? (
+              <FitLine maxWidth={maxW} depKey={`vi-${beat.id}-${i}`}>
+                <span style={{ fontFamily: FONT_LATIN, fontSize: 50, lineHeight: 1.1, color: cap.localColor, fontWeight: 800 }}>
+                  {p.vi}
+                </span>
+              </FitLine>
+            ) : null}
+          </div>
+        ))}
       </div>
 
       <Audio src={staticFile(beat.audio)} />

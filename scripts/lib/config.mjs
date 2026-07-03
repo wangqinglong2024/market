@@ -67,7 +67,7 @@ export function buildFluxPrompt({ shotContent, charIds, prompts, characters }) {
     .map((id) => characters[id]?.canon)
     .filter(Boolean)
     .join(" ");
-  const styleShort = "rough hand-drawn crayon outlines, warm crayon coloring, minimal cute cartoon faces, children's picture-book feel, textured paper";
+  const styleShort = "rough hand-drawn crayon outlines, warm crayon coloring, minimal cute cartoon faces, children's picture-book feel, on a clean solid PURE WHITE background (flat white, no paper texture, no cream/beige tint)";
   return stripComments(prompts.imageFluxTpl)
     .replace("{shot}", shotContent)
     .replace("{canon}", canon || "")

@@ -26,19 +26,22 @@
     }
   },
   "image": {
-    "model": "fal-ai/nano-banana-pro/edit",
+    "_modelComment": "出图模型不在这里定：由 script.json 每个 shot 的 model 字段(flux/nano-pro)决定，gen-image.mjs 按此路由到 fal 端点(见 plan/05)。",
     "_aspectComment": "出图统一 1:1 方图；渲染器把方图合成到白底 9:16(上留白2/16+方图9/16+字幕3/16+下留白2/16)，见 plan/03。",
     "aspectRatio": "1:1",
     "seedStrategy": "from-shot-id",
     "maxRetries": 3,
     "_styleAnchorComment": "空镜(无人物)出图时喂给 flux-pro/kontext 的风格锚图，只借画风。用任一定妆图即可。",
-    "styleAnchor": "config/characters/girl/model-sheet.png"
+    "styleAnchor": "config/characters/girl/model-sheet.png",
+    "_charTargetHeightComment": "尺寸归一化：flux 单人物天生比 p6 双人图里的人大且每张不一。build 用 sharp 量出人物在白底上的非白高度占比，缩到此目标占比，让所有人物拍尺寸完全一致(=p6)。只对含人物拍生效(见 plan/10 4.6)。",
+    "charTargetHeight": 0.66
   },
   "captions": {
     "bandTopRatio": 0.6927,
     "pinyinColor": "#a58e5c",
     "zhColor": "#20242b",
     "localColor": "#d6336c",
-    "bgColor": "#fefefe"
+    "_bgColorComment": "纯白画布(用户死命令：必须白底)。出图也一律纯白底，缩放归一化后四周留白与图无缝。",
+    "bgColor": "#ffffff"
   }
 }

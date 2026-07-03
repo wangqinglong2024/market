@@ -169,7 +169,7 @@
       "pinyinColor": "#a58e5c",
       "zhColor": "#20242b",
       "localColor": "#d6336c",
-      "bgColor": "#fefefe"
+      "bgColor": "#ffffff"
     }
   },
   "beats": [
@@ -179,10 +179,21 @@
       "audio": "videos/2026-07/shanjia-yuwu/audio/p1.mp3",
       "durationMs": 5008,
       "motion": "push-in",
+      "imgScale": 0.8221897810218979,
       "captions": {
         "pinyin": "jiǎ yú mǎ zhě, fēi lì zú yě, ér zhì qiān lǐ;",
         "zh": "假舆马者，非利足也，而致千里；",
-        "local": "Người mượn xe ngựa, chẳng phải chân khỏe, mà đi được ngàn dặm;"
+        "local": "Người mượn xe ngựa, chẳng phải chân khỏe, mà đi được ngàn dặm;",
+        "lines": [
+          {
+            "zh": "假舆马者，非利足也，",
+            "vi": "Người mượn xe ngựa, chẳng phải chân khỏe,"
+          },
+          {
+            "zh": "而致千里；",
+            "vi": "mà đi được ngàn dặm;"
+          }
+        ]
       }
     },
     {
@@ -192,10 +203,21 @@
       "durationMs": 4960,
       "motion": "pull-back",
       "transitionIn": "fade",
+      "imgScale": 0.7451378169790519,
       "captions": {
         "pinyin": "jiǎ zhōu jí zhě, fēi néng shuǐ yě, ér jué jiāng hé.",
         "zh": "假舟楫者，非能水也，而绝江河。",
-        "local": "Người mượn thuyền bè, chẳng biết bơi, mà vượt được sông lớn."
+        "local": "Người mượn thuyền bè, chẳng biết bơi, mà vượt được sông lớn.",
+        "lines": [
+          {
+            "zh": "假舟楫者，非能水也，",
+            "vi": "Người mượn thuyền bè, chẳng biết bơi,"
+          },
+          {
+            "zh": "而绝江河。",
+            "vi": "mà vượt được sông lớn."
+          }
+        ]
       }
     },
     {
@@ -208,7 +230,17 @@
       "captions": {
         "pinyin": "jièzhù chē mǎ de rén, jiǎo lì zài pǔtōng, yě néng rì xíng qiān lǐ.",
         "zh": "借助车马的人，脚力再普通，也能日行千里。",
-        "local": "Nhờ xe ngựa, dù sức thường, vẫn đi ngàn dặm mỗi ngày."
+        "local": "Nhờ xe ngựa, dù sức thường, vẫn đi ngàn dặm mỗi ngày.",
+        "lines": [
+          {
+            "zh": "借助车马的人，脚力再普通，",
+            "vi": "Nhờ xe ngựa, dù sức thường,"
+          },
+          {
+            "zh": "也能日行千里。",
+            "vi": "vẫn đi ngàn dặm mỗi ngày."
+          }
+        ]
       }
     },
     {
@@ -221,7 +253,17 @@
       "captions": {
         "pinyin": "jièzhù chuán zhī de rén, jíshǐ bù huì yóuyǒng, yě néng dùguò dà jiāng.",
         "zh": "借助船只的人，即使不会游泳，也能渡过大江。",
-        "local": "Nhờ con thuyền, dù không biết bơi, vẫn qua được sông sâu."
+        "local": "Nhờ con thuyền, dù không biết bơi, vẫn qua được sông sâu.",
+        "lines": [
+          {
+            "zh": "借助船只的人，即使不会游泳，",
+            "vi": "Nhờ con thuyền, dù không biết bơi,"
+          },
+          {
+            "zh": "也能渡过大江。",
+            "vi": "vẫn qua được sông sâu."
+          }
+        ]
       }
     },
     {
@@ -236,10 +278,21 @@
           "type": "zoomBlur"
         }
       ],
+      "imgScale": 0.7627990970654628,
       "captions": {
         "pinyin": "zhēnzhèng lìhai de, bù shì tiānshēng běnlǐng dà, ér shì dǒngde jièzhù wàiwù.",
         "zh": "真正厉害的，不是天生本领大，而是懂得借助外物。",
-        "local": "Người giỏi thật sự không phải sinh ra đã hơn người, mà là biết mượn sức bên ngoài."
+        "local": "Người giỏi thật sự không phải sinh ra đã hơn người, mà là biết mượn sức bên ngoài.",
+        "lines": [
+          {
+            "zh": "真正厉害的，不是天生本领大，",
+            "vi": "Người giỏi thật sự không phải sinh ra đã hơn người,"
+          },
+          {
+            "zh": "而是懂得借助外物。",
+            "vi": "mà là biết mượn sức bên ngoài."
+          }
+        ]
       }
     },
     {
@@ -249,10 +302,17 @@
       "durationMs": 4768,
       "motion": "push-in",
       "transitionIn": "wipe",
+      "imgScale": 0.951887323943662,
       "captions": {
         "pinyin": "zhè, jiù shì gǔrén shuō de shàn jiǎ yú wù de zhìhuì.",
         "zh": "这，就是古人说的「善假于物」的智慧。",
-        "local": "Đây chính là trí tuệ người xưa gọi là 'khéo mượn ngoại vật'."
+        "local": "Đây chính là trí tuệ người xưa gọi là 'khéo mượn ngoại vật'.",
+        "lines": [
+          {
+            "zh": "这，就是古人说的「善假于物」的智慧。",
+            "vi": "Đây chính là trí tuệ người xưa gọi là “khéo mượn ngoại vật”."
+          }
+        ]
       }
     }
   ]

@@ -9,34 +9,30 @@
    - 每个 page 输出：旁白中文、所在场景 id、**是否含主角色**、出场角色列表、表情/动作提示、画面描述、图数量与各图的内容。
 2. **翻译 + 拼音** → 每段补：越南语译文（LLM 口语化、儿童语气）、带声调拼音（处理多音字）。
 3. **TTS（火山·开朗姐姐）** → 每段中文合成 `.mp3` + **真实时长(ms)**。时长驱动该页停留与字幕时间；该段内多图按比例分配时长。
-4. **出图（fal.ai）** → 按 [[02-character-consistency]] 分支：含主角色=参考条件生成；其它/无人物=文生图。画风永远统一。带缓存。
+4. **出图（fal.ai）** → 按角色数路由（见 [[05-cost-and-models]]）：0/1 人=flux（空镜喂风格锚图、单人喂定妆，**非纯文生图**）；≥2 人=nano-pro。一律**纯白底**，出图后 sharp 量身高做尺寸归一化。画风永远统一。带缓存。
 5. **汇总** → `manifest.json`。
 
-## manifest.json 结构草案
+## manifest.json 结构（build.mjs 实际产出，渲染层 Video.tsx 读它）
 ```jsonc
 {
-  "meta": { "lang": "vi", "fps": 30, "width": 1080, "height": 1920, "totalMs": 60000 },
-  "style": { "anchorImage": "assets/style-anchor.jpg", "promptSuffix": "..." },
-  "pages": [
+  "meta": { "fps": 30, "width": 1080, "height": 1920, "transitionFrames": 12,
+            "captions": { "pinyinColor": "...", "zhColor": "...", "localColor": "...", "bgColor": "#ffffff" } },
+  "beats": [
     {
-      "id": "p01",
-      "sceneId": "living-room-morning",
-      "hasMainCharacter": true,       // true→参考条件生成；false→文生图
-      "shots": [                      // 1~N 张，表现该段文字的内容/过程
-        { "image": "images/p01-a.jpg", "weight": 1, "layers": null }
-        // 多图示例: 山底/山中/山顶 三张，weight 决定各自占该段时长比例
-        // layers: v2 可填 { bg, character } 做视差
-      ],
-      "audio": "audio/p01.mp3",
-      "durationMs": 3200,            // = TTS 真实时长（+尾部留白），按 weight 分给 shots
-      "narrationZh": "你好，妈妈。",
+      "id": "p1",
+      "image": "images/p1.png",
+      "audio": "audio/p1.mp3",
+      "durationMs": 5008,            // = TTS 真实时长 + tailPaddingMs，驱动该拍时长
+      "motion": "push-in",           // 运镜预设名（见 03/motion.json）
+      "transitionIn": "fade",        // 可选：转场
+      "effects": [ { "type": "zoomBlur" } ], // 可选：≤2/片（见 11）
+      "imgScale": 0.822,             // 尺寸归一化系数（含人物拍才有；build 用 sharp 量身高算出，见 10 4.6）
       "captions": {
-        "pinyin": "nǐ hǎo, māma",
-        "zh": "你好，妈妈。",
-        "local": "Chào mẹ."
-      },
-      "wordTimings": null,           // 若火山给字级时间戳→逐字高亮跟读
-      "transitionIn": "page-turn"
+        "pinyin": "...",             // 可留空，渲染层 pinyin-pro 自动注音
+        "zh": "假舆马者，非利足也，而致千里；",
+        "local": "Người mượn xe ngựa, ...",     // 越南语整句意译
+        "lines": [ { "zh": "假舆马者，非利足也，", "vi": "Người mượn xe ngựa, ..." } ] // 逐行中越对照（见 03）
+      }
     }
   ]
 }

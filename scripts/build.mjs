@@ -6,6 +6,25 @@ import { join, dirname } from "node:path";
 import { loadSettings, loadMotion, loadCharacters, loadPrompts, buildImagePrompt, buildFluxPrompt, buildScenePrompt, pickMotion } from "./lib/config.mjs";
 import { synth } from "./tts.mjs";
 import { genImage } from "./gen-image.mjs";
+import sharp from "sharp";
+
+// 量出白底图上「非白内容」的纵向高度占比（人物身高占画面比例）。
+// 用于尺寸归一化：把每个人物缩到统一目标占比，所有拍人物一样大。白底让非白检测很干净。
+async function contentHeightFrac(path, { thresh = 244, minPx = 10 } = {}) {
+  const { data, info } = await sharp(path).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width, height, channels } = info;
+  let minY = -1, maxY = -1;
+  for (let y = 0; y < height; y++) {
+    let cnt = 0;
+    for (let x = 0; x < width; x++) {
+      const i = (y * width + x) * channels;
+      if (data[i] < thresh || data[i + 1] < thresh || data[i + 2] < thresh) { if (++cnt >= minPx) break; }
+    }
+    if (cnt >= minPx) { if (minY < 0) minY = y; maxY = y; }
+  }
+  if (minY < 0) return 1; // 全白，兜底不缩
+  return (maxY - minY + 1) / height;
+}
 
 const videoId = process.argv[2];
 if (!videoId) throw new Error("用法: node scripts/build.mjs <videoId>");
@@ -79,6 +98,16 @@ for (const beat of script.beats) {
   const effects = (beat.effects || []).filter((e) => ALLOWED_FX.has(e.type));
   if (effects.length) console.log(`  effects: ${effects.map((e) => e.type).join(", ")}`);
 
+  // ★ 尺寸归一化（见 plan/10 4.6）：含人物拍量出人物身高占比，缩到统一目标占比 → 所有人物一样大(=p6)。
+  // flux 单人天生比 p6 大且每张不一，靠提示词做不到一致；这里在白底上确定性量+缩。空镜不缩。
+  let imgScale = 1;
+  if (charIds.length >= 1) {
+    const target = settings.image.charTargetHeight ?? 0.66;
+    const frac = await contentHeightFrac(imgPath);
+    imgScale = Math.max(0.3, Math.min(1, target / frac));
+    console.log(`  size: 人物高占比 ${(frac * 100).toFixed(0)}% → 缩到 ${(target * 100).toFixed(0)}% (scale ${imgScale.toFixed(3)})`);
+  }
+
   manifest.beats.push({
     id: beat.id,
     image: rel("images", `${beat.id}.png`),
@@ -87,7 +116,13 @@ for (const beat of script.beats) {
     motion: pickMotion(beat, motion),
     ...(beat.transitionIn && { transitionIn: beat.transitionIn }),
     ...(effects.length && { effects }),
-    captions: { pinyin: beat.captions.pinyin, zh: beat.captions.zh, local: beat.captions.local },
+    ...(imgScale !== 1 && { imgScale }),
+    captions: {
+      pinyin: beat.captions.pinyin,
+      zh: beat.captions.zh,
+      local: beat.captions.local,
+      ...(beat.captions.lines && { lines: beat.captions.lines }),
+    },
   });
 }
 

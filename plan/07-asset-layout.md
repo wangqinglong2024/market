@@ -1,6 +1,7 @@
 # 07 · 目录与资产布局（已落地）
 
-三类东西彻底分开：**你调的旋钮（config/）**、**你放的输入（inputs/）**、**机器吐的产物（public/videos/）**。
+两类东西彻底分开：**你调的旋钮（config/）** 与 **机器吐的产物（public/videos/）**。
+原始需求 `input.md` 与该条产物一起放在 `public/videos/<shard>/<id>/`（不再有独立 `inputs/` 目录，已废弃删除）。
 原则：凡是人会编辑的（提示词、角色、参数）进 `config/`；凡是机器生成的产物进 `public/videos/`。
 `public/` 只保留 Remotion 运行期真正要用 `staticFile()` 读的东西（字体 + 每条视频产物）。
 
@@ -22,14 +23,12 @@ market/
 │   ├── motion.json             运镜/特效预设库 + 选取规则
 │   └── settings.json           画幅/fps/音色/默认语言/时长留白/出图模型/字幕配色
 │
-├── inputs/                     ★ 你只在这里放文案
-│   └── <videoId>.txt
-│
 ├── catalog.json                ★ 视频总账（上千条的索引：id/标题/分片/语言/状态）
 │
 ├── scripts/                    流水线引擎（你不碰）
-│   ├── storyboard.mjs  localize.mjs  tts.mjs  fal-gen.mjs  build-manifest.mjs
-│   └── run.mjs                 一键：inputs/<id>.txt → 成片
+│   ├── build.mjs               主引擎：script.json → 配音+出图+尺寸归一化 → manifest.json
+│   ├── tts.mjs  gen-image.mjs  火山 TTS / fal 出图（curl 走代理）
+│   └── lib/config.mjs          读 settings/characters/prompts + 拼装出图 prompt
 │
 ├── public/
 │   ├── library/fonts/          Remotion 运行期字体（public 里唯一的全局资产）

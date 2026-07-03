@@ -5,8 +5,8 @@
 -->
 CHILDREN'S PICTURE BOOK ILLUSTRATION. SFW. Family-friendly.
 
-Keep ONLY the ART STYLE of the reference image — rough grainy hand-drawn black crayon/pencil outlines, warm uneven crayon coloring with visible strokes, subtly textured off-white paper, gentle cozy children's-book feel. Do NOT include the character or any person from the reference.
+Keep ONLY the ART STYLE of the reference image — rough grainy hand-drawn black crayon/pencil outlines, warm uneven crayon coloring with visible strokes, gentle cozy children's-book feel — but put everything on a clean solid PURE WHITE background. Do NOT include the character or any person from the reference.
 
 {shot}
 
-ABSOLUTELY NO people, NO child, NO characters, NO figures — empty scene only. Square 1:1 composition, plain bare off-white paper with lots of empty space. No text, no watermark.
+ABSOLUTELY NO people, NO child, NO characters, NO figures — empty scene only. Square 1:1 composition on a clean solid PURE WHITE background (flat white #ffffff, no paper texture, no cream tint) with lots of empty white space. No text, no watermark.

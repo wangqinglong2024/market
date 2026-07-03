@@ -33,7 +33,7 @@
 { "id": "p2", "voice": "narrator", "captions": { "zh": "常复习旧的，就能悟出新的。" } }   // 不写「妈妈说」等引述词
 { "id": "p3", "voice": "narrator", "captions": { "zh": "夜里，他又翻开那本旧书……" } }
 ```
-> ⚠️ **待改代码**：`build.mjs` 现在 `synth(zh, path, { voice: undefined })` 恒用开朗姐姐；改为读 `beat.voice` → `settings.voices[beat.voice]` 传给 `synth`。
+> ✅ 已接线：`build.mjs` 按 `beat.voice` → `settings.audio.voices[...]` 传给 `synth`（默认 `narrator`）。当前全片统一 `narrator`。
 
 ## 翻译（当地语言，首发越南语）——意译，不直译
 - **金句原句**（孩子朗读的文言文）：越南语行走**意译**（传达意思、自然口语），不逐字直译（文言文直译到越南语生硬难懂，2026-07-03 用户确认）。中文原文照常显示，配拼音。

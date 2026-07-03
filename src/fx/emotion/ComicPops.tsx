@@ -2,7 +2,7 @@ import { random, useCurrentFrame, useVideoConfig } from "remotion";
 
 // 漫画爆炸词：带尖角的爆炸对话框(饱和填充 + 粗黑描边)"砸"入(overshoot)，中间粗体喊话词，停顿后弹出。
 // 依次散布在画面上，节奏跟音频走：数量按拍长算，出生时刻均分。高对比 → 浅背景上极醒目。逐帧确定性。
-const GAME_FONT = '"Nunito", "ZCOOL KuaiLe", "PingFang SC", "Microsoft YaHei", sans-serif';
+const GAME_FONT = '"Nunito", "SimHei", "PingFang SC", "Microsoft YaHei", sans-serif';
 
 // 生成尖角爆炸多边形 path(spikes 个尖，外/内半径交替)
 const burstPath = (spikes: number, outer: number, inner: number, seed: string) => {

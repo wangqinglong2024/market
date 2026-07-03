@@ -7,7 +7,7 @@
 
 ## 0. 输入 / 输出契约（2026-07-03 改：每日金句方向）
 - **输入**：**一句**古文/经典/哲理句（中文），如「温故而知新，可以为师矣。」。可选：`videoId`、`lang`（默认 `vi`）、指定哥哥还是妹妹朗读。原样存进 `input.md`（见 [[12-video-folder-spec]]）。
-- **不再是**：一整段现成旁白。旁白由我（Claude）按 [[00-overview]] 的固定内容结构**扩写**出来（孩子朗读金句 → 父母点破 → 场景演示 → 全家领悟 → CTA），写进 `script.json`。
+- **不再是**：一整段现成旁白。旁白由我（Claude）按 [[00-overview]] 的固定内容结构**扩写**出来（孩子朗读金句 → 点破意思 → 场景演示 → 文化收尾，**统一旁白、无父母分角、无 CTA**），写进 `script.json`。
 - **输出**：`public/videos/<shard>/<id>/` 下 `成片.mp4` + 全部中间产物（`input.md`/`script.json`/audio/images/manifest，可追溯、可重渲染）。
 - **不变量**：配音永远中文，**全片统一旁白「开朗姐姐」**（不做多角色分工，见 [[04-tts-captions]]）；字幕三行（拼音/中文/越南语意译）；竖屏 9:16；画风统一；人物按需出场；特效 ≤2/片、按需；**纯文化普及、禁止任何营销/广告（下载 CTA、软件推广、"一起学中文"等一律不要）**。
 
@@ -48,19 +48,24 @@
 - **铁律**：LLM 只做"把文字翻译成画面描述 + 结构化"，**不改写、不增删剧情**。
 
 ### 第 3 步 · 组装提示词（确定性模板，非自由发挥）
-每张图的最终 prompt = 固定模板拼接，保证每次规则一致：
+每张图的最终 prompt = 固定模板拼接（`config/prompts/`），保证每次规则一致：
 ```
-<SHOT.content>                          ← 来自分镜，本图要画什么
-+ <CHARACTER_CANON>                     ← 在场主角色的 canonical 描述（library/characters.json）
-+ <STYLE_SUFFIX>                        ← 固定画风后缀（library/style/style.md）
-+ <COMPOSITION_RULES>                   ← 固定：竖屏9:16、主体居中偏上、下方留白给字幕、避开平台安全区
-+ <NEGATIVE>                            ← 固定：no text/logo/watermark/extra fingers…
+<SHOT.content>                          ← 来自分镜，本图要画什么（英文）
++ <CHARACTER_CANON>                     ← 在场主角色 canonical（config/characters/<id>/canonical.md）
++ <STYLE>                               ← 固定画风（config/prompts/style.md）
++ <COMPOSITION>                         ← 1:1 方图 + 纯白底（config/prompts/composition.md）
 ```
-固定部分（CANON / STYLE_SUFFIX / COMPOSITION / NEGATIVE）都来自 library，**单一来源、每次相同** → 可复现。
+- 模板分三套：单人 `image-flux.tpl.md`、多人 `image.tpl.md`、空镜 `image-scene.tpl.md`。
+- 🚫 **死命令**：**绝不**在 prompt 写 box/frame/subtitle/"下方留白给字幕"/"empty area at bottom"（含 `no box`），也**不放身体部位负面词**（`no extra fingers` 等会触发 fal nsfw 黑图）——单人 flux 模板本就**无 negative**。见 [[10-art-style-locked]] 4.4。
+- 版式（留白/字幕带/上下留白）全由渲染层按 1:1 合成控制，出图**只画方图本身、纯白底**。
+固定部分都来自 `config/prompts/`，**单一来源、每次相同** → 可复现。
 
-### 第 4 步 · 出图（按 beat 分支 + 缓存）
-- `hasMainCharacter = true` → **nano-banana/edit**：`image_urls` = 在场主角色的圣经参考图 + 组装 prompt（"保持与参考完全一致"）。
-- `hasMainCharacter = false` → **nano-banana / flux 文生图**：仅锁画风。
+### 第 4 步 · 出图（按角色数路由 + 缓存，见 [[05-cost-and-models]]、[[10-art-style-locked]]）
+- **0 人（空镜/物）→ `flux`**（`fal-ai/flux-pro/kontext`）：喂**风格锚图**只借画风、绝不加人（`image-scene.tpl.md`）。**不是纯文生图**（无锚会漂移/乱加人）。
+- **1 人（单角色）→ `flux`**（`fal-ai/flux-pro/kontext`）：喂该角色 1 张定妆图（`image-flux.tpl.md`）。
+- **≥2 人（多角色同框）→ `nano-pro`**（`fal-ai/nano-banana-pro/edit`）：喂多张定妆图。
+- 🚫 **严禁 `nano-banana` 文生图、`flux/dev`**；`shot.model` 只有 `flux`/`nano-pro`，`gen-image.mjs` 强制校验与 `characters` 数一致，不符报错。
+- **出图一律纯白底**（`#ffffff`，见 [[10-art-style-locked]] 4.8）；出图后 `build.mjs` 用 sharp 量人物身高、写 `imgScale` 做尺寸归一化（见 4.6）。
 - `seed` = 由 shot id 派生（确定性，可精确重抽）。
 - **缓存键** = hash(解析后 prompt + 参考图 + seed + model)；命中即复用，改一句不重烧整片。
 - 翻车图（脸崩/多指/画风偏）→ review gate 一键换 seed 重抽（见 [[01-pipeline]]）。
@@ -83,13 +88,15 @@
 
 ---
 
-## 3. 一条命令的全自动闭环（最终形态）
+## 3. 一条命令的全自动闭环（现状）
 ```
-inputs/<videoId>.txt
-  → storyboard → localize(翻译+拼音) → tts → fal出图 → build-manifest → remotion render
-  → public/videos/<videoId>/成片.mp4
+public/videos/<shard>/<id>/input.md   （原始需求：一句古文）
+  → (会话内 Claude) 扩写 script.json（分镜/字幕/model）
+  → node scripts/build.mjs <id>        （翻译拼音已在 script、TTS配音、fal出图、尺寸归一化、汇总 manifest.json）
+  → npx remotion render <id> …         （出片）
+  → public/videos/<shard>/<id>/成片.mp4
 ```
-你的动作：把文案放进 `inputs/`，触发一次。可选：在 review gate 扫一眼图、对个别图重抽。
+你的动作：给一句古文（存 `input.md`），触发一次。可选：过图、对个别图重抽。
 
 ## 关联
 [[00-overview]] · [[01-pipeline]] · [[02-character-consistency]] · [[03-remotion-animation]] · [[04-tts-captions]]

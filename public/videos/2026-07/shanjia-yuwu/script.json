@@ -10,15 +10,17 @@
       "voice": "narrator",
       "sceneId": "ancient-study",
       "hasMainCharacter": true,
-      "characters": ["girl"],
+      "characters": [
+        "girl"
+      ],
       "costume": "ancient",
       "emotion": "solemn, sincere",
       "action": "girl in ancient robe holding a scroll, reciting the first line",
       "motion": "push-in",
       "shots": [
         {
-          "content": "The chubby little girl with two small pigtails, dressed in a flowing pale-blue traditional ancient Chinese hanfu robe with wide long sleeves (NOT her usual pink dress), standing and reciting, holding an open old paper scroll in both hands, expression solemn and sweet; a very minimal study scene, only a few loose pencil lines suggesting a low wooden table, mostly bare warm paper.",
-          "contentZh": "扎羊角辫的胖女孩，穿淡蓝色宽长袖古装长袍（不是平时的粉裙），站着郑重诵读，双手捧着打开的旧书卷，表情庄重可爱；极简书房，几笔松散铅笔线勾矮木桌，大片留白暖纸。",
+          "content": "A present-day chubby little girl with two pigtails, a MODERN child dressed up in a pale-blue hanfu robe (NOT her usual pink dress, NOT an ancient person, NOT ancient times), standing and holding an open book in both hands, reciting a classic aloud, solemn and sweet. Background designed for a reading scene but kept MINIMAL: just ONE low wooden desk beside her with a rolled paper scroll and a writing brush on it, drawn as a few loose light pencil lines, no other furniture — everything sits on a clean solid PURE WHITE background with lots of empty white space, far simpler than the girl.",
+          "contentZh": "当代胖女孩（双马尾，套穿淡蓝汉服，不是粉裙/不是古人/不是古代），站着双手捧翻开的书朗声诵读经典，庄重可爱。为诵读场景设计但极简的背景：身旁只有一张矮木桌，上面一卷纸卷和一支毛笔，几笔很淡的铅笔线，没有别的家具——一切都在纯白底上，大量白色留白，远比人物简单。",
           "model": "flux",
           "weight": 1
         }
@@ -26,7 +28,17 @@
       "captions": {
         "zh": "假舆马者，非利足也，而致千里；",
         "pinyin": "jiǎ yú mǎ zhě, fēi lì zú yě, ér zhì qiān lǐ;",
-        "local": "Người mượn xe ngựa, chẳng phải chân khỏe, mà đi được ngàn dặm;"
+        "local": "Người mượn xe ngựa, chẳng phải chân khỏe, mà đi được ngàn dặm;",
+        "lines": [
+          {
+            "zh": "假舆马者，非利足也，",
+            "vi": "Người mượn xe ngựa, chẳng phải chân khỏe,"
+          },
+          {
+            "zh": "而致千里；",
+            "vi": "mà đi được ngàn dặm;"
+          }
+        ]
       }
     },
     {
@@ -35,7 +47,9 @@
       "voice": "narrator",
       "sceneId": "ancient-study",
       "hasMainCharacter": true,
-      "characters": ["boy"],
+      "characters": [
+        "boy"
+      ],
       "costume": "ancient",
       "emotion": "solemn, earnest",
       "action": "boy in ancient robe holding a scroll, reciting the second line",
@@ -43,8 +57,8 @@
       "transitionIn": "fade",
       "shots": [
         {
-          "content": "The chubby little boy with short golden-brown hair, dressed in a flowing pale-green traditional ancient Chinese hanfu robe with wide long sleeves (NOT his usual green t-shirt and shorts), standing and reciting, holding an open old paper scroll in both hands, expression solemn and earnest; the same very minimal study scene, a few loose pencil lines for a low wooden table, mostly bare warm paper.",
-          "contentZh": "胖乎乎、金棕短发的小男孩，穿淡绿色宽长袖古装长袍（不是平时的绿短袖蓝短裤），站着郑重诵读，双手捧着打开的旧书卷，表情庄重认真；同样极简书房，几笔松散铅笔线勾矮木桌，大片留白暖纸。",
+          "content": "A present-day chubby little boy with short golden-brown hair, a MODERN child dressed up in a pale-green hanfu robe (NOT his usual t-shirt and shorts, NOT an ancient person, NOT ancient times), standing and holding an open book in both hands, reciting a classic aloud, solemn and earnest. Background designed for a reading scene but kept MINIMAL: just ONE low wooden desk beside him with a rolled paper scroll and a writing brush on it, drawn as a few loose light pencil lines, no other furniture — everything sits on a clean solid PURE WHITE background with lots of empty white space, far simpler than the boy.",
+          "contentZh": "当代胖男孩（金棕短发，套穿淡绿汉服，不是短袖短裤/不是古人/不是古代），站着双手捧翻开的书朗声诵读经典，庄重认真。为诵读场景设计但极简的背景：身旁只有一张矮木桌，上面一卷纸卷和一支毛笔，几笔很淡的铅笔线，没有别的家具——一切都在纯白底上，大量白色留白，远比人物简单。",
           "model": "flux",
           "weight": 1
         }
@@ -52,7 +66,17 @@
       "captions": {
         "zh": "假舟楫者，非能水也，而绝江河。",
         "pinyin": "jiǎ zhōu jí zhě, fēi néng shuǐ yě, ér jué jiāng hé.",
-        "local": "Người mượn thuyền bè, chẳng biết bơi, mà vượt được sông lớn."
+        "local": "Người mượn thuyền bè, chẳng biết bơi, mà vượt được sông lớn.",
+        "lines": [
+          {
+            "zh": "假舟楫者，非能水也，",
+            "vi": "Người mượn thuyền bè, chẳng biết bơi,"
+          },
+          {
+            "zh": "而绝江河。",
+            "vi": "mà vượt được sông lớn."
+          }
+        ]
       }
     },
     {
@@ -68,7 +92,7 @@
       "transitionIn": "slide-left",
       "shots": [
         {
-          "content": "A brown HORSE harnessed at the FRONT, clearly PULLING a small wooden carriage behind it (a proper horse-drawn carriage: horse in front, cart behind, connected by shafts), traveling together along a long winding dirt road that stretches far toward distant rolling hills; the horse and carriage are small and far away; mostly bare warm off-white paper, only a few loose pencil lines for the road and hills, soft light. The horse MUST be present and pulling the carriage.",
+          "content": "A brown HORSE harnessed at the FRONT, clearly PULLING a small wooden carriage behind it (a proper horse-drawn carriage: horse in front, cart behind, connected by shafts), traveling together along a long winding dirt road that stretches far toward distant rolling hills; the horse and carriage are small and far away; on a clean solid PURE WHITE background, only a few loose pencil lines for the road and hills, soft light. The horse MUST be present and pulling the carriage.",
           "contentZh": "一匹棕色的马套着挽具走在前面，拉着后面一辆小木车（正经的马车：马在前、车在后，用车辕连着），沿蜿蜒长路一起驶向远处起伏的山峦；马和车又小又远；大片留白暖纸，几笔松散铅笔线勾路和山，柔光。必须有马、且在拉车。",
           "model": "flux",
           "weight": 1
@@ -77,7 +101,17 @@
       "captions": {
         "zh": "借助车马的人，脚力再普通，也能日行千里。",
         "pinyin": "jièzhù chē mǎ de rén, jiǎo lì zài pǔtōng, yě néng rì xíng qiān lǐ.",
-        "local": "Nhờ xe ngựa, dù sức thường, vẫn đi ngàn dặm mỗi ngày."
+        "local": "Nhờ xe ngựa, dù sức thường, vẫn đi ngàn dặm mỗi ngày.",
+        "lines": [
+          {
+            "zh": "借助车马的人，脚力再普通，",
+            "vi": "Nhờ xe ngựa, dù sức thường,"
+          },
+          {
+            "zh": "也能日行千里。",
+            "vi": "vẫn đi ngàn dặm mỗi ngày."
+          }
+        ]
       }
     },
     {
@@ -93,7 +127,7 @@
       "transitionIn": "fade",
       "shots": [
         {
-          "content": "A simple little wooden boat gliding across a wide calm river toward the far bank, conveying an easy crossing of deep water; NO main character, tiny and far; mostly bare warm paper with only a few loose pencil lines for the water ripples and far shore, soft light.",
+          "content": "A simple little wooden boat gliding across a wide calm river toward the far bank, conveying an easy crossing of deep water; NO main character, tiny and far; on a clean solid PURE WHITE background with only a few loose pencil lines for the water ripples and far shore, soft light.",
           "contentZh": "一只简单的小木船滑过宽阔平静的江面驶向对岸，表现轻松渡过深水；没有主角，又小又远；大片留白暖纸，只有几笔松散铅笔线勾出水波和远岸，柔光。",
           "model": "flux",
           "weight": 1
@@ -102,7 +136,17 @@
       "captions": {
         "zh": "借助船只的人，即使不会游泳，也能渡过大江。",
         "pinyin": "jièzhù chuán zhī de rén, jíshǐ bù huì yóuyǒng, yě néng dùguò dà jiāng.",
-        "local": "Nhờ con thuyền, dù không biết bơi, vẫn qua được sông sâu."
+        "local": "Nhờ con thuyền, dù không biết bơi, vẫn qua được sông sâu.",
+        "lines": [
+          {
+            "zh": "借助船只的人，即使不会游泳，",
+            "vi": "Nhờ con thuyền, dù không biết bơi,"
+          },
+          {
+            "zh": "也能渡过大江。",
+            "vi": "vẫn qua được sông sâu."
+          }
+        ]
       }
     },
     {
@@ -111,19 +155,23 @@
       "voice": "narrator",
       "sceneId": "girl-thinking",
       "hasMainCharacter": true,
-      "characters": ["girl"],
+      "characters": [
+        "girl"
+      ],
       "costume": "normal",
       "emotion": "thoughtful, bright realization",
       "action": "girl in her normal dress, a hand near her chin, eyes lighting up as she understands",
       "motion": "push-in",
       "transitionIn": "slide-up",
       "effects": [
-        { "type": "zoomBlur" }
+        {
+          "type": "zoomBlur"
+        }
       ],
       "shots": [
         {
-          "content": "The chubby little girl with pigtails in her pink dress, one little hand near her chin, eyes lighting up with a bright happy realization, adorable 'aha' moment; a very minimal room, mostly bare warm paper with only a couple of loose pencil lines.",
-          "contentZh": "扎羊角辫的胖女孩、穿粉裙，一只小手放在下巴边，眼睛一亮、恍然大悟的可爱「啊哈」时刻；极简房间，大片留白暖纸，只有一两笔松散铅笔线。",
+          "content": "A present-day chubby little girl with two pigtails in her pink dress, standing with one little hand near her chin, eyes lighting up in a happy aha realization, adorable. Background: a clean solid PURE WHITE background with lots of empty white space, nothing else — far simpler than the girl.",
+          "contentZh": "当代胖女孩（双马尾、粉裙），站着一只小手放下巴边、眼睛一亮恍然大悟，可爱。背景：纯白底、大量白色留白，别无他物——远比人物简单。",
           "model": "flux",
           "weight": 1
         }
@@ -131,7 +179,17 @@
       "captions": {
         "zh": "真正厉害的，不是天生本领大，而是懂得借助外物。",
         "pinyin": "zhēnzhèng lìhai de, bù shì tiānshēng běnlǐng dà, ér shì dǒngde jièzhù wàiwù.",
-        "local": "Người giỏi thật sự không phải sinh ra đã hơn người, mà là biết mượn sức bên ngoài."
+        "local": "Người giỏi thật sự không phải sinh ra đã hơn người, mà là biết mượn sức bên ngoài.",
+        "lines": [
+          {
+            "zh": "真正厉害的，不是天生本领大，",
+            "vi": "Người giỏi thật sự không phải sinh ra đã hơn người,"
+          },
+          {
+            "zh": "而是懂得借助外物。",
+            "vi": "mà là biết mượn sức bên ngoài."
+          }
+        ]
       }
     },
     {
@@ -140,7 +198,10 @@
       "voice": "narrator",
       "sceneId": "ancient-understand",
       "hasMainCharacter": true,
-      "characters": ["girl", "boy"],
+      "characters": [
+        "girl",
+        "boy"
+      ],
       "costume": "ancient",
       "emotion": "warm, understanding, gentle",
       "action": "girl and boy in ancient robes standing together, smiling with understanding",
@@ -157,7 +218,13 @@
       "captions": {
         "zh": "这，就是古人说的「善假于物」的智慧。",
         "pinyin": "zhè, jiù shì gǔrén shuō de shàn jiǎ yú wù de zhìhuì.",
-        "local": "Đây chính là trí tuệ người xưa gọi là 'khéo mượn ngoại vật'."
+        "local": "Đây chính là trí tuệ người xưa gọi là 'khéo mượn ngoại vật'.",
+        "lines": [
+          {
+            "zh": "这，就是古人说的「善假于物」的智慧。",
+            "vi": "Đây chính là trí tuệ người xưa gọi là “khéo mượn ngoại vật”."
+          }
+        ]
       }
     }
   ]

@@ -2,8 +2,7 @@
 
 > 2026-07-02 用户已锁定画风,并把定稿资产**并入 config 控制台**(不再放 temp)。
 > - 定妆图(5 个角色):`config/characters/<id>/model-sheet.png`,id = `boy`(哥哥/儿子) `girl`(妹妹/女儿) `dad` `mom` `dog`
-> - 风格参考(用户手绘,ASCII 名):`config/style/refs/ref-1.jpg`、`config/style/refs/ref-2.jpg`
-> - 全家合照(抱团款):`config/style/family.png`
+> - **风格锚图**:空镜出图借画风用,取 `settings.image.styleAnchor`(现指向 `config/characters/girl/model-sheet.png`,任一定妆图即可)。
 
 ## 一、锁定的画风(治愈系手绘)
 
@@ -71,6 +70,34 @@ Demo 旧图三大毛病,已废:
 - 依旧遵守版式:人物中上、下方一大块留白给字幕。
 
 > 已验证:该规矩下 `flux-pro/kontext`($0.04)出图最贴需求(见 `temp/compare/p3-flux.png`)。
+
+## 4.6 ★★ 人物尺寸：所有拍人物一样大(=p6)，靠尺寸归一化(用户 2026-07-03 锁定)
+毛病:flux **单人物天生比 p6 双人图里的人大，且每张出图大小都不一样**(实测 80% / 89% / 87% 各不同),纯靠提示词做不到「每个人物都和 p6 完全一样大」。
+- ⚠️ **提示词控不住尺寸**:写 "two-thirds / same size / small / wide" flux 照样各画各的大小。**别指望文字统一尺寸。**
+- ✅ **真正的机制 = 出图后用 sharp 量+缩(尺寸归一化，确定性、完全一致)**:
+  - 出图**一律纯白底**(见 4.8),`build.mjs` 用 `sharp` 把图转 raw 像素,扫出**非白内容的纵向高度占比**(=人物身高占画面比)。
+  - 算 `imgScale = charTargetHeight / 实测占比`(`settings.image.charTargetHeight` 默认 **0.66**),写进 manifest。含人物拍(`charIds.length>=1`,含 p6)都归一化到同一目标占比→**所有人物一样大**;空镜(0 人)不缩。
+  - `Video.tsx` 把方图 `scale` 乘 `imgScale`,四周露纯白画布(`bgColor #ffffff`)、无缝。
+  - **调统一尺寸只改 `config/settings.json` → `image.charTargetHeight` 一个数**。
+- 前提是**白底**:白底才能干净地量出人物轮廓;所以人物拍背景道具别高过人头/低过人脚(否则撑大量到的高度)。
+
+## 4.8 ★★ 死命令：出图一律纯白底(用户 2026-07-03 锁定)
+**所有出图背景必须是纯白 `#ffffff`**,不许暖纸/米色/奶油色/纸纹底色。根因:旧 `styleShort` 末尾带 "textured paper"、`composition.md` 写 "very light background"、模板写 "warm off-white paper" → nano/flux 出成奶油色。已全部改成 "clean solid PURE WHITE background"。
+- 落地:`scripts/lib/config.mjs` 的 `styleShort`、`config/prompts/{image-flux,image-scene,composition}` 均已锁纯白;`settings.captions.bgColor=#ffffff`。**改这些别把暖纸/米色写回去。**
+- 白底同时是尺寸归一化(4.6)的前提——白底才能量出人物轮廓。
+
+## 4.9 ★ 背景按场景设计、极简、别傻(用户 2026-07-03 锁定)
+背景要**贴合该拍内容**设计，但**极简克制**，且**永远纯白底**(4.8)。
+- ✅ 诵读经典 → 一张矮桌 + 书卷/毛笔几笔淡线;顿悟 → 干净纯白;空镜 → 该比喻的意象(车马/舟)。
+- ❌ **别搞傻背景**(用户明确点名):不堆室内桌椅家具(挤、丑)、不无脑套户外草地(傻)、不画四角透视线的"空盒子房间"(傻)。
+- 原则:背景**远比人物简单**,一两个小道具点到为止;宁可干净纯白,也别乱塞。道具**别高过人头、别低过人脚**(否则撑大尺寸归一化量到的高度,见 4.6)。
+
+## 4.7 ★★ 死命令：人是"现代小孩穿汉服",不是古代人/古代场景(用户 2026-07-03 锁定,每日金句方向)
+金句短片里朗读的孩子是**当代小孩打扮成汉服**,**不是生活在古代**。
+- ❌ 不许写 "ancient Chinese person / ancient times",不许画古代书房、矮几、旧竹简/卷轴那种**古代年代感**场景。
+- ✅ 写法:`a MODERN/present-day kid simply dressed up in a hanfu robe (a traditional costume worn for fun over everyday clothes; NOT an ancient person, NOT ancient times)`;道具用**翻开的书**而非旧卷轴;背景**简洁中性**(几笔松散铅笔线 + 大片留白),别做成古代屋子。
+- 空镜演示(如车马、舟)仍可是古典意象(那是金句比喻本身),但**人物一律现代小孩穿汉服**。
+- 落地:`script.json` 各朗读拍 `shot.content` 已按此改;规则同步进 `config/prompts/storyboard.md` 铁律。
 
 ## 五、提示词模板(拼接:STYLE + CHAR/POSE + SCENE + LAYOUT + NOTEXT)
 

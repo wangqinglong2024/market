@@ -26,12 +26,12 @@ public/videos/2026-07/<id>/
   "beats": [
     {
       "id": "p1",
-      "role": "read-quote",          // 该拍在结构里的角色：read-quote/explain/scene/payoff/cta
+      "role": "read-quote",          // 该拍在结构里的角色：read-quote/explain/scene/payoff（无 cta，纯文化不打广告）
       "voice": "narrator",           // ★配音：全片统一旁白开朗姐姐（见 04）
       "sceneId": "study-ancient",    // 场景（同地点连续拍复用背景）
       "hasMainCharacter": true,      // ★这拍需不需要出人物（不需要就 false，画空镜/物件）
       "characters": ["boy"],         // 在场主角色 id；空=无人物
-      "costume": "ancient",          // 可选：ancient=古装（金句朗读拍孩子穿古人服装）
+      "costume": "ancient",          // 可选：ancient=穿汉服（现代小孩打扮成汉服，非古代；见 10 4.7）
       "emotion": "solemn, sweet",
       "motion": "push-in",           // ★运镜预设（按内容多样化选，见 03/motion.json）
       "effects": [],                 // ★特效（≤2/片，按需，多数拍留空，见 11）
@@ -60,12 +60,13 @@ public/videos/2026-07/<id>/
 
 ## 出图提示词怎么定（第②→③层）
 `shot.content` 只写**该拍要画什么**（忠于该句、极简背景、别脑补）。最终 prompt = `content` + 固定画风/版式/负面模板拼接（确定性、可复现）。
-- **无人物拍**（讲道理的书本/灯/山/路空镜）：`hasMainCharacter=false`，走 flux 纯文生图，只锁画风。
+- **无人物拍**（讲道理的书本/灯/山/路空镜）：`hasMainCharacter=false`，走 flux `flux-pro/kontext` 喂**风格锚图**只借画风（**不是纯文生图**，无锚会漂移/加人）。
 - **单角色拍**（孩子朗读、一个人复习）：走 flux `flux-pro/kontext`，喂该角色 1 张定妆。
-- **多角色拍**（全家领悟）：走 nano-banana-pro/edit，喂多张定妆。
+- **多角色拍**（≥2 人同框）：走 nano-banana-pro/edit，喂多张定妆。
+- 出图一律**纯白底**；出图后 `build.mjs` 用 sharp 量人物身高做**尺寸归一化**（统一=p6，见 [[10-art-style-locked]] 4.6/4.8）。
 
 ## 谁生成 script.json
-**会话内由我（Claude）生成**：拿 `input.md` 的一句古文 → 按 [[00-overview]] 的固定内容结构扩写 → 填全上面字段 → 写入目录。之后 `node scripts/run.mjs <id>` 照着配音+出图+汇总+（可选）渲染。
+**会话内由我（Claude）生成**：拿 `input.md` 的一句古文 → 按 [[00-overview]] 的固定内容结构扩写 → 填全上面字段 → 写入目录。之后 `node scripts/build.mjs <id>`（配音+出图+尺寸归一化+汇总 manifest），再 `npx remotion render <id> …` 出片。
 
 ## 关联
 [[00-overview]] · [[04-tts-captions]] · [[08-script-to-video-rules]] · [[10-art-style-locked]] · [[11-effects-spec]] · [[07-asset-layout]]

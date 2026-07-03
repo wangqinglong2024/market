@@ -13,4 +13,4 @@ Keep the EXACT same character from the reference image (same face, hair, clothin
 
 Art style: {style_short}
 
-Square 1:1 composition. The character centered, full body with comfortable even margins, on a plain bare off-white paper background. No text, no watermark.
+Square 1:1. FULL-BODY view — the character's WHOLE body is visible from head to toe with comfortable, even margins on every side, filling only about TWO-THIRDS of the frame height, the SAME modest size as each child in the two-character reference image (`config/characters` 双人参考). NOT a close-up, NOT cropped, NOT tiny — keep this exact consistent size for every single-character shot so all beats match. Keep the described background MINIMAL and tasteful, far simpler than the character. The whole picture sits on a clean solid PURE WHITE background (flat white #ffffff, no paper texture, no cream/beige tint), with plenty of clean white space around the character. No text, no watermark.

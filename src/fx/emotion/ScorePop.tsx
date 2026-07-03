@@ -2,8 +2,8 @@ import { random, useCurrentFrame, useVideoConfig } from "remotion";
 
 // 游戏奖励飘字："+1" / "很棒!" / "GIỎI!" 依次冒出，弹入(overshoot) → 上浮 → 淡出（多邻国式答对反馈）。
 // 节奏跟音频走：数量按本拍时长算，出生时刻均匀铺在拍内并留出末尾淡出余量，绝不被转场切断。逐帧确定性。
-// Nunito 打头(数字/越南语)，ZCOOL 兜底中日韩字形。
-const GAME_FONT = '"Nunito", "ZCOOL KuaiLe", "PingFang SC", "Microsoft YaHei", sans-serif';
+// Nunito 打头(数字/越南语)，SimHei 兜底中文字形(已在 fonts.ts 加载)。
+const GAME_FONT = '"Nunito", "SimHei", "PingFang SC", "Microsoft YaHei", sans-serif';
 const STAR = "M0,-9 L2.6,-2.8 L9,-2.8 L3.6,1.4 L5.4,8.6 L0,4.2 L-5.4,8.6 L-3.6,1.4 L-9,-2.8 L-2.6,-2.8 Z";
 
 // easeOutBack：越过 1 再回弹，"啵"地弹出
