@@ -1,0 +1,279 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "bandTopRatio": 0.6927,
+    "motionPresets": {
+      "push-in": {
+        "scale": [
+          1.02,
+          1.12
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 8,
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pull-back": {
+        "scale": [
+          1.14,
+          1.02
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 5,
+        "ease": "inOut"
+      },
+      "pan-left": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          40,
+          -40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pan-right": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          -40,
+          40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "climb-up": {
+        "scale": [
+          1.06,
+          1.14
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          40,
+          -44
+        ],
+        "driftX": 6,
+        "ease": "inOut"
+      },
+      "ken-burns": {
+        "scale": [
+          1.05,
+          1.13
+        ],
+        "panX": [
+          24,
+          -28
+        ],
+        "panY": [
+          14,
+          -18
+        ],
+        "driftX": 10,
+        "driftY": 8,
+        "ease": "inOut"
+      },
+      "sway": {
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 16,
+        "driftY": 10,
+        "ease": "linear"
+      },
+      "pop": {
+        "scale": [
+          1.18,
+          1.04
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 4,
+        "rotate": [
+          -1.5,
+          0
+        ],
+        "ease": "inOut"
+      },
+      "still": {
+        "scale": [
+          1.03,
+          1.03
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 5,
+        "driftY": 4,
+        "ease": "linear"
+      }
+    },
+    "pageTurn": {
+      "fadeFrames": 10,
+      "captionRiseFrames": 14,
+      "captionRisePx": 22
+    },
+    "captions": {
+      "pinyinColor": "#a58e5c",
+      "zhColor": "#20242b",
+      "localColor": "#d6336c",
+      "bgColor": "#fefefe"
+    }
+  },
+  "beats": [
+    {
+      "id": "p1",
+      "image": "videos/2026-07/cuncao-chunhui/images/p1.png",
+      "audio": "videos/2026-07/cuncao-chunhui/audio/p1.mp3",
+      "durationMs": 4096,
+      "motion": "push-in",
+      "captions": {
+        "pinyin": "shéi yán cùn cǎo xīn, bào dé sān chūn huī.",
+        "zh": "谁言寸草心，报得三春晖。",
+        "local": "Tấm lòng bé nhỏ của con, sao báo đáp hết tình mẹ như nắng xuân."
+      }
+    },
+    {
+      "id": "p2",
+      "image": "videos/2026-07/cuncao-chunhui/images/p2.png",
+      "audio": "videos/2026-07/cuncao-chunhui/audio/p2.mp3",
+      "durationMs": 5248,
+      "motion": "pan-right",
+      "transitionIn": "fade",
+      "captions": {
+        "pinyin": "xiǎo cǎo de xīn yì zài duō, yě bào dá bù wán chūn tiān de nuǎn yáng.",
+        "zh": "小草的心意再多，也报答不完春天的暖阳。",
+        "local": "Tấm lòng ngọn cỏ dẫu nhiều, cũng chẳng đáp hết nắng ấm mùa xuân."
+      }
+    },
+    {
+      "id": "p3",
+      "image": "videos/2026-07/cuncao-chunhui/images/p3.png",
+      "audio": "videos/2026-07/cuncao-chunhui/audio/p3.mp3",
+      "durationMs": 5200,
+      "motion": "ken-burns",
+      "transitionIn": "slide-left",
+      "captions": {
+        "pinyin": "tiān lěng de yè lǐ, shì māma qiāoqiāo wèi nǐ yē hǎo bèi jiǎo.",
+        "zh": "天冷的夜里，是妈妈悄悄为你掖好被角。",
+        "local": "Đêm lạnh, mẹ lặng lẽ kéo chăn đắp ấm cho con."
+      }
+    },
+    {
+      "id": "p4",
+      "image": "videos/2026-07/cuncao-chunhui/images/p4.png",
+      "audio": "videos/2026-07/cuncao-chunhui/audio/p4.mp3",
+      "durationMs": 5128,
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "captions": {
+        "pinyin": "nǐ shēng bìng shí, shì māma shǒu zài chuáng biān, yī yè méi hé yǎn.",
+        "zh": "你生病时，是妈妈守在床边，一夜没合眼。",
+        "local": "Con ốm, mẹ ngồi bên giường, thức trắng cả đêm."
+      }
+    },
+    {
+      "id": "p5",
+      "image": "videos/2026-07/cuncao-chunhui/images/p5.png",
+      "audio": "videos/2026-07/cuncao-chunhui/audio/p5.mp3",
+      "durationMs": 5512,
+      "motion": "sway",
+      "transitionIn": "slide-up",
+      "captions": {
+        "pinyin": "yī nián yòu yī nián, wǒmen zhǎng gāo le, māma de tóu fà què bái le.",
+        "zh": "一年又一年，我们长高了，妈妈的头发却白了。",
+        "local": "Năm lại năm, con cao lớn, còn tóc mẹ đã bạc."
+      }
+    },
+    {
+      "id": "p6",
+      "image": "videos/2026-07/cuncao-chunhui/images/p6.png",
+      "audio": "videos/2026-07/cuncao-chunhui/audio/p6.mp3",
+      "durationMs": 3376,
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "effects": [
+        {
+          "type": "emojiRain",
+          "emojis": [
+            "❤️",
+            "💛",
+            "🌷"
+          ],
+          "count": 12,
+          "opacity": 0.5
+        }
+      ],
+      "captions": {
+        "pinyin": "māma, xiè xie nǐ! wǒ ài nǐ.",
+        "zh": "妈妈，谢谢你！我爱你。",
+        "local": "Mẹ ơi, con cảm ơn mẹ! Con yêu mẹ."
+      }
+    },
+    {
+      "id": "p7",
+      "image": "videos/2026-07/cuncao-chunhui/images/p7.png",
+      "audio": "videos/2026-07/cuncao-chunhui/audio/p7.mp3",
+      "durationMs": 6592,
+      "motion": "still",
+      "transitionIn": "wipe",
+      "captions": {
+        "pinyin": "cháng huí jiā kàn kàn, duō péi péi māma. hé háizi yìqǐ, dú dǒng zhōnghuá jīngdiǎn.",
+        "zh": "常回家看看，多陪陪妈妈。和孩子一起，读懂中华经典。",
+        "local": "Hãy thường về thăm, ở bên mẹ nhiều hơn. Cùng con thấm hiểu kinh điển Trung Hoa."
+      }
+    }
+  ]
+}

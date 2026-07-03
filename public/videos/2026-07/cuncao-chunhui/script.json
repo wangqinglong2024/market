@@ -1,0 +1,172 @@
+{
+  "_comment": "转换脚本（会话内 Claude 设计）。逐拍：voice配音角色 / 是否出人物 / 场景 / 运镜 / 特效(≤2按需) / 出图prompt(shots.content) / 三语字幕。build.mjs 照此配音+出图+汇总。",
+  "videoId": "cuncao-chunhui",
+  "lang": "vi",
+  "sourceQuote": "谁言寸草心，报得三春晖。",
+  "beats": [
+    {
+      "id": "p1",
+      "role": "read-quote",
+      "voice": "narrator",
+      "sceneId": "ancient-study",
+      "hasMainCharacter": true,
+      "characters": ["girl"],
+      "costume": "ancient",
+      "emotion": "solemn, sweet, sincere",
+      "action": "standing, holding an open scroll, reciting a poem",
+      "motion": "push-in",
+      "shots": [
+        {
+          "content": "The same chubby little girl with two small pigtails, now dressed in a flowing pale-blue traditional ancient Chinese hanfu robe with wide long sleeves (NOT her usual pink dress), standing and reciting a poem, both little hands gently holding an open old paper scroll, expression solemn and sweet; a very minimal study scene, only a few loose pencil lines suggesting a low wooden table, mostly bare warm paper.",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "谁言寸草心，报得三春晖。",
+        "pinyin": "shéi yán cùn cǎo xīn, bào dé sān chūn huī.",
+        "local": "Tấm lòng bé nhỏ của con, sao báo đáp hết tình mẹ như nắng xuân."
+      }
+    },
+    {
+      "id": "p2",
+      "role": "explain",
+      "voice": "narrator",
+      "sceneId": "metaphor-grass-sun",
+      "hasMainCharacter": false,
+      "characters": [],
+      "emotion": "warm, gentle",
+      "action": "symbolic scene, no people",
+      "motion": "pan-right",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "A tender symbolic scene: a few tiny fresh green grass sprouts growing on bare warm paper, bathed in soft golden spring sunlight rays streaming down from above, gentle and warm; NO people at all; mostly empty off-white paper with only a few loose pencil strokes.",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "小草的心意再多，也报答不完春天的暖阳。",
+        "pinyin": "xiǎo cǎo de xīn yì zài duō, yě bào dá bù wán chūn tiān de nuǎn yáng.",
+        "local": "Tấm lòng ngọn cỏ dẫu nhiều, cũng chẳng đáp hết nắng ấm mùa xuân."
+      }
+    },
+    {
+      "id": "p3",
+      "role": "scene",
+      "voice": "narrator",
+      "sceneId": "bedroom-night",
+      "hasMainCharacter": true,
+      "characters": ["mom", "girl"],
+      "emotion": "tender, quiet, loving",
+      "action": "mom tucking a blanket around the sleeping girl at night",
+      "motion": "ken-burns",
+      "transitionIn": "slide-left",
+      "shots": [
+        {
+          "content": "The chubby mom with a top bun in her orange top leaning over a small bed at night, gently tucking a blanket around the sleeping chubby little girl with pigtails, tender and quiet; a very minimal bedroom, only faint pencil lines for the bed and a small window with a moon, soft warm light.",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "天冷的夜里，是妈妈悄悄为你掖好被角。",
+        "pinyin": "tiān lěng de yè lǐ, shì māma qiāoqiāo wèi nǐ yē hǎo bèi jiǎo.",
+        "local": "Đêm lạnh, mẹ lặng lẽ kéo chăn đắp ấm cho con."
+      }
+    },
+    {
+      "id": "p4",
+      "role": "scene",
+      "voice": "narrator",
+      "sceneId": "bedroom-sick",
+      "hasMainCharacter": true,
+      "characters": ["mom"],
+      "emotion": "tired but loving, worried",
+      "action": "mom keeping watch beside a sick child's bed all night",
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "The chubby mom with a top bun in her orange top sitting close beside a small bed, one hand gently resting on the blanket, her face tired but loving and a little worried, watching over a sick child through the night; a very minimal bedroom, only a few faint pencil lines for the bed edge, soft warm lamp light.",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "你生病时，是妈妈守在床边，一夜没合眼。",
+        "pinyin": "nǐ shēng bìng shí, shì māma shǒu zài chuáng biān, yī yè méi hé yǎn.",
+        "local": "Con ốm, mẹ ngồi bên giường, thức trắng cả đêm."
+      }
+    },
+    {
+      "id": "p5",
+      "role": "scene",
+      "voice": "narrator",
+      "sceneId": "mom-aging",
+      "hasMainCharacter": true,
+      "characters": ["mom"],
+      "emotion": "gentle, a little wistful",
+      "action": "mom standing with a soft tired smile, hair turning grey",
+      "motion": "sway",
+      "transitionIn": "slide-up",
+      "shots": [
+        {
+          "content": "The same chubby kind mom with her top bun, now with a few visible strands of grey and white hair, standing with a gentle tired smile, looking softly toward the viewer; a very minimal background, mostly bare warm paper with only a couple of loose pencil lines.",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "一年又一年，我们长高了，妈妈的头发却白了。",
+        "pinyin": "yī nián yòu yī nián, wǒmen zhǎng gāo le, māma de tóu fà què bái le.",
+        "local": "Năm lại năm, con cao lớn, còn tóc mẹ đã bạc."
+      }
+    },
+    {
+      "id": "p6",
+      "role": "payoff",
+      "voice": "narrator",
+      "sceneId": "hug",
+      "hasMainCharacter": true,
+      "characters": ["girl", "mom"],
+      "emotion": "loving, grateful, happy",
+      "action": "girl hugging mom tightly, both smiling",
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "effects": [
+        { "type": "emojiRain", "emojis": ["❤️", "💛", "🌷"], "count": 12, "opacity": 0.5 }
+      ],
+      "shots": [
+        {
+          "content": "The chubby little girl with pigtails in her pink dress hugging her chubby mom (orange top, top bun) tightly around the waist, both smiling warmly with eyes closed, full of love; a very minimal cozy room, mostly bare warm paper, soft light.",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "妈妈，谢谢你！我爱你。",
+        "pinyin": "māma, xiè xie nǐ! wǒ ài nǐ.",
+        "local": "Mẹ ơi, con cảm ơn mẹ! Con yêu mẹ."
+      }
+    },
+    {
+      "id": "p7",
+      "role": "cta",
+      "voice": "narrator",
+      "sceneId": "family-together",
+      "hasMainCharacter": true,
+      "characters": ["mom", "dad", "girl", "boy", "dog"],
+      "emotion": "warm, together",
+      "action": "whole family gathered close, smiling",
+      "motion": "still",
+      "transitionIn": "wipe",
+      "shots": [
+        {
+          "content": "The whole warm family gathered close together — the chubby mom in orange top with a top bun, the dad in a blue shirt, the chubby little girl with pigtails in a pink dress, the chubby boy in a green t-shirt, and the little grey-and-white puppy at their feet — all smiling gently together; a very minimal cozy room, mostly bare warm off-white paper.",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "常回家看看，多陪陪妈妈。和孩子一起，读懂中华经典。",
+        "pinyin": "cháng huí jiā kàn kàn, duō péi péi māma. hé háizi yìqǐ, dú dǒng zhōnghuá jīngdiǎn.",
+        "local": "Hãy thường về thăm, ở bên mẹ nhiều hơn. Cùng con thấm hiểu kinh điển Trung Hoa."
+      }
+    }
+  ]
+}

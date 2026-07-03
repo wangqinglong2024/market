@@ -27,7 +27,7 @@ public/videos/2026-07/<id>/
     {
       "id": "p1",
       "role": "read-quote",          // 该拍在结构里的角色：read-quote/explain/scene/payoff/cta
-      "voice": "boy",                // ★配什么音：narrator/boy/girl/dad/mom（见 04）
+      "voice": "narrator",           // ★配音：全片统一旁白开朗姐姐（见 04）
       "sceneId": "study-ancient",    // 场景（同地点连续拍复用背景）
       "hasMainCharacter": true,      // ★这拍需不需要出人物（不需要就 false，画空镜/物件）
       "characters": ["boy"],         // 在场主角色 id；空=无人物

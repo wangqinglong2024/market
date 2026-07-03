@@ -1,7 +1,13 @@
 # 04 · 多角色配音、字幕、翻译（意译）、拼音
 
-## 配音：多角色分工（火山引擎，2026-07-03 改）
-不再全片一个声音。每拍在 `script.json` 里用 `voice` 字段指定**角色**，build 时映射到火山 `voice_type`：
+## ★ 配音：统一用旁白开朗姐姐（2026-07-03 用户最终锁定）
+**全片每一拍都用旁白「开朗姐姐」念**（`voice=narrator`），**不做**多角色分工——试过多角色后用户决定还是统一一个旁白声更顺。
+- 文案里也**不要出现**「妈妈说：」「爸爸说：」这类引述词，直接叙述。
+- 角色划分只体现在**画面**（谁朗读/谁在场），声音都是同一个旁白。
+- 下面的多角色映射表**保留为可选基建**（`voice` 字段仍支持 boy/girl/dad/mom，改一版就能启用），但**当前默认全 narrator**。
+
+### 多角色音色表（当前不启用，留作可选）
+每拍可在 `script.json` 用 `voice` 字段指定角色，build 时映射到火山 `voice_type`：
 
 | 角色(voice) | 用途 | 火山 voice_type（`config/settings.json.voices`） | 状态 |
 |---|---|---|---|
@@ -23,8 +29,8 @@
 
 ### script.json 里怎么写
 ```jsonc
-{ "id": "p1", "voice": "girl",     "captions": { "zh": "温故而知新，可以为师矣。" } }   // 女儿朗读金句
-{ "id": "p2", "voice": "dad",      "captions": { "zh": "意思是：常复习旧的，就能悟出新的。" } }
+{ "id": "p1", "voice": "narrator", "captions": { "zh": "温故而知新，可以为师矣。" } }   // 画面：女儿古装朗读；声音仍是旁白
+{ "id": "p2", "voice": "narrator", "captions": { "zh": "常复习旧的，就能悟出新的。" } }   // 不写「妈妈说」等引述词
 { "id": "p3", "voice": "narrator", "captions": { "zh": "夜里，他又翻开那本旧书……" } }
 ```
 > ⚠️ **待改代码**：`build.mjs` 现在 `synth(zh, path, { voice: undefined })` 恒用开朗姐姐；改为读 `beat.voice` → `settings.voices[beat.voice]` 传给 `synth`。

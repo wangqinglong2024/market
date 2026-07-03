@@ -2,6 +2,16 @@
   "_comment": "视频总账。每条视频一条记录，扛上千条时的索引与状态。id 建议 YYMMDD-slug；产物在 public/videos/<shard>/<id>/。",
   "videos": [
     {
+      "id": "cuncao-chunhui",
+      "title": "谁言寸草心，报得三春晖 · 母爱与感恩",
+      "shard": "2026-07",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-03",
+      "beats": 7,
+      "manifest": "public/videos/2026-07/cuncao-chunhui/manifest.json"
+    },
+    {
       "id": "demo",
       "title": "妈妈生病了 · 家人的爱",
       "shard": "2026-07",
