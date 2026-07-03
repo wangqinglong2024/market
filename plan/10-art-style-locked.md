@@ -38,13 +38,23 @@
 
 | 画面角色数 | 模型 | fal id | $/张 | 参考 |
 |---|---|---|---|---|
+| **空镜(0 人)** | FLUX.1 Kontext [pro] | `fal-ai/flux-pro/kontext` | **~$0.04** | `image_url` 喂**风格锚图**(`settings.image.styleAnchor`)，只借画风、绝对不要人；模板 `image-scene.tpl.md` |
 | **单角色(1 人/仅 1 个主体)** | FLUX.1 Kontext [pro] | `fal-ai/flux-pro/kontext` | **~$0.04** | `image_url` 喂**该角色 1 张 model-sheet** |
 | **多角色(≥2)** | Nano Banana Pro edit | `fal-ai/nano-banana-pro/edit` | **~$0.15** | `image_urls[]` 喂**多张 model-sheet** |
+
+> 🚫 **空镜不要用 nano-banana / flux-dev 文生图**（无锚 → 画风漂移、乱加人）。空镜也走 kontext，喂风格锚图（2026-07-03 实测确定）。
 
 - 🚫 **硬规矩(用户 2026-07-02 锁定)**:**画面里只有单个人物时,禁止使用 nano-banana(pro)——一律走 flux `fal-ai/flux-pro/kontext`。** nano-banana-pro **只**允许在**多角色同框**时用。理由:实测单角色下 flux kontext 更还原定妆图、背景更干净、便宜近 4 倍;单角色即使 $0.04 出得不理想,也**在 flux 内重抽/调提示词**,不许升 nano。
 - **新角色/纯风格**(如首次画 dog,画面就它一个)仍属单角色 → 走 flux;确需多张风格锚才走 pro。
 - **链路**:一律 **curl + 代理 `http://127.0.0.1:7897`**(Node fetch 直连会超时,见记忆 [[fal-use-curl-proxy]])。Key 取 `api-key.txt` 第 2 行。参数含 `aspect_ratio:"9:16"`(定妆用 `3:4`)、`num_images:1`、`output_format:"png"`。
 - ⚠️ **坑**:node 读中文文件名在 .sh 里会 ENOENT → 参考图用 ASCII 名(已放 `config/style/refs/`)。
+
+## 4.4 ★★ 死命令：提示词里绝对不许出现"框/字幕/底部留白"字眼(用户 2026-07-03 锁定)
+**画面绝不能出现方框/边框/圆角框/虚线框/字幕占位框。** 根因不是模型爱画框，而是**提示词里提到了它**：
+- 扩散模型"**提到什么就画什么**"。写 `box / frame / border / rectangle / panel / subtitle / caption / "empty area at the bottom for subtitles" / "留白给字幕"`，甚至写 `no box / no frame`（负面词），都会诱导它**真的画出一个框或虚线框**。
+- ✅ **正确做法**：提示词**根本不提**框、不提字幕、不提"底部留白"。留白靠 **"只画一个不大的主体 + 大片纯色纸背景 + 四周留足边距"** 自然得到。位置用"upper part / upper two-thirds"表达，不描述底部区域。
+- 也**不要**放身体部位负面词（`no extra fingers` 等）→ 触发 fal nsfw 黑图。
+- 落地：`config/prompts/image-flux.tpl.md`、`image-scene.tpl.md` 已按此重写。**改这两个模板时严禁把上述词加回去。**
 
 ## 4.5 场景规矩(★ 用户 2026-07-02 锁定,最重要)
 

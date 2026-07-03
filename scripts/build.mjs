@@ -3,7 +3,7 @@
 // 读 public/videos/<shard>/<id>/script.json（分镜/翻译由会话生成），产出同目录 manifest.json。
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
-import { loadSettings, loadMotion, loadCharacters, loadPrompts, buildImagePrompt, buildFluxPrompt, pickMotion } from "./lib/config.mjs";
+import { loadSettings, loadMotion, loadCharacters, loadPrompts, buildImagePrompt, buildFluxPrompt, buildScenePrompt, pickMotion } from "./lib/config.mjs";
 import { synth } from "./tts.mjs";
 import { genImage } from "./gen-image.mjs";
 
@@ -56,14 +56,22 @@ for (const beat of script.beats) {
   // 出图：目前每 beat 取首个 shot 出一张（多 shot 交叉切换为后续增强）
   const shot = beat.shots[0];
   const charIds = beat.hasMainCharacter ? beat.characters : [];
-  const refPaths = charIds.map((id) => characters[id]?.refPath).filter(Boolean);
-  // 单角色走 flux 精简模板（长 prompt 含 negative 会触发 fal nsfw 黑图）
-  const prompt = refPaths.length === 1
-    ? buildFluxPrompt({ shotContent: shot.content, charIds, prompts, characters })
-    : buildImagePrompt({ shotContent: shot.content, charIds, prompts, characters });
+  let refPaths, prompt;
+  if (charIds.length === 0) {
+    // 空镜(无人物)：喂风格锚图，走 flux/kontext 只借画风、不要人（严禁 flux/dev 文生图漂移）
+    refPaths = [join(ROOT, settings.image.styleAnchor)];
+    prompt = buildScenePrompt({ shotContent: shot.content, prompts });
+  } else {
+    refPaths = charIds.map((id) => characters[id]?.refPath).filter(Boolean);
+    // 单角色走 flux 精简模板（长 prompt 含 negative 会触发 fal nsfw 黑图）
+    prompt = refPaths.length === 1
+      ? buildFluxPrompt({ shotContent: shot.content, charIds, prompts, characters })
+      : buildImagePrompt({ shotContent: shot.content, charIds, prompts, characters });
+  }
   const imgPath = ensure(join(dir, "images", `${beat.id}.png`));
-  const img = await genImage({ outPath: imgPath, prompt, refPaths, settings });
-  console.log(`  image: ${img.cached ? "cached" : "gen"} ${imgPath}`);
+  // shot.model 显式声明模型（flux/nano-pro），gen-image 会强制校验与参考图数一致
+  const img = await genImage({ outPath: imgPath, prompt, refPaths, settings, model: shot.model });
+  console.log(`  image: ${img.cached ? "cached" : "gen"} [${img.model ?? "?"}] ${imgPath}`);
 
   // 特效：直接透传 script.json 里 beat 自带的 effects（固定 4 特效、≤2/片、按需，见 plan/11）。
   // 只保留渲染层认识的 4 个 type，其它忽略。

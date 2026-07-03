@@ -252,7 +252,11 @@ const Scene: React.FC<{ beat: Beat; meta: Manifest["meta"] }> = ({ beat, meta })
   const preset = (beat.motion && meta.motionPresets?.[beat.motion]) || DEFAULT_MOTION;
   const cap = { ...DEFAULT_CAP, ...meta.captions };
   const pageTurn = { fadeFrames: 10, captionRiseFrames: 14, captionRisePx: 22, ...meta.pageTurn };
-  const bandTop = Math.round(meta.height * (meta.bandTopRatio ?? 0.6927));
+  // 1:1 方图合成到白底 9:16：上留白 2/16 + 方图 9/16 + 字幕带 3/16 + 下留白 2/16（用户 2026-07-03 锁定）
+  const imgSize = meta.width;                       // 1:1，满宽正方（= 9/16 高）
+  const imgTop = Math.round((meta.height * 2) / 16); // 顶部留白 2/16
+  const capTop = imgTop + imgSize;                  // 字幕带顶 = 11/16
+  const capH = Math.round((meta.height * 3) / 16);  // 字幕带 3/16
   const local = beat.captions.local ?? beat.captions.vi ?? "";
   const maxW = meta.width - SIDE_PAD * 2;
 
@@ -272,54 +276,35 @@ const Scene: React.FC<{ beat: Beat; meta: Manifest["meta"] }> = ({ beat, meta })
 
   return (
     <AbsoluteFill style={{ backgroundColor: cap.bgColor }}>
-      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: bandTop, overflow: "hidden" }}>
+      {/* 方形画面：白底上、上留白 2/16、满宽 1:1 */}
+      <div style={{ position: "absolute", top: imgTop, left: 0, width: imgSize, height: imgSize, overflow: "hidden" }}>
         <Img
           src={staticFile(beat.image)}
           style={{
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "top center",
+            objectPosition: "center center",
             transform: `translate(${panX + driftX}px, ${panY + driftY}px) rotate(${rot}deg) scale(${scale})`,
           }}
         />
         <EffectsLayer effects={beat.effects} durationInFrames={dur} />
       </div>
 
+      {/* 字幕带：11/16 起、高 3/16，居中 */}
       <div
         style={{
           position: "absolute",
-          top: bandTop,
+          top: capTop,
           left: 0,
           width: "100%",
-          height: meta.height - bandTop,
-          backgroundColor: cap.bgColor,
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          top: bandTop - 40,
-          left: 0,
-          width: "100%",
-          height: 40,
-          background: `linear-gradient(rgba(0,0,0,0), ${cap.bgColor})`,
-        }}
-      />
-
-      <div
-        style={{
-          position: "absolute",
-          top: bandTop,
-          left: 0,
-          width: "100%",
-          bottom: 0,
+          height: capH,
           transform: `translateY(${capRise}px)`,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 20,
+          gap: 18,
         }}
       >
         <FitLine maxWidth={maxW} depKey={`py-${beat.id}`}>

@@ -36,7 +36,12 @@ public/videos/2026-07/<id>/
       "motion": "push-in",           // ★运镜预设（按内容多样化选，见 03/motion.json）
       "effects": [],                 // ★特效（≤2/片，按需，多数拍留空，见 11）
       "shots": [                     // ★分几个画面 + 每画面的出图提示词
-        { "content": "<英文出图提示词：只画这句所指的画面>", "weight": 1 }
+        {
+          "content": "<英文出图提示词：真正传给模型，只画这句所指的画面>",
+          "contentZh": "<对应中文：仅给用户看懂，不传参给模型>",
+          "model": "flux(0或1人) | nano-pro(≥2人)",  // ★显式声明出图模型，出图前可审、省钱可控
+          "weight": 1
+        }
       ],
       "captions": {
         "zh": "温故而知新，可以为师矣。",
@@ -50,7 +55,8 @@ public/videos/2026-07/<id>/
 字段职责对照用户三问：
 - **「每句配什么音」** → `voice`（逐拍指定角色，build 映射到火山 voice_type）。
 - **「分几个画面」** → 拍数（beats 数）+ 每拍 `shots[]`（一拍可 1~N 张表现过程）。
-- **「每个画面怎么给 AI 出图提示词」** → 每个 `shot.content` = 该画面的出图提示词主体；build 时再拼固定 STYLE/LAYOUT/NOTEXT（见 [[10-art-style-locked]]），并按 `characters` 数路由 flux(无人物/单角色) / nano-banana-pro(多角色，见 [[05-cost-and-models]]）。
+- **「每个画面怎么给 AI 出图提示词」** → 每个 `shot.content`（英文）= 该画面的出图提示词主体，**真正传给模型**；`shot.contentZh`（中文）仅供用户看懂、**不传参给模型**。build 时再拼固定 STYLE/LAYOUT/NOTEXT（见 [[10-art-style-locked]]）。
+- **「用哪个模型」** → 每个 shot 显式声明 `model`（只有 `flux` / `nano-pro` 两个值），**出图前就能在脚本里审、成本可控**。硬规矩：**0 人或 1 人 = `flux`(~$0.04)；≥2 人 = `nano-pro`(~$0.15)**。**严禁 nano-banana 文生图，空镜也走 flux**；`gen-image.mjs` 强制校验 `model` 与 `characters` 数一致，**不符报错**，杜绝对单人/空镜误用贵模型（见 [[05-cost-and-models]]）。
 
 ## 出图提示词怎么定（第②→③层）
 `shot.content` 只写**该拍要画什么**（忠于该句、极简背景、别脑补）。最终 prompt = `content` + 固定画风/版式/负面模板拼接（确定性、可复现）。

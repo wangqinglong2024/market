@@ -38,6 +38,7 @@ export function loadPrompts() {
   return {
     imageTpl: readText(C("prompts", "image.tpl.md")),
     imageFluxTpl: readText(C("prompts", "image-flux.tpl.md")),
+    imageSceneTpl: readText(C("prompts", "image-scene.tpl.md")),
     style: stripComments(readText(C("prompts", "style.md"))),
     composition: stripComments(readText(C("prompts", "composition.md"))),
     negative: stripComments(readText(C("prompts", "negative.md"))),
@@ -71,6 +72,11 @@ export function buildFluxPrompt({ shotContent, charIds, prompts, characters }) {
     .replace("{shot}", shotContent)
     .replace("{canon}", canon || "")
     .replace("{style_short}", styleShort);
+}
+
+// 空镜(无人物)：flux-pro/kontext 喂风格锚图，只借画风、不要人。不拼 negative/canon。
+export function buildScenePrompt({ shotContent, prompts }) {
+  return stripComments(prompts.imageSceneTpl).replace("{shot}", shotContent);
 }
 
 // 按句意选运镜预设：beat.motion 优先，否则按 motion.json 的关键词规则命中，默认 default

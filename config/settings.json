@@ -27,9 +27,12 @@
   },
   "image": {
     "model": "fal-ai/nano-banana-pro/edit",
-    "aspectRatio": "9:16",
+    "_aspectComment": "出图统一 1:1 方图；渲染器把方图合成到白底 9:16(上留白2/16+方图9/16+字幕3/16+下留白2/16)，见 plan/03。",
+    "aspectRatio": "1:1",
     "seedStrategy": "from-shot-id",
-    "maxRetries": 3
+    "maxRetries": 3,
+    "_styleAnchorComment": "空镜(无人物)出图时喂给 flux-pro/kontext 的风格锚图，只借画风。用任一定妆图即可。",
+    "styleAnchor": "config/characters/girl/model-sheet.png"
   },
   "captions": {
     "bandTopRatio": 0.6927,
