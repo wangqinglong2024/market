@@ -1,0 +1,172 @@
+{
+  "_comment": "用户 2026-07-05 明确要求：100% 按文案做新视频；古文只做一句 read-quote，不拆两句；随机男女均可。本脚本中文 captions.zh 完整保留用户原文。",
+  "videoId": "bu-huan-ren-bu-zhi",
+  "lang": "vi",
+  "sourceQuote": "古人云：不患人之不己知，患其不能也。",
+  "beats": [
+    {
+      "id": "p1",
+      "role": "read-quote",
+      "voice": "narrator",
+      "sceneId": "ancient-study",
+      "hasMainCharacter": true,
+      "characters": [
+        "boy"
+      ],
+      "costume": "ancient",
+      "emotion": "solemn, earnest",
+      "action": "boy in ancient robe holding an open book, reciting the classic line",
+      "motion": "push-in",
+      "shots": [
+        {
+          "content": "A present-day chubby little boy with short golden-brown hair, wearing the SAME outfit as the reference image: a pale-green full-length crossed-collar hanfu robe reaching the ankles and a flat-topped SQUARE black graduation-style scholar cap (Chinese fāngjīn) on his head. He stands holding an open book in both hands, reciting a classic aloud, solemn and earnest. A minimal reading scene: just one low wooden desk beside him with a rolled paper scroll and a writing brush, drawn as a few loose light pencil lines, on a clean solid PURE WHITE background with lots of empty white space, far simpler than the boy.",
+          "contentZh": "当代胖男孩（金棕短发），穿着与参考样板图一模一样的装扮：及踝的交领淡绿长袍汉服 + 头戴方顶黑色毕业式书生帽。站着双手捧翻开的书朗声诵读经典，庄重认真。极简诵读场景：身旁一张矮木桌，一卷纸卷加一支毛笔，几笔很淡的铅笔线，纯白底、大量留白，远比人物简单。",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "古人云：不患人之不己知，患其不能也。",
+        "pinyin": "gǔ rén yún: bú huàn rén zhī bù jǐ zhī, huàn qí bù néng yě.",
+        "local": "Người xưa nói: Đừng lo người khác không hiểu mình, hãy lo mình chưa đủ năng lực.",
+        "lines": [
+          {
+            "zh": "古人云：",
+            "vi": "Người xưa nói:"
+          },
+          {
+            "zh": "不患人之不己知，",
+            "vi": "Đừng lo người khác không hiểu mình,"
+          },
+          {
+            "zh": "患其不能也。",
+            "vi": "hãy lo mình chưa đủ năng lực."
+          }
+        ]
+      }
+    },
+    {
+      "id": "p2",
+      "role": "explain",
+      "voice": "narrator",
+      "sceneId": "question-scroll",
+      "hasMainCharacter": false,
+      "characters": [],
+      "emotion": "thoughtful, inviting",
+      "action": "an open book and a gentle question mood",
+      "motion": "pull-back",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "A simple open ancient book on a low wooden desk, with a small warm lamp glow and a few loose pencil lines forming a gentle question mark shape above the page, suggesting a thoughtful question. No people, no readable text. Clean solid PURE WHITE background with lots of empty white space, soft light, minimal hand-drawn style.",
+          "contentZh": "一本摊开的古书放在矮木桌上，旁边有一盏温暖小灯，书页上方几笔铅笔线形成柔和的问号氛围，表示思考提问。无人、不要可读文字。纯白底、大量留白、柔光、极简手绘。",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "这句话告诉我们什么道理呢？",
+        "pinyin": "zhè jù huà gàosu wǒmen shénme dàolǐ ne?",
+        "local": "Câu này muốn nói với chúng ta điều gì?",
+        "lines": [
+          {
+            "zh": "这句话告诉我们什么道理呢？",
+            "vi": "Câu này muốn nói với chúng ta điều gì?"
+          }
+        ]
+      }
+    },
+    {
+      "id": "p3",
+      "role": "explain",
+      "voice": "narrator",
+      "sceneId": "quiet-practice",
+      "hasMainCharacter": true,
+      "characters": [
+        "girl"
+      ],
+      "costume": "normal",
+      "emotion": "calm, focused, no complaint",
+      "action": "girl quietly practicing a skill instead of complaining",
+      "motion": "pan-right",
+      "transitionIn": "slide-left",
+      "shots": [
+        {
+          "content": "A present-day chubby little girl with two pigtails in her pink dress, sitting calmly at a low desk and practicing calligraphy with a brush, focused and peaceful. Beside her, a tiny gray complaint cloud drifts away and fades, while she ignores it and keeps practicing. No readable text. Clean solid PURE WHITE background with lots of empty white space, minimal warm hand-drawn style.",
+          "contentZh": "当代胖女孩（双马尾、粉裙）坐在矮桌前安静练毛笔字，专注平和。旁边一个很小的灰色抱怨云飘远变淡，她不理会，继续修炼本事。不要可读文字。纯白底、大量留白、温暖极简手绘。",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "不用纠结别人看不看重你，与其满心抱怨，不如修炼本事。",
+        "pinyin": "bú yòng jiūjié biérén kàn bu kànzhòng nǐ, yǔqí mǎn xīn bàoyuàn, bùrú xiūliàn běnshì.",
+        "local": "Đừng mãi bận tâm người khác có coi trọng mình không; thay vì đầy lòng oán trách, hãy rèn luyện bản lĩnh.",
+        "lines": [
+          {
+            "zh": "不用纠结别人看不看重你，",
+            "vi": "Đừng mãi bận tâm người khác có coi trọng mình không;"
+          },
+          {
+            "zh": "与其满心抱怨，",
+            "vi": "thay vì đầy lòng oán trách,"
+          },
+          {
+            "zh": "不如修炼本事。",
+            "vi": "hãy rèn luyện bản lĩnh."
+          }
+        ]
+      }
+    },
+    {
+      "id": "p4",
+      "role": "payoff",
+      "voice": "narrator",
+      "sceneId": "quiet-glow",
+      "hasMainCharacter": true,
+      "characters": [
+        "girl"
+      ],
+      "costume": "normal",
+      "emotion": "quiet confidence, gentle glow",
+      "action": "girl glowing naturally after steady effort",
+      "motion": "push-in",
+      "transitionIn": "wipe",
+      "effects": [
+        {
+          "type": "zoomBlur",
+          "opacity": 0.22,
+          "rings": 4,
+          "color": "#f6d36b"
+        }
+      ],
+      "shots": [
+        {
+          "content": "The same present-day chubby little girl with two pigtails in her pink dress, standing quietly with gentle confidence beside a neat stack of practice papers and a brush. A soft golden glow and tiny star-like sparkles surround her naturally, showing that steady effort has become real ability. No readable text. Clean solid PURE WHITE background with lots of empty white space, warm minimal hand-drawn style.",
+          "contentZh": "同一个当代胖女孩（双马尾、粉裙）安静自信地站着，身旁有整齐练习纸和毛笔。柔和金色光芒和小星点自然围绕她，表现默默努力后能力到位、自会发光。不要可读文字。纯白底、大量留白、温暖极简手绘。",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "低调沉淀，默默努力，能力到位之时，自然闪闪发光。",
+        "pinyin": "dīdiào chéndiàn, mòmò nǔlì, nénglì dào wèi zhī shí, zìrán shǎnshǎn fāguāng.",
+        "local": "Cứ khiêm nhường tích lũy, âm thầm cố gắng; khi năng lực đủ đầy, bạn sẽ tự nhiên tỏa sáng.",
+        "lines": [
+          {
+            "zh": "低调沉淀，默默努力，",
+            "vi": "Cứ khiêm nhường tích lũy, âm thầm cố gắng;"
+          },
+          {
+            "zh": "能力到位之时，",
+            "vi": "khi năng lực đủ đầy,"
+          },
+          {
+            "zh": "自然闪闪发光。",
+            "vi": "bạn sẽ tự nhiên tỏa sáng."
+          }
+        ]
+      }
+    }
+  ]
+}

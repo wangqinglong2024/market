@@ -95,7 +95,7 @@ for (const beat of script.beats) {
   const audioPath = ensure(join(dir, "audio", `${beat.id}.mp3`));
   const voices = settings.audio.voices || {};
   const voiceType = voices[beat.voice] || voices[settings.audio.defaultVoice];
-  // 语速按内容类型分流：朗读古文保持 1.0，其余讲解/场景/收尾用 1.2；时长驱动画面节奏自动跟随
+  // 语速按内容类型分流：朗读古文 0.9，其余讲解/场景/收尾 1.1；时长驱动画面节奏自动跟随
   const speed = beat.role === "read-quote"
     ? (settings.audio.readQuoteSpeed ?? 1.0)
     : (settings.audio.speed ?? 1.0);

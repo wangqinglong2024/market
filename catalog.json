@@ -2,6 +2,16 @@
   "_comment": "视频总账。每条视频一条记录，扛上千条时的索引与状态。id 建议 slug；产物在 public/videos/<shard>/<id>/，其中 shard=年/月/日(YYYY/MM/DD，2026-07-05 用户改：原按月分片改为年月日三级)。",
   "videos": [
     {
+      "id": "bu-huan-ren-bu-zhi",
+      "title": "不患人之不己知 · 修炼本事自然发光",
+      "shard": "2026/07/05",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-05",
+      "beats": 4,
+      "manifest": "public/videos/2026/07/05/bu-huan-ren-bu-zhi/manifest.json"
+    },
+    {
       "id": "shanjia-yuwu",
       "title": "假舆马者…善假于物 · 善于借助外物",
       "shard": "2026/07/03",

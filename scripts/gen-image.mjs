@@ -1,8 +1,8 @@
-// 出图：fal.ai。fal 调用全部走 curl + 代理（Node fetch 直连会超时）。
+// 出图：fal.ai。fal 调用优先走 curl + 代理；本机代理不可用时直连兜底。
 // 模型路由：单角色 → flux-pro/kontext（$0.04）；多角色 → nano-banana-pro/edit（$0.15）；
-//          无角色 → nano-banana 文生图（仅锁画风）。
+//          无角色 → flux-pro/kontext 喂风格锚图。
 import { readFileSync, writeFileSync, existsSync, unlinkSync } from "node:fs";
-import { execSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { randomUUID } from "node:crypto";
@@ -13,16 +13,31 @@ const PROXY = "http://127.0.0.1:7897";
 const dataUri = (p) => "data:image/png;base64," + readFileSync(p).toString("base64");
 
 function curlPost(url, reqFile) {
-  return execSync(
-    `curl -s -m 180 -x ${PROXY} -X POST "${url}" ` +
-    `-H "Authorization: Key ${KEY}" -H "Content-Type: application/json" ` +
-    `--data @${reqFile}`,
-    { maxBuffer: 50 * 1024 * 1024 }
-  );
+  const args = [
+    "-s", "-m", "180", "-x", PROXY,
+    "-X", "POST", url,
+    "-H", `Authorization: Key ${KEY}`,
+    "-H", "Content-Type: application/json",
+    "--data", `@${reqFile}`,
+  ];
+  try {
+    return execFileSync("curl", args, { maxBuffer: 50 * 1024 * 1024 });
+  } catch (err) {
+    if (err.status !== 7) throw err;
+    console.warn("  fal proxy failed, retrying direct: status=7");
+    return execFileSync("curl", args.filter((arg, i) => arg !== "-x" && args[i - 1] !== "-x"), { maxBuffer: 50 * 1024 * 1024 });
+  }
 }
 
 function curlGet(url) {
-  return execSync(`curl -s -m 90 -x ${PROXY} "${url}"`, { maxBuffer: 50 * 1024 * 1024 });
+  const args = ["-s", "-m", "90", "-x", PROXY, url];
+  try {
+    return execFileSync("curl", args, { maxBuffer: 50 * 1024 * 1024 });
+  } catch (err) {
+    if (err.status !== 7) throw err;
+    console.warn("  fal download proxy failed, retrying direct: status=7");
+    return execFileSync("curl", args.filter((arg, i) => arg !== "-x" && args[i - 1] !== "-x"), { maxBuffer: 50 * 1024 * 1024 });
+  }
 }
 
 // 只有两个模型（用户 2026-07-03 锁定）：
@@ -77,30 +92,21 @@ export async function genImage({ outPath, prompt, refPaths = [], settings, model
   const reqFile = join(tmpdir(), `fal-req-${randomUUID()}.json`);
   writeFileSync(reqFile, JSON.stringify(payload));
 
-  const maxRetries = settings.image.maxRetries ?? 3;
   try {
-    for (let attempt = 0; attempt < maxRetries; attempt++) {
-      try {
-        const raw = curlPost(`https://fal.run/${endpoint}`, reqFile);
-        const data = JSON.parse(raw.toString());
-        const url = data?.images?.[0]?.url;
-        if (!url) {
-          console.log(`  image gen failed (try ${attempt + 1}/${maxRetries})`, JSON.stringify(data).slice(0, 150));
-          continue;
-        }
-        const imgBuf = curlGet(url);
-        // 黑图检测：fal safety filter 触发时 HTTP 200 但返回约 10372 字节全黑 PNG，不报错
-        if (imgBuf.length < 20000) {
-          console.log(`  black/tiny image detected (${imgBuf.length}B, nsfw filter?), retrying…`);
-          continue;
-        }
-        writeFileSync(outPath, imgBuf);
-        return { path: outPath, cached: false, model: modelKey };
-      } catch (e) {
-        console.log(`  attempt ${attempt + 1}/${maxRetries} error:`, e.message?.slice(0, 120));
-      }
+    const raw = curlPost(`https://fal.run/${endpoint}`, reqFile);
+    const data = JSON.parse(raw.toString());
+    const url = data?.images?.[0]?.url;
+    if (!url) {
+      throw new Error(`fal response missing image url: ${JSON.stringify(data).slice(0, 150)}`);
     }
-    throw new Error(`image gen permanently failed after ${maxRetries} attempts: ${outPath}`);
+    const imgBuf = curlGet(url);
+    // 黑图检测：fal safety filter 触发时 HTTP 200 但返回约 10372 字节全黑 PNG，不报错。
+    // 按 plan，发现模型结果异常时直接报错，等待用户同意后才重调。
+    if (imgBuf.length < 20000) {
+      throw new Error(`black/tiny image detected (${imgBuf.length}B, nsfw filter?): ${outPath}`);
+    }
+    writeFileSync(outPath, imgBuf);
+    return { path: outPath, cached: false, model: modelKey };
   } finally {
     try { unlinkSync(reqFile); } catch (_) {}
   }

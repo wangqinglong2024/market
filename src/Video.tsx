@@ -169,6 +169,7 @@ export type VideoProps = { videoId: string; shard: string; manifest: Manifest | 
 const DEFAULT_MOTION: Motion = { scale: [1.03, 1.1], panX: [0, 0], panY: [0, 0], driftX: 8, driftY: 6, ease: "inOut" };
 const DEFAULT_CAP = { pinyinColor: "#a58e5c", zhColor: "#20242b", localColor: "#d6336c", bgColor: "#fdfcf7" };
 const SIDE_PAD = 52;
+const PINYIN_COLUMN_GAP = 10;
 
 const manifestPath = (shard: string, id: string) => `videos/${shard}/${id}/manifest.json`;
 const beatFrames = (b: Beat, fps: number) => Math.max(1, Math.round((b.durationMs / 1000) * fps));
@@ -228,8 +229,16 @@ const RubyRow: React.FC<{
   return (
     <>
       {pairs.map((p, idx) => (
-        <span key={idx} style={{ display: "inline-flex", flexDirection: "column", alignItems: "center" }}>
-          <span style={{ fontFamily: latinFamily, fontSize: 34, lineHeight: "38px", fontWeight: 800, color: pinyinColor, height: 38 }}>{p.py}</span>
+        <span
+          key={idx}
+          style={{
+            display: "inline-flex",
+            flexDirection: "column",
+            alignItems: "center",
+            marginRight: idx < pairs.length - 1 ? PINYIN_COLUMN_GAP : 0,
+          }}
+        >
+          <span style={{ fontFamily: latinFamily, fontSize: 42, lineHeight: "46px", fontWeight: 800, color: pinyinColor, height: 46 }}>{p.py}</span>
           <span style={{ fontFamily: zhFamily, fontSize: 67, lineHeight: "77px", fontWeight: zhWeight, color: zhColor, whiteSpace: "pre" }}>{p.c === " " ? " " : p.c}</span>
         </span>
       ))}
@@ -410,7 +419,7 @@ export const Video: React.FC<VideoProps> = ({ manifest }) => {
       <FontLoader fonts={manifest.meta.fonts} />
       <TransitionSeries>{children}</TransitionSeries>
       {/* 全片固定古风背景音乐：低音量循环，垫在旁白之下（用户 2026-07-05 锁定） */}
-      {bgm?.src ? <Audio src={staticFile(bgm.src)} volume={() => bgm.volume ?? 0.15} loop /> : null}
+      {bgm?.src ? <Audio src={staticFile(bgm.src)} volume={() => bgm.volume ?? 0.08} loop /> : null}
     </AbsoluteFill>
   );
 };

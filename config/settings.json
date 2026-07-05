@@ -9,12 +9,12 @@
   "audio": {
     "engine": "volcano",
     "narrationLang": "zh",
-    "_speedComment": "配音语速倍率(火山 speed_ratio)。用户 2026-07-05 调整：朗读古文拍(role=read-quote)用 readQuoteSpeed=1.0，后续讲解/场景/收尾用 speed=1.2。配音变快→beat.durationMs 变短→画面变化自动跟着变快(见 build.mjs/Video.tsx，不用另调运镜)。改语速后须清掉受影响的 audio/*.mp3 重合成(缓存只按路径命中，不认语速)。",
-    "speed": 1.2,
-    "readQuoteSpeed": 1.0,
+    "_speedComment": "配音语速倍率(火山 speed_ratio)。用户 2026-07-05 调整：朗读古文拍(role=read-quote)用 readQuoteSpeed=0.9，后续讲解/场景/收尾用 speed=1.1。配音变快→beat.durationMs 变短→画面变化自动跟着变快(见 build.mjs/Video.tsx，不用另调运镜)。改语速后须清掉受影响的 audio/*.mp3 重合成(缓存只按路径命中，不认语速)。",
+    "speed": 1.1,
+    "readQuoteSpeed": 0.9,
     "tailPaddingMs": 320,
-    "_bgmComment": "全片固定背景音乐。用户 2026-07-05 指定使用最新上传 BGM：public/library/audio/bgm/peach_haven.mp3，音量 15%。★禁止用任何 API/fal 生成音乐;要么使用用户上传/开源真实录音、要么本地合成(scripts/gen-bgm.py)。视频短只播开头,渲染层低音量循环垫在旁白下。换曲只替换文件或改这里,不动渲染代码。",
-    "bgm": { "src": "library/audio/bgm/peach_haven.mp3", "volume": 0.15 },
+    "_bgmComment": "全片固定背景音乐。用户 2026-07-05 指定使用最新上传 BGM：public/library/audio/bgm/peach_haven.mp3，音量 8%。★禁止用任何 API/fal 生成音乐;要么使用用户上传/开源真实录音、要么本地合成(scripts/gen-bgm.py)。视频短只播开头,渲染层低音量循环垫在旁白下。换曲只替换文件或改这里,不动渲染代码。",
+    "bgm": { "src": "library/audio/bgm/peach_haven.mp3", "volume": 0.08 },
     "_voicesComment": "每拍 script.json 的 voice 字段(角色名)映射到火山 voice_type。以下 4 个均已真机验证可用(2026-07-03)。备选见 _alternates(也都验证过);样本在 temp/voice-samples/。",
     "defaultVoice": "narrator",
     "voices": {
