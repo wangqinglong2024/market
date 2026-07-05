@@ -410,7 +410,7 @@ export const Video: React.FC<VideoProps> = ({ manifest }) => {
       <FontLoader fonts={manifest.meta.fonts} />
       <TransitionSeries>{children}</TransitionSeries>
       {/* 全片固定古风背景音乐：低音量循环，垫在旁白之下（用户 2026-07-05 锁定） */}
-      {bgm?.src ? <Audio src={staticFile(bgm.src)} volume={bgm.volume ?? 0.16} loop /> : null}
+      {bgm?.src ? <Audio src={staticFile(bgm.src)} volume={() => bgm.volume ?? 0.15} loop /> : null}
     </AbsoluteFill>
   );
 };

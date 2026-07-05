@@ -1,6 +1,6 @@
 // TTS：火山引擎「开朗姐姐」。全部 HTTP 走 curl + 代理 7897（Node fetch 不走代理）。
 import { readFileSync, writeFileSync, existsSync, unlinkSync } from "node:fs";
-import { execSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import { randomUUID } from "node:crypto";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -11,6 +11,19 @@ const APPID = lines[4];
 const TOKEN = lines[6];
 const DEFAULT_VOICE = "zh_female_kailangjiejie_moon_bigtts";
 const PROXY = "http://127.0.0.1:7897";
+const TTS_URL = "https://openspeech.bytedance.com/api/v1/tts";
+
+function postTTS(reqFile, { useProxy }) {
+  const args = ["-s", "-m", "30"];
+  if (useProxy) args.push("-x", PROXY);
+  args.push(
+    "-X", "POST", TTS_URL,
+    "-H", `Authorization: Bearer;${TOKEN}`,
+    "-H", "Content-Type: application/json",
+    "--data", `@${reqFile}`,
+  );
+  return execFileSync("curl", args, { maxBuffer: 20 * 1024 * 1024 });
+}
 
 export async function volcanoTTS(text, outPath, { voice = DEFAULT_VOICE, speed = 1.0 } = {}) {
   const body = {
@@ -22,12 +35,13 @@ export async function volcanoTTS(text, outPath, { voice = DEFAULT_VOICE, speed =
   const reqFile = join(tmpdir(), `tts-req-${randomUUID()}.json`);
   writeFileSync(reqFile, JSON.stringify(body));
   try {
-    const raw = execSync(
-      `curl -s -m 30 -x ${PROXY} -X POST "https://openspeech.bytedance.com/api/v1/tts" ` +
-      `-H "Authorization: Bearer;${TOKEN}" -H "Content-Type: application/json" ` +
-      `--data @${reqFile}`,
-      { maxBuffer: 20 * 1024 * 1024 }
-    );
+    let raw;
+    try {
+      raw = postTTS(reqFile, { useProxy: true });
+    } catch (err) {
+      console.warn(`tts proxy failed, retrying direct: status=${err.status ?? "unknown"}`);
+      raw = postTTS(reqFile, { useProxy: false });
+    }
     const data = JSON.parse(raw.toString());
     if (data.code !== 3000 || !data.data) {
       throw new Error(`volcano failed: ${data.code} ${data.message || JSON.stringify(data).slice(0, 200)}`);

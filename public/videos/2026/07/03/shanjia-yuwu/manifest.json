@@ -166,8 +166,8 @@
       "captionRisePx": 22
     },
     "bgm": {
-      "src": "library/audio/bgm/daoyin-lost-sounds-of-tao.mp3",
-      "volume": 0.21
+      "src": "library/audio/bgm/peach_haven.mp3",
+      "volume": 0.15
     },
     "fonts": {
       "_comment": "★字幕字体配置化(用户 2026-07-05)：换字体只改这里、不用改代码。① 把 .ttf 放进 public/library/fonts/；② 在 files 里登记 {family,file}(可选 weight 区间)；③ 把该 family 放到 zhStack(中文)或 latinStack(拼音/越南语)最前面。zhWeight=中文字重(手写等单字重字体由 Chromium 合成加粗)。build 写进 manifest.meta.fonts，渲染层 src/fonts.ts+Video.tsx 据此加载与套用。当前中文=Winter「你是冬夜的浪漫」手写体、加粗。",
@@ -214,7 +214,7 @@
       "id": "p1",
       "image": "videos/2026/07/03/shanjia-yuwu/images/p1.png",
       "audio": "videos/2026/07/03/shanjia-yuwu/audio/p1.mp3",
-      "durationMs": 4880,
+      "durationMs": 5984,
       "motion": "push-in",
       "imgScale": 0.7831286210892237,
       "captions": {
@@ -241,7 +241,7 @@
       "id": "p2",
       "image": "videos/2026/07/03/shanjia-yuwu/images/p2.png",
       "audio": "videos/2026/07/03/shanjia-yuwu/audio/p2.mp3",
-      "durationMs": 4016,
+      "durationMs": 4736,
       "motion": "pull-back",
       "transitionIn": "fade",
       "imgScale": 0.768,

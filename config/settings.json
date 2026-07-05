@@ -9,11 +9,12 @@
   "audio": {
     "engine": "volcano",
     "narrationLang": "zh",
-    "_speedComment": "全片配音语速倍率(火山 speed_ratio)。用户 2026-07-05 调为 1.2(先试 1.4 偏快，回调到 1.2)：比原 1.0 有节奏但不赶。配音变快→beat.durationMs 变短→画面变化自动跟着变快(见 build.mjs/Video.tsx，不用另调运镜)。改语速后须清掉已缓存的 audio/*.mp3 重合成(缓存只按路径命中，不认语速)。",
+    "_speedComment": "配音语速倍率(火山 speed_ratio)。用户 2026-07-05 调整：朗读古文拍(role=read-quote)用 readQuoteSpeed=1.0，后续讲解/场景/收尾用 speed=1.2。配音变快→beat.durationMs 变短→画面变化自动跟着变快(见 build.mjs/Video.tsx，不用另调运镜)。改语速后须清掉受影响的 audio/*.mp3 重合成(缓存只按路径命中，不认语速)。",
     "speed": 1.2,
+    "readQuoteSpeed": 1.0,
     "tailPaddingMs": 320,
-    "_bgmComment": "全片固定背景音乐(用户 2026-07-05 锁定:一首长期复用)。当前=真实古琴录音《阳关三叠》(文人雅乐,配孔孟/国学),从 Wikimedia Commons 下载(CC BY-SA 3.0,须署名,见同目录 CREDITS.md)。★禁止用任何 API/fal 生成音乐;要么下载开源真录音、要么本地合成(scripts/gen-bgm.py)。视频短(约28s)只播开头,渲染层低音量循环垫在旁白下。换曲只替换文件或改这里,不动渲染代码。",
-    "bgm": { "src": "library/audio/bgm/daoyin-lost-sounds-of-tao.mp3", "volume": 0.21 },
+    "_bgmComment": "全片固定背景音乐。用户 2026-07-05 指定使用最新上传 BGM：public/library/audio/bgm/peach_haven.mp3，音量 15%。★禁止用任何 API/fal 生成音乐;要么使用用户上传/开源真实录音、要么本地合成(scripts/gen-bgm.py)。视频短只播开头,渲染层低音量循环垫在旁白下。换曲只替换文件或改这里,不动渲染代码。",
+    "bgm": { "src": "library/audio/bgm/peach_haven.mp3", "volume": 0.15 },
     "_voicesComment": "每拍 script.json 的 voice 字段(角色名)映射到火山 voice_type。以下 4 个均已真机验证可用(2026-07-03)。备选见 _alternates(也都验证过);样本在 temp/voice-samples/。",
     "defaultVoice": "narrator",
     "voices": {

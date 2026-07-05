@@ -95,9 +95,12 @@ for (const beat of script.beats) {
   const audioPath = ensure(join(dir, "audio", `${beat.id}.mp3`));
   const voices = settings.audio.voices || {};
   const voiceType = voices[beat.voice] || voices[settings.audio.defaultVoice];
-  // 语速倍率全片统一（settings.audio.speed，用户 2026-07-05 锁定 1.4）；配音变快→时长变短→画面节奏自动跟随
-  const audio = await synth(beat.captions.zh, audioPath, { voice: voiceType, speed: settings.audio.speed ?? 1.0 });
-  console.log(`  audio: ${audio.cached ? "cached" : "synth"} ${audio.ms}ms  [${beat.voice || settings.audio.defaultVoice}]`);
+  // 语速按内容类型分流：朗读古文保持 1.0，其余讲解/场景/收尾用 1.2；时长驱动画面节奏自动跟随
+  const speed = beat.role === "read-quote"
+    ? (settings.audio.readQuoteSpeed ?? 1.0)
+    : (settings.audio.speed ?? 1.0);
+  const audio = await synth(beat.captions.zh, audioPath, { voice: voiceType, speed });
+  console.log(`  audio: ${audio.cached ? "cached" : "synth"} ${audio.ms}ms  [${beat.voice || settings.audio.defaultVoice}] speed=${speed}`);
 
   // 出图：目前每 beat 取首个 shot 出一张（多 shot 交叉切换为后续增强）
   const shot = beat.shots[0];

@@ -8,7 +8,7 @@
 ## 0. 输入 / 输出契约（2026-07-03 改：每日金句方向）
 - **输入**：**一句**古文/经典/哲理句（中文），如「温故而知新，可以为师矣。」。可选：`videoId`、`lang`（默认 `vi`）、指定哥哥还是妹妹朗读。原样存进 `input.md`（见 [[12-video-folder-spec]]）。
 - **不再是**：一整段现成旁白。旁白由我（Claude）按 [[00-overview]] 的固定内容结构**扩写**出来（孩子朗读金句 → 点破意思 → 场景演示 → 文化收尾，**统一旁白、无父母分角、无 CTA**），写进 `script.json`。
-- **输出**：`public/videos/<shard>/<id>/` 下 `成片.mp4` + 全部中间产物（`input.md`/`script.json`/audio/images/manifest，可追溯、可重渲染）。
+- **输出**：`public/videos/<shard>/<id>/` 下 `成片.mp4` + 全部中间产物（`input.md`/`script.json`/audio/images/manifest，可追溯、可重渲染）。`*.mp4` 一律写入 `.gitignore`，只本地生成/预览，禁止提交上传到 Git。
 - **不变量**：配音永远中文，**全片统一旁白「开朗姐姐」**（不做多角色分工，见 [[04-tts-captions]]）；字幕三行（拼音/中文/越南语意译）；竖屏 9:16；画风统一；人物按需出场；特效 ≤2/片、按需；**纯文化普及、禁止任何营销/广告（下载 CTA、软件推广、"一起学中文"等一律不要）**。
 
 ---
@@ -76,7 +76,7 @@
 - 翻车图（脸崩/多指/画风偏）→ review gate 一键换 seed 重抽（见 [[01-pipeline]]）。
 
 ### 第 5 步 · 配音 + 时间轴
-- 每个 beat 的中文 → 火山 TTS，**统一旁白开朗姐姐**（`voice=narrator`，见 [[04-tts-captions]]）→ `mp3` + `durationMs`。
+- 每个 beat 的中文 → 火山 TTS，**统一旁白开朗姐姐**（`voice=narrator`，见 [[04-tts-captions]]）→ `mp3` + `durationMs`。朗读古文拍 `role=read-quote` 语速 1.0；后续讲解/场景/收尾语速 1.2。
 - `beat.durationMs` = 该 beat 在片中的时长；多 shot 按 `weight` 切分这段时长。
 - beats 首尾相接：`start(p_n) = Σ durationMs(前面所有 beat)`。
 
