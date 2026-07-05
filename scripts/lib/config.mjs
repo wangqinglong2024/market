@@ -28,7 +28,11 @@ export function loadCharacters() {
       name: c.name,
       main: !!c.main,
       refPath: C("characters", c.id, c.ref),
+      // 戴书生方帽+汉服的样板图(可选)；仅朗读古文拍(read-quote)喂它，见 build.mjs
+      refHatPath: c.refHat ? C("characters", c.id, c.refHat) : null,
       canon: stripComments(readText(C("characters", c.id, c.canonical))),
+      // 朗读拍专用 canon(可选)：描述汉服+书生帽、不提日常衣服，避免 flux 画回日常装
+      canonHat: c.canonicalHat ? stripComments(readText(C("characters", c.id, c.canonicalHat))) : null,
     };
   }
   return map;
@@ -62,9 +66,10 @@ export function buildImagePrompt({ shotContent, charIds, prompts, characters }) 
 }
 
 // 单角色 flux-pro/kontext 用精简模板（长 prompt 含 negative 会触发 fal nsfw 黑图）
-export function buildFluxPrompt({ shotContent, charIds, prompts, characters }) {
+// useHat=true(朗读古文拍)时用 canonHat(汉服+书生帽、不提日常衣服)，避免 flux 画回粉裙/短裤
+export function buildFluxPrompt({ shotContent, charIds, prompts, characters, useHat = false }) {
   const canon = (charIds || [])
-    .map((id) => characters[id]?.canon)
+    .map((id) => (useHat && characters[id]?.canonHat) ? characters[id].canonHat : characters[id]?.canon)
     .filter(Boolean)
     .join(" ");
   const styleShort = "rough hand-drawn crayon outlines, warm crayon coloring, minimal cute cartoon faces, children's picture-book feel, on a clean solid PURE WHITE background (flat white, no paper texture, no cream/beige tint)";

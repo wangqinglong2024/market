@@ -25,6 +25,7 @@
 - ✅ **已接线（2026-07-03）**：`build.mjs` 按 `beat.voice` → `settings.audio.voices[...]` 传给火山 TTS（默认 `narrator`）。
 - 每拍中文旁白单独合成一个 `.mp3`，取**真实时长(ms)** → 驱动该拍停留与字幕时间。
 - 段尾加少量留白（`tailPaddingMs`），避免翻页过紧。
+- **★ 语速（2026-07-05 用户调整）**：全片统一倍率 `settings.audio.speed = 1.2`（先试 1.4 偏快，回调到 1.2：比原 1.0 有节奏但不赶）。火山 `speed_ratio` 参数，`build.mjs` 统一传入。**配音变快 → `beat.durationMs` 变短 → 画面/运镜节奏自动跟着变快**（时长是唯一节奏源，不用另调 motion）。⚠️ 改语速后要**删掉已缓存的 `audio/*.mp3` 重合成**——缓存只按输出路径命中，不认语速变化。`tailPaddingMs` 同步收到 320ms 配合更快节奏。
 - 全部 HTTP **走 curl + 代理 7897**（Node fetch 不走代理，见记忆 [[fal-use-curl-proxy]]）。凭据取 `api-key.txt`（豆包/火山 APP ID / Access Token）。
 
 ### script.json 里怎么写
@@ -48,7 +49,11 @@
 - 火山 TTS 是否返回**字/词级时间戳**：有 → 中文逐字高亮（卡拉OK跟读，教学价值高，尤其适合金句）；无 → 整句淡入淡出。见 [[06-open-questions]]。
 
 ## 背景音乐 / 音效
-- 轻柔国风/治愈 BGM（可商用/无版权源）。翻页"唰"音效配合转场。
+- **★ 固定 BGM（2026-07-05 用户锁定：一首长期复用，配孔孟/国学）**：
+  - **当前曲子**：`public/library/audio/bgm/guqin-yangguan-sandie.ogg` —— 真实古琴录音**《阳关三叠》**（文人雅乐，庄重儒雅，正合孔孟/国学气质），从 **Wikimedia Commons** 下载。**授权 CC BY-SA 3.0，须署名**（见同目录 `CREDITS.md`；SA 对商用是否波及有灰区，介意可换 CC0/公有领域录音或用本地合成）。视频短（约 28s）只播开头，无需真正循环。
+  - **★★ 禁止用任何 API/fal 生成音乐（用户 2026-07-05 明令）**：BGM 只能**①下载开源真实录音**（如 Wikimedia/CC0/公有领域，音色地道），或**②本地纯代码合成** `python3 scripts/gen-bgm.py`（numpy 合成禅意古琴+磬，固定种子可复现，产物 `guqin-loop.wav`，作备选）。**绝不调用 fal/任何 API 生成音乐**。（旧的 fal 文生乐脚本 `gen-bgm.mjs` 已删。）⚠️ Claude 听不到声音，纯合成盲调难到位——**优先选真实录音**。
+  - 接线：`config/settings.json → audio.bgm = { src, volume:0.16 }`；`build.mjs` 写进 `manifest.meta.bgm`；渲染层 `src/Video.tsx` 用 `<Audio loop volume>` **整片低音量循环**，垫在旁白之下。要换音乐只改 config 或替换文件，**不动脚本/代码**。
+- 翻页"唰"音效配合转场（待做，占位 `public/library/audio/sfx/`）。
 
 ## 关联
 [[00-overview]] · [[01-pipeline]] · [[03-remotion-animation]] · [[06-open-questions]] · [[12-video-folder-spec]]

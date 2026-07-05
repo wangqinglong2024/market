@@ -92,12 +92,18 @@ Demo 旧图三大毛病,已废:
 - ❌ **别搞傻背景**(用户明确点名):不堆室内桌椅家具(挤、丑)、不无脑套户外草地(傻)、不画四角透视线的"空盒子房间"(傻)。
 - 原则:背景**远比人物简单**,一两个小道具点到为止;宁可干净纯白,也别乱塞。道具**别高过人头、别低过人脚**(否则撑大尺寸归一化量到的高度,见 4.6)。
 
-## 4.7 ★★ 死命令：人是"现代小孩穿汉服",不是古代人/古代场景(用户 2026-07-03 锁定,每日金句方向)
+## 4.7 ★★ 死命令：人是"现代小孩穿汉服 + 戴古风小帽",不是古代人/古代场景(用户 2026-07-03 锁定,帽子 2026-07-05 加锁,每日金句方向)
 金句短片里朗读的孩子是**当代小孩打扮成汉服**,**不是生活在古代**。
 - ❌ 不许写 "ancient Chinese person / ancient times",不许画古代书房、矮几、旧竹简/卷轴那种**古代年代感**场景。
 - ✅ 写法:`a MODERN/present-day kid simply dressed up in a hanfu robe (a traditional costume worn for fun over everyday clothes; NOT an ancient person, NOT ancient times)`;道具用**翻开的书**而非旧卷轴;背景**简洁中性**(几笔松散铅笔线 + 大片留白),别做成古代屋子。
-- 空镜演示(如车马、舟)仍可是古典意象(那是金句比喻本身),但**人物一律现代小孩穿汉服**。
-- 落地:`script.json` 各朗读拍 `shot.content` 已按此改;规则同步进 `config/prompts/storyboard.md` 铁律。
+- **★ 汉服(全身长袍)+古代书生方帽(2026-07-05 用户锁定,帽型/袍型已明确)**:
+  - **★ 帽子只戴在开场朗读金句拍(`role=read-quote`)**:用户 2026-07-05 明令——**只有最开始念古文那(几)拍戴书生方帽**;其它穿汉服的拍(如收尾 payoff)**一律不戴帽、光头露发,只穿长袍**(`shot.content` 写 `bare-headed, NO hat`)。
+  - 下面两条只对**戴帽的朗读拍**生效,`shot.content` 必须写清两点：
+  - **全身长袍汉服**:`a FULL-LENGTH crossed-collar hanfu robe reaching down to the ankles that completely replaces the everyday clothes`——**点名盖住日常粉裙/T恤短裤**。⚠️ flux 单人易被定妆图(日常装)带偏画回日常衣服(实测 p2 第一版就画成了绿T恤蓝短裤),所以必须强调"长袍到脚踝、替换掉日常衣服"。
+  - **方顶书生帽**:`a flat-topped SQUARE black scholar's cap — like a graduation mortarboard / Chinese fāngjīn 方巾 scholar cap that pairs with hanfu, the top-scholar 'graduation' hat`。**方形平顶、像毕业帽/进士方巾**,男孩女孩都戴这一款(别画成圆帽/发冠/珠饰)。
+  - 定妆参考图**没帽子且是日常装**,帽子和长袍都靠 `shot.content` 描述补上(kontext/nano-pro 会据此加)。收尾拍若也穿汉服,同样戴、同样长袍。
+- 空镜演示(如车马、舟)仍可是古典意象(那是金句比喻本身),但**人物一律现代小孩穿汉服戴书生帽**。
+- 落地:`script.json` 各朗读/汉服拍 `shot.content` 已按此改;规则同步进 `config/prompts/storyboard.md` 铁律 9/14。
 
 ## 五、提示词模板(拼接:STYLE + CHAR/POSE + SCENE + LAYOUT + NOTEXT)
 

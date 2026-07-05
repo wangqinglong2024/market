@@ -165,6 +165,43 @@
       "captionRiseFrames": 14,
       "captionRisePx": 22
     },
+    "bgm": {
+      "src": "library/audio/bgm/daoyin-lost-sounds-of-tao.mp3",
+      "volume": 0.21
+    },
+    "fonts": {
+      "_comment": "★字幕字体配置化(用户 2026-07-05)：换字体只改这里、不用改代码。① 把 .ttf 放进 public/library/fonts/；② 在 files 里登记 {family,file}(可选 weight 区间)；③ 把该 family 放到 zhStack(中文)或 latinStack(拼音/越南语)最前面。zhWeight=中文字重(手写等单字重字体由 Chromium 合成加粗)。build 写进 manifest.meta.fonts，渲染层 src/fonts.ts+Video.tsx 据此加载与套用。当前中文=Winter「你是冬夜的浪漫」手写体、加粗。",
+      "files": [
+        {
+          "family": "Winter",
+          "file": "library/fonts/Winter.ttf"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        }
+      ],
+      "zhStack": [
+        "Winter",
+        "SimHei",
+        "Microsoft YaHei",
+        "PingFang SC",
+        "Hiragino Sans GB",
+        "sans-serif"
+      ],
+      "zhWeight": 700,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "sans-serif"
+      ]
+    },
     "captions": {
       "pinyinColor": "#a58e5c",
       "zhColor": "#20242b",
@@ -175,16 +212,20 @@
   "beats": [
     {
       "id": "p1",
-      "image": "videos/2026-07/shanjia-yuwu/images/p1.png",
-      "audio": "videos/2026-07/shanjia-yuwu/audio/p1.mp3",
-      "durationMs": 5008,
+      "image": "videos/2026/07/03/shanjia-yuwu/images/p1.png",
+      "audio": "videos/2026/07/03/shanjia-yuwu/audio/p1.mp3",
+      "durationMs": 4880,
       "motion": "push-in",
-      "imgScale": 0.8221897810218979,
+      "imgScale": 0.7831286210892237,
       "captions": {
-        "pinyin": "jiǎ yú mǎ zhě, fēi lì zú yě, ér zhì qiān lǐ;",
-        "zh": "假舆马者，非利足也，而致千里；",
-        "local": "Người mượn xe ngựa, chẳng phải chân khỏe, mà đi được ngàn dặm;",
+        "pinyin": "gǔ yǔ yǒu yún, jiǎ yú mǎ zhě, fēi lì zú yě, ér zhì qiān lǐ;",
+        "zh": "古语有云，假舆马者，非利足也，而致千里；",
+        "local": "Người xưa có câu: Người mượn xe ngựa, chẳng phải chân khỏe, mà đi được ngàn dặm;",
         "lines": [
+          {
+            "zh": "古语有云，",
+            "vi": "Người xưa có câu:"
+          },
           {
             "zh": "假舆马者，非利足也，",
             "vi": "Người mượn xe ngựa, chẳng phải chân khỏe,"
@@ -198,12 +239,12 @@
     },
     {
       "id": "p2",
-      "image": "videos/2026-07/shanjia-yuwu/images/p2.png",
-      "audio": "videos/2026-07/shanjia-yuwu/audio/p2.mp3",
-      "durationMs": 4960,
+      "image": "videos/2026/07/03/shanjia-yuwu/images/p2.png",
+      "audio": "videos/2026/07/03/shanjia-yuwu/audio/p2.mp3",
+      "durationMs": 4016,
       "motion": "pull-back",
       "transitionIn": "fade",
-      "imgScale": 0.7451378169790519,
+      "imgScale": 0.768,
       "captions": {
         "pinyin": "jiǎ zhōu jí zhě, fēi néng shuǐ yě, ér jué jiāng hé.",
         "zh": "假舟楫者，非能水也，而绝江河。",
@@ -222,9 +263,9 @@
     },
     {
       "id": "p3",
-      "image": "videos/2026-07/shanjia-yuwu/images/p3.png",
-      "audio": "videos/2026-07/shanjia-yuwu/audio/p3.mp3",
-      "durationMs": 5416,
+      "image": "videos/2026/07/03/shanjia-yuwu/images/p3.png",
+      "audio": "videos/2026/07/03/shanjia-yuwu/audio/p3.mp3",
+      "durationMs": 4544,
       "motion": "pan-right",
       "transitionIn": "slide-left",
       "captions": {
@@ -245,9 +286,9 @@
     },
     {
       "id": "p4",
-      "image": "videos/2026-07/shanjia-yuwu/images/p4.png",
-      "audio": "videos/2026-07/shanjia-yuwu/audio/p4.mp3",
-      "durationMs": 5320,
+      "image": "videos/2026/07/03/shanjia-yuwu/images/p4.png",
+      "audio": "videos/2026/07/03/shanjia-yuwu/audio/p4.mp3",
+      "durationMs": 4424,
       "motion": "pan-left",
       "transitionIn": "fade",
       "captions": {
@@ -268,9 +309,9 @@
     },
     {
       "id": "p5",
-      "image": "videos/2026-07/shanjia-yuwu/images/p5.png",
-      "audio": "videos/2026-07/shanjia-yuwu/audio/p5.mp3",
-      "durationMs": 6184,
+      "image": "videos/2026/07/03/shanjia-yuwu/images/p5.png",
+      "audio": "videos/2026/07/03/shanjia-yuwu/audio/p5.mp3",
+      "durationMs": 6632,
       "motion": "push-in",
       "transitionIn": "slide-up",
       "effects": [
@@ -280,10 +321,14 @@
       ],
       "imgScale": 0.7627990970654628,
       "captions": {
-        "pinyin": "zhēnzhèng lìhai de, bù shì tiānshēng běnlǐng dà, ér shì dǒngde jièzhù wàiwù.",
-        "zh": "真正厉害的，不是天生本领大，而是懂得借助外物。",
-        "local": "Người giỏi thật sự không phải sinh ra đã hơn người, mà là biết mượn sức bên ngoài.",
+        "pinyin": "zhè jù huà xiǎng gàosu wǒmen, zhēnzhèng lìhai de, bù shì tiānshēng běnlǐng dà, ér shì dǒngde jièzhù wàiwù.",
+        "zh": "这句话想告诉我们，真正厉害的，不是天生本领大，而是懂得借助外物。",
+        "local": "Câu này muốn nói với chúng ta rằng: người giỏi thật sự không phải sinh ra đã hơn người, mà là biết mượn sức bên ngoài.",
         "lines": [
+          {
+            "zh": "这句话想告诉我们，",
+            "vi": "Câu này muốn nói với chúng ta rằng:"
+          },
           {
             "zh": "真正厉害的，不是天生本领大，",
             "vi": "Người giỏi thật sự không phải sinh ra đã hơn người,"
@@ -297,12 +342,12 @@
     },
     {
       "id": "p6",
-      "image": "videos/2026-07/shanjia-yuwu/images/p6.png",
-      "audio": "videos/2026-07/shanjia-yuwu/audio/p6.mp3",
-      "durationMs": 4768,
+      "image": "videos/2026/07/03/shanjia-yuwu/images/p6.png",
+      "audio": "videos/2026/07/03/shanjia-yuwu/audio/p6.mp3",
+      "durationMs": 3896,
       "motion": "push-in",
       "transitionIn": "wipe",
-      "imgScale": 0.951887323943662,
+      "imgScale": 0.8999201065246338,
       "captions": {
         "pinyin": "zhè, jiù shì gǔrén shuō de shàn jiǎ yú wù de zhìhuì.",
         "zh": "这，就是古人说的「善假于物」的智慧。",

@@ -31,11 +31,13 @@ market/
 │   └── lib/config.mjs          读 settings/characters/prompts + 拼装出图 prompt
 │
 ├── public/
-│   ├── library/fonts/          Remotion 运行期字体（public 里唯一的全局资产）
-│   └── videos/<shard>/<id>/    ★ 单条视频全部产物（按月份分片，产物入 git）
-│       └── 2026-07/<id>/  ├─ input.md（原始需求）├─ script.json（转换脚本）
-│                          ├─ manifest.json  ├─ images/  ├─ audio/  （+ 成片.mp4）
-│                          详见 [[12-video-folder-spec]]
+│   ├── library/
+│   │   ├── fonts/              Remotion 运行期字体
+│   │   └── audio/bgm/          全片固定古风 BGM（guqin-loop.wav，2026-07-05 锁定，见 [[04-tts-captions]]）
+│   └── videos/<shard>/<id>/    ★ 单条视频全部产物（shard=年/月/日 YYYY/MM/DD，产物入 git）
+│       └── 2026/07/03/<id>/  ├─ input.md（原始需求）├─ script.json（转换脚本）
+│                             ├─ manifest.json  ├─ images/  ├─ audio/  ├─ cost/coast.md（出图成本日志）
+│                             （+ 成片.mp4）  详见 [[12-video-folder-spec]]
 │
 └── src/                        Remotion 渲染层（纯数据驱动，你不碰）
 ```
@@ -46,7 +48,9 @@ market/
 - **角色管理**：加角色 = 建 `config/characters/<id>/`（放 `ref-front.png` + 写 `canonical.md`）+ 在 `_registry.json` 加一行。脚本自动读取，无需改代码。
 - **提示词可调（你的“Dify”）**：每步提示词各是一个 `config/prompts/*.md`，脚本运行时读文件拼接。默认我写，你改哪个文件下次跑就生效。出图用确定性模板占位符拼装 → 可复现。
 - **运镜可配置**：`config/motion.json` 定义预设（push-in/pan-left/pan-right/climb-up/still）与按句意选取规则；build 时把选中预设解析进 manifest，Remotion 只按名播放。
-- **月份分片**：产物路径 `public/videos/<YYYY-MM>/<id>/`，避免单目录几千项。
+- **年/月/日分片（2026-07-05 用户改）**：产物路径 `public/videos/<YYYY>/<MM>/<DD>/<id>/`（原按月 `<YYYY-MM>` 改成年/月/日三级目录），避免单目录几千项、按天归档更清晰。`catalog.json` 每条的 `shard` 字段即这段路径（如 `2026/07/03`），代码里只当路径片段拼接，故改层级**无需动脚本**。
+- **出图成本日志（2026-07-05 用户加）**：每条视频 `<id>/cost/coast.md`，`build.mjs` 每次**真实调用**出图模型追加一行 `时间(到秒) | 拍 | 模型 | 花费`（缓存命中不计）。
+- **★ 字幕字体配置化（2026-07-05 用户加）**：字体不写死在代码里，全在 `config/settings.json → fonts`。换字体三步、**不改代码**：① `.ttf` 放 `public/library/fonts/`；② `fonts.files` 登记 `{family,file}`（可选 `weight` 区间）；③ 把该 family 放到 `fonts.zhStack`(中文) 或 `latinStack`(拼音/越南语) 最前面。`fonts.zhWeight` 控中文字重（手写等单字重字体由 Chromium 合成加粗）。`build.mjs` 写进 `manifest.meta.fonts`，`src/fonts.ts`(loadFonts/stackCss/DEFAULT_FONTS) + `Video.tsx`(FontLoader) 据此加载与套用。当前中文=**Winter**「你是冬夜的浪漫」手写体·加粗，拼音/越南语=Nunito。
 - **产物入 git**：图/音/成片都进版本库，方便直接分发（代价：仓库会变大）。
 - **总账**：`catalog.json` 索引所有视频；每条可加 `state.json` 记录每步状态，支持断点续跑、只重烧改动页。
 

@@ -19,17 +19,21 @@
       "motion": "push-in",
       "shots": [
         {
-          "content": "A present-day chubby little girl with two pigtails, a MODERN child dressed up in a pale-blue hanfu robe (NOT her usual pink dress, NOT an ancient person, NOT ancient times), standing and holding an open book in both hands, reciting a classic aloud, solemn and sweet. Background designed for a reading scene but kept MINIMAL: just ONE low wooden desk beside her with a rolled paper scroll and a writing brush on it, drawn as a few loose light pencil lines, no other furniture — everything sits on a clean solid PURE WHITE background with lots of empty white space, far simpler than the girl.",
-          "contentZh": "当代胖女孩（双马尾，套穿淡蓝汉服，不是粉裙/不是古人/不是古代），站着双手捧翻开的书朗声诵读经典，庄重可爱。为诵读场景设计但极简的背景：身旁只有一张矮木桌，上面一卷纸卷和一支毛笔，几笔很淡的铅笔线，没有别的家具——一切都在纯白底上，大量白色留白，远比人物简单。",
+          "content": "A present-day chubby little girl with two pigtails, wearing the SAME outfit as the reference image: a pale-blue full-length crossed-collar hanfu robe reaching the ankles and a flat-topped SQUARE black graduation-style scholar cap (Chinese fāngjīn) on her head. She stands holding an open book in both hands, reciting a classic aloud, solemn and sweet. A minimal reading scene: just one low wooden desk beside her with a rolled paper scroll and a writing brush, drawn as a few loose light pencil lines, on a clean solid PURE WHITE background with lots of empty white space, far simpler than the girl.",
+          "contentZh": "当代胖女孩（双马尾），穿着与参考样板图一模一样的装扮：及踝的交领淡蓝长袍汉服 + 头戴方顶黑色毕业式书生帽（进士方巾）。站着双手捧翻开的书朗声诵读经典，庄重可爱。极简诵读场景：身旁一张矮木桌，一卷纸卷加一支毛笔，几笔很淡的铅笔线，纯白底、大量留白，远比人物简单。",
           "model": "flux",
           "weight": 1
         }
       ],
       "captions": {
-        "zh": "假舆马者，非利足也，而致千里；",
-        "pinyin": "jiǎ yú mǎ zhě, fēi lì zú yě, ér zhì qiān lǐ;",
-        "local": "Người mượn xe ngựa, chẳng phải chân khỏe, mà đi được ngàn dặm;",
+        "zh": "古语有云，假舆马者，非利足也，而致千里；",
+        "pinyin": "gǔ yǔ yǒu yún, jiǎ yú mǎ zhě, fēi lì zú yě, ér zhì qiān lǐ;",
+        "local": "Người xưa có câu: Người mượn xe ngựa, chẳng phải chân khỏe, mà đi được ngàn dặm;",
         "lines": [
+          {
+            "zh": "古语有云，",
+            "vi": "Người xưa có câu:"
+          },
           {
             "zh": "假舆马者，非利足也，",
             "vi": "Người mượn xe ngựa, chẳng phải chân khỏe,"
@@ -57,8 +61,8 @@
       "transitionIn": "fade",
       "shots": [
         {
-          "content": "A present-day chubby little boy with short golden-brown hair, a MODERN child dressed up in a pale-green hanfu robe (NOT his usual t-shirt and shorts, NOT an ancient person, NOT ancient times), standing and holding an open book in both hands, reciting a classic aloud, solemn and earnest. Background designed for a reading scene but kept MINIMAL: just ONE low wooden desk beside him with a rolled paper scroll and a writing brush on it, drawn as a few loose light pencil lines, no other furniture — everything sits on a clean solid PURE WHITE background with lots of empty white space, far simpler than the boy.",
-          "contentZh": "当代胖男孩（金棕短发，套穿淡绿汉服，不是短袖短裤/不是古人/不是古代），站着双手捧翻开的书朗声诵读经典，庄重认真。为诵读场景设计但极简的背景：身旁只有一张矮木桌，上面一卷纸卷和一支毛笔，几笔很淡的铅笔线，没有别的家具——一切都在纯白底上，大量白色留白，远比人物简单。",
+          "content": "A present-day chubby little boy with short golden-brown hair, wearing the SAME outfit as the reference image: a pale-green full-length crossed-collar hanfu robe reaching the ankles and a flat-topped SQUARE black graduation-style scholar cap (Chinese fāngjīn) on his head. He stands holding an open book in both hands, reciting a classic aloud, solemn and earnest. A minimal reading scene: just one low wooden desk beside him with a rolled paper scroll and a writing brush, drawn as a few loose light pencil lines, on a clean solid PURE WHITE background with lots of empty white space, far simpler than the boy.",
+          "contentZh": "当代胖男孩（金棕短发），穿着与参考样板图一模一样的装扮：及踝的交领淡绿长袍汉服 + 头戴方顶黑色毕业式书生帽（进士方巾）。站着双手捧翻开的书朗声诵读经典，庄重认真。极简诵读场景：身旁一张矮木桌，一卷纸卷加一支毛笔，几笔很淡的铅笔线，纯白底、大量留白，远比人物简单。",
           "model": "flux",
           "weight": 1
         }
@@ -177,10 +181,14 @@
         }
       ],
       "captions": {
-        "zh": "真正厉害的，不是天生本领大，而是懂得借助外物。",
-        "pinyin": "zhēnzhèng lìhai de, bù shì tiānshēng běnlǐng dà, ér shì dǒngde jièzhù wàiwù.",
-        "local": "Người giỏi thật sự không phải sinh ra đã hơn người, mà là biết mượn sức bên ngoài.",
+        "zh": "这句话想告诉我们，真正厉害的，不是天生本领大，而是懂得借助外物。",
+        "pinyin": "zhè jù huà xiǎng gàosu wǒmen, zhēnzhèng lìhai de, bù shì tiānshēng běnlǐng dà, ér shì dǒngde jièzhù wàiwù.",
+        "local": "Câu này muốn nói với chúng ta rằng: người giỏi thật sự không phải sinh ra đã hơn người, mà là biết mượn sức bên ngoài.",
         "lines": [
+          {
+            "zh": "这句话想告诉我们，",
+            "vi": "Câu này muốn nói với chúng ta rằng:"
+          },
           {
             "zh": "真正厉害的，不是天生本领大，",
             "vi": "Người giỏi thật sự không phải sinh ra đã hơn người,"
@@ -209,8 +217,8 @@
       "transitionIn": "wipe",
       "shots": [
         {
-          "content": "The chubby little girl with two pigtails in a pale-blue ancient hanfu robe and the chubby little boy with short golden-brown hair in a pale-green ancient hanfu robe standing together, both smiling warmly with a look of gentle understanding; a very minimal study scene, only a few loose pencil lines, mostly bare warm paper, soft light.",
-          "contentZh": "扎羊角辫的胖女孩穿淡蓝古装、金棕短发的胖男孩穿淡绿古装，两人并肩站着，都带着领悟后的温暖微笑，温柔可爱；极简书房，几笔松散铅笔线，大片留白暖纸，柔光。",
+          "content": "The chubby little girl with two pigtails in a pale-blue hanfu robe and the chubby little boy with short golden-brown hair in a pale-green hanfu robe, BARE-HEADED with NO hat (no cap, no scholar hat), standing together, both smiling warmly with a look of gentle understanding; a very minimal study scene, only a few loose pencil lines, mostly bare white space, soft light, on a clean solid PURE WHITE background.",
+          "contentZh": "扎羊角辫的胖女孩穿淡蓝汉服、金棕短发的胖男孩穿淡绿汉服，两人都不戴帽子（光头露发，不戴书生帽），并肩站着，都带着领悟后的温暖微笑，温柔可爱；极简书房，几笔松散铅笔线，大片纯白留白，柔光。",
           "model": "nano-pro",
           "weight": 1
         }

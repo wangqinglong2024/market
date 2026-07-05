@@ -1,8 +1,8 @@
 {
-  "_comment": "固定主角色清单。新增角色=在此加一条 + 建同名文件夹放 model-sheet.png 和 canonical.md。main=true 的角色出现在画面时走参考图条件生成。ref 指向该角色定妆图(单张,喂给出图模型当参考)。",
+  "_comment": "固定主角色清单。新增角色=在此加一条 + 建同名文件夹放 model-sheet.png 和 canonical.md。main=true 的角色出现在画面时走参考图条件生成。ref 指向该角色日常定妆图(单张,喂给出图模型当参考)。refHat(可选)=戴书生方帽+汉服的定妆样板(nano-pro 生成的 config 模板,见 scripts/gen-hat-refs.mjs);仅在朗读古文拍(role=read-quote)喂它,其它拍喂日常 ref。日常出图一律 flux;banana 只在生成 refHat 样板时用一次(用户 2026-07-05 锁定)。",
   "characters": [
-    { "id": "boy",  "name": "哥哥", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
-    { "id": "girl", "name": "妹妹", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "boy",  "name": "哥哥", "main": true, "ref": "model-sheet.png", "refHat": "model-sheet-hat.png", "canonical": "canonical.md", "canonicalHat": "canonical-hat.md" },
+    { "id": "girl", "name": "妹妹", "main": true, "ref": "model-sheet.png", "refHat": "model-sheet-hat.png", "canonical": "canonical.md", "canonicalHat": "canonical-hat.md" },
     { "id": "dad",  "name": "爸爸", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
     { "id": "mom",  "name": "妈妈", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
     { "id": "dog",  "name": "狗狗", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" }

@@ -1,35 +1,35 @@
 {
-  "_comment": "视频总账。每条视频一条记录，扛上千条时的索引与状态。id 建议 YYMMDD-slug；产物在 public/videos/<shard>/<id>/。",
+  "_comment": "视频总账。每条视频一条记录，扛上千条时的索引与状态。id 建议 slug；产物在 public/videos/<shard>/<id>/，其中 shard=年/月/日(YYYY/MM/DD，2026-07-05 用户改：原按月分片改为年月日三级)。",
   "videos": [
     {
       "id": "shanjia-yuwu",
       "title": "假舆马者…善假于物 · 善于借助外物",
-      "shard": "2026-07",
+      "shard": "2026/07/03",
       "lang": "vi",
       "status": "built",
       "createdAt": "2026-07-03",
       "beats": 6,
-      "manifest": "public/videos/2026-07/shanjia-yuwu/manifest.json"
+      "manifest": "public/videos/2026/07/03/shanjia-yuwu/manifest.json"
     },
     {
       "id": "cuncao-chunhui",
       "title": "谁言寸草心，报得三春晖 · 母爱与感恩",
-      "shard": "2026-07",
+      "shard": "2026/07/03",
       "lang": "vi",
       "status": "built",
       "createdAt": "2026-07-03",
       "beats": 7,
-      "manifest": "public/videos/2026-07/cuncao-chunhui/manifest.json"
+      "manifest": "public/videos/2026/07/03/cuncao-chunhui/manifest.json"
     },
     {
       "id": "demo",
       "title": "妈妈生病了 · 家人的爱",
-      "shard": "2026-07",
+      "shard": "2026/07/02",
       "lang": "vi",
       "status": "built",
       "createdAt": "2026-07-02",
       "beats": 7,
-      "manifest": "public/videos/2026-07/demo/manifest.json"
+      "manifest": "public/videos/2026/07/02/demo/manifest.json"
     }
   ]
 }

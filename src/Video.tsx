@@ -15,9 +15,9 @@ import { TransitionSeries, linearTiming, type TransitionPresentation } from "@re
 import { fade } from "@remotion/transitions/fade";
 import { slide } from "@remotion/transitions/slide";
 import { wipe } from "@remotion/transitions/wipe";
-import { useMemo, useRef, useState, useLayoutEffect } from "react";
+import { useMemo, useRef, useState, useLayoutEffect, useEffect } from "react";
 import { pinyin } from "pinyin-pro";
-import { FONT_LATIN, FONT_ZH } from "./fonts";
+import { DEFAULT_FONTS, stackCss, loadFonts, type FontsMeta } from "./fonts";
 // ─── 特效库（已精简为固定 4 个，用户 2026-07-03 锁定）─────────────────────────
 import { ComicPops } from "./fx/emotion/ComicPops";
 import { EmojiRain } from "./fx/emotion/EmojiRain";
@@ -156,6 +156,10 @@ type Manifest = {
     motionPresets?: Record<string, Motion>;
     pageTurn?: { fadeFrames: number; captionRiseFrames: number; captionRisePx: number };
     captions?: { pinyinColor: string; zhColor: string; localColor: string; bgColor: string };
+    // 全片固定古风背景音乐（用户 2026-07-05 锁定）：整片低音量循环，盖在旁白之下
+    bgm?: { src: string; volume?: number };
+    // 字幕字体配置（用户 2026-07-05）：换字体只改 config，见 src/fonts.ts
+    fonts?: FontsMeta;
   };
   beats: Beat[];
 };
@@ -216,14 +220,17 @@ const FitLine: React.FC<{ maxWidth: number; depKey: string; children: React.Reac
   );
 };
 
-const RubyRow: React.FC<{ zh: string; pinyinColor: string; zhColor: string }> = ({ zh, pinyinColor, zhColor }) => {
+const RubyRow: React.FC<{
+  zh: string; pinyinColor: string; zhColor: string;
+  zhFamily: string; latinFamily: string; zhWeight: number;
+}> = ({ zh, pinyinColor, zhColor, zhFamily, latinFamily, zhWeight }) => {
   const pairs = useMemo(() => toRuby(zh), [zh]);
   return (
     <>
       {pairs.map((p, idx) => (
         <span key={idx} style={{ display: "inline-flex", flexDirection: "column", alignItems: "center" }}>
-          <span style={{ fontFamily: FONT_LATIN, fontSize: 34, lineHeight: "38px", fontWeight: 800, color: pinyinColor, height: 38 }}>{p.py}</span>
-          <span style={{ fontFamily: FONT_ZH, fontSize: 67, lineHeight: "77px", color: zhColor, whiteSpace: "pre" }}>{p.c === " " ? " " : p.c}</span>
+          <span style={{ fontFamily: latinFamily, fontSize: 34, lineHeight: "38px", fontWeight: 800, color: pinyinColor, height: 38 }}>{p.py}</span>
+          <span style={{ fontFamily: zhFamily, fontSize: 67, lineHeight: "77px", fontWeight: zhWeight, color: zhColor, whiteSpace: "pre" }}>{p.c === " " ? " " : p.c}</span>
         </span>
       ))}
     </>
@@ -260,6 +267,11 @@ const Scene: React.FC<{ beat: Beat; meta: Manifest["meta"] }> = ({ beat, meta })
 
   const preset = (beat.motion && meta.motionPresets?.[beat.motion]) || DEFAULT_MOTION;
   const cap = { ...DEFAULT_CAP, ...meta.captions };
+  // 字体来自 config（manifest.meta.fonts），缺项用默认兜底：中文用 zhStack(可加粗)，拼音/越南语用 latinStack
+  const fontCfg = { ...DEFAULT_FONTS, ...(meta.fonts || {}) };
+  const zhFamily = stackCss(fontCfg.zhStack);
+  const latinFamily = stackCss(fontCfg.latinStack);
+  const zhWeight = fontCfg.zhWeight ?? 700;
   const pageTurn = { fadeFrames: 10, captionRiseFrames: 14, captionRisePx: 22, ...meta.pageTurn };
   // 1:1 方图合成到白底 9:16：上留白 2/16 + 方图 9/16 + 字幕带 3/16 + 下留白 2/16（用户 2026-07-03 锁定）
   const imgSize = meta.width;                       // 1:1，满宽正方（= 9/16 高）
@@ -330,11 +342,11 @@ const Scene: React.FC<{ beat: Beat; meta: Manifest["meta"] }> = ({ beat, meta })
             style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}
           >
             <FitLine maxWidth={maxW} depKey={`py-${beat.id}-${i}`}>
-              <RubyRow zh={p.zh} pinyinColor={cap.pinyinColor} zhColor={cap.zhColor} />
+              <RubyRow zh={p.zh} pinyinColor={cap.pinyinColor} zhColor={cap.zhColor} zhFamily={zhFamily} latinFamily={latinFamily} zhWeight={zhWeight} />
             </FitLine>
             {p.vi ? (
               <FitLine maxWidth={maxW} depKey={`vi-${beat.id}-${i}`}>
-                <span style={{ fontFamily: FONT_LATIN, fontSize: 50, lineHeight: 1.1, color: cap.localColor, fontWeight: 800 }}>
+                <span style={{ fontFamily: latinFamily, fontSize: 50, lineHeight: 1.1, color: cap.localColor, fontWeight: 800 }}>
                   {p.vi}
                 </span>
               </FitLine>
@@ -356,6 +368,15 @@ const presentationFor = (name?: Beat["transitionIn"]): TransitionPresentation<an
     case "wipe":       return wipe({ direction: "from-left" });
     default:           return fade();
   }
+};
+
+// 按 manifest.meta.fonts 幂等加载字体（含用户在 config 换的新字体）；渲染前用 delayRender 等字体就绪
+const FontLoader: React.FC<{ fonts?: FontsMeta }> = ({ fonts }) => {
+  const [h] = useState(() => delayRender("manifest-fonts"));
+  useEffect(() => {
+    loadFonts(fonts ?? {}).finally(() => continueRender(h));
+  }, [h, fonts]);
+  return null;
 };
 
 export const Video: React.FC<VideoProps> = ({ manifest }) => {
@@ -382,9 +403,14 @@ export const Video: React.FC<VideoProps> = ({ manifest }) => {
     );
   });
 
+  const bgm = manifest.meta.bgm;
+
   return (
     <AbsoluteFill style={{ backgroundColor: bg }}>
+      <FontLoader fonts={manifest.meta.fonts} />
       <TransitionSeries>{children}</TransitionSeries>
+      {/* 全片固定古风背景音乐：低音量循环，垫在旁白之下（用户 2026-07-05 锁定） */}
+      {bgm?.src ? <Audio src={staticFile(bgm.src)} volume={bgm.volume ?? 0.16} loop /> : null}
     </AbsoluteFill>
   );
 };
