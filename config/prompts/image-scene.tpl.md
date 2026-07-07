@@ -9,4 +9,4 @@ Keep ONLY the ART STYLE of the reference image — rough grainy hand-drawn black
 
 {shot}
 
-ABSOLUTELY NO people, NO child, NO characters, NO figures — empty scene only. Square 1:1 composition on a clean solid PURE WHITE background (flat white #ffffff, no paper texture, no cream tint) with lots of empty white space. No text, no watermark.
+ABSOLUTELY NO people, NO child, NO characters, NO figures — empty scene only. LANDSCAPE 3:2 composition (wider than tall) on a clean solid PURE WHITE background (flat white #ffffff, no paper texture, no cream tint) with lots of empty white space. No text, no watermark.

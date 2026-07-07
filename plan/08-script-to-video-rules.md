@@ -70,6 +70,7 @@
 
 ### 第 4 步 · 出图（按角色数路由 + 缓存，见 [[05-cost-and-models]]、[[10-art-style-locked]]）
 - **0 人（空镜/物）→ `flux`**（`fal-ai/flux-pro/kontext`）：喂**风格锚图**只借画风、绝不加人（`image-scene.tpl.md`）。**不是纯文生图**（无锚会漂移/乱加人）。
+- **★ 古代典故重演（`beat.refMode="style"`，2026-07-07）→ `flux`**：喂风格锚图借画风，人物是典故里的**古人**、按 shot 描述画（不用定妆、不保 IP），**文案说几个人就画几个人**（非 IP 多人也 flux）。模板 `image-story.tpl.md`，见 [[10-art-style-locked]] 4.10。
 - **1 人（单角色）→ `flux`**（`fal-ai/flux-pro/kontext`）：喂该角色 1 张定妆图（`image-flux.tpl.md`）。
 - **≥2 人（多角色同框）→ `nano-pro`**（`fal-ai/nano-banana-pro/edit`）：喂多张定妆图。
 - 🚫 **严禁 `nano-banana` 文生图、`flux/dev`**；`shot.model` 只有 `flux`/`nano-pro`，`gen-image.mjs` 强制校验与 `characters` 数一致，不符报错。

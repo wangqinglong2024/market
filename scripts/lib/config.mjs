@@ -43,6 +43,7 @@ export function loadPrompts() {
     imageTpl: readText(C("prompts", "image.tpl.md")),
     imageFluxTpl: readText(C("prompts", "image-flux.tpl.md")),
     imageSceneTpl: readText(C("prompts", "image-scene.tpl.md")),
+    imageStoryTpl: readText(C("prompts", "image-story.tpl.md")),
     style: stripComments(readText(C("prompts", "style.md"))),
     composition: stripComments(readText(C("prompts", "composition.md"))),
     negative: stripComments(readText(C("prompts", "negative.md"))),
@@ -67,8 +68,9 @@ export function buildImagePrompt({ shotContent, charIds, prompts, characters }) 
 
 // 单角色 flux-pro/kontext 用精简模板（长 prompt 含 negative 会触发 fal nsfw 黑图）
 // useHat=true(朗读古文拍)时用 canonHat(汉服+书生帽、不提日常衣服)，避免 flux 画回粉裙/短裤
-export function buildFluxPrompt({ shotContent, charIds, prompts, characters, useHat = false }) {
-  const canon = (charIds || [])
+// canonOverride：该拍换装（如故事重演里成人穿长袍）时整段替换 canon，写法沿用「长袍替换日常衣服」经验
+export function buildFluxPrompt({ shotContent, charIds, prompts, characters, useHat = false, canonOverride = null }) {
+  const canon = canonOverride || (charIds || [])
     .map((id) => (useHat && characters[id]?.canonHat) ? characters[id].canonHat : characters[id]?.canon)
     .filter(Boolean)
     .join(" ");
@@ -82,6 +84,12 @@ export function buildFluxPrompt({ shotContent, charIds, prompts, characters, use
 // 空镜(无人物)：flux-pro/kontext 喂风格锚图，只借画风、不要人。不拼 negative/canon。
 export function buildScenePrompt({ shotContent, prompts }) {
   return stripComments(prompts.imageSceneTpl).replace("{shot}", shotContent);
+}
+
+// ★ 古代典故故事重演（2026-07-07，plan/10 4.10）：喂风格锚图只借画风，
+// 人物是典故里的古人、按 shot 描述画（不用定妆、不保 IP），几个人就画几个人。
+export function buildStoryPrompt({ shotContent, prompts }) {
+  return stripComments(prompts.imageStoryTpl).replace("{shot}", shotContent);
 }
 
 // 按句意选运镜预设：beat.motion 优先，否则按 motion.json 的关键词规则命中，默认 default
