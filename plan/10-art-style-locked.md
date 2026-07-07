@@ -25,11 +25,11 @@
 - **肤色:白皙(fair light skin,不要小麦色)** ← 用户 2026-07-02 明确要求。
 - **合规**:妈妈/女儿/儿子必须胖、爸爸正常;**所有人穿戴整齐,不得露肚/露肤**。
 
-## 三、版式(9:16 竖屏,短视频安全区)
+## 三、版式(3:4 竖屏,2026-07-07 改版,取代旧 9:16)
 
-- 顶留白 = 底留白(平台 UI 遮挡安全区)。
-- 人物在**中上部**;人物**正下方留一大块空**(放字幕带:拼音 / 中文 / 越南文,3 行**不换行**,见 [[03-remotion-animation]])。
-- 左右适当留白。**出图不写任何文字**(字幕后期叠)。
+- 画幅 **3:4(1080×1440)**;出图 **3:2 横图**,渲染层合成到 3:4 **上半区**,**下半区放字幕**(拼音/中文/越南文,见 [[03-remotion-animation]])。
+- 横图内:主体**居中**,四周留白呼吸感;**不需要**再给字幕留下方空(字幕在图外的下半区)。
+- **出图不写任何文字**(字幕后期叠)。
 
 ## 四、出图模型 & 调用(关键,见 [[05-cost-and-models]])
 
@@ -45,7 +45,7 @@
 
 - 🚫 **硬规矩(用户 2026-07-02 锁定)**:**画面里只有单个人物时,禁止使用 nano-banana(pro)——一律走 flux `fal-ai/flux-pro/kontext`。** nano-banana-pro **只**允许在**多角色同框**时用。理由:实测单角色下 flux kontext 更还原定妆图、背景更干净、便宜近 4 倍;单角色即使 $0.04 出得不理想,也**在 flux 内重抽/调提示词**,不许升 nano。
 - **新角色/纯风格**(如首次画 dog,画面就它一个)仍属单角色 → 走 flux;确需多张风格锚才走 pro。
-- **链路**:一律 **curl + 代理 `http://127.0.0.1:7897`**(Node fetch 直连会超时,见记忆 [[fal-use-curl-proxy]])。Key 取 `api-key.txt` 第 2 行。参数含 `aspect_ratio:"9:16"`(定妆用 `3:4`)、`num_images:1`、`output_format:"png"`。
+- **链路**:一律 **curl + 代理 `http://127.0.0.1:7897`**(Node fetch 直连会超时,见记忆 [[fal-use-curl-proxy]])。Key 取 `api-key.txt` 第 2 行。参数含 `aspect_ratio:"3:2"`(2026-07-07 改版,场景/单人/多人出图一律横图;定妆仍用 `3:4`)、`num_images:1`、`output_format:"png"`。
 - ⚠️ **坑**:node 读中文文件名在 .sh 里会 ENOENT → 参考图用 ASCII 名(已放 `config/style/refs/`)。
 
 ## 4.4 ★★ 死命令：提示词里绝对不许出现"框/字幕/底部留白"字眼(用户 2026-07-03 锁定)
@@ -67,7 +67,7 @@ Demo 旧图三大毛病,已废:
 - 背景**必须比人物简单得多**,不得整块painted/铺满细节。
 - **人物**照常按治愈手绘风上色、当画面唯一主体焦点。
 - 场景要"像人物一样简洁":够点明地点即可,克制。
-- 依旧遵守版式:人物中上、下方一大块留白给字幕。
+- 依旧遵守版式:横图主体居中、四周留白(字幕在渲染层下半区,出图不用管,见 三)。
 
 > 已验证:该规矩下 `flux-pro/kontext`($0.04)出图最贴需求(见 `temp/compare/p3-flux.png`)。
 
@@ -77,8 +77,8 @@ Demo 旧图三大毛病,已废:
 - ✅ **真正的机制 = 出图后用 sharp 量+缩(尺寸归一化，确定性、完全一致)**:
   - 出图**一律纯白底**(见 4.8),`build.mjs` 用 `sharp` 把图转 raw 像素,扫出**非白内容的纵向高度占比**(=人物身高占画面比)。
   - 算 `imgScale = charTargetHeight / 实测占比`(`settings.image.charTargetHeight` 默认 **0.66**),写进 manifest。含人物拍(`charIds.length>=1`,含 p6)都归一化到同一目标占比→**所有人物一样大**;空镜(0 人)不缩。
-  - `Video.tsx` 把方图 `scale` 乘 `imgScale`,四周露纯白画布(`bgColor #ffffff`)、无缝。
-  - **调统一尺寸只改 `config/settings.json` → `image.charTargetHeight` 一个数**。
+  - `Video.tsx` 把出图 `scale` 乘 `imgScale`,四周露纯白画布(`bgColor #ffffff`)、无缝。
+  - **调统一尺寸只改 `config/settings.json` → `image.charTargetHeight` 一个数**。⚠️ 2026-07-07 改 3:2 横图后,旧值 0.66 是按 1:1 方图标定的,**第一条新视频要重新标定**。
 - 前提是**白底**:白底才能干净地量出人物轮廓;所以人物拍背景道具别高过人头/低过人脚(否则撑大量到的高度)。
 
 ## 4.8 ★★ 死命令：出图一律纯白底(用户 2026-07-03 锁定)
@@ -136,15 +136,15 @@ Keep the EXACT same character from the reference (same face, hair, clothing, chu
 and the same {STYLE} {CHAR/POSE} {SCENE} {LAYOUT} {NOTEXT}
 ```
 - `{CHAR/POSE}` = 该角色一句话 + 动作,如:`The chubby little girl in a pink sleeveless dress with two small pigtails, standing and speaking sweetly with her little hands together, adorable and proud.`
-- 请求体:`image_url`=该角色 model-sheet 的 base64 data URI;`aspect_ratio:"9:16"`、`num_images:1`、`output_format:"png"`。
+- 请求体:`image_url`=该角色 model-sheet 的 base64 data URI;`aspect_ratio:"3:2"`、`num_images:1`、`output_format:"png"`。
 - 可复现脚本模板:见根 `temp/gen-demo.sh`(单角色 `kontext()`)与本会话 `temp/compare/` 脚本。
 
-**LAYOUT(版式,固定)**
+**LAYOUT(版式,固定 —— 2026-07-07 改 3:2 横图)**
 ```
-Vertical 9:16 frame: subject in the UPPER-MIDDLE, EQUAL empty margins top and bottom,
-a LARGE clean EMPTY area BELOW the subject (keep empty for subtitles), empty left/right
-margins, plain light paper background, lots of breathing room.
+Landscape 3:2 frame: subject in the CENTER, generous empty margins on all sides,
+clean solid PURE WHITE background, lots of breathing room.
 ```
+> 旧 9:16 版 LAYOUT(subject upper-middle + empty area below for subtitles)已废——字幕移到画面外下半区,不再需要图内留字幕空;且 "keep empty for subtitles" 本就踩 4.4 红线。
 **NOTEXT(固定)**：`Absolutely NO text, NO letters, NO words, NO watermark, NO logo.`
 
 ## 六、复现命令(curl + 代理)
@@ -154,14 +154,14 @@ KEY=$(sed -n '2p' api-key.txt | tr -d '\r'); PROXY=http://127.0.0.1:7897
 # 多角色: nano-banana-pro/edit, 喂多张 model-sheet
 node -e 'const fs=require("fs");const u=p=>"data:image/png;base64,"+fs.readFileSync(p).toString("base64");
   const refs=["dad","mom","boy","girl"].map(d=>u("config/characters/"+d+"/model-sheet.png"));
-  fs.writeFileSync("temp/req.json",JSON.stringify({prompt:process.argv[1],image_urls:refs,aspect_ratio:"9:16",num_images:1,output_format:"png"}))' "$PROMPT"
+  fs.writeFileSync("temp/req.json",JSON.stringify({prompt:process.argv[1],image_urls:refs,aspect_ratio:"3:2",num_images:1,output_format:"png"}))' "$PROMPT"
 curl -s -m 180 -x $PROXY -X POST "https://fal.run/fal-ai/nano-banana-pro/edit" \
   -H "Authorization: Key $KEY" -H "Content-Type: application/json" --data @temp/req.json -o temp/resp.json
 URL=$(node -e "console.log(require('./temp/resp.json')?.images?.[0]?.url||'')"); curl -s -m 90 -x $PROXY "$URL" -o out.png
 
 # 单角色: flux-pro/kontext, 喂单张 model-sheet
 node -e 'const fs=require("fs");const u=p=>"data:image/png;base64,"+fs.readFileSync(p).toString("base64");
-  fs.writeFileSync("temp/req.json",JSON.stringify({prompt:process.argv[1],image_url:u("config/characters/boy/model-sheet.png"),aspect_ratio:"9:16",num_images:1,output_format:"png"}))' "$PROMPT"
+  fs.writeFileSync("temp/req.json",JSON.stringify({prompt:process.argv[1],image_url:u("config/characters/boy/model-sheet.png"),aspect_ratio:"3:2",num_images:1,output_format:"png"}))' "$PROMPT"
 curl -s -m 150 -x $PROXY -X POST "https://fal.run/fal-ai/flux-pro/kontext" \
   -H "Authorization: Key $KEY" -H "Content-Type: application/json" --data @temp/req.json -o temp/resp.json
 ```

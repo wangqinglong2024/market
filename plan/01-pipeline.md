@@ -15,7 +15,7 @@
 ## manifest.json 结构（build.mjs 实际产出，渲染层 Video.tsx 读它）
 ```jsonc
 {
-  "meta": { "fps": 30, "width": 1080, "height": 1920, "transitionFrames": 12,
+  "meta": { "fps": 30, "width": 1080, "height": 1440, "transitionFrames": 12,   // 3:4（2026-07-07 改版，旧片 1920 不重做）
             "captions": { "pinyinColor": "...", "zhColor": "...", "localColor": "...", "bgColor": "#ffffff" } },
   "beats": [
     {

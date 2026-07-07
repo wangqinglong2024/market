@@ -9,7 +9,7 @@
 - **输入**：**一句**古文/经典/哲理句（中文），如「温故而知新，可以为师矣。」。可选：`videoId`、`lang`（默认 `vi`）、指定哥哥还是妹妹朗读。原样存进 `input.md`（见 [[12-video-folder-spec]]）。
 - **不再是**：一整段现成旁白。旁白由我（Claude）按 [[00-overview]] 的固定内容结构**扩写**出来（孩子朗读金句 → 点破意思 → 场景演示 → 文化收尾，**统一旁白、无父母分角、无 CTA**），写进 `script.json`。
 - **输出**：`public/videos/<shard>/<id>/` 下 `成片.mp4` + 全部中间产物（`input.md`/`script.json`/audio/images/manifest，可追溯、可重渲染）。`*.mp4` 一律写入 `.gitignore`，只本地生成/预览，禁止提交上传到 Git。
-- **不变量**：配音永远中文，**全片统一旁白「开朗姐姐」**（不做多角色分工，见 [[04-tts-captions]]）；字幕三行（拼音/中文/越南语意译）；竖屏 9:16；画风统一；人物按需出场；特效 ≤2/片、按需；**纯文化普及、禁止任何营销/广告（下载 CTA、软件推广、"一起学中文"等一律不要）**。
+- **不变量**：配音永远中文，**全片统一旁白「开朗姐姐」**（不做多角色分工，见 [[04-tts-captions]]）；字幕三行（拼音/中文/越南语意译）；竖屏 3:4（1080×1440，2026-07-07 改版）；画风统一；人物按需出场；特效 ≤2/片、按需；**纯文化普及、禁止任何营销/广告（下载 CTA、软件推广、"一起学中文"等一律不要）**。
 
 ---
 
@@ -57,11 +57,11 @@
 <SHOT.content>                          ← 来自分镜，本图要画什么（英文）
 + <CHARACTER_CANON>                     ← 在场主角色 canonical（config/characters/<id>/canonical.md）
 + <STYLE>                               ← 固定画风（config/prompts/style.md）
-+ <COMPOSITION>                         ← 1:1 方图 + 纯白底（config/prompts/composition.md）
++ <COMPOSITION>                         ← 3:2 横图 + 纯白底（config/prompts/composition.md，2026-07-07 改版）
 ```
 - 模板分三套：单人 `image-flux.tpl.md`、多人 `image.tpl.md`、空镜 `image-scene.tpl.md`。
 - 🚫 **死命令**：**绝不**在 prompt 写 box/frame/subtitle/"下方留白给字幕"/"empty area at bottom"（含 `no box`），也**不放身体部位负面词**（`no extra fingers` 等会触发 fal nsfw 黑图）——单人 flux 模板本就**无 negative**。见 [[10-art-style-locked]] 4.4。
-- 版式（留白/字幕带/上下留白）全由渲染层按 1:1 合成控制，出图**只画方图本身、纯白底**。
+- 版式（上半图/下半字幕区）全由渲染层按「3:2 横图合成到 3:4」控制，出图**只画横图本身、纯白底**（见 [[03-remotion-animation]]）。
 固定部分都来自 `config/prompts/`，**单一来源、每次相同** → 可复现。
 
 ### 第 4 步 · 出图（按角色数路由 + 缓存，见 [[05-cost-and-models]]、[[10-art-style-locked]]）
