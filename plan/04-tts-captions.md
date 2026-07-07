@@ -25,15 +25,19 @@
 - ✅ **已接线（2026-07-03）**：`build.mjs` 按 `beat.voice` → `settings.audio.voices[...]` 传给火山 TTS（默认 `narrator`）。
 - 每拍中文旁白单独合成一个 `.mp3`，取**真实时长(ms)** → 驱动该拍停留与字幕时间。
 - 段尾加少量留白（`tailPaddingMs`），避免翻页过紧。
-- **★ 语速（2026-07-05 用户调整）**：按内容类型分流。开场朗读古文拍 `role=read-quote` 用 `settings.audio.readQuoteSpeed = 0.9`，后续讲解/场景/收尾用 `settings.audio.speed = 1.1`。火山 `speed_ratio` 参数，`build.mjs` 按 `beat.role` 传入。**配音变快 → `beat.durationMs` 变短 → 画面/运镜节奏自动跟着变快**（时长是唯一节奏源，不用另调 motion）。⚠️ 改语速后要**删掉受影响的 `audio/*.mp3` 重合成**——缓存只按输出路径命中，不认语速变化。`tailPaddingMs` 保持 320ms 配合节奏。
+- **★ 语速（2026-07-05 用户调整）**：按内容类型分流。开场朗读古文拍 `role=read-quote` 用 `settings.audio.readQuoteSpeed = 0.9`，后续讲解/场景/收尾用 `settings.audio.speed = 1.1`。火山 `speed_ratio` 参数，`build.mjs` 按 `beat.role` 传入。**配音变快 → `beat.durationMs` 变短 → 画面/运镜节奏自动跟着变快**（时长是唯一节奏源，不用另调 motion）。⚠️ 改语速后要**删掉受影响的 `audio/*.mp3` 重合成**——缓存只按输出路径命中，不认语速变化。拍尾留白见下方「拍尾留白默认值」（旧统一 320ms 已废）。
 - TTS HTTP **优先走 curl + 代理 7897**（Node fetch 不走代理，见记忆 [[fal-use-curl-proxy]]）；如果本机 7897 未监听，`scripts/tts.mjs` 会自动直连重试。凭据取 `api-key.txt`（豆包/火山 APP ID / Access Token）。
 
-### script.json 里怎么写
+### script.json 里怎么写（★ 2026-07-07 改版：一拍一句短句，见 [[08-script-to-video-rules]] 第 1 步）
 ```jsonc
-{ "id": "p1", "voice": "narrator", "captions": { "zh": "温故而知新，可以为师矣。" } }   // 画面：女儿古装朗读；声音仍是旁白
-{ "id": "p2", "voice": "narrator", "captions": { "zh": "常复习旧的，就能悟出新的。" } }   // 不写「妈妈说」等引述词
-{ "id": "p3", "voice": "narrator", "captions": { "zh": "夜里，他又翻开那本旧书……" } }
+{ "id": "p1", "sceneId": "s1", "voice": "narrator", "captions": { "zh": "温故而知新，" } }   // 上句一拍；s1 共图（孩子汉服朗读）
+{ "id": "p2", "sceneId": "s1", "voice": "narrator", "captions": { "zh": "可以为师矣。" } }   // 下句一拍，同图
+{ "id": "p3", "sceneId": "s2", "voice": "narrator", "captions": { "zh": "常复习旧的，" } }   // 不写「妈妈说」等引述词
+{ "id": "p4", "sceneId": "s2", "voice": "narrator", "captions": { "zh": "就能悟出新的。" } }
 ```
+> **文案以用户提供为准**（2026-07-07）：不插任何固定引子/转换句/套话，见 [[08-script-to-video-rules]] 第 1 步。
+- **每拍（每句短句）单独合成一个 mp3**：TTS 免费，调用次数变多无所谓；换来逐句精确同步。
+- **★ 拍尾留白默认值（2026-07-07 定，取代旧统一 320ms）**：分两档——**同场景内拍尾 `tailPaddingMs = 120ms`**（短句间紧凑衔接、像自然换气）；**场景末拍（转场前）280ms**（换画面前多歇半拍，观众消化）。这是优质短视频节奏的起步值，渲染后按听感微调。
 > ✅ 已接线：`build.mjs` 按 `beat.voice` → `settings.audio.voices[...]` 传给 `synth`（默认 `narrator`）。当前全片统一 `narrator`。
 
 ## 翻译（当地语言，首发越南语）——意译，不直译

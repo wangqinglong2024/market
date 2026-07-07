@@ -9,15 +9,15 @@
 public/videos/2026/07/03/<id>/
 ├── input.md          ① 原始需求：用户交的那句古文/哲理句 + 任何附加要求（原样保存，可追溯）
 ├── script.json       ② 转换脚本（本文重点）：分镜 + 每拍配音角色 + 场景 + 出图 prompt + 三语字幕
-├── audio/            ③ 每拍配音 pXX.mp3（按 script 的 voice 角色合成）
-├── images/           ③ 每拍出图 pXX.png（按 script 的 prompt + 角色路由 flux/nano 生成）
+├── audio/            ③ 每拍配音 pXX.mp3（一拍=一句短句单独合成，见 08 第 1 步）
+├── images/           ③ 按场景出图 sXX.png（同 sceneId 连续拍共用一张，2026-07-07 改版；角色路由 flux/nano）
 ├── cost/coast.md     ③ 出图成本日志（2026-07-05 用户加）：每次真实调用出图模型记一行「时间到秒 | 拍 | 模型 | 花费」，缓存命中不计
 ├── manifest.json     ④ 渲染数据（build.mjs 汇总，Remotion 读它出片）
 └── 成片.mp4          ④ 最终成片
 ```
 > **shard 分片（2026-07-05 改）**：原按月 `2026-07/` 改成年/月/日三级 `2026/07/03/`。`catalog.json` 每条 `shard` 就是这段路径；代码只当路径片段拼接，故改层级无需动脚本。
 - **input.md** = 第①层。内容就是用户给的一句（如「温故而知新，可以为师矣。」）加可选备注（时长/语言/指定哥哥还是妹妹朗读等）。它是这条片的"需求单"。
-- **script.json** = 第②层，是我**设计**的东西，不是机械切句：金句怎么扩写成 6–9 拍、每拍谁来配音、分几个画面、每个画面给 AI 什么出图提示词——全在这里定死，后续配音/出图**只照着执行**。
+- **script.json** = 第②层，是我**设计**的东西，不是机械切句：金句怎么扩写并切成**短句拍**（2026-07-07 起一拍≈4~12 字，拍数随之变多）、怎么按 `sceneId` 分组共图、每个场景给 AI 什么出图提示词——全在这里定死，后续配音/出图**只照着执行**。
 
 ## script.json 每个 beat 必填字段（第②层的设计面）
 ```jsonc
@@ -30,7 +30,7 @@ public/videos/2026/07/03/<id>/
       "id": "p1",
       "role": "read-quote",          // 该拍在结构里的角色：read-quote/explain/scene/payoff（无 cta，纯文化不打广告）
       "voice": "narrator",           // ★配音：全片统一旁白开朗姐姐（见 04）
-      "sceneId": "study-ancient",    // 场景（同地点连续拍复用背景）
+      "sceneId": "study-ancient",    // ★场景=共图分组：同 sceneId 连续拍共用一张图、不转场（2026-07-07）；shots 只写在该场景第一拍
       "hasMainCharacter": true,      // ★这拍需不需要出人物（不需要就 false，画空镜/物件）
       "characters": ["boy"],         // 在场主角色 id；空=无人物
       "costume": "ancient",          // 可选：ancient=穿汉服（现代小孩打扮成汉服，非古代；见 10 4.7）
@@ -45,10 +45,10 @@ public/videos/2026/07/03/<id>/
           "weight": 1
         }
       ],
-      "captions": {
-        "zh": "温故而知新，可以为师矣。",
-        "pinyin": "wēn gù ér zhī xīn, kě yǐ wéi shī yǐ",
-        "local": "Ôn lại điều cũ mà hiểu điều mới, ắt có thể làm thầy."   // 越南语意译
+      "captions": {                  // ★ 一拍一句短句、单行三层（2026-07-07）；此拍只读上句，下句另起一拍
+        "zh": "温故而知新，",
+        "pinyin": "wēn gù ér zhī xīn,",
+        "local": "Ôn lại điều cũ mà hiểu điều mới,"   // 越南语意译，单行
       }
     }
   ]
@@ -56,7 +56,7 @@ public/videos/2026/07/03/<id>/
 ```
 字段职责对照用户三问：
 - **「每句配什么音」** → `voice`（逐拍指定角色，build 映射到火山 voice_type）。
-- **「分几个画面」** → 拍数（beats 数）+ 每拍 `shots[]`（一拍可 1~N 张表现过程）。
+- **「分几个画面」** → **场景数（sceneId 分组数）**：同场景连续拍共图；场景内如需表现过程再用 `shots[]` 多张。拍数（beats 数）只决定字幕/配音节奏，不决定图数。
 - **「每个画面怎么给 AI 出图提示词」** → 每个 `shot.content`（英文）= 该画面的出图提示词主体，**真正传给模型**；`shot.contentZh`（中文）仅供用户看懂、**不传参给模型**。build 时再拼固定 STYLE/LAYOUT/NOTEXT（见 [[10-art-style-locked]]）。
 - **「用哪个模型」** → 每个 shot 显式声明 `model`（只有 `flux` / `nano-pro` 两个值），**出图前就能在脚本里审、成本可控**。硬规矩：**0 人或 1 人 = `flux`(~$0.04)；≥2 人 = `nano-pro`(~$0.15)**。**严禁 nano-banana 文生图，空镜也走 flux**；`gen-image.mjs` 强制校验 `model` 与 `characters` 数一致，**不符报错**，杜绝对单人/空镜误用贵模型（见 [[05-cost-and-models]]）。
 
