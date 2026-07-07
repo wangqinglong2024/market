@@ -388,8 +388,13 @@ const SceneV2: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats, m
   const imgScale = first.imgScale ?? 1;
 
   // 版式：上半 1080×720 放 3:2 横图，下半 720 字幕区（plan/03，2026-07-07 锁定）
+  // 2026-07-08 调整：图不再贴死顶部、字幕不再沉在下半区正中——图整体下移 imgTop，
+  // 字幕块锚在图片正下方 capGap 处，上下留白更均衡。
   const imgH = Math.round(meta.height / 2);
-  const capH = meta.height - imgH;
+  const imgTop = Math.round(meta.height * 0.06);  // ≈86px 顶部留白
+  const capGap = Math.round(meta.height * 0.04);  // ≈58px 图与字幕的间距
+  const capTop = imgTop + imgH;
+  const capH = meta.height - capTop;
   const maxW = meta.width - cap.sidePad * 2;
 
   // 每句字幕入场：快速淡入+轻微上浮（别抢戏）
@@ -400,7 +405,7 @@ const SceneV2: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats, m
   return (
     <AbsoluteFill style={{ backgroundColor: cap.bgColor ?? "#ffffff" }}>
       {/* 上半：3:2 横图，场景内连续运镜 */}
-      <div style={{ position: "absolute", top: 0, left: 0, width: meta.width, height: imgH, overflow: "hidden" }}>
+      <div style={{ position: "absolute", top: imgTop, left: 0, width: meta.width, height: imgH, overflow: "hidden" }}>
         <Img
           src={staticFile(first.image)}
           style={{
@@ -424,14 +429,15 @@ const SceneV2: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats, m
       <div
         style={{
           position: "absolute",
-          top: imgH,
+          top: capTop,
           left: 0,
           width: "100%",
           height: capH,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          justifyContent: "flex-start",
+          paddingTop: capGap,
           gap: cap.gapZhLocal,
           transform: `translateY(${-cap.opticalLift + capRise}px)`,
           opacity: capIn,

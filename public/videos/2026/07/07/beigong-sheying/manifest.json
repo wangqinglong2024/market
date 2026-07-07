@@ -230,7 +230,7 @@
       "audio": "videos/2026/07/07/beigong-sheying/audio/p01.mp3",
       "durationMs": 2208,
       "motion": "push-in",
-      "imgScale": 0.66,
+      "imgScale": 0.7816759776536314,
       "charTimings": [
         {
           "ch": "杯",
@@ -291,7 +291,7 @@
       "audio": "videos/2026/07/07/beigong-sheying/audio/p02.mp3",
       "durationMs": 2848,
       "motion": "ken-burns",
-      "imgScale": 0.66,
+      "imgScale": 0.7816759776536314,
       "charTimings": [
         {
           "ch": "学",
