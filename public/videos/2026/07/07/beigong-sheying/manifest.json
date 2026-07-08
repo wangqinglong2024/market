@@ -1231,7 +1231,7 @@
       "sceneId": "s8-tangle",
       "image": "videos/2026/07/07/beigong-sheying/images/s8-tangle.png",
       "audio": "videos/2026/07/07/beigong-sheying/audio/p20.mp3",
-      "durationMs": 1752,
+      "durationMs": 1776,
       "motion": "pan-right",
       "imgScale": 0.7481198910081744,
       "charTimings": [
@@ -1243,21 +1243,21 @@
         {
           "ch": "来",
           "startMs": 365,
-          "endMs": 545
+          "endMs": 565
         },
         {
           "ch": "不",
-          "startMs": 545,
-          "endMs": 645
+          "startMs": 565,
+          "endMs": 685
         },
         {
           "ch": "是",
-          "startMs": 645,
-          "endMs": 785
+          "startMs": 685,
+          "endMs": 815
         },
         {
           "ch": "事",
-          "startMs": 785,
+          "startMs": 815,
           "endMs": 975
         },
         {
@@ -1266,9 +1266,9 @@
           "endMs": 1125
         },
         {
-          "ch": "难",
+          "ch": "男",
           "startMs": 1125,
-          "endMs": 1553
+          "endMs": 1583
         }
       ],
       "captions": {

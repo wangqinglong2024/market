@@ -103,7 +103,14 @@ for (let bi = 0; bi < script.beats.length; bi++) {
   const speed = beat.role === "read-quote"
     ? (settings.audio.readQuoteSpeed ?? 1.0)
     : (settings.audio.speed ?? 1.0);
-  const audio = await synth(beat.captions.zh, audioPath, { voice: voiceType, speed });
+  // 多音字发音引导（plan/04）：ttsZh 只供合成不上屏，汉字数必须与 captions.zh 一致（时间戳按序号对齐）
+  if (beat.ttsZh) {
+    const hanCount = (s) => Array.from(s).filter((c) => /[㐀-鿿]/.test(c)).length;
+    if (hanCount(beat.ttsZh) !== hanCount(beat.captions.zh)) {
+      throw new Error(`${beat.id}: ttsZh 汉字数(${hanCount(beat.ttsZh)})与 captions.zh(${hanCount(beat.captions.zh)})不一致，逐字跳字会错位`);
+    }
+  }
+  const audio = await synth(beat.ttsZh ?? beat.captions.zh, audioPath, { voice: voiceType, speed });
   console.log(`  audio: ${audio.cached ? "cached" : "synth"} ${audio.ms}ms  timings=${audio.charTimings ? audio.charTimings.length + "字" : "无"}  speed=${speed}`);
 
   // 出图：该场景首次出现时出一张，后续同场景拍直接复用
