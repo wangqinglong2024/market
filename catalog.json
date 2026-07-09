@@ -4,6 +4,7 @@
     {
       "id": "beigong-sheying",
       "title": "杯弓蛇影 · 内耗是把脑补的幻象当成真相",
+      "template": "guoxue-jinju",
       "shard": "2026/07/07",
       "lang": "vi",
       "status": "built",
@@ -14,6 +15,7 @@
     {
       "id": "bu-huan-ren-bu-zhi",
       "title": "不患人之不己知 · 修炼本事自然发光",
+      "template": "guoxue-jinju",
       "shard": "2026/07/05",
       "lang": "vi",
       "status": "built",
@@ -24,6 +26,7 @@
     {
       "id": "shanjia-yuwu",
       "title": "假舆马者…善假于物 · 善于借助外物",
+      "template": "guoxue-jinju",
       "shard": "2026/07/03",
       "lang": "vi",
       "status": "built",
@@ -34,6 +37,7 @@
     {
       "id": "cuncao-chunhui",
       "title": "谁言寸草心，报得三春晖 · 母爱与感恩",
+      "template": "guoxue-jinju",
       "shard": "2026/07/03",
       "lang": "vi",
       "status": "built",
@@ -44,6 +48,7 @@
     {
       "id": "demo",
       "title": "妈妈生病了 · 家人的爱",
+      "template": "guoxue-jinju",
       "shard": "2026/07/02",
       "lang": "vi",
       "status": "built",

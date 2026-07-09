@@ -1,0 +1,174 @@
+// 渲染层共享类型：manifest 数据结构 + 版式模块契约。
+// 版式注册表(registry.ts)按 manifest.meta.layout 选一个 LayoutModule；
+// 新模板若字幕/版式不同 = 新增一个 src/layouts/<id>.tsx 导出 LAYOUT 并在 registry 注册。
+import type React from "react";
+import type { FontsMeta } from "../fonts";
+
+export type Motion = {
+  scale: [number, number];
+  panX: [number, number];
+  panY: [number, number];
+  driftX?: number;
+  driftY?: number;
+  rotate?: [number, number];
+  ease?: "inOut" | "linear";
+};
+
+// Effect 支持所有可能参数（[key: string]: any 结尾允许任意扩展）
+export type Effect = {
+  type: string;
+  // 通用
+  count?: number;
+  intensity?: number;
+  color?: string;
+  color1?: string;
+  color2?: string;
+  opacity?: number;
+  // 位置
+  originX?: number;
+  originY?: number;
+  cx?: number;
+  cy?: number;
+  x?: number;
+  y?: number;
+  startY?: number;
+  // 文字
+  text?: string;
+  fontSize?: number;
+  words?: string[];
+  emojis?: string[];
+  // 颜色扩展
+  accentColor?: string;
+  glowColor?: string;
+  bgColor?: string;
+  textColor?: string;
+  shadowColor?: string;
+  highlightColor?: string;
+  baseColor?: string;
+  ribbon?: string;
+  // 动效参数
+  bpm?: number;
+  period?: number;
+  interval?: number;
+  every?: number;
+  rate?: number;
+  rpm?: number;
+  turns?: number;
+  // 形状/结构
+  shape?: "star" | "heart" | "mix";
+  variant?: "bokeh" | "stars";
+  mode?: "burst" | "rain";
+  direction?: "left" | "right" | "up" | "down" | "h" | "v";
+  axis?: "h" | "v";
+  angleDeg?: number;
+  sides?: number;
+  slices?: number;
+  strokes?: number;
+  petals?: number;
+  rayCount?: number;
+  rings?: number;
+  cols?: number;
+  rows?: number;
+  lines?: number;
+  waveCount?: number;
+  flagCount?: number;
+  // 尺寸
+  radius?: number;
+  size?: number;
+  thickness?: number;
+  gap?: number;
+  depth?: number;
+  dotSize?: number;
+  barRatio?: number;
+  amplitude?: number;
+  maxBlur?: number;
+  pixelSize?: number;
+  // 其他
+  heavy?: boolean;
+  pulse?: boolean;
+  scanlines?: boolean;
+  flashes?: number;
+  strikes?: number;
+  spotCount?: number;
+  starCount?: number;
+  holeCount?: number;
+  bottomPad?: number;
+  phase?: number;
+  density?: number;
+  layers?: number;
+  // 路径等
+  tokens?: string[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  paths?: any[];
+  seed?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+};
+
+// 字级时间戳（火山 TTS with_timestamp，2026-07-07）：驱动中文逐字跳字
+export type CharTiming = { ch: string; startMs: number; endMs: number };
+
+export type Beat = {
+  id: string;
+  // 场景共图分组——同 sceneId 连续拍共用一张图、不换图不转场
+  sceneId?: string;
+  image: string;
+  audio: string;
+  durationMs: number;
+  motion?: string;
+  transitionIn?: "fade" | "slide-left" | "slide-up" | "wipe";
+  effects?: Effect[];
+  // 单人物图缩小系数：flux 老把人画满整框，渲染层按此缩小
+  imgScale?: number;
+  charTimings?: CharTiming[];
+  captions: {
+    pinyin: string;
+    zh: string;
+    local?: string;
+    vi?: string;
+    // 逐行中越对照（旧版式）：每个元素一行
+    lines?: { zh: string; vi?: string }[];
+  };
+};
+
+// 字幕排版参数（config → manifest.meta.captions 全量透传）
+export type CaptionCfg = {
+  pinyinColor: string; zhColor: string; localColor: string; bgColor: string;
+  sizes?: { pinyin: number; zh: number; local: number };
+  gapPinyinZh?: number; gapZhLocal?: number; sidePad?: number;
+  pinyinColumnGap?: number; opticalLift?: number; karaokeColor?: string;
+};
+
+export type Manifest = {
+  meta: {
+    fps: number;
+    width: number;
+    height: number;
+    // 版式选择键：registry 按此选 LayoutModule。缺省/未知 → 旧版式(v1-legacy)。
+    layout?: string;
+    bandTopRatio?: number;
+    transitionFrames?: number;
+    motionPresets?: Record<string, Motion>;
+    pageTurn?: { fadeFrames: number; captionRiseFrames: number; captionRisePx: number };
+    captions?: CaptionCfg;
+    bgm?: { src: string; volume?: number };
+    fonts?: FontsMeta;
+  };
+  beats: Beat[];
+};
+
+export type VideoProps = { videoId: string; shard: string; manifest: Manifest | null };
+
+// ── 版式模块契约 ───────────────────────────────────────────────────────────────
+// 每个版式负责：把 beats 切成"段"(段间才转场)、渲染一段、给出段的入场转场。
+// Video.tsx 只做编排(TransitionSeries/字体/BGM)，具体版面全在各 LayoutModule 里。
+export type LayoutModule = {
+  id: string;
+  // 把 beats 切成若干段：每段渲染为一个 TransitionSeries.Sequence，转场发生在段之间。
+  // v2-3x4：按 sceneId 共图分组；v1-legacy：每拍一段。
+  segments: (beats: Beat[]) => Beat[][];
+  // 该段的入场转场类型（取自段首拍）
+  transitionOf: (seg: Beat[]) => Beat["transitionIn"];
+  // 渲染一段
+  Segment: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }>;
+};

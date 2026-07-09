@@ -1,0 +1,70 @@
+{
+  "_comment": "模板『国学金句·中华经典文化短视频』的专属配置。加载时深合并到全局 config/settings.json 之上(模板覆盖全局)。通用基建(TTS引擎/languages)在全局，这里只放本模板专属的画幅/字幕样式/字体/配音映射/出图归一化等。",
+  "id": "guoxue-jinju",
+  "name": "国学金句·中华经典文化短视频",
+  "layout": "v2-3x4",
+  "meta": { "fps": 30, "width": 1080, "height": 1440 },
+  "_metaComment": "3:4 竖屏(2026-07-07 改版)。上半 1080x720 放 3:2 横图，下半 720 放单行三层字幕。",
+  "audio": {
+    "_speedComment": "朗读古文拍(role=read-quote)用 readQuoteSpeed=0.9，后续讲解/场景/收尾用 speed=1.1。改语速须清掉受影响 audio/*.mp3 重合成。",
+    "speed": 1.1,
+    "readQuoteSpeed": 0.9,
+    "_tailComment": "拍尾留白两档：同场景内 tailPaddingMs=120，场景末拍(转场前)sceneTailPaddingMs=280。",
+    "tailPaddingMs": 120,
+    "sceneTailPaddingMs": 280,
+    "_bgmComment": "全片固定背景音乐 public/library/audio/bgm/peach_haven.mp3，音量 8%。★禁止任何 API/fal 生成音乐。换曲只替换文件或改这里。",
+    "bgm": { "src": "library/audio/bgm/peach_haven.mp3", "volume": 0.08 },
+    "_voicesComment": "每拍 script.json 的 voice(角色名)映射到火山 voice_type。全片统一旁白 narrator(开朗姐姐)。",
+    "defaultVoice": "narrator",
+    "voices": {
+      "narrator": "zh_female_kailangjiejie_moon_bigtts",
+      "boy": "zh_male_naiqimengwa_mars_bigtts",
+      "girl": "zh_female_tianmeixiaoyuan_moon_bigtts",
+      "dad": "zh_male_wennuanahu_moon_bigtts",
+      "mom": "zh_female_wenrouxiaoya_moon_bigtts"
+    },
+    "_alternates": {
+      "girl": ["zh_female_tianmeiyueyue_moon_bigtts"],
+      "dad": ["zh_male_shaonianzixin_moon_bigtts", "zh_male_yangguangqingnian_moon_bigtts"],
+      "mom": ["zh_female_qinqienvsheng_moon_bigtts", "zh_female_shuangkuaisisi_moon_bigtts"]
+    }
+  },
+  "image": {
+    "_modelComment": "出图模型由 script.json 每个 shot 的 model(flux/nano-pro)决定，gen-image.mjs 按此路由。",
+    "_aspectComment": "出图统一 3:2 横图；渲染器放到白底 3:4 上半区。",
+    "aspectRatio": "3:2",
+    "seedStrategy": "from-shot-id",
+    "maxRetries": 3,
+    "_styleAnchorComment": "空镜(无人物)/典故重演出图时喂给 flux-pro/kontext 的风格锚图，只借画风。",
+    "styleAnchor": "templates/guoxue-jinju/characters/girl/model-sheet.png",
+    "_charTargetHeightComment": "尺寸归一化目标：把含人物拍的人物身高占比缩到此值，让所有人物拍尺寸一致。只对含人物拍生效。",
+    "charTargetHeight": 0.66
+  },
+  "captions": {
+    "bandTopRatio": 0.6927,
+    "_sizesComment": "单行三层大字版：中文92/拼音46/越南语54；拼音贴中文 gap16、中文到越南语 gap32；左右安全边距60；拼音列间距12；整组上提24做光学居中。跳字高亮色 karaokeColor。",
+    "sizes": { "pinyin": 46, "zh": 92, "local": 54 },
+    "gapPinyinZh": 16,
+    "gapZhLocal": 32,
+    "sidePad": 60,
+    "pinyinColumnGap": 12,
+    "opticalLift": 24,
+    "karaokeColor": "#d6336c",
+    "pinyinColor": "#a58e5c",
+    "zhColor": "#20242b",
+    "localColor": "#d6336c",
+    "_bgColorComment": "纯白画布(死命令)。出图也一律纯白底。",
+    "bgColor": "#ffffff"
+  },
+  "fonts": {
+    "_comment": "★字幕字体配置化(用户 2026-07-05)：换字体只改这里、不用改代码。① 把 .ttf 放进 public/library/fonts/；② 在 files 里登记 {family,file}(可选 weight 区间)；③ 把该 family 放到 zhStack(中文)或 latinStack(拼音/越南语)最前面。zhWeight=中文字重(手写等单字重字体由 Chromium 合成加粗)。build 写进 manifest.meta.fonts，渲染层 src/fonts.ts+Video.tsx 据此加载与套用。当前中文=Winter「你是冬夜的浪漫」手写体、加粗。",
+    "files": [
+      { "family": "Winter", "file": "library/fonts/Winter.ttf" },
+      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" },
+      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" }
+    ],
+    "zhStack": ["Winter", "SimHei", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "sans-serif"],
+    "zhWeight": 700,
+    "latinStack": ["Nunito", "PingFang SC", "Microsoft YaHei", "sans-serif"]
+  }
+}

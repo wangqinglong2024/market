@@ -1,6 +1,6 @@
 // 一次性：用 nano-banana-pro 生成「戴书生方帽 + 汉服」的定妆样板图（config 模板），只做儿子/女儿两张。
 // 用户 2026-07-05 定：banana 仅在此生成 config 样板时用；日常出图仍全走 flux，只是朗读拍改喂这张带帽样板。
-// 用法: node scripts/gen-hat-refs.mjs [boy|girl|all]   产物: config/characters/<id>/model-sheet-hat.png
+// 用法: node scripts/gen-hat-refs.mjs [boy|girl|all]   产物: templates/guoxue-jinju/characters/<id>/model-sheet-hat.png
 import { readFileSync, writeFileSync } from "node:fs";
 import { execSync } from "node:child_process";
 import { tmpdir } from "node:os";
@@ -14,13 +14,13 @@ const dataUri = (p) => "data:image/png;base64," + readFileSync(p).toString("base
 // 每个孩子：喂日常定妆图，改成「全身长袍汉服 + 优雅方顶书生帽」，画风/脸型/发型不变、纯白底。
 const TARGETS = {
   boy: {
-    ref: "config/characters/boy/model-sheet.png",
-    out: "config/characters/boy/model-sheet-hat.png",
+    ref: "templates/guoxue-jinju/characters/boy/model-sheet.png",
+    out: "templates/guoxue-jinju/characters/boy/model-sheet-hat.png",
     robe: "a full-length crossed-collar PALE-GREEN hanfu robe reaching the ankles (replacing the t-shirt and shorts)",
   },
   girl: {
-    ref: "config/characters/girl/model-sheet.png",
-    out: "config/characters/girl/model-sheet-hat.png",
+    ref: "templates/guoxue-jinju/characters/girl/model-sheet.png",
+    out: "templates/guoxue-jinju/characters/girl/model-sheet-hat.png",
     robe: "a full-length crossed-collar PALE-BLUE hanfu robe reaching the ankles (replacing the pink dress)",
   },
 };

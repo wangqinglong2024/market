@@ -1,4 +1,4 @@
-// 一次性：生成 TikTok 品牌图（头像 1:1 + 背景墙 9:16），输出到 config/branding/。
+// 一次性：生成 TikTok 品牌图（头像 1:1 + 背景墙 9:16），输出到 templates/guoxue-jinju/branding/。
 // 两张均为多角色 → nano-banana-pro/edit（喂定妆图保一致），共 2 次调用 ~$0.30。
 import { mkdirSync } from "node:fs";
 import { genImage } from "./gen-image.mjs";
@@ -11,13 +11,13 @@ const DAD = `The dad: slim gentle cartoon dad, short tousled brown hair, no glas
 const MOM = `The mom: chubby kind cartoon mom, dark brown hair in a small messy top bun, ORANGE long-sleeve top, WHITE trousers.`;
 const DOG = `The small cartoon dog exactly as in its reference image.`;
 
-const CH = (id) => `config/characters/${id}/model-sheet.png`;
+const CH = (id) => `templates/guoxue-jinju/characters/${id}/model-sheet.png`;
 
-mkdirSync("config/branding", { recursive: true });
+mkdirSync("templates/guoxue-jinju/branding", { recursive: true });
 
 // ① 头像 1:1（上传 TikTok 后会被裁成圆形 → 两个孩子居中、四角只留背景）
 const avatar = await genImage({
-  outPath: "config/branding/avatar.png",
+  outPath: "templates/guoxue-jinju/branding/avatar.png",
   model: "nano-pro",
   refPaths: [CH("boy"), CH("girl")],
   settings: { image: { aspectRatio: "1:1" } },
@@ -30,7 +30,7 @@ console.log("avatar:", avatar.path, avatar.cached ? "(cached)" : "(new)");
 
 // ② 背景墙 9:16 竖屏（1080x1920 直播/主页背景），一家人一起学中文
 const wall = await genImage({
-  outPath: "config/branding/background-wall.png",
+  outPath: "templates/guoxue-jinju/branding/background-wall.png",
   model: "nano-pro",
   refPaths: [CH("boy"), CH("girl"), CH("dad"), CH("mom"), CH("dog")],
   settings: { image: { aspectRatio: "9:16" } },
