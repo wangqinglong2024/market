@@ -6,7 +6,7 @@ import {
 } from "remotion";
 import { useMemo } from "react";
 import { DEFAULT_FONTS, stackCss } from "../fonts";
-import type { Beat, Manifest, LayoutModule } from "./types";
+import type { Beat, Manifest, LayoutModule, RenderBeat } from "./types";
 import { beatFrames, toRuby, FitLine, EffectsLayer, DEFAULT_MOTION, DEFAULT_CAP } from "./shared";
 
 const SIDE_PAD = 52;
@@ -137,7 +137,7 @@ const Scene: React.FC<{ beat: Beat; meta: Manifest["meta"] }> = ({ beat, meta })
 
 export const LAYOUT: LayoutModule = {
   id: "v1-legacy",
-  segments: (beats) => beats.map((b) => [b]), // 每拍一段，段间按 beat.transitionIn 转场
-  transitionOf: (seg) => seg[0].transitionIn,
-  Segment: ({ beats, meta }) => <Scene beat={beats[0]} meta={meta} />,
+  segments: (beats: RenderBeat[]) => beats.map((b) => [b]), // 每拍一段，段间按 beat.transitionIn 转场
+  transitionOf: (seg) => (seg[0] as unknown as Beat).transitionIn,
+  Segment: ({ beats, meta }) => <Scene beat={beats[0] as unknown as Beat} meta={meta} />,
 };

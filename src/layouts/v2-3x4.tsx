@@ -6,7 +6,7 @@ import {
 } from "remotion";
 import { useMemo } from "react";
 import { DEFAULT_FONTS, stackCss } from "../fonts";
-import type { Beat, CharTiming, Manifest, LayoutModule } from "./types";
+import type { Beat, CharTiming, Manifest, LayoutModule, RenderBeat } from "./types";
 import { beatFrames, isHan, toRuby, FitLine, EffectsLayer, DEFAULT_MOTION, DEFAULT_CAP } from "./shared";
 
 // 场景共图：把连续同 sceneId 的拍分成组，一组 = 一个连续画面（不换图不转场）
@@ -216,7 +216,7 @@ const SceneV2: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats, m
 
 export const LAYOUT: LayoutModule = {
   id: "v2-3x4",
-  segments: groupScenes,
-  transitionOf: (seg) => seg[0].transitionIn,
-  Segment: SceneV2,
+  segments: (beats: RenderBeat[]) => groupScenes(beats as unknown as Beat[]) as unknown as RenderBeat[][],
+  transitionOf: (seg) => (seg[0] as unknown as Beat).transitionIn,
+  Segment: ({ beats, meta }) => <SceneV2 beats={beats as unknown as Beat[]} meta={meta} />,
 };

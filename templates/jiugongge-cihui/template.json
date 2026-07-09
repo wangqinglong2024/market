@@ -1,0 +1,51 @@
+{
+  "_comment": "模板『九宫格词汇』(中文教学·给越南受众)。完全参照 temp/TikTok.mp4：3:4 画幅、暖米色底、3×3 九宫格贴纸卡、顶部问答框、逐词读+小图摆动→滑走变中文词发音。只把兔子换成重绘为贴纸画风的小女儿主角。深合并到全局 config/settings.json。",
+  "id": "jiugongge-cihui",
+  "name": "九宫格词汇·中文教学(越南受众)",
+  "layout": "grid-9",
+  "meta": { "fps": 30, "width": 1080, "height": 1440 },
+  "_metaComment": "尺寸照搬参考视频：1080×1440 (3:4)、30fps、约 19 秒(节奏见 audio)。",
+  "audio": {
+    "_voiceComment": "小女孩配音。火山已验证可用：樱桃小丸子=zh_female_yingtaowanzi_mars_bigtts(默认)、佩奇=zh_female_peiqi_mars_bigtts(备选)。逐词读，speed 1.0。",
+    "voice": "zh_female_yingtaowanzi_mars_bigtts",
+    "voiceAlt": "zh_female_peiqi_mars_bigtts",
+    "speed": 1.0,
+    "_timingComment": "节奏(参考实测：问句『你在做什么？』1440ms、9词共约11376ms、总19s)：openingHoldMs=开场问句读完+搭头的停留；wordGapMs=每个词前的『小图摆动→滑走』过渡时长，过渡末尾词卡出现并同时发音。总时长=openingHold+Σ(wordGap+词配音)，9词时≈19s。",
+    "openingHoldMs": 1600,
+    "wordGapMs": 670,
+    "bgm": null,
+    "_bgmComment": "参考视频疑似有轻快BGM，但★禁止API/fal生成音乐(见规则)；要加就放本地开源/合成到 public/library/audio/ 后在此填 {src,volume}。暂留空。"
+  },
+  "image": {
+    "_comment": "每个词=一张小女儿做该动作的贴纸图。单角色→flux(喂重绘后的贴纸小女儿定妆图)。出图直接画在暖米色底#fee8c9上，和九宫格无缝(参考里插图浮在米色底、无白框)。",
+    "aspectRatio": "1:1",
+    "seedStrategy": "from-shot-id",
+    "charRef": "characters/girl/model-sheet.png",
+    "bg": "#fee8c9"
+  },
+  "colors": {
+    "_comment": "配色照搬参考视频(采样)。带描边的贴纸字：fill=填充、stroke=描边。",
+    "bg": "#fee8c9",
+    "chineseFill": "#17b3c2",
+    "chineseStroke": "#083b45",
+    "vietFill": "#53dbf5",
+    "vietStroke": "#1a7fb8",
+    "pinyin": "#4a4a4a"
+  },
+  "fonts": {
+    "_comment": "字体尽量贴参考：中文用手写体 Winter(青绿题字/词卡)、越南语/拼音用圆润 Nunito。参考里的确切字体如需精确复刻，把 ttf 放 public/library/fonts/ 再改这里(配置驱动)。",
+    "files": [
+      { "family": "Winter", "file": "library/fonts/Winter.ttf" },
+      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" },
+      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" }
+    ],
+    "zhStack": ["Winter", "SimHei", "PingFang SC", "Microsoft YaHei", "sans-serif"],
+    "zhWeight": 700,
+    "latinStack": ["Nunito", "PingFang SC", "sans-serif"]
+  },
+  "grid": {
+    "_comment": "3×3 九宫格(照参考)。cols×rows，items 数应=cols*rows(默认9)。",
+    "cols": 3,
+    "rows": 3
+  }
+}

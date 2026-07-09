@@ -3,10 +3,12 @@
 import type { LayoutModule } from "./types";
 import { LAYOUT as V2 } from "./v2-3x4";
 import { LAYOUT as V1 } from "./v1-legacy";
+import { LAYOUT as GRID9 } from "./grid-9";
 
 const LAYOUTS: Record<string, LayoutModule> = {
   [V2.id]: V2,
   [V1.id]: V1,
+  [GRID9.id]: GRID9,
 };
 
 // 未知/缺省 layout → 旧版式(v1-legacy)：与改造前「非 v2 即旧版式」的兜底一致，旧片渲染不变。

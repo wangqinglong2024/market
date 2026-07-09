@@ -153,6 +153,10 @@ export type Manifest = {
     captions?: CaptionCfg;
     bgm?: { src: string; volume?: number };
     fonts?: FontsMeta;
+    // grid-9 版式用（其它版式忽略）：底色、配色表、九宫格行列
+    bg?: string;
+    colors?: Record<string, string>;
+    grid?: { cols: number; rows: number };
   };
   beats: Beat[];
 };
@@ -160,15 +164,24 @@ export type Manifest = {
 export type VideoProps = { videoId: string; shard: string; manifest: Manifest | null };
 
 // ── 版式模块契约 ───────────────────────────────────────────────────────────────
+// 不同版式的 beat 形状不同(guoxue 有 captions、grid-9 有 zh/viet/gridIndex…)，
+// 所以渲染契约只保证 id+durationMs+transitionIn，其余字段各版式自己按需断言。
+export type RenderBeat = {
+  id: string;
+  durationMs: number;
+  transitionIn?: Beat["transitionIn"];
+  [k: string]: unknown;
+};
+
 // 每个版式负责：把 beats 切成"段"(段间才转场)、渲染一段、给出段的入场转场。
 // Video.tsx 只做编排(TransitionSeries/字体/BGM)，具体版面全在各 LayoutModule 里。
+// 单段版式(如 grid-9 整片一张连续画布)让 segments 返回 [allBeats] 即可。
 export type LayoutModule = {
   id: string;
   // 把 beats 切成若干段：每段渲染为一个 TransitionSeries.Sequence，转场发生在段之间。
-  // v2-3x4：按 sceneId 共图分组；v1-legacy：每拍一段。
-  segments: (beats: Beat[]) => Beat[][];
+  segments: (beats: RenderBeat[]) => RenderBeat[][];
   // 该段的入场转场类型（取自段首拍）
-  transitionOf: (seg: Beat[]) => Beat["transitionIn"];
+  transitionOf: (seg: RenderBeat[]) => RenderBeat["transitionIn"];
   // 渲染一段
-  Segment: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }>;
+  Segment: React.FC<{ beats: RenderBeat[]; meta: Manifest["meta"] }>;
 };

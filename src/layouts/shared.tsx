@@ -17,7 +17,8 @@ export const DEFAULT_MOTION: Motion = { scale: [1.03, 1.1], panX: [0, 0], panY: 
 export const DEFAULT_CAP = { pinyinColor: "#a58e5c", zhColor: "#20242b", localColor: "#d6336c", bgColor: "#fdfcf7" };
 
 export const manifestPath = (shard: string, id: string) => `videos/${shard}/${id}/manifest.json`;
-export const beatFrames = (b: Beat, fps: number) => Math.max(1, Math.round((b.durationMs / 1000) * fps));
+// 只依赖 durationMs，Beat / RenderBeat / grid beat 都能传
+export const beatFrames = (b: { durationMs: number }, fps: number) => Math.max(1, Math.round((b.durationMs / 1000) * fps));
 
 export const isHan = (c: string) => /[㐀-鿿]/.test(c);
 
