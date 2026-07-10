@@ -2,6 +2,17 @@
   "_comment": "视频总账。每条视频一条记录，扛上千条时的索引与状态。id 建议 slug；产物在 public/videos/<shard>/<id>/，其中 shard=年/月/日(YYYY/MM/DD，2026-07-05 用户改：原按月分片改为年月日三级)。",
   "videos": [
     {
+      "id": "richang-huodong",
+      "title": "日常活动9词 · 中文教学(越南受众)",
+      "template": "jiugongge-cihui",
+      "shard": "2026/07/10",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-10",
+      "manifest": "public/videos/2026/07/10/richang-huodong/manifest.json",
+      "beats": 10
+    },
+    {
       "id": "beigong-sheying",
       "title": "杯弓蛇影 · 内耗是把脑补的幻象当成真相",
       "template": "guoxue-jinju",

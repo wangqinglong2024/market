@@ -10,27 +10,30 @@
     "voice": "zh_female_yingtaowanzi_mars_bigtts",
     "voiceAlt": "zh_female_peiqi_mars_bigtts",
     "speed": 1.0,
-    "_timingComment": "节奏(参考实测：问句『你在做什么？』1440ms、9词共约11376ms、总19s)：openingHoldMs=开场问句读完+搭头的停留；wordGapMs=每个词前的『小图摆动→滑走』过渡时长，过渡末尾词卡出现并同时发音。总时长=openingHold+Σ(wordGap+词配音)，9词时≈19s。",
+    "_timingComment": "节奏照参考：总片长固定 totalTargetMs=19000ms(含开场问句+我在)。★加『我在』不许拉长总时长——每词间隙由 (总时长-开场-Σ词配音)/词数 反推，多出的开场靠压缩间隙吸收(不足 minWordGapMs 则兜底)。openingHoldMs 只是开场下限(实际取『问句+我在』自然时长)。",
+    "totalTargetMs": 19000,
+    "minWordGapMs": 260,
     "openingHoldMs": 1600,
-    "wordGapMs": 670,
     "bgm": null,
     "_bgmComment": "参考视频疑似有轻快BGM，但★禁止API/fal生成音乐(见规则)；要加就放本地开源/合成到 public/library/audio/ 后在此填 {src,volume}。暂留空。"
   },
   "image": {
-    "_comment": "每个词=一张小女儿做该动作的贴纸图。单角色→flux(喂重绘后的贴纸小女儿定妆图)。出图直接画在暖米色底#fee8c9上，和九宫格无缝(参考里插图浮在米色底、无白框)。",
+    "_comment": "每个词=一张小女儿做该动作的贴纸图。单角色→flux(喂贴纸小女儿定妆图)。★直接画在暖米色底#fee8c9上(和整页大背景一致)，出图后 build.prepImage 把边界底色归一到精确#fee8c9并裁框统一尺寸。★禁止透明化(用户锁定，边缘差)；底色一致即可无缝，晃动时无方框边。",
     "aspectRatio": "1:1",
     "seedStrategy": "from-shot-id",
     "charRef": "characters/girl/model-sheet.png",
     "bg": "#fee8c9"
   },
   "colors": {
-    "_comment": "配色照搬参考视频(采样)。带描边的贴纸字：fill=填充、stroke=描边。",
+    "_comment": "配色照搬参考视频(采样)。★中文共2色：顶部问句『你在做什么』=青色(同越南文)；词卡中文(起床…)=白字+深描边。越南文(大问句+九宫格标签)=青色。拼音=深色。",
     "bg": "#fee8c9",
-    "chineseFill": "#17b3c2",
-    "chineseStroke": "#083b45",
+    "chineseFill": "#53dbf5",
+    "chineseStroke": "#0e3547",
     "vietFill": "#53dbf5",
-    "vietStroke": "#1a7fb8",
-    "pinyin": "#4a4a4a"
+    "vietStroke": "#1c5e6d",
+    "wordFill": "#ffffff",
+    "wordStroke": "#123049",
+    "pinyin": "#2c3742"
   },
   "fonts": {
     "_comment": "字体尽量贴参考：中文用手写体 Winter(青绿题字/词卡)、越南语/拼音用圆润 Nunito。参考里的确切字体如需精确复刻，把 ttf 放 public/library/fonts/ 再改这里(配置驱动)。",

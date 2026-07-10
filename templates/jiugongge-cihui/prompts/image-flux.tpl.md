@@ -10,4 +10,4 @@
 
 The character: {canon}
 
-Art style: {style_short}. The ENTIRE image sits on one solid FLAT warm peach background of the exact color #fee8c9, edge to edge — NO white anywhere, no box, no frame, no drop-shadow platform. The character and any small props are centered with comfortable even margins on that peach background.
+Art style: {style_short}. The ENTIRE image sits on one solid FLAT warm light peach background of the exact color #fee8c9 (light cream-peach, NOT saturated orange), edge to edge — NO white anywhere, no box, no frame, NO rounded-rectangle panel or card behind the scene, NO inner border or outline framing the scene, NO ground shadow, NO cast shadow under the character or objects. The flat peach fills the whole image edge to edge; the character and any small props are centered with comfortable even margins on it.

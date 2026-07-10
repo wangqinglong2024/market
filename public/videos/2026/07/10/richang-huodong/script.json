@@ -1,0 +1,27 @@
+{
+  "_comment": "模板 jiugongge-cihui 首个视频。内容与示例视频 temp/TikTok.mp4 完全一致：9 个日常动作词。",
+  "videoId": "richang-huodong",
+  "lang": "vi",
+  "question": { "zh": "你在做什么？", "pinyin": "Nǐ zài zuò shénme?", "viet": "BẠN ĐANG LÀM GÌ?" },
+  "answer": { "zh": "我在＿＿", "pinyin": "Wǒ zài" },
+  "items": [
+    { "id": "w1", "zh": "起床", "pinyin": "qǐ chuáng", "viet": "THỨC DẬY",
+      "shot": { "content": "The chubby girl just waking up, sitting up in a small cozy bed and stretching both arms up with a big sleepy happy yawn, a little round alarm clock on a nightstand beside the bed." } },
+    { "id": "w2", "zh": "洗澡", "pinyin": "xǐ zǎo", "viet": "TẮM",
+      "shot": { "content": "The chubby girl taking a bath, sitting inside a cute little bathtub full of white foam bubbles, a shower head above sprinkling water, happily splashing with a joyful face." } },
+    { "id": "w3", "zh": "吃早饭", "pinyin": "chī zǎo fàn", "viet": "ĂN SÁNG",
+      "shot": { "content": "The chubby girl eating breakfast at a small table, a plate with a sunny fried egg and a piece of toast in front of her, a cup and a glass of orange juice, holding a fork with a happy smile." } },
+    { "id": "w4", "zh": "工作", "pinyin": "gōngzuò", "viet": "LÀM VIỆC",
+      "shot": { "content": "Just the chubby girl by herself, sitting and happily typing on a small laptop held on her lap, a focused cheerful smile — ONLY the girl and the little laptop, no desk, no room, no wall, no furniture, nothing else around her." } },
+    { "id": "w5", "zh": "买菜", "pinyin": "mǎi cài", "viet": "ĐI CHỢ",
+      "shot": { "content": "The chubby girl grocery shopping, happily pushing a small shopping cart filled with fresh vegetables and drink bottles, holding a shopping bag in one hand." } },
+    { "id": "w6", "zh": "锻炼", "pinyin": "duànliàn", "viet": "TẬP THỂ DỤC",
+      "shot": { "content": "The chubby girl exercising, sitting on a blue yoga mat and lifting a small dumbbell with one hand, wearing a little sporty headband, an energetic happy face." } },
+    { "id": "w7", "zh": "吃晚饭", "pinyin": "chī wǎn fàn", "viet": "ĂN TỐI",
+      "shot": { "content": "The chubby girl eating dinner at a table, a plate of food with a drink glass in front of her, holding a fork and a knife, a warm happy face." } },
+    { "id": "w8", "zh": "看电视", "pinyin": "kàn diàn shì", "viet": "XEM TIVI",
+      "shot": { "content": "The chubby girl watching television, sitting on a small cozy sofa holding a remote control, a retro TV set in front of her showing a little flower on screen, relaxed happy face." } },
+    { "id": "w9", "zh": "看书", "pinyin": "kàn shū", "viet": "ĐỌC SÁCH",
+      "shot": { "content": "The chubby girl reading a book, sitting down and holding an open book with both hands, a curious delighted face, a couple of closed books stacked beside her." } }
+  ]
+}
