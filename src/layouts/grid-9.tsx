@@ -57,11 +57,17 @@ const GridSegment: React.FC<{ beats: RenderBeat[]; meta: Manifest["meta"] }> = (
   const qb = all.find((b) => b.role === "question") as QBeat | undefined;
   const items = all.filter((b) => b.role === "item") as IBeat[];
 
-  // 每个 item 的绝对起点(ms) = 开场问句时长 + 之前所有 item 时长
+  // 揭示时刻表(照参考视频的『重叠』结构，非顺序排队)：
+  //  每个词以『均匀间隔 spacing』被揭示并发音；下一个词的小图『在上一个词发音期间就开始左右飘动』(飘动与配音重叠)，
+  //  这样每段飘动窗口≈spacing(约 1.8s)——从容的左右飘，而不是被挤进 0.5s 的抖动。总片长仍= openMs+Σ(gap+配音)=19s。
   const openMs = qb?.durationMs ?? 0;
-  const starts: number[] = [];
-  let acc = openMs;
-  for (const it of items) { starts.push(acc); acc += it.durationMs; }
+  const audioMs = items.map((it) => Math.max(1, it.durationMs - it.gapMs)); // 每词配音时长
+  const totalMs = openMs + items.reduce((a, it) => a + it.durationMs, 0);    // 全片时长(= calcVideoMetadata 的合计)
+  const N = items.length;
+  const lastAudio = audioMs[N - 1] ?? 0;
+  // R_i = openMs + i*spacing；末词发音结束正好落在片尾：R_{N-1}+lastAudio = totalMs
+  const spacing = N > 1 ? (totalMs - lastAudio - openMs) / (N - 1) : 0;
+  const revealAt = (i: number) => openMs + i * spacing;
 
   const colors = { ...DEF_COLORS, ...(meta.colors || {}) };
   const cols = meta.grid?.cols ?? 3;
@@ -128,27 +134,35 @@ const GridSegment: React.FC<{ beats: RenderBeat[]; meta: Manifest["meta"] }> = (
         const r = Math.floor(it.gridIndex / cols);
         const c = it.gridIndex % cols;
         const cx = c * cellW, cy = gridTop + r * cellH;
-        const s = starts[idx], reveal = s + it.gapMs;
-        // 摆动：轮到它的 gap 窗口内轻微来回晃(小幅旋转)
-        let angle = 0;
-        const wobX = 0, wobY = 0;
-        if (ms >= s && ms < reveal) {
-          const p = (ms - s) / it.gapMs;
-          angle = Math.sin(p * Math.PI * 6) * 6 * (1 - 0.25 * p);
+        const reveal = revealAt(idx);
+        const slideDur = 240;                 // 揭示前 240ms：小图滑走
+        // 飘动窗口 = [上一词揭示, 本词滑走前]。★第 1 个词不飘(参考里随开场结束即刻揭示、无飘动)。
+        const floatStart = idx === 0 ? reveal : revealAt(idx - 1);
+        const floatEnd = reveal - slideDur;
+        let wobX = 0, angle = 0;
+        if (idx > 0 && ms >= floatStart && ms < floatEnd) {
+          const winLen = Math.max(1, floatEnd - floatStart);
+          const p = (ms - floatStart) / winLen;
+          const cycles = Math.max(1, (winLen / 1000) * 1.0); // ~1 次/秒，与参考同频、从容
+          const env = Math.sin(Math.PI * clamp01(p * 1.02));  // 两端渐弱的包络，避免起止突跳
+          const swing = Math.sin(p * Math.PI * 2 * cycles) * env;
+          wobX = swing * 20;                  // 主体：左右平移(明显、舒服)
+          angle = swing * 2.2;                // 跟随方向的极轻微倾斜(钟摆感)
         }
-        // reveal 后 ~180ms：图滑走(淡出+上移)、词卡弹入(交叉)
-        const ex = clamp01((ms - reveal) / 180);
+        // 小图滑走(揭示前 slideDur 内淡出+上移)；词卡在揭示时刻弹入
+        const ex = clamp01((ms - floatEnd) / slideDur); // 0→1，ex=1 恰在 reveal
+        const cardIn = clamp01((ms - reveal) / 200);
         const imgW = Math.min(cellW * 0.82, 300);
         const imgH = cellH * 0.6;
         return (
           <div key={it.id} style={{ position: "absolute", left: cx, top: cy, width: cellW, height: cellH }}>
             {ex < 1 && (
-              <div style={{ position: "absolute", left: 0, right: 0, top: cellH * 0.05, display: "flex", justifyContent: "center", opacity: 1 - ex, transform: `translate(${wobX}px, ${wobY - 26 * ex}px) rotate(${angle}deg)`, transformOrigin: "center bottom" }}>
+              <div style={{ position: "absolute", left: 0, right: 0, top: cellH * 0.05, display: "flex", justifyContent: "center", opacity: 1 - ex, transform: `translate(${wobX}px, ${-26 * ex}px) rotate(${angle}deg)`, transformOrigin: "center bottom" }}>
                 <Img src={staticFile(it.image)} style={{ width: imgW, height: imgH, objectFit: "contain" }} />
               </div>
             )}
-            {ex > 0 && (
-              <div style={{ position: "absolute", left: 0, right: 0, top: cellH * 0.1, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, opacity: ex, transform: `scale(${0.6 + 0.4 * easeOut(ex)})`, transformOrigin: "center" }}>
+            {cardIn > 0 && (
+              <div style={{ position: "absolute", left: 0, right: 0, top: cellH * 0.1, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, opacity: cardIn, transform: `scale(${0.6 + 0.4 * easeOut(cardIn)})`, transformOrigin: "center" }}>
                 <Sticker text={it.zh} size={92} fill={colors.wordFill} stroke={colors.wordStroke} strokeW={9} family={zhFamily} weight={zhWeight} />
                 <span style={{ fontFamily: latin, fontSize: 38, fontWeight: 700, color: colors.pinyin }}>{it.pinyin}</span>
               </div>
@@ -173,7 +187,7 @@ const GridSegment: React.FC<{ beats: RenderBeat[]; meta: Manifest["meta"] }> = (
         </Sequence>
       )}
       {items.map((it, idx) => (
-        <Sequence key={`au-${it.id}`} from={framesMs(starts[idx] + it.gapMs, fps)} durationInFrames={framesMs(it.durationMs - it.gapMs, fps)} layout="none">
+        <Sequence key={`au-${it.id}`} from={framesMs(revealAt(idx), fps)} durationInFrames={framesMs(audioMs[idx], fps)} layout="none">
           <Audio src={staticFile(it.audio)} />
         </Sequence>
       ))}
