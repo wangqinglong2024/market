@@ -1,0 +1,31 @@
+{
+  "videoId": "shangwu-jingjiu-san-ju",
+  "lang": "vi",
+  "intro": {
+    "vi": "Học ba câu mời rượu tiếng Trung cổ văn thanh lịch, dùng cho bữa ăn thương mại!"
+  },
+  "phrases": [
+    {
+      "id": "p1",
+      "zh": "长风万里，敬君同行",
+      "pinyin": "Cháng fēng wàn lǐ, jìng jūn tóng xíng.",
+      "vi": "Gió dài vạn dặm, kính chúc cùng đồng hành."
+    },
+    {
+      "id": "p2",
+      "zh": "和光同尘，行稳致远。",
+      "pinyin": "Hé guāng tóng chén, xíng wěn zhì yuǎn.",
+      "vi": "Hòa mình khiêm nhường, vững bước đi xa."
+    },
+    {
+      "id": "p3",
+      "zh": "且敬过往，共赴新程",
+      "pinyin": "Qiě jìng guò wǎng, gòng fù xīn chéng.",
+      "vi": "Cùng kính quá khứ, cùng bước tới hành trình mới."
+    }
+  ],
+  "outro": {
+    "vi": "Lưu lại video để học thuộc nhé, và thử đọc lại cho đúng ngữ điệu!",
+    "zhTranslation": "保存视频慢慢练习跟读，试着读出正确语气哦！"
+  }
+}

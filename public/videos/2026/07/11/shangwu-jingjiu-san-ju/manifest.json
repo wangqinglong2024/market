@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1440,
+    "layout": "toast-3",
+    "transitionFrames": 10,
+    "fonts": {
+      "files": [
+        {
+          "family": "Winter",
+          "file": "library/fonts/Winter.ttf"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        }
+      ],
+      "zhStack": [
+        "Winter",
+        "SimHei",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "sans-serif"
+      ],
+      "zhWeight": 700,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "sans-serif"
+      ]
+    },
+    "captions": {
+      "sizes": {
+        "pinyin": 46,
+        "zh": 92,
+        "local": 44
+      },
+      "gapPinyinZh": 16,
+      "gapZhLocal": 28,
+      "sidePad": 60,
+      "pinyinColumnGap": 12,
+      "opticalLift": 24,
+      "karaokeColor": "#d6336c",
+      "pinyinColor": "#a58e5c",
+      "zhColor": "#20242b",
+      "localColor": "#d6336c",
+      "bgColor": "#ffffff"
+    },
+    "visual": {
+      "_comment": "build.mjs 按 beat 生成/复用图：有主角才喂主角定妆；空镜喂风格锚图只借画风。",
+      "sceneImage": null
+    }
+  },
+  "beats": [
+    {
+      "id": "intro",
+      "role": "intro",
+      "image": "videos/2026/07/11/shangwu-jingjiu-san-ju/images/scene-banquet-empty.png",
+      "audio": "videos/2026/07/11/shangwu-jingjiu-san-ju/audio/intro.mp3",
+      "durationMs": 10826,
+      "vi": "Học ba câu mời rượu tiếng Trung cổ văn thanh lịch, dùng cho bữa ăn thương mại!"
+    },
+    {
+      "id": "p1",
+      "role": "phrase",
+      "image": "videos/2026/07/11/shangwu-jingjiu-san-ju/images/scene-toast-host.png",
+      "audio": "videos/2026/07/11/shangwu-jingjiu-san-ju/audio/p1.mp3",
+      "durationMs": 4564,
+      "audioDelayMs": 520,
+      "zh": "长风万里，敬君同行",
+      "pinyin": "Cháng fēng wàn lǐ, jìng jūn tóng xíng.",
+      "vi": "Gió dài vạn dặm, kính chúc cùng đồng hành.",
+      "charTimings": [
+        {
+          "ch": "长",
+          "startMs": 115,
+          "endMs": 375
+        },
+        {
+          "ch": "风",
+          "startMs": 375,
+          "endMs": 765
+        },
+        {
+          "ch": "万",
+          "startMs": 765,
+          "endMs": 975
+        },
+        {
+          "ch": "里",
+          "startMs": 975,
+          "endMs": 1295
+        },
+        {
+          "ch": "敬",
+          "startMs": 1525,
+          "endMs": 1875
+        },
+        {
+          "ch": "君",
+          "startMs": 1875,
+          "endMs": 2145
+        },
+        {
+          "ch": "同",
+          "startMs": 2145,
+          "endMs": 2405
+        },
+        {
+          "ch": "行",
+          "startMs": 2405,
+          "endMs": 3050
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "role": "phrase",
+      "image": "videos/2026/07/11/shangwu-jingjiu-san-ju/images/scene-steady-table.png",
+      "audio": "videos/2026/07/11/shangwu-jingjiu-san-ju/audio/p2.mp3",
+      "durationMs": 4708,
+      "audioDelayMs": 520,
+      "zh": "和光同尘，行稳致远。",
+      "pinyin": "Hé guāng tóng chén, xíng wěn zhì yuǎn.",
+      "vi": "Hòa mình khiêm nhường, vững bước đi xa.",
+      "charTimings": [
+        {
+          "ch": "和",
+          "startMs": 65,
+          "endMs": 365
+        },
+        {
+          "ch": "光",
+          "startMs": 365,
+          "endMs": 635
+        },
+        {
+          "ch": "同",
+          "startMs": 635,
+          "endMs": 935
+        },
+        {
+          "ch": "尘",
+          "startMs": 935,
+          "endMs": 1285
+        },
+        {
+          "ch": "行",
+          "startMs": 1525,
+          "endMs": 1945
+        },
+        {
+          "ch": "稳",
+          "startMs": 1945,
+          "endMs": 2125
+        },
+        {
+          "ch": "致",
+          "startMs": 2125,
+          "endMs": 2395
+        },
+        {
+          "ch": "远",
+          "startMs": 2445,
+          "endMs": 3193
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "role": "phrase",
+      "image": "videos/2026/07/11/shangwu-jingjiu-san-ju/images/scene-new-journey.png",
+      "audio": "videos/2026/07/11/shangwu-jingjiu-san-ju/audio/p3.mp3",
+      "durationMs": 4228,
+      "audioDelayMs": 520,
+      "zh": "且敬过往，共赴新程",
+      "pinyin": "Qiě jìng guò wǎng, gòng fù xīn chéng.",
+      "vi": "Cùng kính quá khứ, cùng bước tới hành trình mới.",
+      "charTimings": [
+        {
+          "ch": "且",
+          "startMs": 115,
+          "endMs": 355
+        },
+        {
+          "ch": "敬",
+          "startMs": 355,
+          "endMs": 585
+        },
+        {
+          "ch": "过",
+          "startMs": 585,
+          "endMs": 855
+        },
+        {
+          "ch": "往",
+          "startMs": 955,
+          "endMs": 1155
+        },
+        {
+          "ch": "共",
+          "startMs": 1415,
+          "endMs": 1645
+        },
+        {
+          "ch": "赴",
+          "startMs": 1645,
+          "endMs": 1845
+        },
+        {
+          "ch": "新",
+          "startMs": 1845,
+          "endMs": 2155
+        },
+        {
+          "ch": "程",
+          "startMs": 2155,
+          "endMs": 2720
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "role": "outro",
+      "image": "videos/2026/07/11/shangwu-jingjiu-san-ju/images/scene-banquet-empty.png",
+      "audio": "videos/2026/07/11/shangwu-jingjiu-san-ju/audio/outro.mp3",
+      "durationMs": 9100,
+      "vi": "Lưu lại video để học thuộc nhé, và thử đọc lại cho đúng ngữ điệu!"
+    }
+  ]
+}
