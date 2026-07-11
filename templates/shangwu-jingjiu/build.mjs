@@ -2,14 +2,13 @@ import { readFileSync, existsSync, writeFileSync, appendFileSync } from "node:fs
 import { join } from "node:path";
 import { synth } from "../../scripts/tts.mjs";
 import { genImage, MODEL_USD } from "../../scripts/gen-image.mjs";
-import { loadCharacters, loadPrompts, buildFluxPrompt, buildScenePrompt } from "../../scripts/lib/config.mjs";
+import { loadPrompts, buildStoryPrompt } from "../../scripts/lib/config.mjs";
 
 const ID = "shangwu-jingjiu";
 const BASE_TEMPLATE = "guoxue-jinju";
 
 export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
   const script = JSON.parse(readFileSync(join(dir, "script.json"), "utf8"));
-  const characters = loadCharacters(BASE_TEMPLATE);
   const prompts = loadPrompts(BASE_TEMPLATE);
   const viVoice = settings.audio.viVoice;
   const zhVoice = settings.audio.zhVoice;
@@ -26,31 +25,29 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
     appendFileSync(costLog, `- ${new Date().toLocaleString("sv-SE")} | ${beatId} | ${model} | $${usd.toFixed(2)}\n`);
   }
 
+  // 群像聚餐（story 模式）：通用成年人、不用主角定妆、不保 IP。
+  // 死命令：只出现红酒高脚杯(red wine glasses)，严禁白酒/小瓷杯/烈酒瓶；GROUP 描述逐字复用减少长相漂移。
+  const GROUP = "a warm group of six cartoon adults in smart business attire (men in shirts and ties, women in elegant blouses), friendly smiling faces";
   const visualPlan = {
     intro: {
-      id: "scene-banquet-empty",
-      mode: "scene",
-      shot: "An elegant modern Chinese business dinner banquet room with a round dining table, tasteful dishes, small porcelain cups, folded napkins, and warm pendant light. Refined commercial meal atmosphere. Empty scene only, no people, no characters, no text.",
+      id: "scene-dinner-gathering",
+      shot: `${GROUP}, seated together around a round dining table at a business dinner, tasteful shared dishes in the middle, each person with a stemmed glass of red wine, chatting happily, warm pendant light above. Cozy convivial gathering. No text anywhere.`,
     },
     p1: {
-      id: "scene-toast-host",
-      mode: "character",
-      shot: "The chubby cartoon little girl host in pale-blue hanfu and scholar cap stands beside an elegant round business dinner table, politely raising a small porcelain cup with both hands in a graceful toast. Warm private dining room atmosphere, tasteful dishes on the table, refined and friendly. No text anywhere.",
+      id: "scene-group-toast",
+      shot: `${GROUP}, all standing around a round dinner table and raising stemmed glasses of red wine together toward the center in a cheerful toast, tasteful dishes on the table, warm celebratory mood. No text anywhere.`,
     },
     p2: {
-      id: "scene-steady-table",
-      mode: "scene",
-      shot: "A calm elegant business dinner table after a toast: two porcelain cups placed steadily side by side, simple dishes, warm tea steam, soft light, balanced and composed mood. Empty scene only, no people, no characters, no text.",
+      id: "scene-shared-meal",
+      shot: `${GROUP}, calmly enjoying a meal together around a round dinner table, kindly passing dishes to each other, stemmed glasses of red wine resting on the table, relaxed composed harmonious mood, soft warm light. No text anywhere.`,
     },
     p3: {
-      id: "scene-new-journey",
-      mode: "scene",
-      shot: "A refined business dinner table with two small porcelain cups gently touching, an open doorway with warm light in the background suggesting a new journey ahead. Elegant, hopeful, tasteful commercial meal setting. Empty scene only, no people, no characters, no text.",
+      id: "scene-new-journey-toast",
+      shot: `${GROUP}, leaning in and gently clinking stemmed glasses of red wine together above the center of a round dinner table, hopeful uplifting mood, warm light suggesting a bright new journey ahead. No text anywhere.`,
     },
     outro: {
-      id: "scene-banquet-empty",
-      mode: "scene",
-      shot: "An elegant modern Chinese business dinner banquet room with a round dining table, tasteful dishes, small porcelain cups, folded napkins, and warm pendant light. Refined commercial meal atmosphere. Empty scene only, no people, no characters, no text.",
+      id: "scene-dinner-gathering",
+      shot: `${GROUP}, seated together around a round dining table at a business dinner, tasteful shared dishes in the middle, each person with a stemmed glass of red wine, chatting happily, warm pendant light above. Cozy convivial gathering. No text anywhere.`,
     },
   };
 
@@ -59,11 +56,9 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
     const plan = visualPlan[key] || visualPlan.intro;
     if (imageCache[plan.id]) return imageCache[plan.id];
 
-    const isCharacter = plan.mode === "character";
-    const prompt = isCharacter
-      ? buildFluxPrompt({ shotContent: plan.shot, charIds: ["girl"], prompts, characters, useHat: true })
-      : buildScenePrompt({ shotContent: plan.shot, prompts });
-    const ref = isCharacter ? settings.image.charRef : settings.image.styleAnchor;
+    // story 模式：flux 喂风格锚图只借画风，群像按 shot 描述直接画（不用定妆、不保 IP）
+    const prompt = buildStoryPrompt({ shotContent: plan.shot, prompts });
+    const ref = settings.image.styleAnchor;
     const outPath = ensure(join(dir, "images", `${plan.id}.png`));
     const img = await genImage({
       outPath,

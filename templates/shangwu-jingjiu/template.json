@@ -5,11 +5,11 @@
   "layout": "toast-3",
   "meta": { "fps": 30, "width": 1080, "height": 1440 },
   "audio": {
-    "_comment": "viVoice 当前用已验证可合成越南语文本的火山女声；zhVoice 用温柔女声读中文古文句。",
+    "_comment": "viVoice 当前用已验证可合成越南语文本的火山女声；zhVoice 同用开朗姐姐(模板1朗读古文已验证音准稳)——温柔小雅慢速读古文会忽高忽低，弃用。",
     "viVoice": "zh_female_kailangjiejie_moon_bigtts",
-    "zhVoice": "zh_female_wenrouxiaoya_moon_bigtts",
-    "viSpeed": 0.96,
-    "zhSpeed": 0.88,
+    "zhVoice": "zh_female_kailangjiejie_moon_bigtts",
+    "viSpeed": 1.2,
+    "zhSpeed": 1.1,
     "introTailMs": 650,
     "phraseLeadMs": 520,
     "phraseTailMs": 900,
@@ -17,10 +17,9 @@
     "bgm": null
   },
   "image": {
-    "_comment": "沿用 guoxue-jinju 的出图体系：3:2 横图、flux 单主角、参考 guoxue 主角定妆。",
+    "_comment": "沿用 guoxue-jinju 的出图体系：3:2 横图、story 模式(flux 喂风格锚图只借画风)、群像成年人聚餐、不出现主角；只画红酒杯、严禁白酒。",
     "aspectRatio": "3:2",
     "seedStrategy": "from-shot-id",
-    "charRef": "templates/guoxue-jinju/characters/girl/model-sheet-hat.png",
     "styleAnchor": "templates/guoxue-jinju/characters/girl/model-sheet.png"
   },
   "captions": {
@@ -47,7 +46,7 @@
     "latinStack": ["Nunito", "PingFang SC", "Microsoft YaHei", "sans-serif"]
   },
   "visual": {
-    "_comment": "build.mjs 按 beat 生成/复用图：有主角才喂主角定妆；空镜喂风格锚图只借画风。",
+    "_comment": "build.mjs 按 beat 生成/复用图：全部走 story 模式群像，喂风格锚图只借画风、不出现固定主角。",
     "sceneImage": null
   }
 }
