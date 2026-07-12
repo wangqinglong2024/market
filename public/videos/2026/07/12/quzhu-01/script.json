@@ -6,7 +6,7 @@
     "vi": "Những kiểu người này sẽ tránh xa bạn.",
     "zh": "这类人将远离你",
     "pinyin": "zhè lèi rén jiāng yuǎn lí nǐ",
-    "themePrompt": "an apocalyptic storm scene combining: a shattering red rose, a venomous green snake coiled around a cracked stone pillar, an ancient bridge snapping in half over an abyss, a white theater mask cracking apart, all lit by violent lightning under black storm clouds, rain streaks, epic movie-poster composition"
+    "themePrompt": "a calm gender-neutral young adult stands inside a pale-gold protective circle while six harmful symbols move outward: a wilted rose with cracked heart, a two-faced paper mask, a snapped red trust ribbon, a long-nosed liar mask, a thorny green eye, and a small gray rain cloud with a broken horseshoe"
   },
   "words": [
     {
@@ -15,7 +15,7 @@
       "vi": "Sở Khanh",
       "fx": "shatter-rain",
       "sfx": "shatter",
-      "imagePrompt": "a single red rose shattering into glass shards in a violent night rainstorm, petals breaking apart mid-air, dramatic lightning backlight, dark blue and crimson palette"
+      "imagePrompt": "a flashy insincere young man offers a red rose while hiding a second broken heart behind his back; a bright decisive energy sweep pushes him away and shatters the false rose, symbolic and nonviolent"
     },
     {
       "zh": "小人",
@@ -23,7 +23,7 @@
       "vi": "Tiểu nhân",
       "fx": "shadow-crumble",
       "sfx": "shatter",
-      "imagePrompt": "a venomous green snake coiled around a broken ancient stone pillar in deep shadows, sinister glowing yellow eyes, black creeping mist, sickly green rim light"
+      "imagePrompt": "a sneaky small masked figure crouches behind a friendly paper mask with crossed fingers, exposed by a bright golden spotlight as the disguise crumbles into colorful pieces"
     },
     {
       "zh": "背叛",
@@ -31,7 +31,7 @@
       "vi": "Phản bội",
       "fx": "tear-half",
       "sfx": "tear",
-      "imagePrompt": "an ancient stone bridge snapped in half over a dark bottomless abyss, the broken gap at center of composition, falling debris, storm sky with red lightning"
+      "imagePrompt": "two hands that once clasped are pulled apart as a red trust ribbon between them snaps cleanly, broken promise fragments fly outward under a sharp white-blue slash of light"
     },
     {
       "zh": "欺骗",
@@ -39,12 +39,23 @@
       "vi": "Lừa dối",
       "fx": "strip-peel",
       "sfx": "tear",
-      "imagePrompt": "a white theater mask cracking and peeling apart in floating fragments, hollow darkness behind the mask, eerie purple mist, cold moonlight"
+      "imagePrompt": "a smiling white theater mask splits open to reveal a long cartoon liar nose and crossed speech bubbles, the false mask peels away in bright purple and cyan fragments"
+    },
+    {
+      "zh": "嫉妒",
+      "pinyin": "jí dù",
+      "vi": "Đố kỵ",
+      "fx": "shadow-crumble",
+      "sfx": "shatter",
+      "imagePrompt": "a symbolic green jealous eye glares from a cracked hand mirror while thorny green smoke curls around it; a warm golden beam breaks the mirror and blows the jealousy away"
+    },
+    {
+      "zh": "霉运",
+      "pinyin": "méi yùn",
+      "vi": "Xui xẻo",
+      "fx": "shatter-rain",
+      "sfx": "shatter",
+      "imagePrompt": "a small charcoal rain cloud, broken umbrella, scattered unlucky dice and snapped horseshoe are swept rapidly away from the viewer by a bright golden gust, energetic and playful rather than frightening"
     }
-  ],
-  "outro": {
-    "vi": "Gõ 'nhận' để họ tránh xa bạn. Ngày mai: những điều sẽ đến với bạn.",
-    "preview": "Ngày mai: những điều sẽ ĐẾN với bạn",
-    "cta": "Gõ 'nhận' để họ tránh xa bạn 👇"
-  }
+  ]
 }

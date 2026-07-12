@@ -1,5 +1,5 @@
 {
-  "_comment": "正念翻牌引擎·驱逐系（坏词远离你）。规范：mind/new_media_operations/02.正念翻牌引擎/。3:4 纯黑底融入信息流；开场=主题大图+正念吸引四字+三语钩子(只越南语发音)；每词微循环=越语+图先行→拼音+中文咒文(中文朗读)→逐词定制毁灭动效；结尾解印+领取钩。",
+  "_comment": "正念翻牌引擎·驱逐系（坏词远离你）。3:4 For You近黑底；开场+6词，第6词后直接结束；全屏图、居中文字。",
   "id": "zhengnian-quzhu",
   "name": "正念翻牌·驱逐系(越南受众)",
   "layout": "zhengnian",
@@ -12,14 +12,14 @@
     "zhSpeed": 1.0,
     "hookTailMs": 400,
     "wordMs": 2400,
-    "outroTailMs": 800
+    "outroTailMs": 0
   },
   "image": {
-    "_comment": "动漫风格锚共享一张(首次构建自动生成，人工确认画风后锁定)。",
+    "_comment": "只用风格锚图的蜡笔笔触，禁止复用锚图人物和内容。",
     "aspectRatio": "3:4",
-    "styleAnchor": "public/library/style/anime-anchor.png"
+    "version": "v3"
   },
-  "captions": { "bgColor": "#000000" },
+  "captions": { "bgColor": "#060608" },
   "fonts": {
     "files": [
       { "family": "Ma Shan Zheng", "file": "library/fonts/MaShanZheng.ttf" },

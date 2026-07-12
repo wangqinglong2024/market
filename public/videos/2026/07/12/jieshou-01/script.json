@@ -6,7 +6,7 @@
     "vi": "Chúc bạn năm nay nhận đủ những điều này.",
     "zh": "愿你今年收下这一切",
     "pinyin": "yuàn nǐ jīn nián shōu xià zhè yī qiè",
-    "themePrompt": "an epic radiant golden scene combining: a giant golden koi fish leaping over a sea of clouds at sunrise, an overflowing treasure chest bursting with light, two cherry blossom trees intertwined, a lighthouse beam through golden mist, warm gold and pink palette, movie-poster composition"
+    "themePrompt": "a warm round-faced young adult opens both hands as six distinct blessings float toward them: a four-leaf clover, a red prosperity pouch, a heart tied with red thread, a helping hand, a green leaf with heartbeat line, and a small victory trophy"
   },
   "words": [
     {
@@ -15,7 +15,7 @@
       "vi": "May mắn",
       "fx": "light-swirl",
       "sfx": "chime",
-      "imagePrompt": "a giant golden koi fish leaping out of a sea of clouds at sunrise, trailing sparkling water droplets and streams of golden light, sun rays bursting"
+      "imagePrompt": "a smiling young woman catches a falling four-leaf clover beneath a small arc of lucky stars, with a few curved chalk motion marks"
     },
     {
       "zh": "发财",
@@ -23,7 +23,7 @@
       "vi": "Phát tài",
       "fx": "coin-burst",
       "sfx": "coins",
-      "imagePrompt": "an ancient treasure chest on a mountain of gold coins bursting open with blinding rays of golden light, coins flying into the air, red silk ribbons"
+      "imagePrompt": "a cheerful shopkeeper ties a plump red prosperity pouch while a small money tree sprouts behind it, with a few festive red ribbons and gold sparkles; no chest and no pile of coins"
     },
     {
       "zh": "真爱",
@@ -31,7 +31,7 @@
       "vi": "Tình yêu đích thực",
       "fx": "petal-thread",
       "sfx": "heartbeat",
-      "imagePrompt": "two cherry blossom trees grown intertwined into one, pink petals swirling in warm wind, a single red thread weaving between branches, golden hour light"
+      "imagePrompt": "two round friendly adults face one another and each holds one end of a vivid red thread that forms a single heart between their hands, with a few small pink petals"
     },
     {
       "zh": "贵人",
@@ -39,12 +39,23 @@
       "vi": "Quý nhân",
       "fx": "gate-light",
       "sfx": "boom",
-      "imagePrompt": "majestic golden gates opening in the sky above calm sea, a lighthouse beam cutting through luminous golden mist, stairway of light descending, dawn colors"
+      "imagePrompt": "a kind gray-haired mentor extends a steady helping hand to a young adult climbing one difficult step, while a narrow warm doorway glows behind them"
+    },
+    {
+      "zh": "健康",
+      "pinyin": "jiàn kāng",
+      "vi": "Sức khỏe",
+      "fx": "light-swirl",
+      "sfx": "chime",
+      "imagePrompt": "a rosy-cheeked middle-aged woman jogs lightly while a heartbeat-shaped chalk line, fresh green leaves and a small sun emblem orbit close around her"
+    },
+    {
+      "zh": "成功",
+      "pinyin": "chéng gōng",
+      "vi": "Thành công",
+      "fx": "gate-light",
+      "sfx": "boom",
+      "imagePrompt": "a determined young adult reaches the top of three hand-drawn steps and raises a modest golden trophy, surrounded by a compact halo of stars, paper confetti and upward chalk lines"
     }
-  ],
-  "outro": {
-    "vi": "Gõ 'nhận' để nhận hết. Ngày mai: những thứ sẽ tránh xa bạn.",
-    "preview": "Ngày mai: những thứ sẽ TRÁNH XA bạn",
-    "cta": "Gõ 'nhận' để nhận hết 👇"
-  }
+  ]
 }

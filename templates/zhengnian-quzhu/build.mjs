@@ -1,34 +1,23 @@
 // 正念翻牌引擎构建管线（驱逐/接收共用，series 由模板 settings 区分）。
-// script.json → 越南语钩子/CTA 配音 + 每词中文朗读 + 主题图/词图(动漫风格锚) → manifest。
-import { readFileSync, existsSync } from "node:fs";
+// script.json → 越南语钩子配音 + 每词中文朗读 + 主题图/词图(纯文字画风描述) → manifest。
+import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { synth } from "../../scripts/tts.mjs";
 import { genImage } from "../../scripts/gen-image.mjs";
 
-const ANCHOR_PROMPT =
-  "exaggerated Japanese anime style illustration, bold ink outlines, dramatic composition, dynamic action lines, high contrast vivid colors, epic fantasy landscape with storm clouds and golden light rays breaking through, painterly cel shading, no people, no characters, no text";
-
-const STYLE = "exaggerated Japanese anime style, bold ink outlines, dramatic composition, dynamic action lines, high contrast vivid colors, painterly cel shading, no people, no characters, no text, edges fading into pure black background";
-
-async function ensureAnimeAnchor(ROOT, settings) {
-  const anchor = join(ROOT, settings.image.styleAnchor);
-  if (existsSync(anchor)) return anchor;
-  // 引导锚：借 shenfen 暗调渐变当参考底，让 flux 按提示词产出动漫风样例，之后全线锁定此图
-  const bootstrap = join(ROOT, "templates", "shenfen-jiema", "style-anchor.png");
-  await genImage({ outPath: anchor, prompt: ANCHOR_PROMPT, refPaths: [bootstrap], settings, model: "flux" });
-  console.log("  🎨 动漫风格锚已生成(首次)，人工确认画风后锁定:", anchor);
-  return anchor;
-}
+const STYLE = `Use the supplied image as a STYLE REFERENCE ONLY. Copy only its gentle naive wax-crayon and colored-pencil medium: deep warm charcoal-black textured paper, bold rough uneven graphite outlines, visibly scribbled pigment grain, handmade children's-book drawing, simple rounded forms, cream, muted gold, brick red, leaf green and dusty blue. ABSOLUTELY DO NOT INCLUDE OR RESEMBLE THE REFERENCE IMAGE'S BLOND CHILD, GREEN T-SHIRT, BLUE SHORTS, TREASURE CHEST, COINS, POSE OR COMPOSITION. The content and characters must be entirely new and determined only by the scene request. Vertical 3:4, one centered readable symbolic scene, generous dark negative space at top and bottom for captions. No text, letters, logo, watermark, photorealism, 3D, glossy vector finish, scenery, room, floor or gradient`;
 
 export async function buildZhengnian({ videoId, dir, ROOT, settings, rel, ensure }) {
   const script = JSON.parse(readFileSync(join(dir, "script.json"), "utf8"));
   const a = settings.audio;
-  const anchor = await ensureAnimeAnchor(ROOT, settings);
   const img = async (name, prompt) => {
-    const p = ensure(join(dir, "images", `${name}.png`));
-    const r = await genImage({ outPath: p, prompt: `${STYLE}. Scene: ${prompt}`, refPaths: [anchor], settings, model: "flux" });
-    console.log(`  🖼 ${name}${r.cached ? " (cache)" : " flux $0.04"}`);
-    return rel("images", `${name}.png`);
+    const version = settings.image.version ?? "v2";
+    const file = `${name}-${version}.png`;
+    const p = ensure(join(dir, "images", file));
+    const styleRef = join(ROOT, "public/videos/2026/07/12/style-preview/facai-gentle-crayon-bold-rough.png");
+    const r = await genImage({ outPath: p, prompt: `${STYLE}. Scene request: ${prompt}`, refPaths: [styleRef], settings, model: "flux" });
+    console.log(`  🖼 ${name}${r.cached ? " (cache)" : " curl/flux-kontext"}`);
+    return rel("images", file);
   };
 
   const beats = [];
@@ -60,17 +49,6 @@ export async function buildZhengnian({ videoId, dir, ROOT, settings, rel, ensure
       zh: w.zh, pinyin: w.pinyin, vi: w.vi, fx: w.fx, sfx: w.sfx,
     });
   }
-
-  // ③ 封印 + 领取
-  const outroAudio = ensure(join(dir, "audio", "outro.mp3"));
-  const outroTts = await synth(script.outro.vi, outroAudio, { voice: a.viVoice, speed: a.viSpeed });
-  console.log(`  🎙 outro(vi): ${outroTts.ms}ms`);
-  beats.push({
-    id: "outro", role: "seal", index: total + 1, total,
-    durationMs: 300 + outroTts.ms + (a.outroTailMs ?? 800),
-    audio: rel("audio", "outro.mp3"), audioDelayMs: 300,
-    vi: script.outro.cta ?? script.outro.vi, preview: script.outro.preview,
-  });
 
   return {
     meta: {

@@ -1,5 +1,5 @@
 {
-  "_comment": "正念翻牌引擎·接收系（好词来到你）。规范：mind/new_media_operations/02.正念翻牌引擎/。与驱逐系共用构建管线与版式，series=jieshou：词=翻牌登场，动效=化金光收进屏幕下方福印(逐格点亮)。",
+  "_comment": "正念翻牌引擎·接收系（好词来到你）。开场+6词，第6词后直接结束；全屏图、居中文字；纯文字描述画风。",
   "id": "zhengnian-jieshou",
   "name": "正念翻牌·接收系(越南受众)",
   "layout": "zhengnian",
@@ -12,13 +12,13 @@
     "zhSpeed": 1.0,
     "hookTailMs": 400,
     "wordMs": 2400,
-    "outroTailMs": 800
+    "outroTailMs": 0
   },
   "image": {
     "aspectRatio": "3:4",
-    "styleAnchor": "public/library/style/anime-anchor.png"
+    "version": "v3"
   },
-  "captions": { "bgColor": "#000000" },
+  "captions": { "bgColor": "#060608" },
   "fonts": {
     "files": [
       { "family": "Ma Shan Zheng", "file": "library/fonts/MaShanZheng.ttf" },

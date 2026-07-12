@@ -10,7 +10,7 @@
       "status": "built",
       "createdAt": "2026-07-12",
       "manifest": "public/videos/2026/07/12/jieshou-01/manifest.json",
-      "beats": 6
+      "beats": 7
     },
     {
       "id": "quzhu-01",
@@ -21,7 +21,7 @@
       "status": "built",
       "createdAt": "2026-07-12",
       "manifest": "public/videos/2026/07/12/quzhu-01/manifest.json",
-      "beats": 6
+      "beats": 7
     },
     {
       "id": "nguyen-ho-giai-ma",

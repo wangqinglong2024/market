@@ -1,6 +1,6 @@
 // 版式 zhengnian：正念翻牌引擎（驱逐/接收共用，manifest.meta.series 区分）。
-// 结构：hook(主题大图+正念吸引+三语钩子,只越语发音) → word×N(越语+图先行→拼音+中文咒文→逐词定制动效) → seal(解印+领取钩)。
-// 设计系统：纯黑底(#000)融入 TikTok 信息流、3:4、动漫大图、毛笔大字、朱砂"解"印。
+// 结构：hook → word×6，第6词后直接结束。
+// 设计系统：For You 近黑底(#060608)、3:4全屏图、三语文字居中。
 // 动效纪律：一词一效(fx 字段驱动)，本文件实现动效原语，参数按词定制。
 import {
   AbsoluteFill,
@@ -38,7 +38,7 @@ const GOLD = "#E9BE6A";
 const GOLD_DIM = "#B99552";
 const RED = "#C13A2E";
 const INK = "#F5F1E6";
-const BG = "#000000";
+const BG = "#060608";
 const W = 1080;
 const H = 1440;
 
@@ -61,14 +61,6 @@ const Seal: React.FC<{ size?: number; zh: string; style?: React.CSSProperties }>
     }}
   >
     <span style={{ fontFamily: zh, fontSize: size * 0.6, color: "#F7EBE0", lineHeight: 1 }}>解</span>
-  </div>
-);
-
-// 词/封印拍右上角标：解印 + 竖排"正念吸引"
-const CornerBrand: React.FC<{ zh: string }> = ({ zh }) => (
-  <div style={{ position: "absolute", top: 60, right: 60, display: "flex", flexDirection: "column", alignItems: "center", gap: 14 }}>
-    <Seal size={64} zh={zh} />
-    <div style={{ fontFamily: zh, fontSize: 26, color: GOLD_DIM, writingMode: "vertical-rl", letterSpacing: 6 }}>正念吸引</div>
   </div>
 );
 
@@ -104,29 +96,29 @@ const HookBeat: React.FC<{ b: ZBeat; zh: string; latin: string }> = ({ b, zh, la
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const brand = spring({ frame, fps, config: { damping: 12, stiffness: 170 } });
-  const l1 = spring({ frame: frame - Math.round(0.25 * fps), fps, config: { damping: 15, stiffness: 140 } });
   const zoom = 1.06 + (frame / fps) * 0.012;
   return (
     <AbsoluteFill style={{ backgroundColor: BG }}>
       {b.image ? (
         <Img src={staticFile(b.image)} style={{ width: "100%", height: "100%", objectFit: "cover", transform: `scale(${zoom})` }} />
       ) : null}
-      <AbsoluteFill style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.12) 30%, rgba(0,0,0,0.16) 55%, rgba(0,0,0,0.86) 100%)" }} />
-      {/* 品牌四字 + 越南语小注 */}
-      <div style={{ position: "absolute", top: 96, left: 0, right: 0, textAlign: "center", opacity: brand, transform: `scale(${interpolate(brand, [0, 1], [1.25, 1])})` }}>
-        <div style={{ fontFamily: zh, fontSize: 128, color: GOLD, letterSpacing: 20, lineHeight: 1, textShadow: "0 0 60px rgba(233,190,106,0.5), 0 4px 18px rgba(0,0,0,0.9)" }}>
-          正念吸引
+      <AbsoluteFill style={{ background: "rgba(6,6,8,0.2)" }} />
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "100px 80px" }}>
+        <div
+          style={{
+            width: "100%", textAlign: "center", opacity: brand,
+            scale: interpolate(brand, [0, 1], [1.18, 1]),
+            background: "rgba(6,6,8,0.66)", borderRadius: 48, padding: "52px 42px 58px",
+            boxShadow: "0 18px 70px rgba(0,0,0,0.38)",
+          }}
+        >
+          <div style={{ fontFamily: zh, fontSize: 118, color: GOLD, letterSpacing: 16, lineHeight: 1, textShadow: "0 0 48px rgba(233,190,106,0.48)" }}>正念吸引</div>
+          <div style={{ fontFamily: latin, fontWeight: 700, fontSize: 30, color: GOLD_DIM, letterSpacing: 7, marginTop: 16 }}>CHÁNH NIỆM · LUẬT HẤP DẪN</div>
+          <div style={{ fontFamily: latin, fontWeight: 700, fontStyle: "italic", fontSize: 34, color: GOLD, marginTop: 38 }}>{b.pinyin}</div>
+          <div style={{ fontFamily: zh, fontSize: 82, color: INK, marginTop: 10, lineHeight: 1.15 }}>{b.zh}</div>
+          <div style={{ fontFamily: latin, fontWeight: 900, fontSize: 56, color: INK, marginTop: 20, lineHeight: 1.22 }}>{b.vi}</div>
         </div>
-        <div style={{ fontFamily: latin, fontWeight: 700, fontSize: 30, color: GOLD_DIM, letterSpacing: 8, marginTop: 14 }}>
-          CHÁNH NIỆM · LUẬT HẤP DẪN
-        </div>
-      </div>
-      {/* 三语钩子：拼音 + 中文 + 越南语（只越语发音） */}
-      <div style={{ position: "absolute", bottom: 150, left: 70, right: 70, textAlign: "center", opacity: l1, transform: `translateY(${(1 - l1) * 30}px)` }}>
-        <div style={{ fontFamily: latin, fontWeight: 700, fontStyle: "italic", fontSize: 34, color: GOLD, letterSpacing: 2 }}>{b.pinyin}</div>
-        <div style={{ fontFamily: zh, fontSize: 78, color: INK, marginTop: 10, lineHeight: 1.15, textShadow: "0 3px 20px rgba(0,0,0,0.9)" }}>{b.zh}</div>
-        <div style={{ fontFamily: latin, fontWeight: 900, fontSize: 56, color: INK, marginTop: 18, lineHeight: 1.25, textShadow: "0 3px 22px rgba(0,0,0,0.95)" }}>{b.vi}</div>
-      </div>
+      </AbsoluteFill>
       <Sequence from={2}>
         <Audio src={sfxSrc("boom")} volume={0.5} />
       </Sequence>
@@ -235,34 +227,6 @@ const Destruction: React.FC<{ fx: string; p: number; children: React.ReactNode }
 
 // ── 动效原语：正向收取 ────────────────────────────────────────────────────────
 
-// 收取粒子：按 fx 换粒子形态，全部汇入福印槽位
-const AbsorbFx: React.FC<{ fx: string; p: number; zh: string; slotX: number }> = ({ fx, p, zh, slotX }) => {
-  if (p <= 0) return null;
-  const n = 16;
-  const parts = Array.from({ length: n }).map((_, i) => {
-    const d = Math.max(0, p - rnd(i, 21) * 0.3) / 0.7;
-    const sx = W / 2 + (rnd(i, 22) - 0.5) * 620;
-    const sy = 640 + (rnd(i, 23) - 0.5) * 420;
-    const tx = slotX, ty = H - 116;
-    const arc = fx === "coin-burst" ? -260 * Math.sin(Math.PI * d) : fx === "light-swirl" ? (rnd(i, 24) - 0.5) * 340 * Math.sin(Math.PI * d) : 0;
-    const x = sx + (tx - sx) * d + (fx === "light-swirl" ? arc : 0);
-    const y = sy + (ty - sy) * d + (fx === "coin-burst" ? arc : 0);
-    const o = d < 0.9 ? 0.95 : (1 - d) * 9.5;
-    if (fx === "coin-burst") {
-      return <div key={i} style={{ position: "absolute", left: x, top: y, width: 44, height: 44, borderRadius: "50%", background: "radial-gradient(circle at 35% 30%, #ffe9ad, #E9BE6A 55%, #8a6420)", boxShadow: "0 0 18px rgba(233,190,106,0.8)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: zh, fontSize: 24, color: "#6b4a12", opacity: o, transform: `rotate(${d * 300 * (rnd(i, 25) - 0.5)}deg)` }}>财</div>;
-    }
-    if (fx === "petal-thread") {
-      return <div key={i} style={{ position: "absolute", left: x, top: y, width: 26, height: 18, borderRadius: "60% 40% 60% 40%", background: "linear-gradient(135deg, #ffd3dd, #ff8fa8)", opacity: o, transform: `rotate(${d * 260}deg)` }} />;
-    }
-    if (fx === "gate-light") {
-      return <div key={i} style={{ position: "absolute", left: x, top: y, width: 6, height: 60 + rnd(i, 26) * 60, background: "linear-gradient(rgba(255,240,200,0), #ffe9ad, rgba(255,240,200,0))", opacity: o, transform: `rotate(${(rnd(i, 27) - 0.5) * 20}deg)` }} />;
-    }
-    // light-swirl 默认：金色流光
-    return <div key={i} style={{ position: "absolute", left: x, top: y, width: 10, height: 10, borderRadius: "50%", background: "#ffe9ad", boxShadow: "0 0 22px 8px rgba(233,190,106,0.75)", opacity: o }} />;
-  });
-  return <AbsoluteFill style={{ pointerEvents: "none" }}>{parts}</AbsoluteFill>;
-};
-
 // 贵人：金门开启背景层
 const GatePanels: React.FC<{ p: number }> = ({ p }) =>
   p <= 0 ? null : (
@@ -299,30 +263,22 @@ const WordBeat: React.FC<{ b: ZBeat; series: string; zh: string; latin: string }
   const neg = series === "quzhu";
   const flip = !neg ? interpolate(Math.min(frame, Math.round(0.5 * fps)), [0, Math.round(0.5 * fps)], [90, 0]) : 0;
 
-  const slotX = W / 2 + ((b.index - 1) - (b.total - 1) / 2) * 108;
-
-  // 内容组：图 + 越南语词 + (后入)拼音+中文
+  // 内容组：全屏图 + 居中三语文字
   const content = (
     <AbsoluteFill>
-      {/* 词图：中部 */}
-      <div style={{ position: "absolute", top: 330, left: 0, right: 0, height: 800, opacity: enter }}>
-        {b.image ? (
-          <Img src={staticFile(b.image)} style={{ width: "100%", height: "100%", objectFit: "cover", WebkitMaskImage: "radial-gradient(ellipse 72% 62% at 50% 50%, black 55%, transparent 98%)", maskImage: "radial-gradient(ellipse 72% 62% at 50% 50%, black 55%, transparent 98%)" }} />
-        ) : null}
-      </div>
-      {/* 越南语词：先行，砸入图下沿，不消失 */}
-      <div style={{ position: "absolute", top: 1030, left: 60, right: 60, textAlign: "center", opacity: enter, transform: `scale(${interpolate(enter, [0, 1], [1.7, 1])})` }}>
-        <div style={{ fontFamily: latin, fontWeight: 900, fontSize: 84, color: neg ? INK : GOLD, lineHeight: 1.1, textShadow: "0 4px 26px rgba(0,0,0,0.95)" }}>{b.vi}</div>
-      </div>
-      {/* 拼音 + 中文毛笔大字：第二时序，图上方 */}
-      {frame >= f1 ? (
-        <div style={{ position: "absolute", top: 60, left: 0, right: 0, textAlign: "center", opacity: zhIn, transform: `scale(${interpolate(zhIn, [0, 1], [2.1, 1])})` }}>
-          <div style={{ fontFamily: zh, fontSize: b.zh && b.zh.length > 2 ? 240 : 320, color: neg ? INK : GOLD, lineHeight: 1, textShadow: neg ? "0 0 70px rgba(245,241,230,0.28), 0 6px 30px rgba(0,0,0,0.9)" : "0 0 90px rgba(233,190,106,0.55), 0 6px 30px rgba(0,0,0,0.9)" }}>
-            {b.zh}
-          </div>
-          <div style={{ fontFamily: latin, fontWeight: 700, fontStyle: "italic", fontSize: 42, color: GOLD_DIM, marginTop: 4 }}>{b.pinyin}</div>
+      {b.image ? <Img src={staticFile(b.image)} style={{ width: "100%", height: "100%", objectFit: "cover", opacity: enter, scale: 1.025 }} /> : null}
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse 62% 34% at 50% 50%, rgba(6,6,8,0.76), rgba(6,6,8,0.12) 78%, transparent 100%)" }} />
+      <AbsoluteFill style={{ justifyContent: "center", alignItems: "center", padding: "110px 80px" }}>
+        <div style={{ width: "100%", textAlign: "center", opacity: enter, scale: interpolate(enter, [0, 1], [1.5, 1]) }}>
+          {frame >= f1 ? (
+            <div style={{ opacity: zhIn, scale: interpolate(zhIn, [0, 1], [1.8, 1]) }}>
+              <div style={{ fontFamily: zh, fontSize: b.zh && b.zh.length > 2 ? 190 : 250, color: neg ? INK : GOLD, lineHeight: 0.95, textShadow: neg ? "0 4px 28px rgba(0,0,0,0.98)" : "0 0 70px rgba(233,190,106,0.5), 0 4px 28px rgba(0,0,0,0.98)" }}>{b.zh}</div>
+              <div style={{ fontFamily: latin, fontWeight: 800, fontStyle: "italic", fontSize: 46, color: GOLD, marginTop: 14 }}>{b.pinyin}</div>
+            </div>
+          ) : null}
+          <div style={{ fontFamily: latin, fontWeight: 900, fontSize: 76, color: neg ? INK : GOLD, lineHeight: 1.12, marginTop: frame >= f1 ? 30 : 0, textShadow: "0 4px 28px rgba(0,0,0,0.98)" }}>{b.vi}</div>
         </div>
-      ) : null}
+      </AbsoluteFill>
     </AbsoluteFill>
   );
 
@@ -337,16 +293,12 @@ const WordBeat: React.FC<{ b: ZBeat; series: string; zh: string; latin: string }
         </>
       ) : (
         <>
-          {/* 翻牌入场 + 收取时整体向福印吸入 */}
-          <div style={{ position: "absolute", inset: 0, transform: `perspective(1400px) rotateY(${flip}deg) translate(${(slotX - W / 2) * fxP}px, ${(H - 116 - 700) * fxP * 0.9}px) scale(${1 - fxP * 0.85})`, opacity: 1 - Math.max(0, fxP - 0.75) * 4, transformOrigin: "50% 45%" }}>
+          <div style={{ position: "absolute", inset: 0, transform: `perspective(1400px) rotateY(${flip}deg) scale(${1 - fxP * 0.06})`, opacity: 1 - Math.max(0, fxP - 0.84) * 6.25, transformOrigin: "50% 50%" }}>
             {content}
           </div>
           {b.fx === "petal-thread" ? <RedThread p={fxP} /> : null}
-          <AbsorbFx fx={b.fx ?? "light-swirl"} p={fxP} zh={zh} slotX={slotX} />
-          <FuRow zh={zh} total={b.total} lit={b.index - 1} igniteP={interpolate(fxP, [0.65, 1], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })} />
         </>
       )}
-      <CornerBrand zh={zh} />
       {/* 音频：入场重击 → 中文朗读 → 动效音 */}
       <Sequence from={1}><Audio src={sfxSrc(neg ? "boom" : "chime")} volume={0.45} /></Sequence>
       {b.zhAudio ? <Sequence from={f1}><Audio src={staticFile(b.zhAudio)} /></Sequence> : null}
