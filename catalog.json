@@ -24,28 +24,6 @@
       "beats": 7
     },
     {
-      "id": "nguyen-ho-giai-ma",
-      "title": "阮姓解码 · 身份系第1条(越南受众)",
-      "template": "shenfen-jiema",
-      "shard": "2026/07/12",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-12",
-      "manifest": "public/videos/2026/07/12/nguyen-ho-giai-ma/manifest.json",
-      "beats": 5
-    },
-    {
-      "id": "shangwu-jingjiu-san-ju",
-      "title": "商务敬酒语三句 · 中文教学(越南受众)",
-      "template": "shangwu-jingjiu",
-      "shard": "2026/07/11",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-11",
-      "manifest": "public/videos/2026/07/11/shangwu-jingjiu-san-ju/manifest.json",
-      "beats": 5
-    },
-    {
       "id": "richang-huodong",
       "title": "日常活动9词 · 中文教学(越南受众)",
       "template": "jiugongge-cihui",

@@ -4,16 +4,12 @@ import type { LayoutModule } from "./types";
 import { LAYOUT as V2 } from "./v2-3x4";
 import { LAYOUT as V1 } from "./v1-legacy";
 import { LAYOUT as GRID9 } from "./grid-9";
-import { LAYOUT as TOAST3 } from "./toast-3";
-import { LAYOUT as SHENFEN } from "./shenfen";
 import { LAYOUT as ZHENGNIAN } from "./zhengnian";
 
 const LAYOUTS: Record<string, LayoutModule> = {
   [V2.id]: V2,
   [V1.id]: V1,
   [GRID9.id]: GRID9,
-  [TOAST3.id]: TOAST3,
-  [SHENFEN.id]: SHENFEN,
   [ZHENGNIAN.id]: ZHENGNIAN,
 };
 
