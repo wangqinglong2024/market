@@ -17,18 +17,21 @@
     "karaokeColor": "#25f4ee",
     "dimColor": "#565b63",
     "readColor": "#ffffff",
-    "sizes": { "pinyin": 34, "zh": 66, "vi": 38, "local": 38 },
-    "lineGap": 22,
-    "sidePad": 44,
-    "localColor": "#f5c518"
+    "sizes": { "pinyin": 46, "zh": 100, "vi": 46, "local": 46 },
+    "lineGap": 18,
+    "sidePad": 40,
+    "localColor": "#f5c518",
+    "duck": 0.06,
+    "narrationVolume": 1.35
   },
   "fonts": {
     "files": [
-      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" },
-      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" }
+      { "family": "Ma Shan Zheng", "file": "library/fonts/MaShanZheng.ttf" },
+      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" },
+      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" }
     ],
-    "zhStack": ["SimHei", "PingFang SC", "Microsoft YaHei", "sans-serif"],
-    "zhWeight": 700,
+    "zhStack": ["Ma Shan Zheng", "SimHei", "PingFang SC", "serif"],
+    "zhWeight": 400,
     "latinStack": ["Nunito", "PingFang SC", "sans-serif"]
   }
 }

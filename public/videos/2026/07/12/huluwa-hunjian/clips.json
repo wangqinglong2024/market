@@ -1,0 +1,18 @@
+{
+  "_comment": "混剪脚本(按原片时间升序、完整故事线)。zh 段:startMs/endMs=ASR整句区间;viClauses 按中文标点分句一一对应(build 会按标点把中文切成多张卡,每张卡=一小句,中文字体大)。narration 段:原片空档插越南语解说,vi 为整句。故事线:救老爷爷→两妖逃走→讲古(蛇蝎精祸害/天神封印/9999年)→意外放走妖怪→镇妖宝葫芦籽→种葫芦灭妖→钩子。",
+  "source": "temp/葫芦兄弟 - S01E01 - 神峰奇遇.mp4",
+  "clips": [
+    { "type": "zh", "startMs": 276900, "endMs": 281200, "viClauses": ["Ông ơi", "Cảm ơn ông đã cứu con", "Vừa rồi đã xảy ra chuyện gì ạ"] },
+    { "type": "zh", "startMs": 282500, "endMs": 285400, "viClauses": ["Đều tại tôi bất cẩn", "Để hai con yêu quái chạy mất"] },
+    { "type": "narration", "gapStartMs": 293000, "zh": "老爷爷讲起了灾祸的来历。", "vi": "Ông lão kể về nguồn gốc của tai họa." },
+    { "type": "zh", "startMs": 301900, "endMs": 303500, "viClauses": ["Ngày xửa ngày xưa"] },
+    { "type": "zh", "startMs": 305000, "endMs": 312900, "viClauses": ["Nơi đây xuất hiện Rắn tinh và Bọ cạp tinh", "Phép thuật cao cường", "Tàn phá nơi này thành hoang tàn"] },
+    { "type": "zh", "startMs": 326600, "endMs": 335400, "viClauses": ["Sau đó Thiên thần nổi giận", "Để cứu bách tính", "Biến sấm chớp thành hồ lô thần", "Thu hai yêu tinh vào trong", "Trấn dưới núi Hồ Lô"] },
+    { "type": "zh", "startMs": 337100, "endMs": 344700, "viClauses": ["Đến nay đã 9999 năm", "Chỉ cần đủ một vạn năm", "Yêu tinh sẽ hóa thành tro bụi"] },
+    { "type": "narration", "gapStartMs": 345600, "zh": "但一场意外改变了一切。", "vi": "Nhưng một tai nạn đã thay đổi tất cả." },
+    { "type": "zh", "startMs": 351200, "endMs": 354100, "viClauses": ["Trách tôi bất cẩn làm vỡ núi Hồ Lô"] },
+    { "type": "zh", "startMs": 434600, "endMs": 439400, "viClauses": ["Đây chính là hạt hồ lô trấn yêu", "Yêu quái sợ nhất"] },
+    { "type": "zh", "startMs": 445500, "endMs": 449100, "viClauses": ["Trồng ra cây hồ lô", "Là có thể tiêu diệt yêu quái"] },
+    { "type": "narration", "gapStartMs": 450500, "zh": "葫芦七兄弟能拯救苍生吗？", "vi": "Liệu bảy anh em Hồ Lô có cứu được thế gian?" }
+  ]
+}

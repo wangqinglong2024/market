@@ -141,9 +141,9 @@ export type CaptionCfg = {
   sizes?: { pinyin: number; zh: number; local: number; vi?: number };
   gapPinyinZh?: number; gapZhLocal?: number; sidePad?: number;
   pinyinColumnGap?: number; opticalLift?: number; karaokeColor?: string;
-  // chinese-learn 版式补充:越南语行色 + 未读(dim)色 + 行距
+  // chinese-learn 版式补充:越南语行色 + 未读(dim)色 + 行距 + 解说音频(压低原声/解说音量)
   viColor?: string; dimColor?: string; readColor?: string;
-  lineGap?: number;
+  lineGap?: number; duck?: number; narrationVolume?: number;
 };
 
 export type Manifest = {

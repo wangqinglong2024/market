@@ -1,102 +1,62 @@
-// 版式「chinese-learn」：中文学习字幕片。上方原视频(cover 裁切)、下方三行卡拉OK字幕
-// (拼音 / 中文 / 越南语),按 currentMs 逐词高亮跳动。用于给无字幕的中文视频重排学习版。
-// 单段版式:整片一条连续时间线(segments 返回 [allBeats]),原视频铺满全程、字幕按帧切换。
+// 版式「chinese-learn」：中文学习字幕片。上原视频(cover 裁切)、下三行字幕(拼音/中文/越南语)。
+// 每个标点一张卡(中文字体大);三行都逐词卡拉OK(中文/拼音走真实时间戳,越南语按卡时长均匀);
+// 解说段同样三行、音频读越南语并压低原声。特效:每 clip 白闪+变焦冲击转场、每卡上滑淡入、ken-burns 推近。
+// 单段版式(整片一条时间线)。
 import React from "react";
-import { AbsoluteFill, OffthreadVideo, staticFile, useCurrentFrame, useVideoConfig, spring } from "remotion";
+import {
+  AbsoluteFill, OffthreadVideo, Audio, Sequence, staticFile,
+  useCurrentFrame, useVideoConfig, interpolate,
+} from "remotion";
 import type { LayoutModule, Manifest, RenderBeat, KaraWord } from "./types";
 import { FitLine } from "./shared";
 import { stackCss } from "../fonts";
 
 type LearnBeat = RenderBeat & {
-  startMs: number;
-  endMs: number;
-  vi?: string;
-  words?: KaraWord[];
+  kind?: "zh" | "narration";
+  startMs: number; endMs: number;
+  vi?: string; words?: KaraWord[];
+  narrationAudio?: string; flash?: boolean;
 };
 
 const DEF = {
-  pinyinColor: "#7fd1c0",
-  zhColor: "#ffffff",
-  viColor: "#f5c518",
-  karaokeColor: "#25f4ee",
-  dimColor: "#565b63",
-  readColor: "#ffffff",
-  bgColor: "#000000",
-  sizes: { pinyin: 34, zh: 66, vi: 38 },
-  lineGap: 20,
-  sidePad: 44,
+  pinyinColor: "#7fd1c0", zhColor: "#ffffff", viColor: "#f5c518",
+  karaokeColor: "#25f4ee", dimColor: "#565b63", bgColor: "#000000",
+  sizes: { pinyin: 46, zh: 100, vi: 46 }, lineGap: 18, sidePad: 40,
+  duck: 0.06, narrationVolume: 1.35,
 };
 
-// 单个词：按当前时间取「未读/朗读中/已读」三态；朗读中的词放大跳起。
+// 越南语按卡时长均匀切词(语序≠中文,无法逐字锁死,故均匀铺满本卡);去掉行尾标点。
+const evenWords = (text: string, s: number, e: number): KaraWord[] => {
+  const parts = (text || "").replace(/[，。！？；、,.!?;：]+$/u, "").split(/\s+/).filter(Boolean);
+  const span = (e - s) / Math.max(1, parts.length);
+  return parts.map((p, i) => ({ zh: p, py: p, startMs: s + i * span, endMs: s + (i + 1) * span }));
+};
+
+// 单词:未读/朗读中/已读三态。只变色(朗读中加轻微光晕),不跳动(用户 2026-07-12)。
 const Word: React.FC<{
-  text: string;
-  w: KaraWord;
-  currentMs: number;
-  fontSize: number;
-  fontFamily: string;
-  weight: number;
-  dim: string;
-  active: string;
-  read: string;
+  text: string; w: KaraWord; currentMs: number; fontSize: number;
+  fontFamily: string; weight: number; dim: string; active: string; read: string;
 }> = ({ text, w, currentMs, fontSize, fontFamily, weight, dim, active, read }) => {
-  const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
   const isActive = currentMs >= w.startMs && currentMs < w.endMs;
   const isRead = currentMs >= w.endMs;
-  const startFrame = Math.round((w.startMs / 1000) * fps);
-  const pop = isActive
-    ? spring({ frame: frame - startFrame, fps, config: { damping: 14, mass: 0.6, stiffness: 170 } })
-    : 0;
-  const color = isActive ? active : isRead ? read : dim;
-  const scale = 1 + 0.16 * pop;
   return (
-    <span
-      style={{
-        display: "inline-block",
-        color,
-        fontFamily,
-        fontSize,
-        fontWeight: weight,
-        transform: `translateY(${-6 * pop}px) scale(${scale})`,
-        transformOrigin: "center bottom",
-        textShadow: isActive ? `0 0 18px ${active}66` : "none",
-        transition: "none",
-      }}
-    >
-      {text}
-    </span>
+    <span style={{
+      display: "inline-block", color: isActive ? active : isRead ? read : dim, fontFamily, fontSize, fontWeight: weight,
+      textShadow: isActive ? `0 0 20px ${active}66` : "none",
+    }}>{text}</span>
   );
 };
 
 const Line: React.FC<{
-  words: KaraWord[];
-  pick: (w: KaraWord) => string; // 该行显示文本(拼音 or 中文)
-  currentMs: number;
-  fontSize: number;
-  fontFamily: string;
-  weight: number;
-  gap: number;
-  maxWidth: number;
-  depKey: string;
-  dim: string;
-  active: string;
-  read: string;
+  words: KaraWord[]; pick: (w: KaraWord) => string; currentMs: number; fontSize: number;
+  fontFamily: string; weight: number; gap: number; maxWidth: number; depKey: string;
+  dim: string; active: string; read: string;
 }> = ({ words, pick, currentMs, fontSize, fontFamily, weight, gap, maxWidth, depKey, dim, active, read }) => (
   <FitLine maxWidth={maxWidth} depKey={depKey}>
     <span style={{ display: "inline-flex", alignItems: "flex-end", gap }}>
       {words.map((w, i) => (
-        <Word
-          key={i}
-          text={pick(w)}
-          w={w}
-          currentMs={currentMs}
-          fontSize={fontSize}
-          fontFamily={fontFamily}
-          weight={weight}
-          dim={dim}
-          active={active}
-          read={read}
-        />
+        <Word key={i} text={pick(w)} w={w} currentMs={currentMs} fontSize={fontSize}
+          fontFamily={fontFamily} weight={weight} dim={dim} active={active} read={read} />
       ))}
     </span>
   </FitLine>
@@ -123,6 +83,8 @@ const Segment: React.FC<{ beats: RenderBeat[]; meta: Manifest["meta"] }> = ({ be
   const sizeVi = cap.sizes?.vi ?? DEF.sizes.vi;
   const lineGap = cap.lineGap ?? DEF.lineGap;
   const sidePad = cap.sidePad ?? DEF.sidePad;
+  const duck = cap.duck ?? DEF.duck;
+  const narrVol = cap.narrationVolume ?? DEF.narrationVolume;
   const maxWidth = meta.width - 2 * sidePad;
 
   const zhFamily = stackCss(meta.fonts?.zhStack);
@@ -130,58 +92,52 @@ const Segment: React.FC<{ beats: RenderBeat[]; meta: Manifest["meta"] }> = ({ be
   const latinFamily = stackCss(meta.fonts?.latinStack);
 
   const list = beats as LearnBeat[];
-  const active =
-    list.find((b) => currentMs >= b.startMs && currentMs < b.endMs) ?? list[list.length - 1];
+  const active = list.find((b) => currentMs >= b.startMs && currentMs < b.endMs) ?? list[list.length - 1];
+  const narrBeats = list.filter((b) => b.kind === "narration" && b.narrationAudio);
+
+  // 特效:解说段压低原声;每 clip 白闪 + 变焦冲击;每段 ken-burns 推近;每卡上滑淡入。
+  const inNarr = (ms: number) => narrBeats.some((b) => ms >= b.startMs && ms < b.endMs);
+  const videoVolume = (f: number) => (inNarr((f / fps) * 1000) ? duck : 1);
+  const localMs = active ? currentMs - active.startMs : 0;
+  const kb = active ? interpolate(currentMs, [active.startMs, active.endMs], [1.05, 1.1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 1;
+  const punch = active?.flash ? interpolate(localMs, [0, 340], [0.16, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 0;
+  const flashOpacity = active?.flash ? interpolate(localMs, [0, 200], [0.85, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 0;
+  const cardRise = interpolate(localMs, [0, 220], [22, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const cardFade = interpolate(localMs, [0, 200], [0.15, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+
   const words = active?.words ?? [];
-  const hasCaption = words.length > 0;
 
   return (
     <AbsoluteFill style={{ backgroundColor: cap.bgColor ?? DEF.bgColor }}>
-      {/* 上方原视频：cover 裁切进 region，可用 focusY 调纵向焦点 */}
+      {/* 上方原视频:cover 裁切 + ken-burns + 变焦冲击 + 白闪转场 */}
       {src?.video ? (
         <div style={{ position: "absolute", top: region.top, left: 0, width: meta.width, height: region.height, overflow: "hidden" }}>
-          <OffthreadVideo
-            src={staticFile(src.video)}
-            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: `50% ${focusY * 100}%` }}
-          />
+          <OffthreadVideo src={staticFile(src.video)} volume={videoVolume}
+            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: `50% ${focusY * 100}%`, transform: `scale(${kb + punch})` }} />
+          {flashOpacity > 0 ? <AbsoluteFill style={{ backgroundColor: "#ffffff", opacity: flashOpacity }} /> : null}
         </div>
       ) : null}
 
-      {/* 下方字幕区：三行卡拉OK */}
-      <div
-        style={{
-          position: "absolute",
-          top: sub.top,
-          left: 0,
-          width: meta.width,
-          height: sub.height,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: lineGap,
-        }}
-      >
-        {hasCaption ? (
+      {/* 越南语解说音轨:各 narration 段在其时间窗播放(音量提高,原声已压低) */}
+      {narrBeats.map((b) => (
+        <Sequence key={b.id} from={Math.round((b.startMs / 1000) * fps)} durationInFrames={Math.max(1, Math.round((b.durationMs / 1000) * fps))}>
+          <Audio src={staticFile(b.narrationAudio as string)} volume={narrVol} />
+        </Sequence>
+      ))}
+
+      {/* 下方字幕区:三行(拼音/中文/越南语),整卡上滑淡入 */}
+      <div style={{ position: "absolute", top: sub.top, left: 0, width: meta.width, height: sub.height,
+        display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: lineGap,
+        transform: `translateY(${cardRise}px)`, opacity: cardFade }}>
+        {words.length ? (
           <>
-            <Line
-              words={words} pick={(w) => w.py} currentMs={currentMs}
-              fontSize={sizePy} fontFamily={latinFamily} weight={600} gap={16}
-              maxWidth={maxWidth} depKey={`py-${active.id}`}
-              dim={dim} active={karaoke} read={pinyinColor}
-            />
-            <Line
-              words={words} pick={(w) => w.zh} currentMs={currentMs}
-              fontSize={sizeZh} fontFamily={zhFamily} weight={zhWeight} gap={4}
-              maxWidth={maxWidth} depKey={`zh-${active.id}`}
-              dim={dim} active={karaoke} read={zhColor}
-            />
-            {active.vi ? (
-              <FitLine maxWidth={maxWidth} depKey={`vi-${active.id}`}>
-                <span style={{ color: viColor, fontFamily: latinFamily, fontSize: sizeVi, fontWeight: 500 }}>
-                  {active.vi}
-                </span>
-              </FitLine>
+            <Line words={words} pick={(w) => w.py} currentMs={currentMs} fontSize={sizePy} fontFamily={latinFamily}
+              weight={600} gap={16} maxWidth={maxWidth} depKey={`py-${active.id}`} dim={dim} active={karaoke} read={pinyinColor} />
+            <Line words={words} pick={(w) => w.zh} currentMs={currentMs} fontSize={sizeZh} fontFamily={zhFamily}
+              weight={zhWeight} gap={4} maxWidth={maxWidth} depKey={`zh-${active.id}`} dim={dim} active={karaoke} read={zhColor} />
+            {active?.vi ? (
+              <Line words={evenWords(active.vi, active.startMs, active.endMs)} pick={(w) => w.zh} currentMs={currentMs} fontSize={sizeVi}
+                fontFamily={latinFamily} weight={600} gap={10} maxWidth={maxWidth} depKey={`vi-${active.id}`} dim={dim} active={karaoke} read={viColor} />
             ) : null}
           </>
         ) : null}
@@ -192,7 +148,6 @@ const Segment: React.FC<{ beats: RenderBeat[]; meta: Manifest["meta"] }> = ({ be
 
 export const LAYOUT: LayoutModule = {
   id: "chinese-learn",
-  // 单段:整片一条时间线,原视频铺满全程,不切段不转场。
   segments: (beats) => [beats],
   transitionOf: () => "fade",
   Segment,

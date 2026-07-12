@@ -1,7 +1,7 @@
 # chinese-learn · 中文学习字幕片
 
 **输入物是「一个无字幕中文视频」**(区别于其它模板的「文案」)。把原视频重排成竖屏学习版:
-上方原视频、下方三行卡拉OK字幕(拼音 / 中文 / 越南语),逐词跳动高亮。
+上方原视频、下方三行字幕(拼音 / 中文 / 越南语),逐词跳动高亮。
 
 ## 版面(固定)
 
@@ -15,26 +15,63 @@
 [黑底留白 120]
 ```
 
+## 字幕规则(用户 2026-07-12 锁定)
+
+- **每个标点切一张字幕卡**:一句话按 `，。！？；、` 切成多张卡,每张卡只显示一小句 → **中文字体放大**(短句才大)。
+- **三行始终一致**:任何时候都是 拼音 / 中文 / 越南语 三行,不因段落类型变化。
+- **逐词卡拉OK,三行一起动**:中文按 ASR 逐词时间戳跳动高亮;拼音跟中文同步;**越南语按本卡时长均匀卡拉OK**(越南语语序≠中文,无法逐字锁死,故均匀铺满本卡,视觉上和中文一起往前跑)。
+- 三态配色:未读(dim 灰)→ 朗读中(karaoke 高亮 + 放大跳起)→ 已读(该行常色)。
+
+## 混剪规则(用户 2026-07-12 锁定)
+
+- **必须按原片时间顺序**(clips 里 startMs 升序)。
+- **剪出来的内容必须是完整故事**:要判断、要思考,选出能自成起承转合的片段,不是随便截。
+- **配音配比:约 80% 正常中文配音 + 20% 越南语解说**,解说尽量落在**无对白的空档**。
+- **解说段也是 3 行(拼音+中文+越南语),只是音频读越南语**:即解说要同时给中文句 `zh` 和越南语句 `vi`,画面照常显示拼音/中文/越南语,音频是越南语 TTS。
+- **解说音频要清晰、和原片音量一致**:解说段把**原片声压到 0.06**、越南语解说音量提到 1.35,避免解说被盖住。
+
+## 特效规则(用户 2026-07-12 锁定)
+
+- **clip 转场**:每换一个原片段,做一次「白闪 + 变焦冲击(zoom punch)」转场,明显可感。
+- **卡片入场**:每张字幕卡上滑 + 淡入。
+- **ken-burns**:每段轻微推近。
+
+## clips.json 格式(混剪模式;视频目录放此文件即启用)
+
+```jsonc
+{
+  "source": "temp/原集.mp4",
+  "clips": [
+    { "type": "zh", "startMs": 276900, "endMs": 281200,
+      "viClauses": ["Ông ơi", "Cảm ơn ông", "..."] },   // 按中文标点分句,一一对应
+    { "type": "narration", "gapStartMs": 293000,
+      "zh": "老爷爷讲起了灾祸的来历。", "vi": "Ông lão kể về nguồn gốc của tai họa." }
+  ]
+}
+```
+
+- **`type:"zh"`**:原片段(`startMs~endMs` 取 ASR 整句区间,时间戳精确)。build 按标点切成多张卡,`viClauses` 与切出的中文小句一一对应。
+- **`type:"narration"`**:原片空档(`gapStartMs` 起,时长=越南语 TTS 时长)。给 `zh`(中文解说句)+ `vi`(越南语句);画面 3 行、音频读越南语、原声压低。
+- 前置:先对**全片**跑 ASR,结果放 `work/transcript.json`(`node scripts/asr.mjs 全片音频 > work/transcript.json`)。混剪 build 从这里取字幕时间戳。
+- build 会 ffmpeg 逐段剪(快+准两级 seek)拼成 `source.mp4`,并把字幕时间戳重映射到混剪时间线。
+
+## 整片模式(无 clips.json)
+
+放 `source.mp4` + 可选 `vi.json`(每句越南语翻译),`node scripts/build.mjs <id>` 整片重排。
+
 ## 制作步骤
 
-1. 建目录 `public/videos/<shard>/<id>/`,把无字幕视频放进去命名 **`source.mp4`**。
-2. 在 `catalog.json` 加一条:`{ id, template: "chinese-learn", shard, lang: "vi", ... }`。
-3. 跑 `node scripts/build.mjs <id>`。首次会:抽音频 → 火山 ASR(逐字时间戳) → 分词 → 拼音 → 生成 `manifest.json`。
-   - 缓存:`audio.mp3`、`asr.json`。改口播不用重识别就删 `asr.json`。
-4. **越南语**:首次构建会把识别到的句子打印出来(且 `asr.json` 里也有)。把每句翻成越南语,按同序写成
-   `public/videos/<shard>/<id>/vi.json`(字符串数组),再跑一次 `node scripts/build.mjs <id>`。无 `vi.json` 则越南语行留空、只显两行。
-5. Remotion Studio / 渲染该 `id` 即可预览成片。
+1. 建 `public/videos/<shard>/<id>/`,放 `source.mp4`(整片)或 `clips.json`+全片 `work/transcript.json`(混剪)。
+2. `catalog.json` 加条目(template: `chinese-learn`)。
+3. `node scripts/build.mjs <id>`。
+4. Remotion Studio / 渲染预览。
 
-## 关键决策(已锁定)
+## 语音成本记账
 
-- **逐词高亮**(非逐字):ASR 给逐字时间戳,`Intl.Segmenter` 分词后聚成词,按 `currentMs` 逐词跳动。
-- **裁切保比例**:原视频 cover 填满 1080×720,`template.json` 的 `source.focusY`(0 顶~1 底)调裁切焦点。
-- **ASR**:火山「录音文件识别大模型」极速版(`volc.bigasr.auc_turbo`),内联音频免公网托管;凭证在
-  `api-key.txt` 的「豆包ASR」段(`default` 应用 `2528120497`,与 TTS 的 `9026810357` 是两个不同应用)。
-- **音频**:直接用原视频自带声音(老师口播),无 TTS / 无 BGM;卡拉OK 跟原声对齐。
+build 结束打印并写 `work/cost.json`:ASR 按全片音频时长×单价(默认 ¥1.5/小时估,精确以时长包单价为准)+ 越南语 TTS 条数。10 分钟原集 ASR ≈ **¥0.25**。
 
 ## 可调项(template.json)
 
 - `source.region` / `source.focusY`:视频区大小与裁切焦点。
 - `subtitle`:字幕区位置与高度。
-- `captions`:三行颜色、`karaokeColor`(朗读中)、`dimColor`(未读)、字号 `sizes`、行距。
+- `captions`:三行颜色、`karaokeColor`、`dimColor`、字号 `sizes`、行距、解说 `duck` 原声音量。

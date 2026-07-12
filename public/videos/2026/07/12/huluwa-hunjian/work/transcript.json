@@ -1,0 +1,2093 @@
+{
+  "text": "嗯。啊？正。啊！哦！嗯？哎哎哎哎。哎。哎！救命啊！啊！啊！啊！救命啊！老爷爷，快救救我！这。老爷爷，谢谢您救了我。刚才发生了什么事啊？都怪我不好，让两个妖怪给逃了。嗯？老爷爷老爷爷，您听我说。在很久很久以前。这出了一条蛇精和一只蝎子精，它们魔法高强，把这糟蹋得一片荒芜。乡民们流离失所，背井离乡。后来天神大怒，为了拯救百姓，将惊雷闪电化作神葫芦，把两个妖精收了进去，压在这葫芦山里。至今已经有九千九百九十九年了，只要满一万年，妖精就会化为灰烬。怪我不小心钻破了这葫芦山。让这两个妖怪给跑了。是这样，那乡亲们又要遭殃了。咱老爷爷，你跟我来。这洞里有个镇妖之宝，得到它就能重新制服妖怪。哦？就在这！老爷爷，您看！这就是镇妖的宝葫芦籽，妖怪最害怕了。哦。我们要是能够得到它，葫芦籽就能带我们冲出洞去。再种出葫芦来，就可以消灭妖怪了。好！危险！这么烫的葫芦籽怎么拿？这葫芦籽需要绿叶和泥土，有了这两样东西，就能平息它的烈焰。哦。可这山洞里全是石头，到哪去找绿叶啊？哎？老爷爷，你看！落啊",
+  "utterances": [
+    {
+      "text": "嗯。",
+      "startMs": 82370,
+      "endMs": 82450,
+      "words": [
+        {
+          "text": "嗯",
+          "startMs": 82370,
+          "endMs": 82450
+        }
+      ]
+    },
+    {
+      "text": "啊？",
+      "startMs": 95200,
+      "endMs": 95280,
+      "words": [
+        {
+          "text": "啊",
+          "startMs": 95200,
+          "endMs": 95280
+        }
+      ]
+    },
+    {
+      "text": "正。",
+      "startMs": 108800,
+      "endMs": 108840,
+      "words": [
+        {
+          "text": "正",
+          "startMs": 108800,
+          "endMs": 108840
+        }
+      ]
+    },
+    {
+      "text": "啊！",
+      "startMs": 115180,
+      "endMs": 115300,
+      "words": [
+        {
+          "text": "啊",
+          "startMs": 115180,
+          "endMs": 115300
+        }
+      ]
+    },
+    {
+      "text": "哦！",
+      "startMs": 126380,
+      "endMs": 126420,
+      "words": [
+        {
+          "text": "哦",
+          "startMs": 126380,
+          "endMs": 126420
+        }
+      ]
+    },
+    {
+      "text": "嗯？",
+      "startMs": 133240,
+      "endMs": 133480,
+      "words": [
+        {
+          "text": "嗯",
+          "startMs": 133240,
+          "endMs": 133480
+        }
+      ]
+    },
+    {
+      "text": "哎哎哎哎。",
+      "startMs": 215400,
+      "endMs": 216320,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 215400,
+          "endMs": 215480
+        },
+        {
+          "text": "哎",
+          "startMs": 215600,
+          "endMs": 215640
+        },
+        {
+          "text": "哎",
+          "startMs": 215920,
+          "endMs": 215960
+        },
+        {
+          "text": "哎",
+          "startMs": 216280,
+          "endMs": 216320
+        }
+      ]
+    },
+    {
+      "text": "哎。",
+      "startMs": 219970,
+      "endMs": 220050,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 219970,
+          "endMs": 220050
+        }
+      ]
+    },
+    {
+      "text": "哎！",
+      "startMs": 221920,
+      "endMs": 222000,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 221920,
+          "endMs": 222000
+        }
+      ]
+    },
+    {
+      "text": "救命啊！",
+      "startMs": 247960,
+      "endMs": 249120,
+      "words": [
+        {
+          "text": "救",
+          "startMs": 247960,
+          "endMs": 248360
+        },
+        {
+          "text": "命",
+          "startMs": 248360,
+          "endMs": 248760
+        },
+        {
+          "text": "啊",
+          "startMs": 248960,
+          "endMs": 249120
+        }
+      ]
+    },
+    {
+      "text": "啊！",
+      "startMs": 253600,
+      "endMs": 253800,
+      "words": [
+        {
+          "text": "啊",
+          "startMs": 253600,
+          "endMs": 253800
+        }
+      ]
+    },
+    {
+      "text": "啊！",
+      "startMs": 254080,
+      "endMs": 254160,
+      "words": [
+        {
+          "text": "啊",
+          "startMs": 254080,
+          "endMs": 254160
+        }
+      ]
+    },
+    {
+      "text": "啊！",
+      "startMs": 254720,
+      "endMs": 254800,
+      "words": [
+        {
+          "text": "啊",
+          "startMs": 254720,
+          "endMs": 254800
+        }
+      ]
+    },
+    {
+      "text": "救命啊！老爷爷，快救救我！",
+      "startMs": 255260,
+      "endMs": 261020,
+      "words": [
+        {
+          "text": "救",
+          "startMs": 255260,
+          "endMs": 255620
+        },
+        {
+          "text": "命",
+          "startMs": 255620,
+          "endMs": 256100
+        },
+        {
+          "text": "啊",
+          "startMs": 256260,
+          "endMs": 256500
+        },
+        {
+          "text": "老",
+          "startMs": 259580,
+          "endMs": 259780
+        },
+        {
+          "text": "爷",
+          "startMs": 259780,
+          "endMs": 259940
+        },
+        {
+          "text": "爷",
+          "startMs": 259980,
+          "endMs": 260100
+        },
+        {
+          "text": "快",
+          "startMs": 260260,
+          "endMs": 260460
+        },
+        {
+          "text": "救",
+          "startMs": 260460,
+          "endMs": 260660
+        },
+        {
+          "text": "救",
+          "startMs": 260700,
+          "endMs": 260820
+        },
+        {
+          "text": "我",
+          "startMs": 260820,
+          "endMs": 261020
+        }
+      ]
+    },
+    {
+      "text": "这。",
+      "startMs": 274180,
+      "endMs": 274220,
+      "words": [
+        {
+          "text": "这",
+          "startMs": 274180,
+          "endMs": 274220
+        }
+      ]
+    },
+    {
+      "text": "老爷爷，谢谢您救了我。刚才发生了什么事啊？",
+      "startMs": 276940,
+      "endMs": 281220,
+      "words": [
+        {
+          "text": "老",
+          "startMs": 276940,
+          "endMs": 277140
+        },
+        {
+          "text": "爷",
+          "startMs": 277140,
+          "endMs": 277260
+        },
+        {
+          "text": "爷",
+          "startMs": 277300,
+          "endMs": 277420
+        },
+        {
+          "text": "谢",
+          "startMs": 277780,
+          "endMs": 277980
+        },
+        {
+          "text": "谢",
+          "startMs": 278060,
+          "endMs": 278140
+        },
+        {
+          "text": "您",
+          "startMs": 278140,
+          "endMs": 278340
+        },
+        {
+          "text": "救",
+          "startMs": 278340,
+          "endMs": 278540
+        },
+        {
+          "text": "了",
+          "startMs": 278540,
+          "endMs": 278700
+        },
+        {
+          "text": "我",
+          "startMs": 278700,
+          "endMs": 278900
+        },
+        {
+          "text": "刚",
+          "startMs": 279540,
+          "endMs": 279740
+        },
+        {
+          "text": "才",
+          "startMs": 279740,
+          "endMs": 279940
+        },
+        {
+          "text": "发",
+          "startMs": 280060,
+          "endMs": 280260
+        },
+        {
+          "text": "生",
+          "startMs": 280260,
+          "endMs": 280380
+        },
+        {
+          "text": "了",
+          "startMs": 280380,
+          "endMs": 280580
+        },
+        {
+          "text": "什",
+          "startMs": 280580,
+          "endMs": 280700
+        },
+        {
+          "text": "么",
+          "startMs": 280700,
+          "endMs": 280820
+        },
+        {
+          "text": "事",
+          "startMs": 280820,
+          "endMs": 281060
+        },
+        {
+          "text": "啊",
+          "startMs": 281060,
+          "endMs": 281220
+        }
+      ]
+    },
+    {
+      "text": "都怪我不好，让两个妖怪给逃了。",
+      "startMs": 282480,
+      "endMs": 285440,
+      "words": [
+        {
+          "text": "都",
+          "startMs": 282480,
+          "endMs": 282680
+        },
+        {
+          "text": "怪",
+          "startMs": 282680,
+          "endMs": 282840
+        },
+        {
+          "text": "我",
+          "startMs": 282840,
+          "endMs": 283040
+        },
+        {
+          "text": "不",
+          "startMs": 283040,
+          "endMs": 283160
+        },
+        {
+          "text": "好",
+          "startMs": 283160,
+          "endMs": 283400
+        },
+        {
+          "text": "让",
+          "startMs": 283760,
+          "endMs": 284000
+        },
+        {
+          "text": "两",
+          "startMs": 284000,
+          "endMs": 284160
+        },
+        {
+          "text": "个",
+          "startMs": 284160,
+          "endMs": 284280
+        },
+        {
+          "text": "妖",
+          "startMs": 284280,
+          "endMs": 284480
+        },
+        {
+          "text": "怪",
+          "startMs": 284480,
+          "endMs": 284640
+        },
+        {
+          "text": "给",
+          "startMs": 284720,
+          "endMs": 284920
+        },
+        {
+          "text": "逃",
+          "startMs": 284920,
+          "endMs": 285200
+        },
+        {
+          "text": "了",
+          "startMs": 285200,
+          "endMs": 285440
+        }
+      ]
+    },
+    {
+      "text": "嗯？",
+      "startMs": 287040,
+      "endMs": 287240,
+      "words": [
+        {
+          "text": "嗯",
+          "startMs": 287040,
+          "endMs": 287240
+        }
+      ]
+    },
+    {
+      "text": "老爷爷老爷爷，您听我说。",
+      "startMs": 289270,
+      "endMs": 292270,
+      "words": [
+        {
+          "text": "老",
+          "startMs": 289270,
+          "endMs": 289470
+        },
+        {
+          "text": "爷",
+          "startMs": 289470,
+          "endMs": 289590
+        },
+        {
+          "text": "爷",
+          "startMs": 289630,
+          "endMs": 289750
+        },
+        {
+          "text": "老",
+          "startMs": 290230,
+          "endMs": 290430
+        },
+        {
+          "text": "爷",
+          "startMs": 290430,
+          "endMs": 290590
+        },
+        {
+          "text": "爷",
+          "startMs": 290670,
+          "endMs": 290750
+        },
+        {
+          "text": "您",
+          "startMs": 291270,
+          "endMs": 291510
+        },
+        {
+          "text": "听",
+          "startMs": 291510,
+          "endMs": 291750
+        },
+        {
+          "text": "我",
+          "startMs": 291750,
+          "endMs": 291950
+        },
+        {
+          "text": "说",
+          "startMs": 291950,
+          "endMs": 292270
+        }
+      ]
+    },
+    {
+      "text": "在很久很久以前。",
+      "startMs": 301850,
+      "endMs": 303530,
+      "words": [
+        {
+          "text": "在",
+          "startMs": 301850,
+          "endMs": 302170
+        },
+        {
+          "text": "很",
+          "startMs": 302170,
+          "endMs": 302410
+        },
+        {
+          "text": "久",
+          "startMs": 302410,
+          "endMs": 302650
+        },
+        {
+          "text": "很",
+          "startMs": 302650,
+          "endMs": 302850
+        },
+        {
+          "text": "久",
+          "startMs": 302850,
+          "endMs": 303050
+        },
+        {
+          "text": "以",
+          "startMs": 303050,
+          "endMs": 303250
+        },
+        {
+          "text": "前",
+          "startMs": 303250,
+          "endMs": 303530
+        }
+      ]
+    },
+    {
+      "text": "这出了一条蛇精和一只蝎子精，它们魔法高强，把这糟蹋得一片荒芜。",
+      "startMs": 304970,
+      "endMs": 312890,
+      "words": [
+        {
+          "text": "这",
+          "startMs": 304970,
+          "endMs": 305210
+        },
+        {
+          "text": "出",
+          "startMs": 305450,
+          "endMs": 305730
+        },
+        {
+          "text": "了",
+          "startMs": 305730,
+          "endMs": 305890
+        },
+        {
+          "text": "一",
+          "startMs": 305890,
+          "endMs": 306010
+        },
+        {
+          "text": "条",
+          "startMs": 306010,
+          "endMs": 306170
+        },
+        {
+          "text": "蛇",
+          "startMs": 306170,
+          "endMs": 306410
+        },
+        {
+          "text": "精",
+          "startMs": 306490,
+          "endMs": 306690
+        },
+        {
+          "text": "和",
+          "startMs": 306970,
+          "endMs": 307210
+        },
+        {
+          "text": "一",
+          "startMs": 307210,
+          "endMs": 307370
+        },
+        {
+          "text": "只",
+          "startMs": 307370,
+          "endMs": 307530
+        },
+        {
+          "text": "蝎",
+          "startMs": 307650,
+          "endMs": 307730
+        },
+        {
+          "text": "子",
+          "startMs": 307770,
+          "endMs": 307970
+        },
+        {
+          "text": "精",
+          "startMs": 308010,
+          "endMs": 308170
+        },
+        {
+          "text": "它",
+          "startMs": 309090,
+          "endMs": 309290
+        },
+        {
+          "text": "们",
+          "startMs": 309290,
+          "endMs": 309490
+        },
+        {
+          "text": "魔",
+          "startMs": 309490,
+          "endMs": 309730
+        },
+        {
+          "text": "法",
+          "startMs": 309730,
+          "endMs": 309930
+        },
+        {
+          "text": "高",
+          "startMs": 309930,
+          "endMs": 310130
+        },
+        {
+          "text": "强",
+          "startMs": 310130,
+          "endMs": 310410
+        },
+        {
+          "text": "把",
+          "startMs": 310850,
+          "endMs": 311130
+        },
+        {
+          "text": "这",
+          "startMs": 311130,
+          "endMs": 311330
+        },
+        {
+          "text": "糟",
+          "startMs": 311610,
+          "endMs": 311730
+        },
+        {
+          "text": "蹋",
+          "startMs": 311810,
+          "endMs": 311890
+        },
+        {
+          "text": "得",
+          "startMs": 311970,
+          "endMs": 312050
+        },
+        {
+          "text": "一",
+          "startMs": 312090,
+          "endMs": 312290
+        },
+        {
+          "text": "片",
+          "startMs": 312290,
+          "endMs": 312450
+        },
+        {
+          "text": "荒",
+          "startMs": 312490,
+          "endMs": 312730
+        },
+        {
+          "text": "芜",
+          "startMs": 312810,
+          "endMs": 312890
+        }
+      ]
+    },
+    {
+      "text": "乡民们流离失所，背井离乡。",
+      "startMs": 314440,
+      "endMs": 317840,
+      "words": [
+        {
+          "text": "乡",
+          "startMs": 314440,
+          "endMs": 314680
+        },
+        {
+          "text": "民",
+          "startMs": 314760,
+          "endMs": 314840
+        },
+        {
+          "text": "们",
+          "startMs": 314920,
+          "endMs": 315160
+        },
+        {
+          "text": "流",
+          "startMs": 315360,
+          "endMs": 315480
+        },
+        {
+          "text": "离",
+          "startMs": 315600,
+          "endMs": 315640
+        },
+        {
+          "text": "失",
+          "startMs": 315840,
+          "endMs": 315960
+        },
+        {
+          "text": "所",
+          "startMs": 316080,
+          "endMs": 316120
+        },
+        {
+          "text": "背",
+          "startMs": 316760,
+          "endMs": 317040
+        },
+        {
+          "text": "井",
+          "startMs": 317120,
+          "endMs": 317160
+        },
+        {
+          "text": "离",
+          "startMs": 317320,
+          "endMs": 317600
+        },
+        {
+          "text": "乡",
+          "startMs": 317600,
+          "endMs": 317840
+        }
+      ]
+    },
+    {
+      "text": "后来天神大怒，为了拯救百姓，将惊雷闪电化作神葫芦，把两个妖精收了进去，压在这葫芦山里。",
+      "startMs": 326590,
+      "endMs": 335430,
+      "words": [
+        {
+          "text": "后",
+          "startMs": 326590,
+          "endMs": 326790
+        },
+        {
+          "text": "来",
+          "startMs": 326790,
+          "endMs": 326990
+        },
+        {
+          "text": "天",
+          "startMs": 327110,
+          "endMs": 327390
+        },
+        {
+          "text": "神",
+          "startMs": 327390,
+          "endMs": 327590
+        },
+        {
+          "text": "大",
+          "startMs": 327590,
+          "endMs": 327790
+        },
+        {
+          "text": "怒",
+          "startMs": 327790,
+          "endMs": 328030
+        },
+        {
+          "text": "为",
+          "startMs": 328430,
+          "endMs": 328670
+        },
+        {
+          "text": "了",
+          "startMs": 328670,
+          "endMs": 328790
+        },
+        {
+          "text": "拯",
+          "startMs": 328790,
+          "endMs": 328990
+        },
+        {
+          "text": "救",
+          "startMs": 328990,
+          "endMs": 329150
+        },
+        {
+          "text": "百",
+          "startMs": 329190,
+          "endMs": 329390
+        },
+        {
+          "text": "姓",
+          "startMs": 329390,
+          "endMs": 329590
+        },
+        {
+          "text": "将",
+          "startMs": 329870,
+          "endMs": 330110
+        },
+        {
+          "text": "惊",
+          "startMs": 330190,
+          "endMs": 330350
+        },
+        {
+          "text": "雷",
+          "startMs": 330350,
+          "endMs": 330550
+        },
+        {
+          "text": "闪",
+          "startMs": 330550,
+          "endMs": 330790
+        },
+        {
+          "text": "电",
+          "startMs": 330790,
+          "endMs": 330950
+        },
+        {
+          "text": "化",
+          "startMs": 330990,
+          "endMs": 331150
+        },
+        {
+          "text": "作",
+          "startMs": 331150,
+          "endMs": 331310
+        },
+        {
+          "text": "神",
+          "startMs": 331350,
+          "endMs": 331550
+        },
+        {
+          "text": "葫",
+          "startMs": 331590,
+          "endMs": 331790
+        },
+        {
+          "text": "芦",
+          "startMs": 331790,
+          "endMs": 331910
+        },
+        {
+          "text": "把",
+          "startMs": 332350,
+          "endMs": 332590
+        },
+        {
+          "text": "两",
+          "startMs": 332590,
+          "endMs": 332710
+        },
+        {
+          "text": "个",
+          "startMs": 332710,
+          "endMs": 332870
+        },
+        {
+          "text": "妖",
+          "startMs": 332870,
+          "endMs": 333070
+        },
+        {
+          "text": "精",
+          "startMs": 333070,
+          "endMs": 333150
+        },
+        {
+          "text": "收",
+          "startMs": 333350,
+          "endMs": 333550
+        },
+        {
+          "text": "了",
+          "startMs": 333550,
+          "endMs": 333710
+        },
+        {
+          "text": "进",
+          "startMs": 333710,
+          "endMs": 333870
+        },
+        {
+          "text": "去",
+          "startMs": 333870,
+          "endMs": 334030
+        },
+        {
+          "text": "压",
+          "startMs": 334150,
+          "endMs": 334310
+        },
+        {
+          "text": "在",
+          "startMs": 334310,
+          "endMs": 334510
+        },
+        {
+          "text": "这",
+          "startMs": 334510,
+          "endMs": 334670
+        },
+        {
+          "text": "葫",
+          "startMs": 334710,
+          "endMs": 334790
+        },
+        {
+          "text": "芦",
+          "startMs": 334870,
+          "endMs": 334910
+        },
+        {
+          "text": "山",
+          "startMs": 334990,
+          "endMs": 335190
+        },
+        {
+          "text": "里",
+          "startMs": 335190,
+          "endMs": 335430
+        }
+      ]
+    },
+    {
+      "text": "至今已经有九千九百九十九年了，只要满一万年，妖精就会化为灰烬。",
+      "startMs": 337080,
+      "endMs": 344720,
+      "words": [
+        {
+          "text": "至",
+          "startMs": 337080,
+          "endMs": 337320
+        },
+        {
+          "text": "今",
+          "startMs": 337320,
+          "endMs": 337560
+        },
+        {
+          "text": "已",
+          "startMs": 337880,
+          "endMs": 338080
+        },
+        {
+          "text": "经",
+          "startMs": 338080,
+          "endMs": 338240
+        },
+        {
+          "text": "有",
+          "startMs": 338240,
+          "endMs": 338520
+        },
+        {
+          "text": "九千九百九十九",
+          "startMs": 338520,
+          "endMs": 340120
+        },
+        {
+          "text": "年",
+          "startMs": 340120,
+          "endMs": 340320
+        },
+        {
+          "text": "了",
+          "startMs": 340320,
+          "endMs": 340560
+        },
+        {
+          "text": "只",
+          "startMs": 341080,
+          "endMs": 341320
+        },
+        {
+          "text": "要",
+          "startMs": 341320,
+          "endMs": 341480
+        },
+        {
+          "text": "满",
+          "startMs": 341480,
+          "endMs": 341680
+        },
+        {
+          "text": "一",
+          "startMs": 341680,
+          "endMs": 341880
+        },
+        {
+          "text": "万",
+          "startMs": 341880,
+          "endMs": 342080
+        },
+        {
+          "text": "年",
+          "startMs": 342080,
+          "endMs": 342320
+        },
+        {
+          "text": "妖",
+          "startMs": 342760,
+          "endMs": 343120
+        },
+        {
+          "text": "精",
+          "startMs": 343120,
+          "endMs": 343240
+        },
+        {
+          "text": "就",
+          "startMs": 343480,
+          "endMs": 343680
+        },
+        {
+          "text": "会",
+          "startMs": 343680,
+          "endMs": 343880
+        },
+        {
+          "text": "化",
+          "startMs": 343880,
+          "endMs": 344080
+        },
+        {
+          "text": "为",
+          "startMs": 344080,
+          "endMs": 344320
+        },
+        {
+          "text": "灰",
+          "startMs": 344320,
+          "endMs": 344600
+        },
+        {
+          "text": "烬",
+          "startMs": 344680,
+          "endMs": 344720
+        }
+      ]
+    },
+    {
+      "text": "怪我不小心钻破了这葫芦山。",
+      "startMs": 351180,
+      "endMs": 354060,
+      "words": [
+        {
+          "text": "怪",
+          "startMs": 351180,
+          "endMs": 351380
+        },
+        {
+          "text": "我",
+          "startMs": 351380,
+          "endMs": 351620
+        },
+        {
+          "text": "不",
+          "startMs": 351620,
+          "endMs": 351780
+        },
+        {
+          "text": "小",
+          "startMs": 351780,
+          "endMs": 351940
+        },
+        {
+          "text": "心",
+          "startMs": 351940,
+          "endMs": 352140
+        },
+        {
+          "text": "钻",
+          "startMs": 352620,
+          "endMs": 352820
+        },
+        {
+          "text": "破",
+          "startMs": 352900,
+          "endMs": 353100
+        },
+        {
+          "text": "了",
+          "startMs": 353100,
+          "endMs": 353220
+        },
+        {
+          "text": "这",
+          "startMs": 353220,
+          "endMs": 353380
+        },
+        {
+          "text": "葫",
+          "startMs": 353420,
+          "endMs": 353580
+        },
+        {
+          "text": "芦",
+          "startMs": 353620,
+          "endMs": 353660
+        },
+        {
+          "text": "山",
+          "startMs": 353780,
+          "endMs": 354060
+        }
+      ]
+    },
+    {
+      "text": "让这两个妖怪给跑了。",
+      "startMs": 357520,
+      "endMs": 359800,
+      "words": [
+        {
+          "text": "让",
+          "startMs": 357520,
+          "endMs": 357760
+        },
+        {
+          "text": "这",
+          "startMs": 357760,
+          "endMs": 357920
+        },
+        {
+          "text": "两",
+          "startMs": 357920,
+          "endMs": 358040
+        },
+        {
+          "text": "个",
+          "startMs": 358040,
+          "endMs": 358200
+        },
+        {
+          "text": "妖",
+          "startMs": 358200,
+          "endMs": 358400
+        },
+        {
+          "text": "怪",
+          "startMs": 358400,
+          "endMs": 358600
+        },
+        {
+          "text": "给",
+          "startMs": 358960,
+          "endMs": 359200
+        },
+        {
+          "text": "跑",
+          "startMs": 359240,
+          "endMs": 359560
+        },
+        {
+          "text": "了",
+          "startMs": 359560,
+          "endMs": 359800
+        }
+      ]
+    },
+    {
+      "text": "是这样，那乡亲们又要遭殃了。咱老爷爷，你跟我来。",
+      "startMs": 362090,
+      "endMs": 369690,
+      "words": [
+        {
+          "text": "是",
+          "startMs": 362090,
+          "endMs": 362330
+        },
+        {
+          "text": "这",
+          "startMs": 362330,
+          "endMs": 362530
+        },
+        {
+          "text": "样",
+          "startMs": 362530,
+          "endMs": 362730
+        },
+        {
+          "text": "那",
+          "startMs": 363730,
+          "endMs": 364170
+        },
+        {
+          "text": "乡",
+          "startMs": 364850,
+          "endMs": 365170
+        },
+        {
+          "text": "亲",
+          "startMs": 365170,
+          "endMs": 365330
+        },
+        {
+          "text": "们",
+          "startMs": 365330,
+          "endMs": 365490
+        },
+        {
+          "text": "又",
+          "startMs": 365490,
+          "endMs": 365690
+        },
+        {
+          "text": "要",
+          "startMs": 365690,
+          "endMs": 365850
+        },
+        {
+          "text": "遭",
+          "startMs": 365850,
+          "endMs": 366090
+        },
+        {
+          "text": "殃",
+          "startMs": 366170,
+          "endMs": 366210
+        },
+        {
+          "text": "了",
+          "startMs": 366330,
+          "endMs": 366570
+        },
+        {
+          "text": "咱",
+          "startMs": 367330,
+          "endMs": 367530
+        },
+        {
+          "text": "老",
+          "startMs": 368250,
+          "endMs": 368450
+        },
+        {
+          "text": "爷",
+          "startMs": 368450,
+          "endMs": 368610
+        },
+        {
+          "text": "爷",
+          "startMs": 368650,
+          "endMs": 368730
+        },
+        {
+          "text": "你",
+          "startMs": 368890,
+          "endMs": 369090
+        },
+        {
+          "text": "跟",
+          "startMs": 369090,
+          "endMs": 369250
+        },
+        {
+          "text": "我",
+          "startMs": 369250,
+          "endMs": 369410
+        },
+        {
+          "text": "来",
+          "startMs": 369410,
+          "endMs": 369690
+        }
+      ]
+    },
+    {
+      "text": "这洞里有个镇妖之宝，得到它就能重新制服妖怪。哦？",
+      "startMs": 373590,
+      "endMs": 379150,
+      "words": [
+        {
+          "text": "这",
+          "startMs": 373590,
+          "endMs": 373790
+        },
+        {
+          "text": "洞",
+          "startMs": 373790,
+          "endMs": 373990
+        },
+        {
+          "text": "里",
+          "startMs": 373990,
+          "endMs": 374230
+        },
+        {
+          "text": "有",
+          "startMs": 374430,
+          "endMs": 374630
+        },
+        {
+          "text": "个",
+          "startMs": 374630,
+          "endMs": 374790
+        },
+        {
+          "text": "镇",
+          "startMs": 374870,
+          "endMs": 374910
+        },
+        {
+          "text": "妖",
+          "startMs": 374990,
+          "endMs": 375150
+        },
+        {
+          "text": "之",
+          "startMs": 375190,
+          "endMs": 375350
+        },
+        {
+          "text": "宝",
+          "startMs": 375350,
+          "endMs": 375630
+        },
+        {
+          "text": "得",
+          "startMs": 376350,
+          "endMs": 376590
+        },
+        {
+          "text": "到",
+          "startMs": 376590,
+          "endMs": 376790
+        },
+        {
+          "text": "它",
+          "startMs": 376790,
+          "endMs": 376910
+        },
+        {
+          "text": "就",
+          "startMs": 377070,
+          "endMs": 377270
+        },
+        {
+          "text": "能",
+          "startMs": 377270,
+          "endMs": 377470
+        },
+        {
+          "text": "重",
+          "startMs": 377470,
+          "endMs": 377630
+        },
+        {
+          "text": "新",
+          "startMs": 377630,
+          "endMs": 377750
+        },
+        {
+          "text": "制",
+          "startMs": 377790,
+          "endMs": 377950
+        },
+        {
+          "text": "服",
+          "startMs": 377990,
+          "endMs": 378070
+        },
+        {
+          "text": "妖",
+          "startMs": 378190,
+          "endMs": 378350
+        },
+        {
+          "text": "怪",
+          "startMs": 378350,
+          "endMs": 378510
+        },
+        {
+          "text": "哦",
+          "startMs": 378950,
+          "endMs": 379150
+        }
+      ]
+    },
+    {
+      "text": "就在这！",
+      "startMs": 413780,
+      "endMs": 414380,
+      "words": [
+        {
+          "text": "就",
+          "startMs": 413780,
+          "endMs": 413980
+        },
+        {
+          "text": "在",
+          "startMs": 413980,
+          "endMs": 414140
+        },
+        {
+          "text": "这",
+          "startMs": 414140,
+          "endMs": 414380
+        }
+      ]
+    },
+    {
+      "text": "老爷爷，您看！",
+      "startMs": 419900,
+      "endMs": 421500,
+      "words": [
+        {
+          "text": "老",
+          "startMs": 419900,
+          "endMs": 420140
+        },
+        {
+          "text": "爷",
+          "startMs": 420140,
+          "endMs": 420260
+        },
+        {
+          "text": "爷",
+          "startMs": 420340,
+          "endMs": 420460
+        },
+        {
+          "text": "您",
+          "startMs": 420980,
+          "endMs": 421180
+        },
+        {
+          "text": "看",
+          "startMs": 421180,
+          "endMs": 421500
+        }
+      ]
+    },
+    {
+      "text": "这就是镇妖的宝葫芦籽，妖怪最害怕了。哦。",
+      "startMs": 434600,
+      "endMs": 439400,
+      "words": [
+        {
+          "text": "这",
+          "startMs": 434600,
+          "endMs": 434840
+        },
+        {
+          "text": "就",
+          "startMs": 434840,
+          "endMs": 435000
+        },
+        {
+          "text": "是",
+          "startMs": 435000,
+          "endMs": 435120
+        },
+        {
+          "text": "镇",
+          "startMs": 435200,
+          "endMs": 435240
+        },
+        {
+          "text": "妖",
+          "startMs": 435360,
+          "endMs": 435480
+        },
+        {
+          "text": "的",
+          "startMs": 435520,
+          "endMs": 435680
+        },
+        {
+          "text": "宝",
+          "startMs": 435680,
+          "endMs": 435840
+        },
+        {
+          "text": "葫",
+          "startMs": 435840,
+          "endMs": 436000
+        },
+        {
+          "text": "芦",
+          "startMs": 436000,
+          "endMs": 436080
+        },
+        {
+          "text": "籽",
+          "startMs": 436200,
+          "endMs": 436280
+        },
+        {
+          "text": "妖",
+          "startMs": 437080,
+          "endMs": 437320
+        },
+        {
+          "text": "怪",
+          "startMs": 437320,
+          "endMs": 437520
+        },
+        {
+          "text": "最",
+          "startMs": 437680,
+          "endMs": 437920
+        },
+        {
+          "text": "害",
+          "startMs": 437920,
+          "endMs": 438120
+        },
+        {
+          "text": "怕",
+          "startMs": 438120,
+          "endMs": 438280
+        },
+        {
+          "text": "了",
+          "startMs": 438320,
+          "endMs": 438520
+        },
+        {
+          "text": "哦",
+          "startMs": 439280,
+          "endMs": 439400
+        }
+      ]
+    },
+    {
+      "text": "我们要是能够得到它，葫芦籽就能带我们冲出洞去。",
+      "startMs": 440220,
+      "endMs": 444300,
+      "words": [
+        {
+          "text": "我",
+          "startMs": 440220,
+          "endMs": 440380
+        },
+        {
+          "text": "们",
+          "startMs": 440380,
+          "endMs": 440460
+        },
+        {
+          "text": "要",
+          "startMs": 440460,
+          "endMs": 440620
+        },
+        {
+          "text": "是",
+          "startMs": 440620,
+          "endMs": 440740
+        },
+        {
+          "text": "能",
+          "startMs": 440740,
+          "endMs": 440860
+        },
+        {
+          "text": "够",
+          "startMs": 440860,
+          "endMs": 441020
+        },
+        {
+          "text": "得",
+          "startMs": 441020,
+          "endMs": 441180
+        },
+        {
+          "text": "到",
+          "startMs": 441180,
+          "endMs": 441340
+        },
+        {
+          "text": "它",
+          "startMs": 441420,
+          "endMs": 441500
+        },
+        {
+          "text": "葫",
+          "startMs": 441900,
+          "endMs": 442100
+        },
+        {
+          "text": "芦",
+          "startMs": 442100,
+          "endMs": 442180
+        },
+        {
+          "text": "籽",
+          "startMs": 442340,
+          "endMs": 442380
+        },
+        {
+          "text": "就",
+          "startMs": 442700,
+          "endMs": 442860
+        },
+        {
+          "text": "能",
+          "startMs": 442860,
+          "endMs": 443020
+        },
+        {
+          "text": "带",
+          "startMs": 443020,
+          "endMs": 443220
+        },
+        {
+          "text": "我",
+          "startMs": 443220,
+          "endMs": 443340
+        },
+        {
+          "text": "们",
+          "startMs": 443340,
+          "endMs": 443460
+        },
+        {
+          "text": "冲",
+          "startMs": 443460,
+          "endMs": 443620
+        },
+        {
+          "text": "出",
+          "startMs": 443620,
+          "endMs": 443820
+        },
+        {
+          "text": "洞",
+          "startMs": 443860,
+          "endMs": 444020
+        },
+        {
+          "text": "去",
+          "startMs": 444060,
+          "endMs": 444300
+        }
+      ]
+    },
+    {
+      "text": "再种出葫芦来，就可以消灭妖怪了。好！",
+      "startMs": 445500,
+      "endMs": 449140,
+      "words": [
+        {
+          "text": "再",
+          "startMs": 445500,
+          "endMs": 445580
+        },
+        {
+          "text": "种",
+          "startMs": 445660,
+          "endMs": 445740
+        },
+        {
+          "text": "出",
+          "startMs": 445780,
+          "endMs": 445980
+        },
+        {
+          "text": "葫",
+          "startMs": 445980,
+          "endMs": 446140
+        },
+        {
+          "text": "芦",
+          "startMs": 446140,
+          "endMs": 446180
+        },
+        {
+          "text": "来",
+          "startMs": 446260,
+          "endMs": 446460
+        },
+        {
+          "text": "就",
+          "startMs": 446780,
+          "endMs": 447020
+        },
+        {
+          "text": "可",
+          "startMs": 447020,
+          "endMs": 447100
+        },
+        {
+          "text": "以",
+          "startMs": 447100,
+          "endMs": 447260
+        },
+        {
+          "text": "消",
+          "startMs": 447340,
+          "endMs": 447620
+        },
+        {
+          "text": "灭",
+          "startMs": 447620,
+          "endMs": 447780
+        },
+        {
+          "text": "妖",
+          "startMs": 447820,
+          "endMs": 448060
+        },
+        {
+          "text": "怪",
+          "startMs": 448060,
+          "endMs": 448220
+        },
+        {
+          "text": "了",
+          "startMs": 448260,
+          "endMs": 448460
+        },
+        {
+          "text": "好",
+          "startMs": 448740,
+          "endMs": 449140
+        }
+      ]
+    },
+    {
+      "text": "危险！",
+      "startMs": 451320,
+      "endMs": 451560,
+      "words": [
+        {
+          "text": "危",
+          "startMs": 451320,
+          "endMs": 451480
+        },
+        {
+          "text": "险",
+          "startMs": 451480,
+          "endMs": 451560
+        }
+      ]
+    },
+    {
+      "text": "这么烫的葫芦籽怎么拿？",
+      "startMs": 465230,
+      "endMs": 466950,
+      "words": [
+        {
+          "text": "这",
+          "startMs": 465230,
+          "endMs": 465390
+        },
+        {
+          "text": "么",
+          "startMs": 465390,
+          "endMs": 465510
+        },
+        {
+          "text": "烫",
+          "startMs": 465510,
+          "endMs": 465670
+        },
+        {
+          "text": "的",
+          "startMs": 465670,
+          "endMs": 465830
+        },
+        {
+          "text": "葫",
+          "startMs": 465870,
+          "endMs": 465990
+        },
+        {
+          "text": "芦",
+          "startMs": 465990,
+          "endMs": 466070
+        },
+        {
+          "text": "籽",
+          "startMs": 466230,
+          "endMs": 466270
+        },
+        {
+          "text": "怎",
+          "startMs": 466510,
+          "endMs": 466710
+        },
+        {
+          "text": "么",
+          "startMs": 466710,
+          "endMs": 466790
+        },
+        {
+          "text": "拿",
+          "startMs": 466830,
+          "endMs": 466950
+        }
+      ]
+    },
+    {
+      "text": "这葫芦籽需要绿叶和泥土，有了这两样东西，就能平息它的烈焰。哦。",
+      "startMs": 468510,
+      "endMs": 475030,
+      "words": [
+        {
+          "text": "这",
+          "startMs": 468510,
+          "endMs": 468710
+        },
+        {
+          "text": "葫",
+          "startMs": 468750,
+          "endMs": 468870
+        },
+        {
+          "text": "芦",
+          "startMs": 468910,
+          "endMs": 468950
+        },
+        {
+          "text": "籽",
+          "startMs": 469150,
+          "endMs": 469190
+        },
+        {
+          "text": "需",
+          "startMs": 469510,
+          "endMs": 469670
+        },
+        {
+          "text": "要",
+          "startMs": 469670,
+          "endMs": 469790
+        },
+        {
+          "text": "绿",
+          "startMs": 469830,
+          "endMs": 470030
+        },
+        {
+          "text": "叶",
+          "startMs": 470030,
+          "endMs": 470270
+        },
+        {
+          "text": "和",
+          "startMs": 470270,
+          "endMs": 470510
+        },
+        {
+          "text": "泥",
+          "startMs": 470510,
+          "endMs": 470710
+        },
+        {
+          "text": "土",
+          "startMs": 470710,
+          "endMs": 470950
+        },
+        {
+          "text": "有",
+          "startMs": 471470,
+          "endMs": 471670
+        },
+        {
+          "text": "了",
+          "startMs": 471670,
+          "endMs": 471830
+        },
+        {
+          "text": "这",
+          "startMs": 471830,
+          "endMs": 471990
+        },
+        {
+          "text": "两",
+          "startMs": 471990,
+          "endMs": 472150
+        },
+        {
+          "text": "样",
+          "startMs": 472150,
+          "endMs": 472310
+        },
+        {
+          "text": "东",
+          "startMs": 472310,
+          "endMs": 472470
+        },
+        {
+          "text": "西",
+          "startMs": 472470,
+          "endMs": 472630
+        },
+        {
+          "text": "就",
+          "startMs": 472870,
+          "endMs": 473030
+        },
+        {
+          "text": "能",
+          "startMs": 473030,
+          "endMs": 473230
+        },
+        {
+          "text": "平",
+          "startMs": 473230,
+          "endMs": 473390
+        },
+        {
+          "text": "息",
+          "startMs": 473470,
+          "endMs": 473510
+        },
+        {
+          "text": "它",
+          "startMs": 473630,
+          "endMs": 473710
+        },
+        {
+          "text": "的",
+          "startMs": 473710,
+          "endMs": 473910
+        },
+        {
+          "text": "烈",
+          "startMs": 473910,
+          "endMs": 474070
+        },
+        {
+          "text": "焰",
+          "startMs": 474110,
+          "endMs": 474190
+        },
+        {
+          "text": "哦",
+          "startMs": 474910,
+          "endMs": 475030
+        }
+      ]
+    },
+    {
+      "text": "可这山洞里全是石头，到哪去找绿叶啊？哎？",
+      "startMs": 476010,
+      "endMs": 480490,
+      "words": [
+        {
+          "text": "可",
+          "startMs": 476010,
+          "endMs": 476170
+        },
+        {
+          "text": "这",
+          "startMs": 476170,
+          "endMs": 476330
+        },
+        {
+          "text": "山",
+          "startMs": 476330,
+          "endMs": 476530
+        },
+        {
+          "text": "洞",
+          "startMs": 476530,
+          "endMs": 476690
+        },
+        {
+          "text": "里",
+          "startMs": 476690,
+          "endMs": 476930
+        },
+        {
+          "text": "全",
+          "startMs": 476930,
+          "endMs": 477130
+        },
+        {
+          "text": "是",
+          "startMs": 477130,
+          "endMs": 477330
+        },
+        {
+          "text": "石",
+          "startMs": 477330,
+          "endMs": 477530
+        },
+        {
+          "text": "头",
+          "startMs": 477530,
+          "endMs": 477770
+        },
+        {
+          "text": "到",
+          "startMs": 478410,
+          "endMs": 478650
+        },
+        {
+          "text": "哪",
+          "startMs": 478650,
+          "endMs": 478850
+        },
+        {
+          "text": "去",
+          "startMs": 478850,
+          "endMs": 479010
+        },
+        {
+          "text": "找",
+          "startMs": 479010,
+          "endMs": 479210
+        },
+        {
+          "text": "绿",
+          "startMs": 479210,
+          "endMs": 479450
+        },
+        {
+          "text": "叶",
+          "startMs": 479450,
+          "endMs": 479650
+        },
+        {
+          "text": "啊",
+          "startMs": 479730,
+          "endMs": 479890
+        },
+        {
+          "text": "哎",
+          "startMs": 480370,
+          "endMs": 480490
+        }
+      ]
+    },
+    {
+      "text": "老爷爷，你看！",
+      "startMs": 503510,
+      "endMs": 504630,
+      "words": [
+        {
+          "text": "老",
+          "startMs": 503510,
+          "endMs": 503710
+        },
+        {
+          "text": "爷",
+          "startMs": 503710,
+          "endMs": 503830
+        },
+        {
+          "text": "爷",
+          "startMs": 503870,
+          "endMs": 503990
+        },
+        {
+          "text": "你",
+          "startMs": 504150,
+          "endMs": 504310
+        },
+        {
+          "text": "看",
+          "startMs": 504310,
+          "endMs": 504630
+        }
+      ]
+    },
+    {
+      "text": "落啊",
+      "startMs": 581290,
+      "endMs": 581650,
+      "words": [
+        {
+          "text": "落",
+          "startMs": 581290,
+          "endMs": 581330
+        },
+        {
+          "text": "啊",
+          "startMs": 581610,
+          "endMs": 581650
+        }
+      ]
+    }
+  ]
+}
