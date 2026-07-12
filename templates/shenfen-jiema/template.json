@@ -1,0 +1,88 @@
+{
+  "_comment": "模板四：身份系·汉字解码(姓氏)。对应 mind/new_media_operations/02.汉字解码引擎/01_身份系.md。9:16 全屏黑底(与 TikTok 推荐页融为一体)，结构：钩子(纯排版)→数据(40%)→悬念(AI图+推镜)→揭晓(金色巨字+拼音)→评论钩CTA。全片只有越南语旁白(P2)，无中文朗读。",
+  "id": "shenfen-jiema",
+  "name": "身份系·汉字解码(姓氏)·越南受众",
+  "layout": "shenfen",
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920
+  },
+  "audio": {
+    "_comment": "viVoice=火山官方越南语音色(uranus bigtts, v1接口可用)。候选试听样品在 market/temp/voice-samples/。",
+    "viVoice": "vi_female_linh_uranus_bigtts",
+    "viSpeed": 1.08,
+    "leadMs": 180,
+    "tailMs": {
+      "hook": 150,
+      "tease": 200,
+      "suspense": 300,
+      "reveal": 500,
+      "cta": 650
+    },
+    "bgm": {
+      "src": "library/audio/bgm/peach_haven.mp3",
+      "volume": 0.09
+    }
+  },
+  "image": {
+    "_comment": "悬念拍 9:16 全屏出图。风格锚为程序生成的暗调琥珀渐变(build.mjs 首次运行自动产出)，只借光调不借内容。",
+    "aspectRatio": "9:16",
+    "styleAnchor": "templates/shenfen-jiema/style-anchor.png"
+  },
+  "captions": {
+    "_comment": "黑金红三色系：黑底融入信息流，金=汉字/揭晓，红=数据强调。bgColor 也是全片底色。",
+    "bgColor": "#050507",
+    "localColor": "#F5F1E6",
+    "zhColor": "#E9BE6A",
+    "pinyinColor": "#C8A25E",
+    "karaokeColor": "#E9BE6A",
+    "accentRed": "#E23B30",
+    "sizes": {
+      "pinyin": 64,
+      "zh": 560,
+      "local": 56
+    },
+    "sidePad": 90
+  },
+  "fonts": {
+    "files": [
+      {
+        "family": "Playfair Display",
+        "file": "library/fonts/PlayfairDisplay.ttf",
+        "weight": "400 900"
+      },
+      {
+        "family": "Ma Shan Zheng",
+        "file": "library/fonts/MaShanZheng.ttf"
+      },
+      {
+        "family": "Winter",
+        "file": "library/fonts/Winter.ttf"
+      },
+      {
+        "family": "SimHei",
+        "file": "library/fonts/SimHei.ttf"
+      },
+      {
+        "family": "Nunito",
+        "file": "library/fonts/Nunito.ttf",
+        "weight": "200 900"
+      }
+    ],
+    "zhStack": [
+      "Ma Shan Zheng",
+      "Winter",
+      "SimHei",
+      "PingFang SC",
+      "serif"
+    ],
+    "zhWeight": 700,
+    "latinStack": [
+      "Playfair Display",
+      "Nunito",
+      "PingFang SC",
+      "serif"
+    ]
+  }
+}

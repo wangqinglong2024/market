@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "layout": "shenfen",
+    "transitionFrames": 7,
+    "captions": {
+      "_comment": "黑金红三色系：黑底融入信息流，金=汉字/揭晓，红=数据强调。bgColor 也是全片底色。",
+      "bgColor": "#050507",
+      "localColor": "#F5F1E6",
+      "zhColor": "#E9BE6A",
+      "pinyinColor": "#C8A25E",
+      "karaokeColor": "#E9BE6A",
+      "accentRed": "#E23B30",
+      "sizes": {
+        "pinyin": 64,
+        "zh": 560,
+        "local": 56
+      },
+      "sidePad": 90
+    },
+    "fonts": {
+      "files": [
+        {
+          "family": "Playfair Display",
+          "file": "library/fonts/PlayfairDisplay.ttf",
+          "weight": "400 900"
+        },
+        {
+          "family": "Ma Shan Zheng",
+          "file": "library/fonts/MaShanZheng.ttf"
+        },
+        {
+          "family": "Winter",
+          "file": "library/fonts/Winter.ttf"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        }
+      ],
+      "zhStack": [
+        "Ma Shan Zheng",
+        "Winter",
+        "SimHei",
+        "PingFang SC",
+        "serif"
+      ],
+      "zhWeight": 700,
+      "latinStack": [
+        "Playfair Display",
+        "Nunito",
+        "PingFang SC",
+        "serif"
+      ]
+    },
+    "bgm": {
+      "src": "library/audio/bgm/peach_haven.mp3",
+      "volume": 0.09
+    }
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "role": "hook",
+      "durationMs": 1890,
+      "audio": "videos/2026/07/12/nguyen-ho-giai-ma/audio/hook.mp3",
+      "audioDelayMs": 180,
+      "transitionIn": "fade",
+      "vi": "",
+      "display": {
+        "eyebrow": "GIẢI MÃ HỌ VIỆT",
+        "title1": "HỌ",
+        "title2": "NGUYỄN"
+      }
+    },
+    {
+      "id": "tease",
+      "role": "tease",
+      "durationMs": 3980,
+      "audio": "videos/2026/07/12/nguyen-ho-giai-ma/audio/tease.mp3",
+      "audioDelayMs": 180,
+      "transitionIn": "fade",
+      "vi": "",
+      "display": {
+        "stat": "40%",
+        "statLine": "người Việt mang họ này",
+        "statSub": "…nhưng chưa từng nhìn thấy nó"
+      }
+    },
+    {
+      "id": "suspense",
+      "role": "suspense",
+      "durationMs": 6480,
+      "audio": "videos/2026/07/12/nguyen-ho-giai-ma/audio/suspense.mp3",
+      "audioDelayMs": 180,
+      "transitionIn": "fade",
+      "image": "videos/2026/07/12/nguyen-ho-giai-ma/images/suspense.png",
+      "vi": "Nhạc sư Nguyễn Hàm (阮咸) — người đời lấy tên ông đặt cho cây đàn",
+      "display": {
+        "chip": "TRÚC LÂM THẤT HIỀN · 竹林七贤 · TK 3"
+      }
+    },
+    {
+      "id": "reveal",
+      "role": "reveal",
+      "durationMs": 3320,
+      "audio": "videos/2026/07/12/nguyen-ho-giai-ma/audio/reveal.mp3",
+      "audioDelayMs": 180,
+      "transitionIn": "fade",
+      "vi": "Họ của ông — cũng chính là họ của bạn.",
+      "display": {
+        "han": "阮",
+        "pinyin": "ruǎn",
+        "eq": "= NGUYỄN"
+      }
+    },
+    {
+      "id": "cta",
+      "role": "cta",
+      "durationMs": 2966,
+      "audio": "videos/2026/07/12/nguyen-ho-giai-ma/audio/cta.mp3",
+      "audioDelayMs": 180,
+      "transitionIn": "fade",
+      "vi": "",
+      "display": {
+        "q": "Họ bạn là gì?",
+        "action": "Viết họ của bạn|vào bình luận",
+        "tail": "Video sau — có thể chính là họ của bạn"
+      }
+    }
+  ]
+}
