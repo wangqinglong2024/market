@@ -108,6 +108,10 @@ export type Effect = {
 // 字级时间戳（火山 TTS with_timestamp，2026-07-07）：驱动中文逐字跳字
 export type CharTiming = { ch: string; startMs: number; endMs: number };
 
+// 卡拉OK词单元（chinese-learn 版式，2026-07-12）：一个「词」= 一段汉字 + 拼音 + 绝对起止毫秒。
+// ASR 返回逐字时间戳，build 用 Intl.Segmenter 分词后聚成词单元，渲染层按 currentMs 逐词高亮。
+export type KaraWord = { zh: string; py: string; startMs: number; endMs: number };
+
 export type Beat = {
   id: string;
   // 场景共图分组——同 sceneId 连续拍共用一张图、不换图不转场
@@ -134,9 +138,12 @@ export type Beat = {
 // 字幕排版参数（config → manifest.meta.captions 全量透传）
 export type CaptionCfg = {
   pinyinColor: string; zhColor: string; localColor: string; bgColor: string;
-  sizes?: { pinyin: number; zh: number; local: number };
+  sizes?: { pinyin: number; zh: number; local: number; vi?: number };
   gapPinyinZh?: number; gapZhLocal?: number; sidePad?: number;
   pinyinColumnGap?: number; opticalLift?: number; karaokeColor?: string;
+  // chinese-learn 版式补充:越南语行色 + 未读(dim)色 + 行距
+  viColor?: string; dimColor?: string; readColor?: string;
+  lineGap?: number;
 };
 
 export type Manifest = {
@@ -157,6 +164,13 @@ export type Manifest = {
     bg?: string;
     colors?: Record<string, string>;
     grid?: { cols: number; rows: number };
+    // chinese-learn 版式用（其它版式忽略）：上方原视频源 + 裁切区 + 下方字幕区
+    source?: {
+      video: string;                       // staticFile 相对路径（public/ 下）
+      region?: { top: number; height: number }; // 视频摆放区(宽=画布宽)，cover 裁切
+      focusY?: number;                     // 裁切纵向焦点 0(顶)~1(底)，默认 0.5
+    };
+    subtitle?: { top: number; height: number };
   };
   beats: Beat[];
 };

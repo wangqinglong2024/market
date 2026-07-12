@@ -1,0 +1,34 @@
+{
+  "_comment": "中文学习字幕片。输入:无字幕中文视频(source.mp4)。上原视频(1080×720裁切)、下三行卡拉OK字幕(拼音/中文/越南语),逐词跳动高亮。ASR=火山录音文件识别大模型极速版。画布3:4=1080×1440,纯黑底(TikTok FYP风)。",
+  "id": "chinese-learn",
+  "name": "中文学习·视频字幕(拼音/中文/越南语)",
+  "layout": "chinese-learn",
+  "meta": { "fps": 30, "width": 1080, "height": 1440 },
+  "source": {
+    "region": { "top": 120, "height": 720 },
+    "focusY": 0.5
+  },
+  "subtitle": { "top": 960, "height": 360 },
+  "captions": {
+    "bgColor": "#000000",
+    "pinyinColor": "#7fd1c0",
+    "zhColor": "#ffffff",
+    "viColor": "#f5c518",
+    "karaokeColor": "#25f4ee",
+    "dimColor": "#565b63",
+    "readColor": "#ffffff",
+    "sizes": { "pinyin": 34, "zh": 66, "vi": 38, "local": 38 },
+    "lineGap": 22,
+    "sidePad": 44,
+    "localColor": "#f5c518"
+  },
+  "fonts": {
+    "files": [
+      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" },
+      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" }
+    ],
+    "zhStack": ["SimHei", "PingFang SC", "Microsoft YaHei", "sans-serif"],
+    "zhWeight": 700,
+    "latinStack": ["Nunito", "PingFang SC", "sans-serif"]
+  }
+}

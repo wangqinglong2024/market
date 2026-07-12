@@ -1,0 +1,173 @@
+{
+  "text": "你在做什么？我在起床、洗澡、吃早饭、工作。买菜，锻炼。吃晚饭、看电视、看书。",
+  "utterances": [
+    {
+      "text": "你在做什么？",
+      "startMs": 150,
+      "endMs": 1390,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 150,
+          "endMs": 430
+        },
+        {
+          "text": "在",
+          "startMs": 430,
+          "endMs": 630
+        },
+        {
+          "text": "做",
+          "startMs": 630,
+          "endMs": 910
+        },
+        {
+          "text": "什",
+          "startMs": 910,
+          "endMs": 1110
+        },
+        {
+          "text": "么",
+          "startMs": 1110,
+          "endMs": 1390
+        }
+      ]
+    },
+    {
+      "text": "我在起床、洗澡、吃早饭、工作。",
+      "startMs": 1750,
+      "endMs": 8630,
+      "words": [
+        {
+          "text": "我",
+          "startMs": 1750,
+          "endMs": 2110
+        },
+        {
+          "text": "在",
+          "startMs": 2110,
+          "endMs": 2350
+        },
+        {
+          "text": "起",
+          "startMs": 2910,
+          "endMs": 3270
+        },
+        {
+          "text": "床",
+          "startMs": 3270,
+          "endMs": 3670
+        },
+        {
+          "text": "洗",
+          "startMs": 4710,
+          "endMs": 5070
+        },
+        {
+          "text": "澡",
+          "startMs": 5070,
+          "endMs": 5390
+        },
+        {
+          "text": "吃",
+          "startMs": 6110,
+          "endMs": 6510
+        },
+        {
+          "text": "早",
+          "startMs": 6510,
+          "endMs": 6790
+        },
+        {
+          "text": "饭",
+          "startMs": 6790,
+          "endMs": 7150
+        },
+        {
+          "text": "工",
+          "startMs": 7950,
+          "endMs": 8350
+        },
+        {
+          "text": "作",
+          "startMs": 8350,
+          "endMs": 8630
+        }
+      ]
+    },
+    {
+      "text": "买菜，锻炼。",
+      "startMs": 9940,
+      "endMs": 12220,
+      "words": [
+        {
+          "text": "买",
+          "startMs": 9940,
+          "endMs": 10260
+        },
+        {
+          "text": "菜",
+          "startMs": 10260,
+          "endMs": 10620
+        },
+        {
+          "text": "锻",
+          "startMs": 11580,
+          "endMs": 11940
+        },
+        {
+          "text": "炼",
+          "startMs": 11940,
+          "endMs": 12220
+        }
+      ]
+    },
+    {
+      "text": "吃晚饭、看电视、看书。",
+      "startMs": 13610,
+      "endMs": 17890,
+      "words": [
+        {
+          "text": "吃",
+          "startMs": 13610,
+          "endMs": 13930
+        },
+        {
+          "text": "晚",
+          "startMs": 13930,
+          "endMs": 14170
+        },
+        {
+          "text": "饭",
+          "startMs": 14170,
+          "endMs": 14530
+        },
+        {
+          "text": "看",
+          "startMs": 15250,
+          "endMs": 15610
+        },
+        {
+          "text": "电",
+          "startMs": 15610,
+          "endMs": 15930
+        },
+        {
+          "text": "视",
+          "startMs": 15930,
+          "endMs": 16170
+        },
+        {
+          "text": "看",
+          "startMs": 17090,
+          "endMs": 17490
+        },
+        {
+          "text": "书",
+          "startMs": 17490,
+          "endMs": 17890
+        }
+      ]
+    }
+  ]
+}
