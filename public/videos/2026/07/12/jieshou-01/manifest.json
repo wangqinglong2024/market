@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1440,
+    "layout": "zhengnian",
+    "series": "jieshou",
+    "transitionFrames": 4,
+    "captions": {
+      "bgColor": "#000000"
+    },
+    "fonts": {
+      "files": [
+        {
+          "family": "Ma Shan Zheng",
+          "file": "library/fonts/MaShanZheng.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        }
+      ],
+      "zhStack": [
+        "Ma Shan Zheng",
+        "SimHei",
+        "PingFang SC",
+        "serif"
+      ],
+      "zhWeight": 400,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "sans-serif"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "role": "hook",
+      "index": 0,
+      "total": 4,
+      "durationMs": 2880,
+      "audio": "videos/2026/07/12/jieshou-01/audio/hook.mp3",
+      "audioDelayMs": 200,
+      "image": "videos/2026/07/12/jieshou-01/images/theme.png",
+      "zh": "愿你今年收下这一切",
+      "pinyin": "yuàn nǐ jīn nián shōu xià zhè yī qiè",
+      "vi": "Chúc bạn năm nay nhận đủ những điều này."
+    },
+    {
+      "id": "w1",
+      "role": "word",
+      "index": 1,
+      "total": 4,
+      "durationMs": 2400,
+      "zhAudio": "videos/2026/07/12/jieshou-01/audio/w1-zh.mp3",
+      "image": "videos/2026/07/12/jieshou-01/images/w1.png",
+      "zh": "好运",
+      "pinyin": "hǎo yùn",
+      "vi": "May mắn",
+      "fx": "light-swirl",
+      "sfx": "chime"
+    },
+    {
+      "id": "w2",
+      "role": "word",
+      "index": 2,
+      "total": 4,
+      "durationMs": 2400,
+      "zhAudio": "videos/2026/07/12/jieshou-01/audio/w2-zh.mp3",
+      "image": "videos/2026/07/12/jieshou-01/images/w2.png",
+      "zh": "发财",
+      "pinyin": "fā cái",
+      "vi": "Phát tài",
+      "fx": "coin-burst",
+      "sfx": "coins"
+    },
+    {
+      "id": "w3",
+      "role": "word",
+      "index": 3,
+      "total": 4,
+      "durationMs": 2400,
+      "zhAudio": "videos/2026/07/12/jieshou-01/audio/w3-zh.mp3",
+      "image": "videos/2026/07/12/jieshou-01/images/w3.png",
+      "zh": "真爱",
+      "pinyin": "zhēn ài",
+      "vi": "Tình yêu đích thực",
+      "fx": "petal-thread",
+      "sfx": "heartbeat"
+    },
+    {
+      "id": "w4",
+      "role": "word",
+      "index": 4,
+      "total": 4,
+      "durationMs": 2400,
+      "zhAudio": "videos/2026/07/12/jieshou-01/audio/w4-zh.mp3",
+      "image": "videos/2026/07/12/jieshou-01/images/w4.png",
+      "zh": "贵人",
+      "pinyin": "guì rén",
+      "vi": "Quý nhân",
+      "fx": "gate-light",
+      "sfx": "boom"
+    },
+    {
+      "id": "outro",
+      "role": "seal",
+      "index": 5,
+      "total": 4,
+      "durationMs": 4868,
+      "audio": "videos/2026/07/12/jieshou-01/audio/outro.mp3",
+      "audioDelayMs": 300,
+      "vi": "Gõ 'nhận' để nhận hết 👇",
+      "preview": "Ngày mai: những thứ sẽ TRÁNH XA bạn"
+    }
+  ]
+}

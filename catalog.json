@@ -2,6 +2,28 @@
   "_comment": "视频总账。每条视频一条记录，扛上千条时的索引与状态。id 建议 slug；产物在 public/videos/<shard>/<id>/，其中 shard=年/月/日(YYYY/MM/DD，2026-07-05 用户改：原按月分片改为年月日三级)。",
   "videos": [
     {
+      "id": "jieshou-01",
+      "title": "正念翻牌·接收系#1 愿你今年收下这一切(越南受众)",
+      "template": "zhengnian-jieshou",
+      "shard": "2026/07/12",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-12",
+      "manifest": "public/videos/2026/07/12/jieshou-01/manifest.json",
+      "beats": 6
+    },
+    {
+      "id": "quzhu-01",
+      "title": "正念翻牌·驱逐系#1 这类人将远离你(越南受众)",
+      "template": "zhengnian-quzhu",
+      "shard": "2026/07/12",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-12",
+      "manifest": "public/videos/2026/07/12/quzhu-01/manifest.json",
+      "beats": 6
+    },
+    {
       "id": "nguyen-ho-giai-ma",
       "title": "阮姓解码 · 身份系第1条(越南受众)",
       "template": "shenfen-jiema",

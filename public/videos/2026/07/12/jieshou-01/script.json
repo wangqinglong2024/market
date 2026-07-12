@@ -1,0 +1,50 @@
+{
+  "videoId": "jieshou-01",
+  "lang": "vi",
+  "_comment": "接收系第1条·年度版(排播表#2)。主题图/词图/动效逐集逐词定制，本集设计如下。",
+  "hook": {
+    "vi": "Chúc bạn năm nay nhận đủ những điều này.",
+    "zh": "愿你今年收下这一切",
+    "pinyin": "yuàn nǐ jīn nián shōu xià zhè yī qiè",
+    "themePrompt": "an epic radiant golden scene combining: a giant golden koi fish leaping over a sea of clouds at sunrise, an overflowing treasure chest bursting with light, two cherry blossom trees intertwined, a lighthouse beam through golden mist, warm gold and pink palette, movie-poster composition"
+  },
+  "words": [
+    {
+      "zh": "好运",
+      "pinyin": "hǎo yùn",
+      "vi": "May mắn",
+      "fx": "light-swirl",
+      "sfx": "chime",
+      "imagePrompt": "a giant golden koi fish leaping out of a sea of clouds at sunrise, trailing sparkling water droplets and streams of golden light, sun rays bursting"
+    },
+    {
+      "zh": "发财",
+      "pinyin": "fā cái",
+      "vi": "Phát tài",
+      "fx": "coin-burst",
+      "sfx": "coins",
+      "imagePrompt": "an ancient treasure chest on a mountain of gold coins bursting open with blinding rays of golden light, coins flying into the air, red silk ribbons"
+    },
+    {
+      "zh": "真爱",
+      "pinyin": "zhēn ài",
+      "vi": "Tình yêu đích thực",
+      "fx": "petal-thread",
+      "sfx": "heartbeat",
+      "imagePrompt": "two cherry blossom trees grown intertwined into one, pink petals swirling in warm wind, a single red thread weaving between branches, golden hour light"
+    },
+    {
+      "zh": "贵人",
+      "pinyin": "guì rén",
+      "vi": "Quý nhân",
+      "fx": "gate-light",
+      "sfx": "boom",
+      "imagePrompt": "majestic golden gates opening in the sky above calm sea, a lighthouse beam cutting through luminous golden mist, stairway of light descending, dawn colors"
+    }
+  ],
+  "outro": {
+    "vi": "Gõ 'nhận' để nhận hết. Ngày mai: những thứ sẽ tránh xa bạn.",
+    "preview": "Ngày mai: những thứ sẽ TRÁNH XA bạn",
+    "cta": "Gõ 'nhận' để nhận hết 👇"
+  }
+}

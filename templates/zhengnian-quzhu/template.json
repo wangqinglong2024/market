@@ -1,0 +1,33 @@
+{
+  "_comment": "正念翻牌引擎·驱逐系（坏词远离你）。规范：mind/new_media_operations/02.正念翻牌引擎/。3:4 纯黑底融入信息流；开场=主题大图+正念吸引四字+三语钩子(只越南语发音)；每词微循环=越语+图先行→拼音+中文咒文(中文朗读)→逐词定制毁灭动效；结尾解印+领取钩。",
+  "id": "zhengnian-quzhu",
+  "name": "正念翻牌·驱逐系(越南受众)",
+  "layout": "zhengnian",
+  "series": "quzhu",
+  "meta": { "fps": 30, "width": 1080, "height": 1440 },
+  "audio": {
+    "viVoice": "vi_female_linh_uranus_bigtts",
+    "viSpeed": 1.08,
+    "zhVoice": "zh_female_kailangjiejie_moon_bigtts",
+    "zhSpeed": 1.0,
+    "hookTailMs": 400,
+    "wordMs": 2400,
+    "outroTailMs": 800
+  },
+  "image": {
+    "_comment": "动漫风格锚共享一张(首次构建自动生成，人工确认画风后锁定)。",
+    "aspectRatio": "3:4",
+    "styleAnchor": "public/library/style/anime-anchor.png"
+  },
+  "captions": { "bgColor": "#000000" },
+  "fonts": {
+    "files": [
+      { "family": "Ma Shan Zheng", "file": "library/fonts/MaShanZheng.ttf" },
+      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" },
+      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" }
+    ],
+    "zhStack": ["Ma Shan Zheng", "SimHei", "PingFang SC", "serif"],
+    "zhWeight": 400,
+    "latinStack": ["Nunito", "PingFang SC", "sans-serif"]
+  }
+}

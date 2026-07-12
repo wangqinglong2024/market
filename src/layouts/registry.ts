@@ -6,6 +6,7 @@ import { LAYOUT as V1 } from "./v1-legacy";
 import { LAYOUT as GRID9 } from "./grid-9";
 import { LAYOUT as TOAST3 } from "./toast-3";
 import { LAYOUT as SHENFEN } from "./shenfen";
+import { LAYOUT as ZHENGNIAN } from "./zhengnian";
 
 const LAYOUTS: Record<string, LayoutModule> = {
   [V2.id]: V2,
@@ -13,6 +14,7 @@ const LAYOUTS: Record<string, LayoutModule> = {
   [GRID9.id]: GRID9,
   [TOAST3.id]: TOAST3,
   [SHENFEN.id]: SHENFEN,
+  [ZHENGNIAN.id]: ZHENGNIAN,
 };
 
 // 未知/缺省 layout → 旧版式(v1-legacy)：与改造前「非 v2 即旧版式」的兜底一致，旧片渲染不变。

@@ -1,0 +1,50 @@
+{
+  "videoId": "quzhu-01",
+  "lang": "vi",
+  "_comment": "驱逐系第1条·人际版(排播表#1)。主题图/词图/动效逐集逐词定制，本集设计如下。",
+  "hook": {
+    "vi": "Những kiểu người này sẽ tránh xa bạn.",
+    "zh": "这类人将远离你",
+    "pinyin": "zhè lèi rén jiāng yuǎn lí nǐ",
+    "themePrompt": "an apocalyptic storm scene combining: a shattering red rose, a venomous green snake coiled around a cracked stone pillar, an ancient bridge snapping in half over an abyss, a white theater mask cracking apart, all lit by violent lightning under black storm clouds, rain streaks, epic movie-poster composition"
+  },
+  "words": [
+    {
+      "zh": "渣男",
+      "pinyin": "zhā nán",
+      "vi": "Sở Khanh",
+      "fx": "shatter-rain",
+      "sfx": "shatter",
+      "imagePrompt": "a single red rose shattering into glass shards in a violent night rainstorm, petals breaking apart mid-air, dramatic lightning backlight, dark blue and crimson palette"
+    },
+    {
+      "zh": "小人",
+      "pinyin": "xiǎo rén",
+      "vi": "Tiểu nhân",
+      "fx": "shadow-crumble",
+      "sfx": "shatter",
+      "imagePrompt": "a venomous green snake coiled around a broken ancient stone pillar in deep shadows, sinister glowing yellow eyes, black creeping mist, sickly green rim light"
+    },
+    {
+      "zh": "背叛",
+      "pinyin": "bèi pàn",
+      "vi": "Phản bội",
+      "fx": "tear-half",
+      "sfx": "tear",
+      "imagePrompt": "an ancient stone bridge snapped in half over a dark bottomless abyss, the broken gap at center of composition, falling debris, storm sky with red lightning"
+    },
+    {
+      "zh": "欺骗",
+      "pinyin": "qī piàn",
+      "vi": "Lừa dối",
+      "fx": "strip-peel",
+      "sfx": "tear",
+      "imagePrompt": "a white theater mask cracking and peeling apart in floating fragments, hollow darkness behind the mask, eerie purple mist, cold moonlight"
+    }
+  ],
+  "outro": {
+    "vi": "Gõ 'nhận' để họ tránh xa bạn. Ngày mai: những điều sẽ đến với bạn.",
+    "preview": "Ngày mai: những điều sẽ ĐẾN với bạn",
+    "cta": "Gõ 'nhận' để họ tránh xa bạn 👇"
+  }
+}

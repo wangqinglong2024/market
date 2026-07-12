@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1440,
+    "layout": "zhengnian",
+    "series": "quzhu",
+    "transitionFrames": 4,
+    "captions": {
+      "bgColor": "#000000"
+    },
+    "fonts": {
+      "files": [
+        {
+          "family": "Ma Shan Zheng",
+          "file": "library/fonts/MaShanZheng.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        }
+      ],
+      "zhStack": [
+        "Ma Shan Zheng",
+        "SimHei",
+        "PingFang SC",
+        "serif"
+      ],
+      "zhWeight": 400,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "sans-serif"
+      ]
+    }
+  },
+  "beats": [
+    {
+      "id": "hook",
+      "role": "hook",
+      "index": 0,
+      "total": 4,
+      "durationMs": 2712,
+      "audio": "videos/2026/07/12/quzhu-01/audio/hook.mp3",
+      "audioDelayMs": 200,
+      "image": "videos/2026/07/12/quzhu-01/images/theme.png",
+      "zh": "这类人将远离你",
+      "pinyin": "zhè lèi rén jiāng yuǎn lí nǐ",
+      "vi": "Những kiểu người này sẽ tránh xa bạn."
+    },
+    {
+      "id": "w1",
+      "role": "word",
+      "index": 1,
+      "total": 4,
+      "durationMs": 2400,
+      "zhAudio": "videos/2026/07/12/quzhu-01/audio/w1-zh.mp3",
+      "image": "videos/2026/07/12/quzhu-01/images/w1.png",
+      "zh": "渣男",
+      "pinyin": "zhā nán",
+      "vi": "Sở Khanh",
+      "fx": "shatter-rain",
+      "sfx": "shatter"
+    },
+    {
+      "id": "w2",
+      "role": "word",
+      "index": 2,
+      "total": 4,
+      "durationMs": 2400,
+      "zhAudio": "videos/2026/07/12/quzhu-01/audio/w2-zh.mp3",
+      "image": "videos/2026/07/12/quzhu-01/images/w2.png",
+      "zh": "小人",
+      "pinyin": "xiǎo rén",
+      "vi": "Tiểu nhân",
+      "fx": "shadow-crumble",
+      "sfx": "shatter"
+    },
+    {
+      "id": "w3",
+      "role": "word",
+      "index": 3,
+      "total": 4,
+      "durationMs": 2400,
+      "zhAudio": "videos/2026/07/12/quzhu-01/audio/w3-zh.mp3",
+      "image": "videos/2026/07/12/quzhu-01/images/w3.png",
+      "zh": "背叛",
+      "pinyin": "bèi pàn",
+      "vi": "Phản bội",
+      "fx": "tear-half",
+      "sfx": "tear"
+    },
+    {
+      "id": "w4",
+      "role": "word",
+      "index": 4,
+      "total": 4,
+      "durationMs": 2400,
+      "zhAudio": "videos/2026/07/12/quzhu-01/audio/w4-zh.mp3",
+      "image": "videos/2026/07/12/quzhu-01/images/w4.png",
+      "zh": "欺骗",
+      "pinyin": "qī piàn",
+      "vi": "Lừa dối",
+      "fx": "strip-peel",
+      "sfx": "tear"
+    },
+    {
+      "id": "outro",
+      "role": "seal",
+      "index": 5,
+      "total": 4,
+      "durationMs": 5252,
+      "audio": "videos/2026/07/12/quzhu-01/audio/outro.mp3",
+      "audioDelayMs": 300,
+      "vi": "Gõ 'nhận' để họ tránh xa bạn 👇",
+      "preview": "Ngày mai: những điều sẽ ĐẾN với bạn"
+    }
+  ]
+}
