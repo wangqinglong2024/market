@@ -1,6 +1,0 @@
-{
-  "_comment": "本模板只有一个主角色：重绘成贴纸画风的小女儿(girl)。ref=贴纸定妆图(由 guoxue 蜡笔小女儿 model-sheet → flux 重绘成贴纸风，形象不变)。每个词图=喂这张 ref 走 flux 画她做该动作。",
-  "characters": [
-    { "id": "girl", "name": "小女儿", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" }
-  ]
-}

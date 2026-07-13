@@ -1,2 +1,0 @@
-<!-- 小女儿(贴纸画风)定妆设定。由 guoxue 蜡笔小女儿 model-sheet → flux 重绘成贴纸风(形象不变)。flux 出每个动作图时拼进 prompt，保证一致。 -->
-A chubby cute cartoon little girl: round pudgy body with soft baby-fat, short chubby arms and short chubby legs, round fuller cheeks. Short brown hair in two small side pigtails tied with small PINK ties, short bangs. Big shiny round black eyes with white highlights, tiny simple nose, rosy round cheeks, cheerful friendly smile. Fair light skin. Wears a simple cute PINK sleeveless dress. Kawaii glossy sticker style with clean bold rounded dark-brown outlines.

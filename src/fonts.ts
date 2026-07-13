@@ -13,12 +13,13 @@ export type FontsMeta = {
 // 兜底默认（manifest 没带 fonts 时、或 Studio 里非视频 Composition 用）
 export const DEFAULT_FONTS: FontsMeta = {
   files: [
+    { family: "Ma Shan Zheng", file: "library/fonts/MaShanZheng.ttf" },
     { family: "Winter", file: "library/fonts/Winter.ttf" },
     { family: "SimHei", file: "library/fonts/SimHei.ttf" },
     { family: "Nunito", file: "library/fonts/Nunito.ttf", weight: "200 900" },
   ],
-  zhStack: ["Winter", "SimHei", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "sans-serif"],
-  zhWeight: 700,
+  zhStack: ["Ma Shan Zheng", "Winter", "SimHei", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "sans-serif"],
+  zhWeight: 400,
   latinStack: ["Nunito", "PingFang SC", "Microsoft YaHei", "sans-serif"],
 };
 

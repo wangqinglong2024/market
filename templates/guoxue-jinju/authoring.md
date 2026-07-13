@@ -2,7 +2,7 @@
 
 > 本文件是本模板的**唯一作者指南**：用户说「用 `guoxue-jinju` 模板 + 一句古文」，我(Claude)读这份指南把文案扩写成 `script.json`，然后
 > `node scripts/build.mjs <videoId>`（配音+出图+归一化+manifest）→ `npx remotion render <videoId> …`（出片）。
-> 更深的历史决策见仓库 `plan/*.md`（跨模板/背景），但**做这个模板只需读本文**。
+> 跨模板通用的规律/架构/铁律见仓库 `base/*.md`，但**做这个模板只需读本文**。
 
 ## 1. 输入 / 输出
 - **输入**：用户给**一句**古文/经典/哲理句（中文），如「温故而知新，可以为师矣」。可选 `videoId`、`lang`(默认 vi)、指定哥哥还是妹妹朗读。原样存 `public/videos/<shard>/<id>/input.md`。

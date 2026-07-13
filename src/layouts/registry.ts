@@ -3,14 +3,12 @@
 import type { LayoutModule } from "./types";
 import { LAYOUT as V2 } from "./v2-3x4";
 import { LAYOUT as V1 } from "./v1-legacy";
-import { LAYOUT as GRID9 } from "./grid-9";
 import { LAYOUT as ZHENGNIAN } from "./zhengnian";
 import { LAYOUT as CHINESE_LEARN } from "./chinese-learn";
 
 const LAYOUTS: Record<string, LayoutModule> = {
   [V2.id]: V2,
   [V1.id]: V1,
-  [GRID9.id]: GRID9,
   [ZHENGNIAN.id]: ZHENGNIAN,
   [CHINESE_LEARN.id]: CHINESE_LEARN,
 };
