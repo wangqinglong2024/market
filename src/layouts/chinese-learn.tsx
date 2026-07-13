@@ -21,7 +21,7 @@ type LearnBeat = RenderBeat & {
 const DEF = {
   pinyinColor: "#7fd1c0", zhColor: "#ffffff", viColor: "#f5c518",
   karaokeColor: "#25f4ee", dimColor: "#565b63", bgColor: "#000000",
-  sizes: { pinyin: 54, zh: 74, vi: 60 }, lineGap: 18, sidePad: 40,
+  sizes: { pinyin: 46, zh: 100, vi: 46 }, lineGap: 18, sidePad: 40,
   duck: 0.06, narrationVolume: 1.35,
 };
 

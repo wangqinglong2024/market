@@ -21,11 +21,14 @@ import { audioDurationMs } from "../../scripts/lib/media.mjs";
 
 const VI_VOICE = "vi_female_linh_uranus_bigtts"; // 越南语解说音色(与 zhengnian 一致)
 const isHan = (c) => /[㐀-鿿]/.test(c);
-const remotionBin = () => join(process.cwd(), "node_modules", ".bin", "remotion");
+const isWin = process.platform === "win32";
+// Windows 的 .bin/remotion 是无扩展名 sh 脚本，execFileSync 无法直接 spawn(ENOENT)；用 remotion.cmd + shell。
+const remotionBin = () => join(process.cwd(), "node_modules", ".bin", isWin ? "remotion.cmd" : "remotion");
 const ffmpeg = (args) => {
   const bin = existsSync(remotionBin()) ? remotionBin() : "npx";
   const pre = bin === "npx" ? ["remotion", "ffmpeg"] : ["ffmpeg"];
-  execFileSync(bin, [...pre, ...args], { stdio: "ignore" });
+  // ⚠️ shell:true 下参数不再自动转义——源文件/输出路径必须 ASCII、无空格(见 base/04-成本与铁律 五)。
+  execFileSync(bin, [...pre, ...args], { stdio: "ignore", shell: isWin });
 };
 
 function extractAudioMp3(srcVideo, audioPath) {

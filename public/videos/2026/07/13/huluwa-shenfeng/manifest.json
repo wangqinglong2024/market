@@ -1,0 +1,885 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1440,
+    "layout": "chinese-learn",
+    "captions": {
+      "bgColor": "#000000",
+      "pinyinColor": "#7fd1c0",
+      "zhColor": "#ffffff",
+      "viColor": "#f5c518",
+      "karaokeColor": "#25f4ee",
+      "dimColor": "#565b63",
+      "readColor": "#ffffff",
+      "sizes": {
+        "pinyin": 46,
+        "zh": 100,
+        "vi": 46,
+        "local": 46
+      },
+      "lineGap": 18,
+      "sidePad": 40,
+      "localColor": "#f5c518",
+      "duck": 0.06,
+      "narrationVolume": 1.35
+    },
+    "fonts": {
+      "files": [
+        {
+          "family": "Ma Shan Zheng",
+          "file": "library/fonts/MaShanZheng.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        }
+      ],
+      "zhStack": [
+        "Ma Shan Zheng",
+        "SimHei",
+        "PingFang SC",
+        "serif"
+      ],
+      "zhWeight": 400,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "sans-serif"
+      ]
+    },
+    "source": {
+      "video": "videos/2026/07/13/huluwa-shenfeng/source.mp4",
+      "region": {
+        "top": 120,
+        "height": 720
+      },
+      "focusY": 0.5
+    },
+    "subtitle": {
+      "top": 960,
+      "height": 360
+    }
+  },
+  "beats": [
+    {
+      "id": "nar-0",
+      "kind": "narration",
+      "startMs": 0,
+      "endMs": 3614,
+      "durationMs": 3614,
+      "words": [
+        {
+          "zh": "被",
+          "py": "bèi",
+          "startMs": 0,
+          "endMs": 278
+        },
+        {
+          "zh": "封印",
+          "py": "fēng yìn",
+          "startMs": 278,
+          "endMs": 834
+        },
+        {
+          "zh": "九千",
+          "py": "jiǔ qiān",
+          "startMs": 834,
+          "endMs": 1390
+        },
+        {
+          "zh": "年",
+          "py": "nián",
+          "startMs": 1390,
+          "endMs": 1668
+        },
+        {
+          "zh": "的",
+          "py": "de",
+          "startMs": 1668,
+          "endMs": 1946
+        },
+        {
+          "zh": "妖精，",
+          "py": "yāo jīng",
+          "startMs": 1946,
+          "endMs": 2502
+        },
+        {
+          "zh": "跑出来",
+          "py": "pǎo chū lái",
+          "startMs": 2502,
+          "endMs": 3336
+        },
+        {
+          "zh": "了",
+          "py": "liǎo",
+          "startMs": 3336,
+          "endMs": 3614
+        }
+      ],
+      "vi": "Hai yêu tinh bị nhốt 9000 năm vừa sổng ra rồi!",
+      "narrationAudio": "videos/2026/07/13/huluwa-shenfeng/work/narr-0.mp3",
+      "flash": true
+    },
+    {
+      "id": "zh-1-0",
+      "kind": "zh",
+      "startMs": 3614,
+      "endMs": 7934,
+      "durationMs": 4320,
+      "words": [
+        {
+          "zh": "救命",
+          "py": "jiù mìng",
+          "startMs": 3614,
+          "endMs": 4454
+        },
+        {
+          "zh": "啊",
+          "py": "a",
+          "startMs": 4614,
+          "endMs": 4854
+        }
+      ],
+      "vi": "Cứu với!",
+      "flash": true
+    },
+    {
+      "id": "zh-1-1",
+      "kind": "zh",
+      "startMs": 7934,
+      "endMs": 8614,
+      "durationMs": 680,
+      "words": [
+        {
+          "zh": "老",
+          "py": "lǎo",
+          "startMs": 7934,
+          "endMs": 8134
+        },
+        {
+          "zh": "爷爷",
+          "py": "yé ye",
+          "startMs": 8134,
+          "endMs": 8454
+        }
+      ],
+      "vi": "Ông ơi,",
+      "flash": false
+    },
+    {
+      "id": "zh-1-2",
+      "kind": "zh",
+      "startMs": 8614,
+      "endMs": 9374,
+      "durationMs": 760,
+      "words": [
+        {
+          "zh": "快",
+          "py": "kuài",
+          "startMs": 8614,
+          "endMs": 8814
+        },
+        {
+          "zh": "救救",
+          "py": "jiù jiù",
+          "startMs": 8814,
+          "endMs": 9174
+        },
+        {
+          "zh": "我",
+          "py": "wǒ",
+          "startMs": 9174,
+          "endMs": 9374
+        }
+      ],
+      "vi": "mau cứu cháu với!",
+      "flash": false
+    },
+    {
+      "id": "zh-2-0",
+      "kind": "zh",
+      "startMs": 9374,
+      "endMs": 10654,
+      "durationMs": 1280,
+      "words": [
+        {
+          "zh": "都",
+          "py": "dōu",
+          "startMs": 9374,
+          "endMs": 9574
+        },
+        {
+          "zh": "怪我",
+          "py": "guài wǒ",
+          "startMs": 9574,
+          "endMs": 9934
+        },
+        {
+          "zh": "不好",
+          "py": "bù hǎo",
+          "startMs": 9934,
+          "endMs": 10294
+        }
+      ],
+      "vi": "Đều tại cháu không tốt,",
+      "flash": true
+    },
+    {
+      "id": "zh-2-1",
+      "kind": "zh",
+      "startMs": 10654,
+      "endMs": 12334,
+      "durationMs": 1680,
+      "words": [
+        {
+          "zh": "让",
+          "py": "ràng",
+          "startMs": 10654,
+          "endMs": 10894
+        },
+        {
+          "zh": "两",
+          "py": "liǎng",
+          "startMs": 10894,
+          "endMs": 11054
+        },
+        {
+          "zh": "个",
+          "py": "gè",
+          "startMs": 11054,
+          "endMs": 11174
+        },
+        {
+          "zh": "妖怪",
+          "py": "yāo guài",
+          "startMs": 11174,
+          "endMs": 11534
+        },
+        {
+          "zh": "给",
+          "py": "gěi",
+          "startMs": 11614,
+          "endMs": 11814
+        },
+        {
+          "zh": "逃了",
+          "py": "táo le",
+          "startMs": 11814,
+          "endMs": 12334
+        }
+      ],
+      "vi": "để hai yêu tinh trốn thoát mất rồi.",
+      "flash": false
+    },
+    {
+      "id": "nar-3",
+      "kind": "narration",
+      "startMs": 12334,
+      "endMs": 15948,
+      "durationMs": 3614,
+      "words": [
+        {
+          "zh": "很久",
+          "py": "hěn jiǔ",
+          "startMs": 12334,
+          "endMs": 12816
+        },
+        {
+          "zh": "以前，",
+          "py": "yǐ qián",
+          "startMs": 12816,
+          "endMs": 13298
+        },
+        {
+          "zh": "天神",
+          "py": "tiān shén",
+          "startMs": 13298,
+          "endMs": 13780
+        },
+        {
+          "zh": "把",
+          "py": "bǎ",
+          "startMs": 13780,
+          "endMs": 14021
+        },
+        {
+          "zh": "它们",
+          "py": "tā men",
+          "startMs": 14021,
+          "endMs": 14502
+        },
+        {
+          "zh": "封",
+          "py": "fēng",
+          "startMs": 14502,
+          "endMs": 14743
+        },
+        {
+          "zh": "进",
+          "py": "jìn",
+          "startMs": 14743,
+          "endMs": 14984
+        },
+        {
+          "zh": "了",
+          "py": "liǎo",
+          "startMs": 14984,
+          "endMs": 15225
+        },
+        {
+          "zh": "葫芦",
+          "py": "hú lu",
+          "startMs": 15225,
+          "endMs": 15707
+        },
+        {
+          "zh": "山",
+          "py": "shān",
+          "startMs": 15707,
+          "endMs": 15948
+        }
+      ],
+      "vi": "Ngày xưa, Thiên thần đã phong ấn chúng trong Núi Hồ Lô.",
+      "narrationAudio": "videos/2026/07/13/huluwa-shenfeng/work/narr-3.mp3",
+      "flash": true
+    },
+    {
+      "id": "zh-4-0",
+      "kind": "zh",
+      "startMs": 15948,
+      "endMs": 19948,
+      "durationMs": 4000,
+      "words": [
+        {
+          "zh": "至今",
+          "py": "zhì jīn",
+          "startMs": 15948,
+          "endMs": 16428
+        },
+        {
+          "zh": "已经有",
+          "py": "yǐ jīng yǒu",
+          "startMs": 16748,
+          "endMs": 17388
+        },
+        {
+          "zh": "九千",
+          "py": "jiǔ qiān",
+          "startMs": 17388,
+          "endMs": 17845
+        },
+        {
+          "zh": "九百",
+          "py": "jiǔ bǎi",
+          "startMs": 17845,
+          "endMs": 18302
+        },
+        {
+          "zh": "九十九",
+          "py": "jiǔ shí jiǔ",
+          "startMs": 18302,
+          "endMs": 18988
+        },
+        {
+          "zh": "年",
+          "py": "nián",
+          "startMs": 18988,
+          "endMs": 19188
+        },
+        {
+          "zh": "了",
+          "py": "liǎo",
+          "startMs": 19188,
+          "endMs": 19428
+        }
+      ],
+      "vi": "Đến nay đã 9.999 năm,",
+      "flash": true
+    },
+    {
+      "id": "zh-4-1",
+      "kind": "zh",
+      "startMs": 19948,
+      "endMs": 21628,
+      "durationMs": 1680,
+      "words": [
+        {
+          "zh": "只要",
+          "py": "zhǐ yào",
+          "startMs": 19948,
+          "endMs": 20348
+        },
+        {
+          "zh": "满",
+          "py": "mǎn",
+          "startMs": 20348,
+          "endMs": 20548
+        },
+        {
+          "zh": "一万",
+          "py": "yí wàn",
+          "startMs": 20548,
+          "endMs": 20948
+        },
+        {
+          "zh": "年",
+          "py": "nián",
+          "startMs": 20948,
+          "endMs": 21188
+        }
+      ],
+      "vi": "chỉ cần tròn một vạn năm,",
+      "flash": false
+    },
+    {
+      "id": "zh-4-2",
+      "kind": "zh",
+      "startMs": 21628,
+      "endMs": 23588,
+      "durationMs": 1960,
+      "words": [
+        {
+          "zh": "妖精",
+          "py": "yāo jīng",
+          "startMs": 21628,
+          "endMs": 22108
+        },
+        {
+          "zh": "就",
+          "py": "jiù",
+          "startMs": 22348,
+          "endMs": 22548
+        },
+        {
+          "zh": "会",
+          "py": "huì",
+          "startMs": 22548,
+          "endMs": 22748
+        },
+        {
+          "zh": "化",
+          "py": "huà",
+          "startMs": 22748,
+          "endMs": 22948
+        },
+        {
+          "zh": "为",
+          "py": "wèi",
+          "startMs": 22948,
+          "endMs": 23188
+        },
+        {
+          "zh": "灰烬",
+          "py": "huī jìn",
+          "startMs": 23188,
+          "endMs": 23588
+        }
+      ],
+      "vi": "yêu tinh sẽ hóa thành tro bụi.",
+      "flash": false
+    },
+    {
+      "id": "nar-5",
+      "kind": "narration",
+      "startMs": 23588,
+      "endMs": 26626,
+      "durationMs": 3038,
+      "words": [
+        {
+          "zh": "现在，",
+          "py": "xiàn zài",
+          "startMs": 23588,
+          "endMs": 24055
+        },
+        {
+          "zh": "只剩",
+          "py": "zhī shèng",
+          "startMs": 24055,
+          "endMs": 24523
+        },
+        {
+          "zh": "一件",
+          "py": "yí jiàn",
+          "startMs": 24523,
+          "endMs": 24990
+        },
+        {
+          "zh": "宝贝",
+          "py": "bǎo bèi",
+          "startMs": 24990,
+          "endMs": 25458
+        },
+        {
+          "zh": "能",
+          "py": "néng",
+          "startMs": 25458,
+          "endMs": 25691
+        },
+        {
+          "zh": "制服",
+          "py": "zhì fú",
+          "startMs": 25691,
+          "endMs": 26159
+        },
+        {
+          "zh": "妖怪",
+          "py": "yāo guài",
+          "startMs": 26159,
+          "endMs": 26626
+        }
+      ],
+      "vi": "Giờ chỉ còn một bảo vật mới trị được chúng...",
+      "narrationAudio": "videos/2026/07/13/huluwa-shenfeng/work/narr-5.mp3",
+      "flash": true
+    },
+    {
+      "id": "zh-6-0",
+      "kind": "zh",
+      "startMs": 26626,
+      "endMs": 29106,
+      "durationMs": 2480,
+      "words": [
+        {
+          "zh": "这",
+          "py": "zhè",
+          "startMs": 26626,
+          "endMs": 26866
+        },
+        {
+          "zh": "就是",
+          "py": "jiù shì",
+          "startMs": 26866,
+          "endMs": 27146
+        },
+        {
+          "zh": "镇",
+          "py": "zhèn",
+          "startMs": 27226,
+          "endMs": 27266
+        },
+        {
+          "zh": "妖",
+          "py": "yāo",
+          "startMs": 27386,
+          "endMs": 27506
+        },
+        {
+          "zh": "的",
+          "py": "de",
+          "startMs": 27546,
+          "endMs": 27706
+        },
+        {
+          "zh": "宝",
+          "py": "bǎo",
+          "startMs": 27706,
+          "endMs": 27866
+        },
+        {
+          "zh": "葫芦",
+          "py": "hú lu",
+          "startMs": 27866,
+          "endMs": 28106
+        },
+        {
+          "zh": "籽",
+          "py": "zǐ",
+          "startMs": 28226,
+          "endMs": 28306
+        }
+      ],
+      "vi": "Đây chính là hạt hồ lô trấn yêu,",
+      "flash": true
+    },
+    {
+      "id": "zh-6-1",
+      "kind": "zh",
+      "startMs": 29106,
+      "endMs": 31426,
+      "durationMs": 2320,
+      "words": [
+        {
+          "zh": "妖怪",
+          "py": "yāo guài",
+          "startMs": 29106,
+          "endMs": 29546
+        },
+        {
+          "zh": "最",
+          "py": "zuì",
+          "startMs": 29706,
+          "endMs": 29946
+        },
+        {
+          "zh": "害怕",
+          "py": "hài pà",
+          "startMs": 29946,
+          "endMs": 30306
+        },
+        {
+          "zh": "了",
+          "py": "liǎo",
+          "startMs": 30346,
+          "endMs": 30546
+        }
+      ],
+      "vi": "yêu tinh sợ nó nhất.",
+      "flash": false
+    },
+    {
+      "id": "zh-7-0",
+      "kind": "zh",
+      "startMs": 31426,
+      "endMs": 32706,
+      "durationMs": 1280,
+      "words": [
+        {
+          "zh": "再",
+          "py": "zài",
+          "startMs": 31426,
+          "endMs": 31506
+        },
+        {
+          "zh": "种",
+          "py": "zhǒng",
+          "startMs": 31586,
+          "endMs": 31666
+        },
+        {
+          "zh": "出",
+          "py": "chū",
+          "startMs": 31706,
+          "endMs": 31906
+        },
+        {
+          "zh": "葫芦",
+          "py": "hú lu",
+          "startMs": 31906,
+          "endMs": 32106
+        },
+        {
+          "zh": "来",
+          "py": "lái",
+          "startMs": 32186,
+          "endMs": 32386
+        }
+      ],
+      "vi": "Trồng ra cây hồ lô,",
+      "flash": true
+    },
+    {
+      "id": "zh-7-1",
+      "kind": "zh",
+      "startMs": 32706,
+      "endMs": 35066,
+      "durationMs": 2360,
+      "words": [
+        {
+          "zh": "就",
+          "py": "jiù",
+          "startMs": 32706,
+          "endMs": 32946
+        },
+        {
+          "zh": "可以",
+          "py": "kě yǐ",
+          "startMs": 32946,
+          "endMs": 33186
+        },
+        {
+          "zh": "消灭",
+          "py": "xiāo miè",
+          "startMs": 33266,
+          "endMs": 33706
+        },
+        {
+          "zh": "妖怪",
+          "py": "yāo guài",
+          "startMs": 33746,
+          "endMs": 34146
+        },
+        {
+          "zh": "了",
+          "py": "liǎo",
+          "startMs": 34186,
+          "endMs": 34386
+        }
+      ],
+      "vi": "là tiêu diệt được yêu tinh.",
+      "flash": false
+    },
+    {
+      "id": "zh-8-0",
+      "kind": "zh",
+      "startMs": 35066,
+      "endMs": 37466,
+      "durationMs": 2400,
+      "words": [
+        {
+          "zh": "可",
+          "py": "kě",
+          "startMs": 35066,
+          "endMs": 35226
+        },
+        {
+          "zh": "这",
+          "py": "zhè",
+          "startMs": 35226,
+          "endMs": 35386
+        },
+        {
+          "zh": "山洞",
+          "py": "shān dòng",
+          "startMs": 35386,
+          "endMs": 35746
+        },
+        {
+          "zh": "里",
+          "py": "lǐ",
+          "startMs": 35746,
+          "endMs": 35986
+        },
+        {
+          "zh": "全是",
+          "py": "quán shì",
+          "startMs": 35986,
+          "endMs": 36386
+        },
+        {
+          "zh": "石头",
+          "py": "shí tou",
+          "startMs": 36386,
+          "endMs": 36826
+        }
+      ],
+      "vi": "Nhưng hang toàn là đá,",
+      "flash": true
+    },
+    {
+      "id": "zh-8-1",
+      "kind": "zh",
+      "startMs": 37466,
+      "endMs": 39546,
+      "durationMs": 2080,
+      "words": [
+        {
+          "zh": "到",
+          "py": "dào",
+          "startMs": 37466,
+          "endMs": 37706
+        },
+        {
+          "zh": "哪",
+          "py": "nǎ",
+          "startMs": 37706,
+          "endMs": 37906
+        },
+        {
+          "zh": "去",
+          "py": "qù",
+          "startMs": 37906,
+          "endMs": 38066
+        },
+        {
+          "zh": "找",
+          "py": "zhǎo",
+          "startMs": 38066,
+          "endMs": 38266
+        },
+        {
+          "zh": "绿",
+          "py": "lǜ",
+          "startMs": 38266,
+          "endMs": 38506
+        },
+        {
+          "zh": "叶",
+          "py": "yè",
+          "startMs": 38506,
+          "endMs": 38706
+        },
+        {
+          "zh": "啊",
+          "py": "a",
+          "startMs": 38786,
+          "endMs": 38946
+        }
+      ],
+      "vi": "biết tìm lá xanh ở đâu đây?",
+      "flash": false
+    },
+    {
+      "id": "nar-9",
+      "kind": "narration",
+      "startMs": 39546,
+      "endMs": 43544,
+      "durationMs": 3998,
+      "words": [
+        {
+          "zh": "葫芦",
+          "py": "hú lu",
+          "startMs": 39546,
+          "endMs": 40212
+        },
+        {
+          "zh": "籽",
+          "py": "zǐ",
+          "startMs": 40212,
+          "endMs": 40546
+        },
+        {
+          "zh": "能",
+          "py": "néng",
+          "startMs": 40546,
+          "endMs": 40879
+        },
+        {
+          "zh": "种",
+          "py": "zhǒng",
+          "startMs": 40879,
+          "endMs": 41212
+        },
+        {
+          "zh": "出",
+          "py": "chū",
+          "startMs": 41212,
+          "endMs": 41545
+        },
+        {
+          "zh": "七个",
+          "py": "qī gè",
+          "startMs": 41545,
+          "endMs": 42211
+        },
+        {
+          "zh": "葫芦",
+          "py": "hú lu",
+          "startMs": 42211,
+          "endMs": 42878
+        },
+        {
+          "zh": "娃",
+          "py": "wá",
+          "startMs": 42878,
+          "endMs": 43211
+        },
+        {
+          "zh": "吗",
+          "py": "ma",
+          "startMs": 43211,
+          "endMs": 43544
+        }
+      ],
+      "vi": "Bảy anh em Hồ Lô sẽ ra đời chứ? Comment đoán thử nào!",
+      "narrationAudio": "videos/2026/07/13/huluwa-shenfeng/work/narr-9.mp3",
+      "flash": true
+    }
+  ]
+}
