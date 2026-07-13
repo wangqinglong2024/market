@@ -1,0 +1,35 @@
+{
+  "_design": "葫芦兄弟E3『误入泥潭』≤60s混剪。悬念线：冷开场(大娃被蛛丝绑住·最强的怎么被绑了)→回叙大娃发誓捏碎妖怪→硬闯下战书→旁白点破妖精改用诡计→蛇精的骗术(别硬来会震塌山洞害了爷爷)→大娃上当(那快放我爷爷)→中计被困(有力无处使)→丹田被封→评论钩。冷开场先抛结局悬念再回叙。原声为学习主体，越南语解说只做钩子/桥梁。",
+  "source": "public/videos/2026/07/13/huluwa-e3.mp4",
+  "clips": [
+    { "type": "narration", "gapStartMs": 540000,
+      "zh": "最有力气的大娃，怎么被绑成这样？",
+      "vi": "Đại Oa mạnh nhất, sao lại bị trói chặt thế này?" },
+
+    { "type": "zh", "startMs": 64670, "endMs": 67910,
+      "viClauses": ["Ta nhất định bóp nát lũ yêu tinh!"] },
+
+    { "type": "zh", "startMs": 309280, "endMs": 315040,
+      "viClauses": ["Hôm nay không thả ông ta ra,", "ta đập nát hang yêu của ngươi!"] },
+
+    { "type": "narration", "gapStartMs": 388000,
+      "zh": "硬打不过，妖精就开始耍诡计。",
+      "vi": "Đánh không lại, yêu tinh liền giở trò gian xảo." },
+
+    { "type": "zh", "startMs": 417570, "endMs": 424690,
+      "viClauses": ["Con cần gì ra sức mạnh bạo,", "lỡ làm sập hang động,", "ông ấy cũng chôn thân trong đó,", "chẳng phải con hại ông sao?"] },
+
+    { "type": "zh", "startMs": 424930, "endMs": 426370,
+      "viClauses": ["Vậy mau thả ông ta ra!"] },
+
+    { "type": "zh", "startMs": 507310, "endMs": 511430,
+      "viClauses": ["Gọi là có sức không chỗ dùng,", "có lực chẳng thể thi thố."] },
+
+    { "type": "zh", "startMs": 538190, "endMs": 543710,
+      "viClauses": ["Đan điền của ngươi ta đã phong rồi,", "đừng hòng làm loạn nữa."] },
+
+    { "type": "narration", "gapStartMs": 562000,
+      "zh": "大娃被封了力气，谁来救他？",
+      "vi": "Đại Oa bị phong sức mạnh, ai sẽ đến cứu? Comment thử xem!" }
+  ]
+}

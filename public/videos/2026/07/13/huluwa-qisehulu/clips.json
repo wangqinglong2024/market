@@ -1,0 +1,32 @@
+{
+  "_design": "葫芦兄弟E2『七色葫芦』≤60s混剪。悬念线：冷开场(蛇精暴怒特写·妖精为何慌)→点明神葫芦不可小看→高利害(瓜熟蒂落我们就全完了)→蝎子精三日毁藤的倒计时誓言→葫芦娃出世→兄弟叮嘱爷爷躲屋里→评论钩。原声为学习主体，越南语解说只在结构接点做钩子/桥梁。clips 顺序=成片顺序。",
+  "source": "public/videos/2026/07/13/huluwa-e2.mp4",
+  "clips": [
+    { "type": "narration", "gapStartMs": 343500,
+      "zh": "七个葫芦一冒出来，妖精就慌了。",
+      "vi": "Bảy quả hồ lô vừa nhú, hai yêu tinh đã hoảng loạn!" },
+
+    { "type": "zh", "startMs": 368000, "endMs": 370320,
+      "viClauses": ["Đừng coi thường mấy quả hồ lô thần này."] },
+
+    { "type": "zh", "startMs": 373930, "endMs": 382570,
+      "viClauses": ["Nay tê tê và ông lão đã đem hạt hồ lô ra ngoài,", "một khi quả chín rụng cuống,", "là bọn ta toi đời."] },
+
+    { "type": "zh", "startMs": 383740, "endMs": 391540,
+      "viClauses": ["Phu nhân,", "trong ba ngày,", "ta sẽ đào tận gốc,", "chặt đứt dây,", "hái quả hồ lô non,", "dâng phu nhân nhắm rượu."] },
+
+    { "type": "narration", "gapStartMs": 420000,
+      "zh": "可葫芦已经变成了七个娃娃。",
+      "vi": "Nhưng hồ lô đã hóa thành bảy anh em!" },
+
+    { "type": "zh", "startMs": 450480, "endMs": 454640,
+      "viClauses": ["Ông ơi,", "ông đừng sợ,", "ba ngày này yêu tinh còn đến quấy phá."] },
+
+    { "type": "zh", "startMs": 455360, "endMs": 461280,
+      "viClauses": ["Ông cứ ở yên trong nhà,", "ngàn vạn lần đừng ra ngoài,", "anh em con tự có cách trị hắn."] },
+
+    { "type": "narration", "gapStartMs": 570000,
+      "zh": "七兄弟斗得过妖精吗？",
+      "vi": "Bảy anh em thắng nổi yêu tinh không? Comment đoán nào!" }
+  ]
+}

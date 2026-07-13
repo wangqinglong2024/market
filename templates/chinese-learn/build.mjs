@@ -19,7 +19,9 @@ import { recognizeFlash } from "../../scripts/asr.mjs";
 import { synth } from "../../scripts/tts.mjs";
 import { audioDurationMs } from "../../scripts/lib/media.mjs";
 
-const VI_VOICE = "vi_female_linh_uranus_bigtts"; // 越南语解说音色(与 zhengnian 一致)
+// 越南语解说音色默认值（可被 template.json → audio.viVoice 覆盖）。
+// 默认用 vi_female_ruan（有声书/角色扮演，叙事表现力强，适合电影解说；用户 2026-07-13 定）。
+const VI_VOICE_DEFAULT = "vi_female_ruan_uranus_bigtts";
 const isHan = (c) => /[㐀-鿿]/.test(c);
 const isWin = process.platform === "win32";
 // Windows 的 .bin/remotion 是无扩展名 sh 脚本，execFileSync 无法直接 spawn(ENOENT)；用 remotion.cmd + shell。
@@ -138,6 +140,10 @@ async function buildMashup({ dir, ROOT, settings, rel, ensure }) {
     transcript.utterances.find((u) => Math.abs(u.startMs - startMs) <= 120) ||
     transcript.utterances.find((u) => u.startMs <= startMs && u.endMs >= startMs);
 
+  // 越南语解说音色/语速：template.json → audio.viVoice / audio.viSpeed 覆盖默认
+  const viVoice = settings.audio?.viVoice ?? VI_VOICE_DEFAULT;
+  const viSpeed = settings.audio?.viSpeed ?? 1.0;
+
   // 1) 先给 narration 生成越南语 TTS,拿到时长以确定各段时长
   const clips = [];
   for (let i = 0; i < spec.clips.length; i++) {
@@ -147,7 +153,7 @@ async function buildMashup({ dir, ROOT, settings, rel, ensure }) {
       // 已有 mp3 则直接取时长,避免重复计费(越南语音色不产时间戳,synth 的缓存判定命不中)
       const ms = existsSync(audioAbs)
         ? await audioDurationMs(audioAbs)
-        : (await synth(c.vi, audioAbs, { voice: VI_VOICE, speed: 1.0 })).ms;
+        : (await synth(c.vi, audioAbs, { voice: viVoice, speed: viSpeed })).ms;
       const durMs = ms + 350; // 尾部留白
       clips.push({ ...c, i, startMs: c.gapStartMs, endMs: c.gapStartMs + durMs, durMs, narrationAudioRel: rel("work", `narr-${i}.mp3`), ttsMs: ms });
     } else {

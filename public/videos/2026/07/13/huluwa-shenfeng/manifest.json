@@ -71,56 +71,56 @@
       "id": "nar-0",
       "kind": "narration",
       "startMs": 0,
-      "endMs": 3614,
-      "durationMs": 3614,
+      "endMs": 3854,
+      "durationMs": 3854,
       "words": [
         {
           "zh": "被",
           "py": "bèi",
           "startMs": 0,
-          "endMs": 278
+          "endMs": 296
         },
         {
           "zh": "封印",
           "py": "fēng yìn",
-          "startMs": 278,
-          "endMs": 834
+          "startMs": 296,
+          "endMs": 889
         },
         {
           "zh": "九千",
           "py": "jiǔ qiān",
-          "startMs": 834,
-          "endMs": 1390
+          "startMs": 889,
+          "endMs": 1482
         },
         {
           "zh": "年",
           "py": "nián",
-          "startMs": 1390,
-          "endMs": 1668
+          "startMs": 1482,
+          "endMs": 1779
         },
         {
           "zh": "的",
           "py": "de",
-          "startMs": 1668,
-          "endMs": 1946
+          "startMs": 1779,
+          "endMs": 2075
         },
         {
           "zh": "妖精，",
           "py": "yāo jīng",
-          "startMs": 1946,
-          "endMs": 2502
+          "startMs": 2075,
+          "endMs": 2668
         },
         {
           "zh": "跑出来",
           "py": "pǎo chū lái",
-          "startMs": 2502,
-          "endMs": 3336
+          "startMs": 2668,
+          "endMs": 3558
         },
         {
           "zh": "了",
           "py": "liǎo",
-          "startMs": 3336,
-          "endMs": 3614
+          "startMs": 3558,
+          "endMs": 3854
         }
       ],
       "vi": "Hai yêu tinh bị nhốt 9000 năm vừa sổng ra rồi!",
@@ -130,21 +130,21 @@
     {
       "id": "zh-1-0",
       "kind": "zh",
-      "startMs": 3614,
-      "endMs": 7934,
+      "startMs": 3854,
+      "endMs": 8174,
       "durationMs": 4320,
       "words": [
         {
           "zh": "救命",
           "py": "jiù mìng",
-          "startMs": 3614,
-          "endMs": 4454
+          "startMs": 3854,
+          "endMs": 4694
         },
         {
           "zh": "啊",
           "py": "a",
-          "startMs": 4614,
-          "endMs": 4854
+          "startMs": 4854,
+          "endMs": 5094
         }
       ],
       "vi": "Cứu với!",
@@ -153,21 +153,21 @@
     {
       "id": "zh-1-1",
       "kind": "zh",
-      "startMs": 7934,
-      "endMs": 8614,
+      "startMs": 8174,
+      "endMs": 8854,
       "durationMs": 680,
       "words": [
         {
           "zh": "老",
           "py": "lǎo",
-          "startMs": 7934,
-          "endMs": 8134
+          "startMs": 8174,
+          "endMs": 8374
         },
         {
           "zh": "爷爷",
           "py": "yé ye",
-          "startMs": 8134,
-          "endMs": 8454
+          "startMs": 8374,
+          "endMs": 8694
         }
       ],
       "vi": "Ông ơi,",
@@ -176,27 +176,27 @@
     {
       "id": "zh-1-2",
       "kind": "zh",
-      "startMs": 8614,
-      "endMs": 9374,
+      "startMs": 8854,
+      "endMs": 9614,
       "durationMs": 760,
       "words": [
         {
           "zh": "快",
           "py": "kuài",
-          "startMs": 8614,
-          "endMs": 8814
+          "startMs": 8854,
+          "endMs": 9054
         },
         {
           "zh": "救救",
           "py": "jiù jiù",
-          "startMs": 8814,
-          "endMs": 9174
+          "startMs": 9054,
+          "endMs": 9414
         },
         {
           "zh": "我",
           "py": "wǒ",
-          "startMs": 9174,
-          "endMs": 9374
+          "startMs": 9414,
+          "endMs": 9614
         }
       ],
       "vi": "mau cứu cháu với!",
@@ -205,27 +205,27 @@
     {
       "id": "zh-2-0",
       "kind": "zh",
-      "startMs": 9374,
-      "endMs": 10654,
+      "startMs": 9614,
+      "endMs": 10894,
       "durationMs": 1280,
       "words": [
         {
           "zh": "都",
           "py": "dōu",
-          "startMs": 9374,
-          "endMs": 9574
+          "startMs": 9614,
+          "endMs": 9814
         },
         {
           "zh": "怪我",
           "py": "guài wǒ",
-          "startMs": 9574,
-          "endMs": 9934
+          "startMs": 9814,
+          "endMs": 10174
         },
         {
           "zh": "不好",
           "py": "bù hǎo",
-          "startMs": 9934,
-          "endMs": 10294
+          "startMs": 10174,
+          "endMs": 10534
         }
       ],
       "vi": "Đều tại cháu không tốt,",
@@ -234,45 +234,45 @@
     {
       "id": "zh-2-1",
       "kind": "zh",
-      "startMs": 10654,
-      "endMs": 12334,
+      "startMs": 10894,
+      "endMs": 12574,
       "durationMs": 1680,
       "words": [
         {
           "zh": "让",
           "py": "ràng",
-          "startMs": 10654,
-          "endMs": 10894
+          "startMs": 10894,
+          "endMs": 11134
         },
         {
           "zh": "两",
           "py": "liǎng",
-          "startMs": 10894,
-          "endMs": 11054
+          "startMs": 11134,
+          "endMs": 11294
         },
         {
           "zh": "个",
           "py": "gè",
-          "startMs": 11054,
-          "endMs": 11174
+          "startMs": 11294,
+          "endMs": 11414
         },
         {
           "zh": "妖怪",
           "py": "yāo guài",
-          "startMs": 11174,
-          "endMs": 11534
+          "startMs": 11414,
+          "endMs": 11774
         },
         {
           "zh": "给",
           "py": "gěi",
-          "startMs": 11614,
-          "endMs": 11814
+          "startMs": 11854,
+          "endMs": 12054
         },
         {
           "zh": "逃了",
           "py": "táo le",
-          "startMs": 11814,
-          "endMs": 12334
+          "startMs": 12054,
+          "endMs": 12574
         }
       ],
       "vi": "để hai yêu tinh trốn thoát mất rồi.",
@@ -281,69 +281,69 @@
     {
       "id": "nar-3",
       "kind": "narration",
-      "startMs": 12334,
-      "endMs": 15948,
-      "durationMs": 3614,
+      "startMs": 12574,
+      "endMs": 16572,
+      "durationMs": 3998,
       "words": [
         {
           "zh": "很久",
           "py": "hěn jiǔ",
-          "startMs": 12334,
-          "endMs": 12816
+          "startMs": 12574,
+          "endMs": 13107
         },
         {
           "zh": "以前，",
           "py": "yǐ qián",
-          "startMs": 12816,
-          "endMs": 13298
+          "startMs": 13107,
+          "endMs": 13640
         },
         {
           "zh": "天神",
           "py": "tiān shén",
-          "startMs": 13298,
-          "endMs": 13780
+          "startMs": 13640,
+          "endMs": 14173
         },
         {
           "zh": "把",
           "py": "bǎ",
-          "startMs": 13780,
-          "endMs": 14021
+          "startMs": 14173,
+          "endMs": 14440
         },
         {
           "zh": "它们",
           "py": "tā men",
-          "startMs": 14021,
-          "endMs": 14502
+          "startMs": 14440,
+          "endMs": 14973
         },
         {
           "zh": "封",
           "py": "fēng",
-          "startMs": 14502,
-          "endMs": 14743
+          "startMs": 14973,
+          "endMs": 15239
         },
         {
           "zh": "进",
           "py": "jìn",
-          "startMs": 14743,
-          "endMs": 14984
+          "startMs": 15239,
+          "endMs": 15506
         },
         {
           "zh": "了",
           "py": "liǎo",
-          "startMs": 14984,
-          "endMs": 15225
+          "startMs": 15506,
+          "endMs": 15772
         },
         {
           "zh": "葫芦",
           "py": "hú lu",
-          "startMs": 15225,
-          "endMs": 15707
+          "startMs": 15772,
+          "endMs": 16305
         },
         {
           "zh": "山",
           "py": "shān",
-          "startMs": 15707,
-          "endMs": 15948
+          "startMs": 16305,
+          "endMs": 16572
         }
       ],
       "vi": "Ngày xưa, Thiên thần đã phong ấn chúng trong Núi Hồ Lô.",
@@ -353,51 +353,51 @@
     {
       "id": "zh-4-0",
       "kind": "zh",
-      "startMs": 15948,
-      "endMs": 19948,
+      "startMs": 16572,
+      "endMs": 20572,
       "durationMs": 4000,
       "words": [
         {
           "zh": "至今",
           "py": "zhì jīn",
-          "startMs": 15948,
-          "endMs": 16428
+          "startMs": 16572,
+          "endMs": 17052
         },
         {
           "zh": "已经有",
           "py": "yǐ jīng yǒu",
-          "startMs": 16748,
-          "endMs": 17388
+          "startMs": 17372,
+          "endMs": 18012
         },
         {
           "zh": "九千",
           "py": "jiǔ qiān",
-          "startMs": 17388,
-          "endMs": 17845
+          "startMs": 18012,
+          "endMs": 18469
         },
         {
           "zh": "九百",
           "py": "jiǔ bǎi",
-          "startMs": 17845,
-          "endMs": 18302
+          "startMs": 18469,
+          "endMs": 18926
         },
         {
           "zh": "九十九",
           "py": "jiǔ shí jiǔ",
-          "startMs": 18302,
-          "endMs": 18988
+          "startMs": 18926,
+          "endMs": 19612
         },
         {
           "zh": "年",
           "py": "nián",
-          "startMs": 18988,
-          "endMs": 19188
+          "startMs": 19612,
+          "endMs": 19812
         },
         {
           "zh": "了",
           "py": "liǎo",
-          "startMs": 19188,
-          "endMs": 19428
+          "startMs": 19812,
+          "endMs": 20052
         }
       ],
       "vi": "Đến nay đã 9.999 năm,",
@@ -406,33 +406,33 @@
     {
       "id": "zh-4-1",
       "kind": "zh",
-      "startMs": 19948,
-      "endMs": 21628,
+      "startMs": 20572,
+      "endMs": 22252,
       "durationMs": 1680,
       "words": [
         {
           "zh": "只要",
           "py": "zhǐ yào",
-          "startMs": 19948,
-          "endMs": 20348
+          "startMs": 20572,
+          "endMs": 20972
         },
         {
           "zh": "满",
           "py": "mǎn",
-          "startMs": 20348,
-          "endMs": 20548
+          "startMs": 20972,
+          "endMs": 21172
         },
         {
           "zh": "一万",
           "py": "yí wàn",
-          "startMs": 20548,
-          "endMs": 20948
+          "startMs": 21172,
+          "endMs": 21572
         },
         {
           "zh": "年",
           "py": "nián",
-          "startMs": 20948,
-          "endMs": 21188
+          "startMs": 21572,
+          "endMs": 21812
         }
       ],
       "vi": "chỉ cần tròn một vạn năm,",
@@ -441,45 +441,45 @@
     {
       "id": "zh-4-2",
       "kind": "zh",
-      "startMs": 21628,
-      "endMs": 23588,
+      "startMs": 22252,
+      "endMs": 24212,
       "durationMs": 1960,
       "words": [
         {
           "zh": "妖精",
           "py": "yāo jīng",
-          "startMs": 21628,
-          "endMs": 22108
+          "startMs": 22252,
+          "endMs": 22732
         },
         {
           "zh": "就",
           "py": "jiù",
-          "startMs": 22348,
-          "endMs": 22548
+          "startMs": 22972,
+          "endMs": 23172
         },
         {
           "zh": "会",
           "py": "huì",
-          "startMs": 22548,
-          "endMs": 22748
+          "startMs": 23172,
+          "endMs": 23372
         },
         {
           "zh": "化",
           "py": "huà",
-          "startMs": 22748,
-          "endMs": 22948
+          "startMs": 23372,
+          "endMs": 23572
         },
         {
           "zh": "为",
           "py": "wèi",
-          "startMs": 22948,
-          "endMs": 23188
+          "startMs": 23572,
+          "endMs": 23812
         },
         {
           "zh": "灰烬",
           "py": "huī jìn",
-          "startMs": 23188,
-          "endMs": 23588
+          "startMs": 23812,
+          "endMs": 24212
         }
       ],
       "vi": "yêu tinh sẽ hóa thành tro bụi.",
@@ -488,51 +488,51 @@
     {
       "id": "nar-5",
       "kind": "narration",
-      "startMs": 23588,
-      "endMs": 26626,
+      "startMs": 24212,
+      "endMs": 27250,
       "durationMs": 3038,
       "words": [
         {
           "zh": "现在，",
           "py": "xiàn zài",
-          "startMs": 23588,
-          "endMs": 24055
+          "startMs": 24212,
+          "endMs": 24679
         },
         {
           "zh": "只剩",
           "py": "zhī shèng",
-          "startMs": 24055,
-          "endMs": 24523
+          "startMs": 24679,
+          "endMs": 25147
         },
         {
           "zh": "一件",
           "py": "yí jiàn",
-          "startMs": 24523,
-          "endMs": 24990
+          "startMs": 25147,
+          "endMs": 25614
         },
         {
           "zh": "宝贝",
           "py": "bǎo bèi",
-          "startMs": 24990,
-          "endMs": 25458
+          "startMs": 25614,
+          "endMs": 26082
         },
         {
           "zh": "能",
           "py": "néng",
-          "startMs": 25458,
-          "endMs": 25691
+          "startMs": 26082,
+          "endMs": 26315
         },
         {
           "zh": "制服",
           "py": "zhì fú",
-          "startMs": 25691,
-          "endMs": 26159
+          "startMs": 26315,
+          "endMs": 26783
         },
         {
           "zh": "妖怪",
           "py": "yāo guài",
-          "startMs": 26159,
-          "endMs": 26626
+          "startMs": 26783,
+          "endMs": 27250
         }
       ],
       "vi": "Giờ chỉ còn một bảo vật mới trị được chúng...",
@@ -542,57 +542,57 @@
     {
       "id": "zh-6-0",
       "kind": "zh",
-      "startMs": 26626,
-      "endMs": 29106,
+      "startMs": 27250,
+      "endMs": 29730,
       "durationMs": 2480,
       "words": [
         {
           "zh": "这",
           "py": "zhè",
-          "startMs": 26626,
-          "endMs": 26866
+          "startMs": 27250,
+          "endMs": 27490
         },
         {
           "zh": "就是",
           "py": "jiù shì",
-          "startMs": 26866,
-          "endMs": 27146
+          "startMs": 27490,
+          "endMs": 27770
         },
         {
           "zh": "镇",
           "py": "zhèn",
-          "startMs": 27226,
-          "endMs": 27266
+          "startMs": 27850,
+          "endMs": 27890
         },
         {
           "zh": "妖",
           "py": "yāo",
-          "startMs": 27386,
-          "endMs": 27506
+          "startMs": 28010,
+          "endMs": 28130
         },
         {
           "zh": "的",
           "py": "de",
-          "startMs": 27546,
-          "endMs": 27706
+          "startMs": 28170,
+          "endMs": 28330
         },
         {
           "zh": "宝",
           "py": "bǎo",
-          "startMs": 27706,
-          "endMs": 27866
+          "startMs": 28330,
+          "endMs": 28490
         },
         {
           "zh": "葫芦",
           "py": "hú lu",
-          "startMs": 27866,
-          "endMs": 28106
+          "startMs": 28490,
+          "endMs": 28730
         },
         {
           "zh": "籽",
           "py": "zǐ",
-          "startMs": 28226,
-          "endMs": 28306
+          "startMs": 28850,
+          "endMs": 28930
         }
       ],
       "vi": "Đây chính là hạt hồ lô trấn yêu,",
@@ -601,33 +601,33 @@
     {
       "id": "zh-6-1",
       "kind": "zh",
-      "startMs": 29106,
-      "endMs": 31426,
+      "startMs": 29730,
+      "endMs": 32050,
       "durationMs": 2320,
       "words": [
         {
           "zh": "妖怪",
           "py": "yāo guài",
-          "startMs": 29106,
-          "endMs": 29546
+          "startMs": 29730,
+          "endMs": 30170
         },
         {
           "zh": "最",
           "py": "zuì",
-          "startMs": 29706,
-          "endMs": 29946
+          "startMs": 30330,
+          "endMs": 30570
         },
         {
           "zh": "害怕",
           "py": "hài pà",
-          "startMs": 29946,
-          "endMs": 30306
+          "startMs": 30570,
+          "endMs": 30930
         },
         {
           "zh": "了",
           "py": "liǎo",
-          "startMs": 30346,
-          "endMs": 30546
+          "startMs": 30970,
+          "endMs": 31170
         }
       ],
       "vi": "yêu tinh sợ nó nhất.",
@@ -636,39 +636,39 @@
     {
       "id": "zh-7-0",
       "kind": "zh",
-      "startMs": 31426,
-      "endMs": 32706,
+      "startMs": 32050,
+      "endMs": 33330,
       "durationMs": 1280,
       "words": [
         {
           "zh": "再",
           "py": "zài",
-          "startMs": 31426,
-          "endMs": 31506
+          "startMs": 32050,
+          "endMs": 32130
         },
         {
           "zh": "种",
           "py": "zhǒng",
-          "startMs": 31586,
-          "endMs": 31666
+          "startMs": 32210,
+          "endMs": 32290
         },
         {
           "zh": "出",
           "py": "chū",
-          "startMs": 31706,
-          "endMs": 31906
+          "startMs": 32330,
+          "endMs": 32530
         },
         {
           "zh": "葫芦",
           "py": "hú lu",
-          "startMs": 31906,
-          "endMs": 32106
+          "startMs": 32530,
+          "endMs": 32730
         },
         {
           "zh": "来",
           "py": "lái",
-          "startMs": 32186,
-          "endMs": 32386
+          "startMs": 32810,
+          "endMs": 33010
         }
       ],
       "vi": "Trồng ra cây hồ lô,",
@@ -677,39 +677,39 @@
     {
       "id": "zh-7-1",
       "kind": "zh",
-      "startMs": 32706,
-      "endMs": 35066,
+      "startMs": 33330,
+      "endMs": 35690,
       "durationMs": 2360,
       "words": [
         {
           "zh": "就",
           "py": "jiù",
-          "startMs": 32706,
-          "endMs": 32946
+          "startMs": 33330,
+          "endMs": 33570
         },
         {
           "zh": "可以",
           "py": "kě yǐ",
-          "startMs": 32946,
-          "endMs": 33186
+          "startMs": 33570,
+          "endMs": 33810
         },
         {
           "zh": "消灭",
           "py": "xiāo miè",
-          "startMs": 33266,
-          "endMs": 33706
+          "startMs": 33890,
+          "endMs": 34330
         },
         {
           "zh": "妖怪",
           "py": "yāo guài",
-          "startMs": 33746,
-          "endMs": 34146
+          "startMs": 34370,
+          "endMs": 34770
         },
         {
           "zh": "了",
           "py": "liǎo",
-          "startMs": 34186,
-          "endMs": 34386
+          "startMs": 34810,
+          "endMs": 35010
         }
       ],
       "vi": "là tiêu diệt được yêu tinh.",
@@ -718,45 +718,45 @@
     {
       "id": "zh-8-0",
       "kind": "zh",
-      "startMs": 35066,
-      "endMs": 37466,
+      "startMs": 35690,
+      "endMs": 38090,
       "durationMs": 2400,
       "words": [
         {
           "zh": "可",
           "py": "kě",
-          "startMs": 35066,
-          "endMs": 35226
+          "startMs": 35690,
+          "endMs": 35850
         },
         {
           "zh": "这",
           "py": "zhè",
-          "startMs": 35226,
-          "endMs": 35386
+          "startMs": 35850,
+          "endMs": 36010
         },
         {
           "zh": "山洞",
           "py": "shān dòng",
-          "startMs": 35386,
-          "endMs": 35746
+          "startMs": 36010,
+          "endMs": 36370
         },
         {
           "zh": "里",
           "py": "lǐ",
-          "startMs": 35746,
-          "endMs": 35986
+          "startMs": 36370,
+          "endMs": 36610
         },
         {
           "zh": "全是",
           "py": "quán shì",
-          "startMs": 35986,
-          "endMs": 36386
+          "startMs": 36610,
+          "endMs": 37010
         },
         {
           "zh": "石头",
           "py": "shí tou",
-          "startMs": 36386,
-          "endMs": 36826
+          "startMs": 37010,
+          "endMs": 37450
         }
       ],
       "vi": "Nhưng hang toàn là đá,",
@@ -765,51 +765,51 @@
     {
       "id": "zh-8-1",
       "kind": "zh",
-      "startMs": 37466,
-      "endMs": 39546,
+      "startMs": 38090,
+      "endMs": 40170,
       "durationMs": 2080,
       "words": [
         {
           "zh": "到",
           "py": "dào",
-          "startMs": 37466,
-          "endMs": 37706
+          "startMs": 38090,
+          "endMs": 38330
         },
         {
           "zh": "哪",
           "py": "nǎ",
-          "startMs": 37706,
-          "endMs": 37906
+          "startMs": 38330,
+          "endMs": 38530
         },
         {
           "zh": "去",
           "py": "qù",
-          "startMs": 37906,
-          "endMs": 38066
+          "startMs": 38530,
+          "endMs": 38690
         },
         {
           "zh": "找",
           "py": "zhǎo",
-          "startMs": 38066,
-          "endMs": 38266
+          "startMs": 38690,
+          "endMs": 38890
         },
         {
           "zh": "绿",
           "py": "lǜ",
-          "startMs": 38266,
-          "endMs": 38506
+          "startMs": 38890,
+          "endMs": 39130
         },
         {
           "zh": "叶",
           "py": "yè",
-          "startMs": 38506,
-          "endMs": 38706
+          "startMs": 39130,
+          "endMs": 39330
         },
         {
           "zh": "啊",
           "py": "a",
-          "startMs": 38786,
-          "endMs": 38946
+          "startMs": 39410,
+          "endMs": 39570
         }
       ],
       "vi": "biết tìm lá xanh ở đâu đây?",
@@ -818,63 +818,63 @@
     {
       "id": "nar-9",
       "kind": "narration",
-      "startMs": 39546,
-      "endMs": 43544,
-      "durationMs": 3998,
+      "startMs": 40170,
+      "endMs": 44192,
+      "durationMs": 4022,
       "words": [
         {
           "zh": "葫芦",
           "py": "hú lu",
-          "startMs": 39546,
-          "endMs": 40212
+          "startMs": 40170,
+          "endMs": 40840
         },
         {
           "zh": "籽",
           "py": "zǐ",
-          "startMs": 40212,
-          "endMs": 40546
+          "startMs": 40840,
+          "endMs": 41176
         },
         {
           "zh": "能",
           "py": "néng",
-          "startMs": 40546,
-          "endMs": 40879
+          "startMs": 41176,
+          "endMs": 41511
         },
         {
           "zh": "种",
           "py": "zhǒng",
-          "startMs": 40879,
-          "endMs": 41212
+          "startMs": 41511,
+          "endMs": 41846
         },
         {
           "zh": "出",
           "py": "chū",
-          "startMs": 41212,
-          "endMs": 41545
+          "startMs": 41846,
+          "endMs": 42181
         },
         {
           "zh": "七个",
           "py": "qī gè",
-          "startMs": 41545,
-          "endMs": 42211
+          "startMs": 42181,
+          "endMs": 42851
         },
         {
           "zh": "葫芦",
           "py": "hú lu",
-          "startMs": 42211,
-          "endMs": 42878
+          "startMs": 42851,
+          "endMs": 43522
         },
         {
           "zh": "娃",
           "py": "wá",
-          "startMs": 42878,
-          "endMs": 43211
+          "startMs": 43522,
+          "endMs": 43857
         },
         {
           "zh": "吗",
           "py": "ma",
-          "startMs": 43211,
-          "endMs": 43544
+          "startMs": 43857,
+          "endMs": 44192
         }
       ],
       "vi": "Bảy anh em Hồ Lô sẽ ra đời chứ? Comment đoán thử nào!",

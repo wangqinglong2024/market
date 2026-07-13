@@ -1,0 +1,9 @@
+{
+  "asrModel": "火山 录音文件识别大模型-极速版(volc.bigasr.auc)",
+  "asrAudioSeconds": 628,
+  "asrHours": 0.174,
+  "estCNY": 0.262,
+  "rateAssumedCNYPerHour": 1.5,
+  "ttsNarrations": 3,
+  "ttsNote": "越南语解说走火山 TTS(按字符计费,几条解说成本可忽略)"
+}

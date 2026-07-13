@@ -1,0 +1,3750 @@
+{
+  "text": "哎！嘿。大哥大哥，快去救爷爷，快去救爷爷！好，我一定要把妖怪捏得粉碎！哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎嘿！啊哈！我马上就去。哎。啊！呜！哎呦！啊？老人家，你和我无冤无仇，这次请你来。哼，有这么请的吗？老人家，冤仇易解不易结。我们攀个亲家，交个朋友，包你可以安度晚年。这是我们的一片诚意呀，哈哈哈哈哈哈。来来来，我先敬你一杯。哎呀哎呀哎呀哎呀哎呀哎呀哎呀哎呀。嗯。你是不想活了你！你你你！大王别急，留着这老头才能摸清葫芦的奥秘，知己知彼才能消灾灭祸呀！开门！快开门呐！还我爷爷！快还我爷爷！咦？哎。啊？哈哈。妖精，快还我爷爷！快还我爷爷！嗯？嗯，可以可以，你这娃娃倒是一片孝心。你爷爷就在这，你亲妈也在这。快给我磕头！呸！真不要脸。咦？哈哈哈哈。今天要是不把我爷爷放了，我就把你的妖洞砸得粉碎！哦？嗯？哎！嘿！哎。哈哈哈哈哈哈哈哈！哎。哈哈哈哈。哈哈哈哈。大王来收拾你。慢。哼！你要是再不放我爷爷，我就要嘿嘿。葫芦娃，你果真是力大无穷，你的一片孝心我非常钦佩。谁看了都会动情。你爷爷，啊，他正在后面喝酒呢。你何必大施蛮劲，要是震塌了山洞，他也会葬身洞府，你这不是害了他老人家吗？那快放我爷爷出来！你爷爷喝了两杯酒，现在睡意正浓，我可以带你去见他老人家。请。嗯。爷爷！哈哈哈哈哈哈哈哈哈哈哈哈哈哈！爷爷！哈哈哈。这可比木床舒服多了呀。哈哈哈哈。嘿嘿，夫人，你可真有办法。哈哈哈。这叫有力无处使，有劲使不出。妙妙，可真是妙不可言呐！哈哈哈。哈哈哈哈哈哈哈哈哈哈哈哈。嘿嘿嘿。喂，葫芦娃，怎么样啊？做了个好梦吧？我告诉你。你的丹田已经被我封住了，你就别想再撒野了。啊，我真不想杀掉你。你又愣又蛮又可爱，真讨人喜欢你只要愿意呀。你就做我的娃子吧！啊！你你你！啊！啊！葫芦娃葫芦",
+  "utterances": [
+    {
+      "text": "哎！",
+      "startMs": 51730,
+      "endMs": 51810,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 51730,
+          "endMs": 51810
+        }
+      ]
+    },
+    {
+      "text": "嘿。",
+      "startMs": 57160,
+      "endMs": 57240,
+      "words": [
+        {
+          "text": "嘿",
+          "startMs": 57160,
+          "endMs": 57240
+        }
+      ]
+    },
+    {
+      "text": "大哥大哥，快去救爷爷，快去救爷爷！",
+      "startMs": 60750,
+      "endMs": 63710,
+      "words": [
+        {
+          "text": "大",
+          "startMs": 60750,
+          "endMs": 60790
+        },
+        {
+          "text": "哥",
+          "startMs": 60790,
+          "endMs": 60830
+        },
+        {
+          "text": "大",
+          "startMs": 60870,
+          "endMs": 61110
+        },
+        {
+          "text": "哥",
+          "startMs": 61110,
+          "endMs": 61190
+        },
+        {
+          "text": "快",
+          "startMs": 61390,
+          "endMs": 61590
+        },
+        {
+          "text": "去",
+          "startMs": 61590,
+          "endMs": 61750
+        },
+        {
+          "text": "救",
+          "startMs": 61790,
+          "endMs": 61950
+        },
+        {
+          "text": "爷",
+          "startMs": 62150,
+          "endMs": 62270
+        },
+        {
+          "text": "爷",
+          "startMs": 62310,
+          "endMs": 62390
+        },
+        {
+          "text": "快",
+          "startMs": 62590,
+          "endMs": 62790
+        },
+        {
+          "text": "去",
+          "startMs": 62790,
+          "endMs": 62950
+        },
+        {
+          "text": "救",
+          "startMs": 63030,
+          "endMs": 63150
+        },
+        {
+          "text": "爷",
+          "startMs": 63470,
+          "endMs": 63550
+        },
+        {
+          "text": "爷",
+          "startMs": 63590,
+          "endMs": 63710
+        }
+      ]
+    },
+    {
+      "text": "好，我一定要把妖怪捏得粉碎！",
+      "startMs": 64670,
+      "endMs": 67910,
+      "words": [
+        {
+          "text": "好",
+          "startMs": 64670,
+          "endMs": 65110
+        },
+        {
+          "text": "我",
+          "startMs": 65710,
+          "endMs": 65990
+        },
+        {
+          "text": "一",
+          "startMs": 65990,
+          "endMs": 66150
+        },
+        {
+          "text": "定",
+          "startMs": 66150,
+          "endMs": 66270
+        },
+        {
+          "text": "要",
+          "startMs": 66270,
+          "endMs": 66430
+        },
+        {
+          "text": "把",
+          "startMs": 66430,
+          "endMs": 66590
+        },
+        {
+          "text": "妖",
+          "startMs": 66590,
+          "endMs": 66830
+        },
+        {
+          "text": "怪",
+          "startMs": 66830,
+          "endMs": 66990
+        },
+        {
+          "text": "捏",
+          "startMs": 67070,
+          "endMs": 67230
+        },
+        {
+          "text": "得",
+          "startMs": 67270,
+          "endMs": 67350
+        },
+        {
+          "text": "粉",
+          "startMs": 67430,
+          "endMs": 67590
+        },
+        {
+          "text": "碎",
+          "startMs": 67590,
+          "endMs": 67910
+        }
+      ]
+    },
+    {
+      "text": "哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎哎嘿！啊哈！",
+      "startMs": 74060,
+      "endMs": 79860,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 74060,
+          "endMs": 74140
+        },
+        {
+          "text": "哎",
+          "startMs": 74140,
+          "endMs": 74220
+        },
+        {
+          "text": "哎",
+          "startMs": 74220,
+          "endMs": 74300
+        },
+        {
+          "text": "哎",
+          "startMs": 74300,
+          "endMs": 74380
+        },
+        {
+          "text": "哎",
+          "startMs": 74380,
+          "endMs": 74460
+        },
+        {
+          "text": "哎",
+          "startMs": 74460,
+          "endMs": 74540
+        },
+        {
+          "text": "哎",
+          "startMs": 74540,
+          "endMs": 74620
+        },
+        {
+          "text": "哎",
+          "startMs": 74620,
+          "endMs": 74700
+        },
+        {
+          "text": "哎",
+          "startMs": 74700,
+          "endMs": 74780
+        },
+        {
+          "text": "哎",
+          "startMs": 74780,
+          "endMs": 74860
+        },
+        {
+          "text": "哎",
+          "startMs": 74860,
+          "endMs": 74940
+        },
+        {
+          "text": "哎",
+          "startMs": 74940,
+          "endMs": 75020
+        },
+        {
+          "text": "哎",
+          "startMs": 75020,
+          "endMs": 75100
+        },
+        {
+          "text": "哎",
+          "startMs": 75100,
+          "endMs": 75180
+        },
+        {
+          "text": "哎",
+          "startMs": 75180,
+          "endMs": 75260
+        },
+        {
+          "text": "哎",
+          "startMs": 75260,
+          "endMs": 75340
+        },
+        {
+          "text": "哎",
+          "startMs": 75340,
+          "endMs": 75420
+        },
+        {
+          "text": "哎",
+          "startMs": 75420,
+          "endMs": 75500
+        },
+        {
+          "text": "哎",
+          "startMs": 75500,
+          "endMs": 75580
+        },
+        {
+          "text": "哎",
+          "startMs": 75580,
+          "endMs": 75660
+        },
+        {
+          "text": "哎",
+          "startMs": 75660,
+          "endMs": 75740
+        },
+        {
+          "text": "哎",
+          "startMs": 75740,
+          "endMs": 75820
+        },
+        {
+          "text": "哎",
+          "startMs": 75820,
+          "endMs": 75900
+        },
+        {
+          "text": "哎",
+          "startMs": 75900,
+          "endMs": 75980
+        },
+        {
+          "text": "哎",
+          "startMs": 75980,
+          "endMs": 76060
+        },
+        {
+          "text": "哎",
+          "startMs": 76060,
+          "endMs": 76140
+        },
+        {
+          "text": "哎",
+          "startMs": 76140,
+          "endMs": 76180
+        },
+        {
+          "text": "哎",
+          "startMs": 76180,
+          "endMs": 76220
+        },
+        {
+          "text": "哎",
+          "startMs": 76220,
+          "endMs": 76260
+        },
+        {
+          "text": "哎",
+          "startMs": 76260,
+          "endMs": 76300
+        },
+        {
+          "text": "哎",
+          "startMs": 76300,
+          "endMs": 76340
+        },
+        {
+          "text": "哎",
+          "startMs": 76340,
+          "endMs": 76380
+        },
+        {
+          "text": "哎",
+          "startMs": 76380,
+          "endMs": 76420
+        },
+        {
+          "text": "哎",
+          "startMs": 76420,
+          "endMs": 76460
+        },
+        {
+          "text": "哎",
+          "startMs": 76460,
+          "endMs": 76500
+        },
+        {
+          "text": "哎",
+          "startMs": 76500,
+          "endMs": 76540
+        },
+        {
+          "text": "哎",
+          "startMs": 76540,
+          "endMs": 76580
+        },
+        {
+          "text": "哎",
+          "startMs": 76580,
+          "endMs": 76620
+        },
+        {
+          "text": "哎",
+          "startMs": 76620,
+          "endMs": 76660
+        },
+        {
+          "text": "哎",
+          "startMs": 76660,
+          "endMs": 76700
+        },
+        {
+          "text": "哎",
+          "startMs": 76700,
+          "endMs": 76740
+        },
+        {
+          "text": "哎",
+          "startMs": 76740,
+          "endMs": 76780
+        },
+        {
+          "text": "哎",
+          "startMs": 76780,
+          "endMs": 76820
+        },
+        {
+          "text": "哎",
+          "startMs": 76820,
+          "endMs": 76860
+        },
+        {
+          "text": "哎",
+          "startMs": 76860,
+          "endMs": 76900
+        },
+        {
+          "text": "哎",
+          "startMs": 76900,
+          "endMs": 76940
+        },
+        {
+          "text": "哎",
+          "startMs": 76940,
+          "endMs": 76980
+        },
+        {
+          "text": "哎",
+          "startMs": 76980,
+          "endMs": 77020
+        },
+        {
+          "text": "哎",
+          "startMs": 77020,
+          "endMs": 77060
+        },
+        {
+          "text": "哎",
+          "startMs": 77060,
+          "endMs": 77100
+        },
+        {
+          "text": "哎",
+          "startMs": 77100,
+          "endMs": 77140
+        },
+        {
+          "text": "嘿",
+          "startMs": 77700,
+          "endMs": 77740
+        },
+        {
+          "text": "啊",
+          "startMs": 79220,
+          "endMs": 79300
+        },
+        {
+          "text": "哈",
+          "startMs": 79780,
+          "endMs": 79860
+        }
+      ]
+    },
+    {
+      "text": "我马上就去。",
+      "startMs": 81660,
+      "endMs": 82780,
+      "words": [
+        {
+          "text": "我",
+          "startMs": 81660,
+          "endMs": 81900
+        },
+        {
+          "text": "马",
+          "startMs": 81900,
+          "endMs": 82100
+        },
+        {
+          "text": "上",
+          "startMs": 82100,
+          "endMs": 82220
+        },
+        {
+          "text": "就",
+          "startMs": 82220,
+          "endMs": 82420
+        },
+        {
+          "text": "去",
+          "startMs": 82460,
+          "endMs": 82780
+        }
+      ]
+    },
+    {
+      "text": "哎。",
+      "startMs": 112830,
+      "endMs": 112910,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 112830,
+          "endMs": 112910
+        }
+      ]
+    },
+    {
+      "text": "啊！",
+      "startMs": 125420,
+      "endMs": 125620,
+      "words": [
+        {
+          "text": "啊",
+          "startMs": 125420,
+          "endMs": 125620
+        }
+      ]
+    },
+    {
+      "text": "呜！",
+      "startMs": 128270,
+      "endMs": 128630,
+      "words": [
+        {
+          "text": "呜",
+          "startMs": 128270,
+          "endMs": 128630
+        }
+      ]
+    },
+    {
+      "text": "哎呦！",
+      "startMs": 133610,
+      "endMs": 133890,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 133610,
+          "endMs": 133730
+        },
+        {
+          "text": "呦",
+          "startMs": 133730,
+          "endMs": 133890
+        }
+      ]
+    },
+    {
+      "text": "啊？",
+      "startMs": 136920,
+      "endMs": 137040,
+      "words": [
+        {
+          "text": "啊",
+          "startMs": 136920,
+          "endMs": 137040
+        }
+      ]
+    },
+    {
+      "text": "老人家，你和我无冤无仇，这次请你来。",
+      "startMs": 178580,
+      "endMs": 184980,
+      "words": [
+        {
+          "text": "老",
+          "startMs": 178580,
+          "endMs": 178820
+        },
+        {
+          "text": "人",
+          "startMs": 178820,
+          "endMs": 179020
+        },
+        {
+          "text": "家",
+          "startMs": 179020,
+          "endMs": 179300
+        },
+        {
+          "text": "你",
+          "startMs": 179780,
+          "endMs": 180020
+        },
+        {
+          "text": "和",
+          "startMs": 180020,
+          "endMs": 180260
+        },
+        {
+          "text": "我",
+          "startMs": 180260,
+          "endMs": 180580
+        },
+        {
+          "text": "无",
+          "startMs": 180580,
+          "endMs": 180980
+        },
+        {
+          "text": "冤",
+          "startMs": 180980,
+          "endMs": 181300
+        },
+        {
+          "text": "无",
+          "startMs": 181460,
+          "endMs": 181820
+        },
+        {
+          "text": "仇",
+          "startMs": 181820,
+          "endMs": 182180
+        },
+        {
+          "text": "这",
+          "startMs": 182820,
+          "endMs": 183140
+        },
+        {
+          "text": "次",
+          "startMs": 183140,
+          "endMs": 183460
+        },
+        {
+          "text": "请",
+          "startMs": 183900,
+          "endMs": 184260
+        },
+        {
+          "text": "你",
+          "startMs": 184260,
+          "endMs": 184540
+        },
+        {
+          "text": "来",
+          "startMs": 184540,
+          "endMs": 184980
+        }
+      ]
+    },
+    {
+      "text": "哼，有这么请的吗？",
+      "startMs": 185500,
+      "endMs": 187340,
+      "words": [
+        {
+          "text": "哼",
+          "startMs": 185500,
+          "endMs": 185700
+        },
+        {
+          "text": "有",
+          "startMs": 186140,
+          "endMs": 186460
+        },
+        {
+          "text": "这",
+          "startMs": 186460,
+          "endMs": 186580
+        },
+        {
+          "text": "么",
+          "startMs": 186580,
+          "endMs": 186740
+        },
+        {
+          "text": "请",
+          "startMs": 186740,
+          "endMs": 186900
+        },
+        {
+          "text": "的",
+          "startMs": 186940,
+          "endMs": 187140
+        },
+        {
+          "text": "吗",
+          "startMs": 187140,
+          "endMs": 187340
+        }
+      ]
+    },
+    {
+      "text": "老人家，冤仇易解不易结。",
+      "startMs": 187900,
+      "endMs": 190980,
+      "words": [
+        {
+          "text": "老",
+          "startMs": 187900,
+          "endMs": 188100
+        },
+        {
+          "text": "人",
+          "startMs": 188100,
+          "endMs": 188300
+        },
+        {
+          "text": "家",
+          "startMs": 188300,
+          "endMs": 188540
+        },
+        {
+          "text": "冤",
+          "startMs": 189100,
+          "endMs": 189340
+        },
+        {
+          "text": "仇",
+          "startMs": 189380,
+          "endMs": 189660
+        },
+        {
+          "text": "易",
+          "startMs": 189740,
+          "endMs": 189940
+        },
+        {
+          "text": "解",
+          "startMs": 189980,
+          "endMs": 190260
+        },
+        {
+          "text": "不",
+          "startMs": 190260,
+          "endMs": 190540
+        },
+        {
+          "text": "易",
+          "startMs": 190540,
+          "endMs": 190700
+        },
+        {
+          "text": "结",
+          "startMs": 190940,
+          "endMs": 190980
+        }
+      ]
+    },
+    {
+      "text": "我们攀个亲家，交个朋友，包你可以安度晚年。",
+      "startMs": 191860,
+      "endMs": 196660,
+      "words": [
+        {
+          "text": "我",
+          "startMs": 191860,
+          "endMs": 191980
+        },
+        {
+          "text": "们",
+          "startMs": 191980,
+          "endMs": 192140
+        },
+        {
+          "text": "攀",
+          "startMs": 192220,
+          "endMs": 192300
+        },
+        {
+          "text": "个",
+          "startMs": 192380,
+          "endMs": 192580
+        },
+        {
+          "text": "亲",
+          "startMs": 192620,
+          "endMs": 192860
+        },
+        {
+          "text": "家",
+          "startMs": 192860,
+          "endMs": 193100
+        },
+        {
+          "text": "交",
+          "startMs": 193220,
+          "endMs": 193460
+        },
+        {
+          "text": "个",
+          "startMs": 193460,
+          "endMs": 193660
+        },
+        {
+          "text": "朋",
+          "startMs": 193660,
+          "endMs": 193940
+        },
+        {
+          "text": "友",
+          "startMs": 193940,
+          "endMs": 194140
+        },
+        {
+          "text": "包",
+          "startMs": 194540,
+          "endMs": 194780
+        },
+        {
+          "text": "你",
+          "startMs": 194780,
+          "endMs": 194980
+        },
+        {
+          "text": "可",
+          "startMs": 194980,
+          "endMs": 195180
+        },
+        {
+          "text": "以",
+          "startMs": 195180,
+          "endMs": 195380
+        },
+        {
+          "text": "安",
+          "startMs": 195420,
+          "endMs": 195740
+        },
+        {
+          "text": "度",
+          "startMs": 195740,
+          "endMs": 195980
+        },
+        {
+          "text": "晚",
+          "startMs": 196060,
+          "endMs": 196340
+        },
+        {
+          "text": "年",
+          "startMs": 196340,
+          "endMs": 196660
+        }
+      ]
+    },
+    {
+      "text": "这是我们的一片诚意呀，哈哈哈哈哈哈。",
+      "startMs": 197220,
+      "endMs": 200580,
+      "words": [
+        {
+          "text": "这",
+          "startMs": 197220,
+          "endMs": 197420
+        },
+        {
+          "text": "是",
+          "startMs": 197420,
+          "endMs": 197620
+        },
+        {
+          "text": "我",
+          "startMs": 197620,
+          "endMs": 197780
+        },
+        {
+          "text": "们",
+          "startMs": 197780,
+          "endMs": 197900
+        },
+        {
+          "text": "的",
+          "startMs": 197900,
+          "endMs": 198020
+        },
+        {
+          "text": "一",
+          "startMs": 198020,
+          "endMs": 198180
+        },
+        {
+          "text": "片",
+          "startMs": 198180,
+          "endMs": 198380
+        },
+        {
+          "text": "诚",
+          "startMs": 198460,
+          "endMs": 198780
+        },
+        {
+          "text": "意",
+          "startMs": 198780,
+          "endMs": 198980
+        },
+        {
+          "text": "呀",
+          "startMs": 199140,
+          "endMs": 199260
+        },
+        {
+          "text": "哈",
+          "startMs": 199380,
+          "endMs": 199860
+        },
+        {
+          "text": "哈",
+          "startMs": 199900,
+          "endMs": 199940
+        },
+        {
+          "text": "哈",
+          "startMs": 200020,
+          "endMs": 200060
+        },
+        {
+          "text": "哈",
+          "startMs": 200100,
+          "endMs": 200140
+        },
+        {
+          "text": "哈",
+          "startMs": 200340,
+          "endMs": 200380
+        },
+        {
+          "text": "哈",
+          "startMs": 200540,
+          "endMs": 200580
+        }
+      ]
+    },
+    {
+      "text": "来来来，我先敬你一杯。",
+      "startMs": 201930,
+      "endMs": 204930,
+      "words": [
+        {
+          "text": "来",
+          "startMs": 201930,
+          "endMs": 202170
+        },
+        {
+          "text": "来",
+          "startMs": 202210,
+          "endMs": 202330
+        },
+        {
+          "text": "来",
+          "startMs": 202370,
+          "endMs": 202610
+        },
+        {
+          "text": "我",
+          "startMs": 203450,
+          "endMs": 203730
+        },
+        {
+          "text": "先",
+          "startMs": 203730,
+          "endMs": 204050
+        },
+        {
+          "text": "敬",
+          "startMs": 204170,
+          "endMs": 204450
+        },
+        {
+          "text": "你",
+          "startMs": 204450,
+          "endMs": 204650
+        },
+        {
+          "text": "一",
+          "startMs": 204650,
+          "endMs": 204770
+        },
+        {
+          "text": "杯",
+          "startMs": 204770,
+          "endMs": 204930
+        }
+      ]
+    },
+    {
+      "text": "哎呀哎呀哎呀哎呀哎呀哎呀哎呀哎呀。",
+      "startMs": 207170,
+      "endMs": 208490,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 207170,
+          "endMs": 207250
+        },
+        {
+          "text": "呀",
+          "startMs": 207250,
+          "endMs": 207290
+        },
+        {
+          "text": "哎",
+          "startMs": 207290,
+          "endMs": 207370
+        },
+        {
+          "text": "呀",
+          "startMs": 207370,
+          "endMs": 207450
+        },
+        {
+          "text": "哎",
+          "startMs": 207450,
+          "endMs": 207650
+        },
+        {
+          "text": "呀",
+          "startMs": 207650,
+          "endMs": 207690
+        },
+        {
+          "text": "哎",
+          "startMs": 207690,
+          "endMs": 207770
+        },
+        {
+          "text": "呀",
+          "startMs": 207770,
+          "endMs": 207810
+        },
+        {
+          "text": "哎",
+          "startMs": 207810,
+          "endMs": 207930
+        },
+        {
+          "text": "呀",
+          "startMs": 207930,
+          "endMs": 208010
+        },
+        {
+          "text": "哎",
+          "startMs": 208010,
+          "endMs": 208050
+        },
+        {
+          "text": "呀",
+          "startMs": 208050,
+          "endMs": 208170
+        },
+        {
+          "text": "哎",
+          "startMs": 208170,
+          "endMs": 208210
+        },
+        {
+          "text": "呀",
+          "startMs": 208210,
+          "endMs": 208290
+        },
+        {
+          "text": "哎",
+          "startMs": 208290,
+          "endMs": 208370
+        },
+        {
+          "text": "呀",
+          "startMs": 208370,
+          "endMs": 208490
+        }
+      ]
+    },
+    {
+      "text": "嗯。",
+      "startMs": 209330,
+      "endMs": 209530,
+      "words": [
+        {
+          "text": "嗯",
+          "startMs": 209330,
+          "endMs": 209530
+        }
+      ]
+    },
+    {
+      "text": "你是不想活了你！你你你！",
+      "startMs": 209750,
+      "endMs": 213590,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 209750,
+          "endMs": 209950
+        },
+        {
+          "text": "是",
+          "startMs": 209950,
+          "endMs": 210230
+        },
+        {
+          "text": "不",
+          "startMs": 210230,
+          "endMs": 210510
+        },
+        {
+          "text": "想",
+          "startMs": 210510,
+          "endMs": 210830
+        },
+        {
+          "text": "活",
+          "startMs": 210870,
+          "endMs": 211310
+        },
+        {
+          "text": "了",
+          "startMs": 211310,
+          "endMs": 211510
+        },
+        {
+          "text": "你",
+          "startMs": 211510,
+          "endMs": 211790
+        },
+        {
+          "text": "你",
+          "startMs": 212470,
+          "endMs": 212510
+        },
+        {
+          "text": "你",
+          "startMs": 213070,
+          "endMs": 213110
+        },
+        {
+          "text": "你",
+          "startMs": 213550,
+          "endMs": 213590
+        }
+      ]
+    },
+    {
+      "text": "大王别急，留着这老头才能摸清葫芦的奥秘，知己知彼才能消灾灭祸呀！",
+      "startMs": 215010,
+      "endMs": 224090,
+      "words": [
+        {
+          "text": "大",
+          "startMs": 215010,
+          "endMs": 215170
+        },
+        {
+          "text": "王",
+          "startMs": 215170,
+          "endMs": 215410
+        },
+        {
+          "text": "别",
+          "startMs": 215530,
+          "endMs": 215770
+        },
+        {
+          "text": "急",
+          "startMs": 215770,
+          "endMs": 216010
+        },
+        {
+          "text": "留",
+          "startMs": 216570,
+          "endMs": 216770
+        },
+        {
+          "text": "着",
+          "startMs": 216770,
+          "endMs": 216970
+        },
+        {
+          "text": "这",
+          "startMs": 216970,
+          "endMs": 217170
+        },
+        {
+          "text": "老",
+          "startMs": 217170,
+          "endMs": 217370
+        },
+        {
+          "text": "头",
+          "startMs": 217370,
+          "endMs": 217570
+        },
+        {
+          "text": "才",
+          "startMs": 217810,
+          "endMs": 218010
+        },
+        {
+          "text": "能",
+          "startMs": 218010,
+          "endMs": 218170
+        },
+        {
+          "text": "摸",
+          "startMs": 218170,
+          "endMs": 218410
+        },
+        {
+          "text": "清",
+          "startMs": 218410,
+          "endMs": 218650
+        },
+        {
+          "text": "葫",
+          "startMs": 218690,
+          "endMs": 218930
+        },
+        {
+          "text": "芦",
+          "startMs": 218930,
+          "endMs": 219050
+        },
+        {
+          "text": "的",
+          "startMs": 219050,
+          "endMs": 219290
+        },
+        {
+          "text": "奥",
+          "startMs": 219290,
+          "endMs": 219450
+        },
+        {
+          "text": "秘",
+          "startMs": 219450,
+          "endMs": 219730
+        },
+        {
+          "text": "知",
+          "startMs": 220290,
+          "endMs": 220610
+        },
+        {
+          "text": "己",
+          "startMs": 220610,
+          "endMs": 220850
+        },
+        {
+          "text": "知",
+          "startMs": 220890,
+          "endMs": 221090
+        },
+        {
+          "text": "彼",
+          "startMs": 221130,
+          "endMs": 221330
+        },
+        {
+          "text": "才",
+          "startMs": 221610,
+          "endMs": 221850
+        },
+        {
+          "text": "能",
+          "startMs": 221850,
+          "endMs": 222050
+        },
+        {
+          "text": "消",
+          "startMs": 222170,
+          "endMs": 222530
+        },
+        {
+          "text": "灾",
+          "startMs": 222530,
+          "endMs": 222850
+        },
+        {
+          "text": "灭",
+          "startMs": 222970,
+          "endMs": 223330
+        },
+        {
+          "text": "祸",
+          "startMs": 223370,
+          "endMs": 223730
+        },
+        {
+          "text": "呀",
+          "startMs": 223930,
+          "endMs": 224090
+        }
+      ]
+    },
+    {
+      "text": "开门！快开门呐！",
+      "startMs": 227120,
+      "endMs": 229120,
+      "words": [
+        {
+          "text": "开",
+          "startMs": 227120,
+          "endMs": 227320
+        },
+        {
+          "text": "门",
+          "startMs": 227320,
+          "endMs": 227520
+        },
+        {
+          "text": "快",
+          "startMs": 228240,
+          "endMs": 228520
+        },
+        {
+          "text": "开",
+          "startMs": 228520,
+          "endMs": 228760
+        },
+        {
+          "text": "门",
+          "startMs": 228760,
+          "endMs": 228960
+        },
+        {
+          "text": "呐",
+          "startMs": 229040,
+          "endMs": 229120
+        }
+      ]
+    },
+    {
+      "text": "还我爷爷！快还我爷爷！",
+      "startMs": 232630,
+      "endMs": 234550,
+      "words": [
+        {
+          "text": "还",
+          "startMs": 232630,
+          "endMs": 232790
+        },
+        {
+          "text": "我",
+          "startMs": 232790,
+          "endMs": 232990
+        },
+        {
+          "text": "爷",
+          "startMs": 232990,
+          "endMs": 233150
+        },
+        {
+          "text": "爷",
+          "startMs": 233190,
+          "endMs": 233270
+        },
+        {
+          "text": "快",
+          "startMs": 233510,
+          "endMs": 233710
+        },
+        {
+          "text": "还",
+          "startMs": 233830,
+          "endMs": 233990
+        },
+        {
+          "text": "我",
+          "startMs": 233990,
+          "endMs": 234230
+        },
+        {
+          "text": "爷",
+          "startMs": 234230,
+          "endMs": 234390
+        },
+        {
+          "text": "爷",
+          "startMs": 234470,
+          "endMs": 234550
+        }
+      ]
+    },
+    {
+      "text": "咦？",
+      "startMs": 244840,
+      "endMs": 244880,
+      "words": [
+        {
+          "text": "咦",
+          "startMs": 244840,
+          "endMs": 244880
+        }
+      ]
+    },
+    {
+      "text": "哎。",
+      "startMs": 249560,
+      "endMs": 249680,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 249560,
+          "endMs": 249680
+        }
+      ]
+    },
+    {
+      "text": "啊？",
+      "startMs": 256180,
+      "endMs": 256300,
+      "words": [
+        {
+          "text": "啊",
+          "startMs": 256180,
+          "endMs": 256300
+        }
+      ]
+    },
+    {
+      "text": "哈哈。",
+      "startMs": 274840,
+      "endMs": 275200,
+      "words": [
+        {
+          "text": "哈",
+          "startMs": 274840,
+          "endMs": 274960
+        },
+        {
+          "text": "哈",
+          "startMs": 275040,
+          "endMs": 275200
+        }
+      ]
+    },
+    {
+      "text": "妖精，快还我爷爷！快还我爷爷！嗯？",
+      "startMs": 285030,
+      "endMs": 288750,
+      "words": [
+        {
+          "text": "妖",
+          "startMs": 285030,
+          "endMs": 285270
+        },
+        {
+          "text": "精",
+          "startMs": 285270,
+          "endMs": 285310
+        },
+        {
+          "text": "快",
+          "startMs": 285750,
+          "endMs": 285950
+        },
+        {
+          "text": "还",
+          "startMs": 285950,
+          "endMs": 286150
+        },
+        {
+          "text": "我",
+          "startMs": 286150,
+          "endMs": 286350
+        },
+        {
+          "text": "爷",
+          "startMs": 286350,
+          "endMs": 286510
+        },
+        {
+          "text": "爷",
+          "startMs": 286550,
+          "endMs": 286630
+        },
+        {
+          "text": "快",
+          "startMs": 286950,
+          "endMs": 287110
+        },
+        {
+          "text": "还",
+          "startMs": 287190,
+          "endMs": 287270
+        },
+        {
+          "text": "我",
+          "startMs": 287310,
+          "endMs": 287510
+        },
+        {
+          "text": "爷",
+          "startMs": 287510,
+          "endMs": 287630
+        },
+        {
+          "text": "爷",
+          "startMs": 287670,
+          "endMs": 287790
+        },
+        {
+          "text": "嗯",
+          "startMs": 288510,
+          "endMs": 288750
+        }
+      ]
+    },
+    {
+      "text": "嗯，可以可以，你这娃娃倒是一片孝心。",
+      "startMs": 290750,
+      "endMs": 296630,
+      "words": [
+        {
+          "text": "嗯",
+          "startMs": 290750,
+          "endMs": 291030
+        },
+        {
+          "text": "可",
+          "startMs": 291830,
+          "endMs": 292270
+        },
+        {
+          "text": "以",
+          "startMs": 292270,
+          "endMs": 292510
+        },
+        {
+          "text": "可",
+          "startMs": 292670,
+          "endMs": 293070
+        },
+        {
+          "text": "以",
+          "startMs": 293070,
+          "endMs": 293350
+        },
+        {
+          "text": "你",
+          "startMs": 293950,
+          "endMs": 294230
+        },
+        {
+          "text": "这",
+          "startMs": 294230,
+          "endMs": 294470
+        },
+        {
+          "text": "娃",
+          "startMs": 294470,
+          "endMs": 294710
+        },
+        {
+          "text": "娃",
+          "startMs": 294750,
+          "endMs": 294910
+        },
+        {
+          "text": "倒",
+          "startMs": 295030,
+          "endMs": 295230
+        },
+        {
+          "text": "是",
+          "startMs": 295230,
+          "endMs": 295430
+        },
+        {
+          "text": "一",
+          "startMs": 295430,
+          "endMs": 295630
+        },
+        {
+          "text": "片",
+          "startMs": 295630,
+          "endMs": 295870
+        },
+        {
+          "text": "孝",
+          "startMs": 295950,
+          "endMs": 296230
+        },
+        {
+          "text": "心",
+          "startMs": 296230,
+          "endMs": 296630
+        }
+      ]
+    },
+    {
+      "text": "你爷爷就在这，你亲妈也在这。",
+      "startMs": 297070,
+      "endMs": 300430,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 297070,
+          "endMs": 297350
+        },
+        {
+          "text": "爷",
+          "startMs": 297350,
+          "endMs": 297630
+        },
+        {
+          "text": "爷",
+          "startMs": 297670,
+          "endMs": 297870
+        },
+        {
+          "text": "就",
+          "startMs": 297990,
+          "endMs": 298270
+        },
+        {
+          "text": "在",
+          "startMs": 298270,
+          "endMs": 298510
+        },
+        {
+          "text": "这",
+          "startMs": 298510,
+          "endMs": 298750
+        },
+        {
+          "text": "你",
+          "startMs": 298950,
+          "endMs": 299230
+        },
+        {
+          "text": "亲",
+          "startMs": 299230,
+          "endMs": 299550
+        },
+        {
+          "text": "妈",
+          "startMs": 299550,
+          "endMs": 299870
+        },
+        {
+          "text": "也",
+          "startMs": 299870,
+          "endMs": 300070
+        },
+        {
+          "text": "在",
+          "startMs": 300070,
+          "endMs": 300230
+        },
+        {
+          "text": "这",
+          "startMs": 300230,
+          "endMs": 300430
+        }
+      ]
+    },
+    {
+      "text": "快给我磕头！",
+      "startMs": 300930,
+      "endMs": 301930,
+      "words": [
+        {
+          "text": "快",
+          "startMs": 300930,
+          "endMs": 301090
+        },
+        {
+          "text": "给",
+          "startMs": 301090,
+          "endMs": 301210
+        },
+        {
+          "text": "我",
+          "startMs": 301210,
+          "endMs": 301410
+        },
+        {
+          "text": "磕",
+          "startMs": 301410,
+          "endMs": 301610
+        },
+        {
+          "text": "头",
+          "startMs": 301610,
+          "endMs": 301930
+        }
+      ]
+    },
+    {
+      "text": "呸！真不要脸。咦？哈哈哈哈。",
+      "startMs": 302450,
+      "endMs": 306650,
+      "words": [
+        {
+          "text": "呸",
+          "startMs": 302450,
+          "endMs": 302570
+        },
+        {
+          "text": "真",
+          "startMs": 303290,
+          "endMs": 303490
+        },
+        {
+          "text": "不",
+          "startMs": 303490,
+          "endMs": 303650
+        },
+        {
+          "text": "要",
+          "startMs": 303650,
+          "endMs": 303810
+        },
+        {
+          "text": "脸",
+          "startMs": 303810,
+          "endMs": 304090
+        },
+        {
+          "text": "咦",
+          "startMs": 305290,
+          "endMs": 305450
+        },
+        {
+          "text": "哈",
+          "startMs": 305850,
+          "endMs": 305890
+        },
+        {
+          "text": "哈",
+          "startMs": 305930,
+          "endMs": 306450
+        },
+        {
+          "text": "哈",
+          "startMs": 306490,
+          "endMs": 306530
+        },
+        {
+          "text": "哈",
+          "startMs": 306610,
+          "endMs": 306650
+        }
+      ]
+    },
+    {
+      "text": "今天要是不把我爷爷放了，我就把你的妖洞砸得粉碎！哦？",
+      "startMs": 309280,
+      "endMs": 315040,
+      "words": [
+        {
+          "text": "今",
+          "startMs": 309280,
+          "endMs": 309520
+        },
+        {
+          "text": "天",
+          "startMs": 309520,
+          "endMs": 309680
+        },
+        {
+          "text": "要",
+          "startMs": 310080,
+          "endMs": 310280
+        },
+        {
+          "text": "是",
+          "startMs": 310280,
+          "endMs": 310400
+        },
+        {
+          "text": "不",
+          "startMs": 310400,
+          "endMs": 310600
+        },
+        {
+          "text": "把",
+          "startMs": 310600,
+          "endMs": 310720
+        },
+        {
+          "text": "我",
+          "startMs": 310720,
+          "endMs": 310920
+        },
+        {
+          "text": "爷",
+          "startMs": 310920,
+          "endMs": 311080
+        },
+        {
+          "text": "爷",
+          "startMs": 311120,
+          "endMs": 311200
+        },
+        {
+          "text": "放",
+          "startMs": 311240,
+          "endMs": 311480
+        },
+        {
+          "text": "了",
+          "startMs": 311480,
+          "endMs": 311680
+        },
+        {
+          "text": "我",
+          "startMs": 311960,
+          "endMs": 312120
+        },
+        {
+          "text": "就",
+          "startMs": 312120,
+          "endMs": 312280
+        },
+        {
+          "text": "把",
+          "startMs": 312280,
+          "endMs": 312440
+        },
+        {
+          "text": "你",
+          "startMs": 312440,
+          "endMs": 312600
+        },
+        {
+          "text": "的",
+          "startMs": 312600,
+          "endMs": 312680
+        },
+        {
+          "text": "妖",
+          "startMs": 312760,
+          "endMs": 312880
+        },
+        {
+          "text": "洞",
+          "startMs": 312920,
+          "endMs": 313120
+        },
+        {
+          "text": "砸",
+          "startMs": 313200,
+          "endMs": 313400
+        },
+        {
+          "text": "得",
+          "startMs": 313440,
+          "endMs": 313480
+        },
+        {
+          "text": "粉",
+          "startMs": 313560,
+          "endMs": 313720
+        },
+        {
+          "text": "碎",
+          "startMs": 313720,
+          "endMs": 313960
+        },
+        {
+          "text": "哦",
+          "startMs": 314800,
+          "endMs": 315040
+        }
+      ]
+    },
+    {
+      "text": "嗯？",
+      "startMs": 319270,
+      "endMs": 319350,
+      "words": [
+        {
+          "text": "嗯",
+          "startMs": 319270,
+          "endMs": 319350
+        }
+      ]
+    },
+    {
+      "text": "哎！",
+      "startMs": 322830,
+      "endMs": 322990,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 322830,
+          "endMs": 322990
+        }
+      ]
+    },
+    {
+      "text": "嘿！",
+      "startMs": 324890,
+      "endMs": 324970,
+      "words": [
+        {
+          "text": "嘿",
+          "startMs": 324890,
+          "endMs": 324970
+        }
+      ]
+    },
+    {
+      "text": "哎。",
+      "startMs": 326260,
+      "endMs": 326340,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 326260,
+          "endMs": 326340
+        }
+      ]
+    },
+    {
+      "text": "哈哈哈哈哈哈哈哈！",
+      "startMs": 329230,
+      "endMs": 330390,
+      "words": [
+        {
+          "text": "哈",
+          "startMs": 329230,
+          "endMs": 329350
+        },
+        {
+          "text": "哈",
+          "startMs": 329390,
+          "endMs": 329670
+        },
+        {
+          "text": "哈",
+          "startMs": 329710,
+          "endMs": 329790
+        },
+        {
+          "text": "哈",
+          "startMs": 329830,
+          "endMs": 329950
+        },
+        {
+          "text": "哈",
+          "startMs": 329990,
+          "endMs": 330070
+        },
+        {
+          "text": "哈",
+          "startMs": 330110,
+          "endMs": 330190
+        },
+        {
+          "text": "哈",
+          "startMs": 330270,
+          "endMs": 330310
+        },
+        {
+          "text": "哈",
+          "startMs": 330350,
+          "endMs": 330390
+        }
+      ]
+    },
+    {
+      "text": "哎。",
+      "startMs": 368920,
+      "endMs": 369000,
+      "words": [
+        {
+          "text": "哎",
+          "startMs": 368920,
+          "endMs": 369000
+        }
+      ]
+    },
+    {
+      "text": "哈哈哈哈。",
+      "startMs": 379180,
+      "endMs": 379860,
+      "words": [
+        {
+          "text": "哈",
+          "startMs": 379180,
+          "endMs": 379220
+        },
+        {
+          "text": "哈",
+          "startMs": 379260,
+          "endMs": 379700
+        },
+        {
+          "text": "哈",
+          "startMs": 379740,
+          "endMs": 379780
+        },
+        {
+          "text": "哈",
+          "startMs": 379820,
+          "endMs": 379860
+        }
+      ]
+    },
+    {
+      "text": "哈哈哈哈。",
+      "startMs": 383860,
+      "endMs": 384740,
+      "words": [
+        {
+          "text": "哈",
+          "startMs": 383860,
+          "endMs": 384380
+        },
+        {
+          "text": "哈",
+          "startMs": 384420,
+          "endMs": 384460
+        },
+        {
+          "text": "哈",
+          "startMs": 384580,
+          "endMs": 384620
+        },
+        {
+          "text": "哈",
+          "startMs": 384700,
+          "endMs": 384740
+        }
+      ]
+    },
+    {
+      "text": "大王来收拾你。慢。",
+      "startMs": 394320,
+      "endMs": 395640,
+      "words": [
+        {
+          "text": "大",
+          "startMs": 394320,
+          "endMs": 394440
+        },
+        {
+          "text": "王",
+          "startMs": 394560,
+          "endMs": 394600
+        },
+        {
+          "text": "来",
+          "startMs": 394800,
+          "endMs": 394840
+        },
+        {
+          "text": "收",
+          "startMs": 394960,
+          "endMs": 395080
+        },
+        {
+          "text": "拾",
+          "startMs": 395080,
+          "endMs": 395200
+        },
+        {
+          "text": "你",
+          "startMs": 395200,
+          "endMs": 395400
+        },
+        {
+          "text": "慢",
+          "startMs": 395560,
+          "endMs": 395640
+        }
+      ]
+    },
+    {
+      "text": "哼！",
+      "startMs": 397980,
+      "endMs": 398100,
+      "words": [
+        {
+          "text": "哼",
+          "startMs": 397980,
+          "endMs": 398100
+        }
+      ]
+    },
+    {
+      "text": "你要是再不放我爷爷，我就要嘿嘿。",
+      "startMs": 399380,
+      "endMs": 403180,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 399380,
+          "endMs": 399580
+        },
+        {
+          "text": "要",
+          "startMs": 399580,
+          "endMs": 399740
+        },
+        {
+          "text": "是",
+          "startMs": 399740,
+          "endMs": 399860
+        },
+        {
+          "text": "再",
+          "startMs": 399860,
+          "endMs": 400020
+        },
+        {
+          "text": "不",
+          "startMs": 400020,
+          "endMs": 400180
+        },
+        {
+          "text": "放",
+          "startMs": 400180,
+          "endMs": 400380
+        },
+        {
+          "text": "我",
+          "startMs": 400380,
+          "endMs": 400540
+        },
+        {
+          "text": "爷",
+          "startMs": 400540,
+          "endMs": 400740
+        },
+        {
+          "text": "爷",
+          "startMs": 400780,
+          "endMs": 400940
+        },
+        {
+          "text": "我",
+          "startMs": 401340,
+          "endMs": 401580
+        },
+        {
+          "text": "就",
+          "startMs": 401580,
+          "endMs": 401820
+        },
+        {
+          "text": "要",
+          "startMs": 401820,
+          "endMs": 402140
+        },
+        {
+          "text": "嘿",
+          "startMs": 402820,
+          "endMs": 402940
+        },
+        {
+          "text": "嘿",
+          "startMs": 403020,
+          "endMs": 403180
+        }
+      ]
+    },
+    {
+      "text": "葫芦娃，你果真是力大无穷，你的一片孝心我非常钦佩。",
+      "startMs": 403780,
+      "endMs": 410300,
+      "words": [
+        {
+          "text": "葫",
+          "startMs": 403780,
+          "endMs": 403980
+        },
+        {
+          "text": "芦",
+          "startMs": 403980,
+          "endMs": 404140
+        },
+        {
+          "text": "娃",
+          "startMs": 404180,
+          "endMs": 404460
+        },
+        {
+          "text": "你",
+          "startMs": 404940,
+          "endMs": 405220
+        },
+        {
+          "text": "果",
+          "startMs": 405220,
+          "endMs": 405460
+        },
+        {
+          "text": "真",
+          "startMs": 405460,
+          "endMs": 405660
+        },
+        {
+          "text": "是",
+          "startMs": 405660,
+          "endMs": 405820
+        },
+        {
+          "text": "力",
+          "startMs": 405820,
+          "endMs": 406060
+        },
+        {
+          "text": "大",
+          "startMs": 406060,
+          "endMs": 406340
+        },
+        {
+          "text": "无",
+          "startMs": 406340,
+          "endMs": 406620
+        },
+        {
+          "text": "穷",
+          "startMs": 406620,
+          "endMs": 406860
+        },
+        {
+          "text": "你",
+          "startMs": 407540,
+          "endMs": 407740
+        },
+        {
+          "text": "的",
+          "startMs": 407740,
+          "endMs": 407900
+        },
+        {
+          "text": "一",
+          "startMs": 407900,
+          "endMs": 408060
+        },
+        {
+          "text": "片",
+          "startMs": 408060,
+          "endMs": 408260
+        },
+        {
+          "text": "孝",
+          "startMs": 408300,
+          "endMs": 408540
+        },
+        {
+          "text": "心",
+          "startMs": 408540,
+          "endMs": 408820
+        },
+        {
+          "text": "我",
+          "startMs": 408900,
+          "endMs": 409260
+        },
+        {
+          "text": "非",
+          "startMs": 409260,
+          "endMs": 409540
+        },
+        {
+          "text": "常",
+          "startMs": 409540,
+          "endMs": 409780
+        },
+        {
+          "text": "钦",
+          "startMs": 409860,
+          "endMs": 410020
+        },
+        {
+          "text": "佩",
+          "startMs": 410100,
+          "endMs": 410300
+        }
+      ]
+    },
+    {
+      "text": "谁看了都会动情。",
+      "startMs": 410810,
+      "endMs": 412450,
+      "words": [
+        {
+          "text": "谁",
+          "startMs": 410810,
+          "endMs": 411090
+        },
+        {
+          "text": "看",
+          "startMs": 411090,
+          "endMs": 411330
+        },
+        {
+          "text": "了",
+          "startMs": 411330,
+          "endMs": 411450
+        },
+        {
+          "text": "都",
+          "startMs": 411450,
+          "endMs": 411650
+        },
+        {
+          "text": "会",
+          "startMs": 411650,
+          "endMs": 411810
+        },
+        {
+          "text": "动",
+          "startMs": 411810,
+          "endMs": 412090
+        },
+        {
+          "text": "情",
+          "startMs": 412090,
+          "endMs": 412450
+        }
+      ]
+    },
+    {
+      "text": "你爷爷，啊，他正在后面喝酒呢。",
+      "startMs": 413170,
+      "endMs": 417250,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 413170,
+          "endMs": 413490
+        },
+        {
+          "text": "爷",
+          "startMs": 413490,
+          "endMs": 413810
+        },
+        {
+          "text": "爷",
+          "startMs": 413850,
+          "endMs": 414090
+        },
+        {
+          "text": "啊",
+          "startMs": 415130,
+          "endMs": 415250
+        },
+        {
+          "text": "他",
+          "startMs": 415570,
+          "endMs": 415690
+        },
+        {
+          "text": "正",
+          "startMs": 415770,
+          "endMs": 415930
+        },
+        {
+          "text": "在",
+          "startMs": 415930,
+          "endMs": 416130
+        },
+        {
+          "text": "后",
+          "startMs": 416130,
+          "endMs": 416290
+        },
+        {
+          "text": "面",
+          "startMs": 416290,
+          "endMs": 416450
+        },
+        {
+          "text": "喝",
+          "startMs": 416450,
+          "endMs": 416690
+        },
+        {
+          "text": "酒",
+          "startMs": 416690,
+          "endMs": 416970
+        },
+        {
+          "text": "呢",
+          "startMs": 416970,
+          "endMs": 417250
+        }
+      ]
+    },
+    {
+      "text": "你何必大施蛮劲，要是震塌了山洞，他也会葬身洞府，你这不是害了他老人家吗？",
+      "startMs": 417570,
+      "endMs": 424690,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 417570,
+          "endMs": 417810
+        },
+        {
+          "text": "何",
+          "startMs": 417810,
+          "endMs": 418050
+        },
+        {
+          "text": "必",
+          "startMs": 418050,
+          "endMs": 418250
+        },
+        {
+          "text": "大",
+          "startMs": 418250,
+          "endMs": 418490
+        },
+        {
+          "text": "施",
+          "startMs": 418570,
+          "endMs": 418610
+        },
+        {
+          "text": "蛮",
+          "startMs": 418850,
+          "endMs": 418890
+        },
+        {
+          "text": "劲",
+          "startMs": 419090,
+          "endMs": 419130
+        },
+        {
+          "text": "要",
+          "startMs": 419450,
+          "endMs": 419650
+        },
+        {
+          "text": "是",
+          "startMs": 419650,
+          "endMs": 419770
+        },
+        {
+          "text": "震",
+          "startMs": 419890,
+          "endMs": 419930
+        },
+        {
+          "text": "塌",
+          "startMs": 420090,
+          "endMs": 420130
+        },
+        {
+          "text": "了",
+          "startMs": 420210,
+          "endMs": 420370
+        },
+        {
+          "text": "山",
+          "startMs": 420370,
+          "endMs": 420570
+        },
+        {
+          "text": "洞",
+          "startMs": 420570,
+          "endMs": 420810
+        },
+        {
+          "text": "他",
+          "startMs": 421050,
+          "endMs": 421130
+        },
+        {
+          "text": "也",
+          "startMs": 421170,
+          "endMs": 421330
+        },
+        {
+          "text": "会",
+          "startMs": 421330,
+          "endMs": 421530
+        },
+        {
+          "text": "葬",
+          "startMs": 421570,
+          "endMs": 421730
+        },
+        {
+          "text": "身",
+          "startMs": 421770,
+          "endMs": 422010
+        },
+        {
+          "text": "洞",
+          "startMs": 422050,
+          "endMs": 422250
+        },
+        {
+          "text": "府",
+          "startMs": 422290,
+          "endMs": 422410
+        },
+        {
+          "text": "你",
+          "startMs": 422770,
+          "endMs": 422970
+        },
+        {
+          "text": "这",
+          "startMs": 422970,
+          "endMs": 423130
+        },
+        {
+          "text": "不",
+          "startMs": 423130,
+          "endMs": 423250
+        },
+        {
+          "text": "是",
+          "startMs": 423250,
+          "endMs": 423410
+        },
+        {
+          "text": "害",
+          "startMs": 423410,
+          "endMs": 423610
+        },
+        {
+          "text": "了",
+          "startMs": 423610,
+          "endMs": 423770
+        },
+        {
+          "text": "他",
+          "startMs": 423810,
+          "endMs": 423890
+        },
+        {
+          "text": "老",
+          "startMs": 423930,
+          "endMs": 424130
+        },
+        {
+          "text": "人",
+          "startMs": 424130,
+          "endMs": 424290
+        },
+        {
+          "text": "家",
+          "startMs": 424290,
+          "endMs": 424490
+        },
+        {
+          "text": "吗",
+          "startMs": 424490,
+          "endMs": 424690
+        }
+      ]
+    },
+    {
+      "text": "那快放我爷爷出来！",
+      "startMs": 424930,
+      "endMs": 426370,
+      "words": [
+        {
+          "text": "那",
+          "startMs": 424930,
+          "endMs": 425050
+        },
+        {
+          "text": "快",
+          "startMs": 425330,
+          "endMs": 425490
+        },
+        {
+          "text": "放",
+          "startMs": 425490,
+          "endMs": 425650
+        },
+        {
+          "text": "我",
+          "startMs": 425650,
+          "endMs": 425810
+        },
+        {
+          "text": "爷",
+          "startMs": 425810,
+          "endMs": 425890
+        },
+        {
+          "text": "爷",
+          "startMs": 425930,
+          "endMs": 426010
+        },
+        {
+          "text": "出",
+          "startMs": 426010,
+          "endMs": 426210
+        },
+        {
+          "text": "来",
+          "startMs": 426210,
+          "endMs": 426370
+        }
+      ]
+    },
+    {
+      "text": "你爷爷喝了两杯酒，现在睡意正浓，我可以带你去见他老人家。",
+      "startMs": 427010,
+      "endMs": 434690,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 427010,
+          "endMs": 427330
+        },
+        {
+          "text": "爷",
+          "startMs": 427330,
+          "endMs": 427610
+        },
+        {
+          "text": "爷",
+          "startMs": 427650,
+          "endMs": 427850
+        },
+        {
+          "text": "喝",
+          "startMs": 428130,
+          "endMs": 428370
+        },
+        {
+          "text": "了",
+          "startMs": 428370,
+          "endMs": 428570
+        },
+        {
+          "text": "两",
+          "startMs": 428570,
+          "endMs": 428810
+        },
+        {
+          "text": "杯",
+          "startMs": 428810,
+          "endMs": 429010
+        },
+        {
+          "text": "酒",
+          "startMs": 429010,
+          "endMs": 429330
+        },
+        {
+          "text": "现",
+          "startMs": 429570,
+          "endMs": 429770
+        },
+        {
+          "text": "在",
+          "startMs": 429770,
+          "endMs": 429970
+        },
+        {
+          "text": "睡",
+          "startMs": 429970,
+          "endMs": 430210
+        },
+        {
+          "text": "意",
+          "startMs": 430210,
+          "endMs": 430330
+        },
+        {
+          "text": "正",
+          "startMs": 430490,
+          "endMs": 430730
+        },
+        {
+          "text": "浓",
+          "startMs": 430730,
+          "endMs": 431050
+        },
+        {
+          "text": "我",
+          "startMs": 431610,
+          "endMs": 431970
+        },
+        {
+          "text": "可",
+          "startMs": 431970,
+          "endMs": 432250
+        },
+        {
+          "text": "以",
+          "startMs": 432250,
+          "endMs": 432570
+        },
+        {
+          "text": "带",
+          "startMs": 432930,
+          "endMs": 433170
+        },
+        {
+          "text": "你",
+          "startMs": 433170,
+          "endMs": 433370
+        },
+        {
+          "text": "去",
+          "startMs": 433370,
+          "endMs": 433570
+        },
+        {
+          "text": "见",
+          "startMs": 433570,
+          "endMs": 433770
+        },
+        {
+          "text": "他",
+          "startMs": 433930,
+          "endMs": 434010
+        },
+        {
+          "text": "老",
+          "startMs": 434090,
+          "endMs": 434290
+        },
+        {
+          "text": "人",
+          "startMs": 434290,
+          "endMs": 434450
+        },
+        {
+          "text": "家",
+          "startMs": 434450,
+          "endMs": 434690
+        }
+      ]
+    },
+    {
+      "text": "请。",
+      "startMs": 443840,
+      "endMs": 444280,
+      "words": [
+        {
+          "text": "请",
+          "startMs": 443840,
+          "endMs": 444280
+        }
+      ]
+    },
+    {
+      "text": "嗯。",
+      "startMs": 450440,
+      "endMs": 450560,
+      "words": [
+        {
+          "text": "嗯",
+          "startMs": 450440,
+          "endMs": 450560
+        }
+      ]
+    },
+    {
+      "text": "爷爷！",
+      "startMs": 470100,
+      "endMs": 470780,
+      "words": [
+        {
+          "text": "爷",
+          "startMs": 470100,
+          "endMs": 470460
+        },
+        {
+          "text": "爷",
+          "startMs": 470500,
+          "endMs": 470780
+        }
+      ]
+    },
+    {
+      "text": "哈哈哈哈哈哈哈哈哈哈哈哈哈哈！",
+      "startMs": 476950,
+      "endMs": 478790,
+      "words": [
+        {
+          "text": "哈",
+          "startMs": 476950,
+          "endMs": 477070
+        },
+        {
+          "text": "哈",
+          "startMs": 477110,
+          "endMs": 477390
+        },
+        {
+          "text": "哈",
+          "startMs": 477430,
+          "endMs": 477550
+        },
+        {
+          "text": "哈",
+          "startMs": 477590,
+          "endMs": 477630
+        },
+        {
+          "text": "哈",
+          "startMs": 477670,
+          "endMs": 477710
+        },
+        {
+          "text": "哈",
+          "startMs": 477790,
+          "endMs": 477830
+        },
+        {
+          "text": "哈",
+          "startMs": 477870,
+          "endMs": 477910
+        },
+        {
+          "text": "哈",
+          "startMs": 477950,
+          "endMs": 477990
+        },
+        {
+          "text": "哈",
+          "startMs": 478030,
+          "endMs": 478070
+        },
+        {
+          "text": "哈",
+          "startMs": 478150,
+          "endMs": 478190
+        },
+        {
+          "text": "哈",
+          "startMs": 478230,
+          "endMs": 478270
+        },
+        {
+          "text": "哈",
+          "startMs": 478350,
+          "endMs": 478390
+        },
+        {
+          "text": "哈",
+          "startMs": 478550,
+          "endMs": 478590
+        },
+        {
+          "text": "哈",
+          "startMs": 478750,
+          "endMs": 478790
+        }
+      ]
+    },
+    {
+      "text": "爷爷！",
+      "startMs": 482590,
+      "endMs": 483110,
+      "words": [
+        {
+          "text": "爷",
+          "startMs": 482590,
+          "endMs": 482910
+        },
+        {
+          "text": "爷",
+          "startMs": 482950,
+          "endMs": 483110
+        }
+      ]
+    },
+    {
+      "text": "哈哈哈。",
+      "startMs": 494610,
+      "endMs": 496890,
+      "words": [
+        {
+          "text": "哈",
+          "startMs": 494610,
+          "endMs": 496090
+        },
+        {
+          "text": "哈",
+          "startMs": 496610,
+          "endMs": 496650
+        },
+        {
+          "text": "哈",
+          "startMs": 496690,
+          "endMs": 496890
+        }
+      ]
+    },
+    {
+      "text": "这可比木床舒服多了呀。",
+      "startMs": 497610,
+      "endMs": 499970,
+      "words": [
+        {
+          "text": "这",
+          "startMs": 497610,
+          "endMs": 497810
+        },
+        {
+          "text": "可",
+          "startMs": 497810,
+          "endMs": 498010
+        },
+        {
+          "text": "比",
+          "startMs": 498010,
+          "endMs": 498170
+        },
+        {
+          "text": "木",
+          "startMs": 498210,
+          "endMs": 498410
+        },
+        {
+          "text": "床",
+          "startMs": 498450,
+          "endMs": 498770
+        },
+        {
+          "text": "舒",
+          "startMs": 498850,
+          "endMs": 499130
+        },
+        {
+          "text": "服",
+          "startMs": 499130,
+          "endMs": 499250
+        },
+        {
+          "text": "多",
+          "startMs": 499370,
+          "endMs": 499610
+        },
+        {
+          "text": "了",
+          "startMs": 499610,
+          "endMs": 499770
+        },
+        {
+          "text": "呀",
+          "startMs": 499770,
+          "endMs": 499970
+        }
+      ]
+    },
+    {
+      "text": "哈哈哈哈。",
+      "startMs": 503030,
+      "endMs": 503390,
+      "words": [
+        {
+          "text": "哈",
+          "startMs": 503030,
+          "endMs": 503070
+        },
+        {
+          "text": "哈",
+          "startMs": 503110,
+          "endMs": 503150
+        },
+        {
+          "text": "哈",
+          "startMs": 503190,
+          "endMs": 503310
+        },
+        {
+          "text": "哈",
+          "startMs": 503350,
+          "endMs": 503390
+        }
+      ]
+    },
+    {
+      "text": "嘿嘿，夫人，你可真有办法。",
+      "startMs": 503630,
+      "endMs": 506430,
+      "words": [
+        {
+          "text": "嘿",
+          "startMs": 503630,
+          "endMs": 503750
+        },
+        {
+          "text": "嘿",
+          "startMs": 503790,
+          "endMs": 503910
+        },
+        {
+          "text": "夫",
+          "startMs": 504070,
+          "endMs": 504310
+        },
+        {
+          "text": "人",
+          "startMs": 504310,
+          "endMs": 504510
+        },
+        {
+          "text": "你",
+          "startMs": 504710,
+          "endMs": 504910
+        },
+        {
+          "text": "可",
+          "startMs": 504910,
+          "endMs": 505150
+        },
+        {
+          "text": "真",
+          "startMs": 505150,
+          "endMs": 505470
+        },
+        {
+          "text": "有",
+          "startMs": 505470,
+          "endMs": 505830
+        },
+        {
+          "text": "办",
+          "startMs": 505830,
+          "endMs": 506190
+        },
+        {
+          "text": "法",
+          "startMs": 506190,
+          "endMs": 506430
+        }
+      ]
+    },
+    {
+      "text": "哈哈哈。",
+      "startMs": 506750,
+      "endMs": 507310,
+      "words": [
+        {
+          "text": "哈",
+          "startMs": 506750,
+          "endMs": 507070
+        },
+        {
+          "text": "哈",
+          "startMs": 507110,
+          "endMs": 507150
+        },
+        {
+          "text": "哈",
+          "startMs": 507270,
+          "endMs": 507310
+        }
+      ]
+    },
+    {
+      "text": "这叫有力无处使，有劲使不出。",
+      "startMs": 507310,
+      "endMs": 511430,
+      "words": [
+        {
+          "text": "这",
+          "startMs": 507310,
+          "endMs": 507510
+        },
+        {
+          "text": "叫",
+          "startMs": 507510,
+          "endMs": 507710
+        },
+        {
+          "text": "有",
+          "startMs": 507750,
+          "endMs": 508030
+        },
+        {
+          "text": "力",
+          "startMs": 508030,
+          "endMs": 508310
+        },
+        {
+          "text": "无",
+          "startMs": 508350,
+          "endMs": 508630
+        },
+        {
+          "text": "处",
+          "startMs": 508630,
+          "endMs": 508910
+        },
+        {
+          "text": "使",
+          "startMs": 508990,
+          "endMs": 509230
+        },
+        {
+          "text": "有",
+          "startMs": 509670,
+          "endMs": 510030
+        },
+        {
+          "text": "劲",
+          "startMs": 510070,
+          "endMs": 510310
+        },
+        {
+          "text": "使",
+          "startMs": 510710,
+          "endMs": 510910
+        },
+        {
+          "text": "不",
+          "startMs": 510950,
+          "endMs": 511190
+        },
+        {
+          "text": "出",
+          "startMs": 511190,
+          "endMs": 511430
+        }
+      ]
+    },
+    {
+      "text": "妙妙，可真是妙不可言呐！",
+      "startMs": 511910,
+      "endMs": 515670,
+      "words": [
+        {
+          "text": "妙",
+          "startMs": 511910,
+          "endMs": 512110
+        },
+        {
+          "text": "妙",
+          "startMs": 512630,
+          "endMs": 512910
+        },
+        {
+          "text": "可",
+          "startMs": 513350,
+          "endMs": 513390
+        },
+        {
+          "text": "真",
+          "startMs": 513510,
+          "endMs": 513710
+        },
+        {
+          "text": "是",
+          "startMs": 513710,
+          "endMs": 513950
+        },
+        {
+          "text": "妙",
+          "startMs": 514030,
+          "endMs": 514350
+        },
+        {
+          "text": "不",
+          "startMs": 514390,
+          "endMs": 514710
+        },
+        {
+          "text": "可",
+          "startMs": 514710,
+          "endMs": 515030
+        },
+        {
+          "text": "言",
+          "startMs": 515070,
+          "endMs": 515350
+        },
+        {
+          "text": "呐",
+          "startMs": 515550,
+          "endMs": 515670
+        }
+      ]
+    },
+    {
+      "text": "哈哈哈。",
+      "startMs": 515710,
+      "endMs": 516070,
+      "words": [
+        {
+          "text": "哈",
+          "startMs": 515710,
+          "endMs": 515910
+        },
+        {
+          "text": "哈",
+          "startMs": 515950,
+          "endMs": 515990
+        },
+        {
+          "text": "哈",
+          "startMs": 516030,
+          "endMs": 516070
+        }
+      ]
+    },
+    {
+      "text": "哈哈哈哈哈哈哈哈哈哈哈哈。",
+      "startMs": 516520,
+      "endMs": 519280,
+      "words": [
+        {
+          "text": "哈",
+          "startMs": 516520,
+          "endMs": 517040
+        },
+        {
+          "text": "哈",
+          "startMs": 517080,
+          "endMs": 517120
+        },
+        {
+          "text": "哈",
+          "startMs": 517160,
+          "endMs": 517200
+        },
+        {
+          "text": "哈",
+          "startMs": 517240,
+          "endMs": 517280
+        },
+        {
+          "text": "哈",
+          "startMs": 517880,
+          "endMs": 517920
+        },
+        {
+          "text": "哈",
+          "startMs": 517960,
+          "endMs": 518160
+        },
+        {
+          "text": "哈",
+          "startMs": 518200,
+          "endMs": 518240
+        },
+        {
+          "text": "哈",
+          "startMs": 518280,
+          "endMs": 518400
+        },
+        {
+          "text": "哈",
+          "startMs": 518920,
+          "endMs": 518960
+        },
+        {
+          "text": "哈",
+          "startMs": 519080,
+          "endMs": 519120
+        },
+        {
+          "text": "哈",
+          "startMs": 519160,
+          "endMs": 519200
+        },
+        {
+          "text": "哈",
+          "startMs": 519240,
+          "endMs": 519280
+        }
+      ]
+    },
+    {
+      "text": "嘿嘿嘿。",
+      "startMs": 526830,
+      "endMs": 527630,
+      "words": [
+        {
+          "text": "嘿",
+          "startMs": 526830,
+          "endMs": 527030
+        },
+        {
+          "text": "嘿",
+          "startMs": 527150,
+          "endMs": 527310
+        },
+        {
+          "text": "嘿",
+          "startMs": 527470,
+          "endMs": 527630
+        }
+      ]
+    },
+    {
+      "text": "喂，葫芦娃，怎么样啊？",
+      "startMs": 528910,
+      "endMs": 532470,
+      "words": [
+        {
+          "text": "喂",
+          "startMs": 528910,
+          "endMs": 529430
+        },
+        {
+          "text": "葫",
+          "startMs": 530190,
+          "endMs": 530430
+        },
+        {
+          "text": "芦",
+          "startMs": 530430,
+          "endMs": 530630
+        },
+        {
+          "text": "娃",
+          "startMs": 530670,
+          "endMs": 530950
+        },
+        {
+          "text": "怎",
+          "startMs": 531430,
+          "endMs": 531670
+        },
+        {
+          "text": "么",
+          "startMs": 531670,
+          "endMs": 531870
+        },
+        {
+          "text": "样",
+          "startMs": 531870,
+          "endMs": 532190
+        },
+        {
+          "text": "啊",
+          "startMs": 532230,
+          "endMs": 532470
+        }
+      ]
+    },
+    {
+      "text": "做了个好梦吧？",
+      "startMs": 532950,
+      "endMs": 535510,
+      "words": [
+        {
+          "text": "做",
+          "startMs": 532950,
+          "endMs": 533270
+        },
+        {
+          "text": "了",
+          "startMs": 533270,
+          "endMs": 533510
+        },
+        {
+          "text": "个",
+          "startMs": 533510,
+          "endMs": 533870
+        },
+        {
+          "text": "好",
+          "startMs": 534070,
+          "endMs": 534510
+        },
+        {
+          "text": "梦",
+          "startMs": 534510,
+          "endMs": 534990
+        },
+        {
+          "text": "吧",
+          "startMs": 535030,
+          "endMs": 535510
+        }
+      ]
+    },
+    {
+      "text": "我告诉你。",
+      "startMs": 536310,
+      "endMs": 537550,
+      "words": [
+        {
+          "text": "我",
+          "startMs": 536310,
+          "endMs": 536750
+        },
+        {
+          "text": "告",
+          "startMs": 536750,
+          "endMs": 537110
+        },
+        {
+          "text": "诉",
+          "startMs": 537110,
+          "endMs": 537270
+        },
+        {
+          "text": "你",
+          "startMs": 537270,
+          "endMs": 537550
+        }
+      ]
+    },
+    {
+      "text": "你的丹田已经被我封住了，你就别想再撒野了。",
+      "startMs": 538190,
+      "endMs": 543710,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 538190,
+          "endMs": 538390
+        },
+        {
+          "text": "的",
+          "startMs": 538390,
+          "endMs": 538590
+        },
+        {
+          "text": "丹",
+          "startMs": 538710,
+          "endMs": 538790
+        },
+        {
+          "text": "田",
+          "startMs": 538990,
+          "endMs": 539150
+        },
+        {
+          "text": "已",
+          "startMs": 539750,
+          "endMs": 539950
+        },
+        {
+          "text": "经",
+          "startMs": 539950,
+          "endMs": 540070
+        },
+        {
+          "text": "被",
+          "startMs": 540070,
+          "endMs": 540270
+        },
+        {
+          "text": "我",
+          "startMs": 540270,
+          "endMs": 540510
+        },
+        {
+          "text": "封",
+          "startMs": 540510,
+          "endMs": 540790
+        },
+        {
+          "text": "住",
+          "startMs": 540790,
+          "endMs": 541070
+        },
+        {
+          "text": "了",
+          "startMs": 541070,
+          "endMs": 541310
+        },
+        {
+          "text": "你",
+          "startMs": 541590,
+          "endMs": 541830
+        },
+        {
+          "text": "就",
+          "startMs": 541830,
+          "endMs": 542030
+        },
+        {
+          "text": "别",
+          "startMs": 542030,
+          "endMs": 542230
+        },
+        {
+          "text": "想",
+          "startMs": 542230,
+          "endMs": 542510
+        },
+        {
+          "text": "再",
+          "startMs": 542510,
+          "endMs": 542750
+        },
+        {
+          "text": "撒",
+          "startMs": 542870,
+          "endMs": 543070
+        },
+        {
+          "text": "野",
+          "startMs": 543150,
+          "endMs": 543430
+        },
+        {
+          "text": "了",
+          "startMs": 543430,
+          "endMs": 543710
+        }
+      ]
+    },
+    {
+      "text": "啊，我真不想杀掉你。",
+      "startMs": 545650,
+      "endMs": 547930,
+      "words": [
+        {
+          "text": "啊",
+          "startMs": 545650,
+          "endMs": 545730
+        },
+        {
+          "text": "我",
+          "startMs": 545930,
+          "endMs": 546250
+        },
+        {
+          "text": "真",
+          "startMs": 546250,
+          "endMs": 546530
+        },
+        {
+          "text": "不",
+          "startMs": 546530,
+          "endMs": 546770
+        },
+        {
+          "text": "想",
+          "startMs": 546770,
+          "endMs": 547050
+        },
+        {
+          "text": "杀",
+          "startMs": 547050,
+          "endMs": 547370
+        },
+        {
+          "text": "掉",
+          "startMs": 547370,
+          "endMs": 547610
+        },
+        {
+          "text": "你",
+          "startMs": 547610,
+          "endMs": 547930
+        }
+      ]
+    },
+    {
+      "text": "你又愣又蛮又可爱，真讨人喜欢你只要愿意呀。",
+      "startMs": 548410,
+      "endMs": 555610,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 548410,
+          "endMs": 548730
+        },
+        {
+          "text": "又",
+          "startMs": 548730,
+          "endMs": 549010
+        },
+        {
+          "text": "愣",
+          "startMs": 549170,
+          "endMs": 549210
+        },
+        {
+          "text": "又",
+          "startMs": 549450,
+          "endMs": 549650
+        },
+        {
+          "text": "蛮",
+          "startMs": 549850,
+          "endMs": 549890
+        },
+        {
+          "text": "又",
+          "startMs": 550170,
+          "endMs": 550490
+        },
+        {
+          "text": "可",
+          "startMs": 550490,
+          "endMs": 550850
+        },
+        {
+          "text": "爱",
+          "startMs": 550850,
+          "endMs": 551170
+        },
+        {
+          "text": "真",
+          "startMs": 551690,
+          "endMs": 552050
+        },
+        {
+          "text": "讨",
+          "startMs": 552130,
+          "endMs": 552410
+        },
+        {
+          "text": "人",
+          "startMs": 552410,
+          "endMs": 552730
+        },
+        {
+          "text": "喜",
+          "startMs": 552730,
+          "endMs": 553090
+        },
+        {
+          "text": "欢",
+          "startMs": 553090,
+          "endMs": 553370
+        },
+        {
+          "text": "你",
+          "startMs": 553930,
+          "endMs": 554210
+        },
+        {
+          "text": "只",
+          "startMs": 554210,
+          "endMs": 554450
+        },
+        {
+          "text": "要",
+          "startMs": 554450,
+          "endMs": 554650
+        },
+        {
+          "text": "愿",
+          "startMs": 554650,
+          "endMs": 554970
+        },
+        {
+          "text": "意",
+          "startMs": 554970,
+          "endMs": 555250
+        },
+        {
+          "text": "呀",
+          "startMs": 555370,
+          "endMs": 555610
+        }
+      ]
+    },
+    {
+      "text": "你就做我的娃子吧！",
+      "startMs": 558340,
+      "endMs": 560060,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 558340,
+          "endMs": 558500
+        },
+        {
+          "text": "就",
+          "startMs": 558500,
+          "endMs": 558700
+        },
+        {
+          "text": "做",
+          "startMs": 558700,
+          "endMs": 558820
+        },
+        {
+          "text": "我",
+          "startMs": 558940,
+          "endMs": 559100
+        },
+        {
+          "text": "的",
+          "startMs": 559100,
+          "endMs": 559220
+        },
+        {
+          "text": "娃",
+          "startMs": 559340,
+          "endMs": 559460
+        },
+        {
+          "text": "子",
+          "startMs": 559580,
+          "endMs": 559820
+        },
+        {
+          "text": "吧",
+          "startMs": 559820,
+          "endMs": 560060
+        }
+      ]
+    },
+    {
+      "text": "啊！",
+      "startMs": 565450,
+      "endMs": 565610,
+      "words": [
+        {
+          "text": "啊",
+          "startMs": 565450,
+          "endMs": 565610
+        }
+      ]
+    },
+    {
+      "text": "你你你！啊！啊！",
+      "startMs": 569160,
+      "endMs": 571110,
+      "words": [
+        {
+          "text": "你",
+          "startMs": 569160,
+          "endMs": 569200
+        },
+        {
+          "text": "你",
+          "startMs": 569240,
+          "endMs": 569280
+        },
+        {
+          "text": "你",
+          "startMs": 569360,
+          "endMs": 569480
+        },
+        {
+          "text": "啊",
+          "startMs": 570200,
+          "endMs": 570280
+        },
+        {
+          "text": "啊",
+          "startMs": 570870,
+          "endMs": 571110
+        }
+      ]
+    },
+    {
+      "text": "葫芦娃葫芦",
+      "startMs": 576140,
+      "endMs": 577860,
+      "words": [
+        {
+          "text": "葫",
+          "startMs": 576140,
+          "endMs": 576180
+        },
+        {
+          "text": "芦",
+          "startMs": 576460,
+          "endMs": 576500
+        },
+        {
+          "text": "娃",
+          "startMs": 576860,
+          "endMs": 576900
+        },
+        {
+          "text": "葫",
+          "startMs": 577660,
+          "endMs": 577700
+        },
+        {
+          "text": "芦",
+          "startMs": 577820,
+          "endMs": 577860
+        }
+      ]
+    }
+  ]
+}

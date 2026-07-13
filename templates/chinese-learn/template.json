@@ -8,6 +8,11 @@
     "region": { "top": 120, "height": 720 },
     "focusY": 0.5
   },
+  "audio": {
+    "_viComment": "越南语解说音色/语速。默认 vi_female_ruan(有声书/角色扮演，叙事感强，适合电影解说，用户 2026-07-13 定)。样本听 public/library/audio/voices/*.mp3(mp3 元数据已标官方用途)。换声音只改这里、删各视频 work/narr-*.mp3 重 build。",
+    "viVoice": "vi_female_ruan_uranus_bigtts",
+    "viSpeed": 1.0
+  },
   "subtitle": { "top": 960, "height": 360 },
   "captions": {
     "bgColor": "#000000",

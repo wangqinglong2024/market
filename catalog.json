@@ -13,6 +13,28 @@
       "beats": 18
     },
     {
+      "id": "huluwa-qisehulu",
+      "title": "葫芦兄弟E2七色葫芦·中文学习混剪(越南受众)",
+      "template": "chinese-learn",
+      "shard": "2026/07/13",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-13",
+      "manifest": "public/videos/2026/07/13/huluwa-qisehulu/manifest.json",
+      "beats": 20
+    },
+    {
+      "id": "huluwa-wurunitan",
+      "title": "葫芦兄弟E3误入泥潭·中文学习混剪(越南受众)",
+      "template": "chinese-learn",
+      "shard": "2026/07/13",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-13",
+      "manifest": "public/videos/2026/07/13/huluwa-wurunitan/manifest.json",
+      "beats": 15
+    },
+    {
       "id": "huluwa-hunjian",
       "title": "葫芦娃混剪·中文学习(60s,越南受众)",
       "template": "chinese-learn",

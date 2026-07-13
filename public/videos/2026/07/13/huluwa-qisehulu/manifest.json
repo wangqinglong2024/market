@@ -1,0 +1,852 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1440,
+    "layout": "chinese-learn",
+    "captions": {
+      "bgColor": "#000000",
+      "pinyinColor": "#7fd1c0",
+      "zhColor": "#ffffff",
+      "viColor": "#f5c518",
+      "karaokeColor": "#25f4ee",
+      "dimColor": "#565b63",
+      "readColor": "#ffffff",
+      "sizes": {
+        "pinyin": 46,
+        "zh": 100,
+        "vi": 46,
+        "local": 46
+      },
+      "lineGap": 18,
+      "sidePad": 40,
+      "localColor": "#f5c518",
+      "duck": 0.06,
+      "narrationVolume": 1.35
+    },
+    "fonts": {
+      "files": [
+        {
+          "family": "Ma Shan Zheng",
+          "file": "library/fonts/MaShanZheng.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        }
+      ],
+      "zhStack": [
+        "Ma Shan Zheng",
+        "SimHei",
+        "PingFang SC",
+        "serif"
+      ],
+      "zhWeight": 400,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "sans-serif"
+      ]
+    },
+    "source": {
+      "video": "videos/2026/07/13/huluwa-qisehulu/source.mp4",
+      "region": {
+        "top": 120,
+        "height": 720
+      },
+      "focusY": 0.5
+    },
+    "subtitle": {
+      "top": 960,
+      "height": 360
+    }
+  },
+  "beats": [
+    {
+      "id": "nar-0",
+      "kind": "narration",
+      "startMs": 0,
+      "endMs": 3614,
+      "durationMs": 3614,
+      "words": [
+        {
+          "zh": "七个",
+          "py": "qī gè",
+          "startMs": 0,
+          "endMs": 556
+        },
+        {
+          "zh": "葫芦",
+          "py": "hú lu",
+          "startMs": 556,
+          "endMs": 1112
+        },
+        {
+          "zh": "一",
+          "py": "yī",
+          "startMs": 1112,
+          "endMs": 1390
+        },
+        {
+          "zh": "冒出来，",
+          "py": "mào chū lái",
+          "startMs": 1390,
+          "endMs": 2224
+        },
+        {
+          "zh": "妖精",
+          "py": "yāo jīng",
+          "startMs": 2224,
+          "endMs": 2780
+        },
+        {
+          "zh": "就",
+          "py": "jiù",
+          "startMs": 2780,
+          "endMs": 3058
+        },
+        {
+          "zh": "慌了",
+          "py": "huāng le",
+          "startMs": 3058,
+          "endMs": 3614
+        }
+      ],
+      "vi": "Bảy quả hồ lô vừa nhú, hai yêu tinh đã hoảng loạn!",
+      "narrationAudio": "videos/2026/07/13/huluwa-qisehulu/work/narr-0.mp3",
+      "flash": true
+    },
+    {
+      "id": "zh-1-0",
+      "kind": "zh",
+      "startMs": 3614,
+      "endMs": 5934,
+      "durationMs": 2320,
+      "words": [
+        {
+          "zh": "你",
+          "py": "nǐ",
+          "startMs": 3614,
+          "endMs": 3854
+        },
+        {
+          "zh": "可",
+          "py": "kě",
+          "startMs": 3854,
+          "endMs": 4054
+        },
+        {
+          "zh": "不能",
+          "py": "bù néng",
+          "startMs": 4054,
+          "endMs": 4414
+        },
+        {
+          "zh": "小",
+          "py": "xiǎo",
+          "startMs": 4414,
+          "endMs": 4774
+        },
+        {
+          "zh": "看了",
+          "py": "kàn le",
+          "startMs": 4774,
+          "endMs": 5174
+        },
+        {
+          "zh": "这",
+          "py": "zhè",
+          "startMs": 5174,
+          "endMs": 5334
+        },
+        {
+          "zh": "神",
+          "py": "shén",
+          "startMs": 5334,
+          "endMs": 5614
+        },
+        {
+          "zh": "葫芦",
+          "py": "hú lu",
+          "startMs": 5654,
+          "endMs": 5934
+        }
+      ],
+      "vi": "Đừng coi thường mấy quả hồ lô thần này.",
+      "flash": true
+    },
+    {
+      "id": "zh-2-0",
+      "kind": "zh",
+      "startMs": 5934,
+      "endMs": 10654,
+      "durationMs": 4720,
+      "words": [
+        {
+          "zh": "如今",
+          "py": "rú jīn",
+          "startMs": 5934,
+          "endMs": 6414
+        },
+        {
+          "zh": "穿山甲",
+          "py": "chuān shān jiǎ",
+          "startMs": 6534,
+          "endMs": 7174
+        },
+        {
+          "zh": "和",
+          "py": "hé",
+          "startMs": 7294,
+          "endMs": 7494
+        },
+        {
+          "zh": "老头",
+          "py": "lǎo tóu",
+          "startMs": 7494,
+          "endMs": 7934
+        },
+        {
+          "zh": "把",
+          "py": "bǎ",
+          "startMs": 8094,
+          "endMs": 8334
+        },
+        {
+          "zh": "葫芦",
+          "py": "hú lu",
+          "startMs": 8334,
+          "endMs": 8654
+        },
+        {
+          "zh": "籽",
+          "py": "zǐ",
+          "startMs": 8774,
+          "endMs": 8974
+        },
+        {
+          "zh": "弄",
+          "py": "nòng",
+          "startMs": 9134,
+          "endMs": 9374
+        },
+        {
+          "zh": "了",
+          "py": "liǎo",
+          "startMs": 9374,
+          "endMs": 9574
+        },
+        {
+          "zh": "出去",
+          "py": "chū qù",
+          "startMs": 9574,
+          "endMs": 10014
+        }
+      ],
+      "vi": "Nay tê tê và ông lão đã đem hạt hồ lô ra ngoài,",
+      "flash": true
+    },
+    {
+      "id": "zh-2-1",
+      "kind": "zh",
+      "startMs": 10654,
+      "endMs": 12614,
+      "durationMs": 1960,
+      "words": [
+        {
+          "zh": "一旦",
+          "py": "yí dàn",
+          "startMs": 10654,
+          "endMs": 11094
+        },
+        {
+          "zh": "瓜熟蒂落",
+          "py": "guā shú dì luò",
+          "startMs": 11294,
+          "endMs": 12294
+        }
+      ],
+      "vi": "một khi quả chín rụng cuống,",
+      "flash": false
+    },
+    {
+      "id": "zh-2-2",
+      "kind": "zh",
+      "startMs": 12614,
+      "endMs": 14574,
+      "durationMs": 1960,
+      "words": [
+        {
+          "zh": "我们",
+          "py": "wǒ men",
+          "startMs": 12614,
+          "endMs": 12934
+        },
+        {
+          "zh": "就",
+          "py": "jiù",
+          "startMs": 12934,
+          "endMs": 13294
+        },
+        {
+          "zh": "全",
+          "py": "quán",
+          "startMs": 13334,
+          "endMs": 13774
+        },
+        {
+          "zh": "完了",
+          "py": "wán le",
+          "startMs": 13814,
+          "endMs": 14574
+        }
+      ],
+      "vi": "là bọn ta toi đời.",
+      "flash": false
+    },
+    {
+      "id": "zh-3-0",
+      "kind": "zh",
+      "startMs": 14574,
+      "endMs": 15374,
+      "durationMs": 800,
+      "words": [
+        {
+          "zh": "夫人",
+          "py": "fū rén",
+          "startMs": 14574,
+          "endMs": 14974
+        }
+      ],
+      "vi": "Phu nhân,",
+      "flash": true
+    },
+    {
+      "id": "zh-3-1",
+      "kind": "zh",
+      "startMs": 15374,
+      "endMs": 16134,
+      "durationMs": 760,
+      "words": [
+        {
+          "zh": "三日",
+          "py": "sān rì",
+          "startMs": 15374,
+          "endMs": 15814
+        },
+        {
+          "zh": "之内",
+          "py": "zhī nèi",
+          "startMs": 15814,
+          "endMs": 16134
+        }
+      ],
+      "vi": "trong ba ngày,",
+      "flash": false
+    },
+    {
+      "id": "zh-3-2",
+      "kind": "zh",
+      "startMs": 16134,
+      "endMs": 17294,
+      "durationMs": 1160,
+      "words": [
+        {
+          "zh": "我",
+          "py": "wǒ",
+          "startMs": 16134,
+          "endMs": 16374
+        },
+        {
+          "zh": "必",
+          "py": "bì",
+          "startMs": 16374,
+          "endMs": 16534
+        },
+        {
+          "zh": "挖",
+          "py": "wā",
+          "startMs": 16654,
+          "endMs": 16854
+        },
+        {
+          "zh": "其",
+          "py": "qí",
+          "startMs": 16854,
+          "endMs": 16974
+        },
+        {
+          "zh": "根",
+          "py": "gēn",
+          "startMs": 17054,
+          "endMs": 17214
+        }
+      ],
+      "vi": "ta sẽ đào tận gốc,",
+      "flash": false
+    },
+    {
+      "id": "zh-3-3",
+      "kind": "zh",
+      "startMs": 17294,
+      "endMs": 18334,
+      "durationMs": 1040,
+      "words": [
+        {
+          "zh": "断",
+          "py": "duàn",
+          "startMs": 17294,
+          "endMs": 17494
+        },
+        {
+          "zh": "其",
+          "py": "qí",
+          "startMs": 17534,
+          "endMs": 17654
+        },
+        {
+          "zh": "藤",
+          "py": "téng",
+          "startMs": 17774,
+          "endMs": 17814
+        }
+      ],
+      "vi": "chặt đứt dây,",
+      "flash": false
+    },
+    {
+      "id": "zh-3-4",
+      "kind": "zh",
+      "startMs": 18334,
+      "endMs": 19614,
+      "durationMs": 1280,
+      "words": [
+        {
+          "zh": "摘取",
+          "py": "zhāi qǔ",
+          "startMs": 18334,
+          "endMs": 18774
+        },
+        {
+          "zh": "嫩",
+          "py": "nèn",
+          "startMs": 18854,
+          "endMs": 19014
+        },
+        {
+          "zh": "葫芦",
+          "py": "hú lu",
+          "startMs": 19174,
+          "endMs": 19454
+        }
+      ],
+      "vi": "hái quả hồ lô non,",
+      "flash": false
+    },
+    {
+      "id": "zh-3-5",
+      "kind": "zh",
+      "startMs": 19614,
+      "endMs": 21894,
+      "durationMs": 2280,
+      "words": [
+        {
+          "zh": "送",
+          "py": "sòng",
+          "startMs": 19614,
+          "endMs": 19854
+        },
+        {
+          "zh": "与",
+          "py": "yǔ",
+          "startMs": 19934,
+          "endMs": 19974
+        },
+        {
+          "zh": "夫人",
+          "py": "fū rén",
+          "startMs": 20094,
+          "endMs": 20414
+        },
+        {
+          "zh": "珍",
+          "py": "zhēn",
+          "startMs": 20534,
+          "endMs": 20574
+        },
+        {
+          "zh": "酒",
+          "py": "jiǔ",
+          "startMs": 20774,
+          "endMs": 20854
+        }
+      ],
+      "vi": "dâng phu nhân nhắm rượu.",
+      "flash": false
+    },
+    {
+      "id": "zh-3-6",
+      "kind": "zh",
+      "startMs": 21894,
+      "endMs": 22374,
+      "durationMs": 480,
+      "words": [
+        {
+          "zh": "哈哈",
+          "py": "hā hā",
+          "startMs": 21894,
+          "endMs": 22374
+        }
+      ],
+      "vi": "",
+      "flash": false
+    },
+    {
+      "id": "nar-4",
+      "kind": "narration",
+      "startMs": 22374,
+      "endMs": 25196,
+      "durationMs": 2822,
+      "words": [
+        {
+          "zh": "可",
+          "py": "kě",
+          "startMs": 22374,
+          "endMs": 22609
+        },
+        {
+          "zh": "葫芦",
+          "py": "hú lu",
+          "startMs": 22609,
+          "endMs": 23080
+        },
+        {
+          "zh": "已经",
+          "py": "yǐ jīng",
+          "startMs": 23080,
+          "endMs": 23550
+        },
+        {
+          "zh": "变成",
+          "py": "biàn chéng",
+          "startMs": 23550,
+          "endMs": 24020
+        },
+        {
+          "zh": "了",
+          "py": "liǎo",
+          "startMs": 24020,
+          "endMs": 24255
+        },
+        {
+          "zh": "七个",
+          "py": "qī gè",
+          "startMs": 24255,
+          "endMs": 24726
+        },
+        {
+          "zh": "娃娃",
+          "py": "wá wa",
+          "startMs": 24726,
+          "endMs": 25196
+        }
+      ],
+      "vi": "Nhưng hồ lô đã hóa thành bảy anh em!",
+      "narrationAudio": "videos/2026/07/13/huluwa-qisehulu/work/narr-4.mp3",
+      "flash": true
+    },
+    {
+      "id": "zh-5-0",
+      "kind": "zh",
+      "startMs": 25196,
+      "endMs": 25756,
+      "durationMs": 560,
+      "words": [
+        {
+          "zh": "爷爷",
+          "py": "yé ye",
+          "startMs": 25196,
+          "endMs": 25556
+        }
+      ],
+      "vi": "Ông ơi,",
+      "flash": true
+    },
+    {
+      "id": "zh-5-1",
+      "kind": "zh",
+      "startMs": 25756,
+      "endMs": 26916,
+      "durationMs": 1160,
+      "words": [
+        {
+          "zh": "您",
+          "py": "nín",
+          "startMs": 25756,
+          "endMs": 25996
+        },
+        {
+          "zh": "不要",
+          "py": "bú yào",
+          "startMs": 26036,
+          "endMs": 26276
+        },
+        {
+          "zh": "怕",
+          "py": "pà",
+          "startMs": 26276,
+          "endMs": 26556
+        }
+      ],
+      "vi": "ông đừng sợ,",
+      "flash": false
+    },
+    {
+      "id": "zh-5-2",
+      "kind": "zh",
+      "startMs": 26916,
+      "endMs": 29356,
+      "durationMs": 2440,
+      "words": [
+        {
+          "zh": "这",
+          "py": "zhè",
+          "startMs": 26916,
+          "endMs": 27156
+        },
+        {
+          "zh": "三天",
+          "py": "sān tiān",
+          "startMs": 27156,
+          "endMs": 27556
+        },
+        {
+          "zh": "之内",
+          "py": "zhī nèi",
+          "startMs": 27556,
+          "endMs": 27836
+        },
+        {
+          "zh": "妖怪",
+          "py": "yāo guài",
+          "startMs": 27876,
+          "endMs": 28276
+        },
+        {
+          "zh": "还",
+          "py": "hái",
+          "startMs": 28276,
+          "endMs": 28436
+        },
+        {
+          "zh": "要",
+          "py": "yào",
+          "startMs": 28436,
+          "endMs": 28556
+        },
+        {
+          "zh": "来",
+          "py": "lái",
+          "startMs": 28556,
+          "endMs": 28756
+        },
+        {
+          "zh": "捣乱",
+          "py": "dǎo luàn",
+          "startMs": 28756,
+          "endMs": 29076
+        },
+        {
+          "zh": "的",
+          "py": "de",
+          "startMs": 29076,
+          "endMs": 29356
+        }
+      ],
+      "vi": "ba ngày này yêu tinh còn đến quấy phá.",
+      "flash": false
+    },
+    {
+      "id": "zh-6-0",
+      "kind": "zh",
+      "startMs": 29356,
+      "endMs": 31476,
+      "durationMs": 2120,
+      "words": [
+        {
+          "zh": "您",
+          "py": "nín",
+          "startMs": 29356,
+          "endMs": 29516
+        },
+        {
+          "zh": "老人家",
+          "py": "lǎo rén jiā",
+          "startMs": 29556,
+          "endMs": 30036
+        },
+        {
+          "zh": "只要",
+          "py": "zhǐ yào",
+          "startMs": 30076,
+          "endMs": 30356
+        },
+        {
+          "zh": "待",
+          "py": "dài",
+          "startMs": 30356,
+          "endMs": 30516
+        },
+        {
+          "zh": "在",
+          "py": "zài",
+          "startMs": 30516,
+          "endMs": 30676
+        },
+        {
+          "zh": "屋",
+          "py": "wū",
+          "startMs": 30676,
+          "endMs": 30876
+        },
+        {
+          "zh": "里",
+          "py": "lǐ",
+          "startMs": 30876,
+          "endMs": 31076
+        }
+      ],
+      "vi": "Ông cứ ở yên trong nhà,",
+      "flash": true
+    },
+    {
+      "id": "zh-6-1",
+      "kind": "zh",
+      "startMs": 31476,
+      "endMs": 32996,
+      "durationMs": 1520,
+      "words": [
+        {
+          "zh": "千万",
+          "py": "qiān wàn",
+          "startMs": 31476,
+          "endMs": 31836
+        },
+        {
+          "zh": "不要",
+          "py": "bú yào",
+          "startMs": 31836,
+          "endMs": 32116
+        },
+        {
+          "zh": "出来",
+          "py": "chū lái",
+          "startMs": 32116,
+          "endMs": 32516
+        }
+      ],
+      "vi": "ngàn vạn lần đừng ra ngoài,",
+      "flash": false
+    },
+    {
+      "id": "zh-6-2",
+      "kind": "zh",
+      "startMs": 32996,
+      "endMs": 35276,
+      "durationMs": 2280,
+      "words": [
+        {
+          "zh": "我们",
+          "py": "wǒ men",
+          "startMs": 32996,
+          "endMs": 33356
+        },
+        {
+          "zh": "兄弟",
+          "py": "xiōng dì",
+          "startMs": 33356,
+          "endMs": 33636
+        },
+        {
+          "zh": "自有",
+          "py": "zì yǒu",
+          "startMs": 33996,
+          "endMs": 34276
+        },
+        {
+          "zh": "办法",
+          "py": "bàn fǎ",
+          "startMs": 34276,
+          "endMs": 34516
+        },
+        {
+          "zh": "对付",
+          "py": "duì fù",
+          "startMs": 34556,
+          "endMs": 34836
+        },
+        {
+          "zh": "他的",
+          "py": "tā de",
+          "startMs": 34916,
+          "endMs": 35276
+        }
+      ],
+      "vi": "anh em con tự có cách trị hắn.",
+      "flash": false
+    },
+    {
+      "id": "nar-7",
+      "kind": "narration",
+      "startMs": 35276,
+      "endMs": 38890,
+      "durationMs": 3614,
+      "words": [
+        {
+          "zh": "七",
+          "py": "qī",
+          "startMs": 35276,
+          "endMs": 35678
+        },
+        {
+          "zh": "兄弟",
+          "py": "xiōng dì",
+          "startMs": 35678,
+          "endMs": 36481
+        },
+        {
+          "zh": "斗",
+          "py": "dòu",
+          "startMs": 36481,
+          "endMs": 36882
+        },
+        {
+          "zh": "得过",
+          "py": "dé guò",
+          "startMs": 36882,
+          "endMs": 37685
+        },
+        {
+          "zh": "妖精",
+          "py": "yāo jīng",
+          "startMs": 37685,
+          "endMs": 38488
+        },
+        {
+          "zh": "吗",
+          "py": "ma",
+          "startMs": 38488,
+          "endMs": 38890
+        }
+      ],
+      "vi": "Bảy anh em thắng nổi yêu tinh không? Comment đoán nào!",
+      "narrationAudio": "videos/2026/07/13/huluwa-qisehulu/work/narr-7.mp3",
+      "flash": true
+    }
+  ]
+}

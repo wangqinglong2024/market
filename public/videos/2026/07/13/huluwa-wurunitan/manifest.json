@@ -1,0 +1,821 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1440,
+    "layout": "chinese-learn",
+    "captions": {
+      "bgColor": "#000000",
+      "pinyinColor": "#7fd1c0",
+      "zhColor": "#ffffff",
+      "viColor": "#f5c518",
+      "karaokeColor": "#25f4ee",
+      "dimColor": "#565b63",
+      "readColor": "#ffffff",
+      "sizes": {
+        "pinyin": 46,
+        "zh": 100,
+        "vi": 46,
+        "local": 46
+      },
+      "lineGap": 18,
+      "sidePad": 40,
+      "localColor": "#f5c518",
+      "duck": 0.06,
+      "narrationVolume": 1.35
+    },
+    "fonts": {
+      "files": [
+        {
+          "family": "Ma Shan Zheng",
+          "file": "library/fonts/MaShanZheng.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        }
+      ],
+      "zhStack": [
+        "Ma Shan Zheng",
+        "SimHei",
+        "PingFang SC",
+        "serif"
+      ],
+      "zhWeight": 400,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "sans-serif"
+      ]
+    },
+    "source": {
+      "video": "videos/2026/07/13/huluwa-wurunitan/source.mp4",
+      "region": {
+        "top": 120,
+        "height": 720
+      },
+      "focusY": 0.5
+    },
+    "subtitle": {
+      "top": 960,
+      "height": 360
+    }
+  },
+  "beats": [
+    {
+      "id": "nar-0",
+      "kind": "narration",
+      "startMs": 0,
+      "endMs": 3038,
+      "durationMs": 3038,
+      "words": [
+        {
+          "zh": "最有",
+          "py": "zuì yǒu",
+          "startMs": 0,
+          "endMs": 434
+        },
+        {
+          "zh": "力气",
+          "py": "lì qi",
+          "startMs": 434,
+          "endMs": 868
+        },
+        {
+          "zh": "的",
+          "py": "de",
+          "startMs": 868,
+          "endMs": 1085
+        },
+        {
+          "zh": "大",
+          "py": "dà",
+          "startMs": 1085,
+          "endMs": 1302
+        },
+        {
+          "zh": "娃，",
+          "py": "wá",
+          "startMs": 1302,
+          "endMs": 1519
+        },
+        {
+          "zh": "怎么",
+          "py": "zěn me",
+          "startMs": 1519,
+          "endMs": 1953
+        },
+        {
+          "zh": "被绑",
+          "py": "bèi bǎng",
+          "startMs": 1953,
+          "endMs": 2387
+        },
+        {
+          "zh": "成",
+          "py": "chéng",
+          "startMs": 2387,
+          "endMs": 2604
+        },
+        {
+          "zh": "这样",
+          "py": "zhè yàng",
+          "startMs": 2604,
+          "endMs": 3038
+        }
+      ],
+      "vi": "Đại Oa mạnh nhất, sao lại bị trói chặt thế này?",
+      "narrationAudio": "videos/2026/07/13/huluwa-wurunitan/work/narr-0.mp3",
+      "flash": true
+    },
+    {
+      "id": "zh-1-0",
+      "kind": "zh",
+      "startMs": 3038,
+      "endMs": 6278,
+      "durationMs": 3240,
+      "words": [
+        {
+          "zh": "我",
+          "py": "wǒ",
+          "startMs": 4078,
+          "endMs": 4358
+        },
+        {
+          "zh": "一定",
+          "py": "yí dìng",
+          "startMs": 4358,
+          "endMs": 4638
+        },
+        {
+          "zh": "要",
+          "py": "yào",
+          "startMs": 4638,
+          "endMs": 4798
+        },
+        {
+          "zh": "把",
+          "py": "bǎ",
+          "startMs": 4798,
+          "endMs": 4958
+        },
+        {
+          "zh": "妖怪",
+          "py": "yāo guài",
+          "startMs": 4958,
+          "endMs": 5358
+        },
+        {
+          "zh": "捏",
+          "py": "niē",
+          "startMs": 5438,
+          "endMs": 5598
+        },
+        {
+          "zh": "得",
+          "py": "dé",
+          "startMs": 5638,
+          "endMs": 5718
+        },
+        {
+          "zh": "粉碎",
+          "py": "fěn suì",
+          "startMs": 5798,
+          "endMs": 6278
+        }
+      ],
+      "vi": "Ta nhất định bóp nát lũ yêu tinh!",
+      "flash": true
+    },
+    {
+      "id": "zh-2-0",
+      "kind": "zh",
+      "startMs": 6278,
+      "endMs": 8958,
+      "durationMs": 2680,
+      "words": [
+        {
+          "zh": "今天",
+          "py": "jīn tiān",
+          "startMs": 6278,
+          "endMs": 6678
+        },
+        {
+          "zh": "要是",
+          "py": "yào shi",
+          "startMs": 7078,
+          "endMs": 7398
+        },
+        {
+          "zh": "不把",
+          "py": "bù bǎ",
+          "startMs": 7398,
+          "endMs": 7718
+        },
+        {
+          "zh": "我",
+          "py": "wǒ",
+          "startMs": 7718,
+          "endMs": 7918
+        },
+        {
+          "zh": "爷爷",
+          "py": "yé ye",
+          "startMs": 7918,
+          "endMs": 8198
+        },
+        {
+          "zh": "放了",
+          "py": "fàng le",
+          "startMs": 8238,
+          "endMs": 8678
+        }
+      ],
+      "vi": "Hôm nay không thả ông ta ra,",
+      "flash": true
+    },
+    {
+      "id": "zh-2-1",
+      "kind": "zh",
+      "startMs": 8958,
+      "endMs": 12038,
+      "durationMs": 3080,
+      "words": [
+        {
+          "zh": "我",
+          "py": "wǒ",
+          "startMs": 8958,
+          "endMs": 9118
+        },
+        {
+          "zh": "就把",
+          "py": "jiù bǎ",
+          "startMs": 9118,
+          "endMs": 9438
+        },
+        {
+          "zh": "你的",
+          "py": "nǐ de",
+          "startMs": 9438,
+          "endMs": 9678
+        },
+        {
+          "zh": "妖",
+          "py": "yāo",
+          "startMs": 9758,
+          "endMs": 9878
+        },
+        {
+          "zh": "洞",
+          "py": "dòng",
+          "startMs": 9918,
+          "endMs": 10118
+        },
+        {
+          "zh": "砸",
+          "py": "zá",
+          "startMs": 10198,
+          "endMs": 10398
+        },
+        {
+          "zh": "得",
+          "py": "dé",
+          "startMs": 10438,
+          "endMs": 10478
+        },
+        {
+          "zh": "粉碎",
+          "py": "fěn suì",
+          "startMs": 10558,
+          "endMs": 10958
+        }
+      ],
+      "vi": "ta đập nát hang yêu của ngươi!",
+      "flash": false
+    },
+    {
+      "id": "nar-3",
+      "kind": "narration",
+      "startMs": 12038,
+      "endMs": 15484,
+      "durationMs": 3446,
+      "words": [
+        {
+          "zh": "硬打",
+          "py": "yìng dǎ",
+          "startMs": 12038,
+          "endMs": 12612
+        },
+        {
+          "zh": "不过，",
+          "py": "bú guò",
+          "startMs": 12612,
+          "endMs": 13187
+        },
+        {
+          "zh": "妖精",
+          "py": "yāo jīng",
+          "startMs": 13187,
+          "endMs": 13761
+        },
+        {
+          "zh": "就",
+          "py": "jiù",
+          "startMs": 13761,
+          "endMs": 14048
+        },
+        {
+          "zh": "开始",
+          "py": "kāi shǐ",
+          "startMs": 14048,
+          "endMs": 14623
+        },
+        {
+          "zh": "耍",
+          "py": "shuǎ",
+          "startMs": 14623,
+          "endMs": 14910
+        },
+        {
+          "zh": "诡计",
+          "py": "guǐ jì",
+          "startMs": 14910,
+          "endMs": 15484
+        }
+      ],
+      "vi": "Đánh không lại, yêu tinh liền giở trò gian xảo.",
+      "narrationAudio": "videos/2026/07/13/huluwa-wurunitan/work/narr-3.mp3",
+      "flash": true
+    },
+    {
+      "id": "zh-4-0",
+      "kind": "zh",
+      "startMs": 15484,
+      "endMs": 17364,
+      "durationMs": 1880,
+      "words": [
+        {
+          "zh": "你",
+          "py": "nǐ",
+          "startMs": 15484,
+          "endMs": 15724
+        },
+        {
+          "zh": "何必",
+          "py": "hé bì",
+          "startMs": 15724,
+          "endMs": 16164
+        },
+        {
+          "zh": "大",
+          "py": "dà",
+          "startMs": 16164,
+          "endMs": 16404
+        },
+        {
+          "zh": "施",
+          "py": "shī",
+          "startMs": 16484,
+          "endMs": 16524
+        },
+        {
+          "zh": "蛮劲",
+          "py": "mán jìn",
+          "startMs": 16764,
+          "endMs": 17044
+        }
+      ],
+      "vi": "Con cần gì ra sức mạnh bạo,",
+      "flash": true
+    },
+    {
+      "id": "zh-4-1",
+      "kind": "zh",
+      "startMs": 17364,
+      "endMs": 18964,
+      "durationMs": 1600,
+      "words": [
+        {
+          "zh": "要是",
+          "py": "yào shi",
+          "startMs": 17364,
+          "endMs": 17684
+        },
+        {
+          "zh": "震",
+          "py": "zhèn",
+          "startMs": 17804,
+          "endMs": 17844
+        },
+        {
+          "zh": "塌了",
+          "py": "tā le",
+          "startMs": 18004,
+          "endMs": 18284
+        },
+        {
+          "zh": "山洞",
+          "py": "shān dòng",
+          "startMs": 18284,
+          "endMs": 18724
+        }
+      ],
+      "vi": "lỡ làm sập hang động,",
+      "flash": false
+    },
+    {
+      "id": "zh-4-2",
+      "kind": "zh",
+      "startMs": 18964,
+      "endMs": 20684,
+      "durationMs": 1720,
+      "words": [
+        {
+          "zh": "他",
+          "py": "tā",
+          "startMs": 18964,
+          "endMs": 19044
+        },
+        {
+          "zh": "也",
+          "py": "yě",
+          "startMs": 19084,
+          "endMs": 19244
+        },
+        {
+          "zh": "会",
+          "py": "huì",
+          "startMs": 19244,
+          "endMs": 19444
+        },
+        {
+          "zh": "葬身",
+          "py": "zàng shēn",
+          "startMs": 19484,
+          "endMs": 19924
+        },
+        {
+          "zh": "洞府",
+          "py": "dòng fǔ",
+          "startMs": 19964,
+          "endMs": 20324
+        }
+      ],
+      "vi": "ông ấy cũng chôn thân trong đó,",
+      "flash": false
+    },
+    {
+      "id": "zh-4-3",
+      "kind": "zh",
+      "startMs": 20684,
+      "endMs": 22604,
+      "durationMs": 1920,
+      "words": [
+        {
+          "zh": "你",
+          "py": "nǐ",
+          "startMs": 20684,
+          "endMs": 20884
+        },
+        {
+          "zh": "这",
+          "py": "zhè",
+          "startMs": 20884,
+          "endMs": 21044
+        },
+        {
+          "zh": "不是",
+          "py": "bú shì",
+          "startMs": 21044,
+          "endMs": 21324
+        },
+        {
+          "zh": "害",
+          "py": "hài",
+          "startMs": 21324,
+          "endMs": 21524
+        },
+        {
+          "zh": "了",
+          "py": "liǎo",
+          "startMs": 21524,
+          "endMs": 21684
+        },
+        {
+          "zh": "他",
+          "py": "tā",
+          "startMs": 21724,
+          "endMs": 21804
+        },
+        {
+          "zh": "老人家",
+          "py": "lǎo rén jiā",
+          "startMs": 21844,
+          "endMs": 22404
+        },
+        {
+          "zh": "吗",
+          "py": "ma",
+          "startMs": 22404,
+          "endMs": 22604
+        }
+      ],
+      "vi": "chẳng phải con hại ông sao?",
+      "flash": false
+    },
+    {
+      "id": "zh-5-0",
+      "kind": "zh",
+      "startMs": 22604,
+      "endMs": 24044,
+      "durationMs": 1440,
+      "words": [
+        {
+          "zh": "那",
+          "py": "nà",
+          "startMs": 22604,
+          "endMs": 22724
+        },
+        {
+          "zh": "快",
+          "py": "kuài",
+          "startMs": 23004,
+          "endMs": 23164
+        },
+        {
+          "zh": "放",
+          "py": "fàng",
+          "startMs": 23164,
+          "endMs": 23324
+        },
+        {
+          "zh": "我",
+          "py": "wǒ",
+          "startMs": 23324,
+          "endMs": 23484
+        },
+        {
+          "zh": "爷爷",
+          "py": "yé ye",
+          "startMs": 23484,
+          "endMs": 23684
+        },
+        {
+          "zh": "出来",
+          "py": "chū lái",
+          "startMs": 23684,
+          "endMs": 24044
+        }
+      ],
+      "vi": "Vậy mau thả ông ta ra!",
+      "flash": true
+    },
+    {
+      "id": "zh-6-0",
+      "kind": "zh",
+      "startMs": 24044,
+      "endMs": 26404,
+      "durationMs": 2360,
+      "words": [
+        {
+          "zh": "这",
+          "py": "zhè",
+          "startMs": 24044,
+          "endMs": 24244
+        },
+        {
+          "zh": "叫",
+          "py": "jiào",
+          "startMs": 24244,
+          "endMs": 24444
+        },
+        {
+          "zh": "有力",
+          "py": "yǒu lì",
+          "startMs": 24484,
+          "endMs": 25044
+        },
+        {
+          "zh": "无处",
+          "py": "wú chù",
+          "startMs": 25084,
+          "endMs": 25644
+        },
+        {
+          "zh": "使",
+          "py": "shǐ",
+          "startMs": 25724,
+          "endMs": 25964
+        }
+      ],
+      "vi": "Gọi là có sức không chỗ dùng,",
+      "flash": true
+    },
+    {
+      "id": "zh-6-1",
+      "kind": "zh",
+      "startMs": 26404,
+      "endMs": 28164,
+      "durationMs": 1760,
+      "words": [
+        {
+          "zh": "有",
+          "py": "yǒu",
+          "startMs": 26404,
+          "endMs": 26764
+        },
+        {
+          "zh": "劲",
+          "py": "jìn",
+          "startMs": 26804,
+          "endMs": 27044
+        },
+        {
+          "zh": "使",
+          "py": "shǐ",
+          "startMs": 27444,
+          "endMs": 27644
+        },
+        {
+          "zh": "不出",
+          "py": "bù chū",
+          "startMs": 27684,
+          "endMs": 28164
+        }
+      ],
+      "vi": "có lực chẳng thể thi thố.",
+      "flash": false
+    },
+    {
+      "id": "zh-7-0",
+      "kind": "zh",
+      "startMs": 28164,
+      "endMs": 31564,
+      "durationMs": 3400,
+      "words": [
+        {
+          "zh": "你的",
+          "py": "nǐ de",
+          "startMs": 28164,
+          "endMs": 28564
+        },
+        {
+          "zh": "丹田",
+          "py": "dān tián",
+          "startMs": 28684,
+          "endMs": 29124
+        },
+        {
+          "zh": "已经",
+          "py": "yǐ jīng",
+          "startMs": 29724,
+          "endMs": 30044
+        },
+        {
+          "zh": "被",
+          "py": "bèi",
+          "startMs": 30044,
+          "endMs": 30244
+        },
+        {
+          "zh": "我",
+          "py": "wǒ",
+          "startMs": 30244,
+          "endMs": 30484
+        },
+        {
+          "zh": "封住",
+          "py": "fēng zhù",
+          "startMs": 30484,
+          "endMs": 31044
+        },
+        {
+          "zh": "了",
+          "py": "liǎo",
+          "startMs": 31044,
+          "endMs": 31284
+        }
+      ],
+      "vi": "Đan điền của ngươi ta đã phong rồi,",
+      "flash": true
+    },
+    {
+      "id": "zh-7-1",
+      "kind": "zh",
+      "startMs": 31564,
+      "endMs": 33684,
+      "durationMs": 2120,
+      "words": [
+        {
+          "zh": "你",
+          "py": "nǐ",
+          "startMs": 31564,
+          "endMs": 31804
+        },
+        {
+          "zh": "就",
+          "py": "jiù",
+          "startMs": 31804,
+          "endMs": 32004
+        },
+        {
+          "zh": "别",
+          "py": "bié",
+          "startMs": 32004,
+          "endMs": 32204
+        },
+        {
+          "zh": "想再",
+          "py": "xiǎng zài",
+          "startMs": 32204,
+          "endMs": 32724
+        },
+        {
+          "zh": "撒野",
+          "py": "sā yě",
+          "startMs": 32844,
+          "endMs": 33404
+        },
+        {
+          "zh": "了",
+          "py": "liǎo",
+          "startMs": 33404,
+          "endMs": 33684
+        }
+      ],
+      "vi": "đừng hòng làm loạn nữa.",
+      "flash": false
+    },
+    {
+      "id": "nar-8",
+      "kind": "narration",
+      "startMs": 33684,
+      "endMs": 37538,
+      "durationMs": 3854,
+      "words": [
+        {
+          "zh": "大",
+          "py": "dà",
+          "startMs": 33684,
+          "endMs": 34034
+        },
+        {
+          "zh": "娃",
+          "py": "wá",
+          "startMs": 34034,
+          "endMs": 34385
+        },
+        {
+          "zh": "被",
+          "py": "bèi",
+          "startMs": 34385,
+          "endMs": 34735
+        },
+        {
+          "zh": "封了",
+          "py": "fēng le",
+          "startMs": 34735,
+          "endMs": 35436
+        },
+        {
+          "zh": "力气，",
+          "py": "lì qi",
+          "startMs": 35436,
+          "endMs": 36137
+        },
+        {
+          "zh": "谁",
+          "py": "shuí",
+          "startMs": 36137,
+          "endMs": 36487
+        },
+        {
+          "zh": "来",
+          "py": "lái",
+          "startMs": 36487,
+          "endMs": 36837
+        },
+        {
+          "zh": "救",
+          "py": "jiù",
+          "startMs": 36837,
+          "endMs": 37188
+        },
+        {
+          "zh": "他",
+          "py": "tā",
+          "startMs": 37188,
+          "endMs": 37538
+        }
+      ],
+      "vi": "Đại Oa bị phong sức mạnh, ai sẽ đến cứu? Comment thử xem!",
+      "narrationAudio": "videos/2026/07/13/huluwa-wurunitan/work/narr-8.mp3",
+      "flash": true
+    }
+  ]
+}
