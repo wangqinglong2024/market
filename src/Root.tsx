@@ -5,7 +5,7 @@ import { FxPreview } from "./FxPreview";
 import { FxSinglePreview } from "./FxSinglePreview";
 import catalog from "../catalog.json";
 
-// 特效已精简为固定 4 个（用户 2026-07-03 锁定）：只保留这几个，其余全部删除。
+// 特效库开放可扩展：下面只是"已有预览 Composition"的登记表，新增特效就往这里加一行（不是固定集合）。
 const FX_CATEGORIES = ["emotion", "distortion"] as const;
 
 const FX_EFFECTS: Record<string, string[]> = {

@@ -66,7 +66,7 @@
 - 🚫🚫 **fal 出问题(黑图/画错)禁止擅自重调**，必须先告知用户、同意后才能再调（每次 fal 都花钱）。本地步骤(TTS/渲染/改 config)不受限。
 
 ## 6. 特效 / 运镜 / 字幕 / 配音
-- **特效**：全库固定 4 个（comicPops / emojiRain / scorePop / zoomBlur），**一片最多 2 个、按需**，宁缺毋滥。
+- **特效**：`src/fx/` 是**开放可扩展**的 React 特效库（现有 comicPops / emojiRain / scorePop / zoomBlur，可随时新增）。本模板取向是**克制、按需**，宁缺毋滥、别抢字幕主视觉。
 - **运镜**：按句意多样化（push-in/pull-back/pan-left/pan-right/climb-up/ken-burns/sway/pop/still，见 motion.json），别全片一个运镜。
 - **字幕**：一屏一句短句，单行拼音 + 单行中文 + 单行越南语，禁止多行。中文按 charTimings 逐字跳字。金句原文配越南语意译(不直译)。
 - **配音**：永远中文、全片统一旁白「开朗姐姐」(narrator)，不做多角色分工。角色区分只在画面。

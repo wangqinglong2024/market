@@ -1,7 +1,7 @@
 /**
  * 特效库快速预览 — Remotion Studio 中可直接播放，不需要完整视频
  * Root.tsx 每个大类注册一个 Composition：id = fx-<category>
- * 特效库已精简为固定 4 个（用户 2026-07-03 锁定）。
+ * 特效库开放可扩展：新增特效组件后在此登记即可预览（不是固定集合）。
  */
 import React from "react";
 import { AbsoluteFill, useVideoConfig } from "remotion";

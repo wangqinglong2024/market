@@ -83,12 +83,28 @@
 - 三态配色：未读（dim 灰）→ 朗读中（karaoke 高亮 + 放大跳起）→ 已读（该行常色）。
 - **字号取向（越南受众）**：越南语与拼音**偏大**（越南语是受众母语、拼音是发音抓手），中文**适中偏小**（认字为主、不必满屏）。具体值在 `template.json → captions.sizes`，渲染后按 :3000 观感微调。
 
-## 五、特效规则
+## 五、特效规则（React 特效库是**开放**的，不固定）
 
-- **clip 转场**：每换一个原片段，做一次「白闪 + 变焦冲击（zoom punch）」转场，明显可感、强化"新段落"的节奏冲击。
-- **卡片入场**：每张字幕卡上滑 + 淡入。
-- **ken-burns**：每段轻微推近，静画也有呼吸。
-- 克制：特效为节奏服务，不抢字幕这个主视觉（[[03-流水线与manifest]] 六）。
+`src/fx/` 是**开放、可扩展**的 React 特效库——想要新效果就写个 `useCurrentFrame()` 组件放进去、在 `EffectsLayer` 加一个 case 即接入（见 [[03-流水线与manifest]] 六）。**没有"只能用固定几个"的限制。**
+
+- **layout 自带的节奏特效**（每条都有）：clip 转场「白闪 + 变焦冲击(zoom punch)」、字幕卡上滑淡入、每段 ken-burns 轻微推近。
+- **按内容加的强调特效**：在情绪高点/反转/名场面那一拍，按需叠 `src/fx/` 的特效（或新写一个）放大冲击。**用哪个、用几个由内容定**，不设死上限；但别抢字幕这个主视觉（[[03-流水线与manifest]] 六）。
+- **怎么知道该在哪一拍加、加什么**：靠**抽关键帧看画面**（见下节「看关键帧」）——先看清那一瞬画面里发生了什么（谁在喊、什么炸了、谁惊到了），再决定特效类型与位置，而不是拍脑袋。
+
+## 五之一、看关键帧（★ 用抽帧截图来规划剪辑与特效）
+
+做剪辑/特效前**先看画面**，别只凭字幕想象。用 Remotion 自带的 ffmpeg 从 `source` 原片抽任意时间点的截图来看：
+
+```bash
+# node_modules/.bin/remotion ffmpeg 就是打包好的 ffmpeg；抽单帧：
+node_modules/.bin/remotion ffmpeg -y -ss <秒> -i "<原片.mp4>" -frames:v 1 -q:v 3 work/frames/t<秒>.png
+# 例：抽第 293.5 秒那一帧
+node_modules/.bin/remotion ffmpeg -y -ss 293.5 -i "public/videos/<shard>/<id>/葫芦兄弟.mp4" -frames:v 1 -q:v 3 public/videos/<shard>/<id>/work/frames/t293.png
+```
+
+- 沿全片按节奏（如每 10~20 秒、或对准 ASR 里的关键句）抽一批帧，快速看懂**故事发生了什么、哪几个是名场面/冲突/萌点**——这是选段、排序、写解说、放特效的依据。
+- 抽帧是**本地 ffmpeg、免费**，可随意多抽；截图放 `work/frames/`（不入成片）。
+- 我（Claude）会读这些截图来规划这条片子，而不是盲剪。
 
 ## 六、clips.json 格式（混剪模式；视频目录放此文件即启用）
 
@@ -119,7 +135,7 @@
 ## 八、制作步骤
 
 1. 建 `public/videos/<shard>/<id>/`，放 `source.mp4`（整片）或 `clips.json` + 全片 `work/transcript.json`（混剪）。
-2. **看完整片、跑 ASR、按第二节设计悬念弧**（选段 / 排序 / 写解说）→ 写 `clips.json`。这是最关键的一步，别跳。
+2. **抽关键帧看画面（§五之一）+ 跑 ASR + 按第二节设计悬念弧**（选段 / 排序 / 写解说）→ 写 `clips.json`。这是最关键的一步，别跳：先抽帧读懂故事，再动剪刀。
 3. `catalog.json` 加条目（template: `chinese-learn`）。
 4. `node scripts/build.mjs <id>`。
 5. Remotion Studio / 渲染预览，逐句听多音字读音（见 [[03-流水线与manifest]] 四），走一遍 [[01-创作准则]] 八自检。

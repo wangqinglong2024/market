@@ -65,9 +65,9 @@
 
 ## 六、特效（共享机制，克制使用）
 
-- 特效**按 beat 绑定、伴随语音**，全部**逐帧确定性**：必须是 `useCurrentFrame()` 的函数、`random(seed)` 种子化。🚫 禁用 CSS animation / requestAnimationFrame / 实时 Canvas 循环（Remotion 逐帧截图，否则闪、不可复现）。
-- **内容为主、特效为辅**：绝大多数拍应该没有特效，靠画面+运镜+配音+字幕撑住。**一条视频特效宜精简**（起步 ≤2 个），只在情绪高点/正反馈/需要强调处加；移走它画面依然成立、不遮主视觉。
-- 现有特效组件在 `src/fx/`（如 `emotion/ComicPops`、`emotion/EmojiRain`、`emotion/ScorePop`、`distortion/ZoomBlur`）。转场类（白闪/变焦冲击/上滑淡入）由各 layout 自带。
+- **`src/fx/` 是开放、可扩展的 React 特效库，不是固定集合**：想要新效果就写一个 `useCurrentFrame()` 驱动的组件放进 `src/fx/`，在 `src/layouts/shared.tsx` 的 `EffectsLayer` 加一个 `case` 即接入，无数量上限。现有的一些：`emotion/ComicPops`、`emotion/EmojiRain`、`emotion/ScorePop`、`distortion/ZoomBlur`（可自由增删）。转场类（白闪/变焦冲击/上滑淡入）由各 layout 自带。
+- **逐帧确定性（唯一硬约束）**：特效必须是 `useCurrentFrame()` 的函数、`random(seed)` 种子化、接 `durationInFrames`。🚫 禁用 CSS animation / requestAnimationFrame / 实时 Canvas 循环（Remotion 逐帧截图，否则闪、不可复现）。
+- **克制是取向、不是硬规则**：内容为主、特效为辅——绝大多数拍靠画面+运镜+配音+字幕就够；特效落在情绪高点/正反馈/需要强调处，别抢字幕主视觉。用几个、用哪个由内容决定，各模板可自己定尺度。
 
 ## 关联
 [[README]] · [[01-创作准则]] · [[02-系统架构]] · [[04-成本与铁律]]

@@ -1,7 +1,7 @@
 /**
  * 单效果预览组件 — Root.tsx 为每个效果注册独立 Composition
  * id 格式: fx-<category>-<EffectName>
- * 特效库已精简为固定 4 个（用户 2026-07-03 锁定）。
+ * 特效库开放可扩展：新增特效组件后在此登记即可单独预览（不是固定集合）。
  */
 import React from "react";
 import { AbsoluteFill, useVideoConfig } from "remotion";

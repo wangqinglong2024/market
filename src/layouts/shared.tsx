@@ -7,7 +7,7 @@ import { wipe } from "@remotion/transitions/wipe";
 import { useRef, useState, useLayoutEffect } from "react";
 import { pinyin } from "pinyin-pro";
 import type { Beat, Motion, Effect } from "./types";
-// ─── 特效库（固定 4 个，用户 2026-07-03 锁定）─────────────────────────────────
+// ─── 特效库（开放·可扩展：在 src/fx/ 加一个 React 组件、再到下方 EffectsLayer 加一个 case 即接入，无固定数量、无上限）───
 import { ComicPops } from "../fx/emotion/ComicPops";
 import { EmojiRain } from "../fx/emotion/EmojiRain";
 import { ScorePop } from "../fx/emotion/ScorePop";
@@ -52,7 +52,7 @@ export const FitLine: React.FC<{ maxWidth: number; depKey: string; children: Rea
   );
 };
 
-// 调度所有特效类型（固定 4 特效，其余已删）
+// 特效调度：按 fx.type 分发到 src/fx/ 的组件。新增特效 = 写组件 + 在此 switch 加一个 case（未知 type 忽略）。
 export const EffectsLayer: React.FC<{ effects?: Effect[]; durationInFrames: number }> = ({
   effects, durationInFrames,
 }) => {

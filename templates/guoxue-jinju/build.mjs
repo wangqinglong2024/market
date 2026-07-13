@@ -148,9 +148,8 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
     }
     const sceneImg = sceneImages[sceneId];
 
-    // 特效：透传 beat 自带 effects(固定 4 特效、≤2/片、按需)
-    const ALLOWED_FX = new Set(["comicPops", "emojiRain", "scorePop", "zoomBlur"]);
-    const effects = (beat.effects || []).filter((e) => ALLOWED_FX.has(e.type));
+    // 特效：透传 beat 自带 effects(开放集合，按需；渲染层 EffectsLayer 认识的就渲染，未知 type 自动忽略)
+    const effects = beat.effects || [];
     if (effects.length) console.log(`  effects: ${effects.map((e) => e.type).join(", ")}`);
 
     // ★ 拍尾留白两档：场景末拍 280ms(换画面前换气)，同场景内 120ms
