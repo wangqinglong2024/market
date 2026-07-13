@@ -80,10 +80,10 @@
   ```bash
   # 1) 抽最抓人的一帧(ASCII 源，见 [[04-成本与铁律]] 五)
   node_modules/.bin/remotion ffmpeg -y -ss <秒> -i <ASCII源.mp4> -frames:v 1 -q:v 2 <dir>/cover-bg.jpg
-  # 2) 写 <dir>/cover.json，再渲染封面（命名规则见 [[02-系统架构]] 五：<id>-cover.png）
-  node_modules/.bin/remotion still src/index.ts cover <dir>/<id>-cover.png --props=<dir>/cover.json
+  # 2) 写 <dir>/cover.json，再渲染封面（命名规则见 [[02-系统架构]] 五：中文名 <中文名>-封面.png）
+  node_modules/.bin/remotion still src/index.ts cover "<dir>/<中文名>-封面.png" --props=<dir>/cover.json
   ```
-- **产物**：`cover.json`(配置) + `cover-bg.jpg`(底图) + `<id>-cover.png`(成品)，都放该视频目录（见 [[02-系统架构]] 五）。PNG 不受 mp4 的 gitignore 限制。成片同理命名 `<id>.mp4`。
+- **产物**：`cover.json`(配置) + `cover-bg.jpg`(底图) + `<中文名>-封面.png`(成品)，都放该视频目录（见 [[02-系统架构]] 五）。PNG 不受 mp4 的 gitignore 限制。成片同理用中文名 `<中文名>.mp4`。
 - 加新的封面风格/版式：改 `src/Cover.tsx`（它是通用组件，跨模板复用）。
 
 ## 关联
