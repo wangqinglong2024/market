@@ -1,0 +1,64 @@
+{
+  "_comment": "模板『中文情景剧·图文(越南受众)』。生产方式照 guoxue-jinju(script.json→每拍TTS+每场景AI出图→manifest),但版面比例照 chinese-learn(黑底/上图1080x720/下三行字幕360/四周120留白)。固定AI人设『阿香』(越南女孩·中企上班),每集情景剧+汉越词钩子+声调梗+引导下载App。音频读中文对白(学习内容),字幕三行拼音/中文/越南语逐字卡拉OK。",
+  "id": "chinese-drama",
+  "name": "中文情景剧·图文(阿香·越南受众)",
+  "layout": "chinese-drama",
+  "meta": { "fps": 30, "width": 1080, "height": 1440 },
+  "_regionComment": "版面照 chinese-learn:上方 1080x720 放 3:2 图(黑底 cover),下方 960~1320 放三行字幕。四周 120 留白。",
+  "source": {
+    "region": { "top": 120, "height": 720 },
+    "focusY": 0.5
+  },
+  "subtitle": { "top": 960, "height": 360 },
+  "audio": {
+    "_speedComment": "对白 speed=1.0(听清学),旁白钩子/CTA speed=1.05。改语速须清掉受影响 audio/*.mp3 重合成。",
+    "speed": 1.0,
+    "narratorSpeed": 1.05,
+    "tailPaddingMs": 160,
+    "sceneTailPaddingMs": 320,
+    "_bgmComment": "情景剧可留白或垫极低音量都市轻音乐(本地合成/CC0,禁API)。默认无BGM,接线同 guoxue: audio.bgm={src,volume}。",
+    "_voicesComment": "每拍 script.json 的 voice(角色名)→火山 voice_type。阿香=甜美年轻女声,经理=温暖男声,narrator=旁白讲解。",
+    "defaultVoice": "narrator",
+    "voices": {
+      "narrator": "zh_female_kailangjiejie_moon_bigtts",
+      "ahxiang": "zh_female_tianmeixiaoyuan_moon_bigtts",
+      "boss": "zh_male_wennuanahu_moon_bigtts",
+      "colleague": "zh_female_shuangkuaisisi_moon_bigtts"
+    }
+  },
+  "image": {
+    "_modelComment": "出图模型由 script.json 每 shot 的 model(flux/nano-pro)决定。单人阿香拍喂定妆图走 flux($0.04);空镜喂风格锚图走 flux;≥2人同框才 nano-pro($0.15),一条视频最多1次。",
+    "_aspectComment": "出图统一 3:2 横图,放进黑底 1080x720 上区(cover)。",
+    "aspectRatio": "3:2",
+    "seedStrategy": "from-shot-id",
+    "maxRetries": 3,
+    "_styleAnchorComment": "空镜/无定妆拍出图时喂给 flux-pro/kontext 的风格锚图(阿香定妆图),只借画风。",
+    "styleAnchor": "templates/chinese-drama/characters/ahxiang/model-sheet.png"
+  },
+  "captions": {
+    "_comment": "版面照 chinese-learn:黑底三行(拼音/中文/越南语),逐字卡拉OK高亮青色。越南语是受众母语→偏大;拼音是发音抓手→中等;中文适中。",
+    "bgColor": "#000000",
+    "pinyinColor": "#7fd1c0",
+    "zhColor": "#ffffff",
+    "viColor": "#f5c518",
+    "localColor": "#f5c518",
+    "karaokeColor": "#25f4ee",
+    "dimColor": "#565b63",
+    "sizes": { "pinyin": 44, "zh": 84, "vi": 48, "local": 48 },
+    "gapPinyinZh": 8,
+    "gapZhLocal": 24,
+    "sidePad": 48,
+    "pinyinColumnGap": 10,
+    "opticalLift": 0
+  },
+  "fonts": {
+    "_comment": "情景剧走现代感:中文用 SimHei(黑体,干净),别用毛笔体(Ma Shan Zheng 是国学模板的调性)。拼音/越南语用 Nunito。换字体只改这里。",
+    "files": [
+      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" },
+      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" }
+    ],
+    "zhStack": ["SimHei", "Microsoft YaHei", "PingFang SC", "sans-serif"],
+    "zhWeight": 700,
+    "latinStack": ["Nunito", "PingFang SC", "sans-serif"]
+  }
+}

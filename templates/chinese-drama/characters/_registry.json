@@ -1,0 +1,7 @@
+{
+  "_comment": "固定主角色清单。阿香=系列固定女主(每集出镜,喂同一张定妆图锁一致性)。新增角色=在此加一条 + 建同名文件夹放 model-sheet.png(定妆图) 和 canonical.md(外观canon文本)。main=true 出镜时走参考图条件生成。ref 指向该角色定妆图(单张,喂 flux/kontext 当参考)。单人一律 flux($0.04);≥2人同框才 nano-pro($0.15),一条视频最多1次。",
+  "characters": [
+    { "id": "ahxiang", "name": "阿香", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "boss",    "name": "经理", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" }
+  ]
+}

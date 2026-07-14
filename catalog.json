@@ -132,6 +132,17 @@
       "createdAt": "2026-07-02",
       "beats": 7,
       "manifest": "public/videos/2026/07/02/demo/manifest.json"
+    },
+    {
+      "id": "ahxiang-day1",
+      "title": "阿香上班第一天·辛苦了的误会(中文情景剧·图文,越南受众)",
+      "template": "chinese-drama",
+      "shard": "2026/07/14",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-14",
+      "manifest": "public/videos/2026/07/14/ahxiang-day1/manifest.json",
+      "beats": 11
     }
   ]
 }

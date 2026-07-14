@@ -23,9 +23,23 @@ function curlPost(url, reqFile) {
   return execFileSync("curl", args, { maxBuffer: 50 * 1024 * 1024 });
 }
 
-function curlGet(url) {
-  const args = ["-s", "-m", "90", "-x", PROXY, url];
-  return execFileSync("curl", args, { maxBuffer: 50 * 1024 * 1024 });
+// fal 结果图在 CDN 主机 fal.media：Windows curl 走 schannel 无法完成该主机的 TLS 握手(exit 35)，
+// 改用 node fetch(OpenSSL)直连下载(直连可达、flaky 故多次重试)；实在不行再回退 curl 代理。
+// 下载不是计费调用，此修复不违反 fal 花钱铁律。
+async function downloadImage(url) {
+  for (let i = 0; i < 6; i++) {
+    const ac = new AbortController();
+    const t = setTimeout(() => ac.abort(), 20000);
+    try {
+      const r = await fetch(url, { signal: ac.signal });
+      if (r.ok) {
+        const b = Buffer.from(await r.arrayBuffer());
+        if (b.length > 0) return b;
+      }
+    } catch (_) { /* 重试 */ } finally { clearTimeout(t); }
+  }
+  // 回退：curl 代理(部分环境 schannel 可用)
+  return execFileSync("curl", ["-s", "-m", "90", "-x", PROXY, url], { maxBuffer: 50 * 1024 * 1024 });
 }
 
 export const MODEL_USD = { "flux-text": 0.06, flux: 0.04, "nano-pro": 0.15 };
@@ -94,7 +108,7 @@ export async function genImage({ outPath, prompt, refPaths = [], settings, model
     if (!url) {
       throw new Error(`fal response missing image url: ${JSON.stringify(data).slice(0, 150)}`);
     }
-    const imgBuf = curlGet(url);
+    const imgBuf = await downloadImage(url);
     // 黑图检测：fal safety filter 触发时 HTTP 200 但返回约 10372 字节全黑 PNG，不报错。
     // 按 plan，发现模型结果异常时直接报错，等待用户同意后才重调。
     if (imgBuf.length < 20000) {

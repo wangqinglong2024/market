@@ -1,0 +1,2 @@
+<!-- 情景剧统一画风。要点:现代、美型、干净、有辨识度;女主要很美(用户锁定)。 -->
+Modern Korean webtoon / manhwa illustration style, clean semi-realistic 2D art, soft smooth cel-shading, warm cinematic lighting, beautiful detailed attractive characters, expressive faces, delicate line art, vibrant yet tasteful colors, gentle glow. Simple readable modern setting, uncluttered background far simpler than the characters. Wholesome, family-friendly, SFW, fully clothed.

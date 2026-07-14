@@ -1,0 +1,200 @@
+{
+  "_comment": "中文情景剧·图文 首集《阿香上班第一天·「辛苦了」的误会》。模板 chinese-drama。女主阿香(越南女孩·中企上班)全程单人特写喂同一张定妆图锁一致性。按 base:第1秒抛钩子(好奇缺口+与我有关)、层层悬念、汉越词『tân khổ=辛苦』做社交货币、结尾CTA『点主页跟我学』+回环『明天见』。音频读中文(学习内容),字幕三行拼音/中文/越南语逐字卡拉OK。5场景全单人 flux($0.04×5)+阿香定妆图,无 nano。",
+  "videoId": "ahxiang-day1",
+  "lang": "vi",
+  "beats": [
+    {
+      "id": "p01",
+      "role": "hook",
+      "voice": "narrator",
+      "sceneId": "s1-door",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "motion": "push-in",
+      "shots": [
+        {
+          "content": "A Huong standing nervously just outside the glass entrance of a modern office building in soft morning light, clutching her handbag with both hands against her chest, biting her lip, looking up anxiously at the tall doors, a little scared but hopeful.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "上班第一天，一句中文差点让她辞职",
+        "pinyin": "shàng bān dì yī tiān yī jù zhōng wén chà diǎn ràng tā cí zhí",
+        "local": "Ngày đầu đi làm, một câu tiếng Trung suýt khiến cô nghỉ việc."
+      }
+    },
+    {
+      "id": "p02",
+      "role": "dialogue",
+      "voice": "boss",
+      "sceneId": "s2-greet",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "motion": "pan-right",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "A Huong standing just inside a bright modern open-plan office, warm sunlight through big windows, blurred desks and plants behind her, listening politely with a slightly shy hopeful smile, hands together in front.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "你好，欢迎你！",
+        "pinyin": "nǐ hǎo huān yíng nǐ",
+        "local": "Xin chào, chào mừng em!"
+      }
+    },
+    {
+      "id": "p03",
+      "role": "dialogue",
+      "voice": "boss",
+      "sceneId": "s2-greet",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "captions": {
+        "zh": "第一天上班，辛苦了",
+        "pinyin": "dì yī tiān shàng bān xīn kǔ le",
+        "local": "Ngày đầu đi làm, vất vả rồi!"
+      }
+    },
+    {
+      "id": "p04",
+      "role": "turn",
+      "voice": "ahxiang",
+      "sceneId": "s3-confused",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "motion": "push-in",
+      "transitionIn": "slide-left",
+      "effects": [
+        { "type": "comicPops", "words": ["?", "?!"] }
+      ],
+      "shots": [
+        {
+          "content": "Close medium shot of A Huong with a confused worried expression, head tilted slightly, one finger touching her cheek, eyebrows raised in puzzlement, bright modern office softly blurred behind her.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "辛苦了？我是不是做错了？",
+        "pinyin": "xīn kǔ le wǒ shì bù shì zuò cuò le",
+        "local": "'Vất vả rồi'? Mình làm gì sai sao?"
+      }
+    },
+    {
+      "id": "p05",
+      "role": "explain",
+      "voice": "narrator",
+      "sceneId": "s3-confused",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "captions": {
+        "zh": "别慌，这不是在骂你",
+        "pinyin": "bié huāng zhè bù shì zài mà nǐ",
+        "local": "Bình tĩnh, câu này KHÔNG phải mắng em đâu."
+      }
+    },
+    {
+      "id": "p06",
+      "role": "explain",
+      "voice": "narrator",
+      "sceneId": "s4-aha",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "motion": "pop",
+      "transitionIn": "slide-up",
+      "effects": [
+        { "type": "emojiRain", "emojis": ["✨", "💡"], "count": 12, "opacity": 0.5 }
+      ],
+      "shots": [
+        {
+          "content": "A Huong with a bright relieved happy smile, eyes lighting up in realization, one hand gently on her chest, a warm soft glow around her, cheerful, in the bright modern office.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "它其实是在谢谢你",
+        "pinyin": "tā qí shí shì zài xiè xiè nǐ",
+        "local": "Thật ra là lời cảm ơn — chính là 'tân khổ' đó!"
+      }
+    },
+    {
+      "id": "p07",
+      "role": "explain",
+      "voice": "narrator",
+      "sceneId": "s4-aha",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "captions": {
+        "zh": "意思是你累了，谢谢",
+        "pinyin": "yì sī shì nǐ lèi le xiè xiè",
+        "local": "Nghĩa là: em vất vả rồi, cảm ơn em."
+      }
+    },
+    {
+      "id": "p07b",
+      "role": "explain",
+      "voice": "narrator",
+      "sceneId": "s4-aha",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "captions": {
+        "zh": "越南语里也有，很亲切吧",
+        "pinyin": "yuè nán yǔ lǐ yě yǒu hěn qīn qiè ba",
+        "local": "Tiếng Việt cũng có luôn — thân quen ghê chưa!"
+      }
+    },
+    {
+      "id": "p08",
+      "role": "payoff",
+      "voice": "ahxiang",
+      "sceneId": "s5-cta",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "motion": "pull-back",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "A Huong smiling cheerfully and waving one hand at the camera, holding a smartphone in her other hand, bright modern office, friendly and inviting, warm lighting.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "原来老板在夸我呀！",
+        "pinyin": "yuán lái lǎo bǎn zài kuā wǒ ya",
+        "local": "Hóa ra sếp đang khen mình!"
+      }
+    },
+    {
+      "id": "p09",
+      "role": "cta",
+      "voice": "narrator",
+      "sceneId": "s5-cta",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "captions": {
+        "zh": "想像阿香一样听懂老板吗",
+        "pinyin": "xiǎng xiàng ā xiāng yī yàng tīng dǒng lǎo bǎn ma",
+        "local": "Muốn nghe hiểu sếp như A Hương?"
+      }
+    },
+    {
+      "id": "p10",
+      "role": "cta",
+      "voice": "narrator",
+      "sceneId": "s5-cta",
+      "hasMainCharacter": true,
+      "characters": ["ahxiang"],
+      "captions": {
+        "zh": "点主页跟我学，明天见",
+        "pinyin": "diǎn zhǔ yè gēn wǒ xué míng tiān jiàn",
+        "local": "Bấm trang chủ học cùng mình, mai gặp nhé!"
+      }
+    }
+  ]
+}
