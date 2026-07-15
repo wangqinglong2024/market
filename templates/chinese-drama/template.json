@@ -11,29 +11,35 @@
   },
   "subtitle": { "top": 960, "height": 360 },
   "audio": {
-    "_speedComment": "对白 speed=1.0(听清学),旁白钩子/CTA speed=1.05。改语速须清掉受影响 audio/*.mp3 重合成。",
+    "_langComment": "★混合语言(render-rules 第8条):旁白/灵兰内心独白=越南语(vi_*音色,走viSpeed);中国角色对白=中文(zh_*音色,走speed)。build 按音色前缀 vi_/zh_ 自动判定合成哪种语言的文本(vi 读 captions.local, zh 读 captions.zh)。",
     "speed": 1.0,
-    "narratorSpeed": 1.05,
+    "viSpeed": 1.0,
+    "narratorSpeed": 1.0,
     "tailPaddingMs": 160,
     "sceneTailPaddingMs": 320,
     "_bgmComment": "情景剧可留白或垫极低音量都市轻音乐(本地合成/CC0,禁API)。默认无BGM,接线同 guoxue: audio.bgm={src,volume}。",
-    "_voicesComment": "每拍 script.json 的 voice(角色名)→火山 voice_type。阿香=甜美年轻女声,经理=温暖男声,narrator=旁白讲解。",
+    "_voicesComment": "越南语音色已实测(README);中文音色以豆包官方为准。ep1 用到 narrator/linh/yanci(已锁)。其余中文角色为豆包官方候选,出场前用免费TTS试听确认(zh 家族已验证可开通)。voice 键=脚本里 beat.voice。",
     "defaultVoice": "narrator",
     "voices": {
-      "narrator": "zh_female_kailangjiejie_moon_bigtts",
-      "ahxiang": "zh_female_tianmeixiaoyuan_moon_bigtts",
-      "boss": "zh_male_wennuanahu_moon_bigtts",
-      "colleague": "zh_female_shuangkuaisisi_moon_bigtts"
+      "narrator": "vi_female_ruan_uranus_bigtts",
+      "linh":     "vi_female_linh_uranus_bigtts",
+      "yanci":    "zh_male_qingcang_mars_bigtts",
+      "qingwu":   "zh_female_zhixingnvsheng_moon_bigtts",
+      "xiaotao":  "zh_female_shuangkuaisisi_moon_bigtts",
+      "laofuren": "zh_female_zhixingnvsheng_moon_bigtts",
+      "liuwan":   "zh_female_zhixingnvsheng_moon_bigtts",
+      "yurou":    "zh_female_tianmeixiaoyuan_moon_bigtts",
+      "chengye":  "zh_male_jingqiangkanye_moon_bigtts"
     }
   },
   "image": {
-    "_modelComment": "出图模型由 script.json 每 shot 的 model(flux/nano-pro)决定。单人阿香拍喂定妆图走 flux($0.04);空镜喂风格锚图走 flux;≥2人同框才 nano-pro($0.15),一条视频最多1次。",
-    "_aspectComment": "出图统一 3:2 横图,放进黑底 1080x720 上区(cover)。",
+    "_modelComment": "★真人质感(render-rules)。单角色拍喂该角色定妆图走 flux($0.04);空镜喂风格锚图走 flux。禁用多角色 nano-pro(flux 不支持多脸,render-rules 第4条:一图最多1张正脸)。",
+    "_aspectComment": "★出图统一 3:2 横图(横屏),放进黑底 1080x720 上区(cover)。定妆图是竖版参考,成片场景图出横屏。",
     "aspectRatio": "3:2",
     "seedStrategy": "from-shot-id",
     "maxRetries": 3,
-    "_styleAnchorComment": "空镜/无定妆拍出图时喂给 flux-pro/kontext 的风格锚图(阿香定妆图),只借画风。",
-    "styleAnchor": "templates/chinese-drama/characters/ahxiang/model-sheet.png"
+    "_styleAnchorComment": "空镜/无定妆拍出图时喂给 flux-pro/kontext 的风格锚图(用女主中国脸定妆图,真人质感),只借画风。",
+    "styleAnchor": "templates/chinese-drama/characters/qingwu/model-sheet.png"
   },
   "captions": {
     "_comment": "版面照 chinese-learn:黑底三行(拼音/中文/越南语),逐字卡拉OK高亮青色。越南语是受众母语→偏大;拼音是发音抓手→中等;中文适中。",
@@ -52,13 +58,14 @@
     "opticalLift": 0
   },
   "fonts": {
-    "_comment": "情景剧走现代感:中文用 SimHei(黑体,干净),别用毛笔体(Ma Shan Zheng 是国学模板的调性)。拼音/越南语用 Nunito。换字体只改这里。",
+    "_comment": "中文用 Ma Shan Zheng(毛笔行楷,同 chinese-learn,用户 2026-07-15 锁);SimHei 作兜底。拼音/越南语用 Nunito。换字体只改这里。",
     "files": [
-      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" },
-      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" }
+      { "family": "Ma Shan Zheng", "file": "library/fonts/MaShanZheng.ttf" },
+      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" },
+      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" }
     ],
-    "zhStack": ["SimHei", "Microsoft YaHei", "PingFang SC", "sans-serif"],
-    "zhWeight": 700,
+    "zhStack": ["Ma Shan Zheng", "SimHei", "PingFang SC", "serif"],
+    "zhWeight": 400,
     "latinStack": ["Nunito", "PingFang SC", "sans-serif"]
   }
 }

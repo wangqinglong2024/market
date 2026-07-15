@@ -11,6 +11,13 @@ import { genImage, MODEL_USD } from "../../scripts/gen-image.mjs";
 const ID = "chinese-drama";
 const isHan = (c) => /[㐀-鿿]/.test(c);
 const hanCount = (s) => Array.from(s || "").filter(isHan).length;
+// 越南语拍(旁白/独白)的中文行没有真字级时间戳 → 按拍时长把汉字均匀铺开,驱动卡拉OK逐字扫过。
+function evenCharTimings(zh, ms) {
+  const hans = Array.from(zh || "").filter(isHan);
+  if (!hans.length || !ms) return null;
+  const span = ms / hans.length;
+  return hans.map((ch, i) => ({ ch, startMs: Math.round(i * span), endMs: Math.round((i + 1) * span) }));
+}
 const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
 const readText = (p) => readFileSync(p, "utf8");
 const stripComments = (s) => s.replace(/<!--[\s\S]*?-->/g, "").trim();
@@ -102,19 +109,23 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
 
   for (let bi = 0; bi < script.beats.length; bi++) {
     const beat = script.beats[bi];
-    console.log(`== ${beat.id} [${beat.sceneId}] ${beat.voice}: ${beat.captions.zh}`);
+    console.log(`== ${beat.id} [${beat.sceneId}] ${beat.voice}: ${beat.captions.zh || beat.captions.local || beat.captions.vi || ""}`);
 
-    // 配音(缓存,带字级时间戳)。旁白/钩子/CTA 用 narratorSpeed,对白用 speed。
+    // 配音(缓存,带字级时间戳)。★混合语言:vi_*音色合成越南语行(旁白/内心独白),zh_*音色合成中文行(人物对白)。
     const audioPath = ensure(join(dir, "audio", `${beat.id}.mp3`));
     const voiceType = voices[beat.voice] || voices[settings.audio.defaultVoice];
-    const speed = beat.voice === "narrator"
-      ? (settings.audio.narratorSpeed ?? 1.05)
-      : (settings.audio.speed ?? 1.0);
-    if (beat.ttsZh && hanCount(beat.ttsZh) !== hanCount(beat.captions.zh)) {
+    const isVi = /^vi_/.test(voiceType);
+    const viText = beat.captions.local ?? beat.captions.vi ?? "";
+    const ttsText = isVi ? viText : (beat.ttsZh ?? beat.captions.zh ?? "");
+    if (!ttsText.trim()) throw new Error(`${beat.id}: 无可合成文本(${isVi ? "越南语行 captions.local" : "中文行 captions.zh"}为空)`);
+    const speed = isVi ? (settings.audio.viSpeed ?? 1.0) : (settings.audio.speed ?? 1.0);
+    if (!isVi && beat.ttsZh && hanCount(beat.ttsZh) !== hanCount(beat.captions.zh)) {
       throw new Error(`${beat.id}: ttsZh 汉字数(${hanCount(beat.ttsZh)})≠captions.zh(${hanCount(beat.captions.zh)}),逐字跳字会错位`);
     }
-    const audio = await synth(beat.ttsZh ?? beat.captions.zh, audioPath, { voice: voiceType, speed });
-    console.log(`  audio: ${audio.cached ? "cached" : "synth"} ${audio.ms}ms  timings=${audio.charTimings ? audio.charTimings.length + "字" : "无"}`);
+    const audio = await synth(ttsText, audioPath, { voice: voiceType, speed });
+    // 卡拉OK时间戳:中文对白用火山真字级时间戳;越南语拍(旁白/独白)的中文行用均匀铺字(跟拍时长扫过)。
+    const charTimings = isVi ? evenCharTimings(beat.captions.zh, audio.ms) : audio.charTimings;
+    console.log(`  audio: ${audio.cached ? "cached" : "synth"} ${audio.ms}ms  timings=${charTimings ? charTimings.length + "字" + (isVi ? "(均匀)" : "") : "无"}`);
 
     // 出图：场景首拍出一张,同 sceneId 后续拍复用。
     const sceneId = beat.sceneId || beat.id;
@@ -149,10 +160,11 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
       audio: rel("audio", `${beat.id}.mp3`),
       durationMs: audio.ms + tail,
       motion: pickMotion(beat, motion),
+      ...(isVi && { narration: true }),
       ...(beat.transitionIn && { transitionIn: beat.transitionIn }),
       ...(beat.effects?.length && { effects: beat.effects }),
-      ...(audio.charTimings && { charTimings: audio.charTimings }),
-      captions: { pinyin: beat.captions.pinyin, zh: beat.captions.zh, local: beat.captions.local ?? beat.captions.vi },
+      ...(charTimings && { charTimings }),
+      captions: { pinyin: beat.captions.pinyin ?? "", zh: beat.captions.zh ?? "", local: beat.captions.local ?? beat.captions.vi ?? "" },
     });
   }
 

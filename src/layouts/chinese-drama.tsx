@@ -154,16 +154,25 @@ const SceneDrama: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats
         display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: gapZhLocal,
         transform: `translateY(${capRise}px)`, opacity: capIn,
       }}>
-        <FitLine maxWidth={maxW} depKey={`zh-${active.id}`}>
-          <KaraokeRow zh={active.captions.zh} pinyinStr={active.captions.pinyin} timings={active.charTimings} ms={ms}
-            sizes={sizes} columnGap={columnGap} gapPinyinZh={gapPinyinZh}
-            pinyinColor={pinyinColor} zhColor={zhColor} karaokeColor={karaokeColor} dimColor={dimColor}
-            zhFamily={zhFamily} latinFamily={latinFamily} zhWeight={zhWeight} />
-        </FitLine>
-        {vi ? (
-          <FitLine maxWidth={maxW} depKey={`vi-${active.id}`}>
-            <span style={{ fontFamily: latinFamily, fontSize: sizes.vi, lineHeight: 1.2, color: viColor, fontWeight: 800 }}>{vi}</span>
-          </FitLine>
+        {/* 中文对白拍:三行卡拉OK(拼音/中文逐字/越南语)。越南语旁白·独白拍:只渲染越南语行、放大居中。 */}
+        {active.captions.zh && active.captions.zh.trim() ? (
+          <>
+            <FitLine maxWidth={maxW} depKey={`zh-${active.id}`}>
+              <KaraokeRow zh={active.captions.zh} pinyinStr={active.captions.pinyin} timings={active.charTimings} ms={ms}
+                sizes={sizes} columnGap={columnGap} gapPinyinZh={gapPinyinZh}
+                pinyinColor={pinyinColor} zhColor={zhColor} karaokeColor={karaokeColor} dimColor={dimColor}
+                zhFamily={zhFamily} latinFamily={latinFamily} zhWeight={zhWeight} />
+            </FitLine>
+            {vi ? (
+              <div style={{ width: maxW, textAlign: "center" }}>
+                <span style={{ fontFamily: latinFamily, fontSize: sizes.vi, lineHeight: 1.25, color: viColor, fontWeight: 800, whiteSpace: "normal", display: "inline-block" }}>{vi}</span>
+              </div>
+            ) : null}
+          </>
+        ) : vi ? (
+          <div style={{ width: maxW, textAlign: "center" }}>
+            <span style={{ fontFamily: latinFamily, fontSize: (sizes as { narration?: number }).narration ?? 54, lineHeight: 1.3, color: viColor, fontWeight: 800, whiteSpace: "normal", display: "inline-block" }}>{vi}</span>
+          </div>
         ) : null}
       </div>
 

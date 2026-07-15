@@ -1,0 +1,9 @@
+<!--
+女主·中国脸 沈青梧 Shěn Qīngwú 固定外观 canon(=灵兰的灵魂寄居在沈青梧的身体里,中国豪门这边出镜最多)。
+⚠️ 与越南脸 [[../linh]] 是两张不同的脸(灵魂互换,身体不同,长相不同)——中国戏份喂本图,越南戏份喂 linh。
+★用户锁定:要绝世美人、颜值极高。画风=电影级真人质感(cinematic photorealistic),不是 webtoon(旧版作废)。
+用户定稿五官(2026-07-15):① 皮肤必须白皙 ② 瓜子脸(尖下巴) ③ 樱桃小嘴 ④ 粉色眼影 ⑤ 黑色长直发。
+脸/发/五官=不变量;服装随剧情场景变(在该拍 shot 里覆盖描述,如红嫁衣/旗袍/晚礼服)。
+出图铁律:真人质感易触发 flux 安全过滤黑图 → payload 必带 safety_tolerance:"6"(gen-image 已内置)。
+-->
+A breathtakingly beautiful young Chinese woman, 22 years old, named Shen Qingwu — the heroine of a luxury romance drama, a top-tier classic beauty. A delicate slender oval "melon-seed" face (瓜子脸) with a refined pointed chin, a high refined nose bridge, large luminous dark almond eyes with soft double eyelids and a gentle expressive gaze, softly arched natural brows, and very fair porcelain-pale glowing skin with smooth realistic texture. Her locked signature makeup and features: (1) very fair pale skin, (2) a slender oval melon-seed face, (3) a small delicate cherry-shaped mouth with soft red lips (樱桃小嘴, petite, not full), (4) soft pink eyeshadow, (5) long straight glossy jet-black hair with a center part falling well past her shoulders, silky and healthy. Graceful slender neck, poised elegant bearing, a soft delicate slightly vulnerable expression. Tall (about 172 cm) with a very slim, slender, long-legged figure (outfits change every episode per render-rules — usually beautiful figure-showing styles: short skirt / shorts / camisole / off-shoulder, unless the scene demands otherwise). Cinematic photorealistic, real-person film-still quality, natural cinematic lighting, ultra-detailed. The FACE, HAIR and makeup stay exactly identical in every shot; only her outfit changes per scene. Beautiful, refined, tasteful, SFW, fully clothed.

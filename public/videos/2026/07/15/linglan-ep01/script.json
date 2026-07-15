@@ -1,0 +1,221 @@
+{
+  "videoId": "linglan-ep01",
+  "lang": "vi",
+  "_comment": "《铃兰穿越记》第001集。混合语言:旁白=narrator(越南语音频)/内心独白=linh(越南语音频)/人物=yanci(中文音频)。★所有越南语拍也带中文行(静态翻译,三行:拼音/中文/越南语),对白拍中文行走逐字卡拉OK。8场景横屏,单正脸。本集中文:你醒了、医生。",
+  "beats": [
+    {
+      "id": "b01",
+      "role": "hook",
+      "voice": "narrator",
+      "sceneId": "s1-drown",
+      "hasMainCharacter": true,
+      "characters": [
+        "linh"
+      ],
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "A beautiful young Vietnamese woman in simple everyday clothes falls backward into a dark lake at a Da Lat night market at night, sinking underwater, silver bubbles rising, one arm reaching up toward the blurred colorful market lights on the surface, dramatic moody underwater cinematic lighting, low angle looking up. Wide landscape shot.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "卖花姑娘灵兰坠入湖中",
+        "local": "Đêm ấy ở chợ đêm Đà Lạt, cô gái bán hoa Linh Lan ngã xuống hồ…"
+      }
+    },
+    {
+      "id": "b02",
+      "role": "hook",
+      "voice": "narrator",
+      "sceneId": "s2-wedroom",
+      "hasMainCharacter": true,
+      "characters": [
+        "qingwu"
+      ],
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "A stunningly beautiful young Chinese bride in an ornate red traditional wedding dress with a red veil suddenly wakes sitting up on a luxurious carved wooden wedding bed, in a dim opulent mansion bedroom glowing with tall red dragon-phoenix candles and gold double-happiness decorations, silk drapes, dazed and frightened expression, elegant cinematic medium-wide side shot. Landscape.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "她成了豪门新娘",
+        "local": "…Mở mắt ra, cô đã thành tân nương hào môn — trong thân xác một người khác."
+      }
+    },
+    {
+      "id": "b03",
+      "role": "beat",
+      "voice": "linh",
+      "sceneId": "s2-wedroom",
+      "hasMainCharacter": true,
+      "characters": [
+        "qingwu"
+      ],
+      "motion": "ken-burns",
+      "captions": {
+        "zh": "这不是我的手",
+        "local": "Đây là… đâu? Đây không phải bàn tay của tôi."
+      }
+    },
+    {
+      "id": "b04",
+      "role": "beat",
+      "voice": "linh",
+      "sceneId": "s3-mirror",
+      "hasMainCharacter": true,
+      "characters": [
+        "qingwu"
+      ],
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "Close on an ornate vintage bronze vanity mirror in a dim red-candlelit opulent bedroom; reflected in the mirror is the face of a stunningly beautiful young Chinese woman in a red bridal dress staring at her own unfamiliar reflection with shock and disbelief, warm candlelight. Cinematic landscape framing of the mirror.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "镜子里不是我",
+        "local": "Người trong gương… không phải là tôi!"
+      }
+    },
+    {
+      "id": "b05",
+      "role": "line",
+      "voice": "yanci",
+      "sceneId": "s4-husband",
+      "hasMainCharacter": true,
+      "characters": [
+        "yanci"
+      ],
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "A tall, coldly handsome young Chinese man in an impeccable dark charcoal suit stands beside a red wedding bed looking down with an icy detached gaze, dim opulent mansion bedroom with warm red candlelight; in the blurred foreground the bride is seen only from behind over her shoulder, her face NOT visible. He is the only face in frame. Cinematic medium shot. Landscape.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "你醒了",
+        "pinyin": "nǐ xǐng le",
+        "local": "Cô tỉnh rồi."
+      }
+    },
+    {
+      "id": "b06",
+      "role": "beat",
+      "voice": "linh",
+      "sceneId": "s4-husband",
+      "hasMainCharacter": true,
+      "characters": [
+        "yanci"
+      ],
+      "motion": "push-in",
+      "captions": {
+        "zh": "我一个字也听不懂",
+        "local": "Anh ta nói gì? Tôi… không hiểu nổi một chữ nào."
+      }
+    },
+    {
+      "id": "b07",
+      "role": "beat",
+      "voice": "narrator",
+      "sceneId": "s5-detail",
+      "hasMainCharacter": false,
+      "characters": [],
+      "motion": "ken-burns",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "Empty opulent Chinese wedding chamber at night — a close still life of tall red dragon-and-phoenix wedding candles burning, a gold paper-cut double-happiness symbol, two red wedding cups tied with red thread, silk embroidery, warm flickering candlelight, absolutely no people. Cinematic landscape still.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "她一个字也听不懂",
+        "local": "Đó là câu đầu tiên cô nghe ở Trung Quốc — nhưng cô không hiểu, dù chỉ một chữ."
+      }
+    },
+    {
+      "id": "b08",
+      "role": "line",
+      "voice": "yanci",
+      "sceneId": "s6-turn",
+      "hasMainCharacter": true,
+      "characters": [
+        "yanci"
+      ],
+      "motion": "pull-back",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "The tall coldly handsome young Chinese man in a dark charcoal suit turns and walks away toward the bedroom door, seen from behind and three-quarter back with a cold side profile, dim red-candlelit opulent mansion bedroom, he is the only person in frame. Cinematic landscape shot.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "医生明天来检查你",
+        "pinyin": "yī shēng míng tiān lái jiǎn chá nǐ",
+        "local": "Ngày mai bác sĩ đến kiểm tra cô."
+      }
+    },
+    {
+      "id": "b09",
+      "role": "beat",
+      "voice": "linh",
+      "sceneId": "s7-fear",
+      "hasMainCharacter": true,
+      "characters": [
+        "qingwu"
+      ],
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "Close-up of the stunningly beautiful young Chinese bride in a red wedding dress clutching her red silk skirt with trembling hands, wide frightened eyes, alone in a dim red-candlelit opulent bedroom, single face in frame. Cinematic landscape close-up.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "医生一来就穿帮",
+        "local": "'Bác sĩ'…? Bác sĩ đến, họ sẽ biết tôi không phải là cô ấy."
+      }
+    },
+    {
+      "id": "b10",
+      "role": "cta",
+      "voice": "narrator",
+      "sceneId": "s8-end",
+      "hasMainCharacter": true,
+      "characters": [
+        "qingwu"
+      ],
+      "motion": "pull-back",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "The beautiful young Chinese bride wearing the SAME ornate RED TRADITIONAL CHINESE WEDDING DRESS (qipao-style long gown) with gold embroidery and a red bridal veil as in the earlier wedding-night scenes (NOT a modern short dress) — sits small and alone on the edge of a huge carved wedding bed in a vast dim opulent mansion bedroom, tall red dragon-phoenix candles flickering, camera pulled far back showing the lonely grand room around her. Cinematic wide landscape shot.",
+          "model": "flux",
+          "weight": 1
+        }
+      ],
+      "captions": {
+        "zh": "关注，看她怎么活下去",
+        "local": "Một cô gái Việt không biết một chữ tiếng Trung, phải giả làm phu nhân hào môn. Ngày mai bác sĩ đến — cô sẽ sống sót thế nào? Theo dõi tập sau."
+      }
+    }
+  ]
+}

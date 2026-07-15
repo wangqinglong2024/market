@@ -143,6 +143,17 @@
       "createdAt": "2026-07-14",
       "manifest": "public/videos/2026/07/14/ahxiang-day1/manifest.json",
       "beats": 11
+    },
+    {
+      "id": "linglan-ep01",
+      "title": "铃兰穿越记 E01 一睁眼成了中国新娘(越南受众·穿越豪门连续剧)",
+      "template": "chinese-drama",
+      "shard": "2026/07/15",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-15",
+      "manifest": "public/videos/2026/07/15/linglan-ep01/manifest.json",
+      "beats": 10
     }
   ]
 }

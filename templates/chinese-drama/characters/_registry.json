@@ -1,7 +1,13 @@
 {
-  "_comment": "固定主角色清单。阿香=系列固定女主(每集出镜,喂同一张定妆图锁一致性)。新增角色=在此加一条 + 建同名文件夹放 model-sheet.png(定妆图) 和 canonical.md(外观canon文本)。main=true 出镜时走参考图条件生成。ref 指向该角色定妆图(单张,喂 flux/kontext 当参考)。单人一律 flux($0.04);≥2人同框才 nano-pro($0.15),一条视频最多1次。",
+  "_comment": "《铃兰穿越记》固定角色清单(真人质感·连续剧)。★女主是两张脸(灵魂互换,长相不同):qingwu=中国脸沈青梧(灵兰的灵魂,主线出镜最多),linh=越南脸灵兰(原身体,第1集开场溺水+卷03起本尊寄居)。中国戏喂 qingwu,越南戏喂 linh。出图铁律见 prompts/render-rules.md:身高/身材/女性显身材服装/每集换装/单角色一图一正脸/真实人景比例。main=true 出镜时喂该角色定妆图(ref)条件生成;单人 flux($0.04),本剧禁用多角色 nano-pro(flux 不支持多脸,详见 render-rules 第4条)。",
   "characters": [
-    { "id": "ahxiang", "name": "阿香", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
-    { "id": "boss",    "name": "经理", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" }
+    { "id": "qingwu",   "name": "沈青梧(中国脸·女主)", "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "linh",     "name": "灵兰(越南脸·女主)",   "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "yanci",    "name": "顾晏辞(男主)",         "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "xiaotao",  "name": "小桃(女佣)",           "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "laofuren", "name": "顾老夫人(婆婆)",       "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "liuwan",   "name": "柳梦烟(继母·反派)",     "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "yurou",    "name": "沈玉柔(白莲花妹妹·反派)", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "chengye",  "name": "顾承业(二叔·终BOSS)",   "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" }
   ]
 }

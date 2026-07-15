@@ -1,0 +1,7 @@
+<!--
+女主·越南脸 灵兰 Linh Lan 固定外观 canon(=灵兰的原身体,越南大叻卖花人家的女儿;第1集开场溺水就是这张脸,卷03+本尊沈青梧的灵魂寄居也是这张脸)。
+⚠️ 与中国脸 [[../qingwu]] 是两张不同的脸(灵魂互换,身体不同,长相不同)——越南戏份喂本图,中国戏份喂 qingwu。
+定位:清纯自然的越南美,活泼灵动、心善,和中国脸的白皙清冷楚楚要拉开区分(暖蜜色肤、鲜活明亮)。画风=电影级真人质感。
+出图铁律:真人质感易触发 flux 安全过滤黑图 → payload 必带 safety_tolerance:"6"(gen-image 已内置)。
+-->
+A beautiful fresh natural young Vietnamese woman, 22 years old, named Linh Lan — a flower-seller's daughter from Da Lat, Vietnam, bright, lively, clever and kind-hearted. A naturally pretty Southeast-Asian Vietnamese face, softly rounded with gently defined features, large warm expressive dark-brown almond eyes full of life, softly arched brows, a small delicate nose, natural soft rosy lips with a warm radiant smile, and warm sun-kissed honey-tan glowing skin (noticeably warmer and more sun-touched than the pale porcelain Chinese heroine, clearly a different person). Long straight glossy black hair, healthy and natural, often loose or in a simple soft style. A wholesome, vivid, down-to-earth freshness. Tall (about 171 cm) with a very slim, slender, long-legged figure (outfits change every episode per render-rules — usually beautiful figure-showing styles: short skirt / shorts / camisole, or a soft áo dài, unless the scene demands otherwise). Cinematic photorealistic, real-person film-still quality, natural warm cinematic lighting, ultra-detailed. Same face and features stay identical in every shot; only outfit/expression changes per scene. Beautiful, wholesome, tasteful, SFW, fully clothed.
