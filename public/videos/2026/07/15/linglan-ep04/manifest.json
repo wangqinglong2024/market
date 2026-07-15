@@ -1,0 +1,1774 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1440,
+    "layout": "chinese-drama",
+    "motionPresets": {
+      "push-in": {
+        "scale": [
+          1.02,
+          1.12
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 8,
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pull-back": {
+        "scale": [
+          1.14,
+          1.02
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 5,
+        "ease": "inOut"
+      },
+      "pan-left": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          40,
+          -40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pan-right": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          -40,
+          40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "climb-up": {
+        "scale": [
+          1.06,
+          1.14
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          40,
+          -44
+        ],
+        "driftX": 6,
+        "ease": "inOut"
+      },
+      "ken-burns": {
+        "scale": [
+          1.05,
+          1.13
+        ],
+        "panX": [
+          24,
+          -28
+        ],
+        "panY": [
+          14,
+          -18
+        ],
+        "driftX": 10,
+        "driftY": 8,
+        "ease": "inOut"
+      },
+      "sway": {
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 16,
+        "driftY": 10,
+        "ease": "linear"
+      },
+      "pop": {
+        "scale": [
+          1.18,
+          1.04
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 4,
+        "rotate": [
+          -1.5,
+          0
+        ],
+        "ease": "inOut"
+      },
+      "still": {
+        "scale": [
+          1.03,
+          1.03
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 5,
+        "driftY": 4,
+        "ease": "linear"
+      }
+    },
+    "source": {
+      "region": {
+        "top": 120,
+        "height": 720
+      },
+      "focusY": 0.5
+    },
+    "subtitle": {
+      "top": 960,
+      "height": 360
+    },
+    "fonts": {
+      "_comment": "中文用 Ma Shan Zheng(毛笔行楷,用户 2026-07-15 锁);SimHei 兜底。拼音+越南语统一=Itim(手写感但收敛,不死板;Charm 被否:太夸张 2026-07-15);fontTools 验证越南语附加符+拼音声调符全覆盖,Nunito 兜底。换字体只改这里。",
+      "files": [
+        {
+          "family": "Ma Shan Zheng",
+          "file": "library/fonts/MaShanZheng.ttf"
+        },
+        {
+          "family": "Itim",
+          "file": "library/fonts/Itim.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        }
+      ],
+      "zhStack": [
+        "Ma Shan Zheng",
+        "SimHei",
+        "PingFang SC",
+        "serif"
+      ],
+      "zhWeight": 400,
+      "latinStack": [
+        "Itim",
+        "Nunito",
+        "PingFang SC",
+        "sans-serif"
+      ]
+    },
+    "captions": {
+      "bgColor": "#000000",
+      "pinyinColor": "#7fd1c0",
+      "zhColor": "#ffffff",
+      "viColor": "#f5c518",
+      "localColor": "#f5c518",
+      "karaokeColor": "#25f4ee",
+      "dimColor": "#565b63",
+      "sizes": {
+        "pinyin": 52,
+        "zh": 72,
+        "vi": 58,
+        "local": 58
+      },
+      "gapPinyinZh": 8,
+      "gapZhLocal": 24,
+      "sidePad": 48,
+      "pinyinColumnGap": 10,
+      "opticalLift": 0
+    }
+  },
+  "beats": [
+    {
+      "id": "b01a",
+      "sceneId": "s1-verdict",
+      "image": "videos/2026/07/15/linglan-ep04/images/s1-verdict.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b01a.mp3",
+      "durationMs": 2080,
+      "motion": "push-in",
+      "narration": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "医",
+          "startMs": 0,
+          "endMs": 320
+        },
+        {
+          "ch": "生",
+          "startMs": 320,
+          "endMs": 640
+        },
+        {
+          "ch": "终",
+          "startMs": 640,
+          "endMs": 960
+        },
+        {
+          "ch": "于",
+          "startMs": 960,
+          "endMs": 1280
+        },
+        {
+          "ch": "开",
+          "startMs": 1280,
+          "endMs": 1600
+        },
+        {
+          "ch": "口",
+          "startMs": 1600,
+          "endMs": 1920
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Bác",
+          "startMs": 0,
+          "endMs": 274
+        },
+        {
+          "w": "sĩ",
+          "startMs": 274,
+          "endMs": 549
+        },
+        {
+          "w": "rốt",
+          "startMs": 549,
+          "endMs": 823
+        },
+        {
+          "w": "cuộc",
+          "startMs": 823,
+          "endMs": 1097
+        },
+        {
+          "w": "đã",
+          "startMs": 1097,
+          "endMs": 1371
+        },
+        {
+          "w": "lên",
+          "startMs": 1371,
+          "endMs": 1646
+        },
+        {
+          "w": "tiếng",
+          "startMs": 1646,
+          "endMs": 1920
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "医生终于开口",
+        "local": "Bác sĩ rốt cuộc đã lên tiếng"
+      }
+    },
+    {
+      "id": "b01b",
+      "sceneId": "s1-verdict",
+      "image": "videos/2026/07/15/linglan-ep04/images/s1-verdict.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b01b.mp3",
+      "durationMs": 2536,
+      "motion": "push-in",
+      "charTimings": [
+        {
+          "ch": "夫",
+          "startMs": 175,
+          "endMs": 275
+        },
+        {
+          "ch": "人",
+          "startMs": 275,
+          "endMs": 445
+        },
+        {
+          "ch": "这",
+          "startMs": 445,
+          "endMs": 545
+        },
+        {
+          "ch": "是",
+          "startMs": 545,
+          "endMs": 955
+        },
+        {
+          "ch": "失",
+          "startMs": 1559,
+          "endMs": 1809
+        },
+        {
+          "ch": "忆",
+          "startMs": 1809,
+          "endMs": 2246
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Phu",
+          "startMs": 0,
+          "endMs": 396
+        },
+        {
+          "w": "nhân",
+          "startMs": 396,
+          "endMs": 792
+        },
+        {
+          "w": "bị…",
+          "startMs": 792,
+          "endMs": 1188
+        },
+        {
+          "w": "mất",
+          "startMs": 1188,
+          "endMs": 1584
+        },
+        {
+          "w": "trí",
+          "startMs": 1584,
+          "endMs": 1980
+        },
+        {
+          "w": "nhớ",
+          "startMs": 1980,
+          "endMs": 2376
+        }
+      ],
+      "captions": {
+        "pinyin": "fū rén zhè shì shī yì",
+        "zh": "夫人这是……失忆",
+        "local": "Phu nhân bị… mất trí nhớ"
+      }
+    },
+    {
+      "id": "b02",
+      "sceneId": "s1-verdict",
+      "image": "videos/2026/07/15/linglan-ep04/images/s1-verdict.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b02.mp3",
+      "durationMs": 1072,
+      "motion": "push-in",
+      "charTimings": [
+        {
+          "ch": "失",
+          "startMs": 0,
+          "endMs": 75
+        },
+        {
+          "ch": "忆",
+          "startMs": 735,
+          "endMs": 770
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Mất",
+          "startMs": 0,
+          "endMs": 304
+        },
+        {
+          "w": "trí",
+          "startMs": 304,
+          "endMs": 608
+        },
+        {
+          "w": "nhớ",
+          "startMs": 608,
+          "endMs": 912
+        }
+      ],
+      "captions": {
+        "pinyin": "shī yì",
+        "zh": "失忆",
+        "local": "Mất trí nhớ"
+      }
+    },
+    {
+      "id": "b03",
+      "sceneId": "s1-verdict",
+      "image": "videos/2026/07/15/linglan-ep04/images/s1-verdict.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b03.mp3",
+      "durationMs": 2072,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "他",
+          "startMs": 95,
+          "endMs": 255
+        },
+        {
+          "ch": "们",
+          "startMs": 255,
+          "endMs": 335
+        },
+        {
+          "ch": "都",
+          "startMs": 335,
+          "endMs": 515
+        },
+        {
+          "ch": "在",
+          "startMs": 515,
+          "endMs": 685
+        },
+        {
+          "ch": "说",
+          "startMs": 685,
+          "endMs": 885
+        },
+        {
+          "ch": "这",
+          "startMs": 885,
+          "endMs": 1015
+        },
+        {
+          "ch": "个",
+          "startMs": 1015,
+          "endMs": 1085
+        },
+        {
+          "ch": "词",
+          "startMs": 1085,
+          "endMs": 1627
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Họ",
+          "startMs": 0,
+          "endMs": 250
+        },
+        {
+          "w": "đều",
+          "startMs": 250,
+          "endMs": 501
+        },
+        {
+          "w": "đang",
+          "startMs": 501,
+          "endMs": 751
+        },
+        {
+          "w": "nhắc",
+          "startMs": 751,
+          "endMs": 1001
+        },
+        {
+          "w": "một",
+          "startMs": 1001,
+          "endMs": 1251
+        },
+        {
+          "w": "từ",
+          "startMs": 1251,
+          "endMs": 1502
+        },
+        {
+          "w": "này",
+          "startMs": 1502,
+          "endMs": 1752
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "他们都在说这个词",
+        "local": "Họ đều đang nhắc một từ này"
+      }
+    },
+    {
+      "id": "b04a",
+      "sceneId": "s2-whisper",
+      "image": "videos/2026/07/15/linglan-ep04/images/s2-whisper.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b04a.mp3",
+      "durationMs": 3640,
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "失",
+          "startMs": 425,
+          "endMs": 825
+        },
+        {
+          "ch": "忆",
+          "startMs": 825,
+          "endMs": 1215
+        },
+        {
+          "ch": "就",
+          "startMs": 1795,
+          "endMs": 1955
+        },
+        {
+          "ch": "是",
+          "startMs": 1955,
+          "endMs": 2105
+        },
+        {
+          "ch": "全",
+          "startMs": 2105,
+          "endMs": 2385
+        },
+        {
+          "ch": "忘",
+          "startMs": 2385,
+          "endMs": 2655
+        },
+        {
+          "ch": "了",
+          "startMs": 2655,
+          "endMs": 3352
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Shī",
+          "startMs": 0,
+          "endMs": 435
+        },
+        {
+          "w": "yì",
+          "startMs": 435,
+          "endMs": 870
+        },
+        {
+          "w": "nghĩa",
+          "startMs": 870,
+          "endMs": 1305
+        },
+        {
+          "w": "là",
+          "startMs": 1305,
+          "endMs": 1740
+        },
+        {
+          "w": "quên",
+          "startMs": 1740,
+          "endMs": 2175
+        },
+        {
+          "w": "hết",
+          "startMs": 2175,
+          "endMs": 2610
+        },
+        {
+          "w": "tất",
+          "startMs": 2610,
+          "endMs": 3045
+        },
+        {
+          "w": "cả",
+          "startMs": 3045,
+          "endMs": 3480
+        }
+      ],
+      "captions": {
+        "pinyin": "shī yì jiù shì quán wàng le",
+        "zh": "失忆，就是全忘了",
+        "local": "Shī yì nghĩa là quên hết tất cả"
+      }
+    },
+    {
+      "id": "b04b",
+      "sceneId": "s2-whisper",
+      "image": "videos/2026/07/15/linglan-ep04/images/s2-whisper.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b04b.mp3",
+      "durationMs": 1288,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "全",
+          "startMs": 105,
+          "endMs": 345
+        },
+        {
+          "ch": "忘",
+          "startMs": 345,
+          "endMs": 635
+        },
+        {
+          "ch": "了",
+          "startMs": 635,
+          "endMs": 999
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Quên",
+          "startMs": 0,
+          "endMs": 226
+        },
+        {
+          "w": "hết",
+          "startMs": 226,
+          "endMs": 451
+        },
+        {
+          "w": "tất",
+          "startMs": 451,
+          "endMs": 677
+        },
+        {
+          "w": "cả",
+          "startMs": 677,
+          "endMs": 902
+        },
+        {
+          "w": "sao",
+          "startMs": 902,
+          "endMs": 1128
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "全忘了",
+        "local": "Quên hết tất cả sao"
+      }
+    },
+    {
+      "id": "b05a",
+      "sceneId": "s2-whisper",
+      "image": "videos/2026/07/15/linglan-ep04/images/s2-whisper.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b05a.mp3",
+      "durationMs": 2728,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "忘",
+          "startMs": 165,
+          "endMs": 325
+        },
+        {
+          "ch": "了",
+          "startMs": 325,
+          "endMs": 405
+        },
+        {
+          "ch": "过",
+          "startMs": 405,
+          "endMs": 615
+        },
+        {
+          "ch": "去",
+          "startMs": 615,
+          "endMs": 1055
+        },
+        {
+          "ch": "忘",
+          "startMs": 1445,
+          "endMs": 1625
+        },
+        {
+          "ch": "了",
+          "startMs": 1625,
+          "endMs": 1705
+        },
+        {
+          "ch": "中",
+          "startMs": 1705,
+          "endMs": 1985
+        },
+        {
+          "ch": "文",
+          "startMs": 1985,
+          "endMs": 2436
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Quên",
+          "startMs": 0,
+          "endMs": 367
+        },
+        {
+          "w": "quá",
+          "startMs": 367,
+          "endMs": 734
+        },
+        {
+          "w": "khứ,",
+          "startMs": 734,
+          "endMs": 1101
+        },
+        {
+          "w": "quên",
+          "startMs": 1101,
+          "endMs": 1467
+        },
+        {
+          "w": "cả",
+          "startMs": 1467,
+          "endMs": 1834
+        },
+        {
+          "w": "tiếng",
+          "startMs": 1834,
+          "endMs": 2201
+        },
+        {
+          "w": "Trung",
+          "startMs": 2201,
+          "endMs": 2568
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "忘了过去，忘了中文",
+        "local": "Quên quá khứ, quên cả tiếng Trung"
+      }
+    },
+    {
+      "id": "b05b",
+      "sceneId": "s2-whisper",
+      "image": "videos/2026/07/15/linglan-ep04/images/s2-whisper.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b05b.mp3",
+      "durationMs": 2072,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "这",
+          "startMs": 105,
+          "endMs": 245
+        },
+        {
+          "ch": "不",
+          "startMs": 245,
+          "endMs": 355
+        },
+        {
+          "ch": "就",
+          "startMs": 355,
+          "endMs": 475
+        },
+        {
+          "ch": "是",
+          "startMs": 475,
+          "endMs": 635
+        },
+        {
+          "ch": "我",
+          "startMs": 635,
+          "endMs": 705
+        },
+        {
+          "ch": "的",
+          "startMs": 705,
+          "endMs": 795
+        },
+        {
+          "ch": "保",
+          "startMs": 795,
+          "endMs": 975
+        },
+        {
+          "ch": "命",
+          "startMs": 975,
+          "endMs": 1155
+        },
+        {
+          "ch": "符",
+          "startMs": 1155,
+          "endMs": 1678
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Đây",
+          "startMs": 0,
+          "endMs": 219
+        },
+        {
+          "w": "chính",
+          "startMs": 219,
+          "endMs": 438
+        },
+        {
+          "w": "là",
+          "startMs": 438,
+          "endMs": 657
+        },
+        {
+          "w": "bùa",
+          "startMs": 657,
+          "endMs": 876
+        },
+        {
+          "w": "cứu",
+          "startMs": 876,
+          "endMs": 1095
+        },
+        {
+          "w": "mạng",
+          "startMs": 1095,
+          "endMs": 1314
+        },
+        {
+          "w": "của",
+          "startMs": 1314,
+          "endMs": 1533
+        },
+        {
+          "w": "tôi",
+          "startMs": 1533,
+          "endMs": 1752
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "这不就是我的保命符",
+        "local": "Đây chính là bùa cứu mạng của tôi"
+      }
+    },
+    {
+      "id": "b06a",
+      "sceneId": "s3-relief",
+      "image": "videos/2026/07/15/linglan-ep04/images/s3-relief.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b06a.mp3",
+      "durationMs": 2272,
+      "motion": "ken-burns",
+      "narration": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "天",
+          "startMs": 0,
+          "endMs": 422
+        },
+        {
+          "ch": "降",
+          "startMs": 422,
+          "endMs": 845
+        },
+        {
+          "ch": "保",
+          "startMs": 845,
+          "endMs": 1267
+        },
+        {
+          "ch": "命",
+          "startMs": 1267,
+          "endMs": 1690
+        },
+        {
+          "ch": "符",
+          "startMs": 1690,
+          "endMs": 2112
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Bùa",
+          "startMs": 0,
+          "endMs": 302
+        },
+        {
+          "w": "hộ",
+          "startMs": 302,
+          "endMs": 603
+        },
+        {
+          "w": "mệnh",
+          "startMs": 603,
+          "endMs": 905
+        },
+        {
+          "w": "trên",
+          "startMs": 905,
+          "endMs": 1207
+        },
+        {
+          "w": "trời",
+          "startMs": 1207,
+          "endMs": 1509
+        },
+        {
+          "w": "rơi",
+          "startMs": 1509,
+          "endMs": 1810
+        },
+        {
+          "w": "xuống",
+          "startMs": 1810,
+          "endMs": 2112
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "天降保命符",
+        "local": "Bùa hộ mệnh trên trời rơi xuống"
+      }
+    },
+    {
+      "id": "b06b",
+      "sceneId": "s3-relief",
+      "image": "videos/2026/07/15/linglan-ep04/images/s3-relief.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b06b.mp3",
+      "durationMs": 2648,
+      "motion": "ken-burns",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "不",
+          "startMs": 0,
+          "endMs": 233
+        },
+        {
+          "ch": "会",
+          "startMs": 233,
+          "endMs": 466
+        },
+        {
+          "ch": "说",
+          "startMs": 466,
+          "endMs": 698
+        },
+        {
+          "ch": "中",
+          "startMs": 698,
+          "endMs": 931
+        },
+        {
+          "ch": "文",
+          "startMs": 931,
+          "endMs": 1164
+        },
+        {
+          "ch": "也",
+          "startMs": 1164,
+          "endMs": 1397
+        },
+        {
+          "ch": "说",
+          "startMs": 1397,
+          "endMs": 1630
+        },
+        {
+          "ch": "得",
+          "startMs": 1630,
+          "endMs": 1862
+        },
+        {
+          "ch": "通",
+          "startMs": 1862,
+          "endMs": 2095
+        },
+        {
+          "ch": "了",
+          "startMs": 2095,
+          "endMs": 2328
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Không",
+          "startMs": 0,
+          "endMs": 291
+        },
+        {
+          "w": "biết",
+          "startMs": 291,
+          "endMs": 582
+        },
+        {
+          "w": "tiếng",
+          "startMs": 582,
+          "endMs": 873
+        },
+        {
+          "w": "Trung",
+          "startMs": 873,
+          "endMs": 1164
+        },
+        {
+          "w": "cũng",
+          "startMs": 1164,
+          "endMs": 1455
+        },
+        {
+          "w": "hợp",
+          "startMs": 1455,
+          "endMs": 1746
+        },
+        {
+          "w": "lý",
+          "startMs": 1746,
+          "endMs": 2037
+        },
+        {
+          "w": "rồi",
+          "startMs": 2037,
+          "endMs": 2328
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "不会说中文，也说得通了",
+        "local": "Không biết tiếng Trung cũng hợp lý rồi"
+      }
+    },
+    {
+      "id": "b07",
+      "sceneId": "s4-squint",
+      "image": "videos/2026/07/15/linglan-ep04/images/s4-squint.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b07.mp3",
+      "durationMs": 2464,
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "失",
+          "startMs": 115,
+          "endMs": 395
+        },
+        {
+          "ch": "忆",
+          "startMs": 395,
+          "endMs": 465
+        },
+        {
+          "ch": "连",
+          "startMs": 465,
+          "endMs": 525
+        },
+        {
+          "ch": "母",
+          "startMs": 525,
+          "endMs": 585
+        },
+        {
+          "ch": "语",
+          "startMs": 1465,
+          "endMs": 1495
+        },
+        {
+          "ch": "都",
+          "startMs": 1495,
+          "endMs": 1615
+        },
+        {
+          "ch": "忘",
+          "startMs": 1805,
+          "endMs": 1835
+        },
+        {
+          "ch": "了",
+          "startMs": 1835,
+          "endMs": 2183
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Mất",
+          "startMs": 0,
+          "endMs": 230
+        },
+        {
+          "w": "trí",
+          "startMs": 230,
+          "endMs": 461
+        },
+        {
+          "w": "nhớ?",
+          "startMs": 461,
+          "endMs": 691
+        },
+        {
+          "w": "Đến",
+          "startMs": 691,
+          "endMs": 922
+        },
+        {
+          "w": "tiếng",
+          "startMs": 922,
+          "endMs": 1152
+        },
+        {
+          "w": "mẹ",
+          "startMs": 1152,
+          "endMs": 1382
+        },
+        {
+          "w": "đẻ",
+          "startMs": 1382,
+          "endMs": 1613
+        },
+        {
+          "w": "cũng",
+          "startMs": 1613,
+          "endMs": 1843
+        },
+        {
+          "w": "quên",
+          "startMs": 1843,
+          "endMs": 2074
+        },
+        {
+          "w": "à",
+          "startMs": 2074,
+          "endMs": 2304
+        }
+      ],
+      "captions": {
+        "pinyin": "shī yì lián mǔ yǔ dōu wàng le",
+        "zh": "失忆？连母语都忘了",
+        "local": "Mất trí nhớ? Đến tiếng mẹ đẻ cũng quên à"
+      }
+    },
+    {
+      "id": "b08a",
+      "sceneId": "s4-squint",
+      "image": "videos/2026/07/15/linglan-ep04/images/s4-squint.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b08a.mp3",
+      "durationMs": 1120,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "糟",
+          "startMs": 695,
+          "endMs": 755
+        },
+        {
+          "ch": "了",
+          "startMs": 755,
+          "endMs": 823
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Toi",
+          "startMs": 0,
+          "endMs": 480
+        },
+        {
+          "w": "rồi",
+          "startMs": 480,
+          "endMs": 960
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "糟了",
+        "local": "Toi rồi"
+      }
+    },
+    {
+      "id": "b08b",
+      "sceneId": "s4-squint",
+      "image": "videos/2026/07/15/linglan-ep04/images/s4-squint.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b08b.mp3",
+      "durationMs": 1576,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "他",
+          "startMs": 105,
+          "endMs": 285
+        },
+        {
+          "ch": "起",
+          "startMs": 285,
+          "endMs": 495
+        },
+        {
+          "ch": "疑",
+          "startMs": 495,
+          "endMs": 605
+        },
+        {
+          "ch": "心",
+          "startMs": 605,
+          "endMs": 875
+        },
+        {
+          "ch": "了",
+          "startMs": 875,
+          "endMs": 1288
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Anh",
+          "startMs": 0,
+          "endMs": 283
+        },
+        {
+          "w": "ta",
+          "startMs": 283,
+          "endMs": 566
+        },
+        {
+          "w": "nghi",
+          "startMs": 566,
+          "endMs": 850
+        },
+        {
+          "w": "ngờ",
+          "startMs": 850,
+          "endMs": 1133
+        },
+        {
+          "w": "rồi",
+          "startMs": 1133,
+          "endMs": 1416
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "他起疑心了",
+        "local": "Anh ta nghi ngờ rồi"
+      }
+    },
+    {
+      "id": "b09",
+      "sceneId": "s4-squint",
+      "image": "videos/2026/07/15/linglan-ep04/images/s4-squint.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b09.mp3",
+      "durationMs": 1448,
+      "motion": "push-in",
+      "charTimings": [
+        {
+          "ch": "拿",
+          "startMs": 0,
+          "endMs": 75
+        },
+        {
+          "ch": "纸",
+          "startMs": 345,
+          "endMs": 405
+        },
+        {
+          "ch": "笔",
+          "startMs": 405,
+          "endMs": 565
+        },
+        {
+          "ch": "来",
+          "startMs": 565,
+          "endMs": 991
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Đem",
+          "startMs": 0,
+          "endMs": 226
+        },
+        {
+          "w": "giấy",
+          "startMs": 226,
+          "endMs": 451
+        },
+        {
+          "w": "bút",
+          "startMs": 451,
+          "endMs": 677
+        },
+        {
+          "w": "lại",
+          "startMs": 677,
+          "endMs": 902
+        },
+        {
+          "w": "đây",
+          "startMs": 902,
+          "endMs": 1128
+        }
+      ],
+      "captions": {
+        "pinyin": "ná zhǐ bǐ lái",
+        "zh": "拿纸笔来",
+        "local": "Đem giấy bút lại đây"
+      }
+    },
+    {
+      "id": "b10a",
+      "sceneId": "s5-horror",
+      "image": "videos/2026/07/15/linglan-ep04/images/s5-horror.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b10a.mp3",
+      "durationMs": 3232,
+      "motion": "push-in",
+      "inner": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "纸",
+          "startMs": 125,
+          "endMs": 275
+        },
+        {
+          "ch": "笔",
+          "startMs": 495,
+          "endMs": 755
+        },
+        {
+          "ch": "他",
+          "startMs": 1665,
+          "endMs": 1855
+        },
+        {
+          "ch": "要",
+          "startMs": 1855,
+          "endMs": 1995
+        },
+        {
+          "ch": "我",
+          "startMs": 1995,
+          "endMs": 2115
+        },
+        {
+          "ch": "写",
+          "startMs": 2115,
+          "endMs": 2415
+        },
+        {
+          "ch": "字",
+          "startMs": 2415,
+          "endMs": 2937
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Giấy",
+          "startMs": 0,
+          "endMs": 384
+        },
+        {
+          "w": "bút?",
+          "startMs": 384,
+          "endMs": 768
+        },
+        {
+          "w": "Anh",
+          "startMs": 768,
+          "endMs": 1152
+        },
+        {
+          "w": "ta",
+          "startMs": 1152,
+          "endMs": 1536
+        },
+        {
+          "w": "muốn",
+          "startMs": 1536,
+          "endMs": 1920
+        },
+        {
+          "w": "tôi",
+          "startMs": 1920,
+          "endMs": 2304
+        },
+        {
+          "w": "viết",
+          "startMs": 2304,
+          "endMs": 2688
+        },
+        {
+          "w": "chữ",
+          "startMs": 2688,
+          "endMs": 3072
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "纸笔？他要我写字",
+        "local": "Giấy bút? Anh ta muốn tôi viết chữ"
+      }
+    },
+    {
+      "id": "b10b",
+      "sceneId": "s5-horror",
+      "image": "videos/2026/07/15/linglan-ep04/images/s5-horror.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b10b.mp3",
+      "durationMs": 2584,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "可",
+          "startMs": 105,
+          "endMs": 265
+        },
+        {
+          "ch": "我",
+          "startMs": 265,
+          "endMs": 375
+        },
+        {
+          "ch": "一",
+          "startMs": 375,
+          "endMs": 475
+        },
+        {
+          "ch": "个",
+          "startMs": 475,
+          "endMs": 555
+        },
+        {
+          "ch": "汉",
+          "startMs": 555,
+          "endMs": 845
+        },
+        {
+          "ch": "字",
+          "startMs": 845,
+          "endMs": 1205
+        },
+        {
+          "ch": "都",
+          "startMs": 1325,
+          "endMs": 1495
+        },
+        {
+          "ch": "不",
+          "startMs": 1495,
+          "endMs": 1635
+        },
+        {
+          "ch": "会",
+          "startMs": 1635,
+          "endMs": 1795
+        },
+        {
+          "ch": "写",
+          "startMs": 1795,
+          "endMs": 2294
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Nhưng",
+          "startMs": 0,
+          "endMs": 303
+        },
+        {
+          "w": "tôi",
+          "startMs": 303,
+          "endMs": 606
+        },
+        {
+          "w": "không",
+          "startMs": 606,
+          "endMs": 909
+        },
+        {
+          "w": "biết",
+          "startMs": 909,
+          "endMs": 1212
+        },
+        {
+          "w": "viết",
+          "startMs": 1212,
+          "endMs": 1515
+        },
+        {
+          "w": "chữ",
+          "startMs": 1515,
+          "endMs": 1818
+        },
+        {
+          "w": "Hán",
+          "startMs": 1818,
+          "endMs": 2121
+        },
+        {
+          "w": "nào",
+          "startMs": 2121,
+          "endMs": 2424
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "可我一个汉字都不会写",
+        "local": "Nhưng tôi không biết viết chữ Hán nào"
+      }
+    },
+    {
+      "id": "b11a",
+      "sceneId": "s5-horror",
+      "image": "videos/2026/07/15/linglan-ep04/images/s5-horror.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b11a.mp3",
+      "durationMs": 2080,
+      "motion": "pull-back",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "听",
+          "startMs": 0,
+          "endMs": 384
+        },
+        {
+          "ch": "不",
+          "startMs": 384,
+          "endMs": 768
+        },
+        {
+          "ch": "懂",
+          "startMs": 768,
+          "endMs": 1152
+        },
+        {
+          "ch": "能",
+          "startMs": 1152,
+          "endMs": 1536
+        },
+        {
+          "ch": "装",
+          "startMs": 1536,
+          "endMs": 1920
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Nghe",
+          "startMs": 0,
+          "endMs": 320
+        },
+        {
+          "w": "không",
+          "startMs": 320,
+          "endMs": 640
+        },
+        {
+          "w": "hiểu",
+          "startMs": 640,
+          "endMs": 960
+        },
+        {
+          "w": "còn",
+          "startMs": 960,
+          "endMs": 1280
+        },
+        {
+          "w": "giả",
+          "startMs": 1280,
+          "endMs": 1600
+        },
+        {
+          "w": "được",
+          "startMs": 1600,
+          "endMs": 1920
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "听不懂能装",
+        "local": "Nghe không hiểu còn giả được"
+      }
+    },
+    {
+      "id": "b11b",
+      "sceneId": "s5-horror",
+      "image": "videos/2026/07/15/linglan-ep04/images/s5-horror.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b11b.mp3",
+      "durationMs": 3064,
+      "motion": "pull-back",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "写",
+          "startMs": 0,
+          "endMs": 415
+        },
+        {
+          "ch": "不",
+          "startMs": 415,
+          "endMs": 830
+        },
+        {
+          "ch": "出",
+          "startMs": 830,
+          "endMs": 1245
+        },
+        {
+          "ch": "字",
+          "startMs": 1245,
+          "endMs": 1659
+        },
+        {
+          "ch": "怎",
+          "startMs": 1659,
+          "endMs": 2074
+        },
+        {
+          "ch": "么",
+          "startMs": 2074,
+          "endMs": 2489
+        },
+        {
+          "ch": "装",
+          "startMs": 2489,
+          "endMs": 2904
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "không",
+          "startMs": 0,
+          "endMs": 363
+        },
+        {
+          "w": "viết",
+          "startMs": 363,
+          "endMs": 726
+        },
+        {
+          "w": "được",
+          "startMs": 726,
+          "endMs": 1089
+        },
+        {
+          "w": "chữ",
+          "startMs": 1089,
+          "endMs": 1452
+        },
+        {
+          "w": "thì",
+          "startMs": 1452,
+          "endMs": 1815
+        },
+        {
+          "w": "giả",
+          "startMs": 1815,
+          "endMs": 2178
+        },
+        {
+          "w": "sao",
+          "startMs": 2178,
+          "endMs": 2541
+        },
+        {
+          "w": "đây",
+          "startMs": 2541,
+          "endMs": 2904
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "写不出字，怎么装",
+        "local": "không viết được chữ thì giả sao đây"
+      }
+    },
+    {
+      "id": "b11c",
+      "sceneId": "s5-horror",
+      "image": "videos/2026/07/15/linglan-ep04/images/s5-horror.png",
+      "audio": "videos/2026/07/15/linglan-ep04/audio/b11c.mp3",
+      "durationMs": 2264,
+      "motion": "pull-back",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "关",
+          "startMs": 0,
+          "endMs": 389
+        },
+        {
+          "ch": "注",
+          "startMs": 389,
+          "endMs": 778
+        },
+        {
+          "ch": "看",
+          "startMs": 778,
+          "endMs": 1166
+        },
+        {
+          "ch": "下",
+          "startMs": 1166,
+          "endMs": 1555
+        },
+        {
+          "ch": "集",
+          "startMs": 1555,
+          "endMs": 1944
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Theo",
+          "startMs": 0,
+          "endMs": 389
+        },
+        {
+          "w": "dõi",
+          "startMs": 389,
+          "endMs": 778
+        },
+        {
+          "w": "tập",
+          "startMs": 778,
+          "endMs": 1166
+        },
+        {
+          "w": "sau",
+          "startMs": 1166,
+          "endMs": 1555
+        },
+        {
+          "w": "nhé",
+          "startMs": 1555,
+          "endMs": 1944
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "关注，看下集",
+        "local": "Theo dõi tập sau nhé"
+      }
+    }
+  ]
+}

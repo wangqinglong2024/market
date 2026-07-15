@@ -26,6 +26,7 @@
 - 需要两人同框时：**只让被喂参考图的主角色露正脸**，另一人用**背影 / 过肩 / 侧脸剪影 / 只出手/局部**，绝不给第二张正脸。
 - **★不露脸的人也必须写全（铁律，用户 2026-07-15 锁）**：走 flux 时，画面里每个不露正脸的角色，shot.content 必须**逐项写清具体情况——衣着（款式/颜色/连戏）、背影姿态、发型发饰、体态**，一项都不能省。教训：E01 s4 只写了 "the bride seen from behind" 没写服装 → flux 画成白色吊带，违反红嫁衣连戏，重摇一次才修好。
 - **多人正脸需求 → 调用 nano-banana-pro**（多参考图各锁一脸，$0.15/张，一条视频最多 1 次）。除此之外每场景**单人 flux 出图**为默认（$0.04）。
+- **★单人特写防"脑补听众"（实战教训 2026-07-16）**：prompt 里出现 "speaking to/looking at someone (out of frame)" 这类措辞时，flux 极易自作主张把"某人"画进前景（E02 s3 / E04 s4 / E04 s5 连续三次翻车）。凡单人拍必须显式写 `completely ALONE in the frame, NO other person, NO foreground figure`，并避免 "对着某人说话" 措辞、改写成 "facing the camera / toward the door" 等无人称指向。
 
 ## 5. 真人质感·去塑料感
 - 追求**真实照片质感**：自然肤质、细腻毛孔、真实光影、轻微胶片颗粒；**避免**塑料感/过度磨皮/CGI 感/油光蜡像（no plastic skin, no waxy CGI look, natural matte realistic skin）。
@@ -58,6 +59,7 @@
 | wanqing | 温晚晴(白月光) | `zh_female_zhixingnvsheng_mars_bigtts` | ★知性女生(海归)。⚠️ moon 后缀未开通(3001)，必须用 mars |
 | yurou | 沈玉柔(白莲花) | `zh_female_lingling_uranus_bigtts` | ★玲玲姐姐，用户点名(2026-07-15 给 ID)。⚠️ 不返回字级时间戳→卡拉OK走均匀铺字 |
 | chengye | 顾承业(二叔) | `zh_male_jingqiangkanye_moon_bigtts` | 自定义 |
+| doctor | 医生(次要,无定妆图→全程不露正脸) | `zh_male_yuanboxiaoshu_moon_bigtts` | 渊博小叔(自定义,已试听) |
 | laofuren | 顾老夫人 | 待定(暂占位知性女生 mars) | 老夫人**不适用**上面这批年轻女声；出场前试听老年感音色再锁 |
 
 - 「玲玲姐姐」=`zh_female_lingling_uranus_bigtts`（用户 2026-07-15 给的 ID，已验证可调）→ 分给沈玉柔。点名音色样音统一放 `public/library/audio/voices/<中文名>__<voice_type>.mp3`。

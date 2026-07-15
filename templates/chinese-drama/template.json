@@ -30,7 +30,8 @@
       "liuwan":   "zh_female_xinlingjitang_moon_bigtts",
       "wanqing":  "zh_female_zhixingnvsheng_mars_bigtts",
       "yurou":    "zh_female_lingling_uranus_bigtts",
-      "chengye":  "zh_male_jingqiangkanye_moon_bigtts"
+      "chengye":  "zh_male_jingqiangkanye_moon_bigtts",
+      "doctor":   "zh_male_yuanboxiaoshu_moon_bigtts"
     }
   },
   "image": {

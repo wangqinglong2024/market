@@ -154,6 +154,55 @@
       "createdAt": "2026-07-15",
       "manifest": "public/videos/2026/07/15/linglan-ep01/manifest.json",
       "beats": 22
+    },
+    {
+      "id": "linglan-ep02",
+      "title": "铃兰穿越记 E02 第一句保命中文：听不懂(越南受众·穿越豪门连续剧)",
+      "template": "chinese-drama",
+      "shard": "2026/07/15",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-15",
+      "beats": 21
+    },
+    {
+      "id": "linglan-ep03",
+      "title": "铃兰穿越记 E03 检查惊魂：她只听懂自己的名字(越南受众·穿越豪门连续剧)",
+      "template": "chinese-drama",
+      "shard": "2026/07/15",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-16",
+      "beats": 19
+    },
+    {
+      "id": "linglan-ep04",
+      "title": "铃兰穿越记 E04 天降保命符：失忆(越南受众·穿越豪门连续剧)",
+      "template": "chinese-drama",
+      "shard": "2026/07/15",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-16",
+      "beats": 19
+    },
+    {
+      "id": "linglan-ep05",
+      "title": "铃兰穿越记 E05 提笔死局：她装手抖打翻墨(越南受众·穿越豪门连续剧)",
+      "template": "chinese-drama",
+      "shard": "2026/07/15",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-16",
+      "beats": 19
+    },
+    {
+      "id": "linglan-ep06",
+      "title": "铃兰穿越记 E06 烧了一半的照片(越南受众·穿越豪门连续剧)",
+      "template": "chinese-drama",
+      "shard": "2026/07/15",
+      "lang": "vi",
+      "status": "scripted",
+      "createdAt": "2026-07-16"
     }
   ]
 }

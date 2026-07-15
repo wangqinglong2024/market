@@ -1,0 +1,1862 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1440,
+    "layout": "chinese-drama",
+    "motionPresets": {
+      "push-in": {
+        "scale": [
+          1.02,
+          1.12
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 8,
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pull-back": {
+        "scale": [
+          1.14,
+          1.02
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 5,
+        "ease": "inOut"
+      },
+      "pan-left": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          40,
+          -40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pan-right": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          -40,
+          40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "climb-up": {
+        "scale": [
+          1.06,
+          1.14
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          40,
+          -44
+        ],
+        "driftX": 6,
+        "ease": "inOut"
+      },
+      "ken-burns": {
+        "scale": [
+          1.05,
+          1.13
+        ],
+        "panX": [
+          24,
+          -28
+        ],
+        "panY": [
+          14,
+          -18
+        ],
+        "driftX": 10,
+        "driftY": 8,
+        "ease": "inOut"
+      },
+      "sway": {
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 16,
+        "driftY": 10,
+        "ease": "linear"
+      },
+      "pop": {
+        "scale": [
+          1.18,
+          1.04
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 4,
+        "rotate": [
+          -1.5,
+          0
+        ],
+        "ease": "inOut"
+      },
+      "still": {
+        "scale": [
+          1.03,
+          1.03
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 5,
+        "driftY": 4,
+        "ease": "linear"
+      }
+    },
+    "source": {
+      "region": {
+        "top": 120,
+        "height": 720
+      },
+      "focusY": 0.5
+    },
+    "subtitle": {
+      "top": 960,
+      "height": 360
+    },
+    "fonts": {
+      "_comment": "中文用 Ma Shan Zheng(毛笔行楷,用户 2026-07-15 锁);SimHei 兜底。拼音+越南语统一=Itim(手写感但收敛,不死板;Charm 被否:太夸张 2026-07-15);fontTools 验证越南语附加符+拼音声调符全覆盖,Nunito 兜底。换字体只改这里。",
+      "files": [
+        {
+          "family": "Ma Shan Zheng",
+          "file": "library/fonts/MaShanZheng.ttf"
+        },
+        {
+          "family": "Itim",
+          "file": "library/fonts/Itim.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        }
+      ],
+      "zhStack": [
+        "Ma Shan Zheng",
+        "SimHei",
+        "PingFang SC",
+        "serif"
+      ],
+      "zhWeight": 400,
+      "latinStack": [
+        "Itim",
+        "Nunito",
+        "PingFang SC",
+        "sans-serif"
+      ]
+    },
+    "captions": {
+      "bgColor": "#000000",
+      "pinyinColor": "#7fd1c0",
+      "zhColor": "#ffffff",
+      "viColor": "#f5c518",
+      "localColor": "#f5c518",
+      "karaokeColor": "#25f4ee",
+      "dimColor": "#565b63",
+      "sizes": {
+        "pinyin": 52,
+        "zh": 72,
+        "vi": 58,
+        "local": 58
+      },
+      "gapPinyinZh": 8,
+      "gapZhLocal": 24,
+      "sidePad": 48,
+      "pinyinColumnGap": 10,
+      "opticalLift": 0
+    }
+  },
+  "beats": [
+    {
+      "id": "b01a",
+      "sceneId": "s1-desk",
+      "image": "videos/2026/07/15/linglan-ep05/images/s1-desk.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b01a.mp3",
+      "durationMs": 2104,
+      "motion": "push-in",
+      "narration": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "纸",
+          "startMs": 0,
+          "endMs": 278
+        },
+        {
+          "ch": "和",
+          "startMs": 278,
+          "endMs": 555
+        },
+        {
+          "ch": "笔",
+          "startMs": 555,
+          "endMs": 833
+        },
+        {
+          "ch": "摆",
+          "startMs": 833,
+          "endMs": 1111
+        },
+        {
+          "ch": "在",
+          "startMs": 1111,
+          "endMs": 1389
+        },
+        {
+          "ch": "面",
+          "startMs": 1389,
+          "endMs": 1666
+        },
+        {
+          "ch": "前",
+          "startMs": 1666,
+          "endMs": 1944
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Giấy",
+          "startMs": 0,
+          "endMs": 278
+        },
+        {
+          "w": "và",
+          "startMs": 278,
+          "endMs": 555
+        },
+        {
+          "w": "bút",
+          "startMs": 555,
+          "endMs": 833
+        },
+        {
+          "w": "bày",
+          "startMs": 833,
+          "endMs": 1111
+        },
+        {
+          "w": "ra",
+          "startMs": 1111,
+          "endMs": 1389
+        },
+        {
+          "w": "trước",
+          "startMs": 1389,
+          "endMs": 1666
+        },
+        {
+          "w": "mặt",
+          "startMs": 1666,
+          "endMs": 1944
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "纸和笔，摆在面前",
+        "local": "Giấy và bút bày ra trước mặt"
+      }
+    },
+    {
+      "id": "b01b",
+      "sceneId": "s1-desk",
+      "image": "videos/2026/07/15/linglan-ep05/images/s1-desk.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b01b.mp3",
+      "durationMs": 1456,
+      "motion": "push-in",
+      "charTimings": [
+        {
+          "ch": "写",
+          "startMs": 135,
+          "endMs": 345
+        },
+        {
+          "ch": "你",
+          "startMs": 345,
+          "endMs": 435
+        },
+        {
+          "ch": "的",
+          "startMs": 435,
+          "endMs": 545
+        },
+        {
+          "ch": "名",
+          "startMs": 545,
+          "endMs": 705
+        },
+        {
+          "ch": "字",
+          "startMs": 705,
+          "endMs": 1152
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Viết",
+          "startMs": 0,
+          "endMs": 259
+        },
+        {
+          "w": "tên",
+          "startMs": 259,
+          "endMs": 518
+        },
+        {
+          "w": "của",
+          "startMs": 518,
+          "endMs": 778
+        },
+        {
+          "w": "cô",
+          "startMs": 778,
+          "endMs": 1037
+        },
+        {
+          "w": "đi",
+          "startMs": 1037,
+          "endMs": 1296
+        }
+      ],
+      "captions": {
+        "pinyin": "xiě nǐ de míng zi",
+        "zh": "写你的名字",
+        "local": "Viết tên của cô đi"
+      }
+    },
+    {
+      "id": "b02a",
+      "sceneId": "s1-desk",
+      "image": "videos/2026/07/15/linglan-ep05/images/s1-desk.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b02a.mp3",
+      "durationMs": 2632,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "名",
+          "startMs": 115,
+          "endMs": 425
+        },
+        {
+          "ch": "字",
+          "startMs": 425,
+          "endMs": 595
+        },
+        {
+          "ch": "沈",
+          "startMs": 1250,
+          "endMs": 1580
+        },
+        {
+          "ch": "青",
+          "startMs": 1580,
+          "endMs": 1910
+        },
+        {
+          "ch": "梧",
+          "startMs": 1910,
+          "endMs": 2350
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Tên…",
+          "startMs": 0,
+          "endMs": 618
+        },
+        {
+          "w": "Thẩm",
+          "startMs": 618,
+          "endMs": 1236
+        },
+        {
+          "w": "Thanh",
+          "startMs": 1236,
+          "endMs": 1854
+        },
+        {
+          "w": "Ngô",
+          "startMs": 1854,
+          "endMs": 2472
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "名字……沈青梧",
+        "local": "Tên… Thẩm Thanh Ngô"
+      }
+    },
+    {
+      "id": "b02b",
+      "sceneId": "s1-desk",
+      "image": "videos/2026/07/15/linglan-ep05/images/s1-desk.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b02b.mp3",
+      "durationMs": 2072,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "可",
+          "startMs": 95,
+          "endMs": 275
+        },
+        {
+          "ch": "我",
+          "startMs": 275,
+          "endMs": 395
+        },
+        {
+          "ch": "一",
+          "startMs": 395,
+          "endMs": 575
+        },
+        {
+          "ch": "笔",
+          "startMs": 575,
+          "endMs": 715
+        },
+        {
+          "ch": "都",
+          "startMs": 715,
+          "endMs": 855
+        },
+        {
+          "ch": "不",
+          "startMs": 855,
+          "endMs": 975
+        },
+        {
+          "ch": "会",
+          "startMs": 975,
+          "endMs": 1115
+        },
+        {
+          "ch": "写",
+          "startMs": 1115,
+          "endMs": 1609
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Nhưng",
+          "startMs": 0,
+          "endMs": 219
+        },
+        {
+          "w": "tôi",
+          "startMs": 219,
+          "endMs": 438
+        },
+        {
+          "w": "không",
+          "startMs": 438,
+          "endMs": 657
+        },
+        {
+          "w": "biết",
+          "startMs": 657,
+          "endMs": 876
+        },
+        {
+          "w": "viết",
+          "startMs": 876,
+          "endMs": 1095
+        },
+        {
+          "w": "một",
+          "startMs": 1095,
+          "endMs": 1314
+        },
+        {
+          "w": "nét",
+          "startMs": 1314,
+          "endMs": 1533
+        },
+        {
+          "w": "nào",
+          "startMs": 1533,
+          "endMs": 1752
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "可我一笔都不会写",
+        "local": "Nhưng tôi không biết viết một nét nào"
+      }
+    },
+    {
+      "id": "b03a",
+      "sceneId": "s2-calligraphy",
+      "image": "videos/2026/07/15/linglan-ep05/images/s2-calligraphy.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b03a.mp3",
+      "durationMs": 2080,
+      "motion": "ken-burns",
+      "narration": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "原",
+          "startMs": 0,
+          "endMs": 240
+        },
+        {
+          "ch": "主",
+          "startMs": 240,
+          "endMs": 480
+        },
+        {
+          "ch": "青",
+          "startMs": 480,
+          "endMs": 720
+        },
+        {
+          "ch": "梧",
+          "startMs": 720,
+          "endMs": 960
+        },
+        {
+          "ch": "一",
+          "startMs": 960,
+          "endMs": 1200
+        },
+        {
+          "ch": "手",
+          "startMs": 1200,
+          "endMs": 1440
+        },
+        {
+          "ch": "好",
+          "startMs": 1440,
+          "endMs": 1680
+        },
+        {
+          "ch": "字",
+          "startMs": 1680,
+          "endMs": 1920
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Thanh",
+          "startMs": 0,
+          "endMs": 274
+        },
+        {
+          "w": "Ngô",
+          "startMs": 274,
+          "endMs": 549
+        },
+        {
+          "w": "thật",
+          "startMs": 549,
+          "endMs": 823
+        },
+        {
+          "w": "viết",
+          "startMs": 823,
+          "endMs": 1097
+        },
+        {
+          "w": "chữ",
+          "startMs": 1097,
+          "endMs": 1371
+        },
+        {
+          "w": "rất",
+          "startMs": 1371,
+          "endMs": 1646
+        },
+        {
+          "w": "đẹp",
+          "startMs": 1646,
+          "endMs": 1920
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "原主青梧，一手好字",
+        "local": "Thanh Ngô thật viết chữ rất đẹp"
+      }
+    },
+    {
+      "id": "b03b",
+      "sceneId": "s2-calligraphy",
+      "image": "videos/2026/07/15/linglan-ep05/images/s2-calligraphy.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b03b.mp3",
+      "durationMs": 3224,
+      "motion": "ken-burns",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "她",
+          "startMs": 0,
+          "endMs": 290
+        },
+        {
+          "ch": "连",
+          "startMs": 290,
+          "endMs": 581
+        },
+        {
+          "ch": "一",
+          "startMs": 581,
+          "endMs": 871
+        },
+        {
+          "ch": "个",
+          "startMs": 871,
+          "endMs": 1162
+        },
+        {
+          "ch": "沈",
+          "startMs": 1162,
+          "endMs": 1452
+        },
+        {
+          "ch": "字",
+          "startMs": 1452,
+          "endMs": 1742
+        },
+        {
+          "ch": "都",
+          "startMs": 1742,
+          "endMs": 2033
+        },
+        {
+          "ch": "写",
+          "startMs": 2033,
+          "endMs": 2323
+        },
+        {
+          "ch": "不",
+          "startMs": 2323,
+          "endMs": 2614
+        },
+        {
+          "ch": "出",
+          "startMs": 2614,
+          "endMs": 2904
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "còn",
+          "startMs": 0,
+          "endMs": 323
+        },
+        {
+          "w": "cô,",
+          "startMs": 323,
+          "endMs": 645
+        },
+        {
+          "w": "một",
+          "startMs": 645,
+          "endMs": 968
+        },
+        {
+          "w": "chữ",
+          "startMs": 968,
+          "endMs": 1291
+        },
+        {
+          "w": "Thẩm",
+          "startMs": 1291,
+          "endMs": 1613
+        },
+        {
+          "w": "cũng",
+          "startMs": 1613,
+          "endMs": 1936
+        },
+        {
+          "w": "không",
+          "startMs": 1936,
+          "endMs": 2259
+        },
+        {
+          "w": "viết",
+          "startMs": 2259,
+          "endMs": 2581
+        },
+        {
+          "w": "nổi",
+          "startMs": 2581,
+          "endMs": 2904
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "她连一个「沈」字都写不出",
+        "local": "còn cô, một chữ Thẩm cũng không viết nổi"
+      }
+    },
+    {
+      "id": "b04a",
+      "sceneId": "s3-hand",
+      "image": "videos/2026/07/15/linglan-ep05/images/s3-hand.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b04a.mp3",
+      "durationMs": 1888,
+      "motion": "push-in",
+      "inner": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "怎",
+          "startMs": 95,
+          "endMs": 265
+        },
+        {
+          "ch": "么",
+          "startMs": 265,
+          "endMs": 365
+        },
+        {
+          "ch": "办",
+          "startMs": 365,
+          "endMs": 635
+        },
+        {
+          "ch": "怎",
+          "startMs": 905,
+          "endMs": 1075
+        },
+        {
+          "ch": "么",
+          "startMs": 1075,
+          "endMs": 1185
+        },
+        {
+          "ch": "办",
+          "startMs": 1185,
+          "endMs": 1593
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Làm",
+          "startMs": 0,
+          "endMs": 288
+        },
+        {
+          "w": "sao",
+          "startMs": 288,
+          "endMs": 576
+        },
+        {
+          "w": "đây,",
+          "startMs": 576,
+          "endMs": 864
+        },
+        {
+          "w": "làm",
+          "startMs": 864,
+          "endMs": 1152
+        },
+        {
+          "w": "sao",
+          "startMs": 1152,
+          "endMs": 1440
+        },
+        {
+          "w": "đây",
+          "startMs": 1440,
+          "endMs": 1728
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "怎么办，怎么办",
+        "local": "Làm sao đây, làm sao đây"
+      }
+    },
+    {
+      "id": "b04b",
+      "sceneId": "s3-hand",
+      "image": "videos/2026/07/15/linglan-ep05/images/s3-hand.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b04b.mp3",
+      "durationMs": 2272,
+      "motion": "push-in",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "笔",
+          "startMs": 0,
+          "endMs": 352
+        },
+        {
+          "ch": "尖",
+          "startMs": 352,
+          "endMs": 704
+        },
+        {
+          "ch": "悬",
+          "startMs": 704,
+          "endMs": 1056
+        },
+        {
+          "ch": "在",
+          "startMs": 1056,
+          "endMs": 1408
+        },
+        {
+          "ch": "纸",
+          "startMs": 1408,
+          "endMs": 1760
+        },
+        {
+          "ch": "上",
+          "startMs": 1760,
+          "endMs": 2112
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Đầu",
+          "startMs": 0,
+          "endMs": 302
+        },
+        {
+          "w": "bút",
+          "startMs": 302,
+          "endMs": 603
+        },
+        {
+          "w": "treo",
+          "startMs": 603,
+          "endMs": 905
+        },
+        {
+          "w": "lơ",
+          "startMs": 905,
+          "endMs": 1207
+        },
+        {
+          "w": "lửng",
+          "startMs": 1207,
+          "endMs": 1509
+        },
+        {
+          "w": "trên",
+          "startMs": 1509,
+          "endMs": 1810
+        },
+        {
+          "w": "giấy",
+          "startMs": 1810,
+          "endMs": 2112
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "笔尖悬在纸上",
+        "local": "Đầu bút treo lơ lửng trên giấy"
+      }
+    },
+    {
+      "id": "b04c",
+      "sceneId": "s3-hand",
+      "image": "videos/2026/07/15/linglan-ep05/images/s3-hand.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b04c.mp3",
+      "durationMs": 1640,
+      "motion": "push-in",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "抖",
+          "startMs": 0,
+          "endMs": 330
+        },
+        {
+          "ch": "个",
+          "startMs": 330,
+          "endMs": 660
+        },
+        {
+          "ch": "不",
+          "startMs": 660,
+          "endMs": 990
+        },
+        {
+          "ch": "停",
+          "startMs": 990,
+          "endMs": 1320
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "run",
+          "startMs": 0,
+          "endMs": 440
+        },
+        {
+          "w": "không",
+          "startMs": 440,
+          "endMs": 880
+        },
+        {
+          "w": "ngừng",
+          "startMs": 880,
+          "endMs": 1320
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "抖个不停",
+        "local": "run không ngừng"
+      }
+    },
+    {
+      "id": "b05a",
+      "sceneId": "s4-ink",
+      "image": "videos/2026/07/15/linglan-ep05/images/s4-ink.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b05a.mp3",
+      "durationMs": 2896,
+      "motion": "push-in",
+      "narration": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "急",
+          "startMs": 0,
+          "endMs": 684
+        },
+        {
+          "ch": "中",
+          "startMs": 684,
+          "endMs": 1368
+        },
+        {
+          "ch": "生",
+          "startMs": 1368,
+          "endMs": 2052
+        },
+        {
+          "ch": "智",
+          "startMs": 2052,
+          "endMs": 2736
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Trong",
+          "startMs": 0,
+          "endMs": 304
+        },
+        {
+          "w": "lúc",
+          "startMs": 304,
+          "endMs": 608
+        },
+        {
+          "w": "nguy",
+          "startMs": 608,
+          "endMs": 912
+        },
+        {
+          "w": "cấp,",
+          "startMs": 912,
+          "endMs": 1216
+        },
+        {
+          "w": "cô",
+          "startMs": 1216,
+          "endMs": 1520
+        },
+        {
+          "w": "nảy",
+          "startMs": 1520,
+          "endMs": 1824
+        },
+        {
+          "w": "ra",
+          "startMs": 1824,
+          "endMs": 2128
+        },
+        {
+          "w": "một",
+          "startMs": 2128,
+          "endMs": 2432
+        },
+        {
+          "w": "kế",
+          "startMs": 2432,
+          "endMs": 2736
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "急中生智",
+        "local": "Trong lúc nguy cấp, cô nảy ra một kế"
+      }
+    },
+    {
+      "id": "b05b",
+      "sceneId": "s4-ink",
+      "image": "videos/2026/07/15/linglan-ep05/images/s4-ink.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b05b.mp3",
+      "durationMs": 2680,
+      "motion": "push-in",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "她",
+          "startMs": 0,
+          "endMs": 280
+        },
+        {
+          "ch": "装",
+          "startMs": 280,
+          "endMs": 560
+        },
+        {
+          "ch": "作",
+          "startMs": 560,
+          "endMs": 840
+        },
+        {
+          "ch": "手",
+          "startMs": 840,
+          "endMs": 1120
+        },
+        {
+          "ch": "抖",
+          "startMs": 1120,
+          "endMs": 1400
+        },
+        {
+          "ch": "打",
+          "startMs": 1400,
+          "endMs": 1680
+        },
+        {
+          "ch": "翻",
+          "startMs": 1680,
+          "endMs": 1960
+        },
+        {
+          "ch": "了",
+          "startMs": 1960,
+          "endMs": 2240
+        },
+        {
+          "ch": "墨",
+          "startMs": 2240,
+          "endMs": 2520
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Cô",
+          "startMs": 0,
+          "endMs": 280
+        },
+        {
+          "w": "giả",
+          "startMs": 280,
+          "endMs": 560
+        },
+        {
+          "w": "vờ",
+          "startMs": 560,
+          "endMs": 840
+        },
+        {
+          "w": "run",
+          "startMs": 840,
+          "endMs": 1120
+        },
+        {
+          "w": "tay,",
+          "startMs": 1120,
+          "endMs": 1400
+        },
+        {
+          "w": "hất",
+          "startMs": 1400,
+          "endMs": 1680
+        },
+        {
+          "w": "đổ",
+          "startMs": 1680,
+          "endMs": 1960
+        },
+        {
+          "w": "nghiên",
+          "startMs": 1960,
+          "endMs": 2240
+        },
+        {
+          "w": "mực",
+          "startMs": 2240,
+          "endMs": 2520
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "她装作手抖，打翻了墨",
+        "local": "Cô giả vờ run tay, hất đổ nghiên mực"
+      }
+    },
+    {
+      "id": "b06",
+      "sceneId": "s4-ink",
+      "image": "videos/2026/07/15/linglan-ep05/images/s4-ink.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b06.mp3",
+      "durationMs": 1640,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "只",
+          "startMs": 115,
+          "endMs": 295
+        },
+        {
+          "ch": "能",
+          "startMs": 295,
+          "endMs": 485
+        },
+        {
+          "ch": "这",
+          "startMs": 485,
+          "endMs": 675
+        },
+        {
+          "ch": "样",
+          "startMs": 675,
+          "endMs": 815
+        },
+        {
+          "ch": "了",
+          "startMs": 815,
+          "endMs": 1183
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Chỉ",
+          "startMs": 0,
+          "endMs": 264
+        },
+        {
+          "w": "còn",
+          "startMs": 264,
+          "endMs": 528
+        },
+        {
+          "w": "cách",
+          "startMs": 528,
+          "endMs": 792
+        },
+        {
+          "w": "này",
+          "startMs": 792,
+          "endMs": 1056
+        },
+        {
+          "w": "thôi",
+          "startMs": 1056,
+          "endMs": 1320
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "只能这样了",
+        "local": "Chỉ còn cách này thôi"
+      }
+    },
+    {
+      "id": "b07",
+      "sceneId": "s5-wrist",
+      "image": "videos/2026/07/15/linglan-ep05/images/s5-wrist.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b07.mp3",
+      "durationMs": 2488,
+      "motion": "push-in",
+      "narration": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "他",
+          "startMs": 0,
+          "endMs": 259
+        },
+        {
+          "ch": "突",
+          "startMs": 259,
+          "endMs": 517
+        },
+        {
+          "ch": "然",
+          "startMs": 517,
+          "endMs": 776
+        },
+        {
+          "ch": "抓",
+          "startMs": 776,
+          "endMs": 1035
+        },
+        {
+          "ch": "住",
+          "startMs": 1035,
+          "endMs": 1293
+        },
+        {
+          "ch": "她",
+          "startMs": 1293,
+          "endMs": 1552
+        },
+        {
+          "ch": "的",
+          "startMs": 1552,
+          "endMs": 1811
+        },
+        {
+          "ch": "手",
+          "startMs": 1811,
+          "endMs": 2069
+        },
+        {
+          "ch": "腕",
+          "startMs": 2069,
+          "endMs": 2328
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Anh",
+          "startMs": 0,
+          "endMs": 259
+        },
+        {
+          "w": "ta",
+          "startMs": 259,
+          "endMs": 517
+        },
+        {
+          "w": "bất",
+          "startMs": 517,
+          "endMs": 776
+        },
+        {
+          "w": "ngờ",
+          "startMs": 776,
+          "endMs": 1035
+        },
+        {
+          "w": "nắm",
+          "startMs": 1035,
+          "endMs": 1293
+        },
+        {
+          "w": "lấy",
+          "startMs": 1293,
+          "endMs": 1552
+        },
+        {
+          "w": "cổ",
+          "startMs": 1552,
+          "endMs": 1811
+        },
+        {
+          "w": "tay",
+          "startMs": 1811,
+          "endMs": 2069
+        },
+        {
+          "w": "cô",
+          "startMs": 2069,
+          "endMs": 2328
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "他突然抓住她的手腕",
+        "local": "Anh ta bất ngờ nắm lấy cổ tay cô"
+      }
+    },
+    {
+      "id": "b08",
+      "sceneId": "s5-wrist",
+      "image": "videos/2026/07/15/linglan-ep05/images/s5-wrist.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b08.mp3",
+      "durationMs": 2056,
+      "motion": "push-in",
+      "charTimings": [
+        {
+          "ch": "这",
+          "startMs": 195,
+          "endMs": 265
+        },
+        {
+          "ch": "道",
+          "startMs": 265,
+          "endMs": 385
+        },
+        {
+          "ch": "疤",
+          "startMs": 385,
+          "endMs": 685
+        },
+        {
+          "ch": "哪",
+          "startMs": 1185,
+          "endMs": 1285
+        },
+        {
+          "ch": "来",
+          "startMs": 1285,
+          "endMs": 1425
+        },
+        {
+          "ch": "的",
+          "startMs": 1425,
+          "endMs": 1775
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Vết",
+          "startMs": 0,
+          "endMs": 316
+        },
+        {
+          "w": "sẹo",
+          "startMs": 316,
+          "endMs": 632
+        },
+        {
+          "w": "này",
+          "startMs": 632,
+          "endMs": 948
+        },
+        {
+          "w": "ở",
+          "startMs": 948,
+          "endMs": 1264
+        },
+        {
+          "w": "đâu",
+          "startMs": 1264,
+          "endMs": 1580
+        },
+        {
+          "w": "ra",
+          "startMs": 1580,
+          "endMs": 1896
+        }
+      ],
+      "captions": {
+        "pinyin": "zhè dào bā nǎ lái de",
+        "zh": "这道疤，哪来的",
+        "local": "Vết sẹo này ở đâu ra"
+      }
+    },
+    {
+      "id": "b09a",
+      "sceneId": "s5-wrist",
+      "image": "videos/2026/07/15/linglan-ep05/images/s5-wrist.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b09a.mp3",
+      "durationMs": 1744,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "他",
+          "startMs": 105,
+          "endMs": 255
+        },
+        {
+          "ch": "在",
+          "startMs": 255,
+          "endMs": 355
+        },
+        {
+          "ch": "看",
+          "startMs": 355,
+          "endMs": 555
+        },
+        {
+          "ch": "我",
+          "startMs": 555,
+          "endMs": 655
+        },
+        {
+          "ch": "的",
+          "startMs": 655,
+          "endMs": 735
+        },
+        {
+          "ch": "手",
+          "startMs": 735,
+          "endMs": 1045
+        },
+        {
+          "ch": "腕",
+          "startMs": 1045,
+          "endMs": 1461
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Anh",
+          "startMs": 0,
+          "endMs": 226
+        },
+        {
+          "w": "ta",
+          "startMs": 226,
+          "endMs": 453
+        },
+        {
+          "w": "đang",
+          "startMs": 453,
+          "endMs": 679
+        },
+        {
+          "w": "nhìn",
+          "startMs": 679,
+          "endMs": 905
+        },
+        {
+          "w": "cổ",
+          "startMs": 905,
+          "endMs": 1131
+        },
+        {
+          "w": "tay",
+          "startMs": 1131,
+          "endMs": 1358
+        },
+        {
+          "w": "tôi",
+          "startMs": 1358,
+          "endMs": 1584
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "他在看我的手腕",
+        "local": "Anh ta đang nhìn cổ tay tôi"
+      }
+    },
+    {
+      "id": "b09b",
+      "sceneId": "s5-wrist",
+      "image": "videos/2026/07/15/linglan-ep05/images/s5-wrist.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b09b.mp3",
+      "durationMs": 1768,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "我",
+          "startMs": 115,
+          "endMs": 215
+        },
+        {
+          "ch": "从",
+          "startMs": 215,
+          "endMs": 425
+        },
+        {
+          "ch": "没",
+          "startMs": 425,
+          "endMs": 545
+        },
+        {
+          "ch": "见",
+          "startMs": 545,
+          "endMs": 745
+        },
+        {
+          "ch": "过",
+          "startMs": 745,
+          "endMs": 825
+        },
+        {
+          "ch": "这",
+          "startMs": 825,
+          "endMs": 945
+        },
+        {
+          "ch": "道",
+          "startMs": 945,
+          "endMs": 1085
+        },
+        {
+          "ch": "疤",
+          "startMs": 1085,
+          "endMs": 1532
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Tôi",
+          "startMs": 0,
+          "endMs": 230
+        },
+        {
+          "w": "chưa",
+          "startMs": 230,
+          "endMs": 459
+        },
+        {
+          "w": "từng",
+          "startMs": 459,
+          "endMs": 689
+        },
+        {
+          "w": "thấy",
+          "startMs": 689,
+          "endMs": 919
+        },
+        {
+          "w": "vết",
+          "startMs": 919,
+          "endMs": 1149
+        },
+        {
+          "w": "sẹo",
+          "startMs": 1149,
+          "endMs": 1378
+        },
+        {
+          "w": "này",
+          "startMs": 1378,
+          "endMs": 1608
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "我从没见过这道疤",
+        "local": "Tôi chưa từng thấy vết sẹo này"
+      }
+    },
+    {
+      "id": "b10a",
+      "sceneId": "s5-wrist",
+      "image": "videos/2026/07/15/linglan-ep05/images/s5-wrist.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b10a.mp3",
+      "durationMs": 2896,
+      "motion": "pull-back",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "原",
+          "startMs": 0,
+          "endMs": 391
+        },
+        {
+          "ch": "主",
+          "startMs": 391,
+          "endMs": 782
+        },
+        {
+          "ch": "没",
+          "startMs": 782,
+          "endMs": 1173
+        },
+        {
+          "ch": "有",
+          "startMs": 1173,
+          "endMs": 1563
+        },
+        {
+          "ch": "的",
+          "startMs": 1563,
+          "endMs": 1954
+        },
+        {
+          "ch": "旧",
+          "startMs": 1954,
+          "endMs": 2345
+        },
+        {
+          "ch": "疤",
+          "startMs": 2345,
+          "endMs": 2736
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Vết",
+          "startMs": 0,
+          "endMs": 304
+        },
+        {
+          "w": "sẹo",
+          "startMs": 304,
+          "endMs": 608
+        },
+        {
+          "w": "cũ",
+          "startMs": 608,
+          "endMs": 912
+        },
+        {
+          "w": "mà",
+          "startMs": 912,
+          "endMs": 1216
+        },
+        {
+          "w": "Thanh",
+          "startMs": 1216,
+          "endMs": 1520
+        },
+        {
+          "w": "Ngô",
+          "startMs": 1520,
+          "endMs": 1824
+        },
+        {
+          "w": "thật",
+          "startMs": 1824,
+          "endMs": 2128
+        },
+        {
+          "w": "không",
+          "startMs": 2128,
+          "endMs": 2432
+        },
+        {
+          "w": "có",
+          "startMs": 2432,
+          "endMs": 2736
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "原主没有的旧疤",
+        "local": "Vết sẹo cũ mà Thanh Ngô thật không có"
+      }
+    },
+    {
+      "id": "b10b",
+      "sceneId": "s5-wrist",
+      "image": "videos/2026/07/15/linglan-ep05/images/s5-wrist.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b10b.mp3",
+      "durationMs": 2512,
+      "motion": "pull-back",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "为",
+          "startMs": 0,
+          "endMs": 261
+        },
+        {
+          "ch": "什",
+          "startMs": 261,
+          "endMs": 523
+        },
+        {
+          "ch": "么",
+          "startMs": 523,
+          "endMs": 784
+        },
+        {
+          "ch": "会",
+          "startMs": 784,
+          "endMs": 1045
+        },
+        {
+          "ch": "在",
+          "startMs": 1045,
+          "endMs": 1307
+        },
+        {
+          "ch": "她",
+          "startMs": 1307,
+          "endMs": 1568
+        },
+        {
+          "ch": "手",
+          "startMs": 1568,
+          "endMs": 1829
+        },
+        {
+          "ch": "腕",
+          "startMs": 1829,
+          "endMs": 2091
+        },
+        {
+          "ch": "上",
+          "startMs": 2091,
+          "endMs": 2352
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "sao",
+          "startMs": 0,
+          "endMs": 336
+        },
+        {
+          "w": "lại",
+          "startMs": 336,
+          "endMs": 672
+        },
+        {
+          "w": "nằm",
+          "startMs": 672,
+          "endMs": 1008
+        },
+        {
+          "w": "trên",
+          "startMs": 1008,
+          "endMs": 1344
+        },
+        {
+          "w": "cổ",
+          "startMs": 1344,
+          "endMs": 1680
+        },
+        {
+          "w": "tay",
+          "startMs": 1680,
+          "endMs": 2016
+        },
+        {
+          "w": "cô",
+          "startMs": 2016,
+          "endMs": 2352
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "为什么会在她手腕上",
+        "local": "sao lại nằm trên cổ tay cô"
+      }
+    },
+    {
+      "id": "b10c",
+      "sceneId": "s5-wrist",
+      "image": "videos/2026/07/15/linglan-ep05/images/s5-wrist.png",
+      "audio": "videos/2026/07/15/linglan-ep05/audio/b10c.mp3",
+      "durationMs": 2024,
+      "motion": "pull-back",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "关",
+          "startMs": 0,
+          "endMs": 341
+        },
+        {
+          "ch": "注",
+          "startMs": 341,
+          "endMs": 682
+        },
+        {
+          "ch": "看",
+          "startMs": 682,
+          "endMs": 1022
+        },
+        {
+          "ch": "下",
+          "startMs": 1022,
+          "endMs": 1363
+        },
+        {
+          "ch": "集",
+          "startMs": 1363,
+          "endMs": 1704
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Theo",
+          "startMs": 0,
+          "endMs": 341
+        },
+        {
+          "w": "dõi",
+          "startMs": 341,
+          "endMs": 682
+        },
+        {
+          "w": "tập",
+          "startMs": 682,
+          "endMs": 1022
+        },
+        {
+          "w": "sau",
+          "startMs": 1022,
+          "endMs": 1363
+        },
+        {
+          "w": "nhé",
+          "startMs": 1363,
+          "endMs": 1704
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "关注，看下集",
+        "local": "Theo dõi tập sau nhé"
+      }
+    }
+  ]
+}
