@@ -224,211 +224,414 @@
   },
   "beats": [
     {
-      "id": "b01",
+      "id": "b01a",
       "sceneId": "s1-drown",
       "image": "videos/2026/07/15/linglan-ep01/images/s1-drown.png",
-      "audio": "videos/2026/07/15/linglan-ep01/audio/b01.mp3",
-      "durationMs": 4616,
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b01a.mp3",
+      "durationMs": 2224,
       "motion": "push-in",
+      "narration": true,
       "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "那",
+          "startMs": 0,
+          "endMs": 295
+        },
+        {
+          "ch": "夜",
+          "startMs": 295,
+          "endMs": 590
+        },
+        {
+          "ch": "在",
+          "startMs": 590,
+          "endMs": 885
+        },
+        {
+          "ch": "大",
+          "startMs": 885,
+          "endMs": 1179
+        },
+        {
+          "ch": "叻",
+          "startMs": 1179,
+          "endMs": 1474
+        },
+        {
+          "ch": "夜",
+          "startMs": 1474,
+          "endMs": 1769
+        },
+        {
+          "ch": "市",
+          "startMs": 1769,
+          "endMs": 2064
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "那夜，在大叻夜市",
+        "local": "Đêm ấy, ở chợ đêm Đà Lạt,"
+      }
+    },
+    {
+      "id": "b01b",
+      "sceneId": "s1-drown",
+      "image": "videos/2026/07/15/linglan-ep01/images/s1-drown.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b01b.mp3",
+      "durationMs": 3008,
+      "motion": "push-in",
+      "narration": true,
       "charTimings": [
         {
           "ch": "卖",
           "startMs": 0,
-          "endMs": 430
+          "endMs": 269
         },
         {
           "ch": "花",
-          "startMs": 430,
-          "endMs": 859
+          "startMs": 269,
+          "endMs": 538
         },
         {
           "ch": "姑",
-          "startMs": 859,
-          "endMs": 1289
+          "startMs": 538,
+          "endMs": 806
         },
         {
           "ch": "娘",
-          "startMs": 1289,
-          "endMs": 1718
+          "startMs": 806,
+          "endMs": 1075
         },
         {
           "ch": "灵",
-          "startMs": 1718,
-          "endMs": 2148
+          "startMs": 1075,
+          "endMs": 1344
         },
         {
           "ch": "兰",
-          "startMs": 2148,
-          "endMs": 2578
+          "startMs": 1344,
+          "endMs": 1613
         },
         {
           "ch": "坠",
-          "startMs": 2578,
-          "endMs": 3007
+          "startMs": 1613,
+          "endMs": 1882
         },
         {
           "ch": "入",
-          "startMs": 3007,
-          "endMs": 3437
+          "startMs": 1882,
+          "endMs": 2150
         },
         {
           "ch": "湖",
-          "startMs": 3437,
-          "endMs": 3866
+          "startMs": 2150,
+          "endMs": 2419
         },
         {
           "ch": "中",
-          "startMs": 3866,
-          "endMs": 4296
+          "startMs": 2419,
+          "endMs": 2688
         }
       ],
       "captions": {
         "pinyin": "",
         "zh": "卖花姑娘灵兰坠入湖中",
-        "local": "Đêm ấy ở chợ đêm Đà Lạt, cô gái bán hoa Linh Lan ngã xuống hồ…"
+        "local": "cô gái bán hoa Linh Lan ngã xuống hồ…"
       }
     },
     {
-      "id": "b02",
+      "id": "b02a",
       "sceneId": "s2-wedroom",
       "image": "videos/2026/07/15/linglan-ep01/images/s2-wedroom.png",
-      "audio": "videos/2026/07/15/linglan-ep01/audio/b02.mp3",
-      "durationMs": 5032,
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b02a.mp3",
+      "durationMs": 3424,
       "motion": "push-in",
+      "narration": true,
       "transitionIn": "fade",
       "charTimings": [
         {
-          "ch": "她",
+          "ch": "睁",
           "startMs": 0,
-          "endMs": 696
+          "endMs": 326
+        },
+        {
+          "ch": "开",
+          "startMs": 326,
+          "endMs": 653
+        },
+        {
+          "ch": "眼",
+          "startMs": 653,
+          "endMs": 979
+        },
+        {
+          "ch": "她",
+          "startMs": 979,
+          "endMs": 1306
         },
         {
           "ch": "成",
-          "startMs": 696,
-          "endMs": 1392
+          "startMs": 1306,
+          "endMs": 1632
         },
         {
           "ch": "了",
-          "startMs": 1392,
-          "endMs": 2088
+          "startMs": 1632,
+          "endMs": 1958
         },
         {
           "ch": "豪",
-          "startMs": 2088,
-          "endMs": 2784
+          "startMs": 1958,
+          "endMs": 2285
         },
         {
           "ch": "门",
-          "startMs": 2784,
-          "endMs": 3480
+          "startMs": 2285,
+          "endMs": 2611
         },
         {
           "ch": "新",
-          "startMs": 3480,
-          "endMs": 4176
+          "startMs": 2611,
+          "endMs": 2938
         },
         {
           "ch": "娘",
-          "startMs": 4176,
-          "endMs": 4872
+          "startMs": 2938,
+          "endMs": 3264
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "她成了豪门新娘",
-        "local": "…Mở mắt ra, cô đã thành tân nương hào môn — trong thân xác một người khác."
+        "zh": "睁开眼，她成了豪门新娘",
+        "local": "Mở mắt ra, cô đã thành tân nương hào môn,"
       }
     },
     {
-      "id": "b03",
+      "id": "b02b",
       "sceneId": "s2-wedroom",
       "image": "videos/2026/07/15/linglan-ep01/images/s2-wedroom.png",
-      "audio": "videos/2026/07/15/linglan-ep01/audio/b03.mp3",
-      "durationMs": 3800,
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b02b.mp3",
+      "durationMs": 2224,
+      "motion": "push-in",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "身",
+          "startMs": 0,
+          "endMs": 258
+        },
+        {
+          "ch": "在",
+          "startMs": 258,
+          "endMs": 516
+        },
+        {
+          "ch": "别",
+          "startMs": 516,
+          "endMs": 774
+        },
+        {
+          "ch": "人",
+          "startMs": 774,
+          "endMs": 1032
+        },
+        {
+          "ch": "的",
+          "startMs": 1032,
+          "endMs": 1290
+        },
+        {
+          "ch": "身",
+          "startMs": 1290,
+          "endMs": 1548
+        },
+        {
+          "ch": "体",
+          "startMs": 1548,
+          "endMs": 1806
+        },
+        {
+          "ch": "里",
+          "startMs": 1806,
+          "endMs": 2064
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "身在别人的身体里",
+        "local": "trong thân xác một người khác."
+      }
+    },
+    {
+      "id": "b03a",
+      "sceneId": "s2-wedroom",
+      "image": "videos/2026/07/15/linglan-ep01/images/s2-wedroom.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b03a.mp3",
+      "durationMs": 1816,
       "motion": "ken-burns",
+      "narration": true,
       "charTimings": [
         {
           "ch": "这",
           "startMs": 0,
-          "endMs": 580
+          "endMs": 331
         },
         {
-          "ch": "不",
-          "startMs": 580,
-          "endMs": 1160
+          "ch": "里",
+          "startMs": 331,
+          "endMs": 662
         },
         {
           "ch": "是",
-          "startMs": 1160,
-          "endMs": 1740
+          "startMs": 662,
+          "endMs": 994
+        },
+        {
+          "ch": "哪",
+          "startMs": 994,
+          "endMs": 1325
+        },
+        {
+          "ch": "儿",
+          "startMs": 1325,
+          "endMs": 1656
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "这里……是哪儿？",
+        "local": "Đây là… đâu?"
+      }
+    },
+    {
+      "id": "b03b",
+      "sceneId": "s2-wedroom",
+      "image": "videos/2026/07/15/linglan-ep01/images/s2-wedroom.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b03b.mp3",
+      "durationMs": 2384,
+      "motion": "ken-burns",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "这",
+          "startMs": 0,
+          "endMs": 344
+        },
+        {
+          "ch": "不",
+          "startMs": 344,
+          "endMs": 688
+        },
+        {
+          "ch": "是",
+          "startMs": 688,
+          "endMs": 1032
         },
         {
           "ch": "我",
-          "startMs": 1740,
-          "endMs": 2320
+          "startMs": 1032,
+          "endMs": 1376
         },
         {
           "ch": "的",
-          "startMs": 2320,
-          "endMs": 2900
+          "startMs": 1376,
+          "endMs": 1720
         },
         {
           "ch": "手",
-          "startMs": 2900,
-          "endMs": 3480
+          "startMs": 1720,
+          "endMs": 2064
         }
       ],
       "captions": {
         "pinyin": "",
         "zh": "这不是我的手",
-        "local": "Đây là… đâu? Đây không phải bàn tay của tôi."
+        "local": "Đây không phải bàn tay của tôi."
       }
     },
     {
-      "id": "b04",
+      "id": "b04a",
       "sceneId": "s3-mirror",
       "image": "videos/2026/07/15/linglan-ep01/images/s3-mirror.png",
-      "audio": "videos/2026/07/15/linglan-ep01/audio/b04.mp3",
-      "durationMs": 2792,
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b04a.mp3",
+      "durationMs": 1432,
       "motion": "push-in",
+      "narration": true,
       "transitionIn": "fade",
       "charTimings": [
         {
           "ch": "镜",
           "startMs": 0,
-          "endMs": 412
+          "endMs": 254
         },
         {
           "ch": "子",
-          "startMs": 412,
-          "endMs": 824
+          "startMs": 254,
+          "endMs": 509
         },
         {
           "ch": "里",
-          "startMs": 824,
-          "endMs": 1236
+          "startMs": 509,
+          "endMs": 763
         },
         {
-          "ch": "不",
-          "startMs": 1236,
-          "endMs": 1648
+          "ch": "的",
+          "startMs": 763,
+          "endMs": 1018
         },
         {
-          "ch": "是",
-          "startMs": 1648,
-          "endMs": 2060
-        },
-        {
-          "ch": "我",
-          "startMs": 2060,
-          "endMs": 2472
+          "ch": "人",
+          "startMs": 1018,
+          "endMs": 1272
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "镜子里不是我",
-        "local": "Người trong gương… không phải là tôi!"
+        "zh": "镜子里的人……",
+        "local": "Người trong gương…"
+      }
+    },
+    {
+      "id": "b04b",
+      "sceneId": "s3-mirror",
+      "image": "videos/2026/07/15/linglan-ep01/images/s3-mirror.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b04b.mp3",
+      "durationMs": 1976,
+      "motion": "push-in",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "根",
+          "startMs": 0,
+          "endMs": 331
+        },
+        {
+          "ch": "本",
+          "startMs": 331,
+          "endMs": 662
+        },
+        {
+          "ch": "不",
+          "startMs": 662,
+          "endMs": 994
+        },
+        {
+          "ch": "是",
+          "startMs": 994,
+          "endMs": 1325
+        },
+        {
+          "ch": "我",
+          "startMs": 1325,
+          "endMs": 1656
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "根本不是我",
+        "local": "không phải là tôi!"
       }
     },
     {
@@ -463,114 +666,208 @@
       }
     },
     {
-      "id": "b06",
+      "id": "b06a",
       "sceneId": "s4-husband",
       "image": "videos/2026/07/15/linglan-ep01/images/s4-husband.png",
-      "audio": "videos/2026/07/15/linglan-ep01/audio/b06.mp3",
-      "durationMs": 4208,
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b06a.mp3",
+      "durationMs": 1648,
       "motion": "push-in",
+      "narration": true,
       "charTimings": [
         {
-          "ch": "我",
+          "ch": "他",
           "startMs": 0,
-          "endMs": 486
+          "endMs": 298
         },
         {
-          "ch": "一",
-          "startMs": 486,
-          "endMs": 972
+          "ch": "在",
+          "startMs": 298,
+          "endMs": 595
         },
         {
-          "ch": "个",
-          "startMs": 972,
-          "endMs": 1458
+          "ch": "说",
+          "startMs": 595,
+          "endMs": 893
         },
         {
-          "ch": "字",
-          "startMs": 1458,
-          "endMs": 1944
+          "ch": "什",
+          "startMs": 893,
+          "endMs": 1190
         },
         {
-          "ch": "也",
-          "startMs": 1944,
-          "endMs": 2430
-        },
-        {
-          "ch": "听",
-          "startMs": 2430,
-          "endMs": 2916
-        },
-        {
-          "ch": "不",
-          "startMs": 2916,
-          "endMs": 3402
-        },
-        {
-          "ch": "懂",
-          "startMs": 3402,
-          "endMs": 3888
+          "ch": "么",
+          "startMs": 1190,
+          "endMs": 1488
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "我一个字也听不懂",
-        "local": "Anh ta nói gì? Tôi… không hiểu nổi một chữ nào."
+        "zh": "他在说什么？",
+        "local": "Anh ta nói gì?"
       }
     },
     {
-      "id": "b07",
+      "id": "b06b",
+      "sceneId": "s4-husband",
+      "image": "videos/2026/07/15/linglan-ep01/images/s4-husband.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b06b.mp3",
+      "durationMs": 2384,
+      "motion": "push-in",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "我",
+          "startMs": 0,
+          "endMs": 258
+        },
+        {
+          "ch": "一",
+          "startMs": 258,
+          "endMs": 516
+        },
+        {
+          "ch": "个",
+          "startMs": 516,
+          "endMs": 774
+        },
+        {
+          "ch": "字",
+          "startMs": 774,
+          "endMs": 1032
+        },
+        {
+          "ch": "都",
+          "startMs": 1032,
+          "endMs": 1290
+        },
+        {
+          "ch": "听",
+          "startMs": 1290,
+          "endMs": 1548
+        },
+        {
+          "ch": "不",
+          "startMs": 1548,
+          "endMs": 1806
+        },
+        {
+          "ch": "懂",
+          "startMs": 1806,
+          "endMs": 2064
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "我一个字都听不懂",
+        "local": "Tôi không hiểu nổi một chữ nào."
+      }
+    },
+    {
+      "id": "b07a",
       "sceneId": "s5-detail",
       "image": "videos/2026/07/15/linglan-ep01/images/s5-detail.png",
-      "audio": "videos/2026/07/15/linglan-ep01/audio/b07.mp3",
-      "durationMs": 4376,
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b07a.mp3",
+      "durationMs": 2224,
       "motion": "ken-burns",
+      "narration": true,
       "transitionIn": "fade",
       "charTimings": [
         {
           "ch": "她",
           "startMs": 0,
-          "endMs": 507
+          "endMs": 258
+        },
+        {
+          "ch": "第",
+          "startMs": 258,
+          "endMs": 516
         },
         {
           "ch": "一",
-          "startMs": 507,
-          "endMs": 1014
+          "startMs": 516,
+          "endMs": 774
         },
         {
-          "ch": "个",
-          "startMs": 1014,
-          "endMs": 1521
-        },
-        {
-          "ch": "字",
-          "startMs": 1521,
-          "endMs": 2028
-        },
-        {
-          "ch": "也",
-          "startMs": 2028,
-          "endMs": 2535
+          "ch": "次",
+          "startMs": 774,
+          "endMs": 1032
         },
         {
           "ch": "听",
-          "startMs": 2535,
-          "endMs": 3042
+          "startMs": 1032,
+          "endMs": 1290
         },
         {
-          "ch": "不",
-          "startMs": 3042,
-          "endMs": 3549
+          "ch": "见",
+          "startMs": 1290,
+          "endMs": 1548
         },
         {
-          "ch": "懂",
-          "startMs": 3549,
-          "endMs": 4056
+          "ch": "中",
+          "startMs": 1548,
+          "endMs": 1806
+        },
+        {
+          "ch": "文",
+          "startMs": 1806,
+          "endMs": 2064
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "她一个字也听不懂",
-        "local": "Đó là câu đầu tiên cô nghe ở Trung Quốc — nhưng cô không hiểu, dù chỉ một chữ."
+        "zh": "她第一次听见中文",
+        "local": "Lần đầu cô nghe thấy tiếng Trung,"
+      }
+    },
+    {
+      "id": "b07b",
+      "sceneId": "s5-detail",
+      "image": "videos/2026/07/15/linglan-ep01/images/s5-detail.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b07b.mp3",
+      "durationMs": 2384,
+      "motion": "ken-burns",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "却",
+          "startMs": 0,
+          "endMs": 295
+        },
+        {
+          "ch": "一",
+          "startMs": 295,
+          "endMs": 590
+        },
+        {
+          "ch": "个",
+          "startMs": 590,
+          "endMs": 885
+        },
+        {
+          "ch": "字",
+          "startMs": 885,
+          "endMs": 1179
+        },
+        {
+          "ch": "也",
+          "startMs": 1179,
+          "endMs": 1474
+        },
+        {
+          "ch": "不",
+          "startMs": 1474,
+          "endMs": 1769
+        },
+        {
+          "ch": "懂",
+          "startMs": 1769,
+          "endMs": 2064
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "却一个字也不懂",
+        "local": "mà không hiểu nổi một chữ."
       }
     },
     {
@@ -630,115 +927,383 @@
       }
     },
     {
-      "id": "b09",
+      "id": "b09a",
       "sceneId": "s7-fear",
       "image": "videos/2026/07/15/linglan-ep01/images/s7-fear.png",
-      "audio": "videos/2026/07/15/linglan-ep01/audio/b09.mp3",
-      "durationMs": 3992,
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b09a.mp3",
+      "durationMs": 1240,
       "motion": "push-in",
+      "narration": true,
       "transitionIn": "fade",
       "charTimings": [
         {
           "ch": "医",
           "startMs": 0,
-          "endMs": 525
+          "endMs": 540
         },
         {
           "ch": "生",
-          "startMs": 525,
-          "endMs": 1049
-        },
-        {
-          "ch": "一",
-          "startMs": 1049,
-          "endMs": 1574
-        },
-        {
-          "ch": "来",
-          "startMs": 1574,
-          "endMs": 2098
-        },
-        {
-          "ch": "就",
-          "startMs": 2098,
-          "endMs": 2623
-        },
-        {
-          "ch": "穿",
-          "startMs": 2623,
-          "endMs": 3147
-        },
-        {
-          "ch": "帮",
-          "startMs": 3147,
-          "endMs": 3672
+          "startMs": 540,
+          "endMs": 1080
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "医生一来就穿帮",
-        "local": "'Bác sĩ'…? Bác sĩ đến, họ sẽ biết tôi không phải là cô ấy."
+        "zh": "医生……？",
+        "local": "'Bác sĩ'…?"
       }
     },
     {
-      "id": "b10",
+      "id": "b09b",
+      "sceneId": "s7-fear",
+      "image": "videos/2026/07/15/linglan-ep01/images/s7-fear.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b09b.mp3",
+      "durationMs": 2224,
+      "motion": "push-in",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "医",
+          "startMs": 0,
+          "endMs": 258
+        },
+        {
+          "ch": "生",
+          "startMs": 258,
+          "endMs": 516
+        },
+        {
+          "ch": "一",
+          "startMs": 516,
+          "endMs": 774
+        },
+        {
+          "ch": "来",
+          "startMs": 774,
+          "endMs": 1032
+        },
+        {
+          "ch": "就",
+          "startMs": 1032,
+          "endMs": 1290
+        },
+        {
+          "ch": "会",
+          "startMs": 1290,
+          "endMs": 1548
+        },
+        {
+          "ch": "发",
+          "startMs": 1548,
+          "endMs": 1806
+        },
+        {
+          "ch": "现",
+          "startMs": 1806,
+          "endMs": 2064
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "医生一来，就会发现",
+        "local": "Bác sĩ đến, họ sẽ phát hiện"
+      }
+    },
+    {
+      "id": "b09c",
+      "sceneId": "s7-fear",
+      "image": "videos/2026/07/15/linglan-ep01/images/s7-fear.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b09c.mp3",
+      "durationMs": 1976,
+      "motion": "push-in",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "我",
+          "startMs": 0,
+          "endMs": 276
+        },
+        {
+          "ch": "根",
+          "startMs": 276,
+          "endMs": 552
+        },
+        {
+          "ch": "本",
+          "startMs": 552,
+          "endMs": 828
+        },
+        {
+          "ch": "不",
+          "startMs": 828,
+          "endMs": 1104
+        },
+        {
+          "ch": "是",
+          "startMs": 1104,
+          "endMs": 1380
+        },
+        {
+          "ch": "她",
+          "startMs": 1380,
+          "endMs": 1656
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "我根本不是她",
+        "local": "tôi không phải là cô ấy."
+      }
+    },
+    {
+      "id": "b10a",
       "sceneId": "s8-end",
       "image": "videos/2026/07/15/linglan-ep01/images/s8-end.png",
-      "audio": "videos/2026/07/15/linglan-ep01/audio/b10.mp3",
-      "durationMs": 7808,
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b10a.mp3",
+      "durationMs": 2032,
       "motion": "pull-back",
+      "narration": true,
       "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "越",
+          "startMs": 0,
+          "endMs": 234
+        },
+        {
+          "ch": "南",
+          "startMs": 234,
+          "endMs": 468
+        },
+        {
+          "ch": "姑",
+          "startMs": 468,
+          "endMs": 702
+        },
+        {
+          "ch": "娘",
+          "startMs": 702,
+          "endMs": 936
+        },
+        {
+          "ch": "不",
+          "startMs": 936,
+          "endMs": 1170
+        },
+        {
+          "ch": "懂",
+          "startMs": 1170,
+          "endMs": 1404
+        },
+        {
+          "ch": "中",
+          "startMs": 1404,
+          "endMs": 1638
+        },
+        {
+          "ch": "文",
+          "startMs": 1638,
+          "endMs": 1872
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "越南姑娘不懂中文",
+        "local": "Cô gái Việt không biết tiếng Trung,"
+      }
+    },
+    {
+      "id": "b10b",
+      "sceneId": "s8-end",
+      "image": "videos/2026/07/15/linglan-ep01/images/s8-end.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b10b.mp3",
+      "durationMs": 2632,
+      "motion": "pull-back",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "却",
+          "startMs": 0,
+          "endMs": 309
+        },
+        {
+          "ch": "要",
+          "startMs": 309,
+          "endMs": 618
+        },
+        {
+          "ch": "冒",
+          "startMs": 618,
+          "endMs": 927
+        },
+        {
+          "ch": "充",
+          "startMs": 927,
+          "endMs": 1236
+        },
+        {
+          "ch": "豪",
+          "startMs": 1236,
+          "endMs": 1545
+        },
+        {
+          "ch": "门",
+          "startMs": 1545,
+          "endMs": 1854
+        },
+        {
+          "ch": "夫",
+          "startMs": 1854,
+          "endMs": 2163
+        },
+        {
+          "ch": "人",
+          "startMs": 2163,
+          "endMs": 2472
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "却要冒充豪门夫人",
+        "local": "lại phải giả làm phu nhân hào môn."
+      }
+    },
+    {
+      "id": "b10c",
+      "sceneId": "s8-end",
+      "image": "videos/2026/07/15/linglan-ep01/images/s8-end.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b10c.mp3",
+      "durationMs": 1816,
+      "motion": "pull-back",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "明",
+          "startMs": 0,
+          "endMs": 276
+        },
+        {
+          "ch": "天",
+          "startMs": 276,
+          "endMs": 552
+        },
+        {
+          "ch": "医",
+          "startMs": 552,
+          "endMs": 828
+        },
+        {
+          "ch": "生",
+          "startMs": 828,
+          "endMs": 1104
+        },
+        {
+          "ch": "就",
+          "startMs": 1104,
+          "endMs": 1380
+        },
+        {
+          "ch": "来",
+          "startMs": 1380,
+          "endMs": 1656
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "明天医生就来",
+        "local": "Ngày mai bác sĩ sẽ đến —"
+      }
+    },
+    {
+      "id": "b10d",
+      "sceneId": "s8-end",
+      "image": "videos/2026/07/15/linglan-ep01/images/s8-end.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b10d.mp3",
+      "durationMs": 1816,
+      "motion": "pull-back",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "她",
+          "startMs": 0,
+          "endMs": 237
+        },
+        {
+          "ch": "该",
+          "startMs": 237,
+          "endMs": 473
+        },
+        {
+          "ch": "怎",
+          "startMs": 473,
+          "endMs": 710
+        },
+        {
+          "ch": "么",
+          "startMs": 710,
+          "endMs": 946
+        },
+        {
+          "ch": "活",
+          "startMs": 946,
+          "endMs": 1183
+        },
+        {
+          "ch": "下",
+          "startMs": 1183,
+          "endMs": 1419
+        },
+        {
+          "ch": "去",
+          "startMs": 1419,
+          "endMs": 1656
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "她该怎么活下去？",
+        "local": "cô sẽ sống sót thế nào?"
+      }
+    },
+    {
+      "id": "b10e",
+      "sceneId": "s8-end",
+      "image": "videos/2026/07/15/linglan-ep01/images/s8-end.png",
+      "audio": "videos/2026/07/15/linglan-ep01/audio/b10e.mp3",
+      "durationMs": 2216,
+      "motion": "pull-back",
+      "narration": true,
       "charTimings": [
         {
           "ch": "关",
           "startMs": 0,
-          "endMs": 832
+          "endMs": 379
         },
         {
           "ch": "注",
-          "startMs": 832,
-          "endMs": 1664
+          "startMs": 379,
+          "endMs": 758
         },
         {
           "ch": "看",
-          "startMs": 1664,
-          "endMs": 2496
-        },
-        {
-          "ch": "她",
-          "startMs": 2496,
-          "endMs": 3328
-        },
-        {
-          "ch": "怎",
-          "startMs": 3328,
-          "endMs": 4160
-        },
-        {
-          "ch": "么",
-          "startMs": 4160,
-          "endMs": 4992
-        },
-        {
-          "ch": "活",
-          "startMs": 4992,
-          "endMs": 5824
+          "startMs": 758,
+          "endMs": 1138
         },
         {
           "ch": "下",
-          "startMs": 5824,
-          "endMs": 6656
+          "startMs": 1138,
+          "endMs": 1517
         },
         {
-          "ch": "去",
-          "startMs": 6656,
-          "endMs": 7488
+          "ch": "集",
+          "startMs": 1517,
+          "endMs": 1896
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "关注，看她怎么活下去",
-        "local": "Một cô gái Việt không biết một chữ tiếng Trung, phải giả làm phu nhân hào môn. Ngày mai bác sĩ đến — cô sẽ sống sót thế nào? Theo dõi tập sau."
+        "zh": "关注，看下集",
+        "local": "Theo dõi tập sau nhé!"
       }
     }
   ]

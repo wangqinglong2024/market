@@ -154,7 +154,7 @@ const SceneDrama: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats
         display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: gapZhLocal,
         transform: `translateY(${capRise}px)`, opacity: capIn,
       }}>
-        {/* 中文对白拍:三行卡拉OK(拼音/中文逐字/越南语)。越南语旁白·独白拍:只渲染越南语行、放大居中。 */}
+        {/* 三行卡拉OK双语(拆句后每句一行放得下):拼音/中文逐字卡拉OK/越南语。长句在 script 里拆成多个顺序拍,播完接下句。 */}
         {active.captions.zh && active.captions.zh.trim() ? (
           <>
             <FitLine maxWidth={maxW} depKey={`zh-${active.id}`}>
@@ -171,7 +171,7 @@ const SceneDrama: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats
           </>
         ) : vi ? (
           <div style={{ width: maxW, textAlign: "center" }}>
-            <span style={{ fontFamily: latinFamily, fontSize: (sizes as { narration?: number }).narration ?? 54, lineHeight: 1.3, color: viColor, fontWeight: 800, whiteSpace: "normal", display: "inline-block" }}>{vi}</span>
+            <span style={{ fontFamily: latinFamily, fontSize: sizes.vi, lineHeight: 1.3, color: viColor, fontWeight: 800, whiteSpace: "normal", display: "inline-block" }}>{vi}</span>
           </div>
         ) : null}
       </div>
