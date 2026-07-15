@@ -8,7 +8,7 @@ import {
 } from "remotion";
 import { useMemo } from "react";
 import { DEFAULT_FONTS, stackCss } from "../fonts";
-import type { Beat, CharTiming, Manifest, LayoutModule, RenderBeat } from "./types";
+import type { Beat, CharTiming, ViWordTiming, Manifest, LayoutModule, RenderBeat } from "./types";
 import { beatFrames, isHan, toRuby, FitLine, EffectsLayer, DEFAULT_MOTION } from "./shared";
 
 const DEF = {
@@ -45,9 +45,9 @@ function toRubyOverride(zh: string, pinyinStr?: string): { c: string; py: string
 const KaraokeRow: React.FC<{
   zh: string; pinyinStr?: string; timings?: CharTiming[]; ms: number;
   sizes: { pinyin: number; zh: number }; columnGap: number; gapPinyinZh: number;
-  pinyinColor: string; zhColor: string; karaokeColor: string; dimColor: string;
-  zhFamily: string; latinFamily: string; zhWeight: number;
-}> = ({ zh, pinyinStr, timings, ms, sizes, columnGap, gapPinyinZh, pinyinColor, zhColor, karaokeColor, dimColor, zhFamily, latinFamily, zhWeight }) => {
+  zhColor: string; karaokeColor: string; dimColor: string;
+  zhFamily: string; pinyinFamily: string; zhWeight: number;
+}> = ({ zh, pinyinStr, timings, ms, sizes, columnGap, gapPinyinZh, zhColor, karaokeColor, dimColor, zhFamily, pinyinFamily, zhWeight }) => {
   const pairs = useMemo(() => toRubyOverride(zh, pinyinStr), [zh, pinyinStr]);
   let hi = 0;
   return (
@@ -65,17 +65,51 @@ const KaraokeRow: React.FC<{
         }
         const e = Math.sin((k * Math.PI) / 2);
         const hot = e > 0.01;
-        const pyCol = hot ? karaokeColor : pinyinColor;
+        // 拼音与汉字同色同步(用户 2026-07-15):当前青色/已读白/未读灰,不再单独用拼音色
         const zhCol = hot ? karaokeColor : read ? zhColor : dimColor;
+        const pyCol = zhCol;
         return (
           <span key={idx} style={{
             display: "inline-flex", flexDirection: "column", alignItems: "center",
             marginRight: idx < pairs.length - 1 ? columnGap : 0,
-            transform: `translateY(${-8 * e}px) scale(${1 + 0.2 * e})`, transformOrigin: "center bottom",
           }}>
-            <span style={{ fontFamily: latinFamily, fontSize: sizes.pinyin, lineHeight: `${sizes.pinyin + 8}px`, height: sizes.pinyin + 8, fontWeight: 800, color: pyCol }}>{p.py}</span>
-            <span style={{ fontFamily: zhFamily, fontSize: sizes.zh, lineHeight: 1.25, fontWeight: zhWeight, color: zhCol, whiteSpace: "pre", marginTop: gapPinyinZh }}>{p.c === " " ? " " : p.c}</span>
+            {/* 拼音只变色不跳动(用户 2026-07-15) */}
+            <span style={{ fontFamily: pinyinFamily, fontSize: sizes.pinyin, lineHeight: `${sizes.pinyin + 8}px`, height: sizes.pinyin + 8, fontWeight: 700, color: pyCol }}>{p.py}</span>
+            {/* 汉字保留逐字弹跳 */}
+            <span style={{
+              fontFamily: zhFamily, fontSize: sizes.zh, lineHeight: 1.25, fontWeight: zhWeight, color: zhCol, whiteSpace: "pre", marginTop: gapPinyinZh,
+              transform: `translateY(${-8 * e}px) scale(${1 + 0.2 * e})`, transformOrigin: "center bottom",
+            }}>{p.c === " " ? " " : p.c}</span>
           </span>
+        );
+      })}
+    </>
+  );
+};
+
+// 越南语行逐词卡拉OK:读到哪个词,该词弹起放大+点亮(build 均匀铺词的 viWordTimings 驱动,与中文行同视觉语言)。
+const ViKaraokeRow: React.FC<{
+  vi: string; timings?: ViWordTiming[]; ms: number;
+  size: number; viColor: string; karaokeColor: string; dimColor: string; latinFamily: string;
+}> = ({ vi, timings, ms, size, viColor, karaokeColor, dimColor, latinFamily }) => {
+  const words = useMemo(() => (timings?.length ? timings.map((t) => t.w) : vi.trim().split(/\s+/).filter(Boolean)), [vi, timings]);
+  return (
+    <>
+      {words.map((w, idx) => {
+        const t = timings?.[idx];
+        let k = 0, read = false;
+        if (t) {
+          if (ms >= t.startMs && ms < t.endMs) k = Math.min(1, (ms - t.startMs) / 90);
+          else if (ms >= t.endMs && ms < t.endMs + 90) k = Math.max(0, 1 - (ms - t.endMs) / 90);
+          if (ms >= t.endMs) read = true;
+        }
+        const e = Math.sin((k * Math.PI) / 2);
+        const col = e > 0.01 ? karaokeColor : read ? viColor : timings ? dimColor : viColor;
+        return (
+          <span key={idx} style={{
+            display: "inline-block", whiteSpace: "pre", marginRight: idx < words.length - 1 ? "0.32em" : 0,
+            fontFamily: latinFamily, fontSize: size, lineHeight: 1.25, fontWeight: 700, color: col,
+          }}>{w}</span>
         );
       })}
     </>
@@ -96,7 +130,6 @@ const SceneDrama: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats
 
   const cap = meta.captions ?? ({} as NonNullable<Manifest["meta"]["captions"]>);
   const sizes = { ...DEF.sizes, ...(cap.sizes || {}) };
-  const pinyinColor = cap.pinyinColor ?? DEF.pinyinColor;
   const zhColor = cap.zhColor ?? DEF.zhColor;
   const viColor = cap.viColor ?? cap.localColor ?? DEF.viColor;
   const karaokeColor = cap.karaokeColor ?? DEF.karaokeColor;
@@ -109,6 +142,7 @@ const SceneDrama: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats
   const fontCfg = { ...DEFAULT_FONTS, ...(meta.fonts || {}) };
   const zhFamily = stackCss(fontCfg.zhStack);
   const latinFamily = stackCss(fontCfg.latinStack);
+  const pinyinFamily = stackCss(fontCfg.pinyinStack ?? fontCfg.latinStack);
   const zhWeight = fontCfg.zhWeight ?? 700;
 
   const region = meta.source?.region ?? { top: 120, height: 720 };
@@ -157,22 +191,28 @@ const SceneDrama: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats
         {/* 三行卡拉OK双语(拆句后每句一行放得下):拼音/中文逐字卡拉OK/越南语。长句在 script 里拆成多个顺序拍,播完接下句。 */}
         {active.captions.zh && active.captions.zh.trim() ? (
           <>
-            <FitLine maxWidth={maxW} depKey={`zh-${active.id}`}>
+            <FitLine maxWidth={maxW} depKey={`zh-${active.id}-${active.inner ? "i" : "s"}`}>
+              {/* 内心思考标记(用户 2026-07-15):💭 表示心想不是开口说 */}
+              {active.inner ? (
+                <span style={{ fontSize: Math.round(sizes.zh * 0.55), marginRight: 20, alignSelf: "center", filter: "grayscale(0.2)", opacity: 0.95 }}>💭</span>
+              ) : null}
               <KaraokeRow zh={active.captions.zh} pinyinStr={active.captions.pinyin} timings={active.charTimings} ms={ms}
                 sizes={sizes} columnGap={columnGap} gapPinyinZh={gapPinyinZh}
-                pinyinColor={pinyinColor} zhColor={zhColor} karaokeColor={karaokeColor} dimColor={dimColor}
-                zhFamily={zhFamily} latinFamily={latinFamily} zhWeight={zhWeight} />
+                zhColor={zhColor} karaokeColor={karaokeColor} dimColor={dimColor}
+                zhFamily={zhFamily} pinyinFamily={pinyinFamily} zhWeight={zhWeight} />
             </FitLine>
             {vi ? (
-              <div style={{ width: maxW, textAlign: "center" }}>
-                <span style={{ fontFamily: latinFamily, fontSize: sizes.vi, lineHeight: 1.25, color: viColor, fontWeight: 800, whiteSpace: "normal", display: "inline-block" }}>{vi}</span>
-              </div>
+              <FitLine maxWidth={maxW} depKey={`vi-${active.id}`}>
+                <ViKaraokeRow vi={vi} timings={active.viWordTimings} ms={ms} size={sizes.vi}
+                  viColor={viColor} karaokeColor={karaokeColor} dimColor={dimColor} latinFamily={latinFamily} />
+              </FitLine>
             ) : null}
           </>
         ) : vi ? (
-          <div style={{ width: maxW, textAlign: "center" }}>
-            <span style={{ fontFamily: latinFamily, fontSize: sizes.vi, lineHeight: 1.3, color: viColor, fontWeight: 800, whiteSpace: "normal", display: "inline-block" }}>{vi}</span>
-          </div>
+          <FitLine maxWidth={maxW} depKey={`vi-${active.id}`}>
+            <ViKaraokeRow vi={vi} timings={active.viWordTimings} ms={ms} size={sizes.vi}
+              viColor={viColor} karaokeColor={karaokeColor} dimColor={dimColor} latinFamily={latinFamily} />
+          </FitLine>
         ) : null}
       </div>
 

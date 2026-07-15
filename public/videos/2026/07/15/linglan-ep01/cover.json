@@ -1,0 +1,19 @@
+{
+  "_comment": "海报式封面 props(render-rules 10,封面=海报一张图)。底图=fal 单独新出的 3:4 竖图(images/poster.png,不与视频画面重复,紧扣主题:红嫁衣+夜湖+铃兰花)。层级:系列名(竖排)+印章E01 / 卷标题 / 章主题名(主标题) / 当集钩子标题(红条)。",
+  "image": "videos/2026/07/15/linglan-ep01/images/poster.png",
+  "focusY": 0.22,
+  "tag": "铃兰穿越记",
+  "tagVi": "Xuyên Không Thành Phu Nhân Hào Môn",
+  "seal": "E01",
+  "volume": { "zh": "卷一 · 惊醒", "vi": "Quyển 1 · Tỉnh Giấc" },
+  "chapter": {
+    "py": "yì zhēng yǎn chéng le zhōng guó xīn niáng",
+    "zh": "一睁眼，成了中国新娘",
+    "vi": "Mở mắt ra thành cô dâu Trung Quốc"
+  },
+  "episode": {
+    "py": "míng tiān yī shēng yì lái tā jiù wán le",
+    "zh": "明天医生一来，她就完了",
+    "vi": "Mai bác sĩ đến là cô ấy tiêu đời"
+  }
+}

@@ -17,11 +17,17 @@
 `vi_female_hong_uranus_bigtts`（通用/客服）、`vi_female_partner_uranus_bigtts`（配音/客服）、`vi_female_wu_uranus_bigtts`（通用/配音）。
 来源：[火山引擎豆包语音·音色列表](https://www.volcengine.com/docs/6561/1257544)。
 
-## 二、中文音色（旧模板在用，已验证）
+## 二、中文音色（已实测 ✅ 2026-07-15，样品=`<中文名>__<voice_type>.mp3`）
 
-| voice_type | 说明 |
-|---|---|
-| `zh_female_kailangjiejie_moon_bigtts` | 开朗姐姐。读中文稳；也能读越南语文本但**语速慢、非母语感**（已被越南语音色取代，勿再用于越语旁白） |
+| voice_type | 中文名 | 状态/用途 |
+|---|---|---|
+| `zh_female_kailangjiejie_moon_bigtts` | 开朗姐姐 | ✅ 旧模板在用；读越语慢、非母语感，勿用于越语旁白 |
+| `zh_female_wenrouxiaoya_moon_bigtts` | 温柔小雅 | ✅ chinese-drama 女主(说中文+内心思考) |
+| `zh_female_roumeinvyou_emo_v2_mars_bigtts` | 柔美女友 | ✅ chinese-drama 小桃（moon 版无此音色） |
+| `zh_female_xinlingjitang_moon_bigtts` | 心灵鸡汤 | ✅ chinese-drama 柳梦烟。⚠️ mars 版未开通(3001) |
+| `zh_female_zhixingnvsheng_mars_bigtts` | 知性女生 | ✅ chinese-drama 温晚晴。⚠️ **moon 版未开通(3001)，别写 moon** |
+| `zh_female_lingling_uranus_bigtts` | 玲玲姐姐 | ✅ chinese-drama 沈玉柔（用户 2026-07-15 给 ID）。⚠️ 不返回字级时间戳→卡拉OK均匀铺字 |
+| `zh_male_aojiaobazong_moon_bigtts` | 傲娇霸总 | ✅ chinese-drama 男主顾晏辞（样品在 templates/chinese-drama/_voicetest/） |
 
 ## 三、调用方式（与 scripts/tts.mjs 完全一致，无需改代码）
 

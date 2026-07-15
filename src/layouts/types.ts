@@ -108,6 +108,9 @@ export type Effect = {
 // 字级时间戳（火山 TTS with_timestamp，2026-07-07）：驱动中文逐字跳字
 export type CharTiming = { ch: string; startMs: number; endMs: number };
 
+// 越南语词级时间戳（chinese-drama，2026-07-15）：越南语音色无真时间戳，build 按拍时长均匀铺词，驱动越南语行逐词卡拉OK
+export type ViWordTiming = { w: string; startMs: number; endMs: number };
+
 // 卡拉OK词单元（chinese-learn 版式，2026-07-12）：一个「词」= 一段汉字 + 拼音 + 绝对起止毫秒。
 // ASR 返回逐字时间戳，build 用 Intl.Segmenter 分词后聚成词单元，渲染层按 currentMs 逐词高亮。
 export type KaraWord = { zh: string; py: string; startMs: number; endMs: number };
@@ -125,6 +128,9 @@ export type Beat = {
   // 单人物图缩小系数：flux 老把人画满整框，渲染层按此缩小
   imgScale?: number;
   charTimings?: CharTiming[];
+  viWordTimings?: ViWordTiming[];
+  // 内心思考拍(chinese-drama,用户 2026-07-15):中文思考+说话音色,字幕加💭标记与开口对白区分
+  inner?: boolean;
   captions: {
     pinyin: string;
     zh: string;

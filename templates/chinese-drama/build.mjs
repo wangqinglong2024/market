@@ -18,6 +18,13 @@ function evenCharTimings(zh, ms) {
   const span = ms / hans.length;
   return hans.map((ch, i) => ({ ch, startMs: Math.round(i * span), endMs: Math.round((i + 1) * span) }));
 }
+// 越南语行卡拉OK:越南语音色不返回词级时间戳 → 按本拍音频时长把单词均匀铺开,逐词点亮。
+function evenWordTimings(text, ms) {
+  const words = (text || "").trim().split(/\s+/).filter(Boolean);
+  if (!words.length || !ms) return null;
+  const span = ms / words.length;
+  return words.map((w, i) => ({ w, startMs: Math.round(i * span), endMs: Math.round((i + 1) * span) }));
+}
 const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
 const readText = (p) => readFileSync(p, "utf8");
 const stripComments = (s) => s.replace(/<!--[\s\S]*?-->/g, "").trim();
@@ -125,6 +132,7 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
     const audio = await synth(ttsText, audioPath, { voice: voiceType, speed });
     // 卡拉OK时间戳:中文对白用火山真字级时间戳;越南语拍(旁白/独白)的中文行用均匀铺字(跟拍时长扫过)。
     const charTimings = isVi ? evenCharTimings(beat.captions.zh, audio.ms) : audio.charTimings;
+    const viWordTimings = evenWordTimings(viText, audio.ms);
     console.log(`  audio: ${audio.cached ? "cached" : "synth"} ${audio.ms}ms  timings=${charTimings ? charTimings.length + "字" + (isVi ? "(均匀)" : "") : "无"}`);
 
     // 出图：场景首拍出一张,同 sceneId 后续拍复用。
@@ -161,9 +169,11 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
       durationMs: audio.ms + tail,
       motion: pickMotion(beat, motion),
       ...(isVi && { narration: true }),
+      ...(beat.inner && { inner: true }),
       ...(beat.transitionIn && { transitionIn: beat.transitionIn }),
       ...(beat.effects?.length && { effects: beat.effects }),
       ...(charTimings && { charTimings }),
+      ...(viWordTimings && { viWordTimings }),
       captions: { pinyin: beat.captions.pinyin ?? "", zh: beat.captions.zh ?? "", local: beat.captions.local ?? beat.captions.vi ?? "" },
     });
   }

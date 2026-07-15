@@ -11,24 +11,25 @@
   },
   "subtitle": { "top": 960, "height": 360 },
   "audio": {
-    "_langComment": "★混合语言(render-rules 第8条):旁白/灵兰内心独白=越南语(vi_*音色,走viSpeed);中国角色对白=中文(zh_*音色,走speed)。build 按音色前缀 vi_/zh_ 自动判定合成哪种语言的文本(vi 读 captions.local, zh 读 captions.zh)。",
+    "_langComment": "★混合语言(render-rules 第8条):旁白=越南语(vi_*音色,走viSpeed);人物对白+灵兰内心思考=中文(zh_*音色,走speed;内心拍 beat.inner=true→字幕💭标记,音色同 qingwu)。build 按音色前缀 vi_/zh_ 自动判定合成哪种语言的文本(vi 读 captions.local, zh 读 captions.zh)。",
     "speed": 1.0,
     "viSpeed": 1.0,
     "narratorSpeed": 1.0,
     "tailPaddingMs": 160,
     "sceneTailPaddingMs": 320,
     "_bgmComment": "情景剧可留白或垫极低音量都市轻音乐(本地合成/CC0,禁API)。默认无BGM,接线同 guoxue: audio.bgm={src,volume}。",
-    "_voicesComment": "越南语音色已实测(README);中文音色以豆包官方为准。ep1 用到 narrator/linh/yanci(已锁)。其余中文角色为豆包官方候选,出场前用免费TTS试听确认(zh 家族已验证可开通)。voice 键=脚本里 beat.voice。",
+    "_voicesComment": "★音色锁定表见 prompts/render-rules.md 第8条(用户 2026-07-15 锁),改音色须用户批准。全部已免费试听验证(样品在 _voicetest/)。laofuren 待定:出场前试老年感音色再锁。voice 键=脚本里 beat.voice。",
     "defaultVoice": "narrator",
     "voices": {
       "narrator": "vi_female_ruan_uranus_bigtts",
-      "linh":     "vi_female_linh_uranus_bigtts",
-      "yanci":    "zh_male_qingcang_mars_bigtts",
-      "qingwu":   "zh_female_zhixingnvsheng_moon_bigtts",
-      "xiaotao":  "zh_female_shuangkuaisisi_moon_bigtts",
-      "laofuren": "zh_female_zhixingnvsheng_moon_bigtts",
-      "liuwan":   "zh_female_zhixingnvsheng_moon_bigtts",
-      "yurou":    "zh_female_tianmeixiaoyuan_moon_bigtts",
+      "linh":     "vi_female_partner_uranus_bigtts",
+      "yanci":    "zh_male_aojiaobazong_moon_bigtts",
+      "qingwu":   "zh_female_wenrouxiaoya_moon_bigtts",
+      "xiaotao":  "zh_female_roumeinvyou_emo_v2_mars_bigtts",
+      "laofuren": "zh_female_zhixingnvsheng_mars_bigtts",
+      "liuwan":   "zh_female_xinlingjitang_moon_bigtts",
+      "wanqing":  "zh_female_zhixingnvsheng_mars_bigtts",
+      "yurou":    "zh_female_lingling_uranus_bigtts",
       "chengye":  "zh_male_jingqiangkanye_moon_bigtts"
     }
   },
@@ -50,7 +51,7 @@
     "localColor": "#f5c518",
     "karaokeColor": "#25f4ee",
     "dimColor": "#565b63",
-    "sizes": { "pinyin": 44, "zh": 84, "vi": 48, "local": 48 },
+    "sizes": { "pinyin": 52, "zh": 72, "vi": 58, "local": 58 },
     "gapPinyinZh": 8,
     "gapZhLocal": 24,
     "sidePad": 48,
@@ -58,14 +59,15 @@
     "opticalLift": 0
   },
   "fonts": {
-    "_comment": "中文用 Ma Shan Zheng(毛笔行楷,同 chinese-learn,用户 2026-07-15 锁);SimHei 作兜底。拼音/越南语用 Nunito。换字体只改这里。",
+    "_comment": "中文用 Ma Shan Zheng(毛笔行楷,用户 2026-07-15 锁);SimHei 兜底。拼音+越南语统一=Itim(手写感但收敛,不死板;Charm 被否:太夸张 2026-07-15);fontTools 验证越南语附加符+拼音声调符全覆盖,Nunito 兜底。换字体只改这里。",
     "files": [
       { "family": "Ma Shan Zheng", "file": "library/fonts/MaShanZheng.ttf" },
+      { "family": "Itim", "file": "library/fonts/Itim.ttf" },
       { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" },
       { "family": "SimHei", "file": "library/fonts/SimHei.ttf" }
     ],
     "zhStack": ["Ma Shan Zheng", "SimHei", "PingFang SC", "serif"],
     "zhWeight": 400,
-    "latinStack": ["Nunito", "PingFang SC", "sans-serif"]
+    "latinStack": ["Itim", "Nunito", "PingFang SC", "sans-serif"]
   }
 }

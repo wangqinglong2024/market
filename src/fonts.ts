@@ -8,6 +8,8 @@ export type FontsMeta = {
   zhStack?: string[];
   zhWeight?: number;
   latinStack?: string[];
+  // 拼音行专用字体栈（缺省回落 latinStack）——chinese-drama:拼音要比越南语行收敛
+  pinyinStack?: string[];
 };
 
 // 兜底默认（manifest 没带 fonts 时、或 Studio 里非视频 Composition 用）
@@ -17,6 +19,7 @@ export const DEFAULT_FONTS: FontsMeta = {
     { family: "Winter", file: "library/fonts/Winter.ttf" },
     { family: "SimHei", file: "library/fonts/SimHei.ttf" },
     { family: "Nunito", file: "library/fonts/Nunito.ttf", weight: "200 900" },
+    { family: "Itim", file: "library/fonts/Itim.ttf" },
   ],
   zhStack: ["Ma Shan Zheng", "Winter", "SimHei", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "sans-serif"],
   zhWeight: 400,

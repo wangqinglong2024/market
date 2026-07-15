@@ -4,6 +4,7 @@ import { Video, calcVideoMetadata } from "./Video";
 import { FxPreview } from "./FxPreview";
 import { FxSinglePreview } from "./FxSinglePreview";
 import { Cover } from "./Cover";
+import { CoverDrama } from "./CoverDrama";
 import catalog from "../catalog.json";
 
 // 特效库开放可扩展：下面只是"已有预览 Composition"的登记表，新增特效就往这里加一行（不是固定集合）。
@@ -48,6 +49,23 @@ export const RemotionRoot: React.FC = () => {
           tag: "中文学习 · 葫芦兄弟",
           titleColor: "#ffffff",
           accentColor: "#ffd24a",
+        }}
+      />
+
+      {/* ── chinese-drama 封面/海报（render-rules 10）：三语标题排版，封面与海报共用。──
+           渲染：remotion still src/index.ts cover-drama <out.png> --props=<视频目录>/cover.json */}
+      <Composition
+        id="cover-drama"
+        component={CoverDrama}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1440}
+        defaultProps={{
+          image: "", focusY: 0.35, tag: "铃兰穿越记", tagVi: "Xuyên Không Thành Phu Nhân Hào Môn",
+          seal: "E01", volume: { zh: "卷一 · 惊醒", vi: "Quyển 1 · Tỉnh Giấc" },
+          chapter: { py: "", zh: "章主题名", vi: "" },
+          episode: { py: "", zh: "当集标题", vi: "" },
         }}
       />
 

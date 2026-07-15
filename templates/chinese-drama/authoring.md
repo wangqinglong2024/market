@@ -37,7 +37,7 @@
 [黑底留白 120]
 ```
 
-layout=`chinese-drama`（`src/layouts/chinese-drama.tsx`）。上图场景共图连续运镜，下方拼音+中文逐字跳字卡拉OK（火山字级时间戳驱动）＋越南语一行。
+layout=`chinese-drama`（`src/layouts/chinese-drama.tsx`）。上图场景共图连续运镜，下方三行字幕**全部卡拉OK**（详见 render-rules 9）：中文逐字弹跳点亮；拼音与汉字同色同步、只变色不跳；越南语逐词变色不跳。三行均单行禁换行、行尾禁标点。
 
 ## 四、script.json 格式（一拍=一句短句）
 
@@ -81,7 +81,7 @@ layout=`chinese-drama`（`src/layouts/chinese-drama.tsx`）。上图场景共图
 3. 新角色需先出定妆图：`characters/<id>/model-sheet.png`（flux-text 出一张干净参考，见下「出图链路」）。
 4. `FAL_PROXY=http://127.0.0.1:7897 node scripts/build.mjs <id>` → TTS + 出图 + manifest。
 5. Remotion Studio(:3000) 预览，逐句听多音字，走 [[01-创作准则]] 八自检。
-6. **出封面**（[[03-流水线与manifest]] 七）：挑最有戏的一张场景图 → `cover.json`（中文钩子大字＋越南语钩子）→ 渲染 `<中文名>-封面.png`。
+6. **出海报式封面**（★render-rules 第10条，用户锁定，封面=海报一张图）：fal 新出一张不与视频画面重复但紧扣本集主题的 3:4 竖图做底，走 `cover-drama` composition 按电影海报排版（竖排系列名+印章集数+卷标题+章主题名+钩子标题，标题拼音/中文/越南语三行齐全）→ `<中文名>-封面.png`。
 7. **渲染成片** → `mv` 成 `<中文名>.mp4`（交付物用中文名，文件夹用英文 id，见 [[02-系统架构]] 五）。
 
 ## 七、出图/下载链路（★ 本机注意）
@@ -96,8 +96,9 @@ layout=`chinese-drama`（`src/layouts/chinese-drama.tsx`）。上图场景共图
 - `source.region` / `subtitle`：图区与字幕区位置高度。
 - `captions`：三行颜色/字号/间距、`karaokeColor` 跳字高亮、`dimColor` 未读色。
 - `audio.voices` / `speed` / `narratorSpeed` / `tailPaddingMs`。
-- `fonts`：中文默认 SimHei（情景剧走现代感，非毛笔体）。
+- `fonts`：中文=Ma Shan Zheng 毛笔行楷；拼音/越南语统一=Itim（用户 2026-07-15 锁，详见 render-rules 9）。
 - `image.styleAnchor`：空镜借画风的风格锚图（默认阿香定妆图）。
 
 ## 关联
 [[00-底层规律]] · [[01-创作准则]] · [[02-系统架构]] · [[03-流水线与manifest]] · [[04-成本与铁律]]
+连续剧写本必读：[[story/00-bible]]（剧情事实源） · [[prompts/script-rules]]（剧本铁律） · [[prompts/render-rules]]（出图铁律）
