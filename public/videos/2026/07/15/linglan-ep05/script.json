@@ -5,7 +5,7 @@
   "beats": [
     { "id": "b01a", "voice": "narrator", "sceneId": "s1-desk", "hasMainCharacter": true, "characters": ["qingwu"], "motion": "push-in", "transitionIn": "fade",
       "shots": [{ "content": "The stunningly beautiful young Chinese bride in the SAME long-sleeved ornate red traditional wedding dress with gold embroidery sits at a dark carved wooden desk, completely ALONE in the frame, NO other person, NO foreground figure — staring down in dread at a sheet of blank white rice paper, an ink brush and a black inkstone laid out before her, her hands frozen on the edge of the desk, dim opulent mansion study light, single face in frame. Cinematic medium close-up. Landscape.", "model": "flux", "weight": 1 }],
-      "captions": { "zh": "纸和笔，摆在面前", "local": "Giấy và bút bày ra trước mặt" } },
+      "captions": { "zh": "他冷冷把纸笔推到我面前", "local": "Anh ta lạnh lùng đẩy giấy bút tới trước mặt" } },
     { "id": "b01b", "voice": "yanci", "sceneId": "s1-desk", "motion": "push-in",
       "captions": { "zh": "写你的名字", "pinyin": "xiě nǐ de míng zi", "local": "Viết tên của cô đi" } },
     { "id": "b02a", "voice": "qingwu", "inner": true, "sceneId": "s1-desk", "motion": "push-in",

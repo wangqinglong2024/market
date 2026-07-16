@@ -1,11 +1,11 @@
 {
   "videoId": "linglan-ep06",
   "lang": "vi",
-  "_comment": "《铃兰穿越记》第006集(arc-01/006 疤痕危机)。头钩=E05尾钩:疤被追问→小桃圆场'落水时撞的'。后怕:这身体处处是雷。深夜翻原主梳妆台→烧了一半的照片。尾钩:背面一行她读不懂的字。连戏:白天=红嫁衣延续E05;深夜=素色真丝长袖寝袍(换时间线换装,场景优先)。本集中文:落水(汉越词lạc thủy伏笔,E10金手指回收)。'一个也不认识'指认字(合规,读写为零已立),非听力禁句。",
+  "_comment": "《铃兰穿越记》第006集(arc-01/006 疤痕危机)。头钩=E05尾钩:疤被追问→小桃圆场'落水时撞的'。后怕:这身体处处是雷。深夜翻原主梳妆台→烧了一半的照片。尾钩:背面一行她读不懂的字。连戏:白天女主不露像(承接E05红嫁衣设定,但本集白天只出小桃/顾晏辞);深夜女主=香槟色吊带真丝睡裙(全身照,render-rules 2:婚纱线E06终结,女主转常规吊带装);小桃=白蕾丝吊带上衣+淡紫短裙(两件套全身照,render-rules 2:吊带+短裙非连衣裙,白细直腿,每集换配色)。s4/s5抽屉特写为裸臂/裸手指(睡裙无袖,已同步)。本集中文:落水(汉越词lạc thủy伏笔,E10金手指回收)。'一个也不认识'指认字(合规,读写为零已立),非听力禁句。头3秒钩子已强化(用户2026-07-16)。",
   "beats": [
     { "id": "b01a", "voice": "narrator", "sceneId": "s1-plea", "hasMainCharacter": true, "characters": ["xiaotao"], "motion": "push-in", "transitionIn": "fade",
-      "shots": [{ "content": "The sweet young Chinese maid with straight bangs and a low ponytail in her plain dark-grey buttoned servant uniform with white collar, completely ALONE in the frame, NO other person, NO foreground figure — stepping forward anxiously with both hands pressed together in an earnest pleading gesture, speaking quickly with worried sincere eyes toward the camera, dim opulent mansion study behind her, single face in frame. Cinematic medium close-up. Landscape.", "model": "flux", "weight": 1 }],
-      "captions": { "zh": "危急时刻，小桃开口", "local": "Giây phút nguy cấp, Tiểu Đào lên tiếng" } },
+      "shots": [{ "content": "Full-body wide shot of the sweet young Chinese maid Xiao Tao with straight bangs and a low ponytail, very fair pale skin, slim slender figure — wearing a TWO-PIECE outfit: a pretty white lace-trimmed spaghetti-strap camisole top (吊带) and a SEPARATE pale-lavender pleated short skirt (短裙), NOT a one-piece dress, showing her very fair slim straight bare legs — standing completely ALONE in the frame, NO other person, NO foreground figure — stepping forward anxiously with both hands pressed together in an earnest pleading gesture, speaking quickly with worried sincere eyes toward the camera, dim opulent mansion study behind her, her whole body visible with feet on the floor in realistic proportion. Cinematic full-body shot. Landscape.", "model": "flux", "weight": 1 }],
+      "captions": { "zh": "他盯着那道疤，步步逼问", "local": "Anh ta nhìn vết sẹo, dồn dập truy hỏi" } },
     { "id": "b01b", "voice": "xiaotao", "sceneId": "s1-plea", "motion": "push-in",
       "captions": { "zh": "太太落水时撞的", "pinyin": "tài tai luò shuǐ shí zhuàng de", "local": "Phu nhân ngã xuống nước bị va đấy ạ" } },
     { "id": "b02", "voice": "qingwu", "inner": true, "sceneId": "s1-plea", "motion": "push-in",
@@ -22,7 +22,7 @@
       "captions": { "zh": "这具身体，处处是雷", "local": "Thân xác này, đâu đâu cũng là bẫy" } },
 
     { "id": "b06a", "voice": "narrator", "sceneId": "s3-vanity", "hasMainCharacter": true, "characters": ["qingwu"], "motion": "push-in", "transitionIn": "fade",
-      "shots": [{ "content": "Night scene: the stunningly beautiful young Chinese woman now wearing a MODEST IVORY SILK NIGHT ROBE with long sleeves and a high wrapped neckline (fully covered, elegant, NOT revealing), long loose black hair over her shoulders, completely ALONE in the frame, NO other person — sitting at an ornate carved wooden vanity table lit by a single warm candle, carefully sliding open a small drawer and searching inside it with a cautious alert expression, an antique bronze mirror behind her reflecting only darkness, single face in frame. Cinematic medium close-up. Landscape.", "model": "flux", "weight": 1 }],
+      "shots": [{ "content": "Night scene, full-body shot: the stunningly beautiful young Chinese woman Shen Qingwu, fair porcelain-pale skin, very slim slender long-legged figure, wearing a delicate champagne-ivory silk spaghetti-strap short slip nightdress (吊带真丝睡裙, thin straps, bare slender shoulders and arms, hem above the knee showing her slender legs, elegant and tasteful, SFW), long loose black hair over her shoulders, completely ALONE in the frame, NO other person — standing and leaning at an ornate carved wooden vanity table lit by a single warm candle, one hand cautiously sliding open a small drawer and searching inside it with a wary alert expression, an antique bronze mirror on the vanity reflecting only darkness, her whole body visible with bare feet on the floor in realistic proportion. Cinematic full-body shot. Landscape.", "model": "flux", "weight": 1 }],
       "captions": { "zh": "深夜，她睡不着", "local": "Đêm khuya, cô không ngủ được" } },
     { "id": "b06b", "voice": "narrator", "sceneId": "s3-vanity", "motion": "push-in",
       "captions": { "zh": "偷偷翻开原主的梳妆台", "local": "lén lút lục bàn trang điểm của Thanh Ngô" } },
@@ -30,7 +30,7 @@
       "captions": { "zh": "也许能找到线索", "local": "Biết đâu tìm được manh mối" } },
 
     { "id": "b08a", "voice": "narrator", "sceneId": "s4-photo", "hasMainCharacter": false, "characters": [], "motion": "push-in", "transitionIn": "fade",
-      "shots": [{ "content": "Extreme close-up at night: slender pale female fingers emerging from an ivory silk sleeve lifting a HALF-BURNED old photograph out of a dark wooden drawer — the photo shows the faded blurred figure of a young woman standing in a garden, the other half of the photo charred black and crumbling, warm single-candle light, dust motes, no face of the holder visible, absolutely no other person. Cinematic macro shot. Landscape.", "model": "flux", "weight": 1 }],
+      "shots": [{ "content": "Extreme close-up at night: a slender bare pale female hand and fingers (bare arm, no sleeve) lifting a HALF-BURNED old photograph out of a dark wooden drawer — the photo shows the faded blurred figure of a young woman standing in a garden, the other half of the photo charred black and crumbling, warm single-candle light, dust motes, no face of the holder visible, absolutely no other person. Cinematic macro shot. Landscape.", "model": "flux", "weight": 1 }],
       "captions": { "zh": "抽屉深处", "local": "Sâu trong ngăn kéo" } },
     { "id": "b08b", "voice": "narrator", "sceneId": "s4-photo", "motion": "push-in",
       "captions": { "zh": "一张烧了一半的照片", "local": "một tấm ảnh bị cháy mất một nửa" } },
@@ -38,7 +38,7 @@
       "captions": { "zh": "谁烧的？为什么烧", "local": "Ai đốt? Sao lại đốt" } },
 
     { "id": "b10a", "voice": "narrator", "sceneId": "s5-back", "hasMainCharacter": false, "characters": [], "motion": "push-in", "transitionIn": "fade",
-      "shots": [{ "content": "Extreme close-up at night: the BACK of a half-burned old photograph held between slender pale female fingertips from an ivory silk sleeve — on the yellowed paper back there is ONE line of faded handwritten Chinese ink characters, artistically blurred and soft so the writing is not clearly readable, the burned edge charred and curling, warm candlelight from the side, deep shadows, no face visible, absolutely no other person. Cinematic macro shot. Landscape.", "model": "flux", "weight": 1 }],
+      "shots": [{ "content": "Extreme close-up at night: the BACK of a half-burned old photograph held between slender bare pale female fingertips (bare arm, no sleeve) — on the yellowed paper back there is ONE line of faded handwritten Chinese ink characters, artistically blurred and soft so the writing is not clearly readable, the burned edge charred and curling, warm candlelight from the side, deep shadows, no face visible, absolutely no other person. Cinematic macro shot. Landscape.", "model": "flux", "weight": 1 }],
       "captions": { "zh": "照片背面，写着一行字", "local": "Mặt sau tấm ảnh có một dòng chữ" } },
     { "id": "b10b", "voice": "qingwu", "inner": true, "sceneId": "s5-back", "motion": "push-in",
       "captions": { "zh": "这些字，我一个也不认识", "local": "Những chữ này, tôi không đọc được chữ nào" } },

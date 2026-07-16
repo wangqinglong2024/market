@@ -5,9 +5,9 @@
   "beats": [
     { "id": "b01a", "voice": "narrator", "sceneId": "s1-enter", "hasMainCharacter": true, "characters": ["qingwu"], "motion": "push-in", "transitionIn": "fade",
       "shots": [{ "content": "A middle-aged male doctor seen ONLY from behind — short grey-streaked dark hair, dark grey suit, carrying a black leather medical bag — walks toward a grand carved wooden bed in a dim opulent Chinese mansion bedroom, where the stunningly beautiful young Chinese bride lies under a red silk quilt in the SAME ornate red traditional wedding dress, long loose black hair spread on the pillow, eyes closed pretending to be weak and asleep, morning light through lattice windows; the doctor's face is NOT visible, her face is the only face in frame. Cinematic medium-wide shot. Landscape.", "model": "flux", "weight": 1 }],
-      "captions": { "zh": "医生进来了", "local": "Bác sĩ bước vào rồi" } },
+      "captions": { "zh": "医生进来，我屏住了呼吸", "local": "Bác sĩ vào, tôi nín cả thở" } },
     { "id": "b01b", "voice": "narrator", "sceneId": "s1-enter", "motion": "push-in",
-      "captions": { "zh": "她闭上眼，装作虚弱", "local": "Cô nhắm mắt, giả vờ yếu ớt" } },
+      "captions": { "zh": "一开口，假新娘就会露馅", "local": "Hé miệng là cô dâu giả lộ ngay" } },
     { "id": "b02", "voice": "qingwu", "inner": true, "sceneId": "s1-enter", "motion": "push-in",
       "captions": { "zh": "千万别露馅", "local": "Nhất định không được lộ" } },
 

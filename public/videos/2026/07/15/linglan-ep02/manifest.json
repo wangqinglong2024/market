@@ -233,93 +233,113 @@
       "sceneId": "s1-morning",
       "image": "videos/2026/07/15/linglan-ep02/images/s1-morning.png",
       "audio": "videos/2026/07/15/linglan-ep02/audio/b01a.mp3",
-      "durationMs": 2488,
+      "durationMs": 3064,
       "motion": "push-in",
       "narration": true,
       "transitionIn": "fade",
       "charTimings": [
         {
-          "ch": "天",
+          "ch": "我",
           "startMs": 0,
-          "endMs": 291
+          "endMs": 290
         },
         {
-          "ch": "亮",
-          "startMs": 291,
-          "endMs": 582
+          "ch": "是",
+          "startMs": 290,
+          "endMs": 581
         },
         {
-          "ch": "了",
-          "startMs": 582,
-          "endMs": 873
+          "ch": "中",
+          "startMs": 581,
+          "endMs": 871
         },
         {
-          "ch": "医",
-          "startMs": 873,
-          "endMs": 1164
+          "ch": "文",
+          "startMs": 871,
+          "endMs": 1162
         },
         {
-          "ch": "生",
-          "startMs": 1164,
-          "endMs": 1455
+          "ch": "很",
+          "startMs": 1162,
+          "endMs": 1452
         },
         {
-          "ch": "就",
-          "startMs": 1455,
-          "endMs": 1746
+          "ch": "烂",
+          "startMs": 1452,
+          "endMs": 1742
         },
         {
-          "ch": "要",
-          "startMs": 1746,
-          "endMs": 2037
+          "ch": "的",
+          "startMs": 1742,
+          "endMs": 2033
         },
         {
-          "ch": "来",
-          "startMs": 2037,
-          "endMs": 2328
+          "ch": "假",
+          "startMs": 2033,
+          "endMs": 2323
+        },
+        {
+          "ch": "新",
+          "startMs": 2323,
+          "endMs": 2614
+        },
+        {
+          "ch": "娘",
+          "startMs": 2614,
+          "endMs": 2904
         }
       ],
       "viWordTimings": [
         {
-          "w": "Trời",
+          "w": "Tôi",
           "startMs": 0,
-          "endMs": 333
+          "endMs": 323
         },
         {
-          "w": "sáng",
-          "startMs": 333,
-          "endMs": 665
+          "w": "là",
+          "startMs": 323,
+          "endMs": 645
         },
         {
-          "w": "rồi,",
-          "startMs": 665,
-          "endMs": 998
+          "w": "cô",
+          "startMs": 645,
+          "endMs": 968
         },
         {
-          "w": "bác",
-          "startMs": 998,
-          "endMs": 1330
+          "w": "dâu",
+          "startMs": 968,
+          "endMs": 1291
         },
         {
-          "w": "sĩ",
-          "startMs": 1330,
-          "endMs": 1663
+          "w": "giả,",
+          "startMs": 1291,
+          "endMs": 1613
         },
         {
-          "w": "sắp",
-          "startMs": 1663,
-          "endMs": 1995
+          "w": "tiếng",
+          "startMs": 1613,
+          "endMs": 1936
         },
         {
-          "w": "đến",
-          "startMs": 1995,
-          "endMs": 2328
+          "w": "Trung",
+          "startMs": 1936,
+          "endMs": 2259
+        },
+        {
+          "w": "dở",
+          "startMs": 2259,
+          "endMs": 2581
+        },
+        {
+          "w": "tệ",
+          "startMs": 2581,
+          "endMs": 2904
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "天亮了，医生就要来",
-        "local": "Trời sáng rồi, bác sĩ sắp đến"
+        "zh": "我是中文很烂的假新娘",
+        "local": "Tôi là cô dâu giả, tiếng Trung dở tệ"
       }
     },
     {
@@ -327,82 +347,107 @@
       "sceneId": "s1-morning",
       "image": "videos/2026/07/15/linglan-ep02/images/s1-morning.png",
       "audio": "videos/2026/07/15/linglan-ep02/audio/b01b.mp3",
-      "durationMs": 2272,
+      "durationMs": 2512,
       "motion": "push-in",
       "narration": true,
       "charTimings": [
         {
-          "ch": "假",
+          "ch": "天",
           "startMs": 0,
-          "endMs": 302
+          "endMs": 235
         },
         {
-          "ch": "新",
-          "startMs": 302,
-          "endMs": 603
+          "ch": "亮",
+          "startMs": 235,
+          "endMs": 470
         },
         {
-          "ch": "娘",
-          "startMs": 603,
-          "endMs": 905
+          "ch": "医",
+          "startMs": 470,
+          "endMs": 706
+        },
+        {
+          "ch": "生",
+          "startMs": 706,
+          "endMs": 941
+        },
+        {
+          "ch": "一",
+          "startMs": 941,
+          "endMs": 1176
+        },
+        {
+          "ch": "来",
+          "startMs": 1176,
+          "endMs": 1411
         },
         {
           "ch": "就",
-          "startMs": 905,
-          "endMs": 1207
+          "startMs": 1411,
+          "endMs": 1646
         },
         {
           "ch": "要",
-          "startMs": 1207,
-          "endMs": 1509
+          "startMs": 1646,
+          "endMs": 1882
         },
         {
           "ch": "穿",
-          "startMs": 1509,
-          "endMs": 1810
+          "startMs": 1882,
+          "endMs": 2117
         },
         {
           "ch": "帮",
-          "startMs": 1810,
-          "endMs": 2112
+          "startMs": 2117,
+          "endMs": 2352
         }
       ],
       "viWordTimings": [
         {
-          "w": "cô",
+          "w": "Trời",
           "startMs": 0,
-          "endMs": 352
+          "endMs": 294
         },
         {
-          "w": "dâu",
-          "startMs": 352,
-          "endMs": 704
+          "w": "sáng",
+          "startMs": 294,
+          "endMs": 588
         },
         {
-          "w": "giả",
-          "startMs": 704,
-          "endMs": 1056
+          "w": "bác",
+          "startMs": 588,
+          "endMs": 882
         },
         {
-          "w": "sắp",
-          "startMs": 1056,
-          "endMs": 1408
+          "w": "sĩ",
+          "startMs": 882,
+          "endMs": 1176
         },
         {
-          "w": "bị",
-          "startMs": 1408,
-          "endMs": 1760
+          "w": "đến",
+          "startMs": 1176,
+          "endMs": 1470
+        },
+        {
+          "w": "là",
+          "startMs": 1470,
+          "endMs": 1764
         },
         {
           "w": "lộ",
-          "startMs": 1760,
-          "endMs": 2112
+          "startMs": 1764,
+          "endMs": 2058
+        },
+        {
+          "w": "ngay",
+          "startMs": 2058,
+          "endMs": 2352
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "假新娘就要穿帮",
-        "local": "cô dâu giả sắp bị lộ"
+        "zh": "天亮医生一来，就要穿帮",
+        "local": "Trời sáng bác sĩ đến là lộ ngay"
       }
     },
     {

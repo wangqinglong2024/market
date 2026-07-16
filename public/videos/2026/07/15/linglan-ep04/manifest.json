@@ -233,7 +233,7 @@
       "sceneId": "s1-verdict",
       "image": "videos/2026/07/15/linglan-ep04/images/s1-verdict.png",
       "audio": "videos/2026/07/15/linglan-ep04/audio/b01a.mp3",
-      "durationMs": 2080,
+      "durationMs": 2896,
       "motion": "push-in",
       "narration": true,
       "transitionIn": "fade",
@@ -241,75 +241,100 @@
         {
           "ch": "医",
           "startMs": 0,
-          "endMs": 320
+          "endMs": 304
         },
         {
           "ch": "生",
-          "startMs": 320,
-          "endMs": 640
+          "startMs": 304,
+          "endMs": 608
         },
         {
-          "ch": "终",
-          "startMs": 640,
-          "endMs": 960
+          "ch": "一",
+          "startMs": 608,
+          "endMs": 912
         },
         {
-          "ch": "于",
-          "startMs": 960,
-          "endMs": 1280
+          "ch": "句",
+          "startMs": 912,
+          "endMs": 1216
         },
         {
-          "ch": "开",
-          "startMs": 1280,
-          "endMs": 1600
+          "ch": "话",
+          "startMs": 1216,
+          "endMs": 1520
         },
         {
-          "ch": "口",
-          "startMs": 1600,
-          "endMs": 1920
+          "ch": "定",
+          "startMs": 1520,
+          "endMs": 1824
+        },
+        {
+          "ch": "我",
+          "startMs": 1824,
+          "endMs": 2128
+        },
+        {
+          "ch": "生",
+          "startMs": 2128,
+          "endMs": 2432
+        },
+        {
+          "ch": "死",
+          "startMs": 2432,
+          "endMs": 2736
         }
       ],
       "viWordTimings": [
         {
-          "w": "Bác",
+          "w": "Một",
           "startMs": 0,
-          "endMs": 274
+          "endMs": 304
         },
         {
-          "w": "sĩ",
-          "startMs": 274,
-          "endMs": 549
+          "w": "câu",
+          "startMs": 304,
+          "endMs": 608
         },
         {
-          "w": "rốt",
-          "startMs": 549,
-          "endMs": 823
+          "w": "bác",
+          "startMs": 608,
+          "endMs": 912
         },
         {
-          "w": "cuộc",
-          "startMs": 823,
-          "endMs": 1097
+          "w": "sĩ,",
+          "startMs": 912,
+          "endMs": 1216
         },
         {
-          "w": "đã",
-          "startMs": 1097,
-          "endMs": 1371
+          "w": "định",
+          "startMs": 1216,
+          "endMs": 1520
         },
         {
-          "w": "lên",
-          "startMs": 1371,
-          "endMs": 1646
+          "w": "đoạt",
+          "startMs": 1520,
+          "endMs": 1824
         },
         {
-          "w": "tiếng",
-          "startMs": 1646,
-          "endMs": 1920
+          "w": "sinh",
+          "startMs": 1824,
+          "endMs": 2128
+        },
+        {
+          "w": "tử",
+          "startMs": 2128,
+          "endMs": 2432
+        },
+        {
+          "w": "tôi",
+          "startMs": 2432,
+          "endMs": 2736
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "医生终于开口",
-        "local": "Bác sĩ rốt cuộc đã lên tiếng"
+        "zh": "医生一句话，定我生死",
+        "local": "Một câu bác sĩ, định đoạt sinh tử tôi"
       }
     },
     {

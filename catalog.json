@@ -201,8 +201,10 @@
       "template": "chinese-drama",
       "shard": "2026/07/15",
       "lang": "vi",
-      "status": "scripted",
-      "createdAt": "2026-07-16"
+      "status": "built",
+      "createdAt": "2026-07-16",
+      "manifest": "public/videos/2026/07/15/linglan-ep06/manifest.json",
+      "beats": 17
     }
   ]
 }
