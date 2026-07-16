@@ -156,6 +156,17 @@
       "beats": 22
     },
     {
+      "id": "linglan-ep01-v2",
+      "title": "铃兰穿越记 E01 爆点版·开口就是死(new_story适配·07/16)",
+      "template": "chinese-drama",
+      "shard": "2026/07/16",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-16",
+      "manifest": "public/videos/2026/07/16/linglan-ep01-v2/manifest.json",
+      "beats": 20
+    },
+    {
       "id": "linglan-ep02",
       "title": "铃兰穿越记 E02 第一句保命中文：听不懂(越南受众·穿越豪门连续剧)",
       "template": "chinese-drama",

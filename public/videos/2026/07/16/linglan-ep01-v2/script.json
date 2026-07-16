@@ -1,0 +1,60 @@
+{
+  "videoId": "linglan-ep01-v2",
+  "lang": "vi",
+  "_comment": "《铃兰穿越记》第001集·爆点版(new_story/arc-01 · 001《开口就是死》)。💣本集爆点=越南卖花女穿成中国豪门新娘,一句中文都不会说,明天医生验身一开口就死。★黄金3秒闸门(script-rules 0):冷开场4拍第一人称爆点logline(narrator越南语)直接砸脸,题材招牌帧=红嫁衣猛睁眼(禁弱题材帧/禁坠湖开场),坠湖换魂=前传后置压到s5一闪回。触发器:与我有关(越南卖花女=我)+生死利害(开口就死)+好奇缺口(这是哪/他是谁)≥3。人设:灵兰懂一点中文(抓你醒了/医生/检查),内心思考=中文(inner+💭,音色qingwu)。本集中文:你醒了/医生检查。尾钩=不会中文的假新娘怎么骗过明天。",
+  "beats": [
+    { "id": "b01a", "voice": "narrator", "sceneId": "s1-wake", "hasMainCharacter": true, "characters": ["qingwu"], "motion": "push-in", "transitionIn": "fade",
+      "shots": [{ "content": "A stunningly beautiful young Chinese bride in an ornate red traditional wedding dress with gold embroidery, red bridal veil pushed back off her face, long black hair loose and slightly disheveled, BOLTS UPRIGHT suddenly awake on a luxurious carved wooden wedding bed in a dim opulent Chinese mansion bedroom glowing with tall red dragon-and-phoenix wedding candles and gold double-happiness decorations, silk drapes around the bed, her eyes flying wide open in shock and terror, one hand clutching her chest, mouth parted gasping for breath, completely ALONE in the frame, NO other person, her single face in frame. Cinematic medium-wide shot. Landscape.", "model": "flux", "weight": 1 }],
+      "captions": { "zh": "我是越南卖花女", "local": "Tôi là cô gái bán hoa người Việt" } },
+    { "id": "b01b", "voice": "narrator", "sceneId": "s1-wake", "motion": "push-in",
+      "captions": { "zh": "一睁眼成了豪门新娘", "local": "Mở mắt ra đã thành tân nương hào môn" } },
+    { "id": "b01c", "voice": "narrator", "sceneId": "s1-wake", "motion": "push-in",
+      "captions": { "zh": "却一句中文都不会", "local": "mà không biết một câu tiếng Trung" } },
+    { "id": "b01d", "voice": "narrator", "sceneId": "s1-wake", "motion": "push-in",
+      "captions": { "zh": "明天医生来验身，我就死定了", "local": "Mai bác sĩ đến khám, tôi chết chắc" } },
+
+    { "id": "b02a", "voice": "qingwu", "inner": true, "sceneId": "s2-hands", "hasMainCharacter": true, "characters": ["qingwu"], "motion": "push-in", "transitionIn": "fade",
+      "shots": [{ "content": "Close-up of the stunningly beautiful young Chinese bride in the SAME ornate red traditional wedding dress with gold embroidery, both trembling hands raised in front of her chest with palms turned toward her own face, staring down at her own unfamiliar hands with wide shocked disbelieving eyes and parted lips as if these hands do not belong to her, completely ALONE in the frame, NO other person, dim opulent bedroom with red dragon-phoenix candles glowing softly in the blurred background, warm candlelight on her face and hands, her single face in frame. Cinematic landscape close-up with shallow depth of field.", "model": "flux", "weight": 1 }],
+      "captions": { "zh": "这不是我的手", "local": "Đây không phải bàn tay của tôi" } },
+    { "id": "b02b", "voice": "qingwu", "inner": true, "sceneId": "s2-hands", "motion": "push-in",
+      "captions": { "zh": "这具身体不是我的", "local": "Thân xác này không phải của tôi" } },
+
+    { "id": "b03", "voice": "qingwu", "inner": true, "sceneId": "s3-mirror", "hasMainCharacter": true, "characters": ["qingwu"], "motion": "push-in", "transitionIn": "fade",
+      "shots": [{ "content": "Close on an ornate vintage bronze vanity mirror in a dim red-candlelit opulent Chinese bedroom; reflected in the mirror is the face of a stunningly beautiful young Chinese woman in a red bridal dress staring at her own unfamiliar reflection with shock and disbelief, one hand half-raised toward the glass, warm candlelight, NO second person in the room. Cinematic landscape framing of the mirror.", "model": "flux", "weight": 1 }],
+      "captions": { "zh": "镜子里的人根本不是我", "local": "Người trong gương hoàn toàn không phải tôi" } },
+
+    { "id": "b04", "voice": "yanci", "sceneId": "s4-husband", "hasMainCharacter": true, "characters": ["yanci"], "motion": "push-in", "transitionIn": "fade",
+      "shots": [{ "content": "A tall, coldly handsome young Chinese man in an impeccable dark charcoal suit stands beside a red wedding bed looking down with an icy detached gaze, dim opulent mansion bedroom with warm red candlelight; in the blurred foreground the bride is seen only from behind over her shoulder wearing the SAME ornate RED traditional Chinese wedding dress with gold embroidery and a red bridal veil (red fabric covering her shoulders and back, NO bare shoulders, NO white clothing), her face NOT visible. He is the only face in frame. Cinematic medium shot. Landscape.", "model": "flux", "weight": 1 }],
+      "captions": { "zh": "你醒了", "pinyin": "nǐ xǐng le", "local": "Cô tỉnh rồi" } },
+    { "id": "b05a", "voice": "qingwu", "inner": true, "sceneId": "s4-husband", "motion": "push-in",
+      "captions": { "zh": "这个男人是谁", "local": "Người đàn ông này là ai" } },
+    { "id": "b05b", "voice": "qingwu", "inner": true, "sceneId": "s4-husband", "motion": "push-in",
+      "captions": { "zh": "他为什么在说中文", "local": "Sao anh ta lại nói tiếng Trung" } },
+
+    { "id": "b06a", "voice": "narrator", "sceneId": "s5-flash", "hasMainCharacter": true, "characters": ["linh"], "motion": "ken-burns", "transitionIn": "fade",
+      "shots": [{ "content": "A dreamlike blurred flashback: a beautiful young Vietnamese woman in simple everyday clothes captured MID-FALL, tumbling backward off a wooden lakeside walkway into a dark lake at a Da Lat night market at night, body tilted in mid-air just above the water, hair and arms flung upward, eyes wide with terror, a violent burst of water splashing where she hits the surface, blurred colorful night-market lanterns behind, dramatic moody cinematic night lighting, shot from the side at water level, faint hazy memory-like glow at the edges. Wide landscape shot.", "model": "flux", "weight": 1 }],
+      "captions": { "zh": "那一夜在大叻夜市", "local": "Đêm ấy ở chợ đêm Đà Lạt" } },
+    { "id": "b06b", "voice": "narrator", "sceneId": "s5-flash", "motion": "ken-burns",
+      "captions": { "zh": "我坠入了湖里", "local": "tôi ngã xuống hồ" } },
+    { "id": "b06c", "voice": "narrator", "sceneId": "s5-flash", "motion": "ken-burns",
+      "captions": { "zh": "灵魂却醒在别人身体里", "local": "linh hồn lại tỉnh trong thân xác người khác" } },
+
+    { "id": "b07", "voice": "yanci", "sceneId": "s6-doctor", "hasMainCharacter": true, "characters": ["yanci"], "motion": "pull-back", "transitionIn": "fade",
+      "shots": [{ "content": "The tall coldly handsome young Chinese man in a dark charcoal suit pauses at the tall carved wooden bedroom door, half-turned looking back over his shoulder with a cold detached side glance, one hand on the door, dim red-candlelit opulent mansion bedroom behind him, he is the only person and only face in frame. Cinematic landscape shot.", "model": "flux", "weight": 1 }],
+      "captions": { "zh": "医生明天来检查你", "pinyin": "yī shēng míng tiān lái jiǎn chá nǐ", "local": "Mai bác sĩ đến kiểm tra cô" } },
+    { "id": "b08a", "voice": "qingwu", "inner": true, "sceneId": "s6-doctor", "motion": "push-in",
+      "captions": { "zh": "医生……检查", "local": "Bác sĩ… kiểm tra" } },
+    { "id": "b08b", "voice": "qingwu", "inner": true, "sceneId": "s6-doctor", "motion": "push-in",
+      "captions": { "zh": "他一查就穿帮", "local": "Ông ấy khám là tôi lộ ngay" } },
+
+    { "id": "b09a", "voice": "qingwu", "inner": true, "sceneId": "s7-fear", "hasMainCharacter": true, "characters": ["qingwu"], "motion": "pull-back", "transitionIn": "fade",
+      "shots": [{ "content": "The stunningly beautiful young Chinese bride wearing the SAME ornate RED traditional Chinese wedding dress with gold embroidery and red veil sits small and alone on the edge of a huge carved wedding bed in a vast dim opulent mansion bedroom, clutching her red silk skirt with both trembling white-knuckled hands, wide frightened eyes, tall red dragon-phoenix candles flickering, camera pulled far back showing the lonely grand room around her, completely ALONE, her single face in frame. Cinematic wide landscape shot.", "model": "flux", "weight": 1 }],
+      "captions": { "zh": "我根本不是她", "local": "Tôi vốn không phải là cô ấy" } },
+    { "id": "b09b", "voice": "narrator", "sceneId": "s7-fear", "motion": "pull-back",
+      "captions": { "zh": "一个不会中文的假新娘", "local": "Một cô dâu giả không biết tiếng Trung" } },
+    { "id": "b09c", "voice": "narrator", "sceneId": "s7-fear", "motion": "pull-back",
+      "captions": { "zh": "怎么骗过明天", "local": "làm sao lừa được ngày mai" } },
+    { "id": "b09d", "voice": "narrator", "sceneId": "s7-fear", "motion": "pull-back",
+      "captions": { "zh": "关注，看下集", "local": "Theo dõi tập sau nhé" } }
+  ]
+}
