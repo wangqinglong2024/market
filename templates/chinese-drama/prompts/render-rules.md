@@ -9,14 +9,14 @@
 - **老年人豁免**：顾老夫人等长辈不受身高/身材/服装规则约束，按角色年龄自然呈现。
 - 身高/身材是**不变量**，写进每个角色 `canonical.md`，每拍复用。
 
-## 2. 女性服装（默认=吊带短裙 · 全身照 · 场景优先 · 连戏）（★用户 2026-07-16 强化）
-- **★默认服装＝吊带＋短裙（两件套·蕾丝花边）（铁律，用户 2026-07-16 锁定，之前的连衣裙作废）**：女性角色（女主、小桃、及未来所有年轻女角）**默认穿"吊带上衣 + 短裙"两件套**，**不是连衣裙(one-piece dress)**：
-  - **上衣＝蕾丝花边细肩带吊带背心**（a lace-trimmed spaghetti-strap camisole top，吊带，带蕾丝花边 lace trim）；
-  - **下装＝独立的一条短裙**（a SEPARATE short skirt，与上衣分开的两件，别写成连体裙）；
-  - **裸腿要非常白、细、直**（bare legs, very fair pale, slim and straight）——全身照必须露出这双腿；
-  - **颜色合理搭配**（上衣/短裙配色协调好看，如白蕾丝吊带＋粉短裙、薄荷吊带＋白短裙），**每集换一套**不同配色（集与集之间必换，别集集同色）；
-  - 得体不低俗、SFW。这是**默认铁律，不是"总体倾向"**——除非本条第 2 点的"场景优先"明确否决，否则一律吊带＋短裙两件套。
-  - 写 shot.content 时逐字写清："a lace-trimmed spaghetti-strap camisole top (吊带) and a SEPARATE short skirt (吊带+短裙 two-piece, NOT a one-piece dress), showing her very fair slim straight bare legs"，再补当集配色。
+## 2. 女性服装（默认=时尚性感吊带短裙 · 由服装设计师规范驱动 · 全身照 · 场景优先 · 连戏）（★用户 2026-07-16 强化）
+- **★默认服装＝时尚性感的「吊带＋短裙」两件套，且每集换款换风格（铁律，用户 2026-07-16 锁；旧版"白吊带+平短裙"因粗糙廉价被否，作废）**。**具体款式/面料/版型/配色/配饰由 [[wardrobe]]（服装穿搭设计师规范）驱动**——写 shot 服装段前**必读 wardrobe.md**，像时尚造型师一样当集设计一套时髦好看又性感得体的吊带穿搭，不许再套那件平平的白背心。要点（细节全在 wardrobe.md）：
+  - **上衣＝细肩带吊带**（`delicate THIN spaghetti straps`），面料有高级质感（真丝缎/蕾丝/罗纹针织/雪纺），**贴身修饰纤细身材**；**明确否定** `NOT thick straps, NOT a bustier/corset/structured bodice, NOT a swimsuit-like top, NOT a tank top`（旧图翻车全因这个）；
+  - **下装＝独立的一条时髦短裙**（a SEPARATE short skirt，高腰/百褶/A字/包臀/开衩，别写连体裙），露白皙大长腿；
+  - **配饰点睛**至少 1 件（细项链/小耳环/细腰带）；**时尚定调词** `styled like a high-fashion editorial / chic lookbook, trendy, elegant, tastefully sexy`；
+  - **每集必换**风格线+面料+裙型+配色（见 wardrobe.md 第3条设计流程），集与集之间不许重样；
+  - 得体不低俗、SFW（不透视/不露内衣/不深V）。除非"场景优先"明确否决，否则一律走本规范。
+  - 落地口径：shot.content 服装段照 wardrobe.md 挑一套 look 逐字写清「细吊带(面料+否定厚肩带/胸衣) + 独立短裙(款式+高腰) + 配饰 + 当集配色 + 时尚定调词 + 均匀白皮肤(见第5条)」。
 - **★全身照/大景别优先（铁律，用户 2026-07-16 锁）**：女性角色（尤其配角/新登场角色）默认用**全身或七分身**景别（full-body / three-quarter body），脚落地、比例真实（配合第 6 条），**让观众看清纤细身材＋白皙皮肤＋大长腿**。不许全程大头特写把身材藏起来。情绪特写拍可用近景，但**每个女角每集至少有一张能看清身材的全身/大景别图**。
 - **★场景优先（保留，但已收窄）**：**只有当集剧情明确锁死某套服装的强场景**才覆盖"吊带短裙默认"。真正算强场景的：婚礼当晚=红嫁衣、守灵/奔丧=素服白衣、正式晚宴=礼服。**深夜寝卧＝吊带真丝睡裙**（同样显身材，别写成长袖高领寝袍）。一般"女佣当值/日常/出街/居家"**不再算强场景**，一律吊带短裙。别把"显身材"硬塞进真·红嫁衣/丧服/礼服，也别拿"她是女佣"当借口套制服。
 - **★连戏（铁律）**：**同一场景 / 同一时间线内，服装必须前后一致**（如同一集里 s2、s3 都是同一件吊带短裙，不许一拍一换）。"每集换装"指**集与集之间、或换了场景/时间**才换，不是一集内乱换。
@@ -35,8 +35,9 @@
 - **多人正脸需求 → 调用 nano-banana-pro**（多参考图各锁一脸，$0.15/张，一条视频最多 1 次）。除此之外每场景**单人 flux 出图**为默认（$0.04）。
 - **★单人特写防"脑补听众"（实战教训 2026-07-16）**：prompt 里出现 "speaking to/looking at someone (out of frame)" 这类措辞时，flux 极易自作主张把"某人"画进前景（E02 s3 / E04 s4 / E04 s5 连续三次翻车）。凡单人拍必须显式写 `completely ALONE in the frame, NO other person, NO foreground figure`，并避免 "对着某人说话" 措辞、改写成 "facing the camera / toward the door" 等无人称指向。
 
-## 5. 真人质感·去塑料感
+## 5. 真人质感·去塑料感 + ★均匀白皮肤（禁双色，用户 2026-07-16 锁）
 - 追求**真实照片质感**：自然肤质、细腻毛孔、真实光影、轻微胶片颗粒；**避免**塑料感/过度磨皮/CGI 感/油光蜡像（no plastic skin, no waxy CGI look, natural matte realistic skin）。
+- **★皮肤只准很白且全身同色（铁律）**：女角脸白但胳膊/腿偏黄偏红＝「双色皮肤」，已被用户否。凡有裸露皮肤的女角图，服装段后必写：`uniformly very fair porcelain-pale skin — the EXACT same pale tone on face, neck, shoulders, arms, hands and legs, NO two-tone skin, NO tanned or ruddy or yellowish limbs, NO color mismatch between face and body, NO tan lines`。白＝均匀通透白，不是死白蜡感。详见 [[wardrobe]] 第2条。
 - flux 安全过滤易对真人黑图 → payload 必带 `safety_tolerance:"6"`（gen-image 已内置）。出图不满意**禁止擅自重试，先问用户**（成本铁律）。
 
 ## 6. 真实人景比例·透视（像真的用相机拍出来的）
