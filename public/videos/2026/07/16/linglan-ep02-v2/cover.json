@@ -1,0 +1,19 @@
+{
+  "_comment": "海报式封面 props(render-rules 10)。底图=fal 单独新出的 3:4 竖图(images/poster.png,不与视频画面重复:烛光下比三根手指练保命话)。",
+  "image": "videos/2026/07/16/linglan-ep02-v2/images/poster.png",
+  "focusY": 0.25,
+  "tag": "铃兰穿越记",
+  "tagVi": "Xuyên Không Thành Phu Nhân Hào Môn",
+  "seal": "E02",
+  "volume": { "zh": "卷一 · 惊醒", "vi": "Quyển 1 · Tỉnh Giấc" },
+  "chapter": {
+    "py": "yì zhēng yǎn chéng le zhōng guó xīn niáng",
+    "zh": "一睁眼，成了中国新娘",
+    "vi": "Mở mắt ra thành cô dâu Trung Quốc"
+  },
+  "episode": {
+    "py": "bǎo mìng de sān gè zì",
+    "zh": "保命的三个字",
+    "vi": "Ba chữ cứu mạng"
+  }
+}

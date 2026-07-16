@@ -1,50 +1,82 @@
-<!-- 服装穿搭设计师规范(用户 2026-07-16 锁定,因旧「吊带+短裙」出图粗糙、不时尚不性感、皮肤双色被否)。
-   本文件=剧里所有年轻女角(女主沈青梧/女佣小桃/未来新登场女角)的默认穿搭「设计师」。
-   render-rules 第2条「默认=吊带短裙」在这里升级为「时尚性感·每集换款换风格」的可执行规范。
-   写 shot.content 的服装段时,照本文件挑一套 look 并逐字落实(款式+面料+版型+配色+配饰+全身景别)。 -->
-# chinese-drama · 服装穿搭设计师规范（时尚性感 · 每集换款）
+<!-- 服装穿搭设计师规范 v2(用户 2026-07-16 二次锁定)。
+   v1 作废原因:只给品类词(「罗纹吊带」「百褶短裙」「奶白×裸粉」),flux 落地=棉背心+溜冰裙,像廉价演出服,被用户怒否("你不懂什么是性感时尚么")。
+   v2 核心改法:①每套 look 必须写满「七要素 look 卡」,具体到可购买的单品级描述;②面料必须有光泽/蕾丝质感;③禁掉一切"校园感/演出服感"品类;④配色升级为轻奢高级色;⑤被否旧图禁复用。
+   写 shot.content 服装段前必读本文件,照第 4 条模板逐字落实。 -->
+# chinese-drama · 服装穿搭设计师规范 v2（性感时尚 · 轻奢质感 · 每集换款）
 
-> 你是这部戏的**服装造型设计师**，不是套模板的。每次给年轻女角出图，你要像给时尚大片/ins 博主/轻奢品牌 lookbook 造型一样，**主动设计一套当集独有、时髦好看又性感得体的吊带穿搭**。旧版「白吊带背心+一条平平的短裙」那种**粗糙、廉价、像跳舞演出服**的做法作废。
+> 你是这部戏的**明星造型师**，对标 Vogue 时尚大片 / 轻奢品牌 lookbook / ins 百万粉穿搭博主。
+> 每套衣服的验收标准只有一句话：**这张图直接发时尚博主账号，粉丝会问"链接在哪"**。
+> 出来像校服、演出服、地摊货、儿童装 → 废图。
 
-## 0. 北极星（美学基准，违反即废图）
-- **时尚 + 性感 + 高级**三者同时在线：像**高端时尚大片 / 时装 lookbook / ins 精致穿搭博主**拍出来的，不是廉价演出服、不是校园运动装、不是死板制服。
-- **性感=得体的性感**：靠**版型贴身显身材、细肩带露锁骨香肩、高腰或露一线腰、短裙露白皙大长腿**来体现，SFW、不露骨、不低俗（不透视、不露内衣、不深 V 到胸、裙长到大腿中段以上但不到危险）。
-- **面料要有高级质感**：真丝缎面(silk satin)、蕾丝(delicate lace)、细罗纹针织(fine ribbed knit)、雪纺(chiffon)、天鹅绒(velvet)——**有垂坠感/光泽感/细腻纹理**，衣服要**贴合并修饰纤细身材(drapes and skims her slim figure)**，不是硬邦邦一块布。
-- **一句话**：每套都要让人觉得「这姑娘好会穿、又美又高级又有点撩」，而不是「随便套了件白背心」。
+## 0. 北极星（违反即废图）
 
-## 1. 出图必写的「防粗糙」硬描述（每套吊带都要带，教训直接固化）
-旧图翻车是因为 flux 把「camisole top」画成了**厚肩带、结构感胸衣(bustier bodice)、像连体泳衣/舞蹈服**。以后写吊带**必须逐条堵死**：
-- **细吊带**：`delicate THIN spaghetti straps`（细的、精致的），**明确否定**：`NOT thick straps, NOT a bustier/corset bodice, NOT a structured swimsuit-like top, NOT a tank top`。
-- **面料+垂坠**：写清面料（如 `silk-satin` / `soft lace` / `ribbed knit`）+ `soft draping that skims her slim figure`（垂顺贴身修饰身材），不要 `stiff / structured`。
-- **版型显身材**：`fitted and flattering, defining her slender waist`（合身、勾勒细腰）；按 look 可加**露一线腰**(`cropped, showing a sliver of her fair waist`)或**高腰**(`high-waisted skirt cinching her waist`)。
-- **时尚定调词**：`styled like a high-fashion editorial / chic fashionable lookbook look, trendy, elegant, tastefully sexy`。
-- **短裙**：写清款式（百褶/A字/包臀/开衩）+ 面料 + 高腰/低腰 + `short, above mid-thigh, showing her long slim legs`；否定 `NOT a plain shapeless skirt`。
-- **配饰点睛**（至少 1 件，提升「精致穿搭」感）：`a dainty thin necklace` / `small delicate earrings` / `a slim waist belt` / `a thin bracelet`——细、精致，不夸张。
-- **全身/七分身景别**（配合 render-rules 第2、6条）：脚落地、比例真实，看得清身材+白皮肤+大长腿。
+- **性感、时尚、高级三者缺一不可**：性感靠**贴身版型勾勒身材曲线、露腰线、细肩带锁骨香肩、短裙大长腿、高跟鞋拉比例**；时尚靠**成衣级单品+完整造型（鞋/珠宝/腰部细节/发型妆容）**；高级靠**面料光泽与垂坠**。
+- **SFW 底线不变**：不透视、不露内衣、不深V到胸、裙长大腿中上段。性感=得体的撩，不是低俗。
+- **一句话自检**：看着这套问自己——「有光泽吗？腰线在哪？脚上穿的什么？首饰呢？」**答不齐四个 = 没设计完，不许出图。**
 
-## 2. ★皮肤（铁律 · 用户 2026-07-16 锁：只准很白，禁双色）
-旧图翻车之二：脸白但**胳膊/腿偏黄偏红**，像换了个人——「双色皮肤」。以后每张有裸露皮肤的女角图**必须写**：
-- `uniformly very fair porcelain-pale skin — the EXACT same pale tone on her face, neck, shoulders, arms, hands, legs and feet`（全身同一种很白的瓷白肤色，脸和四肢一个色）；
-- 明确否定：`NO two-tone skin, NO tanned or ruddy or yellowish limbs, NO color mismatch between face and body, NO tan lines`；
-- 质感仍走 render-rules 第5条真人肤质（细腻毛孔、不塑料）。**「白」是均匀通透的白，不是磨白/死白蜡感。**
+## 1. ★七要素 look 卡（每套必须写满，缺一要素=未完成）
 
-## 3. 设计流程（怎么保证「每集不同风格」）
-每要给某角色某集设计一套，**从下面每个轴各挑 1 项**组合，且**与该角色上一集不重复**（换风格线、换面料、换配色、换裙型）：
+每次给年轻女角设计当集 look，**七个要素逐一写进 shot.content**，具体到"可购买的单品"级别：
 
-- **风格线（轮换，别老一套）**：① 甜辣少女（蕾丝/罗纹细吊带+高腰百褶超短裙，青春带撩）② 轻奢真丝（真丝缎细吊带+高开衩/包臀半裙，优雅高级性感）③ 法式慵懒（雪纺细吊带+A字半裙，随性时髦）④ 冷艳都市（针织包身吊带+开衩短裙，成熟一点）。
-- **上衣款**：真丝缎细吊带 / 蕾丝花边细吊带 / 罗纹针织细吊带 / 系带细吊带 / 抹胸式细吊带（cowl 或 V 或一字领，二选一别太露）。
-- **面料**：silk satin / soft lace / ribbed knit / chiffon / velvet。
-- **裙款**：高腰百褶超短裙 / A字短裙 / 包臀短裙 / 侧开衩短裙 / 半身伞裙。
-- **配色**：一套协调配色（上下同色系或撞色好看），**每集必换**（别集集撞色）。参考：奶白×裸粉、薄荷绿×奶白、雾霾蓝×白、香槟金×米、藕荷紫×白、樱花粉×白、燕麦米×焦糖、酒红×黑（成熟集）。
-- **配饰**：细项链 / 小耳环 / 细腰带 / 细手链，挑 1–2。
+| # | 要素 | 必须写到什么程度（举例） |
+|---|---|---|
+| ① | **上衣** | 具体单品+面料+光泽：`a champagne silk-satin cowl-neck camisole with delicate French lace trim and a soft luxurious sheen, fitted and slightly cropped` |
+| ② | **短裙** | 具体版型+高腰+贴身：`a SEPARATE high-waisted dusty-blue silk-satin mini skirt with a side slit, draping elegantly over her hips` |
+| ③ | **鞋** | 全身/七分身景别必写：`strappy nude high heels`（细带高跟/穆勒跟；**禁运动鞋/平底棉拖**） |
+| ④ | **腰部细节** | 露一线腰 或 细腰链/细腰带：`baring a sliver of her slim waist / a delicate thin gold waist chain` |
+| ⑤ | **珠宝≥2件** | 金或珍珠系、细而精致：`small gold hoop earrings + a dainty gold pendant necklace` |
+| ⑥ | **发型妆容** | `soft loose waves / sleek low ponytail with face-framing strands, subtle elegant makeup with glossy lips` |
+| ⑦ | **配色** | 从第 3 条高级色库选一组，**与该角色上一集不同** |
 
-## 4. 角色专属倾向（在通用规范上微调）
-- **小桃(女佣·19·甜)**：偏**甜辣少女/法式慵懒**线，配色清甜（奶白、裸粉、薄荷、樱花粉、雾蓝）。可爱里带一点小性感，但**不能盖过女主**（款式别比女主更贵气张扬）。脸/发不变（圆脸齐刘海低马尾），只换衣服。
-- **女主沈青梧(绝色·22)**：偏**轻奢真丝/冷艳都市**线，最贵气最高级最惊艳，配色可高级（香槟金、藕荷、酒红、雾蓝）。婚礼线红嫁衣到 E06，之后回本规范。
-- **柳梦烟/沈玉柔等**：按人设定调（继母端庄中带心机、白莲花清纯挂），仍走「时尚性感吊带短裙」默认，除非强场景否决。
+## 2. 面料与版型铁律（针对 flux 翻车点，逐条堵死）
 
-## 5. 强场景豁免（沿用 render-rules 第2条）
-只有当集剧情**锁死**某服装的强场景才覆盖本规范：婚礼当晚=红嫁衣、守灵奔丧=素白、正式晚宴=礼服、深夜寝卧=真丝吊带睡裙（同样显身材）。一般日常/当值/出街/居家**一律走本规范的时尚吊带短裙**，不许拿「她是女佣」套制服。
+- **光泽铁律**：上下装**至少一件**是 `silk-satin`（缎面光泽）/ `delicate lace`（蕾丝）/ `velvet`（丝绒）。prompt 必带 `luxurious sheen / lustrous drape` 一类光泽词。**禁写裸的 "knit top / cotton camisole"——纯棉感、普通针织感=廉价感元凶。**
+- **版型铁律**：上衣 `fitted, sculpting her slim waist`（贴身勾腰线），可 cropped 露一线腰；短裙=高腰+贴身版（包臀 bodycon / 侧开衩 slit / 缎面斜裁 bias-cut / 裹身 wrap）。
+- **★品类黑名单（曾翻车，一律禁写禁出）**：plain ribbed tank/cami（罗纹棉背心）、pleated skater skirt（学生百褶溜冰裙）、cheerleader/dance-costume look、school-uniform vibe、thick straps、bustier/corset、swimsuit-like top、shapeless loose skirt。
+- **否定词必带**：`NOT a plain cotton tank top, NOT a cheap dance costume, NOT a school skirt, NOT thick straps, NOT a bustier or structured bodice`。
+- **定调词必带**：`styled by a celebrity fashion stylist like a Vogue high-fashion editorial / luxury lookbook, trendy, elegant, tastefully sexy`。
+
+## 3. 高级色库（每集换一组；★奶白×裸粉等"幼稚糖果色"已被否，删除）
+
+香槟金×象牙白 / 雾霾蓝缎×白 / 鼠尾草绿缎×奶油 / 黑缎×金饰 / 酒红×黑蕾丝 / 珍珠白蕾丝×浅杏 / 焦糖缎×米 / 藕荷紫缎×银灰。
+原则：**缎面高级色+金属饰品点睛**；同一画面上下装同色系或高级撞色；禁纯糖果粉嫩组合（那是儿童装）。
+
+## 4. shot.content 服装段模板（照抄改词，七要素全部在场）
+
+```
+wearing a fashionable, tastefully sexy TWO-PIECE look styled by a celebrity fashion stylist:
+a {色}silk-satin camisole with delicate THIN spaghetti straps and fine French lace trim,
+with a soft luxurious sheen, fitted and slightly cropped to bare a sliver of her slim waist
+(NOT a plain cotton tank top, NOT thick straps, NOT a bustier, NOT a cheap dance costume),
+paired with a SEPARATE high-waisted {色}silk-satin mini skirt with a side slit draping
+elegantly over her hips (NOT a pleated school skirt), a delicate thin gold waist chain,
+small gold hoop earrings and a dainty gold pendant necklace, strappy nude high heels,
+{发型}, subtle elegant makeup with glossy lips — like a Vogue high-fashion editorial /
+luxury lookbook, trendy, elegant, tastefully sexy, SFW
+```
+
+后接第 5 条皮肤段 + 全身/七分身景别（render-rules 2/6：脚落地、看得清身材白肤大长腿）。
+
+## 5. ★皮肤（铁律不变 · 只准很白，禁双色）
+
+凡有裸露皮肤的女角图必写：
+`uniformly very fair porcelain-pale skin — the EXACT same pale tone on her face, neck, shoulders, arms, hands, legs and feet, NO two-tone skin, NO tanned or ruddy or yellowish limbs, NO color mismatch between face and body, NO tan lines`；
+质感走 render-rules 第 5 条（细腻毛孔不塑料）。白=均匀通透白，不是死白蜡感。
+
+## 6. 角色定调（在七要素之上微调，谁都不许掉出"轻奢"线）
+
+- **女主沈青梧（绝色·22）**：全剧衣品天花板——轻奢缎面/冷艳都市线，色库里最贵气的组合（香槟金、黑缎×金、酒红×黑蕾丝、藕荷紫缎）。红嫁衣线到 E06，之后回本规范。
+- **小桃（女佣·19·甜）**：**时尚感一分不减**，靠配色显甜（雾霾蓝缎×白、鼠尾草绿缎×奶油、珍珠白蕾丝×浅杏），款式可比女主少一分张扬（开衩浅一点/珠宝小一号），但**面料光泽、高跟、腰线、珠宝一样都不能少**——她是"会打扮的俏女佣"，不是穿演出服的路人。
+- **柳梦烟/沈玉柔等**：按人设定调（继母=端庄成熟色系、白莲花=清纯浅色系），七要素照走。
+
+## 7. 强场景豁免（收窄口径不变）
+
+婚礼当晚=红嫁衣、守灵奔丧=素白、正式晚宴=礼服、深夜寝卧=真丝吊带睡裙（缎面光泽同样必写）。其余日常/当值/出街一律走本规范。
+
+## 8. ★禁复用被否图（2026-07-16 教训固化）
+
+- **用户否过的 look、以及按已作废旧规范出的图，禁止复用到任何新集**（E02-v2 曾复用 07/15 的奶白棉背心图=二次翻车）。
+- 复用任何旧图前，先对照**现行** wardrobe/render-rules 逐条核验该图服装；不合规=重画，不许"能省则省"地凑合。
 
 ## 关联
 [[render-rules]] · [[style]] · [[../characters/xiaotao/canonical]] · [[../characters/qingwu/canonical]]

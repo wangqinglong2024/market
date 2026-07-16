@@ -164,7 +164,7 @@
       "status": "built",
       "createdAt": "2026-07-16",
       "manifest": "public/videos/2026/07/16/linglan-ep01-v2/manifest.json",
-      "beats": 20
+      "beats": 21
     },
     {
       "id": "linglan-ep02",
@@ -216,6 +216,53 @@
       "createdAt": "2026-07-16",
       "manifest": "public/videos/2026/07/15/linglan-ep06/manifest.json",
       "beats": 17
+    },
+    {
+      "id": "linglan-ep02-v2",
+      "title": "铃兰穿越记 E02 爆点版·第一句保命中文：听不懂(new_story适配·07/16)",
+      "template": "chinese-drama",
+      "shard": "2026/07/16",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-16",
+      "beats": 19
+    },
+    {
+      "id": "linglan-ep03-v2",
+      "title": "铃兰穿越记 E03 爆点版·生死判决当面宣读(new_story适配·07/16)",
+      "template": "chinese-drama",
+      "shard": "2026/07/16",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-16",
+      "beats": 22
+    },
+    {
+      "id": "linglan-ep01-v3",
+      "title": "铃兰穿越记 E01 识字眼版·字全认识话听不懂(v3设定·仅脚本待审)",
+      "template": "chinese-drama",
+      "shard": "2026/07/16",
+      "lang": "vi",
+      "status": "new",
+      "createdAt": "2026-07-16"
+    },
+    {
+      "id": "linglan-ep02-v3",
+      "title": "铃兰穿越记 E02 识字眼版·今晚学不会一句中文(v3设定·仅脚本待审)",
+      "template": "chinese-drama",
+      "shard": "2026/07/16",
+      "lang": "vi",
+      "status": "new",
+      "createdAt": "2026-07-16"
+    },
+    {
+      "id": "linglan-ep03-v3",
+      "title": "铃兰穿越记 E03 识字眼版·我的中文只有一个字(v3设定·仅脚本待审)",
+      "template": "chinese-drama",
+      "shard": "2026/07/16",
+      "lang": "vi",
+      "status": "new",
+      "createdAt": "2026-07-16"
     }
   ]
 }

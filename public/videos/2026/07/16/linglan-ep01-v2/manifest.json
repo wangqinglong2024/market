@@ -435,92 +435,102 @@
       "sceneId": "s1-wake",
       "image": "videos/2026/07/16/linglan-ep01-v2/images/s1-wake.png",
       "audio": "videos/2026/07/16/linglan-ep01-v2/audio/b01c.mp3",
-      "durationMs": 2056,
+      "durationMs": 2440,
       "motion": "push-in",
       "narration": true,
       "charTimings": [
         {
-          "ch": "却",
+          "ch": "可",
           "startMs": 0,
-          "endMs": 237
+          "endMs": 253
         },
         {
-          "ch": "一",
-          "startMs": 237,
-          "endMs": 474
+          "ch": "我",
+          "startMs": 253,
+          "endMs": 507
         },
         {
-          "ch": "句",
-          "startMs": 474,
-          "endMs": 711
+          "ch": "的",
+          "startMs": 507,
+          "endMs": 760
         },
         {
           "ch": "中",
-          "startMs": 711,
-          "endMs": 948
+          "startMs": 760,
+          "endMs": 1013
         },
         {
           "ch": "文",
-          "startMs": 948,
-          "endMs": 1185
+          "startMs": 1013,
+          "endMs": 1267
         },
         {
-          "ch": "都",
-          "startMs": 1185,
-          "endMs": 1422
+          "ch": "说",
+          "startMs": 1267,
+          "endMs": 1520
         },
         {
           "ch": "不",
-          "startMs": 1422,
-          "endMs": 1659
+          "startMs": 1520,
+          "endMs": 1773
         },
         {
-          "ch": "会",
-          "startMs": 1659,
-          "endMs": 1896
+          "ch": "成",
+          "startMs": 1773,
+          "endMs": 2027
+        },
+        {
+          "ch": "句",
+          "startMs": 2027,
+          "endMs": 2280
         }
       ],
       "viWordTimings": [
         {
           "w": "mà",
           "startMs": 0,
-          "endMs": 271
-        },
-        {
-          "w": "không",
-          "startMs": 271,
-          "endMs": 542
-        },
-        {
-          "w": "biết",
-          "startMs": 542,
-          "endMs": 813
-        },
-        {
-          "w": "một",
-          "startMs": 813,
-          "endMs": 1083
-        },
-        {
-          "w": "câu",
-          "startMs": 1083,
-          "endMs": 1354
+          "endMs": 285
         },
         {
           "w": "tiếng",
-          "startMs": 1354,
-          "endMs": 1625
+          "startMs": 285,
+          "endMs": 570
         },
         {
           "w": "Trung",
-          "startMs": 1625,
-          "endMs": 1896
+          "startMs": 570,
+          "endMs": 855
+        },
+        {
+          "w": "của",
+          "startMs": 855,
+          "endMs": 1140
+        },
+        {
+          "w": "tôi",
+          "startMs": 1140,
+          "endMs": 1425
+        },
+        {
+          "w": "không",
+          "startMs": 1425,
+          "endMs": 1710
+        },
+        {
+          "w": "thành",
+          "startMs": 1710,
+          "endMs": 1995
+        },
+        {
+          "w": "câu",
+          "startMs": 1995,
+          "endMs": 2280
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "却一句中文都不会",
-        "local": "mà không biết một câu tiếng Trung"
+        "zh": "可我的中文说不成句",
+        "local": "mà tiếng Trung của tôi không thành câu"
       }
     },
     {
@@ -528,117 +538,170 @@
       "sceneId": "s1-wake",
       "image": "videos/2026/07/16/linglan-ep01-v2/images/s1-wake.png",
       "audio": "videos/2026/07/16/linglan-ep01-v2/audio/b01d.mp3",
-      "durationMs": 2600,
+      "durationMs": 2224,
       "motion": "push-in",
       "narration": true,
       "charTimings": [
         {
           "ch": "明",
           "startMs": 0,
-          "endMs": 190
+          "endMs": 295
         },
         {
           "ch": "天",
-          "startMs": 190,
-          "endMs": 380
+          "startMs": 295,
+          "endMs": 590
         },
         {
           "ch": "医",
-          "startMs": 380,
-          "endMs": 570
+          "startMs": 590,
+          "endMs": 885
         },
         {
           "ch": "生",
-          "startMs": 570,
-          "endMs": 760
+          "startMs": 885,
+          "endMs": 1179
         },
         {
           "ch": "来",
-          "startMs": 760,
-          "endMs": 950
+          "startMs": 1179,
+          "endMs": 1474
         },
         {
           "ch": "验",
-          "startMs": 950,
-          "endMs": 1140
+          "startMs": 1474,
+          "endMs": 1769
         },
         {
           "ch": "身",
-          "startMs": 1140,
-          "endMs": 1330
-        },
-        {
-          "ch": "我",
-          "startMs": 1330,
-          "endMs": 1520
-        },
-        {
-          "ch": "就",
-          "startMs": 1520,
-          "endMs": 1710
-        },
-        {
-          "ch": "死",
-          "startMs": 1710,
-          "endMs": 1900
-        },
-        {
-          "ch": "定",
-          "startMs": 1900,
-          "endMs": 2090
-        },
-        {
-          "ch": "了",
-          "startMs": 2090,
-          "endMs": 2280
+          "startMs": 1769,
+          "endMs": 2064
         }
       ],
       "viWordTimings": [
         {
           "w": "Mai",
           "startMs": 0,
-          "endMs": 285
+          "endMs": 344
         },
         {
           "w": "bác",
-          "startMs": 285,
-          "endMs": 570
+          "startMs": 344,
+          "endMs": 688
         },
         {
           "w": "sĩ",
-          "startMs": 570,
-          "endMs": 855
+          "startMs": 688,
+          "endMs": 1032
         },
         {
           "w": "đến",
-          "startMs": 855,
-          "endMs": 1140
+          "startMs": 1032,
+          "endMs": 1376
         },
         {
-          "w": "khám,",
-          "startMs": 1140,
-          "endMs": 1425
+          "w": "khám",
+          "startMs": 1376,
+          "endMs": 1720
         },
         {
-          "w": "tôi",
-          "startMs": 1425,
-          "endMs": 1710
-        },
-        {
-          "w": "chết",
-          "startMs": 1710,
-          "endMs": 1995
-        },
-        {
-          "w": "chắc",
-          "startMs": 1995,
-          "endMs": 2280
+          "w": "người",
+          "startMs": 1720,
+          "endMs": 2064
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "明天医生来验身，我就死定了",
-        "local": "Mai bác sĩ đến khám, tôi chết chắc"
+        "zh": "明天医生来验身",
+        "local": "Mai bác sĩ đến khám người"
+      }
+    },
+    {
+      "id": "b01e",
+      "sceneId": "s1-wake",
+      "image": "videos/2026/07/16/linglan-ep01-v2/images/s1-wake.png",
+      "audio": "videos/2026/07/16/linglan-ep01-v2/audio/b01e.mp3",
+      "durationMs": 1976,
+      "motion": "push-in",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "我",
+          "startMs": 0,
+          "endMs": 207
+        },
+        {
+          "ch": "一",
+          "startMs": 207,
+          "endMs": 414
+        },
+        {
+          "ch": "开",
+          "startMs": 414,
+          "endMs": 621
+        },
+        {
+          "ch": "口",
+          "startMs": 621,
+          "endMs": 828
+        },
+        {
+          "ch": "就",
+          "startMs": 828,
+          "endMs": 1035
+        },
+        {
+          "ch": "死",
+          "startMs": 1035,
+          "endMs": 1242
+        },
+        {
+          "ch": "定",
+          "startMs": 1242,
+          "endMs": 1449
+        },
+        {
+          "ch": "了",
+          "startMs": 1449,
+          "endMs": 1656
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "tôi",
+          "startMs": 0,
+          "endMs": 276
+        },
+        {
+          "w": "hé",
+          "startMs": 276,
+          "endMs": 552
+        },
+        {
+          "w": "miệng",
+          "startMs": 552,
+          "endMs": 828
+        },
+        {
+          "w": "là",
+          "startMs": 828,
+          "endMs": 1104
+        },
+        {
+          "w": "chết",
+          "startMs": 1104,
+          "endMs": 1380
+        },
+        {
+          "w": "chắc",
+          "startMs": 1380,
+          "endMs": 1656
+        }
+      ],
+      "captions": {
+        "pinyin": "",
+        "zh": "我一开口，就死定了",
+        "local": "tôi hé miệng là chết chắc"
       }
     },
     {
@@ -1744,107 +1807,117 @@
       "sceneId": "s7-fear",
       "image": "videos/2026/07/16/linglan-ep01-v2/images/s7-fear.png",
       "audio": "videos/2026/07/16/linglan-ep01-v2/audio/b09b.mp3",
-      "durationMs": 2224,
+      "durationMs": 2848,
       "motion": "pull-back",
       "narration": true,
       "charTimings": [
         {
           "ch": "一",
           "startMs": 0,
-          "endMs": 206
+          "endMs": 244
         },
         {
           "ch": "个",
-          "startMs": 206,
-          "endMs": 413
+          "startMs": 244,
+          "endMs": 489
         },
         {
-          "ch": "不",
-          "startMs": 413,
-          "endMs": 619
+          "ch": "开",
+          "startMs": 489,
+          "endMs": 733
         },
         {
-          "ch": "会",
-          "startMs": 619,
-          "endMs": 826
+          "ch": "口",
+          "startMs": 733,
+          "endMs": 977
         },
         {
-          "ch": "中",
-          "startMs": 826,
-          "endMs": 1032
+          "ch": "就",
+          "startMs": 977,
+          "endMs": 1222
         },
         {
-          "ch": "文",
-          "startMs": 1032,
-          "endMs": 1238
+          "ch": "露",
+          "startMs": 1222,
+          "endMs": 1466
+        },
+        {
+          "ch": "馅",
+          "startMs": 1466,
+          "endMs": 1711
         },
         {
           "ch": "的",
-          "startMs": 1238,
-          "endMs": 1445
+          "startMs": 1711,
+          "endMs": 1955
         },
         {
           "ch": "假",
-          "startMs": 1445,
-          "endMs": 1651
+          "startMs": 1955,
+          "endMs": 2199
         },
         {
           "ch": "新",
-          "startMs": 1651,
-          "endMs": 1858
+          "startMs": 2199,
+          "endMs": 2444
         },
         {
           "ch": "娘",
-          "startMs": 1858,
-          "endMs": 2064
+          "startMs": 2444,
+          "endMs": 2688
         }
       ],
       "viWordTimings": [
         {
           "w": "Một",
           "startMs": 0,
-          "endMs": 258
+          "endMs": 299
         },
         {
           "w": "cô",
-          "startMs": 258,
-          "endMs": 516
+          "startMs": 299,
+          "endMs": 597
         },
         {
           "w": "dâu",
-          "startMs": 516,
-          "endMs": 774
+          "startMs": 597,
+          "endMs": 896
         },
         {
           "w": "giả",
-          "startMs": 774,
-          "endMs": 1032
+          "startMs": 896,
+          "endMs": 1195
         },
         {
-          "w": "không",
-          "startMs": 1032,
-          "endMs": 1290
+          "w": "cứ",
+          "startMs": 1195,
+          "endMs": 1493
         },
         {
-          "w": "biết",
-          "startMs": 1290,
-          "endMs": 1548
+          "w": "mở",
+          "startMs": 1493,
+          "endMs": 1792
         },
         {
-          "w": "tiếng",
-          "startMs": 1548,
-          "endMs": 1806
+          "w": "miệng",
+          "startMs": 1792,
+          "endMs": 2091
         },
         {
-          "w": "Trung",
-          "startMs": 1806,
-          "endMs": 2064
+          "w": "là",
+          "startMs": 2091,
+          "endMs": 2389
+        },
+        {
+          "w": "lộ",
+          "startMs": 2389,
+          "endMs": 2688
         }
       ],
       "captions": {
         "pinyin": "",
-        "zh": "一个不会中文的假新娘",
-        "local": "Một cô dâu giả không biết tiếng Trung"
+        "zh": "一个开口就露馅的假新娘",
+        "local": "Một cô dâu giả cứ mở miệng là lộ"
       }
     },
     {
