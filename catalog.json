@@ -312,6 +312,18 @@
       "design": "templates/chuanyue-drama/story/卷01-冲喜入府/第01章-洞房惊魂.md",
       "manifest": null,
       "beats": 12
+    },
+    {
+      "id": "huangmou-e001-kling-cn",
+      "title": "凰谋 E01·洞房惊魂【纯中文配音·英文字幕版】",
+      "template": "chuanyue-drama",
+      "shard": "2026/07/18",
+      "lang": "zh",
+      "status": "built",
+      "createdAt": "2026-07-18",
+      "design": "templates/chuanyue-drama/story/卷01-冲喜入府/第01章-洞房惊魂.md",
+      "manifest": null,
+      "beats": 12
     }
   ]
 }

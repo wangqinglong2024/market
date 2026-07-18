@@ -113,9 +113,11 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
 
   const sceneImages = {};   // sceneId -> rel image path
   const beatScene = {};     // beatId -> sceneId (供 video.keyframeFrom 解析关键帧)
-  // ★音色解析:template.json 只留非角色音色(narrator/mama);角色音色从 characters/_registry.json 每人 voice 覆盖进来(与脸同一事实源)。
+  // ★音色解析:template.json 非角色音色(narrator/mama) → registry 角色音色覆盖 → script.voices 本片覆盖(最高优先)。
+  // script.voices 让「语言/旁白版本」成为一个模式:如纯中文版把 narrator 覆盖成中文悬疑解说音色,不动模板默认(越南版)。
   const voices = { ...(settings.audio.voices || {}) };
   for (const c of Object.values(chars)) if (c.voice) voices[c.id] = c.voice;
+  Object.assign(voices, script.voices || {});
 
   // 确保某场景关键帧已生成，返回 { rel, abs }
   async function ensureKeyframe(beat) {

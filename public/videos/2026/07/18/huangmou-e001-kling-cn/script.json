@@ -1,0 +1,324 @@
+{
+  "videoId": "huangmou-e001-kling-cn",
+  "lang": "zh",
+  "_comment": "《凰谋》E01 洞房惊魂 —— ★纯中文配音+英文字幕版(基于全可灵版重组装,不调用任何fal模型:图/clip/关键帧全复用)。narrator 旁白换中文悬疑解说2.0音色(读 captions.zh),角色对白仍中文;三行字幕第三行(local)由越南语改英文。只重合 b01/b02/b10 旁白音频(免费TTS),其余音频复用。",
+  "beats": [
+    {
+      "id": "b01",
+      "sceneId": "s1-wake",
+      "type": "video",
+      "voice": "narrator",
+      "hasMainCharacter": true,
+      "characters": [
+        "zhaohua"
+      ],
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "Extreme close-up on a stunningly beautiful young Chinese bride's face the instant a red bridal veil is torn away — her eyes snapping wide open in raw terror and disorientation, pupils shrinking, lips parted in a sharp gasp, a sheen of sweat on her brow, tall red dragon-and-phoenix wedding candles flaring around her in a dim opulent bridal chamber.",
+          "refVariant": "default"
+        }
+      ],
+      "video": {
+        "motion": "The red veil is violently ripped away; her eyes snap wide open in terror and confusion, pupils contracting; she gasps and jolts upright; the candle flames flare and sway around her.",
+        "camera": "fast push-in",
+        "durationSec": 4
+      },
+      "captions": {
+        "zh": "她死了，却活在别人身上",
+        "pinyin": "tā sǐ le , què huó zài bié rén shēn shàng",
+        "local": "She died — yet lives on in another’s body"
+      }
+    },
+    {
+      "id": "b02",
+      "sceneId": "s2-groom",
+      "type": "video",
+      "voice": "narrator",
+      "hasMainCharacter": true,
+      "characters": [
+        "zhaohua"
+      ],
+      "motion": "push-in",
+      "shots": [
+        {
+          "content": "Over-the-shoulder from the bride's point of view: on the red wedding bed beside her lies a gaunt, deathly-pale young man in red bridegroom robes with sunken cheeks, looking like a living corpse; her trembling pale hand recoils in the foreground; dim red candlelight, eerie and oppressive.",
+          "refVariant": "default"
+        }
+      ],
+      "video": {
+        "motion": "Her trembling hand slowly recoils; the camera drifts to reveal the gaunt corpse-like groom lying still beside her; dread rises.",
+        "camera": "slow push-in",
+        "durationSec": 3
+      },
+      "captions": {
+        "zh": "她的新郎，是个将死之人",
+        "pinyin": "tā de xīn láng , shì gè jiāng sǐ zhī rén",
+        "local": "Her bridegroom is a dying man"
+      }
+    },
+    {
+      "id": "b03",
+      "sceneId": "s3-hands",
+      "type": "video",
+      "voice": "zhaohua",
+      "inner": true,
+      "hasMainCharacter": true,
+      "characters": [
+        "zhaohua"
+      ],
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "Close-up of the beautiful young bride's own trembling hands held up before her face, gold-embroidered red bridal sleeves, staring at them in disbelief as if they are not her own, dim warm candlelight, single face in frame.",
+          "refVariant": "default"
+        }
+      ],
+      "video": {
+        "motion": "Her trembling pale hands slowly turn and tilt before her face, fingers quivering as she stares at them in disbelief; warm candlelight flickers softly.",
+        "camera": "slow push-in",
+        "durationSec": 3
+      },
+      "captions": {
+        "zh": "这不是我的手",
+        "pinyin": "zhè bú shì wǒ de shǒu",
+        "local": "These are not my hands"
+      }
+    },
+    {
+      "id": "b04",
+      "sceneId": "s4-flash",
+      "type": "video",
+      "voice": "zhaohua",
+      "inner": true,
+      "hasMainCharacter": true,
+      "characters": [
+        "zhaohua"
+      ],
+      "motion": "pop",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "A split-second frozen memory: a modern present-day female forensic pathologist in a white lab coat inside an evidence storage room, engulfed in a sudden fireball explosion, flame and flying debris lighting her determined face — a violent modern death.",
+          "refVariant": "modern"
+        }
+      ],
+      "video": {
+        "motion": "The sudden fireball explosion surges and flares outward, flame and flying debris streak past, lighting her determined face in a frozen violent instant; harsh flickering firelight.",
+        "camera": "shaky push-in",
+        "durationSec": 3
+      },
+      "captions": {
+        "zh": "我明明已经死了",
+        "pinyin": "wǒ míng míng yǐ jīng sǐ le",
+        "local": "I clearly had already died"
+      }
+    },
+    {
+      "id": "b05",
+      "sceneId": "s5-mirror",
+      "type": "video",
+      "voice": "zhaohua",
+      "inner": true,
+      "hasMainCharacter": true,
+      "characters": [
+        "zhaohua"
+      ],
+      "motion": "push-in",
+      "shots": [
+        {
+          "content": "A dim ornate bronze vanity mirror in a red-candlelit bridal chamber reflecting the shocked, disbelieving face of the beautiful young bride, warm flickering candlelight, cinematic.",
+          "refVariant": "default"
+        }
+      ],
+      "video": {
+        "motion": "The camera pushes slowly toward the bronze mirror as her reflection turns to meet her own eyes with dawning horror; candlelight flickers.",
+        "camera": "push-in",
+        "durationSec": 3
+      },
+      "captions": {
+        "zh": "镜里的人，根本不是我",
+        "pinyin": "jìng lǐ de rén , gēn běn bú shì wǒ",
+        "local": "The person in the mirror isn’t me at all"
+      }
+    },
+    {
+      "id": "b06",
+      "sceneId": "s6-prince",
+      "type": "video",
+      "voice": "peiheng",
+      "hasMainCharacter": true,
+      "characters": [
+        "peiheng"
+      ],
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "A tall, coldly handsome young man reclining weakly against silk pillows on the red wedding sickbed, gravely ill and pale with a feigned frail sickly air, wearing a deep wine-crimson silk sickbed robe with subtle gold trim (rich fabric, clearly NOT black), long black hair loose over the pillow; his sharp cold eyes are barely half-open, casting a detached sidelong gaze toward the bride; in the blurred foreground the bride is seen from behind over her shoulder; dim red candlelight; his is the only face in frame.",
+          "refVariant": "default"
+        }
+      ],
+      "video": {
+        "motion": "The reclining pale prince's half-lidded eyes slowly slide toward her with a cold, detached gaze; his chest lifts with one faint shallow breath; red candlelight flickers over him.",
+        "camera": "slow push-in",
+        "durationSec": 3
+      },
+      "captions": {
+        "zh": "本王的新王妃，倒是清醒",
+        "pinyin": "běn wáng de xīn wáng fēi , dào shì qīng xǐng",
+        "local": "My new princess is wide awake, it seems"
+      }
+    },
+    {
+      "id": "b07",
+      "sceneId": "s8-drug",
+      "type": "video",
+      "voice": "qinghe",
+      "hasMainCharacter": true,
+      "characters": [
+        "zhaohua"
+      ],
+      "motion": "still",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "The beautiful young bride in gold-embroidered red bridal robes sits on the edge of the red wedding bed; in the blurred foreground, over the shoulder and back of a young personal maidservant in plain pale-blue servant hanfu with a simple low bun and no headdress, the maid's slender young hands hold out a dark medicinal bowl toward her; the bride regards the offered bowl with subtle wariness beneath a calm composed face; dim red candlelight; only the bride's face is clearly in frame.",
+          "refVariant": "default"
+        }
+      ],
+      "video": {
+        "motion": "The maid's hands gently push the dark medicine bowl a little closer toward the bride; faint steam curls up from the bowl; the bride's wary eyes lower to it while her face stays composed.",
+        "camera": "slow push-in",
+        "durationSec": 3
+      },
+      "captions": {
+        "zh": "王妃，喝了它，安神",
+        "pinyin": "wáng fēi , hē le tā , ān shén",
+        "local": "Princess, drink this — it soothes the nerves"
+      }
+    },
+    {
+      "id": "b08",
+      "sceneId": "s8-drug",
+      "type": "video",
+      "voice": "zhaohua",
+      "inner": true,
+      "hasMainCharacter": true,
+      "characters": [
+        "zhaohua"
+      ],
+      "motion": "push-in",
+      "video": {
+        "motion": "The bride's fingertip dips toward the dark medicine bowl and lifts to her nose; she sniffs; her pupils contract sharply as she catches a wrong scent; her calm mask hides a jolt of alarm.",
+        "camera": "tense push-in on her eyes",
+        "durationSec": 3,
+        "keyframeFrom": "b07"
+      },
+      "captions": {
+        "zh": "这药……不是安神",
+        "pinyin": "zhè yào …… bú shì ān shén",
+        "local": "This medicine… is no sedative"
+      }
+    },
+    {
+      "id": "b09",
+      "sceneId": "s9-observe",
+      "type": "video",
+      "voice": "zhaohua",
+      "inner": true,
+      "hasMainCharacter": true,
+      "characters": [
+        "zhaohua"
+      ],
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "shots": [
+        {
+          "content": "The beautiful young bride, wearing her gold-embroidered red bridal robes and phoenix bridal hairpins, leans over the pale 'dying' groom — a young man in a deep wine-crimson silk robe lying on the red wedding bed — as if tucking his quilt, while her sharp intelligent eyes secretly study his face, complexion and steady breathing; cold analytical focus beneath a gentle pose; dim red candlelight; her face is the only one in clear focus.",
+          "refVariant": "default"
+        }
+      ],
+      "video": {
+        "motion": "The bride leans slightly closer over the pale sleeping groom while tucking his quilt, her sharp eyes secretly scanning his face and throat; candlelight flickers.",
+        "camera": "slow push-in",
+        "durationSec": 3
+      },
+      "captions": {
+        "zh": "他根本没病，他在装",
+        "pinyin": "tā gēn běn méi bìng , tā zài zhuāng",
+        "local": "He isn’t sick at all — he’s faking it"
+      }
+    },
+    {
+      "id": "b10",
+      "sceneId": "s2-groom",
+      "type": "video",
+      "voice": "narrator",
+      "hasMainCharacter": false,
+      "characters": [],
+      "motion": "pull-back",
+      "video": {
+        "motion": "Slow pull-back over the deathly-still groom lying on the red bed; the candle flames dim and sway; an oppressive silent stillness fills the room.",
+        "camera": "slow pull-back",
+        "durationSec": 3,
+        "keyframeFrom": "b02"
+      },
+      "captions": {
+        "zh": "满室的人，都在等他咽气",
+        "pinyin": "mǎn shì de rén , dōu zài děng tā yàn qì",
+        "local": "Everyone here is waiting for him to die"
+      }
+    },
+    {
+      "id": "b11",
+      "sceneId": "s6-prince",
+      "type": "video",
+      "voice": "peiheng",
+      "hasMainCharacter": true,
+      "characters": [
+        "peiheng"
+      ],
+      "motion": "push-in",
+      "video": {
+        "motion": "In the darkness the 'dying' groom's eyes suddenly snap open, fixing her with a cold, sharp, fully-alert stare — all sickliness gone in an instant; a candle flares.",
+        "camera": "fast push-in on his eyes",
+        "durationSec": 3,
+        "keyframeFrom": "b06"
+      },
+      "captions": {
+        "zh": "你不怕我，为什么",
+        "pinyin": "nǐ bú pà wǒ , wèi shén me",
+        "local": "You’re not afraid of me. Why?"
+      }
+    },
+    {
+      "id": "b12",
+      "sceneId": "s1-wake",
+      "type": "video",
+      "voice": "zhaohua",
+      "inner": true,
+      "hasMainCharacter": true,
+      "characters": [
+        "zhaohua"
+      ],
+      "motion": "pop",
+      "video": {
+        "motion": "The bride's terrified expression slowly hardens into cold, sharp resolve; her eyes narrow with quiet determination; the candlelight steadies.",
+        "camera": "slow push-in",
+        "durationSec": 4,
+        "keyframeFrom": "b01"
+      },
+      "captions": {
+        "zh": "这一次，轮到我执刀",
+        "pinyin": "zhè yí cì , lún dào wǒ zhí dāo",
+        "local": "This time, it’s my turn to hold the blade"
+      }
+    }
+  ],
+  "voices": {
+    "narrator": "zh_male_xuanyijieshuo_uranus_bigtts"
+  }
+}

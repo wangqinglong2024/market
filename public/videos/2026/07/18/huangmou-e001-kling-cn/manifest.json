@@ -1,0 +1,1397 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1440,
+    "layout": "chuanyue-drama",
+    "motionPresets": {
+      "push-in": {
+        "scale": [
+          1.02,
+          1.12
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 8,
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pull-back": {
+        "scale": [
+          1.14,
+          1.02
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 5,
+        "ease": "inOut"
+      },
+      "pan-left": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          40,
+          -40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pan-right": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          -40,
+          40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "climb-up": {
+        "scale": [
+          1.06,
+          1.14
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          40,
+          -44
+        ],
+        "driftX": 6,
+        "ease": "inOut"
+      },
+      "ken-burns": {
+        "scale": [
+          1.05,
+          1.13
+        ],
+        "panX": [
+          24,
+          -28
+        ],
+        "panY": [
+          14,
+          -18
+        ],
+        "driftX": 10,
+        "driftY": 8,
+        "ease": "inOut"
+      },
+      "sway": {
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 16,
+        "driftY": 10,
+        "ease": "linear"
+      },
+      "pop": {
+        "scale": [
+          1.18,
+          1.04
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 4,
+        "rotate": [
+          -1.5,
+          0
+        ],
+        "ease": "inOut"
+      },
+      "still": {
+        "scale": [
+          1.03,
+          1.03
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 5,
+        "driftY": 4,
+        "ease": "linear"
+      }
+    },
+    "source": {
+      "region": {
+        "top": 120,
+        "height": 720
+      },
+      "focusY": 0.5
+    },
+    "subtitle": {
+      "top": 960,
+      "height": 360
+    },
+    "fonts": {
+      "_comment": "中文用Ma Shan Zheng(毛笔行楷),SimHei兜底;拼音+越南语用Itim(手写收敛),Nunito兜底。换字体只改这里。",
+      "files": [
+        {
+          "family": "Ma Shan Zheng",
+          "file": "library/fonts/MaShanZheng.ttf"
+        },
+        {
+          "family": "Itim",
+          "file": "library/fonts/Itim.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        }
+      ],
+      "zhStack": [
+        "Ma Shan Zheng",
+        "SimHei",
+        "PingFang SC",
+        "serif"
+      ],
+      "zhWeight": 400,
+      "latinStack": [
+        "Itim",
+        "Nunito",
+        "PingFang SC",
+        "sans-serif"
+      ]
+    },
+    "captions": {
+      "bgColor": "#000000",
+      "pinyinColor": "#7fd1c0",
+      "zhColor": "#ffffff",
+      "viColor": "#f5c518",
+      "localColor": "#f5c518",
+      "karaokeColor": "#25f4ee",
+      "dimColor": "#565b63",
+      "sizes": {
+        "pinyin": 52,
+        "zh": 72,
+        "vi": 58,
+        "local": 58
+      },
+      "gapPinyinZh": 8,
+      "gapZhLocal": 24,
+      "sidePad": 48,
+      "pinyinColumnGap": 10,
+      "opticalLift": 0
+    }
+  },
+  "beats": [
+    {
+      "id": "b01",
+      "sceneId": "s1-wake",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s1-wake.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b01.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b01.mp3",
+      "durationMs": 3848,
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "她",
+          "startMs": 0,
+          "endMs": 353
+        },
+        {
+          "ch": "死",
+          "startMs": 353,
+          "endMs": 706
+        },
+        {
+          "ch": "了",
+          "startMs": 706,
+          "endMs": 1058
+        },
+        {
+          "ch": "却",
+          "startMs": 1058,
+          "endMs": 1411
+        },
+        {
+          "ch": "活",
+          "startMs": 1411,
+          "endMs": 1764
+        },
+        {
+          "ch": "在",
+          "startMs": 1764,
+          "endMs": 2117
+        },
+        {
+          "ch": "别",
+          "startMs": 2117,
+          "endMs": 2470
+        },
+        {
+          "ch": "人",
+          "startMs": 2470,
+          "endMs": 2822
+        },
+        {
+          "ch": "身",
+          "startMs": 2822,
+          "endMs": 3175
+        },
+        {
+          "ch": "上",
+          "startMs": 3175,
+          "endMs": 3528
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "She",
+          "startMs": 0,
+          "endMs": 392
+        },
+        {
+          "w": "died",
+          "startMs": 392,
+          "endMs": 784
+        },
+        {
+          "w": "—",
+          "startMs": 784,
+          "endMs": 1176
+        },
+        {
+          "w": "yet",
+          "startMs": 1176,
+          "endMs": 1568
+        },
+        {
+          "w": "lives",
+          "startMs": 1568,
+          "endMs": 1960
+        },
+        {
+          "w": "on",
+          "startMs": 1960,
+          "endMs": 2352
+        },
+        {
+          "w": "in",
+          "startMs": 2352,
+          "endMs": 2744
+        },
+        {
+          "w": "another’s",
+          "startMs": 2744,
+          "endMs": 3136
+        },
+        {
+          "w": "body",
+          "startMs": 3136,
+          "endMs": 3528
+        }
+      ],
+      "captions": {
+        "pinyin": "tā sǐ le , què huó zài bié rén shēn shàng",
+        "zh": "她死了，却活在别人身上",
+        "local": "She died — yet lives on in another’s body"
+      }
+    },
+    {
+      "id": "b02",
+      "sceneId": "s2-groom",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s2-groom.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b02.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b02.mp3",
+      "durationMs": 3224,
+      "motion": "push-in",
+      "charTimings": [
+        {
+          "ch": "她",
+          "startMs": 0,
+          "endMs": 290
+        },
+        {
+          "ch": "的",
+          "startMs": 290,
+          "endMs": 581
+        },
+        {
+          "ch": "新",
+          "startMs": 581,
+          "endMs": 871
+        },
+        {
+          "ch": "郎",
+          "startMs": 871,
+          "endMs": 1162
+        },
+        {
+          "ch": "是",
+          "startMs": 1162,
+          "endMs": 1452
+        },
+        {
+          "ch": "个",
+          "startMs": 1452,
+          "endMs": 1742
+        },
+        {
+          "ch": "将",
+          "startMs": 1742,
+          "endMs": 2033
+        },
+        {
+          "ch": "死",
+          "startMs": 2033,
+          "endMs": 2323
+        },
+        {
+          "ch": "之",
+          "startMs": 2323,
+          "endMs": 2614
+        },
+        {
+          "ch": "人",
+          "startMs": 2614,
+          "endMs": 2904
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Her",
+          "startMs": 0,
+          "endMs": 484
+        },
+        {
+          "w": "bridegroom",
+          "startMs": 484,
+          "endMs": 968
+        },
+        {
+          "w": "is",
+          "startMs": 968,
+          "endMs": 1452
+        },
+        {
+          "w": "a",
+          "startMs": 1452,
+          "endMs": 1936
+        },
+        {
+          "w": "dying",
+          "startMs": 1936,
+          "endMs": 2420
+        },
+        {
+          "w": "man",
+          "startMs": 2420,
+          "endMs": 2904
+        }
+      ],
+      "captions": {
+        "pinyin": "tā de xīn láng , shì gè jiāng sǐ zhī rén",
+        "zh": "她的新郎，是个将死之人",
+        "local": "Her bridegroom is a dying man"
+      }
+    },
+    {
+      "id": "b03",
+      "sceneId": "s3-hands",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s3-hands.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b03.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b03.mp3",
+      "durationMs": 1856,
+      "motion": "push-in",
+      "inner": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "这",
+          "startMs": 0,
+          "endMs": 256
+        },
+        {
+          "ch": "不",
+          "startMs": 256,
+          "endMs": 512
+        },
+        {
+          "ch": "是",
+          "startMs": 512,
+          "endMs": 768
+        },
+        {
+          "ch": "我",
+          "startMs": 768,
+          "endMs": 1024
+        },
+        {
+          "ch": "的",
+          "startMs": 1024,
+          "endMs": 1280
+        },
+        {
+          "ch": "手",
+          "startMs": 1280,
+          "endMs": 1536
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "These",
+          "startMs": 0,
+          "endMs": 307
+        },
+        {
+          "w": "are",
+          "startMs": 307,
+          "endMs": 614
+        },
+        {
+          "w": "not",
+          "startMs": 614,
+          "endMs": 922
+        },
+        {
+          "w": "my",
+          "startMs": 922,
+          "endMs": 1229
+        },
+        {
+          "w": "hands",
+          "startMs": 1229,
+          "endMs": 1536
+        }
+      ],
+      "captions": {
+        "pinyin": "zhè bú shì wǒ de shǒu",
+        "zh": "这不是我的手",
+        "local": "These are not my hands"
+      }
+    },
+    {
+      "id": "b04",
+      "sceneId": "s4-flash",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s4-flash.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b04.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b04.mp3",
+      "durationMs": 2432,
+      "motion": "pop",
+      "inner": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "我",
+          "startMs": 0,
+          "endMs": 302
+        },
+        {
+          "ch": "明",
+          "startMs": 302,
+          "endMs": 603
+        },
+        {
+          "ch": "明",
+          "startMs": 603,
+          "endMs": 905
+        },
+        {
+          "ch": "已",
+          "startMs": 905,
+          "endMs": 1207
+        },
+        {
+          "ch": "经",
+          "startMs": 1207,
+          "endMs": 1509
+        },
+        {
+          "ch": "死",
+          "startMs": 1509,
+          "endMs": 1810
+        },
+        {
+          "ch": "了",
+          "startMs": 1810,
+          "endMs": 2112
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "I",
+          "startMs": 0,
+          "endMs": 422
+        },
+        {
+          "w": "clearly",
+          "startMs": 422,
+          "endMs": 845
+        },
+        {
+          "w": "had",
+          "startMs": 845,
+          "endMs": 1267
+        },
+        {
+          "w": "already",
+          "startMs": 1267,
+          "endMs": 1690
+        },
+        {
+          "w": "died",
+          "startMs": 1690,
+          "endMs": 2112
+        }
+      ],
+      "captions": {
+        "pinyin": "wǒ míng míng yǐ jīng sǐ le",
+        "zh": "我明明已经死了",
+        "local": "I clearly had already died"
+      }
+    },
+    {
+      "id": "b05",
+      "sceneId": "s5-mirror",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s5-mirror.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b05.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b05.mp3",
+      "durationMs": 3056,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "镜",
+          "startMs": 0,
+          "endMs": 304
+        },
+        {
+          "ch": "里",
+          "startMs": 304,
+          "endMs": 608
+        },
+        {
+          "ch": "的",
+          "startMs": 608,
+          "endMs": 912
+        },
+        {
+          "ch": "人",
+          "startMs": 912,
+          "endMs": 1216
+        },
+        {
+          "ch": "根",
+          "startMs": 1216,
+          "endMs": 1520
+        },
+        {
+          "ch": "本",
+          "startMs": 1520,
+          "endMs": 1824
+        },
+        {
+          "ch": "不",
+          "startMs": 1824,
+          "endMs": 2128
+        },
+        {
+          "ch": "是",
+          "startMs": 2128,
+          "endMs": 2432
+        },
+        {
+          "ch": "我",
+          "startMs": 2432,
+          "endMs": 2736
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "The",
+          "startMs": 0,
+          "endMs": 304
+        },
+        {
+          "w": "person",
+          "startMs": 304,
+          "endMs": 608
+        },
+        {
+          "w": "in",
+          "startMs": 608,
+          "endMs": 912
+        },
+        {
+          "w": "the",
+          "startMs": 912,
+          "endMs": 1216
+        },
+        {
+          "w": "mirror",
+          "startMs": 1216,
+          "endMs": 1520
+        },
+        {
+          "w": "isn’t",
+          "startMs": 1520,
+          "endMs": 1824
+        },
+        {
+          "w": "me",
+          "startMs": 1824,
+          "endMs": 2128
+        },
+        {
+          "w": "at",
+          "startMs": 2128,
+          "endMs": 2432
+        },
+        {
+          "w": "all",
+          "startMs": 2432,
+          "endMs": 2736
+        }
+      ],
+      "captions": {
+        "pinyin": "jìng lǐ de rén , gēn běn bú shì wǒ",
+        "zh": "镜里的人，根本不是我",
+        "local": "The person in the mirror isn’t me at all"
+      }
+    },
+    {
+      "id": "b06",
+      "sceneId": "s6-prince",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s6-prince.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b06.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b06.mp3",
+      "durationMs": 3224,
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "本",
+          "startMs": 0,
+          "endMs": 290
+        },
+        {
+          "ch": "王",
+          "startMs": 290,
+          "endMs": 581
+        },
+        {
+          "ch": "的",
+          "startMs": 581,
+          "endMs": 871
+        },
+        {
+          "ch": "新",
+          "startMs": 871,
+          "endMs": 1162
+        },
+        {
+          "ch": "王",
+          "startMs": 1162,
+          "endMs": 1452
+        },
+        {
+          "ch": "妃",
+          "startMs": 1452,
+          "endMs": 1742
+        },
+        {
+          "ch": "倒",
+          "startMs": 1742,
+          "endMs": 2033
+        },
+        {
+          "ch": "是",
+          "startMs": 2033,
+          "endMs": 2323
+        },
+        {
+          "ch": "清",
+          "startMs": 2323,
+          "endMs": 2614
+        },
+        {
+          "ch": "醒",
+          "startMs": 2614,
+          "endMs": 2904
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "My",
+          "startMs": 0,
+          "endMs": 363
+        },
+        {
+          "w": "new",
+          "startMs": 363,
+          "endMs": 726
+        },
+        {
+          "w": "princess",
+          "startMs": 726,
+          "endMs": 1089
+        },
+        {
+          "w": "is",
+          "startMs": 1089,
+          "endMs": 1452
+        },
+        {
+          "w": "wide",
+          "startMs": 1452,
+          "endMs": 1815
+        },
+        {
+          "w": "awake,",
+          "startMs": 1815,
+          "endMs": 2178
+        },
+        {
+          "w": "it",
+          "startMs": 2178,
+          "endMs": 2541
+        },
+        {
+          "w": "seems",
+          "startMs": 2541,
+          "endMs": 2904
+        }
+      ],
+      "captions": {
+        "pinyin": "běn wáng de xīn wáng fēi , dào shì qīng xǐng",
+        "zh": "本王的新王妃，倒是清醒",
+        "local": "My new princess is wide awake, it seems"
+      }
+    },
+    {
+      "id": "b07",
+      "sceneId": "s8-drug",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s8-drug.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b07.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b07.mp3",
+      "durationMs": 2896,
+      "motion": "still",
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "王",
+          "startMs": 0,
+          "endMs": 391
+        },
+        {
+          "ch": "妃",
+          "startMs": 391,
+          "endMs": 782
+        },
+        {
+          "ch": "喝",
+          "startMs": 782,
+          "endMs": 1173
+        },
+        {
+          "ch": "了",
+          "startMs": 1173,
+          "endMs": 1563
+        },
+        {
+          "ch": "它",
+          "startMs": 1563,
+          "endMs": 1954
+        },
+        {
+          "ch": "安",
+          "startMs": 1954,
+          "endMs": 2345
+        },
+        {
+          "ch": "神",
+          "startMs": 2345,
+          "endMs": 2736
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Princess,",
+          "startMs": 0,
+          "endMs": 342
+        },
+        {
+          "w": "drink",
+          "startMs": 342,
+          "endMs": 684
+        },
+        {
+          "w": "this",
+          "startMs": 684,
+          "endMs": 1026
+        },
+        {
+          "w": "—",
+          "startMs": 1026,
+          "endMs": 1368
+        },
+        {
+          "w": "it",
+          "startMs": 1368,
+          "endMs": 1710
+        },
+        {
+          "w": "soothes",
+          "startMs": 1710,
+          "endMs": 2052
+        },
+        {
+          "w": "the",
+          "startMs": 2052,
+          "endMs": 2394
+        },
+        {
+          "w": "nerves",
+          "startMs": 2394,
+          "endMs": 2736
+        }
+      ],
+      "captions": {
+        "pinyin": "wáng fēi , hē le tā , ān shén",
+        "zh": "王妃，喝了它，安神",
+        "local": "Princess, drink this — it soothes the nerves"
+      }
+    },
+    {
+      "id": "b08",
+      "sceneId": "s8-drug",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s8-drug.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b08.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b08.mp3",
+      "durationMs": 2648,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "这",
+          "startMs": 0,
+          "endMs": 388
+        },
+        {
+          "ch": "药",
+          "startMs": 388,
+          "endMs": 776
+        },
+        {
+          "ch": "不",
+          "startMs": 776,
+          "endMs": 1164
+        },
+        {
+          "ch": "是",
+          "startMs": 1164,
+          "endMs": 1552
+        },
+        {
+          "ch": "安",
+          "startMs": 1552,
+          "endMs": 1940
+        },
+        {
+          "ch": "神",
+          "startMs": 1940,
+          "endMs": 2328
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "This",
+          "startMs": 0,
+          "endMs": 466
+        },
+        {
+          "w": "medicine…",
+          "startMs": 466,
+          "endMs": 931
+        },
+        {
+          "w": "is",
+          "startMs": 931,
+          "endMs": 1397
+        },
+        {
+          "w": "no",
+          "startMs": 1397,
+          "endMs": 1862
+        },
+        {
+          "w": "sedative",
+          "startMs": 1862,
+          "endMs": 2328
+        }
+      ],
+      "captions": {
+        "pinyin": "zhè yào …… bú shì ān shén",
+        "zh": "这药……不是安神",
+        "local": "This medicine… is no sedative"
+      }
+    },
+    {
+      "id": "b09",
+      "sceneId": "s9-observe",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s9-observe.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b09.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b09.mp3",
+      "durationMs": 3056,
+      "motion": "push-in",
+      "inner": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "他",
+          "startMs": 0,
+          "endMs": 342
+        },
+        {
+          "ch": "根",
+          "startMs": 342,
+          "endMs": 684
+        },
+        {
+          "ch": "本",
+          "startMs": 684,
+          "endMs": 1026
+        },
+        {
+          "ch": "没",
+          "startMs": 1026,
+          "endMs": 1368
+        },
+        {
+          "ch": "病",
+          "startMs": 1368,
+          "endMs": 1710
+        },
+        {
+          "ch": "他",
+          "startMs": 1710,
+          "endMs": 2052
+        },
+        {
+          "ch": "在",
+          "startMs": 2052,
+          "endMs": 2394
+        },
+        {
+          "ch": "装",
+          "startMs": 2394,
+          "endMs": 2736
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "He",
+          "startMs": 0,
+          "endMs": 304
+        },
+        {
+          "w": "isn’t",
+          "startMs": 304,
+          "endMs": 608
+        },
+        {
+          "w": "sick",
+          "startMs": 608,
+          "endMs": 912
+        },
+        {
+          "w": "at",
+          "startMs": 912,
+          "endMs": 1216
+        },
+        {
+          "w": "all",
+          "startMs": 1216,
+          "endMs": 1520
+        },
+        {
+          "w": "—",
+          "startMs": 1520,
+          "endMs": 1824
+        },
+        {
+          "w": "he’s",
+          "startMs": 1824,
+          "endMs": 2128
+        },
+        {
+          "w": "faking",
+          "startMs": 2128,
+          "endMs": 2432
+        },
+        {
+          "w": "it",
+          "startMs": 2432,
+          "endMs": 2736
+        }
+      ],
+      "captions": {
+        "pinyin": "tā gēn běn méi bìng , tā zài zhuāng",
+        "zh": "他根本没病，他在装",
+        "local": "He isn’t sick at all — he’s faking it"
+      }
+    },
+    {
+      "id": "b10",
+      "sceneId": "s2-groom",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s2-groom.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b10.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b10.mp3",
+      "durationMs": 3464,
+      "motion": "pull-back",
+      "charTimings": [
+        {
+          "ch": "满",
+          "startMs": 0,
+          "endMs": 314
+        },
+        {
+          "ch": "室",
+          "startMs": 314,
+          "endMs": 629
+        },
+        {
+          "ch": "的",
+          "startMs": 629,
+          "endMs": 943
+        },
+        {
+          "ch": "人",
+          "startMs": 943,
+          "endMs": 1258
+        },
+        {
+          "ch": "都",
+          "startMs": 1258,
+          "endMs": 1572
+        },
+        {
+          "ch": "在",
+          "startMs": 1572,
+          "endMs": 1886
+        },
+        {
+          "ch": "等",
+          "startMs": 1886,
+          "endMs": 2201
+        },
+        {
+          "ch": "他",
+          "startMs": 2201,
+          "endMs": 2515
+        },
+        {
+          "ch": "咽",
+          "startMs": 2515,
+          "endMs": 2830
+        },
+        {
+          "ch": "气",
+          "startMs": 2830,
+          "endMs": 3144
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Everyone",
+          "startMs": 0,
+          "endMs": 393
+        },
+        {
+          "w": "here",
+          "startMs": 393,
+          "endMs": 786
+        },
+        {
+          "w": "is",
+          "startMs": 786,
+          "endMs": 1179
+        },
+        {
+          "w": "waiting",
+          "startMs": 1179,
+          "endMs": 1572
+        },
+        {
+          "w": "for",
+          "startMs": 1572,
+          "endMs": 1965
+        },
+        {
+          "w": "him",
+          "startMs": 1965,
+          "endMs": 2358
+        },
+        {
+          "w": "to",
+          "startMs": 2358,
+          "endMs": 2751
+        },
+        {
+          "w": "die",
+          "startMs": 2751,
+          "endMs": 3144
+        }
+      ],
+      "captions": {
+        "pinyin": "mǎn shì de rén , dōu zài děng tā yàn qì",
+        "zh": "满室的人，都在等他咽气",
+        "local": "Everyone here is waiting for him to die"
+      }
+    },
+    {
+      "id": "b11",
+      "sceneId": "s6-prince",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s6-prince.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b11.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b11.mp3",
+      "durationMs": 3056,
+      "motion": "push-in",
+      "charTimings": [
+        {
+          "ch": "你",
+          "startMs": 0,
+          "endMs": 391
+        },
+        {
+          "ch": "不",
+          "startMs": 391,
+          "endMs": 782
+        },
+        {
+          "ch": "怕",
+          "startMs": 782,
+          "endMs": 1173
+        },
+        {
+          "ch": "我",
+          "startMs": 1173,
+          "endMs": 1563
+        },
+        {
+          "ch": "为",
+          "startMs": 1563,
+          "endMs": 1954
+        },
+        {
+          "ch": "什",
+          "startMs": 1954,
+          "endMs": 2345
+        },
+        {
+          "ch": "么",
+          "startMs": 2345,
+          "endMs": 2736
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "You’re",
+          "startMs": 0,
+          "endMs": 456
+        },
+        {
+          "w": "not",
+          "startMs": 456,
+          "endMs": 912
+        },
+        {
+          "w": "afraid",
+          "startMs": 912,
+          "endMs": 1368
+        },
+        {
+          "w": "of",
+          "startMs": 1368,
+          "endMs": 1824
+        },
+        {
+          "w": "me.",
+          "startMs": 1824,
+          "endMs": 2280
+        },
+        {
+          "w": "Why?",
+          "startMs": 2280,
+          "endMs": 2736
+        }
+      ],
+      "captions": {
+        "pinyin": "nǐ bú pà wǒ , wèi shén me",
+        "zh": "你不怕我，为什么",
+        "local": "You’re not afraid of me. Why?"
+      }
+    },
+    {
+      "id": "b12",
+      "sceneId": "s1-wake",
+      "image": "videos/2026/07/18/huangmou-e001-kling-cn/images/s1-wake.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/18/huangmou-e001-kling-cn/clips/b12.mp4",
+      "audio": "videos/2026/07/18/huangmou-e001-kling-cn/audio/b12.mp3",
+      "durationMs": 3248,
+      "motion": "pop",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "这",
+          "startMs": 0,
+          "endMs": 366
+        },
+        {
+          "ch": "一",
+          "startMs": 366,
+          "endMs": 732
+        },
+        {
+          "ch": "次",
+          "startMs": 732,
+          "endMs": 1098
+        },
+        {
+          "ch": "轮",
+          "startMs": 1098,
+          "endMs": 1464
+        },
+        {
+          "ch": "到",
+          "startMs": 1464,
+          "endMs": 1830
+        },
+        {
+          "ch": "我",
+          "startMs": 1830,
+          "endMs": 2196
+        },
+        {
+          "ch": "执",
+          "startMs": 2196,
+          "endMs": 2562
+        },
+        {
+          "ch": "刀",
+          "startMs": 2562,
+          "endMs": 2928
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "This",
+          "startMs": 0,
+          "endMs": 325
+        },
+        {
+          "w": "time,",
+          "startMs": 325,
+          "endMs": 651
+        },
+        {
+          "w": "it’s",
+          "startMs": 651,
+          "endMs": 976
+        },
+        {
+          "w": "my",
+          "startMs": 976,
+          "endMs": 1301
+        },
+        {
+          "w": "turn",
+          "startMs": 1301,
+          "endMs": 1627
+        },
+        {
+          "w": "to",
+          "startMs": 1627,
+          "endMs": 1952
+        },
+        {
+          "w": "hold",
+          "startMs": 1952,
+          "endMs": 2277
+        },
+        {
+          "w": "the",
+          "startMs": 2277,
+          "endMs": 2603
+        },
+        {
+          "w": "blade",
+          "startMs": 2603,
+          "endMs": 2928
+        }
+      ],
+      "captions": {
+        "pinyin": "zhè yí cì , lún dào wǒ zhí dāo",
+        "zh": "这一次，轮到我执刀",
+        "local": "This time, it’s my turn to hold the blade"
+      }
+    }
+  ]
+}
