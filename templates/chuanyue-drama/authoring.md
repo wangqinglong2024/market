@@ -66,7 +66,7 @@ episodes/E***.md  →  script.json(Claude 设计,字段见 prompts/script-rules.
   "tagVi": "Vương Phi Pháp Y",                    // 系列名(越南语,底部小字)
   "seal": "E01",                                  // 红印章集号
   "volume":  { "zh": "卷一 · 冲喜入府", "vi": "Quyển 1 · Xung Hỷ Nhập Phủ" },  // 卷标题
-  "chapter": { "py": "huā jiào zhēng yǎn", "zh": "章主题(主标题)", "vi": "..." }, // 章主题名(金色大字·三语)
+  "chapter": { "py": "dòng fáng jīng hún", "zh": "洞房惊魂", "vi": "Kinh hồn đêm tân hôn" }, // 章主题名(金色大字·三语;此为 E01 实拍值)
   "episode": { "py": "...", "zh": "当集钩子(红条大字)", "vi": "..." }             // 当集钩子(底部红条·三语)
 }
 ```
