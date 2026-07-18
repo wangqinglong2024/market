@@ -1,5 +1,5 @@
 {
-  "_comment": "模板『凰谋·现代穿越古代竖屏短剧(越南受众·图文+动态视频混搭)』。生产:script.json→每拍配音(火山TTS,旁白vi/角色zh)+每场景关键帧(flux喂定妆图)+动态拍I2V(kling,关原声)→manifest。版式3:4:上媒体区(图或视频)1080x720+下三行字幕(拼音/中文/越南语)逐字卡拉OK。layout=chinese-drama(复用跑通版式)。全程按hash缓存。",
+  "_comment": "模板『凰谋·现代穿越古代竖屏短剧(越南受众·图文+动态视频混搭)』。生产:script.json→每拍配音(火山TTS,旁白vi/角色zh)+每场景关键帧(nano-banana-pro/edit喂定妆图,3:2)+动态拍I2V(kling,关原声;喂图裁16:9→收片裁回3:2)→manifest。版式3:4:上媒体区(图或视频)1080x720+下三行字幕(拼音/中文/越南语)逐字卡拉OK。layout=chuanyue-drama。全程按hash缓存。",
   "id": "chuanyue-drama",
   "name": "凰谋·现代穿越古代短剧(越南受众)",
   "seriesId": "huangmou",
@@ -8,9 +8,10 @@
   "source": { "region": { "top": 120, "height": 720 }, "focusY": 0.5 },
   "subtitle": { "top": 960, "height": 360 },
   "format": {
-    "episodeTargetMs": 60000,
-    "episodeMinMs": 58000,
-    "episodeMaxMs": 62000,
+    "_comment": "★短档 30–45s(用户 2026-07-18 锁,完播率优先)。时长由每拍真实TTS总和(减转场重叠)自然得出,非硬设;设计到目标带即可,落带外就增/删拍。原60s目标已弃。",
+    "episodeTargetMs": 35000,
+    "episodeMinMs": 28000,
+    "episodeMaxMs": 45000,
     "hookMustBeVideo": true,
     "hookVideoWithinMs": 3000,
     "minVideoClipsPerEpisode": 3,
@@ -22,25 +23,20 @@
     "viSpeed": 1.0,
     "tailPaddingMs": 160,
     "sceneTailPaddingMs": 320,
-    "_voicesComment": "★初始音色(暂定,TTS免费可重试听验;锁定须用户批准)。voice键=脚本beat.voice。narrator=vi旁白;其余=zh角色。",
+    "_voicesComment": "★音色单一事实源:角色音色(zhaohua/peiheng/suyi/weichong/qinghe)在 characters/_registry.json 每人 voice 字段(与脸同处),build 读那里覆盖此处。此处只留【非角色】音色:narrator(vi旁白)、mama(管事嬷嬷等无定妆图配角)。TTS免费可重试听验;锁定须用户批准。",
     "defaultVoice": "narrator",
     "voices": {
       "narrator": "vi_female_ruan_uranus_bigtts",
-      "zhaohua":  "zh_female_roumeinvyou_emo_v2_mars_bigtts",
-      "peiheng":  "zh_male_qingcang_mars_bigtts",
-      "suyi":     "zh_female_lingling_uranus_bigtts",
-      "weichong": "zh_male_jingqiangkanye_moon_bigtts",
-      "qinghe":   "zh_female_zhixingnvsheng_mars_bigtts",
       "mama":     "zh_female_xinlingjitang_moon_bigtts"
     }
   },
   "image": {
-    "_comment": "★真人质感,全部用 nano-banana-pro(用户 2026-07-18 锁,彻底放弃 flux)。首次出人物(定妆图)=nano-banana-pro 文生图;剧集关键帧=nano-banana-pro/edit 喂该角色定妆图保脸(单人也用,~$0.15);空镜喂 styleAnchor。★关键帧宽高比必须与 kling 视频一致=16:9(kling只认16:9/9:16/1:1),静图↔动态才不错位;渲染 cover 入媒体区。",
+    "_comment": "★真人质感,全部用 nano-banana-pro(用户 2026-07-18 锁,彻底放弃 flux——flux 效果差)。首次出人物(定妆图)=nano-banana-pro 文生图;剧集关键帧=nano-banana-pro/edit 喂该角色定妆图保脸(单人也用,~$0.15);空镜喂 styleAnchor。★最终交付比例固定 3:2:图片直接出 3:2(banana);动态拍关键帧也 3:2,喂 kling 前由 gen-video 临时裁 16:9、收片后再裁回 3:2(见 video.finalAspect),全片静图↔动态尺寸统一。",
     "provider": "fal",
     "keyframeModel": "fal-ai/nano-banana-pro/edit",
     "portraitModel": "fal-ai/nano-banana-pro",
     "estimatedUsdPerImage": 0.15,
-    "aspectRatio": "16:9",
+    "aspectRatio": "3:2",
     "seedStrategy": "from-shot-id",
     "maxRetries": 1,
     "styleAnchor": "templates/chuanyue-drama/characters/zhaohua/model-sheet.png"
@@ -53,8 +49,9 @@
     "defaultClipSeconds": 4,
     "minClipSeconds": 3,
     "maxClipSeconds": 5,
-    "_aspectComment": "★kling 只收 16:9/9:16/1:1(不认3:2)。媒体区是3:2横屏,用16:9最接近,渲染cover裁少许。关键帧仍3:2。",
+    "_aspectComment": "★尺寸铁律(用户 2026-07-18 锁):不管 kling 规则,最终交付固定 3:2。kling 只收 16:9/9:16/1:1,故 aspectRatio=16:9 给 kling;gen-video 喂图前把 3:2 关键帧裁成 16:9,收片后把 16:9 成片两边裁掉回 finalAspect=3:2。所有裁切用 remotion 自带 ffmpeg,本地无成本。",
     "aspectRatio": "16:9",
+    "finalAspect": "3:2",
     "pricingSnapshotDate": "2026-07-18",
     "estimatedUsdPerSecond": 0.084,
     "negativePrompt": "text, subtitles, caption, watermark, logo, border, extra person, face swap, deformed hands"

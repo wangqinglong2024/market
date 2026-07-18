@@ -1,7 +1,7 @@
 {
   "videoId": "huangmou-e001",
   "lang": "vi",
-  "_comment": "《凰谋》E01 花轿睁眼。12拍精炼版:5段kling动态(b01/b02/b05/b08/b11,关原声)+图文交替(无连续>2图文),前6.5s双动态暴击(掀盖头骤睁眼+活死人新郎)。旁白vi/角色对白+内心zh。关键帧全 nano-banana-pro/edit 喂定妆图(refVariant选端庄/现代)。多维度留人:每拍画面+动作+情绪三维设计。预算~$2.69<$3。pinyin已按zh补。",
+  "_comment": "《凰谋》E01 洞房惊魂。12拍精炼版:5段kling动态(b01/b02/b05/b08/b11,关原声)+图文交替(无连续>2图文),前6.5s双动态暴击(掀盖头骤睁眼+活死人新郎)。旁白vi/角色对白+内心zh。关键帧全 nano-banana-pro/edit 喂定妆图(refVariant选端庄/现代)。多维度留人:每拍画面+动作+情绪三维设计。预算~$2.69<$3。pinyin已按zh补。",
   "beats": [
     { "id": "b01", "sceneId": "s1-wake", "type": "video", "voice": "narrator", "hasMainCharacter": true, "characters": ["zhaohua"], "motion": "push-in", "transitionIn": "fade",
       "shots": [{ "content": "Extreme close-up on a stunningly beautiful young Chinese bride's face the instant a red bridal veil is torn away — her eyes snapping wide open in raw terror and disorientation, pupils shrinking, lips parted in a sharp gasp, a sheen of sweat on her brow, tall red dragon-and-phoenix wedding candles flaring around her in a dim opulent bridal chamber.", "refVariant": "default" }],
@@ -27,11 +27,11 @@
       "captions": { "zh": "镜里的人，根本不是我", "pinyin": "jìng lǐ de rén , gēn běn bú shì wǒ", "local": "Người trong gương, chẳng phải là tôi" } },
 
     { "id": "b06", "sceneId": "s6-prince", "voice": "peiheng", "hasMainCharacter": true, "characters": ["peiheng"], "motion": "push-in", "transitionIn": "fade",
-      "shots": [{ "content": "A tall, coldly handsome young man in dark luxurious prince's robes stands at the edge of the red wedding bed, pale-faced with a feigned frail sickly air, looking down with a detached cold gaze; in the blurred foreground the bride is seen from behind over her shoulder; dim red candlelight; his is the only face in frame.", "refVariant": "default" }],
+      "shots": [{ "content": "A tall, coldly handsome young man reclining weakly against silk pillows on the red wedding sickbed, gravely ill and pale with a feigned frail sickly air, wearing a deep wine-crimson silk sickbed robe with subtle gold trim (rich fabric, clearly NOT black), long black hair loose over the pillow; his sharp cold eyes are barely half-open, casting a detached sidelong gaze toward the bride; in the blurred foreground the bride is seen from behind over her shoulder; dim red candlelight; his is the only face in frame.", "refVariant": "default" }],
       "captions": { "zh": "本王的新王妃，倒是清醒", "pinyin": "běn wáng de xīn wáng fēi , dào shì qīng xǐng", "local": "Vương phi mới của bổn vương, tỉnh táo thật" } },
 
-    { "id": "b07", "sceneId": "s8-drug", "voice": "mama", "hasMainCharacter": true, "characters": ["qinghe"], "motion": "still", "transitionIn": "fade",
-      "shots": [{ "content": "A sly old stewardess matron in dark hanfu holds out a dark medicinal bowl toward the viewer, a false smile that does not reach her cold eyes, dim bridal chamber, the bride's hand just entering the frame; over-the-shoulder, only the matron's face visible.", "refVariant": "default" }],
+    { "id": "b07", "sceneId": "s8-drug", "voice": "qinghe", "hasMainCharacter": true, "characters": ["zhaohua"], "motion": "still", "transitionIn": "fade",
+      "shots": [{ "content": "The beautiful young bride in gold-embroidered red bridal robes sits on the edge of the red wedding bed; in the blurred foreground, over the shoulder and back of a young personal maidservant in plain pale-blue servant hanfu with a simple low bun and no headdress, the maid's slender young hands hold out a dark medicinal bowl toward her; the bride regards the offered bowl with subtle wariness beneath a calm composed face; dim red candlelight; only the bride's face is clearly in frame.", "refVariant": "default" }],
       "captions": { "zh": "王妃，喝了它，安神", "pinyin": "wáng fēi , hē le tā , ān shén", "local": "Vương phi, uống đi cho an thần" } },
 
     { "id": "b08", "sceneId": "s8-drug", "type": "video", "voice": "zhaohua", "inner": true, "hasMainCharacter": true, "characters": ["zhaohua"], "motion": "push-in",
@@ -39,7 +39,7 @@
       "captions": { "zh": "这药……不是安神", "pinyin": "zhè yào …… bú shì ān shén", "local": "Thuốc này… không phải an thần" } },
 
     { "id": "b09", "sceneId": "s9-observe", "voice": "zhaohua", "inner": true, "hasMainCharacter": true, "characters": ["zhaohua"], "motion": "push-in", "transitionIn": "fade",
-      "shots": [{ "content": "The beautiful young bride leans over the gaunt pale 'dying' groom as if tucking the quilt, while her sharp intelligent eyes secretly study his face, complexion and steady breathing — cold analytical focus beneath a gentle pose, dim red candlelight, her face the only one in clear focus.", "refVariant": "default" }],
+      "shots": [{ "content": "The beautiful young bride, wearing her gold-embroidered red bridal robes and phoenix bridal hairpins, leans over the pale 'dying' groom — a young man in a deep wine-crimson silk robe lying on the red wedding bed — as if tucking his quilt, while her sharp intelligent eyes secretly study his face, complexion and steady breathing; cold analytical focus beneath a gentle pose; dim red candlelight; her face is the only one in clear focus.", "refVariant": "default" }],
       "captions": { "zh": "他根本没病，他在装", "pinyin": "tā gēn běn méi bìng , tā zài zhuāng", "local": "Chàng vốn không bệnh, chàng giả vờ" } },
 
     { "id": "b10", "sceneId": "s2-groom", "voice": "narrator", "hasMainCharacter": false, "characters": [], "motion": "pull-back",

@@ -1,7 +1,7 @@
 // 模板『凰谋·现代穿越古代竖屏短剧(越南受众·图文+动态视频混搭)』构建流水线。
 // 由通用编排器 scripts/build.mjs 调用 build()，返回 manifest 对象。
-// 生产：script.json → 每拍配音(火山TTS,旁白vi/角色zh,带字级时间戳) + 每场景关键帧(flux,喂定妆图)
-//        + 动态拍(type:video)用关键帧走 kling I2V(关原声) → manifest。
+// 生产：script.json → 每拍配音(火山TTS,旁白vi/角色zh,带字级时间戳) + 每场景关键帧(nano-banana-pro/edit,喂定妆图,3:2)
+//        + 动态拍(type:video)用关键帧走 kling I2V(关原声;喂图裁16:9→收片裁回3:2) → manifest。
 // 版式 layout="chinese-drama"：上媒体区(图或视频)1080x720 + 下三行字幕(拼音/中文/越南语)逐字卡拉OK。
 // 全程按 hash 缓存；预算硬卡 ≤$2/集。花钱铁律：fal 出问题不自动重试(见 /base/04)。
 import { readFileSync, writeFileSync, existsSync, appendFileSync } from "node:fs";
@@ -34,7 +34,7 @@ function loadChars(ROOT) {
   const map = {};
   for (const c of reg.characters) {
     map[c.id] = {
-      id: c.id, name: c.name,
+      id: c.id, name: c.name, voice: c.voice,   // ★voice=该角色音色单一事实源(registry,与脸同处)
       refPath: tpl(ROOT, "characters", c.id, c.ref),
       canon: stripComments(readText(tpl(ROOT, "characters", c.id, c.canonical))),
     };
@@ -113,7 +113,9 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
 
   const sceneImages = {};   // sceneId -> rel image path
   const beatScene = {};     // beatId -> sceneId (供 video.keyframeFrom 解析关键帧)
-  const voices = settings.audio.voices || {};
+  // ★音色解析:template.json 只留非角色音色(narrator/mama);角色音色从 characters/_registry.json 每人 voice 覆盖进来(与脸同一事实源)。
+  const voices = { ...(settings.audio.voices || {}) };
+  for (const c of Object.values(chars)) if (c.voice) voices[c.id] = c.voice;
 
   // 确保某场景关键帧已生成，返回 { rel, abs }
   async function ensureKeyframe(beat) {
@@ -133,11 +135,13 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
       const refPaths = charIds.length === 0
         ? [join(ROOT, settings.image.styleAnchor)]
         : charIds.map(charRef).filter(Boolean);
-      const model = shot.model || "nano-edit";
+      // ★彻底弃用 flux(用户 2026-07-18:flux 效果差)。脚本里若残留 flux/flux-text 一律改走 banana。
+      let model = shot.model || "nano-edit";
+      if (model === "flux" || model === "flux-text") model = refPaths.length >= 2 ? "nano-pro" : "nano-edit";
       const prompt = buildPrompt({ shot, charIds, chars, prompts });
       const imgPath = ensure(join(dir, "images", `${sceneId}.png`));
       const img = await genImage({ outPath: imgPath, prompt, refPaths, settings, model });
-      if (!img.cached) logCost({ beatId: `${beat.id}(${sceneId})`, kind: img.model ?? "flux", usd: MODEL_USD[img.model] ?? 0 });
+      if (!img.cached) logCost({ beatId: `${beat.id}(${sceneId})`, kind: img.model ?? "nano-edit", usd: MODEL_USD[img.model] ?? 0 });
       console.log(`  keyframe: ${img.cached ? "cached" : "gen"} [${img.model ?? "?"}] ${sceneId}`);
       sceneImages[sceneId] = rel("images", `${sceneId}.png`);
     }
@@ -162,7 +166,8 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
       throw new Error(`${beat.id}: ttsZh 汉字数(${hanCount(beat.ttsZh)})≠captions.zh(${hanCount(beat.captions.zh)}),逐字跳字会错位`);
     }
     const audio = await synth(ttsText, audioPath, { voice: voiceType, speed });
-    const charTimings = isVi ? evenCharTimings(beat.captions.zh, audio.ms) : audio.charTimings;
+    // 中文逐字卡拉OK时间戳:优先用音色返回的真时间戳;有些音色(uranus/ICL克隆)不返回→按字均分兜底,保住卡拉OK效果。
+    const charTimings = isVi ? evenCharTimings(beat.captions.zh, audio.ms) : (audio.charTimings ?? evenCharTimings(beat.captions.zh, audio.ms));
     const viWordTimings = evenWordTimings(viText, audio.ms);
 
     // 关键帧(图或视频输入图都要)
@@ -185,7 +190,8 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
       const clip = await genVideo({
         outPath: clipPath, keyframePath: kfAbs, motionPrompt, camera: v.camera,
         durationSec: v.durationSec ?? settings.video?.defaultClipSeconds ?? 4,
-        aspectRatio: settings.video?.aspectRatio ?? "3:2",
+        aspectRatio: settings.video?.aspectRatio ?? "16:9",   // 喂 kling 的比例
+        finalAspect: settings.video?.finalAspect ?? null,      // ★收片后裁回的最终固定比例(3:2)
         negativePrompt: settings.video?.negativePrompt,
         settings,
       });

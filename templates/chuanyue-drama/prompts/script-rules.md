@@ -22,7 +22,7 @@
   "motion": "push-in",             // 图文拍的 Remotion 运镜预设(motion.json)
   "transitionIn": "fade",
   "shots": [                        // 仅"场景首拍"必带(生成关键帧用)
-    { "content": "英文画面描述:动作+服装+场景+机位(露腿场景化)", "model": "flux" }
+    { "content": "英文画面描述:动作+服装+场景+机位(露腿场景化)", "refVariant": "default" }
   ],
   "video": {                        // 仅 type:"video" 带:I2V 运动描述
     "motion": "英文运动描述(只写动作/表情/环境动态,不重描外观)",

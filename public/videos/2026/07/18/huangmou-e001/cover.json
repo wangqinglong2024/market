@@ -1,0 +1,11 @@
+{
+  "_comment": "海报式封面(0.4.4「海报式」/ render-rules 10,用 cover-drama 组件)。底图=fal 单出 3:4 竖版海报 images/poster.png(女主凤冠红嫁衣掀盖头惊醒+龙凤红婚烛+红婚房,不与正片重复)。层级:系列名+印章E01 / 卷标题 / 章主题 / 当集钩子红条。两版视频(混搭/全可灵)共用同一封面。",
+  "image": "videos/2026/07/18/huangmou-e001/images/poster.png",
+  "focusY": 0.3,
+  "tag": "凰谋",
+  "tagVi": "Vương Phi Pháp Y",
+  "seal": "E01",
+  "volume": { "zh": "卷一 · 冲喜入府", "vi": "Quyển 1 · Xung Hỷ Nhập Phủ" },
+  "chapter": { "py": "dòng fáng jīng hún", "zh": "洞房惊魂", "vi": "Kinh hồn đêm tân hôn" },
+  "episode": { "py": "chōng xǐ xīn niáng , néng huó guò jīn yè ma", "zh": "冲喜新娘，能活过今夜吗", "vi": "Cô dâu xung hỷ, sống nổi qua đêm nay?" }
+}

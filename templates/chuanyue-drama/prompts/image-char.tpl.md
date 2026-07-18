@@ -1,5 +1,5 @@
 <!--
-单角色关键帧模板（flux/kontext，喂 1 张定妆图保脸）。真人质感（render-rules）。
+单角色关键帧模板（nano-banana-pro/edit，喂 1 张定妆图保脸）。真人质感（render-rules）。
 用途：① 图文拍的画面；② 动态拍的输入关键帧（再送 video.tpl.md 做 I2V）。
 ★死规矩：① 一图只有 1 张正脸；两人同框另一人只背影/过肩/侧脸/局部。
 ② 真实人景比例。③ 服装+场景+机位由 {shot} 现写（露腿场景化，见 render-rules 4）。

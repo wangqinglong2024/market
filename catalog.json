@@ -291,15 +291,27 @@
     },
     {
       "id": "huangmou-e001",
-      "title": "凰谋 E01·花轿睁眼(现代法医穿越成冲喜罪女·越南受众·图文+动态混搭60s)",
+      "title": "凰谋 E01·洞房惊魂(现代法医穿越成冲喜罪女·越南受众·图文+动态混搭~35s)",
       "template": "chuanyue-drama",
       "shard": "2026/07/18",
       "lang": "vi",
-      "status": "designed-awaiting-user-approval",
+      "status": "built",
       "createdAt": "2026-07-18",
-      "design": "templates/chuanyue-drama/story/卷01-冲喜入府/第01章-花轿睁眼.md",
+      "design": "templates/chuanyue-drama/story/卷01-冲喜入府/第01章-洞房惊魂.md",
       "manifest": null,
-      "beats": 16
+      "beats": 12
+    },
+    {
+      "id": "huangmou-e001-kling",
+      "title": "凰谋 E01·洞房惊魂【完全可灵版·12拍全动态·对比用】",
+      "template": "chuanyue-drama",
+      "shard": "2026/07/18",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-18",
+      "design": "templates/chuanyue-drama/story/卷01-冲喜入府/第01章-洞房惊魂.md",
+      "manifest": null,
+      "beats": 12
     }
   ]
 }
