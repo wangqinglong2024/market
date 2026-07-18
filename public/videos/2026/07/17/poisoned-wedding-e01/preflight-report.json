@@ -1,0 +1,23 @@
+{
+  "designPass": true,
+  "productionReady": false,
+  "mode": "design-only",
+  "episodeId": "poisoned-wedding-e01",
+  "episodeHash": "e7cc0a984df1bccbaf1a9d0c427aa4b16e576a82e71b81bcb784ecb0fffb5a5a",
+  "totalMs": 24000,
+  "renderFrames": 720,
+  "targetFrames": 720,
+  "trueVideoCoverage": 1,
+  "remotionEnhancedCoverage": 1,
+  "dynamicCoverage": 1,
+  "plannedVideoSeconds": 28,
+  "paidCallsAttempted": false,
+  "errors": [],
+  "warnings": [],
+  "productionBlockers": [
+    "episode.status 不是 approved-for-generation",
+    "generation-plan.paidExecutionAllowed 不是 true",
+    "template.production.paidGenerationAllowed 不是 true",
+    "缺少用户审批文件"
+  ]
+}

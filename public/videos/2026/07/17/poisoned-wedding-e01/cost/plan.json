@@ -1,0 +1,34 @@
+{
+  "episodeId": "poisoned-wedding-e01",
+  "seriesId": "poisoned-wedding",
+  "status": "estimate-only-no-paid-calls",
+  "pricingSnapshotDate": "2026-07-17",
+  "lineItems": [
+    {
+      "model": "fal-ai/kling-video/v3/standard/image-to-video",
+      "quantity": 28,
+      "unit": "generated-second",
+      "unitUsd": 0.084,
+      "subtotalUsd": 2.35
+    },
+    {
+      "model": "fal-ai/nano-banana-pro/edit",
+      "quantity": 1,
+      "unit": "image",
+      "unitUsd": 0.15,
+      "subtotalUsd": 0.15
+    },
+    {
+      "model": "fal-ai/flux-pro/kontext",
+      "quantity": 6,
+      "unit": "image",
+      "unitUsd": 0.04,
+      "subtotalUsd": 0.24
+    }
+  ],
+  "firstPassFalMediaCeilingUsd": 2.74,
+  "automaticRetries": 0,
+  "maxAttemptsPerAsset": 1,
+  "excludedFromEstimate": ["本地TTS", "本地Remotion渲染"],
+  "approvalRequiredBeforeAnyPaidCall": true
+}

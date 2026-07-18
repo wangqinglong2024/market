@@ -1,0 +1,519 @@
+{
+  "schemaVersion": "1.0.0",
+  "seriesId": "poisoned-wedding",
+  "storyVersion": "1.0.0",
+  "episodeId": "poisoned-wedding-e01",
+  "episodeNo": 1,
+  "status": "designed-awaiting-user-approval",
+  "stateInput": {
+    "episodeNo": 0,
+    "hash": "7a52dae1c70d9fa3be4494269a4c3e4dae4e61631c48cf2bf6b4a8cf36b73014"
+  },
+  "title": {
+    "zh": "大婚夜，我给仇人下了毒",
+    "vi": "Đêm tân hôn, ta đầu độc kẻ thù"
+  },
+  "durationTargetMs": 24000,
+  "modernAnchor": {
+    "required": true,
+    "characterId": "linwan",
+    "fictionalIdentity": true,
+    "asset": "assets/clips/e01-v00-modern-anchor.mp4",
+    "lineZh": "我嫁给了仇人。",
+    "matchCutAction": "红纱从画面左向右扫镜，切到同方向被挑起的古装红盖头"
+  },
+  "hookContract": {
+    "firstFrameTriggerCount": 2,
+    "dangerOrStakesVisibleByMs": 400,
+    "ancientMatchByMs": 1000,
+    "irreversibleActionByMs": 1600,
+    "mainQuestionByMs": 2500,
+    "requiredDeliveries": [
+      {"factId": "wedding_in_progress", "type": "first-frame-trigger", "byMs": 100},
+      {"factId": "groom_is_enemy", "type": "first-frame-trigger", "byMs": 400},
+      {"factId": "groom_is_enemy", "type": "danger-or-stakes", "byMs": 400},
+      {"factId": "ancient_bride_match", "type": "ancient-match", "byMs": 1000},
+      {"factId": "poison_dropped", "type": "irreversible-action", "byMs": 1600},
+      {"factId": "why_drink_known_poison", "type": "main-question", "byMs": 2500}
+    ]
+  },
+  "subtitleContract": {
+    "dialogueLanguage": "zh",
+    "displayOrder": ["pinyin", "zh", "vi"],
+    "allThreeLinesRequired": true,
+    "teachingElements": false
+  },
+  "plotContract": {
+    "protagonistGoal": "完成复仇下毒，同时判断萧玦为何主动踏进毒局",
+    "mainQuestion": "萧玦明知酒里有毒，为什么还喝？",
+    "mainQuestionFactId": "why_drink_known_poison",
+    "answerFactId": "xiaojue_drinks_to_bait_spy",
+    "answerRevealShotId": "s11-answer-whisper",
+    "nextDangerFactId": "peixuan_orders_bride_buried",
+    "commentQuestionVi": "Chàng uống vì tin nàng, hay vì đang giăng bẫy?"
+  },
+  "scenes": [
+    {
+      "id": "modern-cold-open",
+      "location": "现代 AI 林晚红色婚礼近景",
+      "time": "当下",
+      "lookIds": ["linwan-red-veil-real-v1"],
+      "props": ["ceremonial-wine"]
+    },
+    {
+      "id": "bridal-chamber",
+      "location": "大靖摄政王府婚房",
+      "time": "大婚夜",
+      "lookIds": ["shenzhiwei-wedding-red-v1", "xiaojue-wedding-black-v1"],
+      "props": ["poison-ring", "ceremonial-wine", "gold-hairpin", "half-burned-edict", "door-latch"]
+    },
+    {
+      "id": "pei-study",
+      "location": "裴府暗室",
+      "time": "同夜稍后",
+      "lookIds": ["peixuan-ivory-court-v1"],
+      "props": ["red-report-knot"]
+    }
+  ],
+  "shots": [
+    {
+      "id": "h01-modern-anchor",
+      "sceneId": "modern-cold-open",
+      "role": "modern-anchor",
+      "durationMs": 800,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v00-modern-anchor.mp4",
+      "generationPromptId": "e01-v00-modern-anchor",
+      "fallbackAsset": "assets/keyframes/e01-kf00-modern-anchor.png",
+      "mediaWindow": {"sourceStartMs": 0, "sourceEndMs": 800, "playbackRate": 1, "objectPosition": "50% 38%", "scale": 1.02},
+      "motionPreset": "locked",
+      "visibleFaceCount": 1,
+      "focusCharacterId": "linwan",
+      "drama": {
+        "actorId": "linwan",
+        "action": "第一帧酒杯与红纱已在画面内，林晚直视镜头说自己嫁给仇人，红纱向右扫镜",
+        "requiresFacts": [],
+        "emitsFacts": [
+          {"factId": "wedding_in_progress", "recipients": ["audience"], "channel": "visual", "atOffsetMs": 0},
+          {"factId": "groom_is_enemy", "recipients": ["audience"], "channel": "spoken", "atOffsetMs": 300}
+        ]
+      },
+      "utterances": [
+        {
+          "speakerId": "linwan",
+          "mode": "modern-anchor",
+          "pinyin": "wǒ jià gěi le chóu rén",
+          "textZh": "我嫁给了仇人。",
+          "subtitleVi": "Tôi đã cưới kẻ thù.",
+          "startOffsetMs": 0,
+          "estimatedDurationMs": 800
+        }
+      ],
+      "overlays": [],
+      "audio": {"dialogueAsset": "audio/e01-h01-linwan.wav", "sfx": ["low-heart-hit"], "originalClipAudio": false}
+    },
+    {
+      "id": "h02-poison-drop",
+      "sceneId": "bridal-chamber",
+      "role": "hook-action",
+      "durationMs": 800,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v01-hook.mp4",
+      "generationPromptId": "e01-v01-hook",
+      "fallbackAsset": "assets/keyframes/e01-kf01-hook.png",
+      "mediaWindow": {"sourceStartMs": 0, "sourceEndMs": 720, "playbackRate": 0.9, "objectPosition": "50% 42%", "scale": 1.02},
+      "motionPreset": "locked",
+      "visibleFaceCount": 2,
+      "focusCharacterId": "shenzhiwei",
+      "drama": {
+        "actorId": "linwan",
+        "action": "红纱延续同方向揭开，同脸沈知微拇指压开空心戒，把唯一一滴慢毒落入交杯酒",
+        "requiresFacts": ["poison_ring_contains_one_slow_dose", "ring_note_orders_poison_tonight"],
+        "emitsFacts": [
+          {"factId": "ancient_bride_match", "recipients": ["audience"], "channel": "visual", "atOffsetMs": 0},
+          {"factId": "poison_dropped", "recipients": ["audience", "linwan"], "channel": "visual", "atOffsetMs": 600}
+        ]
+      },
+      "utterances": [
+        {
+          "speakerId": "linwan",
+          "mode": "offscreen",
+          "pinyin": "wǒ jià gěi le chóu rén",
+          "textZh": "我嫁给了仇人。",
+          "subtitleVi": "Tôi đã cưới kẻ thù.",
+          "startOffsetMs": 0,
+          "estimatedDurationMs": 600
+        }
+      ],
+      "overlays": [],
+      "audio": {"sfx": ["veil-swipe", "single-liquid-drop"], "originalClipAudio": false}
+    },
+    {
+      "id": "h03-drink-grip",
+      "sceneId": "bridal-chamber",
+      "role": "hook-action",
+      "durationMs": 1400,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v01-hook.mp4",
+      "generationPromptId": "e01-v01-hook",
+      "fallbackAsset": "assets/keyframes/e01-kf01-hook.png",
+      "mediaWindow": {"sourceStartMs": 720, "sourceEndMs": 1980, "playbackRate": 0.9, "objectPosition": "50% 42%", "scale": 1.02},
+      "motionPreset": "impact-push",
+      "visibleFaceCount": 2,
+      "focusCharacterId": "xiaojue",
+      "drama": {
+        "actorId": "xiaojue",
+        "action": "萧玦明确看向毒戒和酒中涟漪，仍接杯饮尽，再反扣沈知微手腕",
+        "requiresFacts": ["bride_is_expected_to_poison_wine", "intercepted_note_names_slow_poison", "xiaojue_has_taken_antidote"],
+        "emitsFacts": [
+          {"factId": "xiaojue_sees_poison_action", "recipients": ["audience", "xiaojue"], "channel": "visual", "atOffsetMs": 100},
+          {"factId": "xiaojue_drinks_poisoned_wine", "recipients": ["audience", "xiaojue", "linwan"], "channel": "visual", "atOffsetMs": 600},
+          {"factId": "why_drink_known_poison", "recipients": ["audience"], "channel": "audience-only", "atOffsetMs": 800}
+        ]
+      },
+      "utterances": [],
+      "overlays": [{"type": "impact", "startMs": 520, "durationMs": 260}],
+      "audio": {"sfx": ["wine-swallow", "wrist-grab-hit"], "originalClipAudio": false}
+    },
+    {
+      "id": "s04-bolt-taunt",
+      "sceneId": "bridal-chamber",
+      "role": "power-shift",
+      "durationMs": 2200,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v01-hook.mp4",
+      "generationPromptId": "e01-v01-hook",
+      "fallbackAsset": "assets/keyframes/e01-kf01-hook.png",
+      "mediaWindow": {"sourceStartMs": 1980, "sourceEndMs": 3960, "playbackRate": 0.9, "objectPosition": "50% 44%", "scale": 1.03},
+      "motionPreset": "micro-push",
+      "visibleFaceCount": 2,
+      "focusCharacterId": "xiaojue",
+      "drama": {
+        "actorId": "xiaojue",
+        "action": "他不松手，用另一只手落下门闩，贴近但保持控制距离说毒放少了",
+        "requiresFacts": ["xiaojue_sees_poison_action", "door_spy_will_report_result", "xiaojue_has_taken_antidote"],
+        "emitsFacts": [
+          {"factId": "door_locked", "recipients": ["audience", "linwan"], "channel": "visual", "atOffsetMs": 300},
+          {"factId": "xiaojue_prepared_for_poison", "recipients": ["audience", "linwan"], "channel": "spoken", "atOffsetMs": 900}
+        ]
+      },
+      "utterances": [
+        {
+          "speakerId": "xiaojue",
+          "mode": "whisper",
+          "pinyin": "dú fàng shǎo le",
+          "textZh": "毒放少了。",
+          "subtitleVi": "Nàng bỏ ít độc quá.",
+          "startOffsetMs": 850,
+          "estimatedDurationMs": 1000
+        }
+      ],
+      "overlays": [],
+      "audio": {"dialogueAsset": "audio/e01-s04-xiaojue.wav", "sfx": ["wooden-door-bolt"], "originalClipAudio": false}
+    },
+    {
+      "id": "s05-knew-shadow",
+      "sceneId": "bridal-chamber",
+      "role": "confrontation",
+      "durationMs": 2400,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v02-bride-revenge.mp4",
+      "generationPromptId": "e01-v02-bride-revenge",
+      "fallbackAsset": "assets/keyframes/e01-kf02-bride-revenge.png",
+      "mediaWindow": {"sourceStartMs": 0, "sourceEndMs": 2304, "playbackRate": 0.96, "objectPosition": "50% 38%", "scale": 1.04},
+      "motionPreset": "micro-push",
+      "visibleFaceCount": 1,
+      "focusCharacterId": "shenzhiwei",
+      "drama": {
+        "actorId": "linwan",
+        "action": "沈知微不再看酒杯，盯住萧玦说他早知道；门缝外衣影在她视线后方停住",
+        "requiresFacts": ["xiaojue_prepared_for_poison", "door_locked"],
+        "emitsFacts": [
+          {"factId": "linwan_confirms_xiaojue_knew", "recipients": ["audience", "linwan", "xiaojue"], "channel": "spoken", "atOffsetMs": 300},
+          {"factId": "door_spy_physically_present", "recipients": ["audience", "linwan", "xiaojue"], "channel": "visual", "atOffsetMs": 1500}
+        ]
+      },
+      "utterances": [
+        {
+          "speakerId": "shenzhiwei",
+          "mode": "dialogue",
+          "pinyin": "nǐ zǎo jiù zhī dào",
+          "textZh": "你早就知道。",
+          "subtitleVi": "Chàng biết từ trước.",
+          "startOffsetMs": 250,
+          "estimatedDurationMs": 1200
+        }
+      ],
+      "overlays": [],
+      "audio": {"dialogueAsset": "audio/e01-s05-shenzhiwei.wav", "sfx": ["soft-cloth-outside-door"], "originalClipAudio": false}
+    },
+    {
+      "id": "s06-revenge-pin",
+      "sceneId": "bridal-chamber",
+      "role": "confrontation",
+      "durationMs": 2400,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v02-bride-revenge.mp4",
+      "generationPromptId": "e01-v02-bride-revenge",
+      "fallbackAsset": "assets/keyframes/e01-kf02-bride-revenge.png",
+      "mediaWindow": {"sourceStartMs": 2304, "sourceEndMs": 4608, "playbackRate": 0.96, "objectPosition": "50% 40%", "scale": 1.04},
+      "motionPreset": "panic-shake",
+      "visibleFaceCount": 1,
+      "focusCharacterId": "shenzhiwei",
+      "drama": {
+        "actorId": "linwan",
+        "action": "她拔下金簪直刺画外萧玦，明确说出沈家三十七口，复仇从毒局升级为近身攻击",
+        "requiresFacts": ["shen_family_thirty_seven_were_killed", "xiaojue_signed_shen_arrest_order", "linwan_confirms_xiaojue_knew"],
+        "emitsFacts": [
+          {"factId": "bride_attempts_direct_revenge", "recipients": ["audience", "xiaojue"], "channel": "visual", "atOffsetMs": 500},
+          {"factId": "shen_family_blood_debt_spoken", "recipients": ["audience", "xiaojue"], "channel": "spoken", "atOffsetMs": 900}
+        ]
+      },
+      "utterances": [
+        {
+          "speakerId": "shenzhiwei",
+          "mode": "dialogue",
+          "pinyin": "shěn jiā sān shí qī kǒu",
+          "textZh": "沈家三十七口。",
+          "subtitleVi": "Ba mươi bảy người nhà họ Thẩm.",
+          "startOffsetMs": 850,
+          "estimatedDurationMs": 1300
+        }
+      ],
+      "overlays": [{"type": "impact", "startMs": 420, "durationMs": 240}],
+      "audio": {"dialogueAsset": "audio/e01-s06-shenzhiwei.wav", "sfx": ["hairpin-draw", "cloth-strike"], "originalClipAudio": false}
+    },
+    {
+      "id": "s07-edict-evidence",
+      "sceneId": "bridal-chamber",
+      "role": "evidence",
+      "durationMs": 2800,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v03-edict.mp4",
+      "generationPromptId": "e01-v03-edict",
+      "fallbackAsset": "assets/keyframes/e01-kf03-edict.png",
+      "mediaWindow": {"sourceStartMs": 0, "sourceEndMs": 2660, "playbackRate": 0.95, "objectPosition": "50% 48%", "scale": 1.05},
+      "motionPreset": "evidence-tilt",
+      "visibleFaceCount": 0,
+      "drama": {
+        "actorId": "xiaojue",
+        "action": "黑袖手截住金簪却不反击，把半烧诏书压进红袖掌心；镜头看清字墨覆盖印泥的异常层次",
+        "requiresFacts": ["bride_attempts_direct_revenge", "half_burned_edict_has_abnormal_seal_order"],
+        "emitsFacts": [
+          {"factId": "hairpin_attack_stopped", "recipients": ["audience", "linwan"], "channel": "gesture", "atOffsetMs": 300},
+          {"factId": "edict_seal_order_abnormal", "recipients": ["audience", "linwan"], "channel": "document", "atOffsetMs": 1800}
+        ]
+      },
+      "utterances": [],
+      "overlays": [],
+      "audio": {"sfx": ["metal-pin-stop", "paper-unfold"], "originalClipAudio": false}
+    },
+    {
+      "id": "s08-block-door",
+      "sceneId": "bridal-chamber",
+      "role": "intimacy-as-strategy",
+      "durationMs": 2600,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v04-door-cover.mp4",
+      "generationPromptId": "e01-v04-door-cover",
+      "fallbackAsset": "assets/keyframes/e01-kf04-door-cover.png",
+      "mediaWindow": {"sourceStartMs": 0, "sourceEndMs": 2470, "playbackRate": 0.95, "objectPosition": "50% 40%", "scale": 1.04},
+      "motionPreset": "impact-push",
+      "visibleFaceCount": 1,
+      "focusCharacterId": "shenzhiwei",
+      "drama": {
+        "actorId": "xiaojue",
+        "action": "门缝衣影逼近，画外黑袖把沈知微拉入近身位置，用肩背与她的红纱挡住观察线",
+        "requiresFacts": ["door_spy_physically_present", "door_spy_will_report_result"],
+        "emitsFacts": [
+          {"factId": "embrace_blocks_door_view", "recipients": ["audience", "linwan", "xiaojue"], "channel": "visual", "atOffsetMs": 700}
+        ]
+      },
+      "utterances": [],
+      "overlays": [],
+      "audio": {"sfx": ["cloth-pull", "floor-step-outside"], "originalClipAudio": false}
+    },
+    {
+      "id": "s09-cooperation",
+      "sceneId": "bridal-chamber",
+      "role": "intimacy-as-strategy",
+      "durationMs": 2600,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v04-door-cover.mp4",
+      "generationPromptId": "e01-v04-door-cover",
+      "fallbackAsset": "assets/keyframes/e01-kf04-door-cover.png",
+      "mediaWindow": {"sourceStartMs": 2470, "sourceEndMs": 4940, "playbackRate": 0.95, "objectPosition": "50% 40%", "scale": 1.05},
+      "motionPreset": "micro-push",
+      "visibleFaceCount": 1,
+      "focusCharacterId": "shenzhiwei",
+      "drama": {
+        "actorId": "xiaojue",
+        "action": "沈知微试图挣脱，画外萧玦按住她握簪的手，从她刚识别的诏书异常判断她会为真相暂缓攻击",
+        "requiresFacts": ["half_burned_edict_has_abnormal_seal_order", "embrace_blocks_door_view", "shen_family_blood_debt_spoken"],
+        "emitsFacts": [
+          {"factId": "xiaojue_offers_truth_for_cooperation", "recipients": ["audience", "linwan"], "channel": "spoken", "atOffsetMs": 700},
+          {"factId": "linwan_temporarily_stops_struggling", "recipients": ["audience", "xiaojue"], "channel": "gesture", "atOffsetMs": 1900}
+        ]
+      },
+      "utterances": [
+        {
+          "speakerId": "xiaojue",
+          "mode": "whisper",
+          "pinyin": "xiǎng zhī dào zhēn xiàng, jiù bié dòng",
+          "textZh": "想知道真相，就别动。",
+          "subtitleVi": "Muốn biết sự thật thì đừng động.",
+          "startOffsetMs": 650,
+          "estimatedDurationMs": 1500
+        }
+      ],
+      "overlays": [],
+      "audio": {"dialogueAsset": "audio/e01-s09-xiaojue.wav", "sfx": ["breath-close", "cloth-settle"], "originalClipAudio": false}
+    },
+    {
+      "id": "s10-fake-collapse",
+      "sceneId": "bridal-chamber",
+      "role": "consequence",
+      "durationMs": 2400,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v05-collapse-answer.mp4",
+      "generationPromptId": "e01-v05-collapse-answer",
+      "fallbackAsset": "assets/keyframes/e01-kf05-collapse-answer.png",
+      "mediaWindow": {"sourceStartMs": 0, "sourceEndMs": 2400, "playbackRate": 1, "objectPosition": "50% 42%", "scale": 1.03},
+      "motionPreset": "micro-push",
+      "visibleFaceCount": 1,
+      "focusCharacterId": "xiaojue",
+      "drama": {
+        "actorId": "xiaojue",
+        "action": "前1200毫秒只让门外观察者贴近并让沈知微托住他的重量；绝不提前倒下。19200毫秒总片时点之后，他才踉跄打翻酒杯，演出毒发",
+        "requiresFacts": ["linwan_temporarily_stops_struggling", "door_spy_physically_present", "xiaojue_has_taken_antidote"],
+        "emitsFacts": [
+          {"factId": "spy_has_clear_view", "recipients": ["audience", "xiaojue"], "channel": "visual", "atOffsetMs": 500},
+          {"factId": "xiaojue_performs_poison_collapse", "recipients": ["audience", "linwan", "xiaojue", "guqinghe"], "channel": "visual", "atOffsetMs": 1200}
+        ]
+      },
+      "utterances": [],
+      "overlays": [{"type": "flash", "startMs": 1220, "durationMs": 180}],
+      "audio": {"sfx": ["wine-cup-fall", "body-weight-shift"], "originalClipAudio": false}
+    },
+    {
+      "id": "s11-answer-whisper",
+      "sceneId": "bridal-chamber",
+      "role": "reveal",
+      "durationMs": 2200,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v05-collapse-answer.mp4",
+      "generationPromptId": "e01-v05-collapse-answer",
+      "fallbackAsset": "assets/keyframes/e01-kf05-collapse-answer.png",
+      "mediaWindow": {"sourceStartMs": 2400, "sourceEndMs": 4600, "playbackRate": 1, "objectPosition": "50% 40%", "scale": 1.05},
+      "motionPreset": "micro-push",
+      "visibleFaceCount": 1,
+      "focusCharacterId": "xiaojue",
+      "drama": {
+        "actorId": "xiaojue",
+        "action": "他借沈知微身体遮住嘴型，只对她说明必须让门外的人相信他中毒；答案没有更早通过旁白或画面完整交付",
+        "requiresFacts": ["xiaojue_performs_poison_collapse", "door_spy_will_report_result", "embrace_blocks_door_view"],
+        "emitsFacts": [
+          {"factId": "xiaojue_drinks_to_bait_spy", "recipients": ["audience", "linwan"], "channel": "spoken", "atOffsetMs": 400}
+        ]
+      },
+      "utterances": [
+        {
+          "speakerId": "xiaojue",
+          "mode": "whisper",
+          "pinyin": "mén wài de rén, bì xū xiāng xìn wǒ zhòng dú le",
+          "textZh": "门外的人，必须相信我中毒了。",
+          "subtitleVi": "Kẻ ngoài cửa phải tin rằng ta đã trúng độc.",
+          "startOffsetMs": 300,
+          "estimatedDurationMs": 1800
+        }
+      ],
+      "overlays": [],
+      "audio": {"dialogueAsset": "audio/e01-s11-xiaojue.wav", "sfx": ["low-pulse"], "originalClipAudio": false}
+    },
+    {
+      "id": "s12-report",
+      "sceneId": "pei-study",
+      "role": "consequence",
+      "durationMs": 600,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v06-pei-order.mp4",
+      "generationPromptId": "e01-v06-pei-order",
+      "fallbackAsset": "assets/keyframes/e01-kf06-pei-order.png",
+      "mediaWindow": {"sourceStartMs": 0, "sourceEndMs": 600, "playbackRate": 1, "objectPosition": "50% 40%", "scale": 1.02},
+      "motionPreset": "locked",
+      "visibleFaceCount": 1,
+      "focusCharacterId": "peixuan",
+      "drama": {
+        "action": "跨地点硬切；一只不露脸的手把代表得手的红结推到裴玄面前，他先确认再抬眼",
+        "requiresFacts": [],
+        "emitsFacts": [
+          {"factId": "report_xiaojue_poisoned", "recipients": ["audience", "peixuan"], "channel": "gesture", "atOffsetMs": 300}
+        ]
+      },
+      "utterances": [],
+      "overlays": [],
+      "audio": {"sfx": ["red-knot-slide"], "originalClipAudio": false}
+    },
+    {
+      "id": "s13-tail-order",
+      "sceneId": "pei-study",
+      "role": "tail-hook",
+      "durationMs": 800,
+      "sourceType": "ai-video",
+      "asset": "assets/clips/e01-v06-pei-order.mp4",
+      "generationPromptId": "e01-v06-pei-order",
+      "fallbackAsset": "assets/keyframes/e01-kf06-pei-order.png",
+      "mediaWindow": {"sourceStartMs": 600, "sourceEndMs": 1400, "playbackRate": 1, "objectPosition": "50% 35%", "scale": 1.04},
+      "motionPreset": "impact-push",
+      "visibleFaceCount": 1,
+      "focusCharacterId": "peixuan",
+      "drama": {
+        "actorId": "peixuan",
+        "action": "裴玄确认毒发报告后不询问细节，只下令让新娘陪葬，暴露下一集灭口危险",
+        "requiresFacts": ["report_xiaojue_poisoned", "bride_should_be_silenced_after_poisoning"],
+        "emitsFacts": [
+          {"factId": "peixuan_orders_bride_buried", "recipients": ["audience"], "channel": "spoken", "atOffsetMs": 400}
+        ]
+      },
+      "utterances": [
+        {
+          "speakerId": "peixuan",
+          "mode": "dialogue",
+          "pinyin": "ràng tā péi zàng",
+          "textZh": "让她陪葬。",
+          "subtitleVi": "Chôn ả theo hắn.",
+          "startOffsetMs": 100,
+          "estimatedDurationMs": 700
+        }
+      ],
+      "overlays": [{"type": "impact", "startMs": 380, "durationMs": 240}],
+      "audio": {"dialogueAsset": "audio/e01-s13-peixuan.wav", "sfx": ["single-drum-hit"], "originalClipAudio": false}
+    }
+  ],
+  "budget": {
+    "maxPaidKeyframes": 7,
+    "maxPaidVideoClips": 7,
+    "maxGeneratedVideoSeconds": 28,
+    "maxPaidAttemptsPerAsset": 1,
+    "automaticPaidRetries": 0,
+    "maxUsdFirstPass": 2.74
+  },
+  "stateDelta": [
+    {"op": "add-fact", "characterId": "linwan", "factId": "xiaojue_prepared_for_poison", "source": "萧玦主动指出毒量"},
+    {"op": "add-fact", "characterId": "linwan", "factId": "edict_seal_order_abnormal", "source": "半烧诏书的墨印层次"},
+    {"op": "add-fact", "characterId": "linwan", "factId": "xiaojue_drinks_to_bait_spy", "source": "萧玦结尾耳语"},
+    {"op": "add-fact", "characterId": "peixuan", "factId": "report_xiaojue_poisoned", "source": "顾青禾经接头人送回得手红结"},
+    {"op": "set-relationship", "fromId": "linwan", "toId": "xiaojue", "value": "enemy_husband_and_temporary_truth_partner"},
+    {"op": "set-prop-state", "propId": "poison-ring", "from": "one-slow-dose-sealed", "to": "empty"},
+    {"op": "set-prop-state", "propId": "ceremonial-wine", "from": "clean-before-bride-action", "to": "poisoned_consumed_and_spilled"},
+    {"op": "set-prop-state", "propId": "half-burned-edict", "from": "hidden-inside-robe", "to": "revealed-to-shenzhiwei"},
+    {"op": "close-loop", "loopId": "why_xiaojue_willingly_drinks_poison"},
+    {"op": "open-loop", "loopId": "who_prepared_premarriage_silencing_order"}
+  ],
+  "generationPolicy": {
+    "stopBeforeFal": true,
+    "requireUserApprovalFile": true,
+    "minimumDynamicCoverageRatio": 0.8,
+    "maxStaticHoldMs": 1000
+  }
+}

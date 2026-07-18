@@ -173,6 +173,22 @@ export type Manifest = {
       focusY?: number;                     // 裁切纵向焦点 0(顶)~1(底)，默认 0.5
     };
     subtitle?: { top: number; height: number };
+    // chinese-drama-v2：全屏动态短剧的安全区与拼音/中文/越南文三行字幕。
+    dramaV2?: {
+      captions?: {
+        safeLeft?: number;
+        safeRight?: number;
+        safeTop?: number;
+        safeBottom?: number;
+        pinyinSize?: number;
+        zhSize?: number;
+        viSize?: number;
+        pinyinColor?: string;
+        zhColor?: string;
+        viColor?: string;
+        shadowColor?: string;
+      };
+    };
   };
   beats: Beat[];
 };

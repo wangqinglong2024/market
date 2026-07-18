@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "1.0.0",
+  "episodeId": "poisoned-wedding-e01",
+  "provider": "fal.ai",
+  "paidExecutionAllowed": false,
+  "status": "planned-only-awaiting-user-approval",
+  "pricingSnapshotDate": "2026-07-17",
+  "costEstimate": {
+    "plannedVideoSeconds": 28,
+    "plannedVideoUsd": 2.35,
+    "plannedKeyframeCeilingUsd": 0.39,
+    "firstPassCeilingUsd": 2.74,
+    "automaticRetries": 0,
+    "excludes": ["本地TTS", "本地Remotion渲染"]
+  },
+  "assets": [
+    {
+      "id": "e01-kf00-modern-anchor",
+      "kind": "keyframe",
+      "model": "fal-ai/flux-pro/kontext",
+      "characterCount": 1,
+      "referenceInputs": ["canonical:linwan"],
+      "dependsOn": [],
+      "prompt": "Create the canonical fictional AI heroine Lin Wan, identity version linwan-fictional-v1, not based on any real person or celebrity. Chinese woman around age twenty-four, cool oval face, natural long black hair, a very faint beauty mark below the left eye, restrained sharp gaze. Vertical 9:16 cinematic modern close-up, minimal deep-red contemporary dress and translucent red veil, one ceremonial wine cup already raised at chest level. First-frame tension: she looks over the rim directly toward camera as if confessing a dangerous marriage. Warm deep-red light, simple layered background, realistic skin and fabric, no ancient jewelry and no text.",
+      "negativePrompt": "real celebrity likeness, user likeness, third-party identity, costume drama accessories, modern brand, duplicate cup, extra characters, cartoon style, excessive beauty retouching, low resolution, gore, embedded text or graphic layout",
+      "output": "assets/keyframes/e01-kf00-modern-anchor.png",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-kf01-hook",
+      "kind": "keyframe",
+      "model": "fal-ai/nano-banana-pro/edit",
+      "characterCount": 2,
+      "referenceInputs": ["asset:e01-kf00-modern-anchor", "canonical:shenzhiwei", "canonical:xiaojue"],
+      "dependsOn": ["e01-kf00-modern-anchor"],
+      "prompt": "Use only the approved Linwan identity for Shen Zhiwei and the approved Xiao Jue identity. Fictional Great Jing bridal chamber at night, vertical 9:16 cinematic realism, deep red silk and warm candlelight. Tight two-person composition at the exact instant after the red bridal veil lifts: Shen Zhiwei presses the hidden mechanism of a hollow poison ring above one ceremonial wine cup while Xiao Jue's eyes unmistakably track her thumb and the falling clear drop. Her red wedding robe and his near-black ceremonial robe follow the canonical looks. The poison ring, one wine cup and their eyeline are the only visual priorities. Tense enemy marriage, restrained expressions, realistic silk, lacquer and metal, non-graphic.",
+      "negativePrompt": "identity drift, costume drift, modern objects, extra characters, duplicate props, incorrect ring or cup count, cartoon style, excessive beauty retouching, low resolution, gore, embedded text or graphic layout",
+      "output": "assets/keyframes/e01-kf01-hook.png",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-kf02-bride-revenge",
+      "kind": "keyframe",
+      "model": "fal-ai/flux-pro/kontext",
+      "characterCount": 1,
+      "referenceInputs": ["asset:e01-kf00-modern-anchor", "canonical:shenzhiwei", "asset:e01-kf01-hook"],
+      "dependsOn": ["e01-kf00-modern-anchor", "e01-kf01-hook"],
+      "prompt": "Preserve the approved Shen Zhiwei identity and the same bridal chamber, red wedding robe, hollow ring and candle direction from the referenced hook keyframe. Vertical 9:16 tight single-character close-up. Shen Zhiwei has just realized the groom knew about the poison; her gaze hardens toward an offscreen Xiao Jue while one hand reaches for the canonical gold hairpin. A narrow human shadow is visible only through the closed door seam behind her, with no second person present in frame. The emotional priority is betrayed fury turning into an immediate revenge decision. Cinematic realistic fabric and skin, high contrast red and black, non-graphic.",
+      "negativePrompt": "identity drift, a second visible character, costume drift, modern objects, duplicate jewelry, missing door seam, cartoon style, over-smoothed face, low resolution, gore, embedded text or graphic layout",
+      "output": "assets/keyframes/e01-kf02-bride-revenge.png",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-kf03-edict",
+      "kind": "keyframe",
+      "model": "fal-ai/flux-pro/kontext",
+      "characterCount": 0,
+      "referenceInputs": ["canonical:half-burned-edict"],
+      "dependsOn": [],
+      "prompt": "Vertical 9:16 cinematic macro evidence shot in the same warm bridal chamber light. A black ceremonial sleeve has just stopped a gold hairpin and presses one half-burned fictional imperial edict into a red wedding sleeve. The central evidence is physically legible without written content: the dark calligraphy ink visibly sits over the older vermilion seal layer, with charred fibers and overlapping material depth showing the abnormal order of production. Only hands, sleeves, hairpin and document are in frame; no faces and no extra props. Real paper fibers, cinnabar seal paste, lacquered metal and shallow depth of field, non-graphic.",
+      "negativePrompt": "faces, full characters, modern paper, readable generated writing, duplicate hands or props, clean unburned paper, cartoon style, low resolution, gore, embedded captions or graphic layout",
+      "output": "assets/keyframes/e01-kf03-edict.png",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-kf04-door-cover",
+      "kind": "keyframe",
+      "model": "fal-ai/flux-pro/kontext",
+      "characterCount": 1,
+      "referenceInputs": ["asset:e01-kf00-modern-anchor", "canonical:shenzhiwei", "asset:e01-kf02-bride-revenge"],
+      "dependsOn": ["e01-kf00-modern-anchor", "e01-kf02-bride-revenge"],
+      "prompt": "Preserve the approved Shen Zhiwei identity, red wedding robe, bridal chamber and door continuity. Vertical 9:16 single-character medium close-up. Shen Zhiwei is pulled half a step toward the left by an offscreen black ceremonial sleeve at her forearm; only she is visible. Her red veil and shoulder now block the narrow door seam where an outside observer's dim silhouette had appeared. Her other hand still grips the gold hairpin near her chest and her expression shows resistance mixed with sudden calculation. The composition must make the embrace function as visual cover rather than romance. Cinematic candlelight, realistic cloth tension, non-graphic.",
+      "negativePrompt": "a second visible character, romantic posing, identity drift, costume drift, modern objects, duplicate props, cartoon style, excessive beauty retouching, low resolution, gore, embedded text or graphic layout",
+      "output": "assets/keyframes/e01-kf04-door-cover.png",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-kf05-collapse-answer",
+      "kind": "keyframe",
+      "model": "fal-ai/flux-pro/kontext",
+      "characterCount": 1,
+      "referenceInputs": ["canonical:xiaojue", "asset:e01-kf01-hook"],
+      "dependsOn": ["e01-kf01-hook"],
+      "prompt": "Preserve the approved Xiao Jue identity, near-black wedding robe, bridal chamber, wine cup and candle direction. Vertical 9:16 tight single-character three-quarter close-up. Xiao Jue is still upright but has shifted deliberate weight toward an offscreen red sleeve, checking the door seam before beginning a staged poison collapse. A red fabric edge supports him but no second character is visible. His face must show full control beneath a convincing onset of weakness; the fallen cup has not yet hit the floor. Suspenseful political trap, realistic cloth and body weight, cinematic low warm light, non-graphic.",
+      "negativePrompt": "a second visible character, identity drift, costume drift, genuine death expression, modern objects, duplicate cups, cartoon style, excessive beauty retouching, low resolution, gore, embedded text or graphic layout",
+      "output": "assets/keyframes/e01-kf05-collapse-answer.png",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-kf06-pei-order",
+      "kind": "keyframe",
+      "model": "fal-ai/flux-pro/kontext",
+      "characterCount": 1,
+      "referenceInputs": ["canonical:peixuan", "canonical:pei-study"],
+      "dependsOn": [],
+      "prompt": "Use the approved Pei Xuan identity and canonical ivory court robe with a dark red inner collar. Fictional Great Jing chancellor's private study later that night, vertical 9:16 cinematic realism. One clear character only: Pei Xuan sits behind a dark lacquer desk as an anonymous offscreen hand has just slid a small red knotted report token into the foreground. He looks down at the token before lifting a cold, economical gaze; no smile and no theatrical villain pose. Low amber side light, deep shadow, quiet lethal authority, realistic lacquer and silk, non-graphic.",
+      "negativePrompt": "a second visible character, identity drift, costume drift, modern objects, duplicate tokens, exaggerated evil expression, cartoon style, excessive beauty retouching, low resolution, gore, embedded text or graphic layout",
+      "output": "assets/keyframes/e01-kf06-pei-order.png",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-v00-modern-anchor",
+      "kind": "ai-video",
+      "model": "fal-ai/kling-video/v3/standard/image-to-video",
+      "keyframeId": "e01-kf00-modern-anchor",
+      "durationSec": 3,
+      "generateAudio": false,
+      "prompt": "Preserve the completely fictional Lin Wan identity, modern deep-red dress, translucent veil and single wine cup. Start immediately with her eyes locked over the raised cup. She delivers one short controlled confession with restrained mouth movement, then sweeps the red veil from left to right until it covers most of the lens by 0.8 seconds. Hold only residual red fabric motion afterward. Locked vertical close-up, no extra people, no ancient styling, no model audio and no embedded text.",
+      "output": "assets/clips/e01-v00-modern-anchor.mp4",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-v01-hook",
+      "kind": "ai-video",
+      "model": "fal-ai/kling-video/v3/standard/image-to-video",
+      "keyframeId": "e01-kf01-hook",
+      "durationSec": 4,
+      "generateAudio": false,
+      "prompt": "Preserve both approved identities, wedding costumes, hollow ring, single cup, chamber and light. One compressed continuous action: in the first 0.7 seconds Shen Zhiwei presses the ring and the clear drop visibly enters the wine; Xiao Jue's eyes track the ring before he takes the cup. He deliberately drinks, grips her wrist, then uses his free hand to drop the wooden door latch. In the final second he leans only enough to deliver one short restrained line while maintaining control. The eyeline from his eyes to her thumb must be unmistakable. Fast decisive hand choreography, 8 cm push-in, no additional characters, no romantic softness, restrained mouth movement only at the end.",
+      "output": "assets/clips/e01-v01-hook.mp4",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-v02-bride-revenge",
+      "kind": "ai-video",
+      "model": "fal-ai/kling-video/v3/standard/image-to-video",
+      "keyframeId": "e01-kf02-bride-revenge",
+      "durationSec": 5,
+      "generateAudio": false,
+      "prompt": "Preserve Shen Zhiwei's approved identity, red robe, ring, gold hairpin, door seam and candle direction. She looks toward the offscreen groom and speaks one short accusation with restrained mouth movement; the narrow shadow outside the door stops. Her expression then hardens, she pulls the gold hairpin free in one decisive motion and drives it toward the offscreen groom while speaking one short blood-debt line. No second person enters frame. One continuous emotional escalation from discovery to attack, subtle 12 cm lateral move, realistic sleeve weight and hairpin motion.",
+      "output": "assets/clips/e01-v02-bride-revenge.mp4",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-v03-edict",
+      "kind": "ai-video",
+      "model": "fal-ai/kling-video/v3/standard/image-to-video",
+      "keyframeId": "e01-kf03-edict",
+      "durationSec": 3,
+      "generateAudio": false,
+      "prompt": "Keep the exact sleeves, hairpin and half-burned edict. The black sleeve stops the gold hairpin without striking back, turns the red palm upward and presses the edict into it. The red thumb opens the paper just enough for light to rake across the material layers, clearly revealing dark ink above the older vermilion seal paste. Locked macro with a slow 6 cm evidence tilt, no faces, no speaking, no new props and no generated readable writing.",
+      "output": "assets/clips/e01-v03-edict.mp4",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-v04-door-cover",
+      "kind": "ai-video",
+      "model": "fal-ai/kling-video/v3/standard/image-to-video",
+      "keyframeId": "e01-kf04-door-cover",
+      "durationSec": 5,
+      "generateAudio": false,
+      "prompt": "Preserve Shen Zhiwei's approved identity, red robe, hairpin, room and door seam. An offscreen black sleeve pulls her one controlled half-step so her shoulder and red veil completely cover the observer's line through the door. She resists and tightens the hairpin, then hears one quiet offscreen line; her eyes shift from fury to calculation and she stops struggling without becoming affectionate. Only Shen Zhiwei remains visible. One continuous five-second action, 10 cm slow push-in, realistic cloth tension, no speaking from her and no romantic pose.",
+      "output": "assets/clips/e01-v04-door-cover.mp4",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-v05-collapse-answer",
+      "kind": "ai-video",
+      "model": "fal-ai/kling-video/v3/standard/image-to-video",
+      "keyframeId": "e01-kf05-collapse-answer",
+      "durationSec": 5,
+      "generateAudio": false,
+      "prompt": "Preserve Xiao Jue's approved identity, black wedding robe, red supporting sleeve, single cup, chamber and door seam. For the first half he remains upright and checks that the observer has a clear view; do not show collapse early. Then he deliberately lets the cup fall, staggers and transfers controlled weight into the offscreen red sleeve to perform poison weakness. In the final two seconds he turns his mouth behind the red shoulder line and whispers one short explanation, keeping lip movement hidden from the door. One continuous staged performance, subtle 8 cm push-in, only Xiao Jue visible, no genuine death, no new props.",
+      "output": "assets/clips/e01-v05-collapse-answer.mp4",
+      "maxAttempts": 1
+    },
+    {
+      "id": "e01-v06-pei-order",
+      "kind": "ai-video",
+      "model": "fal-ai/kling-video/v3/standard/image-to-video",
+      "keyframeId": "e01-kf06-pei-order",
+      "durationSec": 3,
+      "generateAudio": false,
+      "prompt": "Preserve Pei Xuan's approved identity, ivory robe, red collar, lacquer desk, red report knot and low amber light. An anonymous hand exits immediately after sliding the knot into frame. Pei Xuan looks down to confirm the signal, lifts his eyes and gives one clipped execution order with minimal mouth movement. He does not smile or explain. Locked camera with a final 5 cm impact push, one visible character, no new props.",
+      "output": "assets/clips/e01-v06-pei-order.mp4",
+      "maxAttempts": 1
+    }
+  ],
+  "localPostprocess": []
+}

@@ -6,6 +6,7 @@ import { LAYOUT as V1 } from "./v1-legacy";
 import { LAYOUT as ZHENGNIAN } from "./zhengnian";
 import { LAYOUT as CHINESE_LEARN } from "./chinese-learn";
 import { LAYOUT as CHINESE_DRAMA } from "./chinese-drama";
+import { LAYOUT as CHINESE_DRAMA_V2 } from "./chinese-drama-v2";
 
 const LAYOUTS: Record<string, LayoutModule> = {
   [V2.id]: V2,
@@ -13,6 +14,7 @@ const LAYOUTS: Record<string, LayoutModule> = {
   [ZHENGNIAN.id]: ZHENGNIAN,
   [CHINESE_LEARN.id]: CHINESE_LEARN,
   [CHINESE_DRAMA.id]: CHINESE_DRAMA,
+  [CHINESE_DRAMA_V2.id]: CHINESE_DRAMA_V2,
 };
 
 // 未知/缺省 layout → 旧版式(v1-legacy)：与改造前「非 v2 即旧版式」的兜底一致，旧片渲染不变。

@@ -62,10 +62,10 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1440}
         defaultProps={{
-          image: "", focusY: 0.35, tag: "铃兰穿越记", tagVi: "Xuyên Không Thành Phu Nhân Hào Môn",
-          seal: "E01", volume: { zh: "卷一 · 惊醒", vi: "Quyển 1 · Tỉnh Giấc" },
-          chapter: { py: "", zh: "章主题名", vi: "" },
-          episode: { py: "", zh: "当集标题", vi: "" },
+          image: "", focusY: 0.35, tag: "毒嫁", tagVi: "Cô Dâu Báo Thù",
+          seal: "E01", volume: { zh: "第一案 · 毒婚", vi: "Vụ án 1 · Hôn lễ độc" },
+          chapter: { py: "dú jià", zh: "毒嫁", vi: "Cô Dâu Báo Thù" },
+          episode: { py: "wèi shén me tā hái shì hē le", zh: "为什么他还是喝了", vi: "Vì sao chàng vẫn uống?" },
         }}
       />
 

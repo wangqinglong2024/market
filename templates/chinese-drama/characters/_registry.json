@@ -1,13 +1,36 @@
 {
-  "_comment": "《铃兰穿越记》固定角色清单(真人质感·连续剧)。★女主是两张脸(灵魂互换,长相不同):qingwu=中国脸沈青梧(灵兰的灵魂,主线出镜最多),linh=越南脸灵兰(原身体,第1集开场溺水+卷03起本尊寄居)。中国戏喂 qingwu,越南戏喂 linh。出图铁律见 prompts/render-rules.md:身高/身材/女性显身材服装/每集换装/单角色一图一正脸/真实人景比例。main=true 出镜时喂该角色定妆图(ref)条件生成;单人 flux($0.04),本剧禁用多角色 nano-pro(flux 不支持多脸,详见 render-rules 第4条)。",
+  "schemaVersion": "4.0.0",
+  "seriesId": "poisoned-wedding",
   "characters": [
-    { "id": "qingwu",   "name": "沈青梧(中国脸·女主)", "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
-    { "id": "linh",     "name": "灵兰(越南脸·女主)",   "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
-    { "id": "yanci",    "name": "顾晏辞(男主)",         "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
-    { "id": "xiaotao",  "name": "小桃(女佣)",           "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
-    { "id": "laofuren", "name": "顾老夫人(婆婆)",       "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
-    { "id": "liuwan",   "name": "柳梦烟(继母·反派)",     "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" },
-    { "id": "yurou",    "name": "沈玉柔(白莲花妹妹·反派)", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
-    { "id": "chengye",  "name": "顾承业(二叔·终BOSS)",   "main": true,  "ref": "model-sheet.png", "canonical": "canonical.md" }
+    {
+      "id": "linwan",
+      "name": "林晚",
+      "kind": "fictional-ai-modern-lead",
+      "main": true,
+      "canonical": "linwan/canonical.md",
+      "identityVersion": "linwan-fictional-v1",
+      "referenceStatus": "planned-first-keyframe"
+    },
+    {
+      "id": "shenzhiwei",
+      "name": "沈知微 / 林晚",
+      "kind": "fictional-ai-ancient-avatar",
+      "main": true,
+      "canonical": "shenzhiwei/canonical.md",
+      "identitySource": "linwan",
+      "referenceStatus": "planned-from-modern-keyframe"
+    },
+    {
+      "id": "xiaojue",
+      "name": "萧玦",
+      "kind": "fictional-ai-character",
+      "main": true,
+      "canonical": "xiaojue/canonical.md",
+      "referenceStatus": "pending-keyframe-approval"
+    },
+    {"id": "peixuan", "name": "裴玄", "kind": "fictional-ai-character", "canonical": "peixuan/canonical.md", "referenceStatus": "pending-keyframe-approval"},
+    {"id": "guqinghe", "name": "顾青禾", "kind": "fictional-ai-character", "canonical": "guqinghe/canonical.md", "referenceStatus": "pending-keyframe-approval"},
+    {"id": "shenyan", "name": "沈砚", "kind": "fictional-ai-character", "canonical": "shenyan/canonical.md", "referenceStatus": "pending-keyframe-approval"},
+    {"id": "empress-su", "name": "苏皇后", "kind": "fictional-ai-character", "canonical": "empress-su/canonical.md", "referenceStatus": "pending-keyframe-approval"}
   ]
 }

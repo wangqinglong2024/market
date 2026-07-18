@@ -139,7 +139,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/14",
       "lang": "vi",
-      "status": "built",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-14",
       "manifest": "public/videos/2026/07/14/ahxiang-day1/manifest.json",
       "beats": 11
@@ -150,7 +151,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/15",
       "lang": "vi",
-      "status": "built",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-15",
       "manifest": "public/videos/2026/07/15/linglan-ep01/manifest.json",
       "beats": 22
@@ -161,7 +163,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/16",
       "lang": "vi",
-      "status": "built",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-16",
       "manifest": "public/videos/2026/07/16/linglan-ep01-v2/manifest.json",
       "beats": 21
@@ -172,7 +175,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/15",
       "lang": "vi",
-      "status": "built",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-15",
       "beats": 21
     },
@@ -182,7 +186,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/15",
       "lang": "vi",
-      "status": "built",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-16",
       "beats": 19
     },
@@ -192,7 +197,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/15",
       "lang": "vi",
-      "status": "built",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-16",
       "beats": 19
     },
@@ -202,7 +208,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/15",
       "lang": "vi",
-      "status": "built",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-16",
       "beats": 19
     },
@@ -212,7 +219,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/15",
       "lang": "vi",
-      "status": "built",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-16",
       "manifest": "public/videos/2026/07/15/linglan-ep06/manifest.json",
       "beats": 17
@@ -223,7 +231,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/16",
       "lang": "vi",
-      "status": "built",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-16",
       "beats": 19
     },
@@ -233,7 +242,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/16",
       "lang": "vi",
-      "status": "built",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-16",
       "beats": 22
     },
@@ -243,7 +253,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/16",
       "lang": "vi",
-      "status": "new",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-16"
     },
     {
@@ -252,7 +263,8 @@
       "template": "chinese-drama",
       "shard": "2026/07/16",
       "lang": "vi",
-      "status": "new",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-16"
     },
     {
@@ -261,8 +273,21 @@
       "template": "chinese-drama",
       "shard": "2026/07/16",
       "lang": "vi",
-      "status": "new",
+      "status": "obsolete",
+      "supersededBy": "poisoned-wedding-e01",
       "createdAt": "2026-07-16"
+    },
+    {
+      "id": "poisoned-wedding-e01",
+      "title": "毒嫁 E01：大婚夜，我给仇人下了毒",
+      "template": "chinese-drama",
+      "shard": "2026/07/17",
+      "lang": "vi",
+      "status": "designed-awaiting-user-approval",
+      "createdAt": "2026-07-17",
+      "design": "public/videos/2026/07/17/poisoned-wedding-e01/episode.json",
+      "manifest": null,
+      "beats": 13
     }
   ]
 }

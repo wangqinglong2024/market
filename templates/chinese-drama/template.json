@@ -1,74 +1,121 @@
 {
-  "_comment": "模板『中文情景剧·图文(越南受众)』。生产方式照 guoxue-jinju(script.json→每拍TTS+每场景AI出图→manifest),但版面比例照 chinese-learn(黑底/上图1080x720/下三行字幕360/四周120留白)。固定AI人设『阿香』(越南女孩·中企上班),每集情景剧+汉越词钩子+声调梗+引导下载App。音频读中文对白(学习内容),字幕三行拼音/中文/越南语逐字卡拉OK。",
+  "schemaVersion": "5.0.0",
   "id": "chinese-drama",
-  "name": "中文情景剧·图文(阿香·越南受众)",
-  "layout": "chinese-drama",
-  "meta": { "fps": 30, "width": 1080, "height": 1440 },
-  "_regionComment": "版面照 chinese-learn:上方 1080x720 放 3:2 图(黑底 cover),下方 960~1320 放三行字幕。四周 120 留白。",
-  "source": {
-    "region": { "top": 120, "height": 720 },
-    "focusY": 0.5
+  "seriesId": "poisoned-wedding",
+  "name": "《毒嫁》虚构AI角色连续古装权谋爱情复仇剧",
+  "layout": "chinese-drama-v2",
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "transitionFrames": 0
   },
-  "subtitle": { "top": 960, "height": 360 },
-  "audio": {
-    "_langComment": "★混合语言(render-rules 第8条):旁白=越南语(vi_*音色,走viSpeed);人物对白+灵兰内心思考=中文(zh_*音色,走speed;内心拍 beat.inner=true→字幕💭标记,音色同 qingwu)。build 按音色前缀 vi_/zh_ 自动判定合成哪种语言的文本(vi 读 captions.local, zh 读 captions.zh)。",
-    "speed": 1.0,
-    "viSpeed": 1.0,
-    "narratorSpeed": 1.0,
-    "tailPaddingMs": 160,
-    "sceneTailPaddingMs": 320,
-    "_bgmComment": "情景剧可留白或垫极低音量都市轻音乐(本地合成/CC0,禁API)。默认无BGM,接线同 guoxue: audio.bgm={src,volume}。",
-    "_voicesComment": "★音色锁定表见 prompts/render-rules.md 第8条(用户 2026-07-15 锁),改音色须用户批准。全部已免费试听验证(样品在 _voicetest/)。laofuren 待定:出场前试老年感音色再锁。voice 键=脚本里 beat.voice。",
-    "defaultVoice": "narrator",
-    "voices": {
-      "narrator": "vi_female_ruan_uranus_bigtts",
-      "linh":     "vi_female_partner_uranus_bigtts",
-      "yanci":    "zh_male_aojiaobazong_moon_bigtts",
-      "qingwu":   "zh_female_wenrouxiaoya_moon_bigtts",
-      "xiaotao":  "zh_female_roumeinvyou_emo_v2_mars_bigtts",
-      "laofuren": "zh_female_zhixingnvsheng_mars_bigtts",
-      "liuwan":   "zh_female_xinlingjitang_moon_bigtts",
-      "wanqing":  "zh_female_zhixingnvsheng_mars_bigtts",
-      "yurou":    "zh_female_lingling_uranus_bigtts",
-      "chengye":  "zh_male_jingqiangkanye_moon_bigtts",
-      "doctor":   "zh_male_yuanboxiaoshu_moon_bigtts"
-    }
+  "production": {
+    "defaultMode": "design-only",
+    "paidGenerationAllowed": false,
+    "approvalFile": "generation.approved.json",
+    "requiredApprovalPhrase": "USER_APPROVED_FAL_GENERATION",
+    "requireEpisodeHashMatch": true,
+    "automaticPaidRetries": 0,
+    "stopBeforeFalByDefault": true
+  },
+  "format": {
+    "episodeMinMs": 22000,
+    "episodeTargetMs": 24000,
+    "episodeMaxMs": 26000,
+    "anchorMinMs": 600,
+    "anchorMaxMs": 1000,
+    "maxStaticHoldMs": 1000,
+    "minimumDynamicCoverageRatio": 0.8,
+    "maxShotMs": 3500
+  },
+  "hook": {
+    "dangerVisibleByMs": 500,
+    "ancientMatchCutByMs": 1300,
+    "irreversibleActionByMs": 2200,
+    "mainQuestionByMs": 3000,
+    "answerRevealMinRatio": 0.8,
+    "forbidLogo": true,
+    "forbidTeachingElements": true,
+    "forbidBlackOpening": true
+  },
+  "modernAnchor": {
+    "required": true,
+    "characterId": "linwan",
+    "identityVersion": "linwan-fictional-v1",
+    "fictionalIdentity": true,
+    "generatedWithFalAfterApproval": true,
+    "useOriginalChineseVoice": false,
+    "audienceSubtitleLanguage": "vi"
   },
   "image": {
-    "_modelComment": "★真人质感(render-rules)。单角色拍喂该角色定妆图走 flux($0.04);空镜喂风格锚图走 flux。禁用多角色 nano-pro(flux 不支持多脸,render-rules 第4条:一图最多1张正脸)。",
-    "_aspectComment": "★出图统一 3:2 横图(横屏),放进黑底 1080x720 上区(cover)。定妆图是竖版参考,成片场景图出横屏。",
-    "aspectRatio": "3:2",
-    "seedStrategy": "from-shot-id",
-    "maxRetries": 3,
-    "_styleAnchorComment": "空镜/无定妆拍出图时喂给 flux-pro/kontext 的风格锚图(用女主中国脸定妆图,真人质感),只借画风。",
-    "styleAnchor": "templates/chinese-drama/characters/qingwu/model-sheet.png"
+    "provider": "fal",
+    "aspectRatio": "9:16",
+    "keyframeModel": "fal-ai/nano-banana-pro/edit",
+    "economyEditModel": "fal-ai/flux-pro/kontext",
+    "estimatedUsdPerImage": {
+      "fal-ai/nano-banana-pro/edit": 0.15,
+      "fal-ai/flux-pro/kontext": 0.04
+    },
+    "manualIdentityApprovalRequired": true,
+    "maxMultiPersonKeyframesPerEpisode": 1,
+    "modelRouting": {
+      "zeroOrOneCharacter": "fal-ai/flux-pro/kontext",
+      "twoOrMoreCharacters": "fal-ai/nano-banana-pro/edit"
+    },
+    "cacheStrategy": "content-hash-v2"
+  },
+  "video": {
+    "provider": "fal",
+    "primaryModel": "fal-ai/kling-video/v3/standard/image-to-video",
+    "economyModel": "fal-ai/wan/v2.5/image-to-video",
+    "generateAudio": false,
+    "defaultClipSeconds": 3,
+    "maxClipSeconds": 5,
+    "pricingSnapshotDate": "2026-07-17",
+    "estimatedUsdPerSecond": {
+      "primary": 0.084,
+      "economy": 0.05
+    }
+  },
+  "audio": {
+    "tailPaddingMs": 80,
+    "sceneTailPaddingMs": 120,
+    "bgmMaxVolume": 0.08,
+    "voices": {
+      "linwan": "zh_female_roumeinvyou_emo_v2_mars_bigtts",
+      "xiaojue": "zh_male_beijingxiaoye_moon_bigtts",
+      "peixuan": "zh_male_yuanboxiaoshu_moon_bigtts",
+      "shenzhiwei": "zh_female_roumeinvyou_emo_v2_mars_bigtts",
+      "guqinghe": "zh_female_wenrouxiaoya_moon_bigtts",
+      "shenyan": "zh_male_qingcang_mars_bigtts",
+      "empress-su": "zh_female_xinlingjitang_moon_bigtts"
+    }
   },
   "captions": {
-    "_comment": "版面照 chinese-learn:黑底三行(拼音/中文/越南语),逐字卡拉OK高亮青色。越南语是受众母语→偏大;拼音是发音抓手→中等;中文适中。",
-    "bgColor": "#000000",
-    "pinyinColor": "#7fd1c0",
-    "zhColor": "#ffffff",
-    "viColor": "#f5c518",
-    "localColor": "#f5c518",
-    "karaokeColor": "#25f4ee",
-    "dimColor": "#565b63",
-    "sizes": { "pinyin": 52, "zh": 72, "vi": 58, "local": 58 },
-    "gapPinyinZh": 8,
-    "gapZhLocal": 24,
-    "sidePad": 48,
-    "pinyinColumnGap": 10,
-    "opticalLift": 0
+    "safeLeft": 80,
+    "safeRight": 180,
+    "safeTop": 110,
+    "safeBottom": 280,
+    "pinyinSize": 38,
+    "zhSize": 56,
+    "viSize": 46,
+    "pinyinColor": "#FFE8A3",
+    "zhColor": "#FFFFFF",
+    "viColor": "#FFE66D",
+    "shadowColor": "rgba(0,0,0,0.88)",
+    "displayOrder": ["pinyin", "zh", "vi"],
+    "showChineseText": true,
+    "showPinyin": true,
+    "teachingElements": false
   },
   "fonts": {
-    "_comment": "中文用 Ma Shan Zheng(毛笔行楷,用户 2026-07-15 锁);SimHei 兜底。拼音+越南语统一=Itim(手写感但收敛,不死板;Charm 被否:太夸张 2026-07-15);fontTools 验证越南语附加符+拼音声调符全覆盖,Nunito 兜底。换字体只改这里。",
     "files": [
-      { "family": "Ma Shan Zheng", "file": "library/fonts/MaShanZheng.ttf" },
-      { "family": "Itim", "file": "library/fonts/Itim.ttf" },
-      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" },
-      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" }
+      {"family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900"},
+      {"family": "SimHei", "file": "library/fonts/SimHei.ttf"}
     ],
-    "zhStack": ["Ma Shan Zheng", "SimHei", "PingFang SC", "serif"],
-    "zhWeight": 400,
-    "latinStack": ["Itim", "Nunito", "PingFang SC", "sans-serif"]
+    "zhStack": ["SimHei", "PingFang SC", "sans-serif"],
+    "zhWeight": 700,
+    "latinStack": ["Nunito", "Arial", "sans-serif"]
   }
 }

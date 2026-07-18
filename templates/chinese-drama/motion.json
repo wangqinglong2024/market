@@ -1,23 +1,15 @@
 {
-  "_comment": "情景剧运镜预设(图片+运镜)。每 beat 按句意选 preset,渲染层按名播放。字段同 guoxue: scale/panX/panY=[起,止];driftX/driftY=正弦漂移振幅(px);rotate=[起,止]度;ease。改这里即调,无需动代码。",
+  "schemaVersion": "2.0.0",
   "presets": {
-    "push-in":   { "scale": [1.02, 1.12], "panX": [0, 0],    "panY": [0, 0],    "driftX": 8,  "driftY": 6,  "ease": "inOut" },
-    "pull-back": { "scale": [1.14, 1.02], "panX": [0, 0],    "panY": [0, 0],    "driftX": 6,  "driftY": 5,  "ease": "inOut" },
-    "pan-left":  { "scale": [1.08, 1.10], "panX": [40, -40], "panY": [0, 0],    "driftY": 6,  "ease": "inOut" },
-    "pan-right": { "scale": [1.08, 1.10], "panX": [-40, 40], "panY": [0, 0],    "driftY": 6,  "ease": "inOut" },
-    "climb-up":  { "scale": [1.06, 1.14], "panX": [0, 0],    "panY": [40, -44], "driftX": 6,  "ease": "inOut" },
-    "ken-burns": { "scale": [1.05, 1.13], "panX": [24, -28], "panY": [14, -18], "driftX": 10, "driftY": 8, "ease": "inOut" },
-    "sway":      { "scale": [1.06, 1.06], "panX": [0, 0],    "panY": [0, 0],    "driftX": 16, "driftY": 10, "ease": "linear" },
-    "pop":       { "scale": [1.18, 1.04], "panX": [0, 0],    "panY": [0, 0],    "driftX": 6,  "driftY": 4,  "rotate": [-1.5, 0], "ease": "inOut" },
-    "still":     { "scale": [1.03, 1.03], "panX": [0, 0],    "panY": [0, 0],    "driftX": 5,  "driftY": 4,  "ease": "linear" }
+    "locked": {"scale": [1, 1], "panX": [0, 0], "panY": [0, 0], "ease": "linear"},
+    "micro-push": {"scale": [1.02, 1.08], "panX": [0, 0], "panY": [0, -8], "ease": "inOut"},
+    "impact-push": {"scale": [1.03, 1.17], "panX": [0, 0], "panY": [8, -18], "ease": "inOut"},
+    "panic-shake": {"scale": [1.08, 1.12], "panX": [-10, 10], "panY": [4, -8], "driftX": 5, "driftY": 3, "ease": "linear"},
+    "evidence-tilt": {"scale": [1.08, 1.14], "panX": [-18, 12], "panY": [10, -10], "rotate": [-0.7, 0.5], "ease": "inOut"}
   },
   "rules": {
-    "default": "ken-burns",
-    "byKeyword": {
-      "惊|吓|懵|愣|什么|错|糟": "push-in",
-      "原来|懂了|明白|放心|笑|夸": "pop",
-      "欢迎|你好|请|来": "pan-right",
-      "主页|关注|明天见|学|下载": "pull-back"
-    }
+    "default": "micro-push",
+    "fallbackOnly": true,
+    "maxStillHoldMs": 1000
   }
 }

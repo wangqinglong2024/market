@@ -21,7 +21,7 @@ const GOLD_TEXT: React.CSSProperties = {
 export const CoverDrama: React.FC<{
   image: string;             // public/ 相对路径（海报底图,fal 单独新出）
   focusY?: number;
-  tag: string;               // 系列名：铃兰穿越记
+  tag: string;               // 系列名：毒嫁
   tagVi?: string;            // 系列越南语名
   seal?: string;             // 红印章集数：E01
   volume?: { zh: string; vi?: string }; // 卷标题：卷一 · 惊醒
