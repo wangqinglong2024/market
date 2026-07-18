@@ -1,0 +1,2 @@
+<!-- 终极反派 卫崇 固定外观。当朝丞相,构陷苏家幕后黑手。ref=model-sheet.png。 -->
+A distinguished, imposing middle-aged Chinese man, around 50, angular authoritative face, sharp shrewd narrow eyes, well-groomed graying beard, deep stern lines, an air of cold political power and concealed ruthlessness. He wears the ornate dark court robes of a grand chancellor / prime minister with rank insignia, an official's hat. Refined, dignified on the surface, calculating and merciless beneath — a man who holds the court in his grip. Same exact face and identity as the reference image.

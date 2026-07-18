@@ -288,6 +288,18 @@
       "design": "public/videos/2026/07/17/poisoned-wedding-e01/episode.json",
       "manifest": null,
       "beats": 13
+    },
+    {
+      "id": "huangmou-e001",
+      "title": "凰谋 E01·花轿睁眼(现代法医穿越成冲喜罪女·越南受众·图文+动态混搭60s)",
+      "template": "chuanyue-drama",
+      "shard": "2026/07/18",
+      "lang": "vi",
+      "status": "designed-awaiting-user-approval",
+      "createdAt": "2026-07-18",
+      "design": "templates/chuanyue-drama/story/卷01-冲喜入府/第01章-花轿睁眼.md",
+      "manifest": null,
+      "beats": 16
     }
   ]
 }

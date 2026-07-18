@@ -1,0 +1,3 @@
+<!-- 男主 裴珩 固定外观。摄政靖王,装病表象/真实凌厉。ref=model-sheet.png。
+     "病态"与"凌厉"两种气质由 {shot} 现写,脸不变。 -->
+A tall, coldly handsome young Chinese man, around 26, sharp defined features, clean jawline, deep dark piercing eyes, thin proud lips, pale refined complexion. Long black hair tied up in a noble style. He wears dark luxurious royal hanfu / a prince's dark robes with subtle gold trim. His bearing is aloof, commanding, quietly dangerous — a powerful regent prince who feigns illness. When "sick" he looks pale and weak; his true self is sharp and imposing. Same exact face and identity as the reference image.

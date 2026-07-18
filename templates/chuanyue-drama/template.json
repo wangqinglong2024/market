@@ -1,0 +1,97 @@
+{
+  "_comment": "模板『凰谋·现代穿越古代竖屏短剧(越南受众·图文+动态视频混搭)』。生产:script.json→每拍配音(火山TTS,旁白vi/角色zh)+每场景关键帧(flux喂定妆图)+动态拍I2V(kling,关原声)→manifest。版式3:4:上媒体区(图或视频)1080x720+下三行字幕(拼音/中文/越南语)逐字卡拉OK。layout=chinese-drama(复用跑通版式)。全程按hash缓存。",
+  "id": "chuanyue-drama",
+  "name": "凰谋·现代穿越古代短剧(越南受众)",
+  "seriesId": "huangmou",
+  "layout": "chuanyue-drama",
+  "meta": { "fps": 30, "width": 1080, "height": 1440 },
+  "source": { "region": { "top": 120, "height": 720 }, "focusY": 0.5 },
+  "subtitle": { "top": 960, "height": 360 },
+  "format": {
+    "episodeTargetMs": 60000,
+    "episodeMinMs": 58000,
+    "episodeMaxMs": 62000,
+    "hookMustBeVideo": true,
+    "hookVideoWithinMs": 3000,
+    "minVideoClipsPerEpisode": 3,
+    "maxConsecutiveStillBeats": 2
+  },
+  "audio": {
+    "_langComment": "★混合语言(用户 2026-07-18 锁):旁白=越南语(vi_*音色,读captions.local,走viSpeed);角色对白+女主内心=中文(zh_*音色,读captions.zh,走speed;inner=true→字幕💭)。build按音色前缀vi_/zh_自动判定合成语言。",
+    "speed": 1.0,
+    "viSpeed": 1.0,
+    "tailPaddingMs": 160,
+    "sceneTailPaddingMs": 320,
+    "_voicesComment": "★初始音色(暂定,TTS免费可重试听验;锁定须用户批准)。voice键=脚本beat.voice。narrator=vi旁白;其余=zh角色。",
+    "defaultVoice": "narrator",
+    "voices": {
+      "narrator": "vi_female_ruan_uranus_bigtts",
+      "zhaohua":  "zh_female_roumeinvyou_emo_v2_mars_bigtts",
+      "peiheng":  "zh_male_qingcang_mars_bigtts",
+      "suyi":     "zh_female_lingling_uranus_bigtts",
+      "weichong": "zh_male_jingqiangkanye_moon_bigtts",
+      "qinghe":   "zh_female_zhixingnvsheng_mars_bigtts",
+      "mama":     "zh_female_xinlingjitang_moon_bigtts"
+    }
+  },
+  "image": {
+    "_comment": "★真人质感,全部用 nano-banana-pro(用户 2026-07-18 锁,彻底放弃 flux)。首次出人物(定妆图)=nano-banana-pro 文生图;剧集关键帧=nano-banana-pro/edit 喂该角色定妆图保脸(单人也用,~$0.15);空镜喂 styleAnchor。★关键帧宽高比必须与 kling 视频一致=16:9(kling只认16:9/9:16/1:1),静图↔动态才不错位;渲染 cover 入媒体区。",
+    "provider": "fal",
+    "keyframeModel": "fal-ai/nano-banana-pro/edit",
+    "portraitModel": "fal-ai/nano-banana-pro",
+    "estimatedUsdPerImage": 0.15,
+    "aspectRatio": "16:9",
+    "seedStrategy": "from-shot-id",
+    "maxRetries": 1,
+    "styleAnchor": "templates/chuanyue-drama/characters/zhaohua/model-sheet.png"
+  },
+  "video": {
+    "_comment": "★I2V动态拍(kling image-to-video)。关键帧作输入图(人物特征代入),prompt只写运动(见prompts/video.tpl.md)。★generateAudio=false关原声,成片用自己TTS,渲染层静音播放。单段3-5s整数,3:2。花钱铁律:出问题不自动重试。",
+    "provider": "fal",
+    "primaryModel": "fal-ai/kling-video/v3/standard/image-to-video",
+    "generateAudio": false,
+    "defaultClipSeconds": 4,
+    "minClipSeconds": 3,
+    "maxClipSeconds": 5,
+    "_aspectComment": "★kling 只收 16:9/9:16/1:1(不认3:2)。媒体区是3:2横屏,用16:9最接近,渲染cover裁少许。关键帧仍3:2。",
+    "aspectRatio": "16:9",
+    "pricingSnapshotDate": "2026-07-18",
+    "estimatedUsdPerSecond": 0.084,
+    "negativePrompt": "text, subtitles, caption, watermark, logo, border, extra person, face swap, deformed hands"
+  },
+  "budget": {
+    "_comment": "★每集预算 $3(用户 2026-07-18 提高)。nano-banana-pro 关键帧($0.15)+kling动态($0.084/s)+海报封面。sceneId共图压边际成本。build 累计超上限立即抛错停。",
+    "maxUsdPerEpisode": 3.0,
+    "targetUsdPerEpisode": 2.8,
+    "maxPaidAttemptsPerAsset": 1,
+    "automaticPaidRetries": 0
+  },
+  "captions": {
+    "_comment": "黑底三行(拼音/中文/越南语)逐字卡拉OK。越南语=受众母语偏大;拼音发音抓手中等;中文适中。",
+    "bgColor": "#000000",
+    "pinyinColor": "#7fd1c0",
+    "zhColor": "#ffffff",
+    "viColor": "#f5c518",
+    "localColor": "#f5c518",
+    "karaokeColor": "#25f4ee",
+    "dimColor": "#565b63",
+    "sizes": { "pinyin": 52, "zh": 72, "vi": 58, "local": 58 },
+    "gapPinyinZh": 8,
+    "gapZhLocal": 24,
+    "sidePad": 48,
+    "pinyinColumnGap": 10,
+    "opticalLift": 0
+  },
+  "fonts": {
+    "_comment": "中文用Ma Shan Zheng(毛笔行楷),SimHei兜底;拼音+越南语用Itim(手写收敛),Nunito兜底。换字体只改这里。",
+    "files": [
+      { "family": "Ma Shan Zheng", "file": "library/fonts/MaShanZheng.ttf" },
+      { "family": "Itim", "file": "library/fonts/Itim.ttf" },
+      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "200 900" },
+      { "family": "SimHei", "file": "library/fonts/SimHei.ttf" }
+    ],
+    "zhStack": ["Ma Shan Zheng", "SimHei", "PingFang SC", "serif"],
+    "zhWeight": 400,
+    "latinStack": ["Itim", "Nunito", "PingFang SC", "sans-serif"]
+  }
+}

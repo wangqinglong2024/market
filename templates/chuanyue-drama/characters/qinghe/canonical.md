@@ -1,0 +1,2 @@
+<!-- 帮手 青禾 固定外观。昭华贴身侍女,忠心机灵。ref=model-sheet.png。 -->
+A bright, quick-eyed young Chinese maidservant, around 17, fresh clean pretty face, healthy fair skin, lively expressive eyes, an alert loyal look. Hair in a simple neat maid's double-bun with a plain ribbon. She wears modest, clean servant's hanfu in muted colors, simple and practical. Warm, sharp, devoted — the heroine's confidante and eyes-and-ears in the mansion. Same exact face and identity as the reference image.

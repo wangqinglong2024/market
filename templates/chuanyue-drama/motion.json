@@ -1,0 +1,23 @@
+{
+  "_comment": "图文拍运镜预设(静态关键帧+运镜);动态拍(type:video)不吃这里,运动由 kling 生成。字段:scale/panX/panY=[起,止];driftX/driftY=正弦漂移振幅(px);rotate=[起,止]度;ease。改这里即调,无需动代码。",
+  "presets": {
+    "push-in":   { "scale": [1.02, 1.12], "panX": [0, 0],    "panY": [0, 0],    "driftX": 8,  "driftY": 6,  "ease": "inOut" },
+    "pull-back": { "scale": [1.14, 1.02], "panX": [0, 0],    "panY": [0, 0],    "driftX": 6,  "driftY": 5,  "ease": "inOut" },
+    "pan-left":  { "scale": [1.08, 1.10], "panX": [40, -40], "panY": [0, 0],    "driftY": 6,  "ease": "inOut" },
+    "pan-right": { "scale": [1.08, 1.10], "panX": [-40, 40], "panY": [0, 0],    "driftY": 6,  "ease": "inOut" },
+    "climb-up":  { "scale": [1.06, 1.14], "panX": [0, 0],    "panY": [40, -44], "driftX": 6,  "ease": "inOut" },
+    "ken-burns": { "scale": [1.05, 1.13], "panX": [24, -28], "panY": [14, -18], "driftX": 10, "driftY": 8, "ease": "inOut" },
+    "sway":      { "scale": [1.06, 1.06], "panX": [0, 0],    "panY": [0, 0],    "driftX": 16, "driftY": 10, "ease": "linear" },
+    "pop":       { "scale": [1.18, 1.04], "panX": [0, 0],    "panY": [0, 0],    "driftX": 6,  "driftY": 4,  "rotate": [-1.5, 0], "ease": "inOut" },
+    "still":     { "scale": [1.03, 1.03], "panX": [0, 0],    "panY": [0, 0],    "driftX": 5,  "driftY": 4,  "ease": "linear" }
+  },
+  "rules": {
+    "default": "ken-burns",
+    "byKeyword": {
+      "惊|吓|懵|愣|什么|不对|竟|血": "push-in",
+      "原来|懂了|明白|证据|真相|钉死": "pop",
+      "退|走|离开|转身|远": "pull-back",
+      "环视|四周|满室|王府|朝堂": "pan-right"
+    }
+  }
+}

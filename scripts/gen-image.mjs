@@ -8,7 +8,8 @@ import { randomUUID } from "node:crypto";
 
 const KEY = readFileSync("api-key.txt", "utf8").split("\n")[1].trim();
 // fal.ai 属于国外服务：必须经本机 Clash VPN，禁止直连兜底。
-const PROXY = process.env.FAL_PROXY || "http://127.0.0.1:7890";
+// ★代理端口固定 7897(Clash Verge/mihomo，用户 2026-07-18 锁定，永久默认)。
+const PROXY = process.env.FAL_PROXY || "http://127.0.0.1:7897";
 
 const dataUri = (p) => "data:image/png;base64," + readFileSync(p).toString("base64");
 
@@ -42,7 +43,7 @@ async function downloadImage(url) {
   return execFileSync("curl", ["-s", "-m", "90", "-x", PROXY, url], { maxBuffer: 50 * 1024 * 1024 });
 }
 
-export const MODEL_USD = { "flux-text": 0.06, flux: 0.04, "nano-pro": 0.15 };
+export const MODEL_USD = { "flux-text": 0.06, flux: 0.04, "nano-pro": 0.15, "nano-edit": 0.15, "nano-t2i": 0.15 };
 export const autoModel = (refCount) => (refCount === 0 ? "flux-text" : refCount >= 2 ? "nano-pro" : "flux");
 
 // { outPath, prompt, refPaths[], settings, model } -> { path, cached, model }
@@ -52,11 +53,18 @@ export async function genImage({ outPath, prompt, refPaths = [], settings, model
   const refCount = refPaths.length;
   const modelKey = model || autoModel(refCount);
 
-  if (modelKey !== "flux-text" && modelKey !== "flux" && modelKey !== "nano-pro") {
-    throw new Error(`未知 model: "${modelKey}"。只允许 flux-text / flux / nano-pro。`);
+  const KNOWN = ["flux-text", "flux", "nano-pro", "nano-edit", "nano-t2i"];
+  if (!KNOWN.includes(modelKey)) {
+    throw new Error(`未知 model: "${modelKey}"。只允许 ${KNOWN.join(" / ")}。`);
   }
   if (modelKey === "flux-text" && refCount !== 0) {
     throw new Error(`flux-text 禁止参考图：${outPath} 收到 ${refCount} 张。`);
+  }
+  if (modelKey === "nano-t2i" && refCount !== 0) {
+    throw new Error(`nano-t2i(文生图) 禁止参考图：${outPath} 收到 ${refCount} 张。`);
+  }
+  if (modelKey === "nano-edit" && refCount < 1) {
+    throw new Error(`nano-edit 必须≥1张参考图：${outPath} 收到 ${refCount} 张。`);
   }
   if (modelKey === "nano-pro" && refCount < 2) {
     throw new Error(`nano-pro 只能用于多角色(≥2)：${outPath} 只有 ${refCount} 张参考图，必须用 flux。（严禁对单人/空镜用贵的 nano-pro）`);
@@ -76,6 +84,14 @@ export async function genImage({ outPath, prompt, refPaths = [], settings, model
       enable_safety_checker: false,
       safety_tolerance: "6",
     };
+  } else if (modelKey === "nano-t2i") {
+    // nano-banana-pro 文生图（首次出人物/无参考）
+    endpoint = "fal-ai/nano-banana-pro";
+    payload = { prompt, num_images: 1, output_format: "png", aspect_ratio: settings.image.aspectRatio };
+  } else if (modelKey === "nano-edit") {
+    // nano-banana-pro/edit：喂 1+ 张参考图(角色定妆图保脸/风格锚)，场景由 prompt 现写
+    endpoint = "fal-ai/nano-banana-pro/edit";
+    payload = { prompt, image_urls: refPaths.map(dataUri), num_images: 1, output_format: "png", aspect_ratio: settings.image.aspectRatio };
   } else if (modelKey === "nano-pro") {
     endpoint = "fal-ai/nano-banana-pro/edit";
     payload = {

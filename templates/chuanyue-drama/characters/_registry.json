@@ -1,0 +1,10 @@
+{
+  "_comment": "《凰谋》固定角色清单(真人质感·古装穿越连续剧)。★女主一张脸:现代陆黎==古装苏昭华(现代魂穿古身),ref=古装定妆图,现代闪回只在 {shot} 改'白大褂/短发',脸不变。main=true 出镜喂该角色定妆图(ref)条件生成。单角色 flux($0.04);全片≤1次多角色 nano-pro(见 render-rules 2/6)。服装露腿场景化见 render-rules 4。改角色须用户批准。",
+  "characters": [
+    { "id": "zhaohua",  "name": "陆黎/苏昭华(女主·现代法医魂+冲喜罪女)", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "peiheng",  "name": "裴珩(男主·装病摄政靖王)",             "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "suyi",     "name": "苏漪(反派女·庶妹白莲花·内鬼)",        "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "weichong", "name": "卫崇(终极反派·当朝丞相)",            "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" },
+    { "id": "qinghe",   "name": "青禾(帮手·贴身侍女)",                "main": true, "ref": "model-sheet.png", "canonical": "canonical.md" }
+  ]
+}
