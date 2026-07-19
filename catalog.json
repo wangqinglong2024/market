@@ -13,6 +13,28 @@
       "beats": 2
     },
     {
+      "id": "hsk-ziran-01-seq",
+      "title": "HSK字源·九宫格识字 第1集 自然万物【逐个模式·16s】",
+      "template": "hsk-ziyuan",
+      "shard": "2026/07/19",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-19",
+      "manifest": "public/videos/2026/07/19/hsk-ziran-01-seq/manifest.json",
+      "beats": 2
+    },
+    {
+      "id": "hsk-mem-01",
+      "title": "HSK字源·记忆测试版 12字(逐个1.2s·开头挑战+结尾催评论·~18s)",
+      "template": "hsk-ziyuan",
+      "shard": "2026/07/19",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-19",
+      "manifest": "public/videos/2026/07/19/hsk-mem-01/manifest.json",
+      "beats": 5
+    },
+    {
       "id": "huluwa-shenfeng",
       "title": "葫芦兄弟E1神峰奇遇·中文学习混剪(60s,越南受众)",
       "template": "chinese-learn",

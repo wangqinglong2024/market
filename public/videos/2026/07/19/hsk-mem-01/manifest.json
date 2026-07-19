@@ -5,27 +5,28 @@
     "height": 1920,
     "layout": "hsk-ziyuan",
     "grid": {
-      "mode": "parallel",
+      "mode": "sequential",
+      "seq": true,
       "x0": 60,
       "y0": 240,
       "cellW": 480,
       "cellH": 720,
       "box": 340,
       "groupFrames": 144,
-      "charSlot": null,
-      "readFrames": 36,
-      "readAt": null,
+      "charSlot": 36,
+      "readFrames": null,
+      "readAt": 24,
       "draw": [
-        2,
-        20
+        1,
+        8
       ],
       "morph": [
-        20,
-        108
+        8,
+        25
       ],
       "real": [
-        114,
-        140
+        26,
+        33
       ]
     },
     "colors": {
@@ -69,6 +70,18 @@
     }
   },
   "beats": [
+    {
+      "id": "intro",
+      "durationMs": 3976,
+      "card": {
+        "kind": "intro",
+        "lines": [
+          "Nhớ 6/12 chữ = TRÍ NHỚ SIÊU PHÀM 🧠",
+          "Bạn nhớ được mấy? Thử ngay! 👀"
+        ],
+        "audio": "videos/2026/07/19/hsk-mem-01/audio/intro.mp3"
+      }
+    },
     {
       "id": "g1",
       "durationMs": 4800,
@@ -187,7 +200,7 @@
           ],
           "audio": "library/tts-hanzi/han-5c71.mp3",
           "slot": 0,
-          "readFrame": 0
+          "readFrame": 24
         },
         {
           "c": "木",
@@ -278,8 +291,8 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-6728.mp3",
-          "slot": 0,
-          "readFrame": 36
+          "slot": 36,
+          "readFrame": 60
         },
         {
           "c": "日",
@@ -386,8 +399,8 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-65e5.mp3",
-          "slot": 0,
-          "readFrame": 72
+          "slot": 72,
+          "readFrame": 96
         },
         {
           "c": "月",
@@ -486,8 +499,8 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-6708.mp3",
-          "slot": 0,
-          "readFrame": 108
+          "slot": 108,
+          "readFrame": 132
         }
       ]
     },
@@ -601,7 +614,7 @@
           ],
           "audio": "library/tts-hanzi/han-6c34.mp3",
           "slot": 0,
-          "readFrame": 0
+          "readFrame": 24
         },
         {
           "c": "火",
@@ -692,8 +705,8 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-706b.mp3",
-          "slot": 0,
-          "readFrame": 36
+          "slot": 36,
+          "readFrame": 60
         },
         {
           "c": "雨",
@@ -824,8 +837,8 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-96e8.mp3",
-          "slot": 0,
-          "readFrame": 72
+          "slot": 72,
+          "readFrame": 96
         },
         {
           "c": "目",
@@ -952,10 +965,452 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-76ee.mp3",
-          "slot": 0,
-          "readFrame": 108
+          "slot": 108,
+          "readFrame": 132
         }
       ]
+    },
+    {
+      "id": "g3",
+      "durationMs": 4800,
+      "chars": [
+        {
+          "c": "人",
+          "py": "rén",
+          "vi": "người",
+          "pic": [
+            [
+              [
+                50,
+                34
+              ],
+              [
+                34,
+                74
+              ]
+            ],
+            [
+              [
+                50,
+                44
+              ],
+              [
+                66,
+                74
+              ]
+            ]
+          ],
+          "chr": [
+            [
+              [
+                50,
+                26
+              ],
+              [
+                32,
+                74
+              ]
+            ],
+            [
+              [
+                52,
+                42
+              ],
+              [
+                68,
+                74
+              ]
+            ]
+          ],
+          "extra": [
+            [
+              [
+                50,
+                14
+              ],
+              [
+                57,
+                19
+              ],
+              [
+                57,
+                27
+              ],
+              [
+                50,
+                32
+              ],
+              [
+                43,
+                27
+              ],
+              [
+                43,
+                19
+              ],
+              [
+                50,
+                14
+              ]
+            ],
+            [
+              [
+                50,
+                32
+              ],
+              [
+                50,
+                46
+              ]
+            ],
+            [
+              [
+                50,
+                36
+              ],
+              [
+                36,
+                44
+              ]
+            ],
+            [
+              [
+                50,
+                36
+              ],
+              [
+                64,
+                44
+              ]
+            ]
+          ],
+          "audio": "library/tts-hanzi/han-4eba.mp3",
+          "slot": 0,
+          "readFrame": 24
+        },
+        {
+          "c": "口",
+          "py": "kǒu",
+          "vi": "miệng",
+          "pic": [
+            [
+              [
+                28,
+                48
+              ],
+              [
+                50,
+                44
+              ],
+              [
+                72,
+                48
+              ],
+              [
+                72,
+                58
+              ],
+              [
+                50,
+                64
+              ],
+              [
+                28,
+                58
+              ],
+              [
+                28,
+                48
+              ]
+            ]
+          ],
+          "chr": [
+            [
+              [
+                36,
+                34
+              ],
+              [
+                50,
+                34
+              ],
+              [
+                64,
+                34
+              ],
+              [
+                64,
+                64
+              ],
+              [
+                50,
+                64
+              ],
+              [
+                36,
+                64
+              ],
+              [
+                36,
+                34
+              ]
+            ]
+          ],
+          "extra": [
+            [
+              [
+                36,
+                53
+              ],
+              [
+                64,
+                53
+              ]
+            ]
+          ],
+          "audio": "library/tts-hanzi/han-53e3.mp3",
+          "slot": 36,
+          "readFrame": 60
+        },
+        {
+          "c": "田",
+          "py": "tián",
+          "vi": "ruộng",
+          "pic": [
+            [
+              [
+                36,
+                30
+              ],
+              [
+                64,
+                30
+              ],
+              [
+                64,
+                70
+              ],
+              [
+                36,
+                70
+              ],
+              [
+                36,
+                30
+              ]
+            ],
+            [
+              [
+                50,
+                30
+              ],
+              [
+                50,
+                70
+              ]
+            ],
+            [
+              [
+                36,
+                50
+              ],
+              [
+                64,
+                50
+              ]
+            ]
+          ],
+          "chr": [
+            [
+              [
+                36,
+                30
+              ],
+              [
+                64,
+                30
+              ],
+              [
+                64,
+                70
+              ],
+              [
+                36,
+                70
+              ],
+              [
+                36,
+                30
+              ]
+            ],
+            [
+              [
+                50,
+                30
+              ],
+              [
+                50,
+                70
+              ]
+            ],
+            [
+              [
+                36,
+                50
+              ],
+              [
+                64,
+                50
+              ]
+            ]
+          ],
+          "extra": [
+            [
+              [
+                43,
+                30
+              ],
+              [
+                43,
+                70
+              ]
+            ],
+            [
+              [
+                57,
+                30
+              ],
+              [
+                57,
+                70
+              ]
+            ],
+            [
+              [
+                36,
+                40
+              ],
+              [
+                64,
+                40
+              ]
+            ],
+            [
+              [
+                36,
+                60
+              ],
+              [
+                64,
+                60
+              ]
+            ]
+          ],
+          "audio": "library/tts-hanzi/han-7530.mp3",
+          "slot": 72,
+          "readFrame": 96
+        },
+        {
+          "c": "心",
+          "py": "xīn",
+          "vi": "tim",
+          "pic": [
+            [
+              [
+                50,
+                66
+              ],
+              [
+                34,
+                50
+              ],
+              [
+                36,
+                37
+              ],
+              [
+                46,
+                37
+              ],
+              [
+                50,
+                46
+              ],
+              [
+                54,
+                37
+              ],
+              [
+                64,
+                37
+              ],
+              [
+                66,
+                50
+              ],
+              [
+                50,
+                66
+              ]
+            ]
+          ],
+          "chr": [
+            [
+              [
+                32,
+                47
+              ],
+              [
+                35,
+                61
+              ],
+              [
+                47,
+                67
+              ],
+              [
+                59,
+                63
+              ],
+              [
+                66,
+                52
+              ],
+              [
+                61,
+                46
+              ],
+              [
+                52,
+                51
+              ],
+              [
+                45,
+                45
+              ],
+              [
+                40,
+                49
+              ]
+            ]
+          ],
+          "audio": "library/tts-hanzi/han-5fc3.mp3",
+          "slot": 108,
+          "readFrame": 132
+        }
+      ]
+    },
+    {
+      "id": "outro",
+      "durationMs": 3424,
+      "card": {
+        "kind": "outro",
+        "lines": [
+          "Bạn nhớ được mấy chữ?",
+          "👇 Bình luận nhé!"
+        ],
+        "audio": "videos/2026/07/19/hsk-mem-01/audio/outro.mp3"
+      }
     }
   ]
 }

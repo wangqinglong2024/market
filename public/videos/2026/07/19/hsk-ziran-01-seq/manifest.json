@@ -5,27 +5,27 @@
     "height": 1920,
     "layout": "hsk-ziyuan",
     "grid": {
-      "mode": "parallel",
+      "mode": "sequential",
       "x0": 60,
       "y0": 240,
       "cellW": 480,
       "cellH": 720,
       "box": 340,
-      "groupFrames": 144,
-      "charSlot": null,
-      "readFrames": 36,
-      "readAt": null,
+      "groupFrames": 240,
+      "charSlot": 60,
+      "readFrames": null,
+      "readAt": 40,
       "draw": [
         2,
-        20
+        14
       ],
       "morph": [
-        20,
-        108
+        14,
+        42
       ],
       "real": [
-        114,
-        140
+        44,
+        56
       ]
     },
     "colors": {
@@ -71,7 +71,7 @@
   "beats": [
     {
       "id": "g1",
-      "durationMs": 4800,
+      "durationMs": 8000,
       "chars": [
         {
           "c": "山",
@@ -187,7 +187,7 @@
           ],
           "audio": "library/tts-hanzi/han-5c71.mp3",
           "slot": 0,
-          "readFrame": 0
+          "readFrame": 40
         },
         {
           "c": "木",
@@ -278,8 +278,8 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-6728.mp3",
-          "slot": 0,
-          "readFrame": 36
+          "slot": 60,
+          "readFrame": 100
         },
         {
           "c": "日",
@@ -386,8 +386,8 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-65e5.mp3",
-          "slot": 0,
-          "readFrame": 72
+          "slot": 120,
+          "readFrame": 160
         },
         {
           "c": "月",
@@ -486,14 +486,14 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-6708.mp3",
-          "slot": 0,
-          "readFrame": 108
+          "slot": 180,
+          "readFrame": 220
         }
       ]
     },
     {
       "id": "g2",
-      "durationMs": 4800,
+      "durationMs": 8000,
       "chars": [
         {
           "c": "水",
@@ -601,7 +601,7 @@
           ],
           "audio": "library/tts-hanzi/han-6c34.mp3",
           "slot": 0,
-          "readFrame": 0
+          "readFrame": 40
         },
         {
           "c": "火",
@@ -692,8 +692,8 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-706b.mp3",
-          "slot": 0,
-          "readFrame": 36
+          "slot": 60,
+          "readFrame": 100
         },
         {
           "c": "雨",
@@ -824,8 +824,8 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-96e8.mp3",
-          "slot": 0,
-          "readFrame": 72
+          "slot": 120,
+          "readFrame": 160
         },
         {
           "c": "目",
@@ -952,8 +952,8 @@
             ]
           ],
           "audio": "library/tts-hanzi/han-76ee.mp3",
-          "slot": 0,
-          "readFrame": 108
+          "slot": 180,
+          "readFrame": 220
         }
       ]
     }

@@ -7,10 +7,12 @@
   "meta": { "fps": 30, "width": 1080, "height": 1920 },
 
   "grid": {
-    "_comment": "版面(1格=120px):上下留白各2格(y0=240,内容高1440)、左右各0.5格(x0=60,内容宽960);2×2共4格,每格480×720,一字一格。田字格边长340居中,汉字垂直居中格内。★节奏(用户 2026-07-19 调):每字朗读1.2秒=36帧,一组4字=144帧=4.8秒;默认2组=8字=9.6秒(更短→完播更高)。时序(帧@30fps,相对组):draw具象简笔[2,20]→几何演变成线条字[20,108]→(朗读独立)→末秒真实毛笔字[114,140];组间淡入淡出。",
+    "_comment": "版面(1格=120px):上下留白各2格(y0=240,内容高1440)、左右各0.5格(x0=60,内容宽960);2×2共4格,每格480×720,一字一格,田字格边长340居中,汉字垂直居中格内。★两种模式(视频 script.json 用 mode 选,缺省用此 mode):①parallel=4字同时演变(一组4.8s,2组9.6s,朗读独立逐字);②sequential=逐个来,每字独占2秒走完 具象→线条字→真实毛笔字+朗读,4格从头都在、字逐格填入保留(一组8s,2组16s)。draw/morph/real=slot内时序(parallel相对组、sequential相对该字起点)。",
+    "mode": "parallel",
     "x0": 60, "y0": 240, "cellW": 480, "cellH": 720, "box": 340,
-    "readFrames": 36, "groupFrames": 144,
-    "draw": [2, 20], "morph": [20, 108], "real": [114, 140]
+    "parallel":   { "groupFrames": 144, "readFrames": 36, "draw": [2, 20], "morph": [20, 108], "real": [114, 140] },
+    "sequential": { "charSlot": 60, "drawF": [0.03, 0.23], "morphF": [0.23, 0.70], "realF": [0.73, 0.93], "readAtF": 0.68,
+      "_seqNote": "逐个模式:每字独占 charSlot 帧(默认60=2秒),视频 script.json 可用 charSlot 覆盖调速(如36=1.2秒)。slot内时序按比例(drawF/morphF/realF/readAtF × charSlot)算,任意速度自适应。groupFrames=4×charSlot。" }
   },
 
   "colors": {
@@ -25,7 +27,10 @@
   "audio": {
     "_comment": "★单字朗读音色:爽快思思(火山TTS,用户 2026-07-19 指定,利落适配1秒/字节奏)。速度1.2使单字≈1秒内读完。发音复用库 public/library/tts-hanzi/<字>.mp3,hash缓存跨视频复用。改音色须用户批准。",
     "voice": "zh_female_shuangkuaisisi_uranus_bigtts",
-    "speed": 1.2
+    "speed": 1.2,
+    "viVoice": "vi_female_ruan_uranus_bigtts",
+    "viSpeed": 1.05,
+    "_viNote": "开头/结尾文字卡的越南语配音音色(火山TTS·凰谋同款越南语旁白)。script.intro/outro 的 say 字段=要朗读的越南语句子(无表情符号)。"
   },
 
   "budget": { "_comment": "★纯代码渲染,不出AI图/视频,单条制作成本≈0(仅TTS)。", "maxUsdPerEpisode": 0.2 },

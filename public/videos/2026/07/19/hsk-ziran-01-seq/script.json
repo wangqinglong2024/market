@@ -1,0 +1,8 @@
+{
+  "_comment": "HSK字源九宫格·第1集 自然万物【逐个模式 sequential·16秒】。与 hsk-ziran-01(并行模式)同8字,仅 mode 不同,演示两种模式。",
+  "mode": "sequential",
+  "groups": [
+    [ { "c": "山", "vi": "núi" }, { "c": "木", "vi": "cây" }, { "c": "日", "vi": "mặt trời" }, { "c": "月", "vi": "trăng" } ],
+    [ { "c": "水", "vi": "nước" }, { "c": "火", "vi": "lửa" }, { "c": "雨", "vi": "mưa" }, { "c": "目", "vi": "mắt" } ]
+  ]
+}

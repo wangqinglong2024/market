@@ -1,0 +1,20 @@
+{
+  "_comment": "HSK字源九宫格·记忆测试版(12字·逐个1.2秒·开头挑战卡+结尾催评论卡,均带越南语配音)。mode=sequential,charSlot=36(1.2秒/字)。卡时长自动撑到读完配音。",
+  "mode": "sequential",
+  "charSlot": 36,
+  "intro": {
+    "ms": 2000,
+    "lines": ["Nhớ 6/12 chữ = TRÍ NHỚ SIÊU PHÀM 🧠", "Bạn nhớ được mấy? Thử ngay! 👀"],
+    "say": "Nhớ sáu trên mười hai chữ là siêu trí nhớ! Thử ngay nào!"
+  },
+  "outro": {
+    "ms": 1600,
+    "lines": ["Bạn nhớ được mấy chữ?", "👇 Bình luận nhé!"],
+    "say": "Bạn nhớ được mấy chữ? Bình luận cho mình biết nhé!"
+  },
+  "groups": [
+    [ { "c": "山", "vi": "núi" }, { "c": "木", "vi": "cây" }, { "c": "日", "vi": "mặt trời" }, { "c": "月", "vi": "trăng" } ],
+    [ { "c": "水", "vi": "nước" }, { "c": "火", "vi": "lửa" }, { "c": "雨", "vi": "mưa" }, { "c": "目", "vi": "mắt" } ],
+    [ { "c": "人", "vi": "người" }, { "c": "口", "vi": "miệng" }, { "c": "田", "vi": "ruộng" }, { "c": "心", "vi": "tim" } ]
+  ]
+}
