@@ -1,0 +1,857 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1440,
+    "layout": "chuanyue-drama",
+    "motionPresets": {
+      "push-in": {
+        "scale": [
+          1.02,
+          1.12
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 8,
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pull-back": {
+        "scale": [
+          1.14,
+          1.02
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 5,
+        "ease": "inOut"
+      },
+      "pan-left": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          40,
+          -40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "pan-right": {
+        "scale": [
+          1.08,
+          1.1
+        ],
+        "panX": [
+          -40,
+          40
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftY": 6,
+        "ease": "inOut"
+      },
+      "climb-up": {
+        "scale": [
+          1.06,
+          1.14
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          40,
+          -44
+        ],
+        "driftX": 6,
+        "ease": "inOut"
+      },
+      "ken-burns": {
+        "scale": [
+          1.05,
+          1.13
+        ],
+        "panX": [
+          24,
+          -28
+        ],
+        "panY": [
+          14,
+          -18
+        ],
+        "driftX": 10,
+        "driftY": 8,
+        "ease": "inOut"
+      },
+      "sway": {
+        "scale": [
+          1.06,
+          1.06
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 16,
+        "driftY": 10,
+        "ease": "linear"
+      },
+      "pop": {
+        "scale": [
+          1.18,
+          1.04
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 6,
+        "driftY": 4,
+        "rotate": [
+          -1.5,
+          0
+        ],
+        "ease": "inOut"
+      },
+      "still": {
+        "scale": [
+          1.03,
+          1.03
+        ],
+        "panX": [
+          0,
+          0
+        ],
+        "panY": [
+          0,
+          0
+        ],
+        "driftX": 5,
+        "driftY": 4,
+        "ease": "linear"
+      }
+    },
+    "source": {
+      "region": {
+        "top": 120,
+        "height": 720
+      },
+      "focusY": 0.5
+    },
+    "subtitle": {
+      "top": 960,
+      "height": 360
+    },
+    "fonts": {
+      "_comment": "中文用Ma Shan Zheng(毛笔行楷),SimHei兜底;拼音+越南语用Itim(手写收敛),Nunito兜底。换字体只改这里。",
+      "files": [
+        {
+          "family": "Ma Shan Zheng",
+          "file": "library/fonts/MaShanZheng.ttf"
+        },
+        {
+          "family": "Itim",
+          "file": "library/fonts/Itim.ttf"
+        },
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "200 900"
+        },
+        {
+          "family": "SimHei",
+          "file": "library/fonts/SimHei.ttf"
+        }
+      ],
+      "zhStack": [
+        "Ma Shan Zheng",
+        "SimHei",
+        "PingFang SC",
+        "serif"
+      ],
+      "zhWeight": 400,
+      "latinStack": [
+        "Itim",
+        "Nunito",
+        "PingFang SC",
+        "sans-serif"
+      ]
+    },
+    "captions": {
+      "bgColor": "#000000",
+      "pinyinColor": "#7fd1c0",
+      "zhColor": "#ffffff",
+      "viColor": "#f5c518",
+      "localColor": "#f5c518",
+      "karaokeColor": "#25f4ee",
+      "dimColor": "#565b63",
+      "sizes": {
+        "pinyin": 52,
+        "zh": 72,
+        "vi": 58,
+        "local": 58
+      },
+      "gapPinyinZh": 8,
+      "gapZhLocal": 24,
+      "sidePad": 130,
+      "pinyinColumnGap": 10,
+      "opticalLift": 0
+    },
+    "badge": {
+      "textVi": "Xem phim ngắn · Học tiếng Trung",
+      "textZh": "看短剧 · 学中文",
+      "pairs": [
+        {
+          "zh": "看",
+          "vi": "Xem"
+        },
+        {
+          "zh": "短",
+          "vi": "phim"
+        },
+        {
+          "zh": "剧",
+          "vi": "ngắn"
+        },
+        {
+          "sep": "·"
+        },
+        {
+          "zh": "学",
+          "vi": "Học"
+        },
+        {
+          "zh": "中",
+          "vi": "tiếng"
+        },
+        {
+          "zh": "文",
+          "vi": "Trung"
+        }
+      ],
+      "durationMs": 3000
+    }
+  },
+  "beats": [
+    {
+      "id": "b01",
+      "sceneId": "s1-wrist",
+      "image": "videos/2026/07/19/huangmou-e002-12s/images/s1-wrist.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/19/huangmou-e002-12s/clips/b01.mp4",
+      "audio": "videos/2026/07/19/huangmou-e002-12s/audio/b01.mp3",
+      "durationMs": 2288,
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "你",
+          "startMs": 0,
+          "endMs": 394
+        },
+        {
+          "ch": "究",
+          "startMs": 394,
+          "endMs": 787
+        },
+        {
+          "ch": "竟",
+          "startMs": 787,
+          "endMs": 1181
+        },
+        {
+          "ch": "是",
+          "startMs": 1181,
+          "endMs": 1574
+        },
+        {
+          "ch": "谁",
+          "startMs": 1574,
+          "endMs": 1968
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Cô,",
+          "startMs": 0,
+          "endMs": 394
+        },
+        {
+          "w": "rốt",
+          "startMs": 394,
+          "endMs": 787
+        },
+        {
+          "w": "cuộc",
+          "startMs": 787,
+          "endMs": 1181
+        },
+        {
+          "w": "là",
+          "startMs": 1181,
+          "endMs": 1574
+        },
+        {
+          "w": "ai",
+          "startMs": 1574,
+          "endMs": 1968
+        }
+      ],
+      "captions": {
+        "pinyin": "nǐ , jiū jìng shì shuí",
+        "zh": "你，究竟是谁",
+        "local": "Cô, rốt cuộc là ai"
+      }
+    },
+    {
+      "id": "b02",
+      "sceneId": "s2-rise",
+      "image": "videos/2026/07/19/huangmou-e002-12s/images/s2-rise.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/19/huangmou-e002-12s/clips/b02.mp4",
+      "audio": "videos/2026/07/19/huangmou-e002-12s/audio/b02.mp3",
+      "durationMs": 2432,
+      "motion": "push-in",
+      "narration": true,
+      "charTimings": [
+        {
+          "ch": "那",
+          "startMs": 0,
+          "endMs": 211
+        },
+        {
+          "ch": "个",
+          "startMs": 211,
+          "endMs": 422
+        },
+        {
+          "ch": "病",
+          "startMs": 422,
+          "endMs": 634
+        },
+        {
+          "ch": "秧",
+          "startMs": 634,
+          "endMs": 845
+        },
+        {
+          "ch": "子",
+          "startMs": 845,
+          "endMs": 1056
+        },
+        {
+          "ch": "忽",
+          "startMs": 1056,
+          "endMs": 1267
+        },
+        {
+          "ch": "然",
+          "startMs": 1267,
+          "endMs": 1478
+        },
+        {
+          "ch": "不",
+          "startMs": 1478,
+          "endMs": 1690
+        },
+        {
+          "ch": "装",
+          "startMs": 1690,
+          "endMs": 1901
+        },
+        {
+          "ch": "了",
+          "startMs": 1901,
+          "endMs": 2112
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Kẻ",
+          "startMs": 0,
+          "endMs": 264
+        },
+        {
+          "w": "ốm",
+          "startMs": 264,
+          "endMs": 528
+        },
+        {
+          "w": "yếu",
+          "startMs": 528,
+          "endMs": 792
+        },
+        {
+          "w": "ấy,",
+          "startMs": 792,
+          "endMs": 1056
+        },
+        {
+          "w": "bỗng",
+          "startMs": 1056,
+          "endMs": 1320
+        },
+        {
+          "w": "thôi",
+          "startMs": 1320,
+          "endMs": 1584
+        },
+        {
+          "w": "giả",
+          "startMs": 1584,
+          "endMs": 1848
+        },
+        {
+          "w": "vờ",
+          "startMs": 1848,
+          "endMs": 2112
+        }
+      ],
+      "captions": {
+        "pinyin": "nà ge bìng yāng zi , hū rán bù zhuāng le",
+        "zh": "那个病秧子，忽然不装了",
+        "local": "Kẻ ốm yếu ấy, bỗng thôi giả vờ"
+      }
+    },
+    {
+      "id": "b03",
+      "sceneId": "s3-lean",
+      "image": "videos/2026/07/19/huangmou-e002-12s/images/s3-lean.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/19/huangmou-e002-12s/clips/b03.mp4",
+      "audio": "videos/2026/07/19/huangmou-e002-12s/audio/b03.mp3",
+      "durationMs": 2768,
+      "motion": "push-in",
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "留",
+          "startMs": 0,
+          "endMs": 223
+        },
+        {
+          "ch": "你",
+          "startMs": 223,
+          "endMs": 445
+        },
+        {
+          "ch": "一",
+          "startMs": 445,
+          "endMs": 668
+        },
+        {
+          "ch": "命",
+          "startMs": 668,
+          "endMs": 890
+        },
+        {
+          "ch": "替",
+          "startMs": 890,
+          "endMs": 1113
+        },
+        {
+          "ch": "本",
+          "startMs": 1113,
+          "endMs": 1335
+        },
+        {
+          "ch": "王",
+          "startMs": 1335,
+          "endMs": 1558
+        },
+        {
+          "ch": "做",
+          "startMs": 1558,
+          "endMs": 1780
+        },
+        {
+          "ch": "一",
+          "startMs": 1780,
+          "endMs": 2003
+        },
+        {
+          "ch": "件",
+          "startMs": 2003,
+          "endMs": 2225
+        },
+        {
+          "ch": "事",
+          "startMs": 2225,
+          "endMs": 2448
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Tha",
+          "startMs": 0,
+          "endMs": 245
+        },
+        {
+          "w": "cô",
+          "startMs": 245,
+          "endMs": 490
+        },
+        {
+          "w": "một",
+          "startMs": 490,
+          "endMs": 734
+        },
+        {
+          "w": "mạng,",
+          "startMs": 734,
+          "endMs": 979
+        },
+        {
+          "w": "làm",
+          "startMs": 979,
+          "endMs": 1224
+        },
+        {
+          "w": "cho",
+          "startMs": 1224,
+          "endMs": 1469
+        },
+        {
+          "w": "bổn",
+          "startMs": 1469,
+          "endMs": 1714
+        },
+        {
+          "w": "vương",
+          "startMs": 1714,
+          "endMs": 1958
+        },
+        {
+          "w": "một",
+          "startMs": 1958,
+          "endMs": 2203
+        },
+        {
+          "w": "việc",
+          "startMs": 2203,
+          "endMs": 2448
+        }
+      ],
+      "captions": {
+        "pinyin": "liú nǐ yí mìng , tì běn wáng zuò yí jiàn shì",
+        "zh": "留你一命，替本王做一件事",
+        "local": "Tha cô một mạng, làm cho bổn vương một việc"
+      }
+    },
+    {
+      "id": "b04",
+      "sceneId": "s4-zhaohua",
+      "image": "videos/2026/07/19/huangmou-e002-12s/images/s4-zhaohua.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/19/huangmou-e002-12s/clips/b04.mp4",
+      "audio": "videos/2026/07/19/huangmou-e002-12s/audio/b04.mp3",
+      "durationMs": 2624,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "先",
+          "startMs": 0,
+          "endMs": 288
+        },
+        {
+          "ch": "活",
+          "startMs": 288,
+          "endMs": 576
+        },
+        {
+          "ch": "下",
+          "startMs": 576,
+          "endMs": 864
+        },
+        {
+          "ch": "去",
+          "startMs": 864,
+          "endMs": 1152
+        },
+        {
+          "ch": "再",
+          "startMs": 1152,
+          "endMs": 1440
+        },
+        {
+          "ch": "谈",
+          "startMs": 1440,
+          "endMs": 1728
+        },
+        {
+          "ch": "别",
+          "startMs": 1728,
+          "endMs": 2016
+        },
+        {
+          "ch": "的",
+          "startMs": 2016,
+          "endMs": 2304
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Sống",
+          "startMs": 0,
+          "endMs": 461
+        },
+        {
+          "w": "đã,",
+          "startMs": 461,
+          "endMs": 922
+        },
+        {
+          "w": "rồi",
+          "startMs": 922,
+          "endMs": 1382
+        },
+        {
+          "w": "tính",
+          "startMs": 1382,
+          "endMs": 1843
+        },
+        {
+          "w": "tiếp",
+          "startMs": 1843,
+          "endMs": 2304
+        }
+      ],
+      "captions": {
+        "pinyin": "xiān huó xià qù , zài tán bié de",
+        "zh": "先活下去，再谈别的",
+        "local": "Sống đã, rồi tính tiếp"
+      }
+    },
+    {
+      "id": "b05",
+      "sceneId": "s5-dawn",
+      "image": "videos/2026/07/19/huangmou-e002-12s/images/s5-dawn.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/19/huangmou-e002-12s/clips/b05.mp4",
+      "audio": "videos/2026/07/19/huangmou-e002-12s/audio/b05.mp3",
+      "durationMs": 2096,
+      "motion": "pan-left",
+      "narration": true,
+      "transitionIn": "fade",
+      "charTimings": [
+        {
+          "ch": "天",
+          "startMs": 0,
+          "endMs": 222
+        },
+        {
+          "ch": "没",
+          "startMs": 222,
+          "endMs": 444
+        },
+        {
+          "ch": "亮",
+          "startMs": 444,
+          "endMs": 666
+        },
+        {
+          "ch": "王",
+          "startMs": 666,
+          "endMs": 888
+        },
+        {
+          "ch": "府",
+          "startMs": 888,
+          "endMs": 1110
+        },
+        {
+          "ch": "就",
+          "startMs": 1110,
+          "endMs": 1332
+        },
+        {
+          "ch": "乱",
+          "startMs": 1332,
+          "endMs": 1554
+        },
+        {
+          "ch": "了",
+          "startMs": 1554,
+          "endMs": 1776
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Trời",
+          "startMs": 0,
+          "endMs": 254
+        },
+        {
+          "w": "chưa",
+          "startMs": 254,
+          "endMs": 507
+        },
+        {
+          "w": "sáng,",
+          "startMs": 507,
+          "endMs": 761
+        },
+        {
+          "w": "vương",
+          "startMs": 761,
+          "endMs": 1015
+        },
+        {
+          "w": "phủ",
+          "startMs": 1015,
+          "endMs": 1269
+        },
+        {
+          "w": "đã",
+          "startMs": 1269,
+          "endMs": 1522
+        },
+        {
+          "w": "loạn",
+          "startMs": 1522,
+          "endMs": 1776
+        }
+      ],
+      "captions": {
+        "pinyin": "tiān méi liàng , wáng fǔ jiù luàn le",
+        "zh": "天没亮，王府就乱了",
+        "local": "Trời chưa sáng, vương phủ đã loạn"
+      }
+    },
+    {
+      "id": "b06",
+      "sceneId": "s6-corpse",
+      "image": "videos/2026/07/19/huangmou-e002-12s/images/s6-corpse.png",
+      "type": "video",
+      "videoSrc": "videos/2026/07/19/huangmou-e002-12s/clips/b06.mp4",
+      "audio": "videos/2026/07/19/huangmou-e002-12s/audio/b06.mp3",
+      "durationMs": 3776,
+      "motion": "push-in",
+      "inner": true,
+      "charTimings": [
+        {
+          "ch": "落",
+          "startMs": 0,
+          "endMs": 384
+        },
+        {
+          "ch": "水",
+          "startMs": 384,
+          "endMs": 768
+        },
+        {
+          "ch": "不",
+          "startMs": 768,
+          "endMs": 1152
+        },
+        {
+          "ch": "是",
+          "startMs": 1152,
+          "endMs": 1536
+        },
+        {
+          "ch": "有",
+          "startMs": 1536,
+          "endMs": 1920
+        },
+        {
+          "ch": "人",
+          "startMs": 1920,
+          "endMs": 2304
+        },
+        {
+          "ch": "杀",
+          "startMs": 2304,
+          "endMs": 2688
+        },
+        {
+          "ch": "了",
+          "startMs": 2688,
+          "endMs": 3072
+        },
+        {
+          "ch": "她",
+          "startMs": 3072,
+          "endMs": 3456
+        }
+      ],
+      "viWordTimings": [
+        {
+          "w": "Chết",
+          "startMs": 0,
+          "endMs": 432
+        },
+        {
+          "w": "đuối?",
+          "startMs": 432,
+          "endMs": 864
+        },
+        {
+          "w": "Không,",
+          "startMs": 864,
+          "endMs": 1296
+        },
+        {
+          "w": "có",
+          "startMs": 1296,
+          "endMs": 1728
+        },
+        {
+          "w": "kẻ",
+          "startMs": 1728,
+          "endMs": 2160
+        },
+        {
+          "w": "đã",
+          "startMs": 2160,
+          "endMs": 2592
+        },
+        {
+          "w": "giết",
+          "startMs": 2592,
+          "endMs": 3024
+        },
+        {
+          "w": "nàng",
+          "startMs": 3024,
+          "endMs": 3456
+        }
+      ],
+      "captions": {
+        "pinyin": "luò shuǐ ? bù , shì yǒu rén shā le tā",
+        "zh": "落水？不，是有人杀了她",
+        "local": "Chết đuối? Không, có kẻ đã giết nàng"
+      }
+    }
+  ]
+}

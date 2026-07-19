@@ -1,0 +1,53 @@
+{
+  "videoId": "huangmou-e002-12s",
+  "lang": "vi",
+  "_comment": "《凰谋》E02 装病的王爷 —— 全可灵中越·12秒版(主模板 huangmou-12s)。6拍全 type:video(kling I2V,关原声),每拍都是开场级视觉冲击,无图文软拍。把30s版9拍浓缩为6拍:砍搪塞/试探/假意顺从,台词压到一句一信息。层层抛新悬念+b04女主人设爆点。★语速本片加快:中文对白/内心 speed=1.2、越南语旁白 viSpeed=1.15(script.speed/viSpeed 本片覆盖,不动模板全局1.0)。★badge:前3秒顶部留白处弹出越南语『看短剧学中文』对话框特效,仅3s。关键帧全 nano-banana-pro/edit 喂定妆图,零多人nano-pro(抓腕拍只出昭华正脸,裴珩仅手入镜)。预算~$2.41<$3。",
+  "speed": 1.2,
+  "viSpeed": 1.2,
+  "badge": {
+    "_comment": "前3秒顶部留白区弹出的引导标,对话框气泡。pairs=逐字对照:每个汉字对齐其越南语词、列间距拉大(用户 2026-07-19);sep=分隔点。有 pairs 时渲染成一排对照列,否则回落 textVi/textZh 两行。",
+    "textVi": "Xem phim ngắn · Học tiếng Trung",
+    "textZh": "看短剧 · 学中文",
+    "pairs": [
+      { "zh": "看", "vi": "Xem" },
+      { "zh": "短", "vi": "phim" },
+      { "zh": "剧", "vi": "ngắn" },
+      { "sep": "·" },
+      { "zh": "学", "vi": "Học" },
+      { "zh": "中", "vi": "tiếng" },
+      { "zh": "文", "vi": "Trung" }
+    ],
+    "durationMs": 3000
+  },
+  "beats": [
+    { "id": "b01", "sceneId": "s1-wrist", "type": "video", "voice": "peiheng", "hasMainCharacter": true, "characters": ["zhaohua"], "motion": "push-in", "transitionIn": "fade",
+      "shots": [{ "content": "Extreme close-up in a dark, dim red-candlelit bridal chamber: a pale, strong male hand shoots out from the shadow of the red wedding sickbed and clamps hard around the slender bare wrist of a stunningly beautiful young bride who has changed out of her heavy wedding robes into a thin, sheer pale cream-gold silk sleeping gauze robe that slips off one bare shoulder, hair loosened; she jolts and her eyes snap wide open in raw shock; ONLY her startled face is clearly visible, the man's face stays in deep shadow out of frame; tall red dragon-and-phoenix wedding candles flare bright around them.", "refVariant": "legs" }],
+      "video": { "motion": "The pale hand suddenly clamps hard around her wrist; she jolts upright and her eyes snap wide open in shock and alarm; the candle flames flare and brighten sharply; her breath catches. Quick tense push-in on her face.", "camera": "fast push-in", "durationSec": 3 },
+      "captions": { "zh": "你，究竟是谁", "pinyin": "nǐ , jiū jìng shì shuí", "local": "Cô, rốt cuộc là ai" } },
+
+    { "id": "b02", "sceneId": "s2-rise", "type": "video", "voice": "narrator", "hasMainCharacter": true, "characters": ["peiheng"], "motion": "push-in",
+      "shots": [{ "content": "In the dim red-candlelit bridal chamber, the young man who had been lying as a dying groom now pushes himself upright on the red wedding bed; his sickly pallor and frail air are utterly gone, replaced by a cold, sharp, commanding presence; he wears a deep wine-crimson silk sickbed robe with subtle gold trim (clearly NOT black), long black hair loose over his shoulders; his sharp cold eyes fix forward; his is the ONLY face in frame, imposing and fully alert.", "refVariant": "default" }],
+      "video": { "motion": "The man props himself up and rises to sit upright; his sickly weakness sloughs away into a cold, sharp, commanding stare; his robe and loose hair settle with the motion; the candlelight steadies and brightens. Slow imposing push-in.", "camera": "push-in", "durationSec": 3 },
+      "captions": { "zh": "那个病秧子，忽然不装了", "pinyin": "nà ge bìng yāng zi , hū rán bù zhuāng le", "local": "Kẻ ốm yếu ấy, bỗng thôi giả vờ" } },
+
+    { "id": "b03", "sceneId": "s3-lean", "type": "video", "voice": "peiheng", "hasMainCharacter": true, "characters": ["peiheng"], "motion": "push-in", "transitionIn": "fade",
+      "shots": [{ "content": "Tight medium close-up in the dim red-candlelit bridal chamber: the young man — now fully alert and commanding, all sickliness gone — looms in close toward the viewer's point of view, leaning down over the bride; he wears a deep wine-crimson silk robe with subtle gold trim (clearly NOT black), long black hair loose; the corner of his mouth curls into a cold, faint, predatory half-smile, his sharp eyes fixed forward with calm menace; warm candlelight rims his face; his is the ONLY face in frame, dominating and oppressive.", "refVariant": "default" }],
+      "video": { "motion": "The man leans in closer toward the viewer, the corner of his mouth curling into a cold faint smile as he speaks; his sharp eyes lock forward with predatory calm; candlelight flickers across his face. Slow oppressive push-in.", "camera": "push-in", "durationSec": 3 },
+      "captions": { "zh": "留你一命，替本王做一件事", "pinyin": "liú nǐ yí mìng , tì běn wáng zuò yí jiàn shì", "local": "Tha cô một mạng, làm cho bổn vương một việc" } },
+
+    { "id": "b04", "sceneId": "s4-zhaohua", "type": "video", "voice": "zhaohua", "inner": true, "hasMainCharacter": true, "characters": ["zhaohua"], "motion": "push-in",
+      "shots": [{ "content": "Close-up of the beautiful young bride's face and one bare shoulder in dim red candlelight; she wears a thin sheer pale cream-gold silk sleeping gauze robe slipping off her shoulder, hair loosened; her initial fear is visibly cooling into sharp, calculating resolve; her eyes narrow with cold, intelligent focus, jaw set; single face in frame.", "refVariant": "legs" }],
+      "video": { "motion": "Her fearful expression hardens; her eyes narrow into cold, sharp calculation; her gaze steadies with dangerous resolve; candlelight flickers on her face. Slow push-in on her eyes.", "camera": "push-in on her eyes", "durationSec": 3 },
+      "captions": { "zh": "先活下去，再谈别的", "pinyin": "xiān huó xià qù , zài tán bié de", "local": "Sống đã, rồi tính tiếp" } },
+
+    { "id": "b05", "sceneId": "s5-dawn", "type": "video", "voice": "narrator", "hasMainCharacter": false, "characters": [], "motion": "pan-left", "transitionIn": "fade",
+      "shots": [{ "content": "Pre-dawn courtyard of a grand imperial mansion in cold blue twilight; rows of red palace lanterns sway and tremble as if disturbed; thin mist drifts low over the empty grey stone courtyard; one lantern lies fallen and guttering on the ground; an ominous, unsettled hush just before alarm; environment only, absolutely no people." }],
+      "video": { "motion": "The red lanterns sway and swing as if disturbed by rushing movement; cold mist drifts across the empty courtyard; the fallen lantern's flame gutters and flickers; a chill wind stirs. Slow uneasy pan across the courtyard.", "camera": "slow pan left", "durationSec": 3 },
+      "captions": { "zh": "天没亮，王府就乱了", "pinyin": "tiān méi liàng , wáng fǔ jiù luàn le", "local": "Trời chưa sáng, vương phủ đã loạn" } },
+
+    { "id": "b06", "sceneId": "s6-corpse", "type": "video", "voice": "zhaohua", "inner": true, "hasMainCharacter": true, "characters": ["zhaohua"], "motion": "push-in",
+      "shots": [{ "content": "Cold misty dawn beside an old stone well in the mansion courtyard; a full-length wide view of the beautiful young bride standing, wearing a thin sheer pale cream-gold silk sleeping gauze robe with a high side slit that reveals one long slender bare leg, a light gauze shawl draped over her shoulders, barefoot, hair loosened; she watches with cold forensic sharpness, her eyes narrowing; over her shoulder in the blurred mid-ground, two servants seen from behind carry out the soaked, pale, lifeless body of a young maid on a wooden board, water dripping, the dead maid's face turned away; ONLY the bride's face is clearly visible among the living; cold blue dawn light, wisps of mist.", "refVariant": "legs" }],
+      "video": { "motion": "The bride's gaze sharpens and narrows coldly as she watches; behind her the servants carry the dripping corpse past; mist drifts through the cold air; her expression settles into grim, certain suspicion. Slow push-in on her cold eyes.", "camera": "slow push-in", "durationSec": 3 },
+      "captions": { "zh": "落水？不，是有人杀了她", "pinyin": "luò shuǐ ? bù , shì yǒu rén shā le tā", "local": "Chết đuối? Không, có kẻ đã giết nàng" } }
+  ]
+}

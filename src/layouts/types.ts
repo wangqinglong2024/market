@@ -108,7 +108,7 @@ export type Effect = {
 // 字级时间戳（火山 TTS with_timestamp，2026-07-07）：驱动中文逐字跳字
 export type CharTiming = { ch: string; startMs: number; endMs: number };
 
-// 越南语词级时间戳（chinese-drama，2026-07-15）：越南语音色无真时间戳，build 按拍时长均匀铺词，驱动越南语行逐词卡拉OK
+// 越南语词级时间戳（chuanyue-drama，2026-07-15）：越南语音色无真时间戳，build 按拍时长均匀铺词，驱动越南语行逐词卡拉OK
 export type ViWordTiming = { w: string; startMs: number; endMs: number };
 
 // 卡拉OK词单元（chinese-learn 版式，2026-07-12）：一个「词」= 一段汉字 + 拼音 + 绝对起止毫秒。
@@ -129,7 +129,7 @@ export type Beat = {
   imgScale?: number;
   charTimings?: CharTiming[];
   viWordTimings?: ViWordTiming[];
-  // 内心思考拍(chinese-drama,用户 2026-07-15):中文思考+说话音色,字幕加💭标记与开口对白区分
+  // 内心思考拍(chuanyue-drama,用户 2026-07-15):中文思考+说话音色,字幕加💭标记与开口对白区分
   inner?: boolean;
   captions: {
     pinyin: string;
@@ -166,6 +166,15 @@ export type Manifest = {
     captions?: CaptionCfg;
     bgm?: { src: string; volume?: number };
     fonts?: FontsMeta;
+    // 前 N 秒顶部留白处的「看短剧学中文」引导标(对话框气泡·spring 弹入,durationMs 后消失)。
+    // 有此字段即渲染(数据驱动),与版式无关；chuanyue-drama 由 script.badge 注入。
+    badge?: {
+      textVi: string;
+      textZh?: string;
+      // 逐字对照:每个汉字对齐其越南语词(列),{sep} 为分隔点列。有 pairs 时按列渲染。
+      pairs?: { zh?: string; vi?: string; sep?: string }[];
+      durationMs?: number;
+    };
     // chinese-learn 版式用（其它版式忽略）：上方原视频源 + 裁切区 + 下方字幕区
     source?: {
       video: string;                       // staticFile 相对路径（public/ 下）
@@ -173,22 +182,6 @@ export type Manifest = {
       focusY?: number;                     // 裁切纵向焦点 0(顶)~1(底)，默认 0.5
     };
     subtitle?: { top: number; height: number };
-    // chinese-drama-v2：全屏动态短剧的安全区与拼音/中文/越南文三行字幕。
-    dramaV2?: {
-      captions?: {
-        safeLeft?: number;
-        safeRight?: number;
-        safeTop?: number;
-        safeBottom?: number;
-        pinyinSize?: number;
-        zhSize?: number;
-        viSize?: number;
-        pinyinColor?: string;
-        zhColor?: string;
-        viColor?: string;
-        shadowColor?: string;
-      };
-    };
   };
   beats: Beat[];
 };

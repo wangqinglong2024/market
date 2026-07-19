@@ -57,28 +57,6 @@
       "beats": 5
     },
     {
-      "id": "jieshou-01",
-      "title": "正念翻牌·接收系#1 愿你今年收下这一切(越南受众)",
-      "template": "zhengnian-jieshou",
-      "shard": "2026/07/12",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-12",
-      "manifest": "public/videos/2026/07/12/jieshou-01/manifest.json",
-      "beats": 7
-    },
-    {
-      "id": "quzhu-01",
-      "title": "正念翻牌·驱逐系#1 这类人将远离你(越南受众)",
-      "template": "zhengnian-quzhu",
-      "shard": "2026/07/12",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-12",
-      "manifest": "public/videos/2026/07/12/quzhu-01/manifest.json",
-      "beats": 7
-    },
-    {
       "id": "beigong-sheying",
       "title": "杯弓蛇影 · 内耗是把脑补的幻象当成真相",
       "template": "guoxue-jinju",
@@ -134,162 +112,6 @@
       "manifest": "public/videos/2026/07/02/demo/manifest.json"
     },
     {
-      "id": "ahxiang-day1",
-      "title": "阿香上班第一天·辛苦了的误会(中文情景剧·图文,越南受众)",
-      "template": "chinese-drama",
-      "shard": "2026/07/14",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-14",
-      "manifest": "public/videos/2026/07/14/ahxiang-day1/manifest.json",
-      "beats": 11
-    },
-    {
-      "id": "linglan-ep01",
-      "title": "铃兰穿越记 E01 一睁眼成了中国新娘(越南受众·穿越豪门连续剧)",
-      "template": "chinese-drama",
-      "shard": "2026/07/15",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-15",
-      "manifest": "public/videos/2026/07/15/linglan-ep01/manifest.json",
-      "beats": 22
-    },
-    {
-      "id": "linglan-ep01-v2",
-      "title": "铃兰穿越记 E01 爆点版·开口就是死(new_story适配·07/16)",
-      "template": "chinese-drama",
-      "shard": "2026/07/16",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-16",
-      "manifest": "public/videos/2026/07/16/linglan-ep01-v2/manifest.json",
-      "beats": 21
-    },
-    {
-      "id": "linglan-ep02",
-      "title": "铃兰穿越记 E02 第一句保命中文：听不懂(越南受众·穿越豪门连续剧)",
-      "template": "chinese-drama",
-      "shard": "2026/07/15",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-15",
-      "beats": 21
-    },
-    {
-      "id": "linglan-ep03",
-      "title": "铃兰穿越记 E03 检查惊魂：她只听懂自己的名字(越南受众·穿越豪门连续剧)",
-      "template": "chinese-drama",
-      "shard": "2026/07/15",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-16",
-      "beats": 19
-    },
-    {
-      "id": "linglan-ep04",
-      "title": "铃兰穿越记 E04 天降保命符：失忆(越南受众·穿越豪门连续剧)",
-      "template": "chinese-drama",
-      "shard": "2026/07/15",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-16",
-      "beats": 19
-    },
-    {
-      "id": "linglan-ep05",
-      "title": "铃兰穿越记 E05 提笔死局：她装手抖打翻墨(越南受众·穿越豪门连续剧)",
-      "template": "chinese-drama",
-      "shard": "2026/07/15",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-16",
-      "beats": 19
-    },
-    {
-      "id": "linglan-ep06",
-      "title": "铃兰穿越记 E06 烧了一半的照片(越南受众·穿越豪门连续剧)",
-      "template": "chinese-drama",
-      "shard": "2026/07/15",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-16",
-      "manifest": "public/videos/2026/07/15/linglan-ep06/manifest.json",
-      "beats": 17
-    },
-    {
-      "id": "linglan-ep02-v2",
-      "title": "铃兰穿越记 E02 爆点版·第一句保命中文：听不懂(new_story适配·07/16)",
-      "template": "chinese-drama",
-      "shard": "2026/07/16",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-16",
-      "beats": 19
-    },
-    {
-      "id": "linglan-ep03-v2",
-      "title": "铃兰穿越记 E03 爆点版·生死判决当面宣读(new_story适配·07/16)",
-      "template": "chinese-drama",
-      "shard": "2026/07/16",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-16",
-      "beats": 22
-    },
-    {
-      "id": "linglan-ep01-v3",
-      "title": "铃兰穿越记 E01 识字眼版·字全认识话听不懂(v3设定·仅脚本待审)",
-      "template": "chinese-drama",
-      "shard": "2026/07/16",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-16"
-    },
-    {
-      "id": "linglan-ep02-v3",
-      "title": "铃兰穿越记 E02 识字眼版·今晚学不会一句中文(v3设定·仅脚本待审)",
-      "template": "chinese-drama",
-      "shard": "2026/07/16",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-16"
-    },
-    {
-      "id": "linglan-ep03-v3",
-      "title": "铃兰穿越记 E03 识字眼版·我的中文只有一个字(v3设定·仅脚本待审)",
-      "template": "chinese-drama",
-      "shard": "2026/07/16",
-      "lang": "vi",
-      "status": "obsolete",
-      "supersededBy": "poisoned-wedding-e01",
-      "createdAt": "2026-07-16"
-    },
-    {
-      "id": "poisoned-wedding-e01",
-      "title": "毒嫁 E01：大婚夜，我给仇人下了毒",
-      "template": "chinese-drama",
-      "shard": "2026/07/17",
-      "lang": "vi",
-      "status": "designed-awaiting-user-approval",
-      "createdAt": "2026-07-17",
-      "design": "public/videos/2026/07/17/poisoned-wedding-e01/episode.json",
-      "manifest": null,
-      "beats": 13
-    },
-    {
       "id": "huangmou-e001",
       "title": "凰谋 E01·洞房惊魂(现代法医穿越成冲喜罪女·越南受众·图文+动态混搭~35s)",
       "template": "chuanyue-drama",
@@ -324,6 +146,18 @@
       "design": "templates/chuanyue-drama/story/卷01-冲喜入府/第01章-洞房惊魂.md",
       "manifest": null,
       "beats": 12
+    },
+    {
+      "id": "huangmou-e002-12s",
+      "title": "凰谋 E02·装病的王爷【全可灵中越·12秒·6拍全动态·女主露腿寝袍·前3s看短剧学中文引导标】",
+      "template": "chuanyue-drama",
+      "shard": "2026/07/19",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-19",
+      "design": "templates/chuanyue-drama/story/卷01-冲喜入府/第01章-洞房惊魂.md",
+      "manifest": null,
+      "beats": 6
     }
   ]
 }

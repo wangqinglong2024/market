@@ -1,109 +1,59 @@
-# `chuanyue-drama`（《凰谋》）· 作者指南与生产流程
+# `chuanyue-drama`（《凰谋》· 12秒全可灵中越）· 作者指南与生产流程
 
-现代顶级女法医穿越成罪臣之女、被送进摄政王府"冲喜"的古装权谋爱情复仇连续剧。
-面向越南受众，竖屏 **~30–45s/集（短档，完播率优先，用户 2026-07-18 锁）**，默认**图文 + 动态视频（kling I2V）混搭**（全可灵版另见「生产模式」），前 3 秒必是动态钩子。
-旁白越南语、角色对白中文、字幕三行拼音/中文/越南语逐字卡拉OK。
+现代顶级女法医穿越成罪臣之女、被送进摄政王府"冲喜"的古装权谋爱情复仇连续剧。面向越南受众，竖屏 3:4。
+**本模板自包含（2026-07-19 由 chuanyue-drama 独立而来，不依赖任何其它模板）。★只有一个模式：12 秒全可灵中越。**
 
-## 唯一事实源（续写/生产只读这些）
-1. `story/总纲.md`（整体总述：世界观·主角·人设铁律·结构标准·1200集12卷脉络）
+## ★唯一模式：12s 全可灵中越（不带任何其它模式）
+- **6 拍全动态**：每拍 `type:"video"`（kling I2V，关原声）。build 会校验，出现图文软拍直接抛错。
+- **12 秒短档**：时长由每拍真实 TTS 总和（减转场重叠）自然得出，落 10–14s；每 3 秒都要有开场级视觉冲击（不是只有开头）。
+- **语言=中越**：旁白越南语（`narrator`/vi 音色，读 `captions.local`）；角色对白+女主内心中文（zh 音色，读 `captions.zh`，内心 `inner:true`→💭）。**对白永远中文**。
+- **语速加快**：中文 `speed=1.2`、越南语 `viSpeed=1.2`（template.json 默认；`script.speed`/`script.viSpeed` 可本片再覆盖）。
+- **前 3 秒引导标**：顶部留白处「看短剧学中文」对话框气泡（**越南语大字在上、中文小字在下、逐字对照**），由 `script.badge`（textVi/textZh/pairs/durationMs）注入。
+- **字幕安全区**：左右各留白 12%（`captions.sidePad=130`），避开平台点赞/分享按钮遮挡。
+
+> 混搭 / 30s / 中英 / 纯图文等模式**本模板一律不做**。要那些去别的模板。
+
+## 唯一事实源（续写/生产只读这些，全在本模板目录内）
+1. `story/总纲.md`（世界观·主角·人设铁律·结构标准·1200集12卷脉络）
 2. `story/卷NN-*/卷总述.md`（该卷 100 集总述）
-3. `story/卷NN-*/第MM章-*.md`（每章 10 集内容；卷1第1章 = E001–E010 已写满剧本）
-4. `characters/`（角色 canonical + 定妆图：端庄版/露腿版/现代版，全 nano-banana-pro，同脸锁定）
+3. `story/卷NN-*/第MM章-*.md`（每章 10 集内容）
+4. `characters/`（角色 canonical + 定妆图：端庄版 model-sheet / 露腿版 model-sheet-legs / 现代版 model-sheet-modern，全 nano-banana-pro，同脸锁定）
 5. `prompts/`（出图/出视频规范：全部 nano-banana-pro，已弃 flux）
-
-旧模板（chinese-drama / 毒嫁 / 灵兰）的角色、故事、图、prompt **一律不得反向污染**。
-
-## 生产模式 · 2×2 四模式矩阵（用户 2026-07-18 锁）
-两条正交轴：**视觉轴**(混搭 / 纯可灵) × **语言轴**(中越 / 中英)。用户下单会点名要哪个模式；没点名 = 默认 **混搭中越**。
-
-| 模式 | 文件夹后缀 | 视觉 | **旁白** | 对白 | 第三行字幕 & 封面第三语言 | 成本 |
-|---|---|---|---|---|---|---|
-| **混搭中越**(默认) | `<id>` | 图文+部分动态交替 | **越南语**(vi音色读 local) | 中文 | 越南语 | ~$2.5/集 |
-| **混搭中英** | `<id>-cn` | 图文+部分动态交替 | **中文·悬疑解说2.0** | 中文 | 英文 | 视觉首出~$2.5；语言重组 $0 |
-| **纯可灵中越** | `<id>-kling` | 12拍全 type:video | **越南语** | 中文 | 越南语 | ~$4.4/集 |
-| **纯可灵中英** | `<id>-kling-cn` | 12拍全 type:video | **中文·悬疑解说2.0** | 中文 | 英文 | 视觉出片后语言重组 $0 |
-
-- ★**命名铁律**：后缀 `-kling`=纯可灵(否则混搭)；`-cn`=中英(否则中越)。
-- ★**核心区别（用户强调）**：**中越 = 越南语旁白**；**中英 = 中文旁白(悬疑解说2.0)**。**角色对白永远中文**，两条轴都不动它。
-
-**视觉轴**（可能烧钱）：
-- 混搭 = 图文拍(静态关键帧)+部分动态拍交替；纯可灵 = 12 拍全 `type:"video"` 每拍关键帧→kling I2V。
-- 纯可灵做法：新建 `<id>-kling/`+catalog，脚本每拍加 `type:"video"`+`video{motion,camera,durationSec}`，沿用 sceneId/关键帧/音频，复用已有 clip，build 只补缺 clip（见 [[chuanyue-i2v-keyframe-required]]）。
-
-**语言轴**（★纯重组·零 fal·$0.00）：基于同视觉版重组，图/clip/关键帧全复用，只重合"变了的音频"(免费 TTS)。
-- 中越→中英 做法：新建 `<id>[-kling]-cn/`+catalog，派生脚本三件事：① 顶层 `"voices": { "narrator": "zh_male_xuanyijieshuo_uranus_bigtts" }`(旁白换中文悬疑解说2.0；`script.voices` 优先级最高只覆盖本片)；② `lang:"zh"`；③ 每拍 `captions.local` 越南语→英文。拷原版 图/clip/audio，build 只重合 narrator 那几拍(vi→zh)，其余音频命中缓存；`$0.00`。
-- ★封面也跟随：拷 `cover.json` 把 `tagVi`/`volume.vi`/`chapter.vi`/`episode.vi` 四处越南语→目标语言，`zh`/`py` 不动，重渲 `cover-drama`(免费不重出底图)。
-- ★`script.voices` 是通用抓手：任何换旁白音色/语言版本都靠它，不改 template.json 默认。
-
-**E01 现状**：混搭中越 `huangmou-e001` ✓、纯可灵中越 `huangmou-e001-kling` ✓、纯可灵中英 `huangmou-e001-kling-cn` ✓。**混搭中英 `huangmou-e001-cn` 规则已定、暂不出片**(用户 2026-07-18：先立规则，要时再说)。各版并存不互删。
 
 ## 生产链路（一集怎么长成成片）
 ```
-episodes/E***.md  →  script.json(Claude 设计,字段见 prompts/script-rules.md)
-  → build(ctx):  每拍 TTS(火山,旁白vi/角色zh) + 每场景关键帧(nano-banana-pro/edit,喂定妆图,3:2)
-                 + 动态拍(type:video)用关键帧走 kling I2V(★关原声,喂图裁16:9/收片裁回3:2) → manifest.json
-  → Remotion 渲染(layout=chuanyue-drama,上媒体区图/视频 + 下三行字幕) → <中文名>.mp4
-  + 海报封面(见下) → <中文名>-封面.png
+每章 md 选一集 → Claude 设计 script.json(6拍全动态,字段见 prompts/script-rules.md)
+  → build(ctx): 每拍 TTS(火山,旁白vi/角色zh) + 每场景关键帧(nano-banana-pro/edit,喂定妆图,3:2)
+                + 每拍 kling I2V(关原声,喂图裁16:9/收片裁回3:2) + 注入 badge → manifest.json
+  → Remotion 渲染(layout=chuanyue-drama) → <中文名>.mp4  + 海报封面(cover-drama) → <中文名>-封面.png
 ```
-命令：`node scripts/build.mjs <videoId>`（先在 catalog.json 建记录，template=chuanyue-drama）。
+命令：`node scripts/build.mjs <videoId>`（先在 catalog.json 建记录，`template: "chuanyue-drama"`）。
+**★花钱前先只出关键帧图片人工审：`KEYFRAMES_ONLY=1 node scripts/build.mjs <videoId>`（跳过 kling），审图通过后去掉该变量再跑（图缓存不重扣）。**
 
 ## 出图 / 出视频规范（★必读）
-- 全部见 `prompts/render-rules.md`（铁律）、`prompts/video.tpl.md`（★I2V 运动提示词）、
-  `prompts/image-*.tpl.md`、`prompts/portrait.tpl.md`、`prompts/script-rules.md`。
-- 记住三条：① 外观锁在关键帧、视频 prompt 只写运动；② `generate_audio=false` 关原声；
-  ③ 一图一正脸、全片≤1 次多人 nano-pro。
+- 全部见 `prompts/`：`render-rules.md`(铁律)、`video.tpl.md`(★I2V 运动提示词)、`image-*.tpl.md`、`script-rules.md`。
+- 三条铁律：① 外观锁在关键帧、视频 prompt 只写运动；② `generate_audio=false` 关原声；③ 一图一正脸、全片 ≤1 次多人 nano-pro（抓腕/同框优先单脸+另一人只入手/背影）。
+- 关键帧参考图：露腿场景喂 `model-sheet-legs.png`、现代闪回喂 `model-sheet-modern.png`、其余端庄 `model-sheet.png`（`shot.refVariant: "legs"|"modern"|"default"`）。
 
-## 成本铁律（单次 build 硬卡 $3，用户 2026-07-18 提高）
-- 预算表：kling 动态 秒数×$0.084 + 关键帧(nano-banana-pro/edit)×$0.15 + 海报封面(nano 3:4)×$0.15。
-- 单集参考：**混搭版 ~$2.5**、**全可灵版 ~$4.4**（★全可灵从零单次构建会撞 $3 硬卡→复用已有关键帧/clip 分次构建，见「生产模式」）。
-- build 内置预算硬卡：**单次运行**累计新花费超 `budget.maxUsdPerEpisode`（$3）立即抛错停止（缓存命中不计费）。
-- **fal 出问题（黑图/漂移/换脸/画错）禁止自动重试**，先报用户、同意后再调（`/base/04`）。
+## 成本铁律（单次 build 硬卡 $3）
+- 12s 全可灵参考：关键帧 6×$0.15=$0.90 + kling 6×3s=$1.51 + 海报 $0.15 ≈ **$2.56 ✅**。
+- build 内置预算硬卡：单次运行累计新花费超 `budget.maxUsdPerEpisode`（$3）立即抛错停（缓存命中不计费）。
+- **fal 出问题（黑图/漂移/换脸/画错）禁止自动重试**，先报用户、同意后再调；每个付费资产最多试 1 次。
 
 ## 双人工闸门（花钱前）
-1. 设计阶段（免费）：写故事、script.json、prompt、成本预检——本轮止于此，等用户审。
-2. 定妆阶段：出角色定妆图（nano-banana-pro 文生图），**逐张人工验脸**锁定后才继续。
-3. 生产阶段：用户明确批准后才出关键帧 + kling 动态 + 渲染成片。
-4. 每个付费资产**最多尝试一次**，失败重新向用户说明、经同意再调。
+1. 设计阶段（免费）：写 script.json、prompt、成本预检——止于此，等用户审。
+2. **关键帧阶段（新）：`KEYFRAMES_ONLY=1` 只出关键帧图片，人工看脸/服装/构图/景别，满意后才出 kling。**
+3. 生产阶段：用户批准后出 kling 动态 + 渲染成片。
 
-## 封面规则（★海报式·完整自足流程，用户 2026-07-18 锁；本节即唯一事实源，不要再翻旧版本）
-
-每集封面 = **一张海报式竖图**（不是抽视频帧）。三步：出海报底图 → 写 cover.json → 渲染。
-
-**① 出海报底图 `images/poster.png`（fal 付费，~$0.15，计入预算，一次不重试）**
-- 模型 `nano-banana-pro/edit`，**喂女主定妆图**（`characters/zhaohua/model-sheet.png`）保脸；`aspect_ratio="3:4"` 竖版。
-- 用 `scripts/gen-image.mjs` 的 `genImage({ outPath, prompt, refPaths:[女主定妆图], settings:{image:{aspectRatio:"3:4"}}, model:"nano-edit" })`。
-- prompt：**紧扣本集主题的关键视觉**，女主+核心道具/场景，电影级真人质感、暖烛光、浅景深；**绝不与正片某一帧重复**；露腿服从场景合理化。
-- ★铁律：prompt 里**绝不写任何文字/字幕/边框/留白**（文字全靠 cover.json 后期叠）；单张一正脸。
-
-**② 写 `cover.json`（放视频目录；下面是 E01 实拍值当范例，字段照抄）**
-```jsonc
-{
-  "image": "videos/<shard>/<id>/images/poster.png",
-  "focusY": 0.3,                                  // 底图纵向裁切锚点，让女主脸落在安全区
-  "tag": "凰谋",                                   // 系列名(中文)
-  "tagVi": "Vương Phi Pháp Y",                    // 系列名(越南语,底部小字)
-  "seal": "E01",                                  // 红印章集号
-  "volume":  { "zh": "卷一 · 冲喜入府", "vi": "Quyển 1 · Xung Hỷ Nhập Phủ" },  // 卷标题
-  "chapter": { "py": "dòng fáng jīng hún", "zh": "洞房惊魂", "vi": "Kinh hồn đêm tân hôn" }, // 章主题名(金色大字·三语;此为 E01 实拍值)
-  "episode": { "py": "...", "zh": "当集钩子(红条大字)", "vi": "..." }             // 当集钩子(底部红条·三语)
-}
-```
-
-**③ 渲染成图**
+## 封面规则（★海报式，与正片不重复）
+每集封面=一张海报式竖图。① 出底图 `images/poster.png`（`nano-banana-pro/edit` 喂女主定妆图，`aspect_ratio="3:4"`，本集主题关键视觉，露腿服从场景合理化，**prompt 绝不写任何文字/边框**）→ ② 写 `cover.json`（放视频目录，字段照抄 E02）→ ③ 渲染：
 ```
 node_modules/.bin/remotion still src/index.ts cover-drama "<dir>/<中文名>-封面.png" --props=<dir>/cover.json
 ```
-- ★组件=`src/CoverDrama.tsx`、composition id=**`cover-drama`**（就是上面 volume/chapter/episode/seal 这套 schema）。
-- **别用**简版 `cover`/`src/Cover.tsx`（那套只有 title/subtitle，不是本模板的封面）。
-- 版面层级：系列名+红印章E号 / 卷标题 / 章主题(三语·金字) / 当集钩子(三语·红条)。
 
-**产物**：`cover.json` + `images/poster.png` + `<中文名>-封面.png`，放该视频目录。
-**★两版视频(混搭 / 全可灵)共用同一封面**：底图/cover.json/封面PNG 拷一份到 `<id>-kling/` 即可，不重出。
-
-## 交付命名（全局规则 /base/02 五）
-- 文件夹用英文 id；成片 `<中文名>.mp4`、封面 `<中文名>-封面.png`（如「凰谋E01·洞房惊魂」）。
-- mp4 一律 gitignore，只本地生成/预览/交付。
+## 交付命名
+- 文件夹用英文 id；成片 `<中文名>.mp4`、封面 `<中文名>-封面.png`（如「凰谋E02·装病的王爷-全可灵12秒版」）。mp4 一律 gitignore，只本地生成/交付。
 
 ## 出片前逐句体检（免费必做）
 - 逐句听多音字读音，读错补 `ttsZh` 引导字段重合成该拍（只烧这一句）。
-- 过一遍 `/base/01` 自检清单：3 秒钩子、悬念后置、每 3 秒变化、回环、本地化三关。
+- 过一遍：3 秒钩子、每 3 秒变化、悬念后置、末尾追更钩、本地化三关。

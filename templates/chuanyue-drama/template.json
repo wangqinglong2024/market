@@ -1,29 +1,29 @@
 {
-  "_comment": "模板『凰谋·现代穿越古代竖屏短剧(越南受众·图文+动态视频混搭)』。生产:script.json→每拍配音(火山TTS,旁白vi/角色zh)+每场景关键帧(nano-banana-pro/edit喂定妆图,3:2)+动态拍I2V(kling,关原声;喂图裁16:9→收片裁回3:2)→manifest。版式3:4:上媒体区(图或视频)1080x720+下三行字幕(拼音/中文/越南语)逐字卡拉OK。layout=chuanyue-drama。全程按hash缓存。",
+  "_comment": "模板『凰谋·12秒全可灵中越』(自包含主模板,2026-07-19 由 chuanyue-drama 独立而来,不依赖任何其它模板)。★唯一模式=12s全可灵:6拍全动态(每拍 type:video,kling I2V,关原声),越南语旁白+中文对白/内心,前3秒『看短剧学中文』引导标,字幕左右各12%安全区。生产:script.json→每拍配音(火山TTS)+每场景关键帧(nano-banana-pro/edit喂定妆图,3:2)+动态拍I2V(kling,喂图裁16:9→收片裁回3:2)→manifest。版式3:4:上媒体区(视频)1080x720+下三行字幕(拼音/中文/越南语)逐字卡拉OK。layout=chuanyue-drama(渲染层复用 chuanyue-drama 组件,registry 别名)。全程hash缓存。",
   "id": "chuanyue-drama",
-  "name": "凰谋·现代穿越古代短剧(越南受众)",
+  "name": "凰谋·12秒全可灵中越(自包含)",
   "seriesId": "huangmou",
   "layout": "chuanyue-drama",
   "meta": { "fps": 30, "width": 1080, "height": 1440 },
   "source": { "region": { "top": 120, "height": 720 }, "focusY": 0.5 },
   "subtitle": { "top": 960, "height": 360 },
   "format": {
-    "_comment": "★短档 30–45s(用户 2026-07-18 锁,完播率优先)。时长由每拍真实TTS总和(减转场重叠)自然得出,非硬设;设计到目标带即可,落带外就增/删拍。原60s目标已弃。",
-    "episodeTargetMs": 35000,
-    "episodeMinMs": 28000,
-    "episodeMaxMs": 45000,
+    "_comment": "★唯一模式=12s全可灵:6拍全动态、前3秒即钩、每拍开场级冲击。时长由每拍真实TTS总和(减转场重叠)自然得出,落 10–14s 带。allVideo=true→build 校验每拍 type:video,有图文软拍即抛错。",
+    "episodeTargetMs": 12000,
+    "episodeMinMs": 10000,
+    "episodeMaxMs": 14000,
+    "allVideo": true,
     "hookMustBeVideo": true,
     "hookVideoWithinMs": 3000,
-    "minVideoClipsPerEpisode": 3,
-    "maxConsecutiveStillBeats": 2
+    "badge": true
   },
   "audio": {
-    "_langComment": "★混合语言(用户 2026-07-18 锁):旁白=越南语(vi_*音色,读captions.local,走viSpeed);角色对白+女主内心=中文(zh_*音色,读captions.zh,走speed;inner=true→字幕💭)。build按音色前缀vi_/zh_自动判定合成语言。",
-    "speed": 1.0,
-    "viSpeed": 1.0,
+    "_langComment": "★混合语言:旁白=越南语(vi_*音色,读captions.local,走viSpeed);角色对白+女主内心=中文(zh_*音色,读captions.zh,走speed;inner=true→字幕💭)。build按音色前缀vi_/zh_自动判定合成语言。★12s版语速加快=1.2(script.speed/viSpeed 本片可再覆盖)。",
+    "speed": 1.2,
+    "viSpeed": 1.2,
     "tailPaddingMs": 160,
     "sceneTailPaddingMs": 320,
-    "_voicesComment": "★音色单一事实源:角色音色(zhaohua/peiheng/suyi/weichong/qinghe)在 characters/_registry.json 每人 voice 字段(与脸同处),build 读那里覆盖此处。此处只留【非角色】音色:narrator(vi旁白)、mama(管事嬷嬷等无定妆图配角)。TTS免费可重试听验;锁定须用户批准。",
+    "_voicesComment": "★角色音色单一事实源在 characters/_registry.json 每人 voice 字段,build 读那里覆盖此处。此处只留【非角色】音色:narrator(vi旁白)、mama(管事嬷嬷等无定妆图配角)。改音色须用户批准。",
     "defaultVoice": "narrator",
     "voices": {
       "narrator": "vi_female_ruan_uranus_bigtts",
@@ -31,7 +31,7 @@
     }
   },
   "image": {
-    "_comment": "★真人质感,全部用 nano-banana-pro(用户 2026-07-18 锁,彻底放弃 flux——flux 效果差)。首次出人物(定妆图)=nano-banana-pro 文生图;剧集关键帧=nano-banana-pro/edit 喂该角色定妆图保脸(单人也用,~$0.15);空镜喂 styleAnchor。★最终交付比例固定 3:2:图片直接出 3:2(banana);动态拍关键帧也 3:2,喂 kling 前由 gen-video 临时裁 16:9、收片后再裁回 3:2(见 video.finalAspect),全片静图↔动态尺寸统一。",
+    "_comment": "★真人质感,全部 nano-banana-pro(彻底放弃 flux)。首次出人物(定妆图)=nano-banana-pro 文生图;剧集关键帧=nano-banana-pro/edit 喂该角色定妆图保脸(单人也用,~$0.15);空镜喂 styleAnchor。★最终交付比例固定 3:2:图片直接出 3:2;动态拍关键帧也 3:2,喂 kling 前临时裁 16:9、收片后再裁回 3:2(见 video.finalAspect)。",
     "provider": "fal",
     "keyframeModel": "fal-ai/nano-banana-pro/edit",
     "portraitModel": "fal-ai/nano-banana-pro",
@@ -42,14 +42,14 @@
     "styleAnchor": "templates/chuanyue-drama/characters/zhaohua/model-sheet.png"
   },
   "video": {
-    "_comment": "★I2V动态拍(kling image-to-video)。关键帧作输入图(人物特征代入),prompt只写运动(见prompts/video.tpl.md)。★generateAudio=false关原声,成片用自己TTS,渲染层静音播放。单段3-5s整数,3:2。花钱铁律:出问题不自动重试。",
+    "_comment": "★I2V动态拍(kling image-to-video)。关键帧作输入图,prompt只写运动。★generateAudio=false关原声,成片用自己TTS,渲染层静音播放。单段3-5s整数。花钱铁律:出问题不自动重试。",
     "provider": "fal",
     "primaryModel": "fal-ai/kling-video/v3/standard/image-to-video",
     "generateAudio": false,
-    "defaultClipSeconds": 4,
+    "defaultClipSeconds": 3,
     "minClipSeconds": 3,
     "maxClipSeconds": 5,
-    "_aspectComment": "★尺寸铁律(用户 2026-07-18 锁):不管 kling 规则,最终交付固定 3:2。kling 只收 16:9/9:16/1:1,故 aspectRatio=16:9 给 kling;gen-video 喂图前把 3:2 关键帧裁成 16:9,收片后把 16:9 成片两边裁掉回 finalAspect=3:2。所有裁切用 remotion 自带 ffmpeg,本地无成本。",
+    "_aspectComment": "★尺寸铁律:最终交付固定 3:2。kling 只收 16:9/9:16/1:1,故 aspectRatio=16:9 给 kling;gen-video 喂图前把 3:2 关键帧裁成 16:9,收片后把 16:9 成片两边裁掉回 finalAspect=3:2。裁切用 ffmpeg,本地无成本。",
     "aspectRatio": "16:9",
     "finalAspect": "3:2",
     "pricingSnapshotDate": "2026-07-18",
@@ -57,14 +57,14 @@
     "negativePrompt": "text, subtitles, caption, watermark, logo, border, extra person, face swap, deformed hands"
   },
   "budget": {
-    "_comment": "★每集预算 $3(用户 2026-07-18 提高)。nano-banana-pro 关键帧($0.15)+kling动态($0.084/s)+海报封面。sceneId共图压边际成本。build 累计超上限立即抛错停。",
+    "_comment": "★每集预算 $3。12s全可灵参考:关键帧6×$0.15=$0.90 + kling6×3s=$1.51 + 海报$0.15 ≈ $2.56。sceneId共图压边际成本。build 累计超上限立即抛错停。",
     "maxUsdPerEpisode": 3.0,
-    "targetUsdPerEpisode": 2.8,
+    "targetUsdPerEpisode": 2.6,
     "maxPaidAttemptsPerAsset": 1,
     "automaticPaidRetries": 0
   },
   "captions": {
-    "_comment": "黑底三行(拼音/中文/越南语)逐字卡拉OK。越南语=受众母语偏大;拼音发音抓手中等;中文适中。",
+    "_comment": "黑底三行(拼音/中文/越南语)逐字卡拉OK。★sidePad=130=宽度12%:竖屏短视频平台右侧点赞/分享按钮会遮挡贴边字幕,收进安全区,超宽行 FitLine 自动缩放。",
     "bgColor": "#000000",
     "pinyinColor": "#7fd1c0",
     "zhColor": "#ffffff",
@@ -75,7 +75,7 @@
     "sizes": { "pinyin": 52, "zh": 72, "vi": 58, "local": 58 },
     "gapPinyinZh": 8,
     "gapZhLocal": 24,
-    "sidePad": 48,
+    "sidePad": 130,
     "pinyinColumnGap": 10,
     "opticalLift": 0
   },

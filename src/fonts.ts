@@ -8,7 +8,7 @@ export type FontsMeta = {
   zhStack?: string[];
   zhWeight?: number;
   latinStack?: string[];
-  // 拼音行专用字体栈（缺省回落 latinStack）——chinese-drama:拼音要比越南语行收敛
+  // 拼音行专用字体栈（缺省回落 latinStack）——chuanyue-drama:拼音要比越南语行收敛
   pinyinStack?: string[];
 };
 

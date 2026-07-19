@@ -1,9 +1,10 @@
-// 模板『凰谋·现代穿越古代竖屏短剧(越南受众·图文+动态视频混搭)』构建流水线。
+// 模板『凰谋·12秒全可灵中越』构建流水线(自包含主模板,由 chuanyue-drama 独立而来,不依赖任何其它模板)。
 // 由通用编排器 scripts/build.mjs 调用 build()，返回 manifest 对象。
-// 生产：script.json → 每拍配音(火山TTS,旁白vi/角色zh,带字级时间戳) + 每场景关键帧(nano-banana-pro/edit,喂定妆图,3:2)
-//        + 动态拍(type:video)用关键帧走 kling I2V(关原声;喂图裁16:9→收片裁回3:2) → manifest。
-// 版式 layout="chinese-drama"：上媒体区(图或视频)1080x720 + 下三行字幕(拼音/中文/越南语)逐字卡拉OK。
-// 全程按 hash 缓存；预算硬卡 ≤$2/集。花钱铁律：fal 出问题不自动重试(见 /base/04)。
+// 唯一模式:12s / 6拍全动态(每拍 type:video,kling I2V,关原声) / 越南语旁白+中文对白 / 前3秒「看短剧学中文」引导标。
+// 生产：script.json → 每拍配音(火山TTS,旁白vi/角色zh) + 每场景关键帧(nano-banana-pro/edit,喂定妆图,3:2)
+//        + 动态拍用关键帧走 kling I2V(喂图裁16:9→收片裁回3:2) → manifest。
+// 版式 layout="chuanyue-drama"(渲染层 src/layouts/chuanyue-drama.tsx)。
+// 全程按 hash 缓存；预算硬卡见 template.json。花钱铁律：fal 出问题不自动重试。★KEYFRAMES_ONLY=1 只出关键帧跳过 kling。
 import { readFileSync, writeFileSync, existsSync, appendFileSync } from "node:fs";
 import { join } from "node:path";
 import { synth } from "../../scripts/tts.mjs";
@@ -73,6 +74,9 @@ function buildVideoPrompt({ v, prompts }) {
 
 export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
   const script = JSON.parse(readFileSync(join(dir, "script.json"), "utf8"));
+  // ★本模板唯一模式=全动态:每拍必须 type:video,发现图文软拍即抛错(12s 靠"每秒都有冲击"留人)。
+  const stills = (script.beats || []).filter((b) => b.type !== "video");
+  if (stills.length) throw new Error(`chuanyue-drama(12s全可灵) 必须全动态(每拍 type:video)，发现图文拍: ${stills.map((b) => b.id).join(", ")}`);
   const motion = readJson(tpl(ROOT, "motion.json"));
   const chars = loadChars(ROOT);
   const prompts = loadPrompts(ROOT);
@@ -163,7 +167,8 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
     const viText = beat.captions.local ?? beat.captions.vi ?? "";
     const ttsText = isVi ? viText : (beat.ttsZh ?? beat.captions.zh ?? "");
     if (!ttsText.trim()) throw new Error(`${beat.id}: 无可合成文本(${isVi ? "captions.local" : "captions.zh"}为空)`);
-    const speed = isVi ? (settings.audio.viSpeed ?? 1.0) : (settings.audio.speed ?? 1.0);
+    // ★语速:script.speed/viSpeed 本片覆盖(最高优先,如 12s 版加快)→ 否则用模板全局。
+    const speed = isVi ? (script.viSpeed ?? settings.audio.viSpeed ?? 1.0) : (script.speed ?? settings.audio.speed ?? 1.0);
     if (!isVi && beat.ttsZh && hanCount(beat.ttsZh) !== hanCount(beat.captions.zh)) {
       throw new Error(`${beat.id}: ttsZh 汉字数(${hanCount(beat.ttsZh)})≠captions.zh(${hanCount(beat.captions.zh)}),逐字跳字会错位`);
     }
@@ -176,8 +181,12 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
     const kf = await ensureKeyframe(beat);
 
     // 动态拍：用关键帧走 kling I2V(关原声)，产静音 mp4。
+    // ★KEYFRAMES_ONLY=1：只出关键帧图片、跳过 kling(先人工看图确认再出视频，用户 2026-07-19 闸门)。
+    const keyframesOnly = process.env.KEYFRAMES_ONLY === "1";
     let videoSrc = null;
-    if (beat.type === "video") {
+    if (beat.type === "video" && keyframesOnly) {
+      console.log(`  video: SKIP (KEYFRAMES_ONLY) ${beat.id}`);
+    } else if (beat.type === "video") {
       const v = beat.video || {};
       // 关键帧来源：video.keyframeFrom 指向另一拍的场景图，否则用本拍关键帧。
       let kfAbs = kf.abs;
@@ -223,8 +232,20 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
     });
   }
 
+  // ★前3秒「看短剧学中文」引导标:script.badge → manifest.meta.badge(渲染层 LearnBadge 读取)。
+  // pairs=逐字对照(越南语大字在上/中文小字在下);无 badge 则不出标。
+  if (script.badge) {
+    const { textVi, textZh, pairs, durationMs } = script.badge;
+    manifest.meta.badge = {
+      textVi,
+      ...(textZh ? { textZh } : {}),
+      ...(Array.isArray(pairs) && pairs.length ? { pairs } : {}),
+      durationMs: durationMs ?? 3000,
+    };
+  }
+
   const totalMs = manifest.beats.reduce((a, b) => a + b.durationMs, 0);
   const vids = manifest.beats.filter((b) => b.type === "video").length;
-  console.log(`\n凰谋 ${videoId} 完成: ${manifest.beats.length} 拍(${vids} 动态), ${(totalMs / 1000).toFixed(1)}s, 花费 ~$${spentUsd.toFixed(2)}/上限$${maxUsd}`);
+  console.log(`\n凰谋12s ${videoId} 完成: ${manifest.beats.length} 拍(${vids} 动态), ${(totalMs / 1000).toFixed(1)}s, 花费 ~$${spentUsd.toFixed(2)}/上限$${maxUsd}`);
   return manifest;
 }

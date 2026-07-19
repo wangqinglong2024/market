@@ -52,7 +52,7 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
 
-      {/* ── chinese-drama 封面/海报（render-rules 10）：三语标题排版，封面与海报共用。──
+      {/* ── chuanyue-drama 封面/海报（render-rules 10）：三语标题排版，封面与海报共用。──
            渲染：remotion still src/index.ts cover-drama <out.png> --props=<视频目录>/cover.json */}
       <Composition
         id="cover-drama"

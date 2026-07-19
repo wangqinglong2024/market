@@ -1,0 +1,8 @@
+level_code,name_zh,directory_name,vocabulary_rows,hanzi_rows,task_rows,topic_rows,grammar_rows,tree_node_rows,import_file_rows
+HSK1,一级,一级,300,246,59,30,70,102,147
+HSK2,二级,二级,204,225,76,34,78,121,166
+HSK3,三级,三级,507,434,109,54,96,127,168
+HSK4,四级,四级,1019,591,139,77,95,127,163
+HSK5,五级,五级,1638,581,109,72,70,118,152
+HSK6,六级,六级,1815,563,97,68,50,102,136
+HSK7-9,七-九级,七-九级,5622,1648,89,92,134,117,150

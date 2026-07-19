@@ -1,0 +1,11 @@
+{
+  "_comment": "海报式封面(cover-drama 组件)。底图=fal 单出 3:4 竖版海报 images/poster.png(女主露腿薄纱寝袍+裴珩装病拆穿压迫感,不与正片某帧重复),喂女主露腿定妆图保脸。层级:系列名+印章E02 / 卷标题 / 章主题 / 当集钩子红条。E02·装病的王爷·12s全可灵中越版。",
+  "image": "videos/2026/07/19/huangmou-e002-12s/images/poster.png",
+  "focusY": 0.3,
+  "tag": "凰谋",
+  "tagVi": "Vương Phi Pháp Y",
+  "seal": "E02",
+  "volume": { "zh": "卷一 · 冲喜入府", "vi": "Quyển 1 · Xung Hỷ Nhập Phủ" },
+  "chapter": { "py": "zhuāng bìng de wáng yé", "zh": "装病的王爷", "vi": "Vương gia giả bệnh" },
+  "episode": { "py": "wáng yé zhuāng bìng , piān yào tā chōng xǐ", "zh": "王爷装病，偏要她冲喜", "vi": "Vương gia giả bệnh, lại chọn nàng xung hỷ" }
+}
