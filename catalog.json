@@ -2,6 +2,17 @@
   "_comment": "视频总账。每条视频一条记录，扛上千条时的索引与状态。id 建议 slug；产物在 public/videos/<shard>/<id>/，其中 shard=年/月/日(YYYY/MM/DD，2026-07-05 用户改：原按月分片改为年月日三级)。",
   "videos": [
     {
+      "id": "hsk-nature-01",
+      "title": "HSK字源·自然组 山水火木日月(古风男女主·越南受众·9:16)",
+      "template": "hsk-ziyuan",
+      "shard": "2026/07/19",
+      "lang": "vi",
+      "status": "draft",
+      "createdAt": "2026-07-19",
+      "manifest": "public/videos/2026/07/19/hsk-nature-01/manifest.json",
+      "beats": 6
+    },
+    {
       "id": "huluwa-shenfeng",
       "title": "葫芦兄弟E1神峰奇遇·中文学习混剪(60s,越南受众)",
       "template": "chinese-learn",

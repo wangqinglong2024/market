@@ -1,0 +1,7 @@
+{
+  "_comment": "《HSK字源·古风美人识字》固定出镜角色(真人古风质感·原创锁脸,非真人克隆)。★meinv=古风美女(明艳灵动·热巴气质寄存器·长腿),gongzi=古风美男(清俊·肖战气质寄存器)。一条视频只用一位主持人,其音色全程一致(见 audio)。main=true 出镜=nano-banana-pro/edit 喂该角色定妆图(ref)保脸,换装换景由场景 prompt 现写。★voice=该角色火山TTS音色(单一事实源,build 读此处覆盖 template.json)。改角色/改音色须用户批准。定妆图 model-sheet.png 由 portrait.mjs 一次性生成、用户审脸后锁定。",
+  "characters": [
+    { "id": "meinv",  "name": "古风美女(明艳灵动·长腿·主持人)", "main": true, "ref": "model-sheet.png", "canonical": "canonical.md", "voice": "zh_female_wenrouxiaoya_uranus_bigtts", "voiceNote": "温柔小雅(用户指定)" },
+    { "id": "gongzi", "name": "古风美男(清俊公子·主持人)",       "main": true, "ref": "model-sheet.png", "canonical": "canonical.md", "voice": "zh_male_qingshuangnanda_uranus_bigtts", "voiceNote": "清爽男大(用户指定)" }
+  ]
+}

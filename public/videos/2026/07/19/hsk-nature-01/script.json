@@ -1,0 +1,37 @@
+{
+  "_comment": "HSK字源第1条·自然组『山水火木日月』(越南受众)。★男女主轮流,男主先:山(男)水(女)火(男)木(女)日(男)月(女)。每字只念这一个字(tts=单字)。每字:char + pinyin + gloss越南语释义 + scene意境场景(喂该拍主持人定妆图出图·上部留白给毛笔字)。",
+  "hostRotation": ["gongzi", "meinv"],
+  "guessText": "Đây là chữ gì?",
+  "beats": [
+    {
+      "id": "shan", "char": "山", "pinyin": "shān", "gloss": "núi", "host": "gongzi",
+      "tts": "山", "motion": "push-in",
+      "scene": "He stands on the side lower third, atop a misty emerald mountain peak at dawn; layered distant peaks and slow drifting clouds fill the scene; he wears an elegant emerald-and-white silk hanfu robe of a noble young lord, wide sleeves and jade pendant caught in the mountain wind."
+    },
+    {
+      "id": "shui", "char": "水", "pinyin": "shuǐ", "gloss": "nước", "host": "meinv",
+      "tts": "水", "motion": "pull-back",
+      "scene": "She stands on the lower left, on wet rocks beside a tall waterfall and a clear jade-green pool; fine water mist and spray in the air; she wears a water-blue gauzy high-slit hanfu revealing her long slender legs, hem fluttering near the rushing water."
+    },
+    {
+      "id": "huo", "char": "火", "pinyin": "huǒ", "gloss": "lửa", "host": "gongzi",
+      "tts": "火", "motion": "push-in",
+      "scene": "He stands on the lower right at night during a lantern festival; thousands of warm glowing sky-lanterns rise around him and a soft bonfire glow lights his face; he wears a crimson-and-black silk hanfu robe of a young lord, embers drifting."
+    },
+    {
+      "id": "mu", "char": "木", "pinyin": "mù", "gloss": "cây (gỗ)", "host": "meinv",
+      "tts": "木", "motion": "drift-up",
+      "scene": "She stands on the lower left in a lush green bamboo forest beside an ancient towering pine; soft dappled sunlight through the leaves; she wears a bamboo-green high-slit hanfu revealing her long slender legs."
+    },
+    {
+      "id": "ri", "char": "日", "pinyin": "rì", "gloss": "mặt trời", "host": "gongzi",
+      "tts": "日", "motion": "push-in",
+      "scene": "He stands on the lower right at daybreak on a cliff above a sea of clouds; a huge round red sun rises on the horizon filling the sky with golden light; he wears a golden-orange silk hanfu robe of a lord glowing in the sunrise."
+    },
+    {
+      "id": "yue", "char": "月", "pinyin": "yuè", "gloss": "mặt trăng", "host": "meinv",
+      "tts": "月", "motion": "pull-back",
+      "scene": "She stands on the lower left by a still mirror-like lake at night under a huge full moon; cool serene moonlight and her reflection on the water; she wears a moon-white high-slit hanfu revealing her long slender legs, gauze drifting."
+    }
+  ]
+}
