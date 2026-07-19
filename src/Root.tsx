@@ -5,9 +5,7 @@ import { FxPreview } from "./FxPreview";
 import { FxSinglePreview } from "./FxSinglePreview";
 import { Cover } from "./Cover";
 import { CoverDrama } from "./CoverDrama";
-import { InkShanTest } from "./ZiyuanMorphTest";
-import { InkShuiTest } from "./InkShuiTest";
-import { InkGridTest } from "./InkGridTest";
+import { CoverHsk } from "./CoverHsk";
 import catalog from "../catalog.json";
 
 // 特效库开放可扩展：下面只是"已有预览 Composition"的登记表，新增特效就往这里加一行（不是固定集合）。
@@ -36,34 +34,16 @@ export const RemotionRoot: React.FC = () => {
         />
       ))}
 
-      {/* ── 字源 morph 概念验证(纯 Remotion·零 AI):水墨三峰 → 楷书「山」──── */}
+      {/* ── HSK字源九宫格封面：宣纸 · 具象简笔→汉字 · 越南语钩子。────
+           渲染：remotion still src/index.ts cover-hsk <out.png> --props=<视频目录>/cover.json */}
       <Composition
-        id="ink-shan-test"
-        component={InkShanTest}
-        durationInFrames={165}
+        id="cover-hsk"
+        component={CoverHsk}
+        durationInFrames={1}
         fps={30}
         width={1080}
         height={1920}
-      />
-
-      {/* ── 「字即窗口」原型:「水」字里灌真实流水(可灵素材) ──── */}
-      <Composition
-        id="ink-shui-test"
-        component={InkShuiTest}
-        durationInFrames={150}
-        fps={30}
-        width={1080}
-        height={1920}
-      />
-
-      {/* ── 九宫格识字(山的模式·逐字朗读+水墨韵律):3批×4字/12秒 ──── */}
-      <Composition
-        id="ink-grid-test"
-        component={InkGridTest}
-        durationInFrames={360}
-        fps={30}
-        width={1080}
-        height={1920}
+        defaultProps={{ hook: "Chữ Hán bắt nguồn từ hình vẽ", tag: "HSK · Tự học tiếng Trung", ep: "Tập 1" }}
       />
 
       {/* ── 通用封面（全局规则）：原视频一帧 + 文字钩子，渲染成缩略图。────
