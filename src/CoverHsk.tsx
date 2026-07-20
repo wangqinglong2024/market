@@ -1,5 +1,6 @@
-// HSK字源九宫格封面(9:16缩略图):宣纸 + 越南语钩子 + 三个「具象简笔 → 毛笔字」示例(山/日/木),底部系列标。
-// 渲染:npx remotion still src/index.ts cover-hsk <out.png> [--props=cover.json]
+// HSK字源九宫格封面(9:16缩略图):宣纸 + 越南语钩子 + 副标题行 + 三个「具象简笔 → 毛笔字」示例,底部系列标。
+// 各子模板共用本组件,差异全在 props(hook/sub/chars/ep/tag),封面文案规则见 templates/hsk-ziyuan/SUBTEMPLATES.md。
+// 渲染:npx remotion still src/index.ts cover-hsk <out.png> --props=<视频目录>/cover.json
 import { AbsoluteFill, delayRender, continueRender } from "remotion";
 import { useState, useEffect } from "react";
 import { loadFonts, DEFAULT_FONTS, stackCss } from "./fonts";
@@ -31,7 +32,9 @@ const Demo: React.FC<{ c: string; zh: string }> = ({ c, zh }) => {
   );
 };
 
-export const CoverHsk: React.FC<{ hook: string; tag: string; ep: string }> = ({ hook, tag, ep }) => {
+export const CoverHsk: React.FC<{ hook: string; sub?: string; chars?: string[]; tag: string; ep: string }> = ({
+  hook, sub = "山 = ⛰️ · 日 = ☀️ · 木 = 🌳", chars = ["山", "日", "木"], tag, ep,
+}) => {
   const [h] = useState(() => delayRender("cover-fonts"));
   useEffect(() => {
     Promise.all([
@@ -49,13 +52,11 @@ export const CoverHsk: React.FC<{ hook: string; tag: string; ep: string }> = ({ 
       <div style={{ position: "absolute", top: 150, left: 80, width: 920, textAlign: "center",
         fontFamily: LATIN, fontWeight: 900, fontSize: 84, lineHeight: 1.12, color: INK }}>{hook}</div>
       <div style={{ position: "absolute", top: 420, left: 0, width: 1080, textAlign: "center",
-        fontFamily: LATIN, fontWeight: 800, fontSize: 46, color: TEAL }}>山 = ⛰️ · 日 = ☀️ · 木 = 🌳</div>
+        fontFamily: LATIN, fontWeight: 800, fontSize: 46, color: TEAL }}>{sub}</div>
 
       {/* 三个 具象→字 示例 */}
       <div style={{ position: "absolute", top: 640, left: 0, width: 1080, display: "flex", justifyContent: "center", gap: 70 }}>
-        <Demo c="山" zh={zh} />
-        <Demo c="日" zh={zh} />
-        <Demo c="木" zh={zh} />
+        {chars.map((c) => <Demo key={c} c={c} zh={zh} />)}
       </div>
 
       {/* 系列标 */}

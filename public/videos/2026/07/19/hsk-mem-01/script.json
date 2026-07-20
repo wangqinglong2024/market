@@ -1,16 +1,10 @@
 {
-  "_comment": "HSK字源九宫格·记忆测试版(12字·逐个1.2秒·开头挑战卡+结尾催评论卡,均带越南语配音)。mode=sequential,charSlot=36(1.2秒/字)。卡时长自动撑到读完配音。",
+  "_comment": "HSK字源九宫格·记忆测试版(memtest)。12字·逐个1.2秒·顶部引导条:第1/2组显示挑战文案(10/12·超过90%的人),第3组切换成催评论;纯视觉不朗读,无越南语配音。总时长=3×4.8s=14.4s。",
   "mode": "sequential",
   "charSlot": 36,
-  "intro": {
-    "ms": 2000,
-    "lines": ["Nhớ 6/12 chữ = TRÍ NHỚ SIÊU PHÀM 🧠", "Bạn nhớ được mấy? Thử ngay! 👀"],
-    "say": "Nhớ sáu trên mười hai chữ là siêu trí nhớ! Thử ngay nào!"
-  },
-  "outro": {
-    "ms": 1600,
-    "lines": ["Bạn nhớ được mấy chữ?", "👇 Bình luận nhé!"],
-    "say": "Bạn nhớ được mấy chữ? Bình luận cho mình biết nhé!"
+  "banner": {
+    "lead": ["Nhớ được 10/12 chữ 🧠", "= Trí nhớ vượt 90% mọi người!"],
+    "tail": ["Bạn nhớ được mấy chữ?", "👇 Bình luận nhé!"]
   },
   "groups": [
     [ { "c": "山", "vi": "núi" }, { "c": "木", "vi": "cây" }, { "c": "日", "vi": "mặt trời" }, { "c": "月", "vi": "trăng" } ],

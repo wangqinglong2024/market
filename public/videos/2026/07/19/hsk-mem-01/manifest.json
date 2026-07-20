@@ -8,10 +8,10 @@
       "mode": "sequential",
       "seq": true,
       "x0": 60,
-      "y0": 240,
+      "y0": 330,
       "cellW": 480,
-      "cellH": 720,
-      "box": 340,
+      "cellH": 650,
+      "box": 316,
       "groupFrames": 144,
       "charSlot": 36,
       "readFrames": null,
@@ -39,9 +39,34 @@
       "gridCross": "rgba(120,90,40,0.16)"
     },
     "sizes": {
-      "pinyin": 68,
-      "vi": 56,
-      "char": 268
+      "pinyin": 62,
+      "vi": 50,
+      "char": 248
+    },
+    "banner": {
+      "y": 108,
+      "width": 960,
+      "fontSize": 58,
+      "fontSize2": 46,
+      "lineGap": 18,
+      "spans": [
+        {
+          "fromMs": 0,
+          "toMs": 9600,
+          "lines": [
+            "Nhớ được 10/12 chữ 🧠",
+            "= Trí nhớ vượt 90% mọi người!"
+          ]
+        },
+        {
+          "fromMs": 9600,
+          "toMs": 14400,
+          "lines": [
+            "Bạn nhớ được mấy chữ?",
+            "👇 Bình luận nhé!"
+          ]
+        }
+      ]
     },
     "fonts": {
       "_comment": "真实汉字用 Ma Shan Zheng(毛笔行楷);拼音+越南文用 Nunito(柔和圆润,完整越南语声调+拼音符号)。换字体只改这里。",
@@ -70,18 +95,6 @@
     }
   },
   "beats": [
-    {
-      "id": "intro",
-      "durationMs": 3976,
-      "card": {
-        "kind": "intro",
-        "lines": [
-          "Nhớ 6/12 chữ = TRÍ NHỚ SIÊU PHÀM 🧠",
-          "Bạn nhớ được mấy? Thử ngay! 👀"
-        ],
-        "audio": "videos/2026/07/19/hsk-mem-01/audio/intro.mp3"
-      }
-    },
     {
       "id": "g1",
       "durationMs": 4800,
@@ -1399,18 +1412,6 @@
           "readFrame": 132
         }
       ]
-    },
-    {
-      "id": "outro",
-      "durationMs": 3424,
-      "card": {
-        "kind": "outro",
-        "lines": [
-          "Bạn nhớ được mấy chữ?",
-          "👇 Bình luận nhé!"
-        ],
-        "audio": "videos/2026/07/19/hsk-mem-01/audio/outro.mp3"
-      }
     }
   ]
 }

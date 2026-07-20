@@ -25,14 +25,14 @@
     },
     {
       "id": "hsk-mem-01",
-      "title": "HSK字源·记忆测试版 12字(逐个1.2s·开头挑战+结尾催评论·~18s)",
+      "title": "HSK字源·记忆测试版(memtest) 12字(逐个1.2s·顶部引导条:挑战10/12→末组催评论·14.4s)",
       "template": "hsk-ziyuan",
       "shard": "2026/07/19",
       "lang": "vi",
       "status": "built",
       "createdAt": "2026-07-19",
       "manifest": "public/videos/2026/07/19/hsk-mem-01/manifest.json",
-      "beats": 5
+      "beats": 3
     },
     {
       "id": "huluwa-shenfeng",

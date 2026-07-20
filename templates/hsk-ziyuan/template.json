@@ -1,5 +1,5 @@
 {
-  "_comment": "模板『HSK字源·九宫格识字』(2026-07-19 定稿)。定位:越南 TikTok 涨粉的『简笔画→线条字→真实毛笔字』九宫格单字合集,纯代码零AI出图,门槛=可复用的字源morph引擎。★形态:9:16竖屏,内容区2×2共4格(每格一字),每组4字在4秒内同时逐点几何演变(前3秒简笔→线条字,末1秒→真实毛笔字);朗读独立=1秒读一个,读到哪字哪字触发水墨韵律。默认3组=12字=12秒。生产:script.json(分组的字+越南语释义)→查 glyphs.json 取骨架 + 每字配音(火山TTS)→manifest→渲染层(src/layouts/hsk-ziyuan.tsx)。字形骨架复用库=glyphs.json;发音复用库=public/library/tts-hanzi/。改音色/配色/时长只改本文件。",
+  "_comment": "模板『HSK字源·九宫格识字』(2026-07-19 定稿,2026-07-20 加顶部引导条)。定位:越南 TikTok 涨粉的『简笔画→线条字→真实毛笔字』九宫格单字合集,纯代码零AI出图,门槛=可复用的字源morph引擎。★形态:9:16竖屏,内容区2×2共4格(每格一字),每组4字同时逐点几何演变(简笔→线条字→真实毛笔字);朗读独立逐字,读到哪字哪字触发水墨韵律。生产:script.json(分组的字+越南语释义)→查 glyphs.json 取骨架 + 每字配音(火山TTS)→manifest→渲染层(src/layouts/hsk-ziyuan.tsx)。字形骨架复用库=glyphs.json;发音复用库=public/library/tts-hanzi/。★子模板清单见 SUBTEMPLATES.md,生产时用户指定子模板。改音色/配色/时长只改本文件。",
   "id": "hsk-ziyuan",
   "name": "HSK字源·九宫格识字(9:16)",
   "seriesId": "hsk-hanzi",
@@ -25,12 +25,16 @@
   "sizes": { "pinyin": 68, "vi": 56, "char": 268 },
 
   "audio": {
-    "_comment": "★单字朗读音色:爽快思思(火山TTS,用户 2026-07-19 指定,利落适配1秒/字节奏)。速度1.2使单字≈1秒内读完。发音复用库 public/library/tts-hanzi/<字>.mp3,hash缓存跨视频复用。改音色须用户批准。",
+    "_comment": "★单字朗读音色:爽快思思(火山TTS,用户 2026-07-19 指定,利落适配1秒/字节奏)。速度1.2使单字≈1秒内读完。发音复用库 public/library/tts-hanzi/<字>.mp3,hash缓存跨视频复用。改音色须用户批准。全片仅单字中文朗读,无越南语配音(2026-07-20 用户定:引导文字纯视觉不朗读)。",
     "voice": "zh_female_shuangkuaisisi_uranus_bigtts",
-    "speed": 1.2,
-    "viVoice": "vi_female_ruan_uranus_bigtts",
-    "viSpeed": 1.05,
-    "_viNote": "开头/结尾文字卡的越南语配音音色(火山TTS·凰谋同款越南语旁白)。script.intro/outro 的 say 字段=要朗读的越南语句子(无表情符号)。"
+    "speed": 1.2
+  },
+
+  "banner": {
+    "_comment": "★顶部引导文字条(记忆测试版子模板用,2026-07-20 用户定)。script.json 写 banner:{lead,tail} 才启用:lead=最后一组之前各组顶部常驻文案,tail=最后一组切换成的文案(催评论)。纯视觉、不朗读、不增加总时长。启用时格子按下方 grid/sizes 缩小下移,给顶部让位。",
+    "y": 108, "width": 960, "fontSize": 58, "fontSize2": 46, "lineGap": 18,
+    "grid": { "y0": 330, "cellH": 650, "box": 316 },
+    "sizes": { "pinyin": 62, "vi": 50, "char": 248 }
   },
 
   "budget": { "_comment": "★纯代码渲染,不出AI图/视频,单条制作成本≈0(仅TTS)。", "maxUsdPerEpisode": 0.2 },

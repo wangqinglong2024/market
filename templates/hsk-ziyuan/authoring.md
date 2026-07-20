@@ -2,6 +2,7 @@
 
 > **输入 = 分组的「汉字 + 越南语释义」**；骨架/拼音/发音自动从字形库与发音库取。产出「具象简笔画 → 线条字 → 真实毛笔字」的九宫格单字合集。
 > 做本模板前先读 base 的 [[00-底层规律]] 与 [[01-创作准则]]。本文是它们在「HSK 单字」上的落地与定稿规则。
+> **★子模板清单见 `SUBTEMPLATES.md`**（纯字版 plain / 记忆测试版 memtest…），生产视频时由用户指定子模板名。全片仅单字中文朗读，无越南语配音。
 
 ---
 
@@ -41,11 +42,11 @@
 
 ## 六、封面
 
-`cover-hsk` 组件：宣纸 + 越南语钩子 + 三个「具象→字」示例（山/日/木）+ 系列标。渲染：`npx remotion still src/index.ts cover-hsk <out.png>`。
+`cover-hsk` 组件：宣纸 + 越南语钩子 + 副标题行 + 三个「具象→字」示例 + 系列标，各子模板共用、props 驱动（hook/sub/chars/ep/tag）。每条视频目录放 `cover.json`，各子模板的封面文案口径与渲染命令见 **`SUBTEMPLATES.md` 封面规则**。渲染：`npx remotion still src/index.ts cover-hsk <视频目录>/cover.png --props=<视频目录>/cover.json`。
 
 ## 七、加一条新视频（下一集）
 
-1. 需要的字若不在 `glyphs.json` → 先补其 `pic`/`chr`（同构、pic 具象）。
-2. `public/videos/<shard>/<id>/script.json`：写 2 组 × 4 字 + 越南语释义。
+1. 用户指定子模板（`SUBTEMPLATES.md`），需要的字若不在 `glyphs.json` → 先补其 `pic`/`chr`（同构、pic 具象）。
+2. `public/videos/<shard>/<id>/script.json`：按子模板示例写分组的字 + 越南语释义（+引导条等开关）。
 3. `catalog.json` 加条目（`template:"hsk-ziyuan"`）。
-4. build + render。**选字规矩**：只做象形/指事/会意等「画得出实物」的字；成主题合集。
+4. build + render 成片 + `cover.json` + render 封面（四件套齐才算完）。**选字规矩**：只做象形/指事/会意等「画得出实物」的字；成主题合集。

@@ -1,6 +1,7 @@
 // 版式「hsk-ziyuan」：HSK字源·九宫格识字(越南受众·9:16竖屏)。数据驱动(manifest.meta.grid/colors/sizes + beats)。
 // ★两种模式(meta.grid.seq):parallel=4字同时演变+朗读独立逐字;sequential=逐个来,每字独占slot走完全程+朗读,4格逐格填入保留。
-// ★开头钩子/结尾CTA=覆盖在第一组/最后一组的字上(居中空隙带·带越南语配音·说完淡出),用 Sequence 套在组内→绝不增加总时长。
+// ★顶部引导文字条(meta.banner,可选):常驻画面顶部,按 spans 分时段换文案(挑战引导→催评论);纯视觉不朗读、
+//   不增加总时长;启用时构建层已把格子缩小下移让位。子模板清单见 templates/hsk-ziyuan/SUBTEMPLATES.md。
 // 每字:具象简笔(+extra细节淡出抽象)→线条字→末段真实毛笔字;读到触发水墨韵律。单段渲染,组按时长顺序切窗。
 import {
   AbsoluteFill, Audio, Sequence, interpolate, staticFile, useCurrentFrame, Easing,
@@ -10,8 +11,9 @@ import type { Manifest, LayoutModule, RenderBeat } from "./types";
 
 type Pt = [number, number];
 type Ch = { c: string; py: string; vi: string; pic: Pt[][]; chr: Pt[][]; extra?: Pt[][]; audio: string; slot: number; readFrame: number };
-type Overlay = { lines: string[]; audio?: string; frames: number };
-type Beat = RenderBeat & { chars?: Ch[]; overlayIn?: Overlay; overlayOut?: Overlay };
+type BannerSpan = { fromMs: number; toMs: number; lines: string[] };
+type Banner = { y: number; width: number; fontSize: number; fontSize2: number; lineGap: number; spans: BannerSpan[] };
+type Beat = RenderBeat & { chars?: Ch[] };
 type Grid = {
   seq: boolean; x0: number; y0: number; cellW: number; cellH: number; box: number; groupFrames: number;
   draw: [number, number]; morph: [number, number]; real: [number, number]; readFrames: number | null;
@@ -52,7 +54,7 @@ const Cell: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes; zh: str
 
   return (
     <>
-      <div style={{ position: "absolute", left: x, top: y + 86, width: g.cellW, textAlign: "center",
+      <div style={{ position: "absolute", left: x, top: y + Math.round(g.cellH * 0.12), width: g.cellW, textAlign: "center",
         fontFamily: latin, fontSize: s.pinyin, fontWeight: 800, color: c.pinyin, opacity: infoP, letterSpacing: 1 }}>{ch.py}</div>
 
       <div style={{ position: "absolute", left: bx, top: by, width: g.box, height: g.box, border: `2px solid ${c.grid}` }} />
@@ -85,27 +87,32 @@ const Cell: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes; zh: str
         alignItems: "center", justifyContent: "center", fontFamily: zh, fontSize: s.char, color: c.ink,
         opacity: realP, transform: `scale(${interpolate(realP, [0, 1], [0.96, 1]) + pulse * 0.07})`, transformOrigin: "center", filter: glow }}>{ch.c}</div>
 
-      <div style={{ position: "absolute", left: x, top: y + 558, width: g.cellW, textAlign: "center",
+      <div style={{ position: "absolute", left: x, top: y + Math.round(g.cellH * 0.775), width: g.cellW, textAlign: "center",
         fontFamily: latin, fontSize: s.vi, fontWeight: 800, color: c.vi, opacity: infoP }}>{ch.vi}</div>
     </>
   );
 };
 
-// 覆盖式文字卡:居中(落在上下两排格子的空隙带),半透明宣纸底板→文字清晰不与笔画重影,四周网格仍可见;带越南语配音,淡入淡出。
-const OverlayCard: React.FC<{ ov: Overlay; c: Colors; latin: string }> = ({ ov, c, latin }) => {
+// 顶部引导文字条:常驻画面顶部(格子已让位),按 spans 分时段换文案,段间淡入淡出;纯视觉无配音。
+const TopBanner: React.FC<{ b: Banner; c: Colors; latin: string; fps: number }> = ({ b, c, latin, fps }) => {
   const f = useCurrentFrame();
-  const op = interpolate(f, [0, 6], [0, 1], cl) * interpolate(f, [ov.frames - 8, ov.frames], [1, 0], cl);
   return (
-    <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: op }}>
-      <div style={{ width: 950, textAlign: "center", padding: "30px 44px", borderRadius: 30,
-        background: "rgba(236,225,201,0.74)", boxShadow: "0 0 40px 24px rgba(236,225,201,0.74)" }}>
-        {ov.lines.map((l, i) => (
-          <div key={i} style={{ fontFamily: latin, fontWeight: 900, lineHeight: 1.22, marginTop: i ? 22 : 0,
-            fontSize: i === 0 ? 66 : 48, color: i === 0 ? c.ink : (i % 2 ? c.vi : c.pinyin) }}>{l}</div>
-        ))}
-      </div>
-      {ov.audio ? <Audio src={staticFile(ov.audio)} /> : null}
-    </AbsoluteFill>
+    <>
+      {b.spans.map((sp, i) => {
+        const from = ms2f(sp.fromMs, fps), to = ms2f(sp.toMs, fps);
+        const op = interpolate(f, [from, from + 8], [0, 1], cl) * interpolate(f, [to - 8, to], [1, 0], cl);
+        if (op <= 0.001) return null;
+        return (
+          <div key={i} style={{ position: "absolute", left: (1080 - b.width) / 2, top: b.y, width: b.width,
+            textAlign: "center", opacity: op }}>
+            {sp.lines.map((l, j) => (
+              <div key={j} style={{ fontFamily: latin, fontWeight: 900, lineHeight: 1.2, marginTop: j ? b.lineGap : 0,
+                fontSize: j === 0 ? b.fontSize : b.fontSize2, color: j === 0 ? c.ink : c.vi }}>{l}</div>
+            ))}
+          </div>
+        );
+      })}
+    </>
   );
 };
 
@@ -119,22 +126,12 @@ const GroupGrid: React.FC<{ group: Beat; g: Grid; c: Colors; s: Sizes; zh: strin
       {chars.map((ch) => (
         <Sequence key={`a-${ch.c}`} from={ch.readFrame} layout="none"><Audio src={staticFile(ch.audio)} /></Sequence>
       ))}
-      {group.overlayIn ? (
-        <Sequence from={0} durationInFrames={group.overlayIn.frames} layout="none">
-          <OverlayCard ov={group.overlayIn} c={c} latin={latin} />
-        </Sequence>
-      ) : null}
-      {group.overlayOut ? (
-        <Sequence from={Math.max(0, g.groupFrames - group.overlayOut.frames)} durationInFrames={group.overlayOut.frames} layout="none">
-          <OverlayCard ov={group.overlayOut} c={c} latin={latin} />
-        </Sequence>
-      ) : null}
     </AbsoluteFill>
   );
 };
 
 const GridScene: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats, meta }) => {
-  const m = meta as unknown as { grid: Grid; colors: Colors; sizes: Sizes };
+  const m = meta as unknown as { grid: Grid; colors: Colors; sizes: Sizes; banner?: Banner };
   const g = m.grid, c = m.colors, s = m.sizes;
   const fps = meta.fps;
   const fontCfg = { ...DEFAULT_FONTS, ...(meta.fonts || {}) };
@@ -154,6 +151,7 @@ const GridScene: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats,
     <AbsoluteFill style={{ backgroundColor: c.paper }}>
       <AbsoluteFill style={{ background: "radial-gradient(130% 90% at 50% 42%, rgba(0,0,0,0) 60%, rgba(120,90,40,0.14) 100%)" }} />
       {segs}
+      {m.banner ? <TopBanner b={m.banner} c={c} latin={latin} fps={fps} /> : null}
     </AbsoluteFill>
   );
 };
