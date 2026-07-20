@@ -34,7 +34,8 @@ const Cell: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes; zh: str
   const x = g.x0 + col * g.cellW, y = g.y0 + row * g.cellH;
 
   const base = f - ch.slot;
-  const drawP = interpolate(base, g.draw, [0, 1], cl);
+  // sequential:4 格简笔画在组开头就全部画出、静止等待,轮到该字(slot 到点)才开始 morph;parallel 不变。
+  const drawP = interpolate(seq ? f : base, g.draw, [0, 1], cl);
   const morphP = interpolate(base, g.morph, [0, 1], { ...cl, easing: Easing.inOut(Easing.ease) });
   const realP = interpolate(base, g.real, [0, 1], { ...cl, easing: Easing.inOut(Easing.ease) });
 

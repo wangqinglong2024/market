@@ -7,7 +7,7 @@
   "meta": { "fps": 30, "width": 1080, "height": 1920 },
 
   "grid": {
-    "_comment": "版面(1格=120px):上下留白各2格(y0=240,内容高1440)、左右各0.5格(x0=60,内容宽960);2×2共4格,每格480×720,一字一格,田字格边长340居中,汉字垂直居中格内。★两种模式(视频 script.json 用 mode 选,缺省用此 mode):①parallel=4字同时演变(一组4.8s,2组9.6s,朗读独立逐字);②sequential=逐个来,每字独占2秒走完 具象→线条字→真实毛笔字+朗读,4格从头都在、字逐格填入保留(一组8s,2组16s)。draw/morph/real=slot内时序(parallel相对组、sequential相对该字起点)。",
+    "_comment": "版面(1格=120px):上下留白各2格(y0=240,内容高1440)、左右各0.5格(x0=60,内容宽960);2×2共4格,每格480×720,一字一格,田字格边长340居中,汉字垂直居中格内。★两种模式(视频 script.json 用 mode 选,缺省用此 mode):①parallel=4字同时演变(一组4.8s,2组9.6s,朗读独立逐字);②sequential=组开头4格简笔画全部画出静止陈列(2026-07-20 用户定),轮到某字(独占 charSlot)才开始 线条字→真实毛笔字 演变+朗读,字逐格保留。draw/morph/real=slot内时序(parallel相对组、sequential相对该字起点)。",
     "mode": "parallel",
     "x0": 60, "y0": 240, "cellW": 480, "cellH": 720, "box": 340,
     "parallel":   { "groupFrames": 144, "readFrames": 36, "draw": [2, 20], "morph": [20, 108], "real": [114, 140] },
