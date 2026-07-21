@@ -6,6 +6,7 @@ import { FxSinglePreview } from "./FxSinglePreview";
 import { Cover } from "./Cover";
 import { CoverDrama } from "./CoverDrama";
 import { CoverHsk } from "./CoverHsk";
+import { AvatarHsk } from "./AvatarHsk";
 import catalog from "../catalog.json";
 
 // 特效库开放可扩展：下面只是"已有预览 Composition"的登记表，新增特效就往这里加一行（不是固定集合）。
@@ -44,6 +45,16 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
         defaultProps={{ hook: "Chữ Hán bắt nguồn từ hình vẽ", tag: "HSK · Tự học tiếng Trung", ep: "Tập 1" }}
+      />
+
+      {/* ── 头像（1:1，裁圆用）：learn-Chinese 频道头像。渲染：remotion still src/index.ts avatar-hsk <out.png> */}
+      <Composition
+        id="avatar-hsk"
+        component={AvatarHsk}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1080}
       />
 
       {/* ── 通用封面（全局规则）：原视频一帧 + 文字钩子，渲染成缩略图。────
