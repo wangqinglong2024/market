@@ -11,6 +11,9 @@
     "mode": "parallel",
     "x0": 60, "y0": 240, "cellW": 480, "cellH": 720, "box": 340,
     "parallel":   { "groupFrames": 144, "readFrames": 36, "draw": [2, 20], "morph": [20, 108], "real": [114, 140] },
+    "inkburst":   { "groupFrames": 100, "readFrames": 20, "readAt0": 8, "draw": [2, 14], "morph": [14, 46], "real": [46, 100], "burst": 46,
+      "intro": { "frames": 34, "draw": [2, 12], "morph": [12, 24], "burst": 24, "readAt": 14, "box": 640 },
+      "_burstNote": "炸裂墨韵版(第3子模板,2026-07-21 用户定节奏):每组100帧=3.33s。变化1.5s(draw[2,14]+morph[14,46],easeIn慢起急收,已按用户反馈缩短)→ burst=46 → 炸裂【持续】1.8s(EXP=54帧,三波墨滴+多道湿墨冲击环+持续外扩墨轮+飞白扫写+弹簧过冲+整格kick,填满不留静帧)。★朗读:4字逐个朗读(reads=readAt0+i·readFrames=8/28/48/68),读到哪字哪格亮『朱墨读标』(晕圈+朱光+拼音跳出+脉动),与炸裂互不相关(炸裂固定在 burst 同步)。★intro=可选全屏单字冷开场(script.intro,如「日」):1.13s 画→字→炸,教会格式再进九宫格。3组+冷开场≈11.1s。渲染层见 src/layouts/hsk-ziyuan.tsx 的 CellInkburst / HeroScene。" },
     "sequential": { "charSlot": 60, "drawF": [0.03, 0.23], "morphF": [0.23, 0.70], "realF": [0.73, 0.93], "readAtF": 0.68,
       "_seqNote": "逐个模式:每字独占 charSlot 帧(默认60=2秒),视频 script.json 可用 charSlot 覆盖调速(如36=1.2秒)。slot内时序按比例(drawF/morphF/realF/readAtF × charSlot)算,任意速度自适应。groupFrames=4×charSlot。" }
   },

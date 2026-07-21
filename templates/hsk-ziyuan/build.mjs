@@ -81,10 +81,28 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
       console.log(`  ${c} ${gl.py} / ${item.vi}  ${a.cached ? "cached" : a.ms + "ms"}`);
 
       const slot = seq ? i * charSlot : 0;
-      const readFrame = seq ? slot + readAt : i * readFrames;
+      const readFrame = seq ? slot + readAt : (prof.readAt0 ?? 0) + i * readFrames;
       chars.push({ c, py: gl.py, vi: item.vi ?? "", pic: gl.pic, chr: gl.chr, ...(gl.extra && { extra: gl.extra }), audio: `library/tts-hanzi/${hanHex(c)}.mp3`, slot, readFrame });
     }
     beats.push({ id: `g${gi + 1}`, durationMs: groupMs, chars });
+  }
+
+  // ★炸裂墨韵版可选冷开场:script.intro 指定单字(如「日」)→ 全屏英雄镜头一条 beat(画→字→炸,教格式)。
+  const intro = prof.intro;
+  if (script.intro && intro) {
+    const c = script.intro;
+    if (Array.from(c).filter(isHan).length !== 1) throw new Error(`intro 必须是单个汉字: 「${c}」`);
+    const gl = lib[c];
+    if (!gl) throw new Error(`intro 字「${c}」不在 glyphs.json 字形库,请先补 pic/chr 骨架`);
+    const audioAbs = join(ttsDir, `${hanHex(c)}.mp3`);
+    await synth(c, audioAbs, { voice, speed });
+    const introMs = Math.round((intro.frames / fps) * 1000);
+    beats.unshift({
+      id: "intro", durationMs: introMs, hero: true,
+      chars: [{ c, py: gl.py, vi: "", pic: gl.pic, chr: gl.chr, ...(gl.extra && { extra: gl.extra }),
+        audio: `library/tts-hanzi/${hanHex(c)}.mp3`, slot: 0, readFrame: intro.readAt }],
+    });
+    console.log(`  [intro] ${c} ${gl.py}  全屏冷开场 ${intro.frames}帧`);
   }
 
   const manifest = {
@@ -95,6 +113,9 @@ export async function build({ videoId, dir, ROOT, settings, rel, ensure }) {
         mode, seq, x0: gridCfg.x0, y0: gridCfg.y0, cellW: gridCfg.cellW, cellH: gridCfg.cellH, box: gridCfg.box,
         ...gridGeo,
         groupFrames, charSlot, readFrames, readAt, draw, morph, real,
+        ...(prof.burst != null && { burst: prof.burst }),
+        ...(prof.intro && { introFrames: prof.intro.frames, introDraw: prof.intro.draw,
+          introMorph: prof.intro.morph, introBurst: prof.intro.burst, heroBox: prof.intro.box }),
       },
       colors: Object.fromEntries(Object.entries(settings.colors).filter(([k]) => !k.startsWith("_"))),
       sizes,

@@ -8,6 +8,7 @@
 |---|---|---|---|---|---|
 | `plain` | 纯字版 | parallel | 4字同时演变，4.8s/组 | 无 | 2组=9.6s |
 | `memtest` | 记忆测试版 | sequential | 逐个1.2s/字（charSlot=36） | 有：挑战文案→末组催评论 | 3组=14.4s |
+| `inkburst` | 炸裂墨韵版 | inkburst | 4字同时慢起急收，burst帧四格同步炸裂，5s/组 | 无 | 2组=10s |
 
 ---
 
@@ -50,6 +51,26 @@
 ```
 
 示例视频：`hsk-mem-01`（12字 = 14.4s）。
+
+## inkburst · 炸裂墨韵版
+
+在 `plain`「4字同时演变」基础上升级：morph 用 easeIn **慢起急收**制造蓄势，第 `burst` 帧（=morph 终点）**四格同步炸裂**。继承 app 水墨语义（`template/game/01-ink-wash`），但用 Remotion/SVG 把「象征」升成「真墨」——渲染层 `CellInkburst`（`src/layouts/hsk-ziyuan.tsx`）：
+
+- **墨滴飞溅**：每格 28 颗确定性（seed 稳定）墨滴，减速外飞 + 重力下坠 + 拉伸，`feGaussianBlur`+`feDisplacementMap` 让每颗不规则滲开；
+- **湿墨冲击环** ×2（墨 + 朱砂），边缘经 `feTurbulence` 位移；
+- **墨池**：成字母体从中心啵地滲开，`mixBlendMode:multiply` 吸进宣纸；
+- **毛笔字飞白扫写**：`clip-path` 左→右 + blur 由糊变锐 + 弹簧过冲；
+- **整格 kick**：炸裂瞬间该格抖一记。
+
+节奏：`groupFrames=150`、`reads 0/26/52/78`（四拍蓄势）、`burst=90`（一齐爆）。参数在 `template.json → grid.inkburst`。
+
+```json
+{ "mode": "inkburst", "groups": [ "…2组×4字…" ] }
+```
+
+示例视频：`hsk-burst-01`（8字 = 10s，shard 2026/07/21）。
+
+**封面**（cover.json）：钩子 = 字源揭示（与 plain 同口径），`ep` = `Tập N`。
 
 **封面**（cover.json）：钩子 = 挑战宣言，**与片内顶部引导条同文案口径**（`hook` = banner.lead 第 1 行，`sub` = banner.lead 第 2 行），`ep` = `Thử thách trí nhớ #N`（挑战期数）。
 
