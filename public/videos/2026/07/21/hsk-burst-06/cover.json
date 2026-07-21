@@ -1,0 +1,8 @@
+{
+  "_comment": "炸裂墨韵版(inkburst)封面:钩子=字源揭示(与 plain 同口径,汉字由图画演变而来),副标题=图→字对照,ep=Tập N。规则见 templates/hsk-ziyuan/SUBTEMPLATES.md。",
+  "hook": "Chữ Hán bung nở từ nét mực",
+  "sub": "米 = 🌾 · 瓜 = 🍈 · 串 = 🍢",
+  "chars": ["米", "瓜", "串"],
+  "ep": "Tập 6",
+  "tag": "HSK · Tự học tiếng Trung"
+}

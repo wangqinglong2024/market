@@ -1,0 +1,8 @@
+{
+  "_comment": "纯字版(plain)封面:钩子=字源揭示(汉字由图画演变而来),副标题=图→字对照,ep=Tập N。规则见 templates/hsk-ziyuan/SUBTEMPLATES.md。",
+  "hook": "Chữ Hán bắt nguồn từ hình vẽ",
+  "sub": "鸟 = 🐦 · 鱼 = 🐟 · 飞 = 🕊️",
+  "chars": ["鸟", "鱼", "飞"],
+  "ep": "Tập 4",
+  "tag": "HSK · Tự học tiếng Trung"
+}

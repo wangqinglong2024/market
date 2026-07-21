@@ -35,160 +35,6 @@
       "beats": 2
     },
     {
-      "id": "hsk-mem-01",
-      "title": "HSK字源E1·自然万物(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-01/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-02",
-      "title": "HSK字源E2·五官身形(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-02/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-03",
-      "title": "HSK字源E3·动物·走兽(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-03/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-04",
-      "title": "HSK字源E4·动物·飞禽游鱼(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-04/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-05",
-      "title": "HSK字源E5·草木生长(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-05/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-06",
-      "title": "HSK字源E6·舌尖美味(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-06/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-07",
-      "title": "HSK字源E7·大地山川(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-07/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-08",
-      "title": "HSK字源E8·天空气象(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-08/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-09",
-      "title": "HSK字源E9·门与围城(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-09/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-10",
-      "title": "HSK字源E10·家的温情(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-10/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-11",
-      "title": "HSK字源E11·人之百态(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-11/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-12",
-      "title": "HSK字源E12·行走江湖(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-12/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-13",
-      "title": "HSK字源E13·手与眼(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-13/manifest.json",
-      "beats": 3
-    },
-    {
-      "id": "hsk-mem-14",
-      "title": "HSK字源E14·笔画的智慧(memtest·12字·14.4s)",
-      "template": "hsk-ziyuan",
-      "shard": "2026/07/20",
-      "lang": "vi",
-      "status": "built",
-      "createdAt": "2026-07-20",
-      "manifest": "public/videos/2026/07/20/hsk-mem-14/manifest.json",
-      "beats": 3
-    },
-    {
       "id": "huluwa-shenfeng",
       "title": "葫芦兄弟E1神峰奇遇·中文学习混剪(60s,越南受众)",
       "template": "chinese-learn",
@@ -345,6 +191,50 @@
       "design": "templates/chuanyue-drama/story/卷01-冲喜入府/第01章-洞房惊魂.md",
       "manifest": null,
       "beats": 6
+    },
+    {
+      "id": "hsk-ziran-03",
+      "title": "HSK字源E3·动物·走兽【纯字版·plain·12字3组·12s·4字同变+朗读1秒一个】",
+      "template": "hsk-ziyuan",
+      "shard": "2026/07/21",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-21",
+      "manifest": "public/videos/2026/07/21/hsk-ziran-03/manifest.json",
+      "beats": 3
+    },
+    {
+      "id": "hsk-ziran-04",
+      "title": "HSK字源E4·动物·飞禽游鱼【纯字版·plain·12字3组·12s·4字同变+朗读1秒一个】",
+      "template": "hsk-ziyuan",
+      "shard": "2026/07/21",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-21",
+      "manifest": "public/videos/2026/07/21/hsk-ziran-04/manifest.json",
+      "beats": 3
+    },
+    {
+      "id": "hsk-burst-05",
+      "title": "HSK字源E5·草木生长【炸裂墨韵版·inkburst·冷开场日1.5s+3组×3.5s·12s·墨炸弹】",
+      "template": "hsk-ziyuan",
+      "shard": "2026/07/21",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-21",
+      "manifest": "public/videos/2026/07/21/hsk-burst-05/manifest.json",
+      "beats": 4
+    },
+    {
+      "id": "hsk-burst-06",
+      "title": "HSK字源E6·舌尖美味【炸裂墨韵版·inkburst·冷开场日1.5s+3组×3.5s·12s·墨炸弹】",
+      "template": "hsk-ziyuan",
+      "shard": "2026/07/21",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-21",
+      "manifest": "public/videos/2026/07/21/hsk-burst-06/manifest.json",
+      "beats": 4
     }
   ]
 }

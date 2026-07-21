@@ -7,15 +7,14 @@
   "meta": { "fps": 30, "width": 1080, "height": 1920 },
 
   "grid": {
-    "_comment": "版面(1格=120px):上下留白各2格(y0=240,内容高1440)、左右各0.5格(x0=60,内容宽960);2×2共4格,每格480×720,一字一格,田字格边长340居中,汉字垂直居中格内。★两种模式(视频 script.json 用 mode 选,缺省用此 mode):①parallel=4字同时演变(一组4.8s,2组9.6s,朗读独立逐字);②sequential=组开头4格简笔画全部画出静止陈列(2026-07-20 用户定),轮到某字(独占 charSlot)才开始 线条字→真实毛笔字 演变+朗读,字逐格保留。draw/morph/real=slot内时序(parallel相对组、sequential相对该字起点)。",
+    "_comment": "版面(1格=120px):上下留白各2格(y0=240,内容高1440)、左右各0.5格(x0=60,内容宽960);2×2共4格,每格480×720,一字一格,田字格边长340居中,汉字垂直居中格内。★两种子模板(视频 script.json 用 mode 选,缺省用此 mode):①parallel(纯字版)=4字同时演变(一组4.8s,2组9.6s,朗读独立逐字);②inkburst(炸裂墨韵版)=蓄势后一记墨炸弹爆破。draw/morph/real=组内绝对帧时序。",
     "mode": "parallel",
     "x0": 60, "y0": 240, "cellW": 480, "cellH": 720, "box": 340,
-    "parallel":   { "groupFrames": 144, "readFrames": 36, "draw": [2, 20], "morph": [20, 108], "real": [114, 140] },
-    "inkburst":   { "groupFrames": 100, "readFrames": 20, "readAt0": 8, "draw": [2, 14], "morph": [14, 46], "real": [46, 100], "burst": 46,
-      "intro": { "frames": 34, "draw": [2, 12], "morph": [12, 24], "burst": 24, "readAt": 14, "box": 640 },
-      "_burstNote": "炸裂墨韵版(第3子模板,2026-07-21 用户定节奏):每组100帧=3.33s。变化1.5s(draw[2,14]+morph[14,46],easeIn慢起急收,已按用户反馈缩短)→ burst=46 → 炸裂【持续】1.8s(EXP=54帧,三波墨滴+多道湿墨冲击环+持续外扩墨轮+飞白扫写+弹簧过冲+整格kick,填满不留静帧)。★朗读:4字逐个朗读(reads=readAt0+i·readFrames=8/28/48/68),读到哪字哪格亮『朱墨读标』(晕圈+朱光+拼音跳出+脉动),与炸裂互不相关(炸裂固定在 burst 同步)。★intro=可选全屏单字冷开场(script.intro,如「日」):1.13s 画→字→炸,教会格式再进九宫格。3组+冷开场≈11.1s。渲染层见 src/layouts/hsk-ziyuan.tsx 的 CellInkburst / HeroScene。" },
-    "sequential": { "charSlot": 60, "drawF": [0.03, 0.23], "morphF": [0.23, 0.70], "realF": [0.73, 0.93], "readAtF": 0.68,
-      "_seqNote": "逐个模式:每字独占 charSlot 帧(默认60=2秒),视频 script.json 可用 charSlot 覆盖调速(如36=1.2秒)。slot内时序按比例(drawF/morphF/realF/readAtF × charSlot)算,任意速度自适应。groupFrames=4×charSlot。" }
+    "parallel":   { "groupFrames": 120, "readFrames": 30, "readAt0": 4, "draw": [2, 20], "morph": [20, 96], "real": [100, 120],
+      "_plainNote": "纯字版(2026-07-21 用户重定):每组120帧=4秒。★动画与朗读【分离】:4字【同时·线性匀速·严格同步】演变(draw[2,20]+morph[20,96]+real[100,120],逐帧进度完全一致,不用 ease 免得看着有的快有的慢)。★朗读=1秒一个(readFrames=30,readAt0=4→reads 4/34/64/94),读到哪字哪格『特殊显示』(朱晕+朱光+拼音/越南文跳出·不加缩放),与动画分离。3组=12秒。" },
+    "inkburst":   { "groupFrames": 105, "readFrames": 22, "readAt0": 2, "draw": [3, 22], "morph": [22, 60], "real": [60, 90], "burst": 60,
+      "intro": { "frames": 45, "draw": [2, 7], "morph": [7, 14], "burst": 14, "readAt": 16, "box": 640 },
+      "_burstNote": "炸裂墨韵版(2026-07-21 用户三定节奏+爆炸):★总12秒 = 冷开场1.5秒 + 3组×3.5秒(比上版单字、每组各+0.5秒,全加在爆炸停留上,爆更久更过瘾)。★冷开场(intro,45帧=1.5秒):第一个字【统一用『日』且不得与该集 groups 重复】,直接炸出——快画(2-7)+快morph(7-14)→ burst=14 立刻炸开露字,readAt=16 随即朗读,爆破停留 EXP=31帧≈1s。★每组105帧=3.5秒:前2秒变化(draw[3,22]+morph[22,60],【线性匀速·4格严格同步】)→ burst=60 后炸裂停留 EXP=45帧=1.5秒。★爆炸=不规则随机墨迹炸裂开:无任何圆环——中央巨墨块 frame0 一齐炸碎 + 数十枚墨弹随机角度高速甩飞(初速极高→阻力急停 reach=v0·τ·(1-e^-t/τ),拉成彗尾/飞白甩条,落点收成不规则墨渍留宣纸)+ 整格硬震。中央毛笔字被砸进画面(scale 过冲 punch + 飞白由糊变锐)。★朗读:4字逐个每个≤0.75秒(readFrames=22,readAt0=2→reads 2/24/46/68),读到哪字哪格『特殊显示』(朱晕+朱光+拼音跳出·不加缩放),与炸裂分离。渲染层见 src/layouts/hsk-ziyuan.tsx 的 CellInkburst / HeroScene。" }
   },
 
   "colors": {
@@ -28,16 +27,9 @@
   "sizes": { "pinyin": 68, "vi": 56, "char": 268 },
 
   "audio": {
-    "_comment": "★单字朗读音色:爽快思思(火山TTS,用户 2026-07-19 指定,利落适配1秒/字节奏)。速度1.2使单字≈1秒内读完。发音复用库 public/library/tts-hanzi/<字>.mp3,hash缓存跨视频复用。改音色须用户批准。全片仅单字中文朗读,无越南语配音(2026-07-20 用户定:引导文字纯视觉不朗读)。",
+    "_comment": "★单字朗读音色:爽快思思(火山TTS,用户 2026-07-19 指定,利落适配1秒/字节奏)。速度1.2使单字≈1秒内读完。发音复用库 public/library/tts-hanzi/<字>.mp3,hash缓存跨视频复用。改音色须用户批准。全片仅单字中文朗读,无越南语配音。",
     "voice": "zh_female_shuangkuaisisi_uranus_bigtts",
     "speed": 1.2
-  },
-
-  "banner": {
-    "_comment": "★顶部引导文字条(记忆测试版子模板用,2026-07-20 用户定)。script.json 写 banner:{lead,tail} 才启用:lead=最后一组之前各组顶部常驻文案,tail=最后一组切换成的文案(催评论)。纯视觉、不朗读、不增加总时长。启用时格子按下方 grid/sizes 缩小下移,给顶部让位。",
-    "y": 108, "width": 960, "fontSize": 58, "fontSize2": 46, "lineGap": 18,
-    "grid": { "y0": 330, "cellH": 650, "box": 316 },
-    "sizes": { "pinyin": 62, "vi": 50, "char": 248 }
   },
 
   "budget": { "_comment": "★纯代码渲染,不出AI图/视频,单条制作成本≈0(仅TTS)。", "maxUsdPerEpisode": 0.2 },

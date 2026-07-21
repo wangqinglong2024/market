@@ -1,8 +1,7 @@
 // 版式「hsk-ziyuan」：HSK字源·九宫格识字(越南受众·9:16竖屏)。数据驱动(manifest.meta.grid/colors/sizes + beats)。
-// ★两种模式(meta.grid.seq):parallel=4字同时演变+朗读独立逐字;sequential=逐个来,每字独占slot走完全程+朗读,4格逐格填入保留。
-// ★顶部引导文字条(meta.banner,可选):常驻画面顶部,按 spans 分时段换文案(挑战引导→催评论);纯视觉不朗读、
-//   不增加总时长;启用时构建层已把格子缩小下移让位。子模板清单见 templates/hsk-ziyuan/SUBTEMPLATES.md。
+// ★两种子模板(meta.grid.mode):parallel(纯字版)=4字同时演变+朗读独立逐字;inkburst(炸裂墨韵版)=蓄势后一记墨炸弹爆破。
 // 每字:具象简笔(+extra细节淡出抽象)→线条字→末段真实毛笔字;读到触发水墨韵律。单段渲染,组按时长顺序切窗。
+// 子模板清单见 templates/hsk-ziyuan/SUBTEMPLATES.md。
 import {
   AbsoluteFill, Audio, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig, spring, Easing,
 } from "remotion";
@@ -12,11 +11,9 @@ import type { Manifest, LayoutModule, RenderBeat } from "./types";
 
 type Pt = [number, number];
 type Ch = { c: string; py: string; vi: string; pic: Pt[][]; chr: Pt[][]; extra?: Pt[][]; audio: string; slot: number; readFrame: number };
-type BannerSpan = { fromMs: number; toMs: number; lines: string[] };
-type Banner = { y: number; width: number; fontSize: number; fontSize2: number; lineGap: number; spans: BannerSpan[] };
 type Beat = RenderBeat & { chars?: Ch[]; hero?: boolean };
 type Grid = {
-  seq: boolean; mode?: string; x0: number; y0: number; cellW: number; cellH: number; box: number; groupFrames: number;
+  mode?: string; x0: number; y0: number; cellW: number; cellH: number; box: number; groupFrames: number;
   draw: [number, number]; morph: [number, number]; real: [number, number]; readFrames: number | null; burst?: number | null;
   introFrames?: number; introDraw?: [number, number]; introMorph?: [number, number]; introBurst?: number; heroBox?: number;
 };
@@ -38,24 +35,21 @@ const rng = (seed: number) => () => {
 
 const Cell: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes; zh: string; latin: string }> = ({ ch, ci, g, c, s, zh, latin }) => {
   const f = useCurrentFrame();
-  const seq = g.seq;
   const col = ci % 2, row = Math.floor(ci / 2);
   const x = g.x0 + col * g.cellW, y = g.y0 + row * g.cellH;
 
-  const base = f - ch.slot;
-  // sequential:4 格简笔画在组开头就全部画出、静止等待,轮到该字(slot 到点)才开始 morph;parallel 不变。
-  const drawP = interpolate(seq ? f : base, g.draw, [0, 1], cl);
-  const morphP = interpolate(base, g.morph, [0, 1], { ...cl, easing: Easing.inOut(Easing.ease) });
-  const realP = interpolate(base, g.real, [0, 1], { ...cl, easing: Easing.inOut(Easing.ease) });
+  // parallel:4 字【严格同步同速】演变——draw/morph 全用【线性】(匀速),4格进度逐帧完全一致,
+  //   不用 ease(ease 会在中段加速,放大不同字的形变差,看着「有的快有的慢」);朗读独立逐字。
+  const drawP = interpolate(f, g.draw, [0, 1], cl);
+  const morphP = interpolate(f, g.morph, [0, 1], cl);
+  const realP = interpolate(f, g.real, [0, 1], { ...cl, easing: Easing.inOut(Easing.ease) });
 
-  const readLen = seq ? 20 : (g.readFrames ?? 36);
+  const readLen = g.readFrames ?? 36;
   const rr = (f - ch.readFrame) / readLen;
   const active = rr >= 0 && rr <= 1.05;
   const pulse = active ? Math.sin(Math.min(Math.max(rr, 0), 1) * Math.PI) : 0;
   const ripple = interpolate(f, [ch.readFrame, ch.readFrame + 24], [0, 1], cl);
-  const infoP = seq
-    ? interpolate(base, [g.real[0] - 6, g.real[0] + 8], [0, 1], cl)
-    : interpolate(f, [ch.readFrame + 2, ch.readFrame + 18], [0, 1], cl);
+  const infoP = interpolate(f, [ch.readFrame + 2, ch.readFrame + 18], [0, 1], cl);
 
   const bx = x + (g.cellW - g.box) / 2, by = y + (g.cellH - g.box) / 2;
   const cx = bx + g.box / 2, cy = by + g.box / 2;
@@ -76,8 +70,9 @@ const Cell: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes; zh: str
           border: `3px solid ${c.ripple}`, opacity: (1 - ripple) * 0.45, transform: `scale(${0.5 + ripple * 0.9})` }} />
       ) : null}
 
+      {/* 演变期不加朗读脉动缩放(否则被读的字会「鼓一下」,破坏同步感);朗读特殊显示=朱晕+朱光+拼音/越南文跳出 */}
       <svg viewBox="0 0 100 100" width={g.box} height={g.box} style={{ position: "absolute", left: bx, top: by, overflow: "visible",
-        opacity: 1 - realP, transform: `scale(${(1 + pulse * 0.07) * (1 - realP * 0.04)})`, transformOrigin: "center", filter: glow }}>
+        opacity: 1 - realP, transform: `scale(${1 - realP * 0.04})`, transformOrigin: "center", filter: glow }}>
         {strokes.map((p, i) => (
           <path key={i} d={dOf(p)} pathLength={1} fill="none" stroke={c.ink} strokeWidth={4.6}
             strokeLinecap="round" strokeLinejoin="round" strokeDasharray={1} strokeDashoffset={1 - drawP} />
@@ -103,10 +98,11 @@ const Cell: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes; zh: str
   );
 };
 
-// ★炸裂墨韵版(inkburst 子模板)。节奏(用户 2026-07-21 定):变化 2.4s → 炸裂 1.6s【持续】,不是一闪。
-//   炸裂段用「三波墨滴 + 多道湿墨冲击环 + 持续外扩的墨轮 + 毛笔字飞白扫写 + 弹簧过冲 + 整格kick(带余震)」
-//   把 1.6s 填满不留静帧;墨从中心炸开外飞、露出中央干净的毛笔字。hero=true 时为全屏单字冷开场。
-//   继承 app 水墨语义(01-ink-wash),用 SVG feTurbulence 把「象征」升成「真墨」。与 plain/memtest 不重叠。
+// ★炸裂墨韵版(inkburst 子模板)。节奏(用户 2026-07-21 重定):蓄势 easeIn 慢起急收 → burst 一记「墨炸弹」。
+//   ★无任何圆环——不规则随机墨迹炸裂开:frame0 中央巨墨爆体砸碎(湍流打散·非正圆)+ 数十枚墨弹【全随机角度】
+//   一齐高速甩飞(三档 chunk/shard/mist;初速极高→阻力急停 reach=v0·τ·(1-e^-t/τ),拉成彗尾/飞白甩条,
+//   落点收成不规则墨渍留宣纸);中央毛笔字被砸进画面(scale 过冲 punch + 飞白由糊变锐)+ 整格硬震(指数衰减)。
+//   hero=true 为全屏单字冷开场(1秒直接炸出字再读)。继承 app 水墨语义(01-ink-wash),SVG feTurbulence 把象征升成真墨。
 const CellInkburst: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes; zh: string; latin: string; hero?: boolean }> = ({ ch, ci, g, c, s, zh, latin, hero }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -121,31 +117,34 @@ const CellInkburst: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes;
   const cp = ch.c.codePointAt(0) ?? 0;
   const uid = `wet-${cp}-${ci}${heroMode ? "-h" : ""}`;
 
-  // 时序:变化(draw→morph,easeIn 慢起急收)→ burst → 炸裂持续 EXP 帧(≈1.6s=48)
+  // 时序:蓄势(draw→morph,easeIn 慢起急收)→ burst → 爆破 EXP 帧
   const drawR = heroMode ? (g.introDraw ?? g.draw) : g.draw;
   const morphR = heroMode ? (g.introMorph ?? g.morph) : g.morph;
   const burst = heroMode ? (g.introBurst ?? g.real[0]) : (g.burst ?? g.real[0]);
   const groupFrames = heroMode ? (g.introFrames ?? g.groupFrames) : g.groupFrames;
   const EXP = Math.max(12, groupFrames - burst);
-  const revealLen = heroMode ? 10 : 20;
-  const tb = f - burst;
+  const tb = f - burst;           // 距爆炸帧(<0 为蓄势)
+  const det = Math.max(0, tb);    // 爆后帧数(clamp≥0)
 
+  // 演变期【线性匀速】:4格进度逐帧完全一致、同速同步(不用 ease,避免「有的快有的慢」);张力交给 burst 爆破本身。
   const drawP = interpolate(f, drawR, [0, 1], cl);
-  const morphP = interpolate(f, morphR, [0, 1], { ...cl, easing: Easing.in(Easing.cubic) });
+  const morphP = interpolate(f, morphR, [0, 1], cl);
+
+  // 毛笔字被「砸」进画面:scale 过冲 punch + 飞白(blur 由糊变锐),不再左→右扫写(扫写太温柔)
+  const revealLen = heroMode ? 8 : 12;
   const realP = interpolate(f, [burst, burst + revealLen], [0, 1], cl);
-  const writeP = interpolate(f, [burst, burst + revealLen - 2], [0, 1], { ...cl, easing: Easing.out(Easing.cubic) });
+  const clear = interpolate(f, [burst, burst + revealLen - 1], [0, 1], { ...cl, easing: Easing.out(Easing.cubic) });
+  const pop = spring({ frame: det, fps, config: { damping: 9, mass: 0.6, stiffness: 210 } });
+  const breathe = tb > revealLen ? Math.sin((tb - revealLen) * 0.2) * 0.015 : 0;
+  const charScale = tb < 0 ? 1 : lerp(1.3, 1.0, Math.min(1, pop)) + breathe;
 
-  // 弹簧过冲(峰值≈1.18)+ 成形后微呼吸 + 整格 kick(初击 + 余震)
-  const pop = spring({ frame: Math.max(0, tb), fps, config: { damping: 7, mass: 0.7, stiffness: 160 } });
-  const breathe = tb > revealLen ? Math.sin((tb - revealLen) * 0.22) * 0.02 : 0;
-  const charScale = tb < 0 ? 1 : 0.6 + 0.55 * pop + breathe;
-  const shock = (t0: number, amp: number, dur: number) => (tb >= t0 && tb < t0 + dur ? Math.sin((tb - t0) * 1.3) * amp * (1 - (tb - t0) / dur) : 0);
-  const kick = shock(0, 15, 11) + shock(Math.round(EXP * 0.3), 7, 9);
-  const kickY = tb >= 0 && tb < 11 ? Math.cos(tb * 1.1) * 5 * (1 - tb / 11) : 0;
+  // 整格硬震:爆瞬最猛,~8 帧指数衰减(炸弹冲击,不是柔性余震)
+  const kAmp = tb >= 0 ? Math.exp(-det / 4) * (heroMode ? 30 : 20) : 0;
+  const kick = tb >= 0 ? Math.sin(det * 2.4) * kAmp : 0;
+  const kickY = tb >= 0 ? Math.cos(det * 2.0) * kAmp * 0.55 : 0;
 
-  // 湿墨边位移:常驻微湿 + 两次爆冲 + 持续沸腾抖动
-  const spike = (t0: number, amp: number, dur: number) => (tb >= t0 && tb < t0 + dur ? (1 - (tb - t0) / dur) * amp : 0);
-  const disp = 1.6 + spike(0, 11, 9) + spike(Math.round(EXP * 0.3), 5, 7) + (tb >= 0 ? Math.sin(tb * 0.5) * 0.9 : 0);
+  // 湿墨边湍流位移:爆瞬猛烈→指数衰减(不再持续沸腾)
+  const disp = 2 + (tb >= 0 ? Math.exp(-det / 6) * 15 : 0);
 
   const strokes = ch.pic.map((p, i) => morphStroke(p, ch.chr[i], morphP));
 
@@ -154,29 +153,37 @@ const CellInkburst: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes;
   const rr = (f - ch.readFrame) / readLen;
   const reading = rr >= 0 && rr <= 1.1;
   const readPulse = reading ? Math.sin(Math.min(Math.max(rr, 0), 1) * Math.PI) : 0;
-  const readRipple = interpolate(f, [ch.readFrame, ch.readFrame + 22], [0, 1], cl);
   const readGlow = readPulse > 0.02 ? ` drop-shadow(0 0 ${16 * readPulse}px ${c.ripple})` : "";
   const pinyinOp = Math.max(realP, readPulse);
 
-  // 三波墨滴:births 铺满整个炸裂段→持续 1.6s 有飞沫,不是一闪。减速外飞+重力下坠+拉伸。
-  const births = [0, Math.round(EXP * 0.28), Math.round(EXP * 0.55)];
+  // ★墨弹:全部 frame0 一齐炸出(瞬时齐射)。角度【全随机】→ 随机团块/空隙 = 不规则墨迹,不是均匀圆。
+  //   三档:chunk(巨墨块·主爆体)/ shard(中·多带飞白甩条)/ mist(细沫·飞散)。初速极高→阻力急停
+  //   (reach=v0·τ·(1-e^-t/τ)),飞行段被拉成彗尾/飞白条,减速收圆;settle 落点收成不规则墨渍留宣纸,其余飞散淡出。
   const parts = useMemo(() => {
     const r = rng(cp * 131 + ci * 7919);
-    const arr: { birth: number; a: number; spd: number; size: number; rot: number; asp: number; life: number; drift: number; seal: boolean }[] = [];
-    births.forEach((birth, w) => {
-      const n = w === 0 ? 34 : 20;
-      for (let i = 0; i < n; i++) {
-        arr.push({
-          birth, a: r() * Math.PI * 2,
-          spd: (w === 0 ? 6 : 4) + r() * (w === 0 ? 11 : 8),
-          size: 6 + r() * (w === 0 ? 32 : 22),
-          rot: r() * 180, asp: 0.4 + r() * 0.9,
-          life: 26 + r() * 20, drift: (r() - 0.5) * 3, seal: r() < 0.13,
-        });
+    const N = heroMode ? 108 : 78;
+    const scl = heroMode ? 1.5 : 1;   // 全屏冷开场墨弹更大更远
+    const arr: { ang: number; v0: number; tau: number; size: number; asp: number; settle: boolean; life: number; grav: number; streak: boolean; seal: boolean }[] = [];
+    for (let i = 0; i < N; i++) {
+      const ang = r() * Math.PI * 2;                             // 全随机角度 → 不规则
+      const t = r();
+      let v0, size, tau, streak;
+      if (t < 0.2) {          // chunk 巨墨块:慢而大,构成主爆体
+        v0 = (7 + r() * 9) * scl; size = (30 + r() * 42) * scl; tau = 4 + r() * 3; streak = false;
+      } else if (t < 0.58) {  // shard 中弹:快,多带飞白甩条
+        v0 = (16 + r() * 20) * scl; size = (10 + r() * 18) * scl; tau = 3 + r() * 3; streak = r() < 0.5;
+      } else {                // mist 细沫:最快,飞散
+        v0 = (22 + r() * 30) * scl; size = (4 + r() * 9) * scl; tau = 2.6 + r() * 3; streak = r() < 0.4;
       }
-    });
+      const asp = 0.3 + r() * 0.45;
+      const settle = r() < 0.55;                                 // 落点留渍 or 飞散淡出
+      const life = settle ? EXP : Math.round(14 + r() * 16);
+      const grav = 0.5 + r() * 0.9;
+      const seal = r() < 0.12;                                   // 朱砂点缀
+      arr.push({ ang, v0, tau, size, asp, settle, life, grav, streak, seal });
+    }
     return arr;
-  }, [cp, ci, EXP]);
+  }, [cp, ci, EXP, heroMode]);
 
   return (
     <div style={{ position: "absolute", left: x, top: y, width: cellW, height: cellH,
@@ -192,67 +199,58 @@ const CellInkburst: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes;
       <div style={{ position: "absolute", left: boxL, top: cyL, width: box, height: 0, borderTop: `1.5px dashed ${c.gridCross}` }} />
       <div style={{ position: "absolute", left: cxL, top: boxT, width: 0, height: box, borderLeft: `1.5px dashed ${c.gridCross}` }} />
 
-      {/* 朱墨读标:朗读到本字时的晕圈外扩(朱砂,区别于黑墨炸裂) */}
+      {/* 朱墨读标:朗读到本字时的『特殊显示』——不规则朱砂晕(无圆环)+ 脉动;box 边框也转朱 */}
       {reading ? (
-        <div style={{ position: "absolute", left: cxL, top: cyL, width: box * 0.72, height: box * 0.72,
-          transform: `translate(-50%,-50%) scale(${0.5 + readRipple * 1.05})`, borderRadius: "50%",
-          border: `4px solid ${c.ripple}`, opacity: (1 - readRipple) * 0.5 }} />
+        <div style={{ position: "absolute", left: cxL, top: cyL, width: box * 0.92, height: box * 0.92,
+          transform: `translate(-50%,-50%) scale(${0.65 + readPulse * 0.4})`,
+          borderRadius: "46% 54% 52% 48% / 50% 47% 53% 50%",
+          background: `radial-gradient(circle, ${c.ripple} 0%, transparent 60%)`,
+          opacity: readPulse * 0.3, filter: "blur(11px)", mixBlendMode: "multiply" }} />
       ) : null}
 
-      {/* 持续外扩的墨轮(环状,中心留白露字):整个炸裂段都在向外滲,把 1.6s 撑满 */}
-      {tb >= 0 && tb < EXP ? (
-        <div style={{ position: "absolute", left: cxL, top: cyL, width: box * 1.1, height: box * 1.1,
-          transform: `translate(-50%,-50%) scale(${interpolate(tb, [0, EXP * 0.7], [0.4, 2.6], cl)}) rotate(${tb * 2}deg)`,
-          borderRadius: "50%", mixBlendMode: "multiply", filter: "blur(7px)",
-          background: `radial-gradient(circle, transparent 0%, transparent 27%, ${c.ink} 44%, ${c.ink} 55%, transparent 76%)`,
-          opacity: interpolate(tb, [0, EXP * 0.12, EXP * 0.82, EXP], [0, 0.55, 0.4, 0], cl) }} />
-      ) : null}
-      {/* 初击闪墨:第一帧一记浓墨爆闪 */}
-      {tb >= 0 && tb < 10 ? (
-        <div style={{ position: "absolute", left: cxL, top: cyL, width: box, height: box,
-          transform: `translate(-50%,-50%) scale(${interpolate(tb, [0, 9], [0.5, 2], cl)})`, borderRadius: "50%",
-          background: `radial-gradient(circle, ${c.ink} 0%, transparent 60%)`, mixBlendMode: "multiply",
-          opacity: interpolate(tb, [0, 2, 10], [0, 0.5, 0], cl), filter: "blur(8px)" }} />
+      {/* 中央巨墨爆体(BANG):frame0 一记浓墨硬核砸碎;湍流+高位移打散成不规则块,非正圆,无任何圆环;短促,交给墨弹撑场 */}
+      {tb >= 0 && tb < 5 ? (
+        <div style={{ position: "absolute", left: cxL, top: cyL, width: box * 0.82, height: box * 0.82,
+          transform: `translate(-50%,-50%) scale(${interpolate(det, [0, 4], [0.3, 1.5], cl)}) rotate(${(cp % 8) * 24}deg)`,
+          borderRadius: "38% 62% 45% 55% / 58% 40% 60% 42%",
+          background: `radial-gradient(circle, ${c.ink} 0%, ${c.ink} 22%, transparent 58%)`,
+          mixBlendMode: "multiply", filter: `url(#${uid}) blur(1.5px)`,
+          opacity: interpolate(det, [0, 1, 5], [0, 0.6, 0], cl) }} />
       ) : null}
 
-      {/* 墨滴飞溅 + 多道湿墨冲击环(SVG;湍流位移让墨边不规则滲开) */}
+      {/* 墨弹飞溅(SVG;湍流位移让墨边不规则滲开) */}
       <svg viewBox={`0 0 ${cellW} ${cellH}`} width={cellW} height={cellH}
         style={{ position: "absolute", left: 0, top: 0, overflow: "visible", mixBlendMode: "multiply" }}>
         <defs>
-          <filter id={uid} x="-60%" y="-60%" width="220%" height="220%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.016 0.021" numOctaves={2} seed={cp % 97} result="n" />
+          <filter id={uid} x="-70%" y="-70%" width="240%" height="240%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015 0.02" numOctaves={2} seed={cp % 97} result="n" />
             <feDisplacementMap in="SourceGraphic" in2="n" scale={disp} xChannelSelector="R" yChannelSelector="G" />
           </filter>
-          <filter id={`${uid}-b`} x="-80%" y="-80%" width="260%" height="260%">
-            <feGaussianBlur stdDeviation="1.7" />
+          <filter id={`${uid}-b`} x="-90%" y="-90%" width="280%" height="280%">
+            <feGaussianBlur stdDeviation="1.5" />
           </filter>
         </defs>
-        {/* 三道错时的湿墨冲击环 */}
-        {[0, Math.round(EXP * 0.33), Math.round(EXP * 0.66)].map((off, k) => {
-          const rt = tb - off, dur = 22;
-          if (rt < 0 || rt > dur) return null;
-          const rad = 30 + rt * 19;
-          const op = (1 - rt / dur) * 0.55;
-          return (
-            <circle key={k} cx={cxL} cy={cyL} r={rad} fill="none"
-              stroke={k === 1 ? c.ripple : c.ink} strokeWidth={Math.max(2, 15 * (1 - rt / dur))}
-              opacity={op} filter={`url(#${uid})`} />
-          );
-        })}
-        {/* 墨滴:三波续飞(blur 使其为墨渍质感;不逐颗湍流以保渲染速度) */}
+        {/* 墨弹:frame0 齐射,减速外飞;飞行段被拉成彗尾/飞白条,减速收圆,settle 落点留渍 */}
         <g filter={`url(#${uid}-b)`}>
           {parts.map((p, i) => {
-            const lt = tb - p.birth;
-            if (lt < 0 || lt >= p.life) return null;
+            if (tb < 0 || det >= p.life) return null;
+            const lt = det;
             const prog = lt / p.life;
-            const reach = p.spd * lt * (1 - prog * 0.4);
-            const px = cxL + Math.cos(p.a) * reach + p.drift * lt;
-            const py = cyL + Math.sin(p.a) * reach + 0.5 * 0.55 * lt * lt * (p.size / 28);
-            const op = (1 - prog) * 0.95;
-            const sc = 0.55 + prog * 1.1;
-            const rx = (p.size / 2) * sc, ry = rx * p.asp;
+            const cosA = Math.cos(p.ang), sinA = Math.sin(p.ang);
+            const speed = p.v0 * Math.exp(-lt / p.tau);
+            const reach = p.v0 * p.tau * (1 - Math.exp(-lt / p.tau));
+            const sag = 0.5 * p.grav * Math.max(0, lt - p.tau) ** 2 * 0.03 * (p.size / 22);
+            const px = cxL + cosA * reach;
+            const py = cyL + sinA * reach + sag;
+            const stretch = (0.5 + speed * (p.streak ? 0.4 : 0.16)) * (p.streak ? 2.1 : 1);
+            const rx = (p.size / 2) * Math.max(1, stretch);
+            const ry = (p.size / 2) * (p.streak ? p.asp * 0.5 : p.asp);
+            const op = p.settle
+              ? interpolate(prog, [0, 0.04, 0.85, 1], [0, 0.9, 0.85, 0.7], cl)
+              : (1 - prog) * 0.92;
+            const deg = (p.ang * 180) / Math.PI;
             return (
-              <g key={i} transform={`translate(${px} ${py}) rotate(${p.rot + prog * 50})`}>
+              <g key={i} transform={`translate(${px} ${py}) rotate(${deg})`}>
                 <ellipse cx={0} cy={0} rx={rx} ry={ry} fill={p.seal ? c.ripple : c.ink} opacity={op} />
               </g>
             );
@@ -260,10 +258,9 @@ const CellInkburst: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes;
         </g>
       </svg>
 
-      {/* 简笔→线条字(湿墨边),炸裂后淡出(墨被炸飞、露出毛笔字);朗读到本字时脉动+朱光 */}
+      {/* 简笔→线条字(湿墨边),炸裂后淡出(墨被炸飞、露出毛笔字);朗读特殊显示=朱光,不加脉动缩放(保同步感) */}
       <svg viewBox="0 0 100 100" width={box} height={box} style={{ position: "absolute", left: boxL, top: boxT,
-        overflow: "visible", opacity: 1 - realP, filter: `url(#${uid})${readGlow}`,
-        transform: `scale(${1 + readPulse * 0.06})`, transformOrigin: "center" }}>
+        overflow: "visible", opacity: 1 - realP, filter: `url(#${uid})${readGlow}`, transformOrigin: "center" }}>
         {strokes.map((p, i) => (
           <path key={i} d={dOf(p)} pathLength={1} fill="none" stroke={c.ink} strokeWidth={4.6}
             strokeLinecap="round" strokeLinejoin="round" strokeDasharray={1} strokeDashoffset={1 - drawP} />
@@ -279,11 +276,11 @@ const CellInkburst: React.FC<{ ch: Ch; ci: number; g: Grid; c: Colors; s: Sizes;
         </svg>
       ) : null}
 
-      {/* 真实毛笔字:飞白扫写(左→右 clip)+ 由糊变锐 + 弹簧过冲 */}
+      {/* 真实毛笔字:被爆开的墨砸进画面——scale 过冲 punch + 飞白(blur 由糊变锐) */}
       <div style={{ position: "absolute", left: boxL, top: boxT, width: box, height: box, display: "flex",
         alignItems: "center", justifyContent: "center", fontFamily: zh, fontSize: heroMode ? 480 : s.char, color: c.ink,
         opacity: realP, transform: `scale(${charScale * (1 + readPulse * 0.05)})`, transformOrigin: "center",
-        clipPath: `inset(0 ${(1 - writeP) * 100}% 0 0)`, filter: `blur(${(1 - writeP) * 3}px)${readGlow}` }}>{ch.c}</div>
+        filter: `blur(${(1 - clear) * 4}px)${readGlow}` }}>{ch.c}</div>
 
       {/* 越南文(深红) */}
       {ch.vi ? (
@@ -306,29 +303,6 @@ const HeroScene: React.FC<{ beat: Beat; g: Grid; c: Colors; s: Sizes; zh: string
   );
 };
 
-// 顶部引导文字条:常驻画面顶部(格子已让位),按 spans 分时段换文案,段间淡入淡出;纯视觉无配音。
-const TopBanner: React.FC<{ b: Banner; c: Colors; latin: string; fps: number }> = ({ b, c, latin, fps }) => {
-  const f = useCurrentFrame();
-  return (
-    <>
-      {b.spans.map((sp, i) => {
-        const from = ms2f(sp.fromMs, fps), to = ms2f(sp.toMs, fps);
-        const op = interpolate(f, [from, from + 8], [0, 1], cl) * interpolate(f, [to - 8, to], [1, 0], cl);
-        if (op <= 0.001) return null;
-        return (
-          <div key={i} style={{ position: "absolute", left: (1080 - b.width) / 2, top: b.y, width: b.width,
-            textAlign: "center", opacity: op }}>
-            {sp.lines.map((l, j) => (
-              <div key={j} style={{ fontFamily: latin, fontWeight: 900, lineHeight: 1.2, marginTop: j ? b.lineGap : 0,
-                fontSize: j === 0 ? b.fontSize : b.fontSize2, color: j === 0 ? c.ink : c.vi }}>{l}</div>
-            ))}
-          </div>
-        );
-      })}
-    </>
-  );
-};
-
 const GroupGrid: React.FC<{ group: Beat; g: Grid; c: Colors; s: Sizes; zh: string; latin: string }> = ({ group, g, c, s, zh, latin }) => {
   const f = useCurrentFrame();
   const fade = interpolate(f, [0, 8, g.groupFrames - 4, g.groupFrames], [0, 1, 1, 0], cl);
@@ -347,7 +321,7 @@ const GroupGrid: React.FC<{ group: Beat; g: Grid; c: Colors; s: Sizes; zh: strin
 };
 
 const GridScene: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats, meta }) => {
-  const m = meta as unknown as { grid: Grid; colors: Colors; sizes: Sizes; banner?: Banner };
+  const m = meta as unknown as { grid: Grid; colors: Colors; sizes: Sizes };
   const g = m.grid, c = m.colors, s = m.sizes;
   const fps = meta.fps;
   const fontCfg = { ...DEFAULT_FONTS, ...(meta.fonts || {}) };
@@ -369,7 +343,6 @@ const GridScene: React.FC<{ beats: Beat[]; meta: Manifest["meta"] }> = ({ beats,
     <AbsoluteFill style={{ backgroundColor: c.paper }}>
       <AbsoluteFill style={{ background: "radial-gradient(130% 90% at 50% 42%, rgba(0,0,0,0) 60%, rgba(120,90,40,0.14) 100%)" }} />
       {segs}
-      {m.banner ? <TopBanner b={m.banner} c={c} latin={latin} fps={fps} /> : null}
     </AbsoluteFill>
   );
 };
