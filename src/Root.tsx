@@ -6,6 +6,7 @@ import { FxSinglePreview } from "./FxSinglePreview";
 import { Cover } from "./Cover";
 import { CoverDrama } from "./CoverDrama";
 import { CoverHsk } from "./CoverHsk";
+import { CoverHsksVocab } from "./CoverHsksVocab";
 import { AvatarHsk } from "./AvatarHsk";
 import catalog from "../catalog.json";
 
@@ -45,6 +46,18 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
         defaultProps={{ hook: "Chữ Hán bắt nguồn từ hình vẽ", tag: "HSK · Tự học tiếng Trung", ep: "Tập 1" }}
+      />
+
+      {/* ── hsks-vocab 词汇卡封面：本级主题色 + 越南语钩子 + 3 张示例词卡(黑线简笔画)。──
+           渲染：remotion still src/index.ts cover-hsks-vocab <out.png> --props=<视频目录>/cover.json */}
+      <Composition
+        id="cover-hsks-vocab"
+        component={CoverHsksVocab}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{ level: "HSK1", accent: "#ff7a1a", hook: "Từ vựng HSK phải thuộc", titleVi: "Từ vựng · 词汇", range: "No.1–18", tag: "HSK · Tự học tiếng Trung", words: [] }}
       />
 
       {/* ── 头像（1:1，裁圆用）：learn-Chinese 频道头像。渲染：remotion still src/index.ts avatar-hsk <out.png> */}

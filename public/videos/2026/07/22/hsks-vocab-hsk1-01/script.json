@@ -1,0 +1,6 @@
+{
+  "_comment": "hsks-vocab 样片(第1条)。只声明级别+批量;取哪些词由覆盖账本按 sort_order 自动定(系统化,无重复无遗漏)。18词=3页×6,音频驱动同步,偶数秒。",
+  "level": "HSK1",
+  "count": 18,
+  "titleVi": "Từ vựng HSK1 · No.1–18"
+}

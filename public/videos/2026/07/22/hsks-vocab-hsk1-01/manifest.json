@@ -1,0 +1,244 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "layout": "hsks-vocab",
+    "theme": {
+      "accent": "#ff7a1a"
+    },
+    "sidePad": 96,
+    "fonts": {
+      "_comment": "中文用系统中文字体栈;拼音+越南文用 Nunito(完整越南语声调)。",
+      "files": [
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "400 900"
+        }
+      ],
+      "zhStack": [
+        "PingFang SC",
+        "Microsoft YaHei",
+        "Hiragino Sans GB",
+        "sans-serif"
+      ],
+      "zhWeight": 700,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "sans-serif"
+      ]
+    },
+    "badge": {
+      "_comment": "首几秒『看图学中文』引导标(数据驱动,Video.tsx 渲染)。这是看图识词,与短剧无关,emoji 用 🖼️。",
+      "textVi": "Học tiếng Trung qua hình",
+      "textZh": "看图学中文",
+      "emoji": "🖼️",
+      "durationMs": 2600
+    },
+    "source": {
+      "region": {
+        "top": 320
+      }
+    }
+  },
+  "beats": [
+    {
+      "id": "p1",
+      "durationMs": 7333,
+      "page": 1,
+      "pages": 3,
+      "source": "HSK1·词汇·No.1-18",
+      "titleVi": "Từ vựng HSK1 · No.1–18",
+      "accent": "#ff7a1a",
+      "words": [
+        {
+          "c": "爱",
+          "py": "ài",
+          "pos": "动",
+          "vi": "yêu",
+          "audio": "library/tts-vocab/w-7231.mp3",
+          "audioMs": 648,
+          "readAtMs": 0
+        },
+        {
+          "c": "八",
+          "py": "bā",
+          "pos": "数",
+          "vi": "tám (8)",
+          "audio": "library/tts-vocab/w-516b.mp3",
+          "audioMs": 600,
+          "readAtMs": 1222
+        },
+        {
+          "c": "爸爸",
+          "py": "bàba",
+          "pos": "名",
+          "vi": "bố",
+          "audio": "library/tts-vocab/w-7238-7238.mp3",
+          "audioMs": 744,
+          "readAtMs": 2444
+        },
+        {
+          "c": "吧",
+          "py": "ba",
+          "pos": "助",
+          "vi": "nhé / đi (trợ từ)",
+          "audio": "library/tts-vocab/w-5427.mp3",
+          "audioMs": 576,
+          "readAtMs": 3667
+        },
+        {
+          "c": "白天",
+          "py": "báitiān",
+          "pos": "名",
+          "vi": "ban ngày",
+          "audio": "library/tts-vocab/w-767d-5929.mp3",
+          "audioMs": 888,
+          "readAtMs": 4889
+        },
+        {
+          "c": "百",
+          "py": "bǎi",
+          "pos": "数",
+          "vi": "trăm (100)",
+          "audio": "library/tts-vocab/w-767e.mp3",
+          "audioMs": 648,
+          "readAtMs": 6111
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "durationMs": 7334,
+      "page": 2,
+      "pages": 3,
+      "source": "HSK1·词汇·No.1-18",
+      "titleVi": "Từ vựng HSK1 · No.1–18",
+      "accent": "#ff7a1a",
+      "words": [
+        {
+          "c": "半",
+          "py": "bàn",
+          "pos": "数、（副）",
+          "vi": "nửa",
+          "audio": "library/tts-vocab/w-534a.mp3",
+          "audioMs": 624,
+          "readAtMs": 0
+        },
+        {
+          "c": "包子",
+          "py": "bāozi",
+          "pos": "名",
+          "vi": "bánh bao",
+          "audio": "library/tts-vocab/w-5305-5b50.mp3",
+          "audioMs": 840,
+          "readAtMs": 1223
+        },
+        {
+          "c": "杯子",
+          "py": "bēizi",
+          "pos": "名",
+          "vi": "cái cốc",
+          "audio": "library/tts-vocab/w-676f-5b50.mp3",
+          "audioMs": 840,
+          "readAtMs": 2445
+        },
+        {
+          "c": "本",
+          "py": "běn",
+          "pos": "量",
+          "vi": "quyển (lượng từ)",
+          "audio": "library/tts-vocab/w-672c.mp3",
+          "audioMs": 720,
+          "readAtMs": 3667
+        },
+        {
+          "c": "边",
+          "py": "biān",
+          "pos": "名、后缀",
+          "vi": "bên / phía",
+          "audio": "library/tts-vocab/w-8fb9.mp3",
+          "audioMs": 648,
+          "readAtMs": 4889
+        },
+        {
+          "c": "病",
+          "py": "bìng",
+          "pos": "名、动",
+          "vi": "bệnh / ốm",
+          "audio": "library/tts-vocab/w-75c5.mp3",
+          "audioMs": 648,
+          "readAtMs": 6111
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "durationMs": 7333,
+      "page": 3,
+      "pages": 3,
+      "source": "HSK1·词汇·No.1-18",
+      "titleVi": "Từ vựng HSK1 · No.1–18",
+      "accent": "#ff7a1a",
+      "words": [
+        {
+          "c": "不",
+          "py": "bù",
+          "pos": "副",
+          "vi": "không",
+          "audio": "library/tts-vocab/w-4e0d.mp3",
+          "audioMs": 600,
+          "readAtMs": 0
+        },
+        {
+          "c": "不客气",
+          "py": "bú kèqi",
+          "pos": "",
+          "vi": "đừng khách sáo",
+          "audio": "library/tts-vocab/w-4e0d-5ba2-6c14.mp3",
+          "audioMs": 984,
+          "readAtMs": 1222
+        },
+        {
+          "c": "不要",
+          "py": "búyào",
+          "pos": "副",
+          "vi": "đừng / không muốn",
+          "audio": "library/tts-vocab/w-4e0d-8981.mp3",
+          "audioMs": 792,
+          "readAtMs": 2444
+        },
+        {
+          "c": "菜",
+          "py": "cài",
+          "pos": "名",
+          "vi": "món ăn / rau",
+          "audio": "library/tts-vocab/w-83dc.mp3",
+          "audioMs": 720,
+          "readAtMs": 3666
+        },
+        {
+          "c": "茶",
+          "py": "chá",
+          "pos": "名",
+          "vi": "trà",
+          "audio": "library/tts-vocab/w-8336.mp3",
+          "audioMs": 816,
+          "readAtMs": 4889
+        },
+        {
+          "c": "唱",
+          "py": "chàng",
+          "pos": "动",
+          "vi": "hát",
+          "audio": "library/tts-vocab/w-5531.mp3",
+          "audioMs": 672,
+          "readAtMs": 6111
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "_comment": "模板『hsks-vocab · HSK词汇卡(9:16 高密度速览·恒12s)』。属 hsks 家族,守 templates/hsks/GANGLING.md。系统化覆盖:按 /hsk/<level>/01_vocabulary.csv 的 sort_order + 覆盖账本 _coverage.json 顺序推进,自动取下一批,无重复无遗漏。数据零编造(词/拼音/词性来自CSV,越南语来自 vi-lexicon.json)。分页密度→节奏:perPage=6,count 决定页数(18→3页4s / 24→4页3s / 30→5页2.4s / 36→6页2s)。改音色/密度/配色只改本文件。渲染层 src/layouts/hsks-vocab.tsx。",
+  "id": "hsks-vocab",
+  "name": "HSK词汇卡(9:16)",
+  "seriesId": "hsks",
+  "layout": "hsks-vocab",
+  "meta": { "fps": 30, "width": 1080, "height": 1920 },
+
+  "vocab": {
+    "_comment": "perPage=每页词数(密度)。count 落在 perPage×3..perPage×6 之间以得 3..6 页。sidePad=左右安全区(避平台按钮)。",
+    "perPage": 6,
+    "defaultCount": 18,
+    "gapMs": 200,
+    "sidePad": 96,
+    "audio": {
+      "_comment": "逐词朗读音色:开朗姐姐(火山TTS)。★逐词等距节拍:每词一个 slot(≥最长词音频+gapMs),词间=组间停顿完全均分;总时长取偶数秒。speed 1.1 控总长≤24s。改音色须用户批准。",
+      "voice": "zh_female_kailangjiejie_moon_bigtts",
+      "speed": 1.2
+    },
+    "badge": {
+      "_comment": "首几秒『看图学中文』引导标(数据驱动,Video.tsx 渲染)。这是看图识词,与短剧无关,emoji 用 🖼️。",
+      "textVi": "Học tiếng Trung qua hình",
+      "textZh": "看图学中文",
+      "emoji": "🖼️",
+      "durationMs": 2600
+    }
+  },
+
+  "fonts": {
+    "_comment": "中文用系统中文字体栈;拼音+越南文用 Nunito(完整越南语声调)。",
+    "files": [
+      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "400 900" }
+    ],
+    "zhStack": ["PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "sans-serif"],
+    "zhWeight": 700,
+    "latinStack": ["Nunito", "PingFang SC", "Microsoft YaHei", "sans-serif"]
+  }
+}

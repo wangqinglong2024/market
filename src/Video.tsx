@@ -50,6 +50,7 @@ const LearnBadge: React.FC<{ meta: Manifest["meta"] }> = ({ meta }) => {
   const badge = meta.badge;
   const textVi = badge?.textVi ?? "Học tiếng Trung";
   const textZh = badge?.textZh;
+  const emoji = badge?.emoji ?? "🎬";
   const pairs = badge?.pairs;
   const durMs = badge?.durationMs ?? 3000;
   const hideAt = Math.round((durMs / 1000) * fps);
@@ -78,7 +79,7 @@ const LearnBadge: React.FC<{ meta: Manifest["meta"] }> = ({ meta }) => {
           background: "rgba(6,10,14,0.82)", border: `2.5px solid ${CYAN}`,
           boxShadow: `0 0 26px rgba(37,244,238,0.45), 0 6px 18px rgba(0,0,0,0.4)`,
         }}>
-          <span style={{ fontSize: 40, lineHeight: 1 }}>🎬</span>
+          <span style={{ fontSize: 40, lineHeight: 1 }}>{emoji}</span>
           {pairs?.length ? (
             // 逐字对照:每个汉字一列,越南语词对齐其下,列间距拉大。sep=分隔点列。
             <div style={{ display: "flex", alignItems: "flex-start", gap: 20 }}>

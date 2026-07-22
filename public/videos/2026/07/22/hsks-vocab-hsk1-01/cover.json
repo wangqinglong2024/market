@@ -1,0 +1,28 @@
+{
+  "level": "HSK1",
+  "accent": "#ff7a1a",
+  "titleVi": "Từ vựng · 词汇",
+  "hook": "18 từ vựng HSK1",
+  "range": "No.1-18",
+  "tag": "HSK · Tự học tiếng Trung",
+  "words": [
+    {
+      "c": "爱",
+      "py": "ài",
+      "pos": "动",
+      "vi": "yêu"
+    },
+    {
+      "c": "八",
+      "py": "bā",
+      "pos": "数",
+      "vi": "tám (8)"
+    },
+    {
+      "c": "爸爸",
+      "py": "bàba",
+      "pos": "名",
+      "vi": "bố"
+    }
+  ]
+}

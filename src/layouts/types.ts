@@ -171,6 +171,8 @@ export type Manifest = {
     badge?: {
       textVi: string;
       textZh?: string;
+      // 引导标左侧 emoji(数据驱动,缺省 🎬)。看图学中文类用 🖼️，看短剧类用 🎬。
+      emoji?: string;
       // 逐字对照:每个汉字对齐其越南语词(列),{sep} 为分隔点列。有 pairs 时按列渲染。
       pairs?: { zh?: string; vi?: string; sep?: string }[];
       durationMs?: number;

@@ -2,6 +2,17 @@
   "_comment": "视频总账。每条视频一条记录，扛上千条时的索引与状态。id 建议 slug；产物在 public/videos/<shard>/<id>/，其中 shard=年/月/日(YYYY/MM/DD，2026-07-05 用户改：原按月分片改为年月日三级)。",
   "videos": [
     {
+      "id": "hsks-vocab-hsk1-01",
+      "title": "HSK词汇卡·HSK1 No.1-24【高密度速览·恒12s·4页×3s·越南受众】",
+      "template": "hsks/vocab",
+      "shard": "2026/07/22",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-22",
+      "manifest": "public/videos/2026/07/22/hsks-vocab-hsk1-01/manifest.json",
+      "beats": 3
+    },
+    {
       "id": "hsk-burst-01",
       "title": "HSK字源E1·自然万物【炸裂墨韵版·inkburst·冷开场日+12字3组·11.1s】",
       "template": "hsk-ziyuan",
