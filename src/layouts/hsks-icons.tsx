@@ -88,6 +88,52 @@ function Glyph({ w, accent, f }: { w: string; accent: string; f: number }): Reac
       return <S><g transform={`translate(${sin(0.2,5)} 0)`}><line x1="26" y1="50" x2="66" y2="50" stroke={accent} strokeWidth="8" /><path d="M58 36l16 14-16 14z" fill={accent} /></g><circle cx="24" cy="50" r="7" fill="#ff5a7a" /></S>;
     case "大": case "大学": case "大学生": // 学士帽流苏摆
       return <S><path d="M50 22l32 16-32 13-32-13z" fill={accent} /><path d="M32 45v13a18 7 0 0 0 36 0V45" /><g transform={`rotate(${sin(0.16,7)} 82 38)`}><line x1="82" y1="38" x2="82" y2="58" /><circle cx="82" cy="61" r="3.4" fill={accent} /></g></S>;
+    case "吧": case "呢": case "吗": case "啊": { // 语气助词→对话气泡+打字点(抽象:说话的语气)
+      const d = Math.floor((f / 7) % 4);
+      return <S><g transform={`translate(0 ${sin(0.12, 2)})`}>
+        <rect x="20" y="26" width="60" height="40" rx="14" fill={`${accent}22`} />
+        <path d="M33 64L33 79L49 64Z" fill={`${accent}22`} stroke="none" />
+        {[37, 50, 63].map((x, i) => <circle key={i} cx={x} cy="46" r="5.2" fill={INK} stroke="none" opacity={i <= d ? 1 : 0.28} />)}
+      </g></S>;
+    }
+    case "边": case "旁边": { // 侧/边→高亮侧边条 + 外指箭头
+      const a = Math.abs(sin(0.16, 4));
+      return <S>
+        <rect x="32" y="28" width="36" height="44" rx="6" fill={`${accent}18`} />
+        <rect x="27" y="28" width="7" height="44" rx="3.5" fill={accent} stroke="none" />
+        <rect x="66" y="28" width="7" height="44" rx="3.5" fill={accent} stroke="none" />
+        <path d={`M${22 - a} 50l9-7v14z`} fill={INK} stroke="none" />
+        <path d={`M${78 + a} 50l-9-7v14z`} fill={INK} stroke="none" />
+      </S>;
+    }
+    case "不": { // 否定→禁止符🚫
+      const s = 1 + Math.abs(Math.sin(f * 0.14)) * 0.08;
+      return <S><g transform={`translate(50 50) scale(${s}) translate(-50 -50)`} stroke="#e03131">
+        <circle cx="50" cy="50" r="30" fill="none" strokeWidth="9" />
+        <line x1="29" y1="29" x2="71" y2="71" strokeWidth="9" />
+      </g></S>;
+    }
+    case "不要": { // 拒绝→禁止符压住一件小物(不想要它)
+      const s = 1 + Math.abs(Math.sin(f * 0.15)) * 0.07;
+      return <S>
+        <path d="M50 38l4.5 9.5 10.5 1-7.5 7.3 1.8 10.4L50 71l-9.3 4.2 1.8-10.4-7.5-7.3 10.5-1z" fill={accent} opacity="0.45" stroke="none" />
+        <g transform={`translate(50 50) scale(${s}) translate(-50 -50)`} stroke="#e03131">
+          <circle cx="50" cy="50" r="30" fill="none" strokeWidth="9" />
+          <line x1="29" y1="29" x2="71" y2="71" strokeWidth="9" />
+        </g>
+      </S>;
+    }
+    case "不客气": case "谢谢": { // 客气/致谢→挥手 + 星光(友好场景)
+      const wave = sin(0.32, 13);
+      return <S>
+        <g transform={`rotate(${wave} 50 74)`}>
+          {[37, 45, 53, 61].map((x, i) => { const tall = (i === 1 || i === 2) ? 4 : 0; return <rect key={i} x={x} y={30 - tall} width="7.5" height={26 + tall} rx="3.7" fill="#ffd9a8" />; })}
+          <rect x="34" y="50" width="36" height="28" rx="13" fill="#ffd9a8" />
+        </g>
+        <path d="M22 40l2.2 5.4 5.4 2.2-5.4 2.2L22 55l-2.2-5.2-5.4-2.2 5.4-2.2z" fill="#ffcf33" stroke="none" />
+        <circle cx="76" cy="34" r="3.6" fill="#ffcf33" stroke="none" />
+      </S>;
+    }
     default:
       return null;
   }
