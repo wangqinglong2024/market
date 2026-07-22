@@ -154,15 +154,15 @@ const Card: React.FC<{ w: Word; idx: number; nextAtMs: number; fonts?: FontsMeta
 
   return (
     <div style={{
-      position: "relative", borderRadius: 30, background: "#ffffff",
-      border: `3px solid ${isActive ? pc : "rgba(15,23,42,0.06)"}`,
-      boxShadow: isActive ? `0 0 0 4px ${pc}22, 0 14px 34px ${pc}45` : "0 8px 20px rgba(15,23,42,0.08)",
+      position: "relative", borderRadius: 30, background: isActive ? "#ffffff" : `${pc}0f`,
+      border: `3px solid ${isActive ? pc : `${pc}44`}`,
+      boxShadow: isActive ? `0 0 0 4px ${pc}22, 0 16px 36px ${pc}55` : `0 8px 20px ${pc}22`,
       opacity: op, transform: `translateY(${enterY}px) scale(${enterScale * litScale})`, transformOrigin: "center",
       display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
-      padding: "18px 10px 16px", overflow: "hidden",
+      padding: "16px 10px 14px", overflow: "hidden",
     }}>
       {/* 顶部色条(词性) */}
-      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 8, background: pc, opacity: 0.9 }} />
+      <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 10, background: pc, opacity: 0.95 }} />
       {/* 激活扫光 */}
       {isActive ? (
         <div style={{
@@ -174,20 +174,23 @@ const Card: React.FC<{ w: Word; idx: number; nextAtMs: number; fonts?: FontsMeta
       {/* 命中色墨炸裂 + 迸发星火 */}
       {isActive ? <Burst localMs={localMs} color={pc} /> : null}
       {isActive ? <Sparkles t={litT} color={pc} /> : null}
-      {/* 卡通图标(略缩，给文字腾空间) */}
-      <div style={{ width: 128, height: 128, filter: isActive ? `drop-shadow(0 6px 16px ${pc}77)` : "none", transform: `scale(${1 + litT * 0.06})` }}>
+      {/* 卡通图标(放大 + 彩色圆角底板,更醒目) */}
+      <div style={{
+        width: 150, height: 150, background: isActive ? `${pc}1c` : "#ffffffcc", borderRadius: 26, padding: 12,
+        boxShadow: `inset 0 0 0 2px ${pc}33`, filter: isActive ? `drop-shadow(0 8px 18px ${pc}77)` : "none", transform: `scale(${1 + litT * 0.06})`,
+      }}>
         <HskIcon word={w.c} accent={pc} />
       </div>
-      {/* 拼音(放大加粗) */}
-      <div style={{ fontFamily: latinFam(fonts), fontSize: 40, fontWeight: 800, color: pc, marginTop: 6, lineHeight: 1 }}>{w.py}</div>
-      {/* 汉字(缩小，不再压过其它) */}
+      {/* 拼音 */}
+      <div style={{ fontFamily: latinFam(fonts), fontSize: 40, fontWeight: 800, color: pc, marginTop: 8, lineHeight: 1 }}>{w.py}</div>
+      {/* 汉字 */}
       <div style={{ fontFamily: zhFam(fonts), fontSize: 58, fontWeight: 800, color: "#151b26", lineHeight: 1.02, marginTop: 3 }}>{w.c}</div>
-      {/* 越南语释义(放大加粗) */}
+      {/* 越南语释义 */}
       <div style={{ fontFamily: latinFam(fonts), fontSize: 38, fontWeight: 800, color: "#26324a", marginTop: 6, textAlign: "center", lineHeight: 1.08 }}>{w.vi}</div>
-      {/* 词性小标(放大) */}
+      {/* 词性小标 */}
       <div style={{
-        marginTop: 9, padding: "4px 16px", borderRadius: 999, background: `${pc}1f`,
-        fontFamily: latinFam(fonts), fontSize: 26, fontWeight: 800, color: pc,
+        marginTop: 8, padding: "4px 16px", borderRadius: 999, background: pc,
+        fontFamily: latinFam(fonts), fontSize: 26, fontWeight: 800, color: "#fff",
       }}>{(w.pos || "").trim().charAt(0)} · {posLabelVi[(w.pos || "").trim().charAt(0)] || ""}</div>
     </div>
   );

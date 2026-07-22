@@ -1,0 +1,35 @@
+{
+  "_comment": "模板『hsks-hanzi · HSK部件识字(9:16 高密度·越南受众)』。属 hsks 家族,守 templates/hsks/GANGLING.md。★与 hsk-ziyuan 区分:ziyuan=单字字源演变;本模板=按部件归类的批量识字。系统化覆盖:按 /hsk/<level>/02_hanzi.csv 行序(认读优先)+ 覆盖账本 _coverage.json 推进。数据零编造(字来自CSV,拼音由 pinyin-pro 计算,字义越南语来自 vi-lexicon.json,部件来自 components.json)。专属动效:部件积木拼合。每页 6 字(2×3)。渲染层 src/layouts/hsks-hanzi.tsx。",
+  "id": "hsks-hanzi",
+  "name": "HSK部件识字(9:16)",
+  "seriesId": "hsks",
+  "layout": "hsks-hanzi",
+  "meta": { "fps": 30, "width": 1080, "height": 1920 },
+
+  "hanzi": {
+    "_comment": "perPage=6(2×3 网格)。count 18..36 得 3..6 页。读单字(短)→slot 小。sidePad=左右安全区。",
+    "perPage": 9,
+    "defaultCount": 18,
+    "gapMs": 240,
+    "sidePad": 130,
+    "audio": {
+      "_comment": "逐字朗读音色:开朗姐姐(火山TTS)。★等距节拍偶数秒≤24s。改音色须用户批准。",
+      "voice": "zh_female_kailangjiejie_moon_bigtts",
+      "speed": 1.2
+    },
+    "badge": {
+      "_comment": "『看图学中文』引导标(数据驱动)。emoji 🧩(部件拼合)。",
+      "textVi": "Học chữ Hán theo bộ thủ",
+      "textZh": "部件识字",
+      "emoji": "🧩",
+      "durationMs": 2600
+    }
+  },
+
+  "fonts": {
+    "files": [{ "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "400 900" }],
+    "zhStack": ["PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "sans-serif"],
+    "zhWeight": 700,
+    "latinStack": ["Nunito", "PingFang SC", "Microsoft YaHei", "sans-serif"]
+  }
+}

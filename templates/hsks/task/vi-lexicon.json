@@ -1,0 +1,15 @@
+{
+  "_comment": "HSK 交际任务·越南语(任务句长句翻译,必须审校)。key=CSV task_example 原文。build 缺则报错,人工补后再跑,绝不臆造。",
+
+  "能听懂他人关于日常休闲活动的简单问题，或关于某人喜好的日常休闲活动的简单信息介绍。如：看书、唱歌、看电视等。": "Nghe hiểu câu hỏi đơn giản của người khác về hoạt động giải trí thường ngày, hoặc lời giới thiệu đơn giản về sở thích giải trí của ai đó. Ví dụ: đọc sách, ca hát, xem tivi…",
+
+  "能看懂关于日常休闲活动的简单信息，如：活动的时间和地点等。": "Đọc hiểu thông tin đơn giản về hoạt động giải trí thường ngày, ví dụ: thời gian và địa điểm của hoạt động…",
+
+  "能简单介绍自己对日常休闲活动的喜好、安排等。": "Giới thiệu đơn giản về sở thích, sắp xếp… của bản thân với các hoạt động giải trí thường ngày.",
+
+  "能询问家人、朋友、同学等喜好的日常休闲活动；能回答关于自己、家人或朋友日常休闲活动的喜好、安排等简单问题。": "Hỏi được người thân, bạn bè, bạn học… về hoạt động giải trí ưa thích; trả lời được câu hỏi đơn giản về sở thích, sắp xếp hoạt động giải trí của mình, người thân hay bạn bè.",
+
+  "能听懂家人、同学、朋友等询问学校情况、课后活动的简单问题，或关于学校学习和课后活动信息的简单介绍。如：学校、老师、同学的基本信息，课后安排等。": "Nghe hiểu câu hỏi đơn giản của người thân, bạn học, bạn bè về tình hình trường lớp và hoạt động ngoại khóa, hoặc giới thiệu đơn giản về việc học và hoạt động sau giờ học. Ví dụ: thông tin cơ bản về trường, thầy cô, bạn học, lịch sau giờ học…",
+
+  "能看懂课表、学生信息表等材料中有关上述学习或课后活动的简单信息。": "Đọc hiểu thông tin đơn giản về việc học hoặc hoạt động ngoại khóa trong thời khóa biểu, bảng thông tin học sinh…"
+}

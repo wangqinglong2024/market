@@ -2,6 +2,39 @@
   "_comment": "视频总账。每条视频一条记录，扛上千条时的索引与状态。id 建议 slug；产物在 public/videos/<shard>/<id>/，其中 shard=年/月/日(YYYY/MM/DD，2026-07-05 用户改：原按月分片改为年月日三级)。",
   "videos": [
     {
+      "id": "hsks-grammar-hsk1-01",
+      "title": "HSK语法点·HSK1 动作的态【例句打字机+关键词脉冲·9:16·越南受众】",
+      "template": "hsks/grammar",
+      "shard": "2026/07/23",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-23",
+      "manifest": "public/videos/2026/07/23/hsks-grammar-hsk1-01/manifest.json",
+      "beats": 3
+    },
+    {
+      "id": "hsks-task-hsk1-01",
+      "title": "HSK我能做到·HSK1 交流休闲活动【逐条打钩✓·9:16·越南受众】",
+      "template": "hsks/task",
+      "shard": "2026/07/23",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-23",
+      "manifest": "public/videos/2026/07/23/hsks-task-hsk1-01/manifest.json",
+      "beats": 2
+    },
+    {
+      "id": "hsks-hanzi-hsk1-01",
+      "title": "HSK部件识字·HSK1 认读【部件积木拼合·9:16·越南受众】",
+      "template": "hsks/hanzi",
+      "shard": "2026/07/23",
+      "lang": "vi",
+      "status": "built",
+      "createdAt": "2026-07-23",
+      "manifest": "public/videos/2026/07/23/hsks-hanzi-hsk1-01/manifest.json",
+      "beats": 2
+    },
+    {
       "id": "hsks-vocab-hsk1-01",
       "title": "HSK词汇卡·HSK1 No.1-24【高密度速览·恒12s·4页×3s·越南受众】",
       "template": "hsks/vocab",

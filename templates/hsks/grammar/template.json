@@ -1,0 +1,33 @@
+{
+  "_comment": "模板『hsks-grammar · HSK语法点(9:16 高密度·越南受众)』。属 hsks 家族,守 templates/hsks/GANGLING.md。系统化覆盖:按 /hsk/<level>/05_grammar.csv 行序 + 覆盖账本 _coverage.json 顺序推进,无重复无遗漏。数据零编造(语法点/规则/官方例句来自CSV,拼音由 pinyin-pro 计算,越南语来自 vi-lexicon.json)。专属动效:例句打字机浮现 + 语法关键词脉冲高亮。每页 1 个语法点。改音色/密度只改本文件。渲染层 src/layouts/hsks-grammar.tsx。",
+  "id": "hsks-grammar",
+  "name": "HSK语法点(9:16)",
+  "seriesId": "hsks",
+  "layout": "hsks-grammar",
+  "meta": { "fps": 30, "width": 1080, "height": 1920 },
+
+  "grammar": {
+    "_comment": "★无配音·密集图文卡(用户 2026-07-23)。perPage=3(每页3个语法点,中越结合+配图,用户嫌2个太少)。count=9 → 3 页。pageMs=每页停留(无音频,固定时长)。sidePad=左右安全区。",
+    "perPage": 3,
+    "defaultCount": 9,
+    "pageMs": 4500,
+    "sidePad": 130,
+    "badge": {
+      "_comment": "首几秒『看图学中文』引导标(数据驱动)。emoji 🖼️。",
+      "textVi": "Học ngữ pháp tiếng Trung",
+      "textZh": "看例句学语法",
+      "emoji": "🖼️",
+      "durationMs": 2600
+    }
+  },
+
+  "fonts": {
+    "_comment": "中文用系统中文字体栈;拼音+越南文用 Nunito(完整越南语声调)。",
+    "files": [
+      { "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "400 900" }
+    ],
+    "zhStack": ["PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "sans-serif"],
+    "zhWeight": 700,
+    "latinStack": ["Nunito", "PingFang SC", "Microsoft YaHei", "sans-serif"]
+  }
+}

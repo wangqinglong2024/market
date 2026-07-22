@@ -1,0 +1,23 @@
+{
+  "level": "HSK1",
+  "accent": "#ff7a1a",
+  "kind": "Kỹ năng · 交际",
+  "hook": "Với HSK1 bạn làm được gì?",
+  "range": "#1-3",
+  "tag": "HSK · Tự học tiếng Trung",
+  "icon": "✅",
+  "samples": [
+    {
+      "zh": "能听懂他人关于日常休闲活动的简单问题，或关于…",
+      "vi": "Nghe hiểu câu hỏi đơn giản của người khác về hoạt động giải trí thường ngày, hoặc lời giới thiệu đơn giản về sở thích giải trí của ai đó. Ví dụ: đọc sách, ca hát, xem tivi…"
+    },
+    {
+      "zh": "能看懂关于日常休闲活动的简单信息，如：活动的…",
+      "vi": "Đọc hiểu thông tin đơn giản về hoạt động giải trí thường ngày, ví dụ: thời gian và địa điểm của hoạt động…"
+    },
+    {
+      "zh": "能简单介绍自己对日常休闲活动的喜好、安排等。",
+      "vi": "Giới thiệu đơn giản về sở thích, sắp xếp… của bản thân với các hoạt động giải trí thường ngày."
+    }
+  ]
+}

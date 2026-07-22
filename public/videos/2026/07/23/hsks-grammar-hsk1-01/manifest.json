@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "layout": "hsks-grammar",
+    "theme": {
+      "accent": "#ff7a1a"
+    },
+    "sidePad": 130,
+    "fonts": {
+      "_comment": "中文用系统中文字体栈;拼音+越南文用 Nunito(完整越南语声调)。",
+      "files": [
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "400 900"
+        }
+      ],
+      "zhStack": [
+        "PingFang SC",
+        "Microsoft YaHei",
+        "Hiragino Sans GB",
+        "sans-serif"
+      ],
+      "zhWeight": 700,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "sans-serif"
+      ]
+    },
+    "badge": {
+      "_comment": "首几秒『看图学中文』引导标(数据驱动)。emoji 🖼️。",
+      "textVi": "Học ngữ pháp tiếng Trung",
+      "textZh": "看例句学语法",
+      "emoji": "🖼️",
+      "durationMs": 2600
+    },
+    "source": {
+      "region": {
+        "top": 320
+      }
+    }
+  },
+  "beats": [
+    {
+      "id": "p1",
+      "durationMs": 4500,
+      "page": 1,
+      "pages": 3,
+      "source": "HSK1·语法·动作的态",
+      "titleVi": "Ngữ pháp HSK1 · Thì của động tác",
+      "accent": "#ff7a1a",
+      "items": [
+        {
+          "label": "变化态",
+          "type": "动作的态",
+          "rule": "用语气助词“了2”表示",
+          "ruleVi": "Dùng trợ từ ngữ khí 了 (biểu thị sự thay đổi, tình huống mới)",
+          "example": "八点了，起床吧。",
+          "examplePy": "bā diǎn le ， qǐ chuáng ba 。",
+          "exampleVi": "8 giờ rồi, dậy thôi.",
+          "keyword": "了",
+          "icon": "clock8"
+        },
+        {
+          "label": "完成态",
+          "type": "动作的态",
+          "rule": "用动态助词“了1”表示",
+          "ruleVi": "Dùng trợ từ động thái 了 (biểu thị hành động đã hoàn thành)",
+          "example": "你学了多少个汉字？",
+          "examplePy": "nǐ xué le duō shǎo gè hàn zì ？",
+          "exampleVi": "Bạn đã học được bao nhiêu chữ Hán?",
+          "keyword": "了",
+          "icon": "done"
+        },
+        {
+          "label": "进行态",
+          "type": "动作的态",
+          "rule": "……呢",
+          "ruleVi": "…呢 (biểu thị hành động đang diễn ra)",
+          "example": "我没看电视，学习呢。",
+          "examplePy": "wǒ méi kàn diàn shì ， xué xí ne 。",
+          "exampleVi": "Tôi không xem tivi, đang học bài.",
+          "keyword": "呢",
+          "icon": "study"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "durationMs": 4500,
+      "page": 2,
+      "pages": 3,
+      "source": "HSK1·语法·动作的态",
+      "titleVi": "Ngữ pháp HSK1 · Thì của động tác",
+      "accent": "#ff7a1a",
+      "items": [
+        {
+          "label": "进行态",
+          "type": "动作的态",
+          "rule": "……在/正在+动词",
+          "ruleVi": "在/正在 + động từ (đang làm gì đó)",
+          "example": "同学们在/正在上课。",
+          "examplePy": "tóng xué men zài / zhèng zài shàng kè 。",
+          "exampleVi": "Các bạn học sinh đang học trên lớp.",
+          "keyword": "正在",
+          "icon": "class"
+        },
+        {
+          "label": "进行态",
+          "type": "动作的态",
+          "rule": "……在/正在+动词……+呢",
+          "ruleVi": "在/正在 + động từ + 呢 (đang làm gì đó)",
+          "example": "王老师在/正在打电话呢。",
+          "examplePy": "wáng lǎo shī zài / zhèng zài dǎ diàn huà ne 。",
+          "exampleVi": "Cô Vương đang gọi điện thoại.",
+          "keyword": "正在",
+          "icon": "progress"
+        },
+        {
+          "label": "主语",
+          "type": "句子成分",
+          "rule": "名词、代词或名词性短语作主语",
+          "ruleVi": "Danh từ, đại từ hoặc cụm danh từ làm chủ ngữ",
+          "example": "电影很好看。",
+          "examplePy": "diàn yǐng hěn hǎo kàn 。",
+          "exampleVi": "Bộ phim rất hay.",
+          "keyword": "很",
+          "icon": "movie"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "durationMs": 4500,
+      "page": 3,
+      "pages": 3,
+      "source": "HSK1·语法·动作的态",
+      "titleVi": "Ngữ pháp HSK1 · Thì của động tác",
+      "accent": "#ff7a1a",
+      "items": [
+        {
+          "label": "定语",
+          "type": "句子成分",
+          "rule": "名词性词语、形容词性短语、数量短语作定语",
+          "ruleVi": "Cụm danh từ, cụm tính từ, cụm số lượng làm định ngữ",
+          "example": "她不会唱中文歌。",
+          "examplePy": "tā bú huì chàng zhōng wén gē 。",
+          "exampleVi": "Cô ấy không biết hát bài hát tiếng Trung.",
+          "keyword": "不",
+          "icon": "sing"
+        },
+        {
+          "label": "宾语",
+          "type": "句子成分",
+          "rule": "名词、代词或名词性短语作宾语",
+          "ruleVi": "Danh từ, đại từ hoặc cụm danh từ làm tân ngữ",
+          "example": "我喝茶。",
+          "examplePy": "wǒ hē chá 。",
+          "exampleVi": "Tôi uống trà.",
+          "keyword": "",
+          "icon": "food"
+        },
+        {
+          "label": "状语",
+          "type": "句子成分",
+          "rule": "副词、形容词作状语\n表示时间、处所的词语作状语",
+          "ruleVi": "Phó từ, tính từ làm trạng ngữ; từ chỉ thời gian, nơi chốn làm trạng ngữ",
+          "example": "他们都是中国学生。",
+          "examplePy": "tā men dōu shì zhōng guó xué shēng 。",
+          "exampleVi": "Họ đều là học sinh Trung Quốc.",
+          "keyword": "的",
+          "icon": "school"
+        }
+      ]
+    }
+  ]
+}

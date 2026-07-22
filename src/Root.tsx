@@ -7,6 +7,7 @@ import { Cover } from "./Cover";
 import { CoverDrama } from "./CoverDrama";
 import { CoverHsk } from "./CoverHsk";
 import { CoverHsksVocab } from "./CoverHsksVocab";
+import { CoverHsksGeneric } from "./CoverHsksGeneric";
 import { AvatarHsk } from "./AvatarHsk";
 import catalog from "../catalog.json";
 
@@ -59,6 +60,21 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{ level: "HSK1", accent: "#ff7a1a", hook: "Từ vựng HSK phải thuộc", titleVi: "Từ vựng · 词汇", range: "No.1–18", tag: "HSK · Tự học tiếng Trung", words: [] }}
       />
+
+      {/* ── hsks 家族·通用封面(grammar/topic/task/hanzi 共用 CoverHsksGeneric,差异在 props/cover.json)。──
+           渲染：remotion still src/index.ts cover-hsks-<sub> <out.png> --props=<视频目录>/cover.json */}
+      {(["grammar", "task", "hanzi"] as const).map((sub) => (
+        <Composition
+          key={`cover-hsks-${sub}`}
+          id={`cover-hsks-${sub}`}
+          component={CoverHsksGeneric}
+          durationInFrames={1}
+          fps={30}
+          width={1080}
+          height={1920}
+          defaultProps={{ level: "HSK1", accent: "#ff7a1a", kind: "HSK", hook: "HSK", range: "#1-4", tag: "HSK · Tự học tiếng Trung", icon: "📚", samples: [] }}
+        />
+      ))}
 
       {/* ── 头像（1:1，裁圆用）：learn-Chinese 频道头像。渲染：remotion still src/index.ts avatar-hsk <out.png> */}
       <Composition

@@ -1,0 +1,23 @@
+{
+  "level": "HSK1",
+  "accent": "#ff7a1a",
+  "kind": "Ngữ pháp · 语法",
+  "hook": "Ngữ pháp HSK1",
+  "range": "#1-9",
+  "tag": "HSK · Tự học tiếng Trung",
+  "icon": "📐",
+  "samples": [
+    {
+      "zh": "变化态",
+      "vi": "8 giờ rồi, dậy thôi."
+    },
+    {
+      "zh": "完成态",
+      "vi": "Bạn đã học được bao nhiêu chữ Hán?"
+    },
+    {
+      "zh": "进行态",
+      "vi": "Tôi không xem tivi, đang học bài."
+    }
+  ]
+}

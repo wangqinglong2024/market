@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "layout": "hsks-task",
+    "theme": {
+      "accent": "#ff7a1a"
+    },
+    "sidePad": 130,
+    "fonts": {
+      "files": [
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "400 900"
+        }
+      ],
+      "zhStack": [
+        "PingFang SC",
+        "Microsoft YaHei",
+        "Hiragino Sans GB",
+        "sans-serif"
+      ],
+      "zhWeight": 700,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "sans-serif"
+      ]
+    },
+    "badge": {
+      "_comment": "『看图学中文』引导标(数据驱动)。emoji ✅。",
+      "textVi": "Bạn làm được gì với HSK",
+      "textZh": "我能做到",
+      "emoji": "✅",
+      "durationMs": 2600
+    },
+    "source": {
+      "region": {
+        "top": 320
+      }
+    }
+  },
+  "beats": [
+    {
+      "id": "p1",
+      "durationMs": 13968,
+      "page": 1,
+      "pages": 2,
+      "source": "HSK1·交际·交流休闲活动",
+      "titleVi": "Với HSK1 bạn làm được:",
+      "accent": "#ff7a1a",
+      "total": 3,
+      "doneBase": 0,
+      "items": [
+        {
+          "type": "交流休闲活动",
+          "text": "能听懂他人关于日常休闲活动的简单问题，或关于某人喜好的日常休闲活动的简单信息介绍。如：看书、唱歌、看电视等。",
+          "vi": "Nghe hiểu câu hỏi đơn giản của người khác về hoạt động giải trí thường ngày, hoặc lời giới thiệu đơn giản về sở thích giải trí của ai đó. Ví dụ: đọc sách, ca hát, xem tivi…",
+          "icon": "ear",
+          "read": "能听懂他人关于日常休闲活动的简单问题，或关于某人喜好的日常休闲活动的简单信息介绍。如：看书、唱歌、看电视等。",
+          "audio": "library/tts-task/k-28a866837f589ecf.mp3",
+          "audioMs": 8016,
+          "durMs": 8712,
+          "startMs": 0,
+          "readAtMs": 0
+        },
+        {
+          "type": "交流休闲活动",
+          "text": "能看懂关于日常休闲活动的简单信息，如：活动的时间和地点等。",
+          "vi": "Đọc hiểu thông tin đơn giản về hoạt động giải trí thường ngày, ví dụ: thời gian và địa điểm của hoạt động…",
+          "icon": "eye",
+          "read": "能看懂关于日常休闲活动的简单信息，如：活动的时间和地点等。",
+          "audio": "library/tts-task/k-c38965aa57312704.mp3",
+          "audioMs": 4560,
+          "durMs": 5256,
+          "startMs": 8712,
+          "readAtMs": 8712
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "durationMs": 4032,
+      "page": 2,
+      "pages": 2,
+      "source": "HSK1·交际·交流休闲活动",
+      "titleVi": "Với HSK1 bạn làm được:",
+      "accent": "#ff7a1a",
+      "total": 3,
+      "doneBase": 2,
+      "items": [
+        {
+          "type": "交流休闲活动",
+          "text": "能简单介绍自己对日常休闲活动的喜好、安排等。",
+          "vi": "Giới thiệu đơn giản về sở thích, sắp xếp… của bản thân với các hoạt động giải trí thường ngày.",
+          "icon": "speak",
+          "read": "能简单介绍自己对日常休闲活动的喜好、安排等。",
+          "audio": "library/tts-task/k-b6458e49ffa218b8.mp3",
+          "audioMs": 3336,
+          "durMs": 4032,
+          "startMs": 13968,
+          "readAtMs": 0
+        }
+      ]
+    }
+  ]
+}

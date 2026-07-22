@@ -1,0 +1,30 @@
+{
+  "_comment": "HSK 语法·越南语(规则说明 + 官方例句翻译)。key=CSV content 原文 或 例句原文。build 缺则报错列出,人工补后再跑,绝不臆造。",
+
+  "用语气助词“了2”表示": "Dùng trợ từ ngữ khí 了 (biểu thị sự thay đổi, tình huống mới)",
+  "八点了，起床吧。": "8 giờ rồi, dậy thôi.",
+
+  "用动态助词“了1”表示": "Dùng trợ từ động thái 了 (biểu thị hành động đã hoàn thành)",
+  "你学了多少个汉字？": "Bạn đã học được bao nhiêu chữ Hán?",
+
+  "……呢": "…呢 (biểu thị hành động đang diễn ra)",
+  "我没看电视，学习呢。": "Tôi không xem tivi, đang học bài.",
+
+  "……在/正在+动词": "在/正在 + động từ (đang làm gì đó)",
+  "同学们在/正在上课。": "Các bạn học sinh đang học trên lớp.",
+
+  "……在/正在+动词……+呢": "在/正在 + động từ + 呢 (đang làm gì đó)",
+  "王老师在/正在打电话呢。": "Cô Vương đang gọi điện thoại.",
+
+  "名词、代词或名词性短语作主语": "Danh từ, đại từ hoặc cụm danh từ làm chủ ngữ",
+  "电影很好看。": "Bộ phim rất hay.",
+
+  "名词性词语、形容词性短语、数量短语作定语": "Cụm danh từ, cụm tính từ, cụm số lượng làm định ngữ",
+  "她不会唱中文歌。": "Cô ấy không biết hát bài hát tiếng Trung.",
+
+  "名词、代词或名词性短语作宾语": "Danh từ, đại từ hoặc cụm danh từ làm tân ngữ",
+  "我喝茶。": "Tôi uống trà.",
+
+  "副词、形容词作状语\n表示时间、处所的词语作状语": "Phó từ, tính từ làm trạng ngữ; từ chỉ thời gian, nơi chốn làm trạng ngữ",
+  "他们都是中国学生。": "Họ đều là học sinh Trung Quốc."
+}

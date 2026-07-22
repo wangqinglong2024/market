@@ -1,0 +1,35 @@
+{
+  "_comment": "模板『hsks-task · HSK我能做到(9:16 交际能力清单·越南受众)』。属 hsks 家族,守 templates/hsks/GANGLING.md。系统化覆盖:按 /hsk/<level>/03_tasks.csv 行序(task_type 序)+ 覆盖账本 _coverage.json 顺序推进。数据零编造(任务句原文来自CSV,越南语来自 vi-lexicon.json)。专属动效:逐条打钩✓ + 进度条完成感。每页 1 条能力。任务句长→speed 提高控≤24s。渲染层 src/layouts/hsks-task.tsx。",
+  "id": "hsks-task",
+  "name": "HSK我能做到(9:16)",
+  "seriesId": "hsks",
+  "layout": "hsks-task",
+  "meta": { "fps": 30, "width": 1080, "height": 1920 },
+
+  "task": {
+    "_comment": "★密集图文卡+配音(用户 2026-07-23:一视频=一个交际主题需发音)。perPage=2(每页2条能力,中越结合+配图+读到即打钩)。count=4(一个 task_type 的能力)。任务句长→speed 提高+顺序节拍控≤24s;超则 build 报错→减 count。",
+    "perPage": 2,
+    "defaultCount": 4,
+    "gapMs": 300,
+    "sidePad": 130,
+    "audio": {
+      "_comment": "逐条朗读音色:开朗姐姐(火山TTS),读任务句。★顺序节拍:每条=自身音频+等长 gap,条间停顿均分;总时长偶数秒≤24s。改音色须用户批准。",
+      "voice": "zh_female_kailangjiejie_moon_bigtts",
+      "speed": 1.6
+    },
+    "badge": {
+      "_comment": "『看图学中文』引导标(数据驱动)。emoji ✅。",
+      "textVi": "Bạn làm được gì với HSK",
+      "textZh": "我能做到",
+      "emoji": "✅",
+      "durationMs": 2600
+    }
+  },
+
+  "fonts": {
+    "files": [{ "family": "Nunito", "file": "library/fonts/Nunito.ttf", "weight": "400 900" }],
+    "zhStack": ["PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "sans-serif"],
+    "zhWeight": 700,
+    "latinStack": ["Nunito", "PingFang SC", "Microsoft YaHei", "sans-serif"]
+  }
+}

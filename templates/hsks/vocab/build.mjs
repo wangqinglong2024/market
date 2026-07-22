@@ -6,6 +6,8 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { synth } from "../../../scripts/tts.mjs";
+import { assertDistinctIcons } from "../_engine.mjs";
+import { iconSigOf } from "../../../src/layouts/hsks-icon-groups.mjs";
 
 const SUB = "vocab";
 const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
@@ -130,6 +132,9 @@ export async function build({ videoId, dir, ROOT, settings, rel }) {
     return { c, py: v.py, pos: v.pos, vi: vi || "" };
   });
   if (missing.length) throw new Error(`vi-lexicon.json 缺越南语释义(请补后重跑)：${missing.join("、")}`);
+
+  // ★同一视频禁止两张相同 SVG:检测本批词是否有共用同一图标 case 的(见 hsks-icon-groups)。
+  assertDistinctIcons(words, (w) => iconSigOf(w.c), (w) => w.c, { label: "词图", mode: "throw" });
 
   // 4) 分页(仅决定版面密度)：pages=clamp(ceil(n/perPage),3,6)，每页 ≤ perPage 词。
   const n = words.length;

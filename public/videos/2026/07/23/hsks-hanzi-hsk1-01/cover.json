@@ -1,0 +1,23 @@
+{
+  "level": "HSK1",
+  "accent": "#ff7a1a",
+  "kind": "Chữ Hán · 部件识字",
+  "hook": "18 chữ Hán HSK1",
+  "range": "#1-18",
+  "tag": "HSK · Tự học tiếng Trung",
+  "icon": "🀄",
+  "samples": [
+    {
+      "zh": "一  yī",
+      "vi": "một (1)"
+    },
+    {
+      "zh": "七  qī",
+      "vi": "bảy (7)"
+    },
+    {
+      "zh": "三  sān",
+      "vi": "ba (3)"
+    }
+  ]
+}

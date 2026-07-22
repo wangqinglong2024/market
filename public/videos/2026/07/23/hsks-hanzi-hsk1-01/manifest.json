@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "layout": "hsks-hanzi",
+    "theme": {
+      "accent": "#ff7a1a"
+    },
+    "sidePad": 130,
+    "fonts": {
+      "files": [
+        {
+          "family": "Nunito",
+          "file": "library/fonts/Nunito.ttf",
+          "weight": "400 900"
+        }
+      ],
+      "zhStack": [
+        "PingFang SC",
+        "Microsoft YaHei",
+        "Hiragino Sans GB",
+        "sans-serif"
+      ],
+      "zhWeight": 700,
+      "latinStack": [
+        "Nunito",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "sans-serif"
+      ]
+    },
+    "badge": {
+      "_comment": "『看图学中文』引导标(数据驱动)。emoji 🧩(部件拼合)。",
+      "textVi": "Học chữ Hán theo bộ thủ",
+      "textZh": "部件识字",
+      "emoji": "🧩",
+      "durationMs": 2600
+    },
+    "source": {
+      "region": {
+        "top": 320
+      }
+    }
+  },
+  "beats": [
+    {
+      "id": "p1",
+      "durationMs": 10000,
+      "page": 1,
+      "pages": 2,
+      "items": [
+        {
+          "ch": "一",
+          "kind": "认读",
+          "py": "yī",
+          "vi": "một (1)",
+          "comp": "一",
+          "compVi": "nét ngang",
+          "icon": "num1",
+          "read": "一",
+          "audio": "library/tts-vocab/w-4e00.mp3",
+          "audioMs": 648,
+          "readAtMs": 0
+        },
+        {
+          "ch": "七",
+          "kind": "认读",
+          "py": "qī",
+          "vi": "bảy (7)",
+          "comp": "一",
+          "compVi": "nét ngang",
+          "icon": "num7",
+          "read": "七",
+          "audio": "library/tts-vocab/w-4e03.mp3",
+          "audioMs": 720,
+          "readAtMs": 1111
+        },
+        {
+          "ch": "三",
+          "kind": "认读",
+          "py": "sān",
+          "vi": "ba (3)",
+          "comp": "一",
+          "compVi": "nét ngang",
+          "icon": "num3",
+          "read": "三",
+          "audio": "library/tts-vocab/w-4e09.mp3",
+          "audioMs": 696,
+          "readAtMs": 2222
+        },
+        {
+          "ch": "上",
+          "kind": "认读",
+          "py": "shàng",
+          "vi": "trên / lên",
+          "comp": "一",
+          "compVi": "nét ngang",
+          "icon": "up",
+          "read": "上",
+          "audio": "library/tts-vocab/w-4e0a.mp3",
+          "audioMs": 696,
+          "readAtMs": 3333
+        },
+        {
+          "ch": "下",
+          "kind": "认读",
+          "py": "xià",
+          "vi": "dưới / xuống",
+          "comp": "一",
+          "compVi": "nét ngang",
+          "icon": "down",
+          "read": "下",
+          "audio": "library/tts-vocab/w-4e0b.mp3",
+          "audioMs": 720,
+          "readAtMs": 4444
+        },
+        {
+          "ch": "不",
+          "kind": "认读",
+          "py": "bù",
+          "vi": "không",
+          "comp": "一",
+          "compVi": "nét ngang",
+          "icon": "no",
+          "read": "不",
+          "audio": "library/tts-vocab/w-4e0d.mp3",
+          "audioMs": 600,
+          "readAtMs": 5556
+        },
+        {
+          "ch": "东",
+          "kind": "认读",
+          "py": "dōng",
+          "vi": "phía đông",
+          "comp": "一",
+          "compVi": "nét ngang",
+          "icon": "east-sun",
+          "read": "东",
+          "audio": "library/tts-vocab/w-4e1c.mp3",
+          "audioMs": 600,
+          "readAtMs": 6667
+        },
+        {
+          "ch": "两",
+          "kind": "认读",
+          "py": "liǎng",
+          "vi": "hai / đôi (lượng)",
+          "comp": "一",
+          "compVi": "nét ngang",
+          "icon": "pair",
+          "read": "两",
+          "audio": "library/tts-vocab/w-4e24.mp3",
+          "audioMs": 792,
+          "readAtMs": 7778
+        },
+        {
+          "ch": "个",
+          "kind": "认读",
+          "py": "gè",
+          "vi": "cái (lượng từ)",
+          "comp": "人",
+          "compVi": "bộ Nhân (người)",
+          "icon": "one-item",
+          "read": "个",
+          "audio": "library/tts-vocab/w-4e2a.mp3",
+          "audioMs": 648,
+          "readAtMs": 8889
+        }
+      ],
+      "source": "HSK1·汉字·认读",
+      "titleVi": "Chữ Hán HSK1 · Nhận biết",
+      "accent": "#ff7a1a"
+    },
+    {
+      "id": "p2",
+      "durationMs": 10000,
+      "page": 2,
+      "pages": 2,
+      "items": [
+        {
+          "ch": "中",
+          "kind": "认读",
+          "py": "zhōng",
+          "vi": "giữa / trung",
+          "comp": "丨",
+          "compVi": "nét sổ",
+          "icon": "center",
+          "read": "中",
+          "audio": "library/tts-vocab/w-4e2d.mp3",
+          "audioMs": 648,
+          "readAtMs": 0
+        },
+        {
+          "ch": "么",
+          "kind": "认读",
+          "py": "me",
+          "vi": "(trợ từ: 什么…)",
+          "comp": "丿",
+          "compVi": "nét phẩy",
+          "icon": "question",
+          "read": "么",
+          "audio": "library/tts-vocab/w-4e48.mp3",
+          "audioMs": 744,
+          "readAtMs": 1111
+        },
+        {
+          "ch": "九",
+          "kind": "认读",
+          "py": "jiǔ",
+          "vi": "chín (9)",
+          "comp": "丿",
+          "compVi": "nét phẩy",
+          "icon": "num9",
+          "read": "九",
+          "audio": "library/tts-vocab/w-4e5d.mp3",
+          "audioMs": 768,
+          "readAtMs": 2222
+        },
+        {
+          "ch": "也",
+          "kind": "认读",
+          "py": "yě",
+          "vi": "cũng",
+          "comp": "乙",
+          "compVi": "nét cong móc",
+          "icon": "also",
+          "read": "也",
+          "audio": "library/tts-vocab/w-4e5f.mp3",
+          "audioMs": 696,
+          "readAtMs": 3333
+        },
+        {
+          "ch": "习",
+          "kind": "认读",
+          "py": "xí",
+          "vi": "luyện tập / học",
+          "comp": "乙",
+          "compVi": "nét cong móc",
+          "icon": "feather",
+          "read": "习",
+          "audio": "library/tts-vocab/w-4e60.mp3",
+          "audioMs": 768,
+          "readAtMs": 4444
+        },
+        {
+          "ch": "书",
+          "kind": "认读",
+          "py": "shū",
+          "vi": "sách",
+          "comp": "乙",
+          "compVi": "nét cong móc",
+          "icon": "book",
+          "read": "书",
+          "audio": "library/tts-vocab/w-4e66.mp3",
+          "audioMs": 720,
+          "readAtMs": 5556
+        },
+        {
+          "ch": "买",
+          "kind": "认读",
+          "py": "mǎi",
+          "vi": "mua",
+          "comp": "乙",
+          "compVi": "nét cong móc",
+          "icon": "shopping",
+          "read": "买",
+          "audio": "library/tts-vocab/w-4e70.mp3",
+          "audioMs": 816,
+          "readAtMs": 6667
+        },
+        {
+          "ch": "了",
+          "kind": "认读",
+          "py": "liǎo",
+          "vi": "rồi (trợ từ)",
+          "comp": "乙",
+          "compVi": "nét cong móc",
+          "icon": "done",
+          "read": "了",
+          "audio": "library/tts-vocab/w-4e86.mp3",
+          "audioMs": 792,
+          "readAtMs": 7778
+        },
+        {
+          "ch": "事",
+          "kind": "认读",
+          "py": "shì",
+          "vi": "việc / sự việc",
+          "comp": "一",
+          "compVi": "nét ngang",
+          "icon": "affair",
+          "read": "事",
+          "audio": "library/tts-vocab/w-4e8b.mp3",
+          "audioMs": 744,
+          "readAtMs": 8889
+        }
+      ],
+      "source": "HSK1·汉字·认读",
+      "titleVi": "Chữ Hán HSK1 · Nhận biết",
+      "accent": "#ff7a1a"
+    }
+  ]
+}

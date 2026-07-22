@@ -113,13 +113,17 @@ function Glyph({ w, accent, f }: { w: string; accent: string; f: number }): Reac
         <line x1="29" y1="29" x2="71" y2="71" strokeWidth="9" />
       </g></S>;
     }
-    case "不要": { // 拒绝→禁止符压住一件小物(不想要它)
-      const s = 1 + Math.abs(Math.sin(f * 0.15)) * 0.07;
+    case "不要": { // 拒绝/不想要→礼盒被红叉划掉(★明确区别于『不』的禁止圈,同视频不重复)
+      const s = 1 + Math.abs(Math.sin(f * 0.14)) * 0.06;
       return <S>
-        <path d="M50 38l4.5 9.5 10.5 1-7.5 7.3 1.8 10.4L50 71l-9.3 4.2 1.8-10.4-7.5-7.3 10.5-1z" fill={accent} opacity="0.45" stroke="none" />
-        <g transform={`translate(50 50) scale(${s}) translate(-50 -50)`} stroke="#e03131">
-          <circle cx="50" cy="50" r="30" fill="none" strokeWidth="9" />
-          <line x1="29" y1="29" x2="71" y2="71" strokeWidth="9" />
+        <g transform={`translate(50 52) scale(${s}) translate(-50 -52)`}>
+          <rect x="30" y="52" width="40" height="26" rx="4" fill="#ffd9a8" />
+          <rect x="26" y="40" width="48" height="14" rx="3" fill="#f7b500" />
+          <line x1="50" y1="40" x2="50" y2="78" strokeWidth="3" />
+          <path d="M50 40q-12-14-2-2M50 40q12-14 2-2" fill="#ff9d5c" />
+        </g>
+        <g stroke="#e03131" strokeWidth="9" strokeLinecap="round">
+          <line x1="28" y1="28" x2="72" y2="76" /><line x1="72" y1="28" x2="28" y2="76" />
         </g>
       </S>;
     }
@@ -139,16 +143,30 @@ function Glyph({ w, accent, f }: { w: string; accent: string; f: number }): Reac
   }
 }
 
-// 抽象词 fallback：黑框彩色圆角瓷砖 + 大号字 + 强调色装饰点(轻微脉动)
+// ★抽象词 fallback：纯图形「概念占位」，★由词派生变体(颜色/内形/点数各不同)，保证同一视频里不同词的占位不相同。
+//   ★绝不写出任何汉字(图标区出现该词字形＝违规,见 GANGLING §七 图标铁律)。仅当某词还没画专属图时兜底——尽量给专属图,别长期靠它。
 const Fallback: React.FC<{ w: string; accent: string; f: number }> = ({ w, accent, f }) => {
-  const ch = key(w).charAt(0);
+  const seed = Array.from(key(w) || "?").reduce((a, c, i) => a + (c.codePointAt(0) ?? 0) * (i + 1), 0);
+  const col = `hsl(${seed % 360} 68% 52%)`;         // 每词一个色相
+  const shape = seed % 4;                             // 内形:0点 1三角 2方 3菱
+  const dots = 3 + (seed % 4);                        // 环上 3..6 个点
   const s = 1 + Math.abs(Math.sin(f * 0.1)) * 0.05;
+  const R = 24;
+  const inner = shape === 1
+    ? <path d="M50 38l11 20H39z" fill={col} stroke="none" />
+    : shape === 2
+    ? <rect x="40" y="40" width="20" height="20" rx="3" fill={col} stroke="none" />
+    : shape === 3
+    ? <path d="M50 38l12 12-12 12-12-12z" fill={col} stroke="none" />
+    : <circle cx="50" cy="50" r="10" fill={col} stroke="none" />;
   return (
     <S>
       <g transform={`translate(50 50) scale(${s}) translate(-50 -50)`}>
-        <rect x="14" y="14" width="72" height="72" rx="18" fill={`${accent}26`} />
-        <circle cx="74" cy="26" r="6" fill={accent} />
-        <text x="50" y="52" fontSize="42" fontWeight="900" fill={accent} stroke={INK} strokeWidth="1.4" textAnchor="middle" dominantBaseline="central" fontFamily="'PingFang SC','Microsoft YaHei',sans-serif">{ch}</text>
+        <rect x="16" y="16" width="68" height="68" rx="18" fill={col} fillOpacity={0.14} stroke="none" />
+        <g transform={`rotate(${f * (1 + (seed % 3) * 0.4)} 50 50)`}>
+          {Array.from({ length: dots }, (_, i) => { const a = (i / dots) * Math.PI * 2; return <circle key={i} cx={50 + R * Math.cos(a)} cy={50 + R * Math.sin(a)} r="3.6" fill={col} stroke="none" />; })}
+        </g>
+        {inner}
       </g>
     </S>
   );
